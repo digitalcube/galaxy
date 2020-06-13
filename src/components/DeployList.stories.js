@@ -12,7 +12,7 @@ export default {
   excludeStories: /.*Data$/,
 };
 
-export const defaultTasksData = [
+export const defaultDeploysData = [
   { ...deployData, id: "1", state: "DEPLOY_BUILDING" },
   { ...deployData, id: "2", state: "DEPLOY_PUBLISHED" },
   { ...deployData, id: "3", state: "DEPLOY_FAILED", title: "Don't Panic."  },
@@ -30,7 +30,7 @@ export const defaultTasksData = [
 ];
 
 export const Default = () => (
-  <DeployList deploys={defaultTasksData} {...actionsData} />
+  <DeployList deploys={defaultDeploysData} {...actionsData} />
 );
 
 export const Loading = () => (
