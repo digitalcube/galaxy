@@ -57,8 +57,6 @@ export default function Deploy({
         <div>
           {moment(start).calendar(null, {
             sameDay: "[Today at] h:mm A",
-            nextDay: "[Tomorrow]",
-            nextWeek: "dddd",
             lastDay: "[Yesterday]",
             lastWeek: "[Last] dddd",
             sameElse: "DD/MM/YYYY HH:mm",
