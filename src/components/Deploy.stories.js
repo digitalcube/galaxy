@@ -5,6 +5,7 @@
 import React from "react";
 import { action } from "@storybook/addon-actions";
 import { withKnobs, object } from "@storybook/addon-knobs/react";
+import moment from "moment";
 
 import Deploy from "./Deploy";
 
@@ -19,8 +20,8 @@ export const deployData = {
   id: "1",
   title: "No deploy message",
   state: "DEPLOY_READY",
-  start: new Date(),
-  stop: new Date(),
+  start: moment(),
+  stop: moment().subtract(99, 'seconds'),
 };
 
 export const actionsData = {

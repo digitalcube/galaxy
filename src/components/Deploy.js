@@ -5,6 +5,7 @@ import PropTypes from "prop-types";
 import { ListGroupItem, Badge } from "reactstrap";
 import { ChevronRight } from "@styled-icons/material/ChevronRight";
 import moment from "moment";
+import "moment-duration-format";
 
 function deployBadgeColor(state) {
   switch (state) {
@@ -55,7 +56,7 @@ export default function Deploy({
       <div>
         <div>
           {moment(start).calendar(null, {
-            sameDay: "h:mm A",
+            sameDay: "[Today at] h:mm A",
             nextDay: "[Tomorrow]",
             nextWeek: "dddd",
             lastDay: "[Yesterday]",
@@ -63,7 +64,12 @@ export default function Deploy({
             sameElse: "DD/MM/YYYY HH:mm",
           })}
         </div>
-        <small>{moment(stop).diff(start, "minutes")}</small>
+        <small>
+          Deployed in{" "}
+          {moment
+            .duration(moment(start).diff(stop), "milliseconds")
+            .format("m[m] s[s]")}
+        </small>
       </div>
       <div className='pl-3'>
         <ChevronRight size='1rem' />

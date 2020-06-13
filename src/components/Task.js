@@ -10,13 +10,15 @@ export default function Task({
 }) {
   return (
     <div className={`list-item ${state}`}>
-      <input
-        type='checkbox'
-        defaultChecked={state === "TASK_ARCHIVED"}
-        disabled={true}
-        name='checked'
-        onClick={() => onArchiveTask(id)}
-      />
+      <label className='checkbox'>
+        <input
+          type='checkbox'
+          defaultChecked={state === "TASK_ARCHIVED"}
+          disabled={true}
+          name='checked'
+        />
+        <span className='checkbox-custom' onClick={() => onArchiveTask(id)} />
+      </label>
       <div className='title'>
         <input
           type='text'

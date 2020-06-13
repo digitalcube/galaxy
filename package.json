@@ -13,6 +13,7 @@
     "@types/react-dom": "^16.9.8",
     "bootstrap": "^4.5.0",
     "moment": "^2.26.0",
+    "moment-duration-format": "^2.3.2",
     "node-sass": "^4.14.1",
     "react": "^16.13.1",
     "react-dom": "^16.13.1",
