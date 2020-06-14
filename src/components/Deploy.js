@@ -2,7 +2,10 @@
 
 import React from "react";
 import PropTypes from "prop-types";
-import { ListGroupItem, Badge } from "reactstrap";
+import {
+  ListGroupItem as ReactstrapListGroupItem,
+  Badge as ReactstrapBadge,
+} from "reactstrap";
 import { ChevronRight } from "@styled-icons/material/ChevronRight";
 import moment from "moment";
 import "moment-duration-format";
@@ -38,16 +41,16 @@ export default function Deploy({
   onViewDeploy,
 }) {
   return (
-    <ListGroupItem
+    <ReactstrapListGroupItem
       onClick={() => onViewDeploy(id)}
       tag='button'
       action
       className='d-flex align-items-center'>
       <div className='flex-grow-1'>
         <div>
-          <Badge color={deployBadgeColor(state)}>
+          <ReactstrapBadge color={deployBadgeColor(state)}>
             {deployBadgeLabel(state)}
-          </Badge>
+          </ReactstrapBadge>
         </div>
         <div>
           <small>{title}</small>
@@ -72,7 +75,7 @@ export default function Deploy({
       <div className='pl-3'>
         <ChevronRight size='1rem' />
       </div>
-    </ListGroupItem>
+    </ReactstrapListGroupItem>
   );
 }
 

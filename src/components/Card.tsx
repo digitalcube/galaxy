@@ -14,6 +14,7 @@ type Card = {
   children?: React.ReactNode;
   footer?: React.ReactNode;
   action?: React.ReactNode;
+  id?: string;
 };
 
 const CardTitle = ({ title }: Card) => {
@@ -49,8 +50,15 @@ const CardFooter = ({ footer }: Card) => {
   return <ReactstrapCardFooter>{footer}</ReactstrapCardFooter>;
 };
 
-export const Card = ({ title, subtitle, action, children, footer }: Card) => (
-  <ReactstrapCard>
+export const Card = ({
+  title,
+  subtitle,
+  action,
+  children,
+  footer,
+  id,
+}: Card) => (
+  <ReactstrapCard id={id}>
     <CardHeader title={title} subtitle={subtitle} action={action} />
     {children ? <ReactstrapCardBody>{children}</ReactstrapCardBody> : null}
     <CardFooter footer={footer} />
