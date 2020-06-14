@@ -45,7 +45,7 @@ export const Deploy = ({
       <small>
         Deployed in{" "}
         {/* {moment.duration(moment(start).diff(stop), "milliseconds")} */}
-        {console.log(moment.duration(moment(start).diff(stop)))}
+        {console.log(moment.duration(moment(start).diff(stop), "milliseconds"))}
       </small>
     </div>
     <div className='pl-3'>
