@@ -1,0 +1,14 @@
+version: 1
+frontend:
+    phases:
+        preBuild:
+            commands: ['yarn']
+        build:
+            commands: ['yarn run build-storybook']
+    artifacts:
+        baseDirectory: storybook-static
+        files:
+            - '**/*'
+    cache:
+        paths:
+            - 'node_modules/**/*'
