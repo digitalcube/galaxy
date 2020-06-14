@@ -13,7 +13,7 @@ import { defaultDeploysData } from "./DeployList.stories";
 
 export default {
   component: Card,
-  title: "Card",
+  title: "Deploys",
   decorators: [
     withKnobs,
     (story) => <div style={{ padding: "3rem" }}>{story()}</div>,
@@ -21,6 +21,8 @@ export default {
   excludeStories: /.*Data$/,
 };
 
-export const Default = () => {
-  return <Card />;
-};
+export const Default = () => (
+  <Card title={`Deploys`}>
+    <DeployList deploys={defaultDeploysData} />
+  </Card>
+);

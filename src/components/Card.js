@@ -9,8 +9,8 @@ function Card({ children, title }) {
     <ReactstrapCard>
       <CardBody>
         <CardTitle>{title}</CardTitle>
-        {children}
       </CardBody>
+      {children}
     </ReactstrapCard>
   );
 }
