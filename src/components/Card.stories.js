@@ -4,8 +4,7 @@
 
 import React from "react";
 import { withKnobs } from "@storybook/addon-knobs/react";
-
-import Card from "./Card";
+import { Card } from "./Card";
 
 export default {
   component: Card,
@@ -19,4 +18,36 @@ export default {
 
 export const Default = () => {
   return <Card />;
+};
+
+export const Title = () => {
+  return <Card title='Title' />;
+};
+
+export const Subtitle = () => {
+  return <Card title='Title' subtitle='Subtitle' />;
+};
+
+export const Body = () => {
+  return (
+    <Card title='Title' subtitle='Subtitle'>
+      Body
+    </Card>
+  );
+};
+
+export const Footer = () => {
+  return (
+    <Card title='Title' subtitle='Subtitle' footer="Footer">
+      Body
+    </Card>
+  );
+};
+
+export const Action = () => {
+  return (
+    <Card title='Title' subtitle='Subtitle' footer="Footer" action="Action">
+      Body
+    </Card>
+  );
 };
