@@ -2,7 +2,7 @@
 
 import React from "react";
 
-import Deploy from "./Deploy";
+import { Deploy } from "./Deploy";
 
 function DeployList({ loading, deploys, onViewDeploy }) {
   const events = {
