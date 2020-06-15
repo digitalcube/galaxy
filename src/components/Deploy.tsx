@@ -17,6 +17,30 @@ type Deploy = {
   };
 };
 
+type DeployTime = {
+  stop?: string;
+};
+
+function deployTime({ stop }: DeployTime) {
+  const t = moment(stop).calendar(null, {
+    sameDay: "[Today at] h:mm A",
+    lastDay: "[Yesterday]",
+    lastWeek: "[Last] dddd",
+    sameElse: "DD/MM/YYYY HH:mm",
+  });
+  return t;
+}
+
+type DeployDuration = {
+  start: string;
+  stop: string;
+};
+
+function deployDuration({ start, stop }: DeployDuration) {
+  const d = moment(start).diff(stop);
+  return d;
+}
+
 export const Deploy = ({
   deploy: { id, title, state, start, stop },
 }: Deploy) => (
@@ -34,19 +58,8 @@ export const Deploy = ({
       </div>
     </div>
     <div>
-      <div>
-        {moment(start).calendar(null, {
-          sameDay: "[Today at] h:mm A",
-          lastDay: "[Yesterday]",
-          lastWeek: "[Last] dddd",
-          sameElse: "DD/MM/YYYY HH:mm",
-        })}
-      </div>
-      <small>
-        Deployed in{" "}
-        {/* {moment.duration(moment(start).diff(stop), "milliseconds")} */}
-        {console.log(moment.duration(moment(start).diff(stop), "milliseconds"))}
-      </small>
+      <div>{deployTime({ stop })}</div>
+      <small>Deployed in {deployDuration({ start, stop })}</small>
     </div>
     <div className='pl-3'>
       <ChevronRight size='1rem' />
