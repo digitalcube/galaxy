@@ -15,6 +15,8 @@ function deployBadgeColor({ state }: DeployBadge) {
       return "warning";
     case "DEPLOY_FAILED":
       return "danger";
+    case "DEPLOY_READY":
+      return "primary";
     default:
       return;
   }
@@ -26,6 +28,10 @@ function deployBadgeLabel({ state }: DeployBadge) {
       return "Published";
     case "DEPLOY_BUILDING":
       return "Building";
+    case "DEPLOY_FAILED":
+      return "Failed";
+    case "DEPLOY_READY":
+      return "Ready";
     default:
       return;
   }
