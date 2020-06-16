@@ -7,7 +7,7 @@ import { deployData, actionsData } from "./Deploy.stories";
 
 export default {
   component: DeployList,
-  title: "DeployList",
+  title: "Components/DeployList",
   decorators: [(story) => <div style={{ padding: "3rem" }}>{story()}</div>],
   excludeStories: /.*Data$/,
 };

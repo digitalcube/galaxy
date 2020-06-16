@@ -8,7 +8,7 @@ import { Card } from "./Card";
 
 export default {
   component: Card,
-  title: "Card",
+  title: "Components/Card",
   decorators: [
     withKnobs,
     (story) => <div style={{ padding: "3rem" }}>{story()}</div>,

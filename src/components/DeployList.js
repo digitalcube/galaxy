@@ -1,7 +1,6 @@
 // src/components/DeployList.js
 
 import React from "react";
-
 import { Deploy } from "./Deploy";
 
 function DeployList({ loading, deploys, onViewDeploy }) {

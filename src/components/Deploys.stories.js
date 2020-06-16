@@ -9,7 +9,7 @@ import { defaultDeploysData } from "./DeployList.stories";
 
 export default {
   component: Card,
-  title: "Deploys Card",
+  title: "Containers/Deploys",
   decorators: [(story) => <div style={{ padding: "3rem" }}>{story()}</div>],
   excludeStories: /.*Data$/,
 };

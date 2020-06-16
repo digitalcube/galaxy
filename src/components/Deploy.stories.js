@@ -11,7 +11,7 @@ import { Deploy } from "./Deploy";
 
 export default {
   component: Deploy,
-  title: "Deploy",
+  title: "Components/Deploy",
   decorators: [withKnobs],
   excludeStories: /.*Data$/,
 };

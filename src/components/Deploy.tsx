@@ -37,7 +37,7 @@ type DeployDuration = {
 };
 
 function deployDuration({ start, stop }: DeployDuration) {
-  const d = moment(start).diff(stop);
+  const d = moment.duration(moment(start).diff(stop)).format("m[m] s[s]");
   return d;
 }
 
@@ -51,7 +51,7 @@ export const Deploy = ({
     className='d-flex align-items-center'>
     <div className='flex-grow-1'>
       <div>
-        <Badge state={state} />
+        <Badge deploy={{state: state}} />
       </div>
       <div>
         <small>{title}</small>
@@ -66,56 +66,3 @@ export const Deploy = ({
     </div>
   </ReactstrapListGroupItem>
 );
-
-// export default function Deploy({
-//   deploy: { id, title, state, start, stop },
-//   onViewDeploy,
-// }) {
-//   return (
-//     <ReactstrapListGroupItem
-//       onClick={() => onViewDeploy(id)}
-//       tag='button'
-//       action
-//       className='d-flex align-items-center'>
-//       <div className='flex-grow-1'>
-//         <div>
-//           <ReactstrapBadge color={deployBadgeColor(state)}>
-//             {deployBadgeLabel(state)}
-//           </ReactstrapBadge>
-//         </div>
-//         <div>
-//           <small>{title}</small>
-//         </div>
-//       </div>
-//       <div>
-//         <div>
-//           {moment(start).calendar(null, {
-//             sameDay: "[Today at] h:mm A",
-//             lastDay: "[Yesterday]",
-//             lastWeek: "[Last] dddd",
-//             sameElse: "DD/MM/YYYY HH:mm",
-//           })}
-//         </div>
-//         <small>
-//           Deployed in{" "}
-//           {moment
-//             .duration(moment(start).diff(stop), "milliseconds")
-//             .format("m[m] s[s]")}
-//         </small>
-//       </div>
-//       <div className='pl-3'>
-//         <ChevronRight size='1rem' />
-//       </div>
-//     </ReactstrapListGroupItem>
-//   );
-// }
-
-// Deploy.propTypes = {
-//   deploy: PropTypes.shape({
-//     id: PropTypes.string.isRequired,
-//     title: PropTypes.string.isRequired,
-//     state: PropTypes.string.isRequired,
-//     start: PropTypes.string.isRequired,
-//   }),
-//   onViewDeploy: PropTypes.func,
-// };
