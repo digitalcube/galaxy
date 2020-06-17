@@ -1,106 +1,106 @@
 // src/components/Badge.js
 
-import React from "react";
-import { Badge as ReactstrapBadge } from "reactstrap";
+import React from "react"
+import { Badge as ReactstrapBadge } from "reactstrap"
 
 type DeployBadge = {
-  state: string;
-};
+  state: string
+}
 
 function deployBadgeColor({ state }: DeployBadge) {
   switch (state) {
-    case "DEPLOY_PUBLISHED":
-      return "success";
-    case "DEPLOY_BUILDING":
-      return "warning";
-    case "DEPLOY_FAILED":
-      return "danger";
-    case "DEPLOY_READY":
-      return "primary";
+    case `DEPLOY_PUBLISHED`:
+      return `success`
+    case `DEPLOY_BUILDING`:
+      return `warning`
+    case `DEPLOY_FAILED`:
+      return `danger`
+    case `DEPLOY_READY`:
+      return `primary`
     default:
-      return;
+      return
   }
 }
 
 function deployBadgeLabel({ state }: DeployBadge) {
   switch (state) {
-    case "DEPLOY_PUBLISHED":
-      return "Published";
-    case "DEPLOY_BUILDING":
-      return "Building";
-    case "DEPLOY_FAILED":
-      return "Failed";
-    case "DEPLOY_READY":
-      return "Ready";
+    case `DEPLOY_PUBLISHED`:
+      return `Published`
+    case `DEPLOY_BUILDING`:
+      return `Building`
+    case `DEPLOY_FAILED`:
+      return `Failed`
+    case `DEPLOY_READY`:
+      return `Ready`
     default:
-      return;
+      return
   }
 }
 
 type SettingBadge = {
-  state: string;
-};
+  state: string
+}
 
 function settingBadgeColor({ state }: SettingBadge) {
   switch (true) {
     case /_ENABLED/.test(state):
-      return "success";
+      return `success`
     case /_DISABLED/.test(state):
-      return "danger";
+      return `danger`
     default:
-      return state;
+      return state
   }
 }
 
 function settingBadgeLabel({ state }: SettingBadge) {
   switch (true) {
     case /SETTING_AUTO_DEPLOY_ENABLED/.test(state):
-      return "Auto Deploy Enabled";
+      return `Auto Deploy Enabled`
     case /SETTING_AUTO_DEPLOY_DISABLED/.test(state):
-      return "Auto Deploy Disabled";
+      return `Auto Deploy Disabled`
     case /_ENABLED/.test(state):
-      return "Enabled";
+      return `Enabled`
     case /_DISABLED/.test(state):
-      return "Disabled";
+      return `Disabled`
     default:
-      return state;
+      return state
   }
 }
 
 type Badge = {
   deploy?: {
-    state: string;
-  };
+    state: string
+  }
   setting?: {
-    state: string;
-  };
-  label?: string;
-  color?: string;
-  id?: string;
-};
+    state: string
+  }
+  label?: string
+  color?: string
+  id?: string
+}
 
 function badgeLabel({ deploy, setting, label }: Badge) {
   if (deploy) {
-    return deployBadgeLabel({ state: deploy.state });
+    return deployBadgeLabel({ state: deploy.state })
   }
   if (setting) {
-    return settingBadgeLabel({ state: setting.state });
+    return settingBadgeLabel({ state: setting.state })
   }
-  return label;
+  return label
 }
 
 function badgeColor({ deploy, setting, color }: Badge) {
   if (deploy) {
-    return deployBadgeColor({ state: deploy.state });
+    return deployBadgeColor({ state: deploy.state })
   }
   if (setting) {
-    return settingBadgeColor({ state: setting.state });
+    return settingBadgeColor({ state: setting.state })
   }
-  return color;
+  return color
 }
 
 export const Badge = ({ deploy, setting, label, color, id }: Badge) => (
   <ReactstrapBadge id={id} color={badgeColor({ deploy, setting, color })}>
     {badgeLabel({ deploy, setting, label })}
   </ReactstrapBadge>
-);
+)
