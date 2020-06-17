@@ -13,6 +13,7 @@
     "@types/react": "^16.9.36",
     "@types/react-dom": "^16.9.8",
     "@types/reactstrap": "^8.4.2",
+    "@types/shortid": "^0.0.29",
     "@types/styled-components": "^5.1.0",
     "bootstrap": "^4.5.0",
     "moment": "^2.26.0",
@@ -25,6 +26,7 @@
     "react-scripts": "3.4.1",
     "reactstrap": "^8.4.1",
     "redux": "^4.0.5",
+    "shortid": "^2.2.15",
     "styled-components": "^5.1.1",
     "typescript": "^3.9.5"
   },

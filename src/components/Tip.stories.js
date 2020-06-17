@@ -10,4 +10,14 @@ export default {
   excludeStories: /.*Data$/,
 };
 
-export const Default = () => <Tip tip='Hello World' label='Tip' />;
+export const Default = () => (
+  <>
+    <Tip label='Hello' tip='World' />
+  </>
+);
+
+export const CustomID = () => (
+  <>
+    <Tip label='Custom' tip='ID' id='customId' />
+  </>
+);

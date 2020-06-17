@@ -74,30 +74,33 @@ type Badge = {
   setting?: {
     state: string;
   };
+  label?: string;
+  color?: string;
+  id?: string;
 };
 
-function badgeLabel({ deploy, setting }: Badge) {
+function badgeLabel({ deploy, setting, label }: Badge) {
   if (deploy) {
     return deployBadgeLabel({ state: deploy.state });
   }
   if (setting) {
     return settingBadgeLabel({ state: setting.state });
   }
-  return;
+  return label;
 }
 
-function badgeColor({ deploy, setting }: Badge) {
+function badgeColor({ deploy, setting, color }: Badge) {
   if (deploy) {
     return deployBadgeColor({ state: deploy.state });
   }
   if (setting) {
     return settingBadgeColor({ state: setting.state });
   }
-  return;
+  return color;
 }
 
-export const Badge = ({ deploy, setting }: Badge) => (
-  <ReactstrapBadge color={badgeColor({ deploy, setting })}>
-    {badgeLabel({ deploy, setting })}
+export const Badge = ({ deploy, setting, label, color, id }: Badge) => (
+  <ReactstrapBadge id={id} color={badgeColor({ deploy, setting, color })}>
+    {badgeLabel({ deploy, setting, label })}
   </ReactstrapBadge>
 );
