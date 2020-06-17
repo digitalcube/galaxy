@@ -32,26 +32,26 @@ export const Default = () => {
   return <Deploy deploy={deployData} {...actionsData} />;
 };
 
-// export const Building = () => (
-//   <Deploy
-//     deploy={{ ...deployData, state: "DEPLOY_BUILDING" }}
-//     {...actionsData}
-//   />
-// );
+export const Building = () => (
+  <Deploy
+    deploy={{ ...deployData, state: "DEPLOY_BUILDING" }}
+    {...actionsData}
+  />
+);
 
-// export const Published = () => (
-//   <Deploy
-//     deploy={{ ...deployData, state: "DEPLOY_PUBLISHED" }}
-//     {...actionsData}
-//   />
-// );
+export const Published = () => (
+  <Deploy
+    deploy={{ ...deployData, state: "DEPLOY_PUBLISHED" }}
+    {...actionsData}
+  />
+);
 
-// export const Failed = () => (
-//   <Deploy deploy={{ ...deployData, state: "DEPLOY_FAILED" }} {...actionsData} />
-// );
+export const Failed = () => (
+  <Deploy deploy={{ ...deployData, state: "DEPLOY_FAILED" }} {...actionsData} />
+);
 
-// const longTitleString = `This task's name is absurdly large. In fact, I think if I keep going I might end up with content overflow. What will happen? The star that represents a pinned task could have text overlapping. The text could cut-off abruptly when it reaches the star. I hope not!`;
+const longTitleString = `Space is big. You just won't believe how vastly, hugely, mind-bogglingly big it is. I mean, you may think it's a long way down the road to the chemist's, but that's just peanuts to space.`;
 
-// export const LongTitle = () => (
-//   <Deploy deploy={{ ...deployData, title: longTitleString }} {...actionsData} />
-// );
+export const LongTitle = () => (
+  <Deploy deploy={{ ...deployData, title: longTitleString }} {...actionsData} />
+);

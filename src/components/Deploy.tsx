@@ -1,7 +1,12 @@
 // src/components/Deploy.js
 
 import React from "react";
-import { ListGroupItem as ReactstrapListGroupItem } from "reactstrap";
+import {
+  ListGroupItem as ReactstrapListGroupItem,
+  Row,
+  Col,
+  Container,
+} from "reactstrap";
 import { ChevronRight } from "@styled-icons/material/ChevronRight";
 import moment from "moment";
 import "moment-duration-format";
@@ -15,6 +20,7 @@ type Deploy = {
     start: string;
     stop: string;
   };
+  onViewDeploy: any;
 };
 
 type DeployTime = {
@@ -43,26 +49,36 @@ function deployDuration({ start, stop }: DeployDuration) {
 
 export const Deploy = ({
   deploy: { id, title, state, start, stop },
+  onViewDeploy,
 }: Deploy) => (
   <ReactstrapListGroupItem
     id={id}
     tag='button'
     action
+    onClick={() => onViewDeploy(id)}
     className='d-flex align-items-center'>
-    <div className='flex-grow-1'>
-      <div>
-        <Badge deploy={{state: state}} />
-      </div>
-      <div>
-        <small>{title}</small>
-      </div>
-    </div>
-    <div>
-      <div>{deployTime({ stop })}</div>
-      <small>Deployed in {deployDuration({ start, stop })}</small>
-    </div>
-    <div className='pl-3'>
-      <ChevronRight size='1rem' />
-    </div>
+    <Container fluid>
+      <Row>
+        <Col sm="8">
+          <div className='overflow-hidden'>
+            <div>
+              <Badge deploy={{ state: state }} />
+            </div>
+            <div className='text-truncate'>
+              <small>{title}</small>
+            </div>
+          </div>
+        </Col>
+        <Col className='d-flex justify-content-md-end'>
+          <div>
+            <div>{deployTime({ stop })}</div>
+            <small>Deployed in {deployDuration({ start, stop })}</small>
+          </div>
+          <div className='pl-3'>
+            <ChevronRight size='1rem' />
+          </div>
+        </Col>
+      </Row>
+    </Container>
   </ReactstrapListGroupItem>
 );

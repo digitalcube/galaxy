@@ -14,10 +14,9 @@ export default function Task({
         <input
           type='checkbox'
           defaultChecked={state === "TASK_ARCHIVED"}
-          disabled={true}
+          onClick={() => onArchiveTask(id)}
           name='checked'
         />
-        <span className='checkbox-custom' onClick={() => onArchiveTask(id)} />
       </label>
       <div className='title'>
         <input
