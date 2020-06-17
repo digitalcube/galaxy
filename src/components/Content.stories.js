@@ -4,12 +4,12 @@
 
 import React from "react"
 import { withKnobs } from "@storybook/addon-knobs/react"
-import { ContentCard } from "./ContentCard"
+import { Content } from "./Content"
 import moment from "moment"
 
 export default {
-  component: ContentCard,
-  title: `Components/ContentCard`,
+  component: Content,
+  title: `Components/Content`,
   decorators: [
     withKnobs,
     (story) => <div style={{ padding: `3rem` }}>{story()}</div>,
@@ -17,7 +17,7 @@ export default {
   excludeStories: /.*Data$/,
 }
 
-export const contentCardData = {
+export const contentData = {
   title: `Title`,
   img: `https://picsum.photos/400/300`,
   href: `https://duckduckgo.com/`,
@@ -25,4 +25,4 @@ export const contentCardData = {
   author: `Ford Perfect`,
 }
 
-export const Default = () => <ContentCard {...contentCardData} />
+export const Default = () => <Content content={{ ...contentData }} />

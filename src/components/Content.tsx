@@ -3,12 +3,14 @@ import { Card } from "./Card"
 import moment from "moment"
 import "moment-duration-format"
 
-type ContentCard = {
-  img: string
-  title: string
-  date?: string
-  author?: string
-  href?: string
+type Content = {
+  content: {
+    img: string
+    title: string
+    date?: string
+    author?: string
+    href?: string
+  }
 }
 
 type PublishedDate = {
@@ -25,19 +27,17 @@ function publishedDate({ date }: PublishedDate) {
   return d
 }
 
-export const ContentCard = ({
-  img,
-  title,
-  date,
-  href,
-  author,
-}: ContentCard) => (
+export const Content = ({
+  content: { img, title, date, href, author },
+}: Content) => (
   <div>
     <Card href={href} img={img}>
       <a href={href}>
         <h2>{title}</h2>
       </a>
-      <p>{publishedDate({ date: date })} | {author}</p>
+      <p>
+        {publishedDate({ date: date })} | {author}
+      </p>
     </Card>
   </div>
 )
