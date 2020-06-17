@@ -8,6 +8,6 @@ type Button = {
   label: string
 }
 
-export const Button = ({ label, color = `primary` }: Button) => (
+export const Button = ({ label, color }: Button) => (
   <ReactstrapButton color={color}>{label}</ReactstrapButton>
 )

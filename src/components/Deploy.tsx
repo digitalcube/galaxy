@@ -3,9 +3,9 @@
 import React from "react"
 import {
   ListGroupItem as ReactstrapListGroupItem,
-  Row,
-  Col,
-  Container,
+  Row as ReactstrapRow,
+  Col as ReactstrapCol,
+  Container as ReactstrapContainer,
 } from "reactstrap"
 import { ChevronRight } from "@styled-icons/material/ChevronRight"
 import moment from "moment"
@@ -58,9 +58,9 @@ export const Deploy = ({
     onClick={() => onViewDeploy(id)}
     className="d-flex align-items-center"
   >
-    <Container fluid>
-      <Row>
-        <Col sm="8">
+    <ReactstrapContainer fluid>
+      <ReactstrapRow>
+        <ReactstrapCol sm="8">
           <div className="overflow-hidden">
             <div>
               <Badge deploy={{ state: state }} />
@@ -69,8 +69,8 @@ export const Deploy = ({
               <small>{title}</small>
             </div>
           </div>
-        </Col>
-        <Col className="d-flex justify-content-md-end">
+        </ReactstrapCol>
+        <ReactstrapCol className="d-flex justify-content-md-end">
           <div>
             <div>{deployTime({ stop })}</div>
             <small>Deployed in {deployDuration({ start, stop })}</small>
@@ -78,8 +78,8 @@ export const Deploy = ({
           <div className="pl-3">
             <ChevronRight size="1rem" />
           </div>
-        </Col>
-      </Row>
-    </Container>
+        </ReactstrapCol>
+      </ReactstrapRow>
+    </ReactstrapContainer>
   </ReactstrapListGroupItem>
 )
