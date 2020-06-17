@@ -6,6 +6,7 @@ import {
   CardBody as ReactstrapCardBody,
   CardSubtitle as ReactstrapCardSubtitle,
   CardFooter as ReactstrapCardFooter,
+  CardImg as ReactstrapCardImg,
 } from "reactstrap"
 
 type Card = {
@@ -15,6 +16,19 @@ type Card = {
   footer?: React.ReactNode
   action?: React.ReactNode
   id?: string
+  img?: string
+  href?: string
+}
+
+const CardImg = ({ img, href }: Card) => {
+  if (!img) return null
+  if (href)
+    return (
+      <a href={href}>
+        <ReactstrapCardImg src={img} />
+      </a>
+    )
+  return <ReactstrapCardImg src={img} />
 }
 
 const CardTitle = ({ title }: Card) => {
@@ -57,8 +71,11 @@ export const Card = ({
   children,
   footer,
   id,
+  img,
+  href,
 }: Card) => (
   <ReactstrapCard id={id}>
+    <CardImg href={href} img={img} />
     <CardHeader title={title} subtitle={subtitle} action={action} />
     {children ? <ReactstrapCardBody>{children}</ReactstrapCardBody> : null}
     <CardFooter footer={footer} />
