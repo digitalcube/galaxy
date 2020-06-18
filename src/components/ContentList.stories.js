@@ -3,7 +3,7 @@
 import React from "react"
 
 import ContentList from "./ContentList"
-import { contentData, actionsData } from "./Content.stories"
+import { contentData } from "./Content.stories"
 
 export default {
   component: ContentList,
@@ -29,12 +29,8 @@ export const defaultDeploysData = [
   { ...contentData, id: `6`, title: `Is there any tea on this spaceship?` },
 ]
 
-export const Default = () => (
-  <ContentList content={defaultDeploysData} {...actionsData} />
-)
+export const Default = () => <ContentList content={defaultDeploysData} />
 
-export const Loading = () => (
-  <ContentList loading content={[]} {...actionsData} />
-)
+export const Loading = () => <ContentList loading content={[]} />
 
-export const Empty = () => <ContentList content={[]} {...actionsData} />
+export const Empty = () => <ContentList content={[]} />
