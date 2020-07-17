@@ -1,6 +1,6 @@
 import React from "react"
 
-type Title = {
+type Heading = {
   content: {
     title: string
     href?: string
@@ -8,10 +8,10 @@ type Title = {
   className?: string
 }
 
-export const Title: React.FunctionComponent<Title> = ({
+export const Heading: React.FunctionComponent<Heading> = ({
   content: { title, href },
   className,
-}: Title) => (
+}: Heading) => (
   <a href={href}>
     <h2 className={`text-primary h3 ${className}`}>{title}</h2>
   </a>

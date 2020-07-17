@@ -1,10 +1,10 @@
 import React from "react"
 import { withKnobs } from "@storybook/addon-knobs/react"
-import { Title } from "../components/Title"
+import { Heading } from "../components/Heading"
 
 export default {
-  component: Title,
-  title: `Components/Title`,
+  component: Heading,
+  title: `Components/Heading`,
   decorators: [
     withKnobs,
     (story) => <div style={{ padding: `3rem` }}>{story()}</div>,
@@ -12,8 +12,8 @@ export default {
   excludeStories: /.*Data$/,
 }
 
-export const titleData = {
+export const headingData = {
   title: `The static site generator for WordPress.`,
 }
 
-export const Default = () => <Title content={{ ...titleData }} />
+export const Default = () => <Heading content={{ ...headingData }} />

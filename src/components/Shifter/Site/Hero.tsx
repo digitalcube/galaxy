@@ -5,7 +5,7 @@ import {
   Col as ReactstrapCol,
 } from "reactstrap"
 import { Button } from "./../../Button"
-import { Title } from "./../../Title"
+import { Heading } from "./../../Heading"
 
 type Hero = {
   content: {
@@ -41,7 +41,7 @@ export const Hero: React.FunctionComponent<Hero> = ({
     <ReactstrapContainer>
       <ReactstrapRow>
         <ReactstrapCol lg="5">
-          <Title content={{ title }} />
+          <Heading content={{ title }} />
           <p className="font-size-lg">{subtitle}</p>
           <Button content={{ label: buttonLabel, href }} />
           <p className="text-monospace text-uppercase mt-3">{buttonFooter}</p>
