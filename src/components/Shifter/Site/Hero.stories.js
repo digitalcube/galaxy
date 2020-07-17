@@ -12,4 +12,13 @@ export default {
   excludeStories: /.*Data$/,
 }
 
-export const Default = () => <Hero />
+export const Default = () => (
+  <Hero
+    content={{
+      title: `The static site generator for WordPress sites.`,
+      subtitle: `Using Shifter, create or migrate WordPress sites in minutes that are scalable, secure from attacks, and 100% static with no security or caching plugins required.`,
+      buttonLabel: `Start a free trial`,
+      buttonFooter: `No credit card Required`,
+    }}
+  />
+)
