@@ -6,6 +6,7 @@ import {
 } from "reactstrap"
 import { Button } from "./../../Button"
 import { Heading } from "./../../Heading"
+import { Animation } from "./../../Animation/Index"
 
 type Hero = {
   content: {
@@ -31,7 +32,6 @@ export const Hero: React.FunctionComponent<Hero> = ({
   content: {
     title = `The static site generator for WordPress sites.`,
     subtitle = `Using Shifter, create or migrate WordPress sites in minutes that are scalable, secure from attacks, and 100% static with no security or caching plugins required.`,
-    img,
     href = `https://www.getshifter.io/register`,
     buttonFooter = `No credit card required.`,
     buttonLabel = `Start a free trial`,
@@ -47,7 +47,7 @@ export const Hero: React.FunctionComponent<Hero> = ({
           <p className="text-monospace text-uppercase mt-3">{buttonFooter}</p>
         </ReactstrapCol>
         <ReactstrapCol lg="7">
-          <Img img={img} />
+          <Animation />
         </ReactstrapCol>
       </ReactstrapRow>
     </ReactstrapContainer>
