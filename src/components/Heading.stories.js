@@ -16,4 +16,4 @@ export const headingData = {
   title: `The static site generator for WordPress.`,
 }
 
-export const Default = () => <Heading content={{ ...headingData }} />
+export const Default = () => <Heading content={headingData} />

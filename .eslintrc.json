@@ -39,6 +39,7 @@
     "react/display-name": "off",
     "react/jsx-key": "warn",
     "react/no-unescaped-entities": "warn",
+    "react/no-children-prop": "off",
     "react/prop-types": "off",
     "require-jsdoc": "off",
     "valid-jsdoc": "off"
