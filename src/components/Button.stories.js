@@ -1,7 +1,3 @@
-// src/components/Deploy.stories.js
-// https://github.com/megumiteam/shifter-dashboard/blob/master/src/components/v3/artifacts/Item.tsx
-// https://github.com/megumiteam/shifter-dashboard/blob/master/src/types/artifacts.ts
-
 import React from "react"
 import { withKnobs } from "@storybook/addon-knobs/react"
 import { Button } from "./Button"
@@ -16,4 +12,9 @@ export default {
   excludeStories: /.*Data$/,
 }
 
-export const Default = () => <Button />
+export const buttonContentData = {
+  label: `Don't Panic.`,
+  href: `https://galaxy.digitalcube.jp`,
+}
+
+export const Default = () => <Button content={buttonContentData} />
