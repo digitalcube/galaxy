@@ -15,6 +15,9 @@ export default {
 export const buttonContentData = {
   label: `Don't Panic.`,
   href: `https://galaxy.digitalcube.jp`,
+  color: `magenta`,
 }
 
-export const Default = () => <Button content={buttonContentData} />
+export const Default = () => (
+  <Button color={buttonContentData.color} content={buttonContentData} />
+)

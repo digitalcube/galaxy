@@ -6,6 +6,7 @@ type Button = {
   content: {
     label: string
     href: string
+    color: string
   }
 }
 
@@ -14,8 +15,10 @@ const StyledButton = styled.a`
   display: inline-flex;
   font-size: ${components.button.fontSize}
   font-weight: ${components.button.fontWeight};
-  background-color: ${colors.purple};
-  border: ${components.borderWidth} solid ${colors.purple};
+  background-color: ${(props) => colors[`${props.color}`] || colors.purple};
+  border-width: ${components.borderWidth};
+  border-style: solid;
+  border-color: ${(props) => colors[`${props.color}`] || colors.purple};
   color: ${colors.white};
   border-radius: ${components.borderRadius};
   padding: ${components.button.padding};
@@ -34,5 +37,9 @@ const StyledButton = styled.a`
 `
 
 export const Button: React.FC<Button> = ({
-  content: { label, href },
-}: Button) => <StyledButton href={href}>{label}</StyledButton>
+  content: { label, href, color },
+}: Button) => (
+  <StyledButton color={color} href={href}>
+    {label}
+  </StyledButton>
+)
