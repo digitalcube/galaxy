@@ -15,10 +15,10 @@ const StyledButton = styled.a`
   display: inline-flex;
   font-size: ${components.button.fontSize}
   font-weight: ${components.button.fontWeight};
-  background-color: ${(props) => colors[`${props.color}`] || colors.purple};
+  background-color: ${colors.purple};
   border-width: ${components.borderWidth};
   border-style: solid;
-  border-color: ${(props) => colors[`${props.color}`] || colors.purple};
+  border-color: ${colors.purple};
   color: ${colors.white};
   border-radius: ${components.borderRadius};
   padding: ${components.button.padding};

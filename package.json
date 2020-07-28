@@ -30,6 +30,7 @@
     "shortid": "^2.2.15",
     "styled-components": "^5.1.1",
     "styled-normalize": "^8.0.7",
+    "styled-theming": "^2.2.0",
     "typescript": "^3.9.5",
     "typescript-plugin-styled-components": "^1.4.4"
   },
