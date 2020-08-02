@@ -12,9 +12,4 @@ const StyledHeading = styled.h2``
 export const Heading: React.FunctionComponent<Heading> = ({
   children = ``,
   tag = ``,
-}: Heading) => (
-  <StyledHeading>
-    {children}
-    {tag}
-  </StyledHeading>
-)
+}: Heading) => <StyledHeading>{children}</StyledHeading>

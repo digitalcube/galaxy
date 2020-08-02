@@ -1,13 +1,16 @@
 import React from "react"
 import { Card } from "./Card"
+import { Heading } from "./Heading"
+import { publishedDate } from "./../utils"
 
 export type Post = {
-  content: {
-    title: string
-    subtitle: string
-    excerpt: string
-    author: string
-    img: React.ReactNode
+  content?: {
+    title?: string
+    subtitle?: string
+    excerpt?: string
+    author?: string
+    date?: string
+    img?: React.ReactNode
   }
 }
 
@@ -16,23 +19,22 @@ export const Post: React.FC<Post> = ({
     title: ``,
     subtitle: ``,
     excerpt: ``,
+    date: ``,
     author: ``,
     img: null,
   },
 }: Post) => {
-  const { title, subtitle, excerpt, img } = content
+  const { title, img, date } = content
   return (
     <Card
       content={{
-        header: {
-          title: title,
-          subtitle: subtitle,
-          excerpt: excerpt,
-        },
         image: {
           img: img,
         },
       }}
-    />
+    >
+      <Heading>{title}</Heading>
+      {publishedDate({ date })}
+    </Card>
   )
 }

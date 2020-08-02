@@ -3,7 +3,7 @@ import styled from "styled-components"
 import { colors, components } from "./../styles"
 import { CardImage } from "./CardImage"
 import { CardHeader } from "./CardHeader"
-// import { CardBody } from "./CardBody"
+import { CardBody } from "./CardBody"
 import { CardFooter } from "./CardFooter"
 
 export type Card = {
@@ -55,6 +55,7 @@ export const Card: React.FC<Card> = ({
     <StyledCard>
       <CardImage content={image} />
       <CardHeader content={header} />
+      <CardBody>{children}</CardBody>
       <CardFooter content={footer} />
     </StyledCard>
   )
