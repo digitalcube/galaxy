@@ -12,7 +12,7 @@ import { themes, themeFunction } from "../src/styles"
 addDecorator(withContexts(contexts))
 addDecorator((storyFn) => (
   <div>
-    {console.log(themeFunction)}
+    <link rel="stylesheet" href="https://use.typekit.net/rrt0shs.css" />
     <ThemeProvider theme={{ mode: 'light' }}>
       <GlobalStyle />
       {storyFn()}

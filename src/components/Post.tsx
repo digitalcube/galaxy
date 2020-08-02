@@ -11,6 +11,7 @@ export type Post = {
     author?: string
     date?: string
     img?: React.ReactNode
+    link?: string
   }
 }
 
@@ -21,10 +22,11 @@ export const Post: React.FC<Post> = ({
     excerpt: ``,
     date: ``,
     author: ``,
+    link: ``,
     img: null,
   },
 }: Post) => {
-  const { title, img, date } = content
+  const { title, img, date, link, author } = content
   return (
     <Card
       content={{
@@ -33,8 +35,12 @@ export const Post: React.FC<Post> = ({
         },
       }}
     >
-      <Heading>{title}</Heading>
-      {publishedDate({ date })}
+      <a href={link}>
+        <Heading>{title}</Heading>
+      </a>
+      <small>
+        {author} - {publishedDate({ date })}
+      </small>
     </Card>
   )
 }

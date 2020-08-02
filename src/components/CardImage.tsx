@@ -1,6 +1,7 @@
 import React from "react"
 import styled from "styled-components"
 import { components } from "../styles"
+import { Image } from "./Image"
 
 export type CardImage = {
   content?: {
@@ -16,5 +17,9 @@ export const CardImage: React.FC<CardImage> = ({
   content = { img: `` },
 }: CardImage) => {
   const { img } = content
-  return <StyledCardImage>{img}</StyledCardImage>
+  return (
+    <StyledCardImage>
+      <Image>{img}</Image>
+    </StyledCardImage>
+  )
 }

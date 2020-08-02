@@ -50,6 +50,7 @@ const PostListItems = ({ content = [], col = 4 }: PostListItems) => {
               excerpt: item[`excerpt`],
               date: item[`date`],
               img: item[`img`],
+              author: item[`author`],
             }}
           />
         </div>

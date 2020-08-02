@@ -7,7 +7,7 @@ type Heading = {
   children?: string
 }
 
-const StyledHeading = styled.h2``
+const StyledHeading = styled.h3``
 
 export const Heading: React.FunctionComponent<Heading> = ({
   children = ``,
