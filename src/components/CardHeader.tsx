@@ -21,7 +21,7 @@ export const CardHeader: React.FC<CardHeader> = ({
   const { title, subtitle, excerpt } = content
   return (
     <StyledCardHeader>
-      <Heading content={{ title }} />
+      <Heading tag="h1">{title}</Heading>
       {subtitle}
       {excerpt}
     </StyledCardHeader>

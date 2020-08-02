@@ -2,16 +2,19 @@ import React from "react"
 import styled from "styled-components"
 
 type Heading = {
-  content?: {
-    title?: string
-  }
+  tag?: string
+  size?: string
+  children?: string
 }
 
-const StyledHeading = styled.h3``
+const StyledHeading = styled.h2``
 
-export const Heading: React.FC<Heading> = ({
-  content = { title: `` },
-}: Heading) => {
-  const { title } = content
-  return <StyledHeading>{title}</StyledHeading>
-}
+export const Heading: React.FunctionComponent<Heading> = ({
+  children = ``,
+  tag = ``,
+}: Heading) => (
+  <StyledHeading>
+    {children}
+    {tag}
+  </StyledHeading>
+)
