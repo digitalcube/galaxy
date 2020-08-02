@@ -1,17 +1,23 @@
 import React from "react"
 import styled from "styled-components"
 import { colors, components } from "./../styles"
+import { CardImage } from "./CardImage"
 import { CardHeader } from "./CardHeader"
-import { CardBody } from "./CardBody"
+// import { CardBody } from "./CardBody"
 import { CardFooter } from "./CardFooter"
 
 export type Card = {
-  content: {
-    header: {
+  content?: {
+    header?: {
+      title?: string
+      subtitle?: string
+      excerpt?: string
+    }
+    footer?: {
       title?: string
     }
-    footer: {
-      title?: string
+    image?: {
+      img?: React.ReactNode
     }
   }
   children?: React.ReactNode
@@ -28,14 +34,28 @@ const StyledCard = styled.div`
   border-radius: ${components.borderRadius};
   box-shadow: ${components.boxShadow};
 `
-
 export const Card: React.FC<Card> = ({
-  content: { header, footer },
-  children,
-}: Card) => (
-  <StyledCard>
-    <CardHeader content={header} />
-    <CardBody>{children}</CardBody>
-    <CardFooter content={footer} />
-  </StyledCard>
-)
+  content = {
+    header: {
+      title: ``,
+      subtitle: ``,
+      excerpt: ``,
+    },
+    footer: {
+      title: ``,
+    },
+    image: {
+      img: ``,
+    },
+  },
+  children = null,
+}: Card) => {
+  const { header, footer, image } = content
+  return (
+    <StyledCard>
+      <CardImage content={image} />
+      <CardHeader content={header} />
+      <CardFooter content={footer} />
+    </StyledCard>
+  )
+}

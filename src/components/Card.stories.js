@@ -13,6 +13,9 @@ export default {
 }
 
 export const cardContentData = {
+  image: {
+    img: `Image`,
+  },
   header: {
     title: `Don't Panic.`,
   },

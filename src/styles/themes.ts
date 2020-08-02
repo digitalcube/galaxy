@@ -1,5 +1,4 @@
 // import theme from "styled-theming"
-
 import { colors } from "./index"
 
 // export const themeFunction = theme(`mode`, {

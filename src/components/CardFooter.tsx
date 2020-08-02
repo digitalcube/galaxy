@@ -1,10 +1,9 @@
 import React from "react"
 import styled from "styled-components"
-import { components } from "../styles"
-import { Heading } from "./Heading"
+import { components } from "./../styles"
 
 export type CardFooter = {
-  content: {
+  content?: {
     title?: string
   }
 }
@@ -13,8 +12,9 @@ const StyledCardFooter = styled.div`
   padding: 0 ${components.padding};
 `
 
-export const CardFooter: React.FC<CardFooter> = ({ content }: CardFooter) => (
-  <StyledCardFooter>
-    <Heading content={content} />
-  </StyledCardFooter>
-)
+export const CardFooter: React.FC<CardFooter> = ({
+  content = { title: `` },
+}: CardFooter) => {
+  const { title } = content
+  return <StyledCardFooter>{title}</StyledCardFooter>
+}
