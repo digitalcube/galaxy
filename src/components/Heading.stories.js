@@ -13,7 +13,7 @@ export default {
 }
 
 export const headingData = {
-  title: `The static site generator for WordPress.`,
+  title: `“I could calculate your chance of survival, but you won’t like it.” –Marvin`,
 }
 
 export const Default = () => <Heading content={headingData} />

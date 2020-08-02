@@ -14,9 +14,9 @@ export default {
 }
 
 export const postData = {
-  title: `Title`,
-  subtitle: `Subtitle`,
-  excerpt: `Excerpt`,
+  title: `Announcing the Shifter Gatsby Recipe`,
+  subtitle: `Our Shifter Gatsby Recipe focuses on solving the problem of getting started.`,
+  excerpt: `If you want to create a Gatsby site using WordPress and deploy your site to something like Gatsby Cloud, you should be able to do that with just a few commands.`,
   date: `Date`,
   img: `Image`,
 }

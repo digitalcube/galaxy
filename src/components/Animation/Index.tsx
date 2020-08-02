@@ -6,7 +6,7 @@ type Animation = {
   animation?: Record<string, unknown>
 }
 
-export const Animation: React.FunctionComponent<Animation> = ({
+export const Animation: React.FC<Animation> = ({
   animation = {
     v: `5.5.10`,
     fr: 29.9700012207031,
