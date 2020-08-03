@@ -2,14 +2,15 @@ import { colors } from './colors';
 
 export const type = {
   fontWeight: 400,
-  fontFamily: `Sofia Pro, sans-serif`,
+  fontFamily: `sofia-pro, sans-serif`,
   fontSize: `1rem`,
+  fontColor: colors.black,
   headings: {
-    fontColor: colors.purple,
+    fontColor: colors.purpleDark,
     fontWeight: 500,
     fontStyle: `normal`,
     h3: {
-      fontSize: `1.5rem`,
+      fontSize: `1.25rem`,
     },
   },
 };

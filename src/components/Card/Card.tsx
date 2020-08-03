@@ -23,7 +23,7 @@ export type Card = {
   children?: React.ReactNode;
 };
 
-const StyledCard = styled.div`
+const StyledCard = styled.article`
   position: relative;
   display: flex;
   flex-direction: column;

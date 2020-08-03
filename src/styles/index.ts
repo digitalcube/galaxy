@@ -8,13 +8,13 @@ export { colors, components, type, themes };
 
 export const GlobalStyle = createGlobalStyle`
   ${normalize}
-  @import url("https://use.typekit.net/rrt0shs.css");
 
   body {
     font-family: ${type.fontFamily};
   }
 
-  .h3 {
+  h3 {
+    color: ${type.headings.fontColor};
     font-style: ${type.headings.fontStyle};
     font-weight: ${type.headings.fontWeight};
     font-size: ${type.headings.h3.fontSize};

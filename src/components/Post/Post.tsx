@@ -1,7 +1,8 @@
 import React from 'react';
-import { Card } from '../Card';
-import { Heading } from '../Heading';
-import { publishedDate } from '../../lib/utils';
+import { Card } from './../Card';
+import { Heading } from './../Heading';
+import { Author } from './../Author';
+import { publishedDate } from './../../lib/utils/dates';
 
 export type Post = {
   content?: {
@@ -11,6 +12,7 @@ export type Post = {
     author?: string;
     date?: string;
     img?: React.ReactNode;
+    link?: string;
   };
 };
 
@@ -21,10 +23,11 @@ export const Post: React.FC<Post> = ({
     excerpt: ``,
     date: ``,
     author: ``,
+    link: ``,
     img: null,
   },
 }: Post) => {
-  const { title, img, date } = content;
+  const { title, img, date, link, author } = content;
   return (
     <Card
       content={{
@@ -33,8 +36,13 @@ export const Post: React.FC<Post> = ({
         },
       }}
     >
-      <Heading>{title}</Heading>
-      {publishedDate({ date })}
+      <a href={link}>
+        <Heading>{title}</Heading>
+      </a>
+      <footer>
+        <Author content={{ name: author }} /> -{` `}
+        <time>{publishedDate({ date })}</time>
+      </footer>
     </Card>
   );
 };
