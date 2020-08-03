@@ -1,6 +1,5 @@
 import React from 'react';
 import styled from 'styled-components';
-import { components } from '../../styles';
 import { Image } from './../Image';
 
 export type CardImage = {
@@ -10,7 +9,6 @@ export type CardImage = {
 };
 
 const StyledCardImage = styled.div`
-  border-radius: ${components.borderRadius};
   overflow: hidden;
 `;
 

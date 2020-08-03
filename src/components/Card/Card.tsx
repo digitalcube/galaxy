@@ -20,6 +20,9 @@ export type Card = {
       img?: React.ReactNode;
     };
   };
+  style?: {
+    background?: string;
+  };
   children?: React.ReactNode;
 };
 
@@ -31,9 +34,12 @@ const StyledCard = styled.article`
   word-wrap: break-word;
   background-clip: border-box;
   background-color: ${colors.white};
+  background-color: ${props =>
+    props.style.background ? 'palevioletred' : colors.white};
   border-radius: ${components.borderRadius};
   box-shadow: ${components.boxShadow};
 `;
+
 export const Card: React.FC<Card> = ({
   content = {
     header: {
@@ -48,11 +54,15 @@ export const Card: React.FC<Card> = ({
       img: ``,
     },
   },
+  style = {
+    background: ``,
+  },
   children = null,
 }: Card) => {
   const { header, footer, image } = content;
   return (
-    <StyledCard>
+    <StyledCard style={style}>
+      {console.log(style)}
       <CardImage content={image} />
       <CardHeader content={header} />
       <CardBody>{children}</CardBody>
