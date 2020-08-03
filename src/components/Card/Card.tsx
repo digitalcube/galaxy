@@ -1,5 +1,6 @@
 import React from 'react';
 import styled from 'styled-components';
+import theme from 'styled-theming';
 import { colors, components } from './../../styles';
 import { CardImage } from './CardImage';
 import { CardHeader } from './CardHeader';
@@ -20,11 +21,26 @@ export type Card = {
       img?: React.ReactNode;
     };
   };
-  style?: {
-    background?: string;
-  };
   children?: React.ReactNode;
 };
+
+const backgroundColor = theme('mode', {
+  minimal: ``,
+  light: colors.white,
+  dark: colors.purpleDark,
+});
+
+const boxShadow = theme('mode', {
+  minimal: ``,
+  light: colors.white,
+  dark: colors.purpleDark,
+});
+
+const borderRadius = theme('mode', {
+  minimal: ``,
+  dark: components.borderRadius,
+  light: components.borderRadius,
+});
 
 const StyledCard = styled.article`
   position: relative;
@@ -33,11 +49,9 @@ const StyledCard = styled.article`
   min-width: 0;
   word-wrap: break-word;
   background-clip: border-box;
-  background-color: ${colors.white};
-  background-color: ${props =>
-    props.style.background ? 'palevioletred' : colors.white};
-  border-radius: ${components.borderRadius};
-  box-shadow: ${components.boxShadow};
+  background-color: ${props => props.theme.dark};
+  border-radius: ${borderRadius};
+  box-shadow: ${boxShadow};
 `;
 
 export const Card: React.FC<Card> = ({
@@ -54,15 +68,11 @@ export const Card: React.FC<Card> = ({
       img: ``,
     },
   },
-  style = {
-    background: ``,
-  },
   children = null,
 }: Card) => {
   const { header, footer, image } = content;
   return (
-    <StyledCard style={style}>
-      {console.log(style)}
+    <StyledCard>
       <CardImage content={image} />
       <CardHeader content={header} />
       <CardBody>{children}</CardBody>

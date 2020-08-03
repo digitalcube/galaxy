@@ -35,7 +35,6 @@ export const Post: React.FC<Post> = ({
           img: img,
         },
       }}
-      style={{ background: `transparent` }}
     >
       <a href={link}>
         <Heading>{title}</Heading>

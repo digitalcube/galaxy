@@ -46,6 +46,7 @@
   "module": "dist/galaxy.esm.js",
   "devDependencies": {
     "@storybook/addon-actions": "^5.3.19",
+    "@storybook/addon-backgrounds": "^5.3.19",
     "@storybook/addon-contexts": "^5.3.19",
     "@storybook/addon-docs": "^5.3.19",
     "@storybook/addon-info": "^5.3.19",
@@ -77,6 +78,7 @@
     "typescript": "^3.9.7"
   },
   "dependencies": {
+    "@types/styled-theming": "^2.2.5",
     "moment": "^2.27.0",
     "moment-duration-format": "^2.3.2",
     "react-lottie": "^1.2.3",

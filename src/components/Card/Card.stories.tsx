@@ -1,5 +1,6 @@
 import React from 'react';
 import { withKnobs } from '@storybook/addon-knobs';
+import props from 'prop-types';
 import { Card } from './Card';
 
 export default {
