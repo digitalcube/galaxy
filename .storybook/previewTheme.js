@@ -7,12 +7,11 @@ import theme from 'styled-theming';
 
 import { GlobalStyle } from "./../src/styles/index"
 import { contexts } from "./contexts"
-import { themes, themeFunction } from "../src/styles"
+import { themes } from "../src/styles"
 
 addDecorator(withContexts(contexts))
 addDecorator((storyFn) => (
   <div>
-    {console.log(themeFunction)}
     <ThemeProvider theme={{ mode: 'light' }}>
       <GlobalStyle />
       {storyFn()}

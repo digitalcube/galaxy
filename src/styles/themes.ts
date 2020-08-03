@@ -1,16 +1,6 @@
 // import theme from "styled-theming"
 import { colors } from './colors';
 
-// export const themeFunction = theme(`mode`, {
-//   light: `#fff`,
-//   dark: `#000`,
-// })
-
-// export const themeFunction = theme(`brand`, {
-//   shifter: `#fff`,
-//   amimoto: `#000`,
-// })
-
 export const themes = {
   shifter: {
     colors: {
