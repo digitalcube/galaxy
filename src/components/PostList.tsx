@@ -1,6 +1,5 @@
-// src/components/PostList.js
-
 import React from "react"
+import styled from "styled-components"
 import { Post } from "./Post"
 
 type PostList = {
@@ -32,6 +31,17 @@ const PostListSubtitle = ({ subtitle }: PostListSubtitle) => {
   return <p>{subtitle}</p>
 }
 
+const StyledPostListItems = styled.section`
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+
+  > * {
+    width: 32%;
+    margin-bottom: 2%; /* (100-32*3)/2 */
+  }
+`
+
 type PostListItems = {
   content?: Array<string>
   col?: number
@@ -40,22 +50,21 @@ type PostListItems = {
 const PostListItems = ({ content = [], col = 4 }: PostListItems) => {
   if (!content) return null
   return (
-    <div>
+    <StyledPostListItems>
       {content.map((item, i) => (
-        <div key={i}>
-          <Post
-            content={{
-              title: item[`title`],
-              subtitle: item[`subtitle`],
-              excerpt: item[`excerpt`],
-              date: item[`date`],
-              img: item[`img`],
-              author: item[`author`],
-            }}
-          />
-        </div>
+        <Post
+          key={i}
+          content={{
+            title: item[`title`],
+            subtitle: item[`subtitle`],
+            excerpt: item[`excerpt`],
+            date: item[`date`],
+            img: item[`img`],
+            author: item[`author`],
+          }}
+        />
       ))}
-    </div>
+    </StyledPostListItems>
   )
 }
 

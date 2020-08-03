@@ -1,6 +1,7 @@
 import React from "react"
 import { Card } from "./Card"
 import { Heading } from "./Heading"
+import { Author } from "./Author"
 import { publishedDate } from "./../utils"
 
 export type Post = {
@@ -38,9 +39,10 @@ export const Post: React.FC<Post> = ({
       <a href={link}>
         <Heading>{title}</Heading>
       </a>
-      <small>
-        {author} - {publishedDate({ date })}
-      </small>
+      <footer>
+        <Author content={{ name: author }} /> -{` `}
+        <time>{publishedDate({ date })}</time>
+      </footer>
     </Card>
   )
 }
