@@ -1,52 +1,29 @@
 {
-  "name": "galaxy",
   "version": "0.1.0",
-  "private": true,
-  "dependencies": {
-    "@styled-icons/material": "^10.0.0",
-    "@testing-library/jest-dom": "^4.2.4",
-    "@testing-library/react": "^9.3.2",
-    "@testing-library/user-event": "^7.1.2",
-    "@types/jest": "^26.0.0",
-    "@types/moment-duration-format": "^2.2.2",
-    "@types/node": "^14.0.13",
-    "@types/react": "^16.9.36",
-    "@types/react-dom": "^16.9.8",
-    "@types/react-lottie": "^1.2.5",
-    "@types/reactstrap": "^8.4.2",
-    "@types/shortid": "^0.0.29",
-    "@types/styled-components": "^5.1.0",
-    "@types/swiper": "^5.4.0",
-    "moment": "^2.27.0",
-    "moment-duration-format": "^2.3.2",
-    "node-sass": "^4.14.1",
-    "react": "^16.13.1",
-    "react-content-loader": "^5.0.4",
-    "react-dom": "^16.13.1",
-    "react-lottie": "^1.2.3",
-    "react-redux": "^7.2.0",
-    "react-router-dom": "^5.2.0",
-    "react-scripts": "3.4.1",
-    "react-svg": "^11.0.33",
-    "reactstrap": "^8.4.1",
-    "redux": "^4.0.5",
-    "shortid": "^2.2.15",
-    "styled-components": "^5.1.1",
-    "styled-normalize": "^8.0.7",
-    "styled-theming": "^2.2.0",
-    "swiper": "^6.1.1",
-    "typescript": "^3.9.5",
-    "typescript-plugin-styled-components": "^1.4.4"
+  "license": "MIT",
+  "main": "dist/index.js",
+  "typings": "dist/index.d.ts",
+  "files": [
+    "dist",
+    "src"
+  ],
+  "engines": {
+    "node": ">=10"
   },
   "scripts": {
-    "start": "react-scripts start",
-    "build": "react-scripts build",
-    "test": "react-scripts test",
-    "eject": "react-scripts eject",
-    "storybook": "start-storybook -p 9009 -s public",
-    "build-storybook": "build-storybook -s public",
+    "start": "tsdx watch",
+    "build": "tsdx build",
+    "test": "npm run test:unit && npm run test:story",
+    "test:unit": "NODE_ENV=test tsdx test --passWithNoTests src/**",
+    "test:story": "NODE_ENV=test tsdx test --passWithNoTests tests/storyshots",
+    "lint": "tsdx lint",
+    "prepare": "tsdx build",
+    "storybook": "start-storybook -p 6006",
     "chromatic": "chromatic --project-token=fvg2qj7oue",
-    "lint": "eslint '*/**/*.{js,jsx,ts,tsx}' --quiet --fix"
+    "build-storybook": "build-storybook"
+  },
+  "peerDependencies": {
+    "react": ">=16"
   },
   "husky": {
     "hooks": {
@@ -55,48 +32,55 @@
   },
   "lint-staged": {
     "*.{js,ts,tsx}": [
-      "eslint --fix"
+      "tsdx lint --fix"
     ]
   },
-  "eslintConfig": {
-    "extends": "react-app"
+  "prettier": {
+    "printWidth": 80,
+    "semi": true,
+    "singleQuote": true,
+    "trailingComma": "es5"
   },
-  "browserslist": {
-    "production": [
-      ">0.2%",
-      "not dead",
-      "not op_mini all"
-    ],
-    "development": [
-      "last 1 chrome version",
-      "last 1 firefox version",
-      "last 1 safari version"
-    ]
-  },
+  "name": "galaxy",
+  "author": "Digitalcube",
+  "module": "dist/galaxy.esm.js",
   "devDependencies": {
     "@storybook/addon-actions": "^5.3.19",
     "@storybook/addon-contexts": "^5.3.19",
+    "@storybook/addon-docs": "^5.3.19",
     "@storybook/addon-info": "^5.3.19",
     "@storybook/addon-knobs": "^5.3.19",
     "@storybook/addon-links": "^5.3.19",
     "@storybook/addon-storyshots": "^5.3.19",
     "@storybook/addon-viewport": "^5.3.19",
     "@storybook/addons": "^5.3.19",
-    "@storybook/preset-create-react-app": "^3.0.0",
     "@storybook/react": "^5.3.19",
-    "@typescript-eslint/eslint-plugin": "^3.3.0",
-    "@typescript-eslint/parser": "^3.3.0",
-    "chromatic": "^4.0.3",
-    "eslint": "^7.2.0",
-    "eslint-config-prettier": "^6.11.0",
-    "eslint-plugin-prettier": "^3.1.4",
-    "eslint-plugin-react": "^7.20.0",
+    "@types/moment-duration-format": "^2.2.2",
+    "@types/react": "^16.9.44",
+    "@types/react-dom": "^16.9.8",
+    "@types/react-lottie": "^1.2.5",
+    "@types/storybook__addon-storyshots": "^5.3.1",
+    "@types/styled-components": "^5.1.2",
+    "chromatic": "^5.0.0",
     "husky": "^4.2.5",
-    "jest": "^26.0.1",
     "lint-staged": "^10.2.11",
-    "prettier": "^2.0.5",
+    "lottie-web": "^5.7.1",
+    "react": "^16.13.1",
+    "react-docgen-typescript-loader": "^3.7.2",
+    "react-dom": "^16.13.1",
+    "react-is": "^16.13.1",
     "react-test-renderer": "^16.13.1",
-    "ts-jest": "^26.1.0",
-    "ts-loader": "^7.0.5"
+    "styled-theming": "^2.2.0",
+    "ts-loader": "^8.0.2",
+    "tsdx": "^0.13.2",
+    "tslib": "^2.0.0",
+    "typescript": "^3.9.7"
+  },
+  "dependencies": {
+    "moment": "^2.27.0",
+    "moment-duration-format": "^2.3.2",
+    "react-lottie": "^1.2.3",
+    "styled-components": "^5.1.1",
+    "styled-normalize": "^8.0.7"
   }
 }

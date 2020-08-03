@@ -1,4 +1,4 @@
-import { colors } from "./colors"
+import { colors } from './colors';
 
 export const type = {
   fontWeight: 400,
@@ -13,4 +13,4 @@ export const type = {
       fontSize: `1.25rem`,
     },
   },
-}
+};

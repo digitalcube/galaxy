@@ -8,4 +8,4 @@ export const colors = {
   white: `#fff`,
   purple: `#9E4B85`,
   purpleDark: `#451d39`,
-}
+};
