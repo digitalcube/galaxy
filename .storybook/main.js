@@ -1,7 +1,7 @@
 module.exports = {
-  stories: ["../src/components/**/*.stories.js"],
+  stories: ["../src/components/**/*.stories.(js|ts|tsx)"],
   addons: [
-    "@storybook/preset-create-react-app",
+    // "@storybook/preset-create-react-app",
     "@storybook/addon-actions",
     "@storybook/addon-knobs",
     "@storybook/addon-links",
@@ -13,7 +13,13 @@ module.exports = {
       test: /\.(ts|tsx)$/,
       use: [
         {
-          loader: require.resolve("ts-loader"),
+          loader: require.resolve('ts-loader'),
+          options: {
+            transpileOnly: true,
+          },
+        },
+        {
+          loader: require.resolve('react-docgen-typescript-loader'),
         },
       ],
     })

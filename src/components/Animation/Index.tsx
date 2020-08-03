@@ -1,10 +1,10 @@
-import React from "react"
-import Lottie from "react-lottie"
+import React from 'react';
+import Lottie from 'react-lottie';
 // import * as dashboard from "./json/dashboard.json"
 
 type Animation = {
-  animation?: Record<string, unknown>
-}
+  animation?: Record<string, unknown>;
+};
 
 export const Animation: React.FC<Animation> = ({
   animation = {
@@ -6153,4 +6153,4 @@ export const Animation: React.FC<Animation> = ({
       },
     }}
   />
-)
+);

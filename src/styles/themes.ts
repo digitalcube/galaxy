@@ -1,5 +1,5 @@
 // import theme from "styled-theming"
-import { colors } from "./index"
+import { colors } from './colors';
 
 // export const themeFunction = theme(`mode`, {
 //   light: `#fff`,
@@ -22,4 +22,4 @@ export const themes = {
       primary: colors.blue,
     },
   },
-}
+};

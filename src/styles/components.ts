@@ -12,4 +12,4 @@ export const components = {
     lineHeight: `inherit`,
     padding: `0.75rem 1.5rem`,
   },
-}
+};
