@@ -1,6 +1,7 @@
 import React from 'react';
 import styled from 'styled-components';
 import { components } from '../../styles';
+import { Image } from './../Image';
 
 export type CardImage = {
   content?: {
@@ -9,12 +10,17 @@ export type CardImage = {
 };
 
 const StyledCardImage = styled.div`
-  padding: 0 ${components.padding};
+  border-radius: ${components.borderRadius};
+  overflow: hidden;
 `;
 
 export const CardImage: React.FC<CardImage> = ({
-  content = { img: `` },
+  content = { img: null },
 }: CardImage) => {
   const { img } = content;
-  return <StyledCardImage>{img}</StyledCardImage>;
+  return (
+    <StyledCardImage>
+      <Image>{img}</Image>
+    </StyledCardImage>
+  );
 };
