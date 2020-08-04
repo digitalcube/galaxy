@@ -1,4 +1,5 @@
 import { ThemeProvider } from 'styled-components';
+import { dark, light, minimal } from './../src/styles/themes';
 
 export const contexts = [
   {
@@ -6,27 +7,30 @@ export const contexts = [
     title: 'Themes', // an unique name of a contextual environment
     components: [ThemeProvider],
     params: [
-      // an array of params contains a set of predefined `props` for `components`
       {
         name: 'Light Theme',
         props: {
           theme: {
-            minimal: ``,
-            light: `#fff`,
-            dark: `orange`,
+            light,
           },
         },
+        default: true,
       },
       {
         name: 'Dark Theme',
         props: {
           theme: {
-            minimal: ``,
-            light: `colors.white`,
-            dark: `colors.purpleDark`,
+            dark,
           },
         },
-        default: true,
+      },
+      {
+        name: 'Minimal',
+        props: {
+          theme: {
+            minimal,
+          },
+        },
       },
     ],
     options: {

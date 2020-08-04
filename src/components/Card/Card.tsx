@@ -25,19 +25,16 @@ export type Card = {
 };
 
 const backgroundColor = theme('mode', {
-  minimal: ``,
   light: colors.white,
   dark: colors.purpleDark,
 });
 
 const boxShadow = theme('mode', {
-  minimal: ``,
   light: colors.white,
   dark: colors.purpleDark,
 });
 
 const borderRadius = theme('mode', {
-  minimal: ``,
   dark: components.borderRadius,
   light: components.borderRadius,
 });
@@ -49,7 +46,7 @@ const StyledCard = styled.article`
   min-width: 0;
   word-wrap: break-word;
   background-clip: border-box;
-  background-color: ${props => props.theme.dark};
+  background-color: ${backgroundColor};
   border-radius: ${borderRadius};
   box-shadow: ${boxShadow};
 `;
