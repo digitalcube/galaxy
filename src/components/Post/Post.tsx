@@ -4,16 +4,17 @@ import { Heading } from './../Heading';
 import { Author } from './../Author';
 import { publishedDate } from './../../lib/utils/dates';
 
+export type PostContent = {
+  title?: string;
+  subtitle?: string;
+  excerpt?: string;
+  author?: string;
+  date?: string;
+  img?: React.ReactNode;
+  link?: string;
+};
 export type Post = {
-  content?: {
-    title?: string;
-    subtitle?: string;
-    excerpt?: string;
-    author?: string;
-    date?: string;
-    img?: React.ReactNode;
-    link?: string;
-  };
+  content?: PostContent;
 };
 
 export const Post: React.FC<Post> = ({
