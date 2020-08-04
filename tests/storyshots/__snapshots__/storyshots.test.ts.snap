@@ -365,7 +365,7 @@ exports[`Storyshots Components/Post Default 1`] = `
          -
          
         <time>
-          Yesterday
+          01 January 2020
         </time>
       </footer>
     </div>
@@ -434,7 +434,7 @@ exports[`Storyshots Components/Post List Default 1`] = `
              -
              
             <time>
-              Yesterday
+              01 January 2020
             </time>
           </footer>
         </div>
@@ -485,7 +485,7 @@ exports[`Storyshots Components/Post List Default 1`] = `
              -
              
             <time>
-              Yesterday
+              01 January 2020
             </time>
           </footer>
         </div>
@@ -536,7 +536,7 @@ exports[`Storyshots Components/Post List Default 1`] = `
              -
              
             <time>
-              Yesterday
+              01 January 2020
             </time>
           </footer>
         </div>
@@ -587,7 +587,7 @@ exports[`Storyshots Components/Post List Default 1`] = `
              -
              
             <time>
-              Yesterday
+              01 January 2020
             </time>
           </footer>
         </div>
@@ -638,7 +638,7 @@ exports[`Storyshots Components/Post List Default 1`] = `
              -
              
             <time>
-              Yesterday
+              01 January 2020
             </time>
           </footer>
         </div>
@@ -689,7 +689,7 @@ exports[`Storyshots Components/Post List Default 1`] = `
              -
              
             <time>
-              Yesterday
+              01 January 2020
             </time>
           </footer>
         </div>
