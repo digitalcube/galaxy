@@ -9,7 +9,7 @@ export const light = {
 };
 
 export const minimal = {
-  backgroundColor: colors.transparent,
+  backgroundColor: colors.green,
 };
 
 export const themes = {
