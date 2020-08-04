@@ -45,7 +45,7 @@ const StyledPostListItems = styled.section`
 `;
 
 type PostListItems = {
-  content?: Array<string>;
+  content?: Array<Post['content']>;
   col?: number;
 };
 
@@ -53,19 +53,22 @@ const PostListItems = ({ content = [], col = 4 }: PostListItems) => {
   if (!content) return null;
   return (
     <StyledPostListItems>
-      {content.map((item, i) => (
-        <Post
-          key={i}
-          content={{
-            title: item[`title`],
-            subtitle: item[`subtitle`],
-            excerpt: item[`excerpt`],
-            date: item[`date`],
-            img: item[`img`],
-            author: item[`author`],
-          }}
-        />
-      ))}
+      {content.map((item, i) => {
+        if (!item) return null;
+        return (
+          <Post
+            key={i}
+            content={{
+              title: item[`title`],
+              subtitle: item[`subtitle`],
+              excerpt: item[`excerpt`],
+              date: item[`date`],
+              img: item[`img`],
+              author: item[`author`],
+            }}
+          />
+        );
+      })}
     </StyledPostListItems>
   );
 };
