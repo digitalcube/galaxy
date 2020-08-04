@@ -2,12 +2,12 @@
 
 import React from 'react';
 import styled from 'styled-components';
-import { Post } from './Post';
+import { Post, PostContent } from './Post';
 
 type PostList = {
   title?: string;
   subtitle?: string;
-  content?: Array<Post['content']>;
+  content?: Array<PostContent>;
   col: number;
 };
 
@@ -45,7 +45,7 @@ const StyledPostListItems = styled.section`
 `;
 
 type PostListItems = {
-  content?: Array<Post['content']>;
+  content?: Array<PostContent>;
   col?: number;
 };
 
@@ -53,22 +53,23 @@ const PostListItems = ({ content = [], col = 4 }: PostListItems) => {
   if (!content) return null;
   return (
     <StyledPostListItems>
-      {content.map((item, i) => {
-        if (!item) return null;
-        return (
-          <Post
-            key={i}
-            content={{
-              title: item[`title`],
-              subtitle: item[`subtitle`],
-              excerpt: item[`excerpt`],
-              date: item[`date`],
-              img: item[`img`],
-              author: item[`author`],
-            }}
-          />
-        );
-      })}
+      {content
+        .filter((item): item is PostContent => !!item)
+        .map((item, i) => {
+          return (
+            <Post
+              key={i}
+              content={{
+                title: item[`title`],
+                subtitle: item[`subtitle`],
+                excerpt: item[`excerpt`],
+                date: item[`date`],
+                img: item[`img`],
+                author: item[`author`],
+              }}
+            />
+          );
+        })}
     </StyledPostListItems>
   );
 };

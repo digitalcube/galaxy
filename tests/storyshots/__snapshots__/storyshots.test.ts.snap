@@ -234,7 +234,7 @@ exports[`Storyshots Components/Button Amimoto 1`] = `
   }
 >
   <a
-    className="sc-AxirZ kGzhvt"
+    className="sc-AxirZ fZXYOh"
     color="primary"
     href="https://galaxy.digitalcube.jp"
   >
@@ -252,7 +252,7 @@ exports[`Storyshots Components/Button Default 1`] = `
   }
 >
   <a
-    className="sc-AxirZ kGzhvt"
+    className="sc-AxirZ fZXYOh"
     color="primary"
     href="https://galaxy.digitalcube.jp"
   >
@@ -269,7 +269,7 @@ exports[`Storyshots Components/Card Default 1`] = `
     }
   }
 >
-  <div
+  <article
     className="sc-Axmtr birpBT"
   >
     <div
@@ -296,7 +296,7 @@ exports[`Storyshots Components/Card Default 1`] = `
     >
       42
     </div>
-  </div>
+  </article>
 </div>
 `;
 
@@ -324,7 +324,7 @@ exports[`Storyshots Components/Post Default 1`] = `
     }
   }
 >
-  <div
+  <article
     className="sc-Axmtr birpBT"
   >
     <div
@@ -332,7 +332,7 @@ exports[`Storyshots Components/Post Default 1`] = `
     >
       <img
         alt=""
-        src="//placehold.it/600x400"
+        src="https://www.getshifter.io/static/40b93d70dfb59d815b49cebb13b97311/79f20/BlogPost-MediaCDNRelease.jpg"
       />
     </div>
     <div
@@ -349,19 +349,32 @@ exports[`Storyshots Components/Post Default 1`] = `
     <div
       className="sc-AxgMl iBbARd"
     >
-      <h2
-        className="sc-AxhCb ccMvAG"
-      >
-        Announcing the Shifter Gatsby Recipe
-      </h2>
-      July 31
+      <a>
+        <h2
+          className="sc-AxhCb ccMvAG"
+        >
+          Announcing the Shifter Gatsby Recipe
+        </h2>
+      </a>
+      <footer>
+        <p
+          className="sc-AxmLO cAKCgh"
+        >
+          Daniel Olson
+        </p>
+         -
+         
+        <time>
+          Yesterday
+        </time>
+      </footer>
     </div>
     <div
       className="sc-AxheI bMxfpb"
     >
       
     </div>
-  </div>
+  </article>
 </div>
 `;
 
@@ -377,249 +390,316 @@ exports[`Storyshots Components/Post List Default 1`] = `
     <div>
       <div />
     </div>
-    <div>
-      <div>
+    <section
+      className="sc-fzozJi bdYhMS"
+    >
+      <article
+        className="sc-Axmtr birpBT"
+      >
         <div
-          className="sc-Axmtr birpBT"
+          className="sc-AxiKw hlbMOm"
         >
-          <div
-            className="sc-AxiKw hlbMOm"
-          >
-            <img
-              alt=""
-              src="//placehold.it/600x400"
-            />
-          </div>
-          <div
-            className="sc-AxhUy kPzvGn"
-          >
-            <h2
-              className="sc-AxhCb ccMvAG"
-            >
-              
-            </h2>
-            
-            
-          </div>
-          <div
-            className="sc-AxgMl iBbARd"
-          >
-            <h2
-              className="sc-AxhCb ccMvAG"
-            >
-              New Article: The Role of Stable Value in Each Stage of the Savings Journey
-            </h2>
-            July 31
-          </div>
-          <div
-            className="sc-AxheI bMxfpb"
-          >
-            
-          </div>
+          <img
+            alt=""
+            src="https://www.getshifter.io/static/9bd23ebe24a5532a4dd714bd9fb1afaa/79f20/BlogPost-gatsby-recipe.jpg"
+          />
         </div>
-      </div>
-      <div>
         <div
-          className="sc-Axmtr birpBT"
+          className="sc-AxhUy kPzvGn"
         >
-          <div
-            className="sc-AxiKw hlbMOm"
-          >
-            <img
-              alt=""
-              src="//placehold.it/600x400"
-            />
-          </div>
-          <div
-            className="sc-AxhUy kPzvGn"
-          >
-            <h2
-              className="sc-AxhCb ccMvAG"
-            >
-              
-            </h2>
-            
-            
-          </div>
-          <div
-            className="sc-AxgMl iBbARd"
-          >
-            <h2
-              className="sc-AxhCb ccMvAG"
-            >
-              The State of Stable Value and its Evolving Role in Modern DC Plan Design
-  
-            </h2>
-            July 31
-          </div>
-          <div
-            className="sc-AxheI bMxfpb"
+          <h2
+            className="sc-AxhCb ccMvAG"
           >
             
-          </div>
+          </h2>
+          
+          
         </div>
-      </div>
-      <div>
         <div
-          className="sc-Axmtr birpBT"
+          className="sc-AxgMl iBbARd"
         >
-          <div
-            className="sc-AxiKw hlbMOm"
-          >
-            <img
-              alt=""
-              src="//placehold.it/600x400"
-            />
-          </div>
-          <div
-            className="sc-AxhUy kPzvGn"
-          >
+          <a>
             <h2
               className="sc-AxhCb ccMvAG"
             >
-              
+              Announcing the Shifter Gatsby Recipe
             </h2>
-            
-            
-          </div>
-          <div
-            className="sc-AxgMl iBbARd"
-          >
-            <h2
-              className="sc-AxhCb ccMvAG"
+          </a>
+          <footer>
+            <p
+              className="sc-AxmLO cAKCgh"
             >
-              401(k) investors flee to safety in 2020
-            </h2>
-            July 31
-          </div>
-          <div
-            className="sc-AxheI bMxfpb"
-          >
-            
-          </div>
+              Daniel Olson
+            </p>
+             -
+             
+            <time>
+              Yesterday
+            </time>
+          </footer>
         </div>
-      </div>
-      <div>
         <div
-          className="sc-Axmtr birpBT"
+          className="sc-AxheI bMxfpb"
         >
-          <div
-            className="sc-AxiKw hlbMOm"
-          >
-            <img
-              alt=""
-              src="//placehold.it/600x400"
-            />
-          </div>
-          <div
-            className="sc-AxhUy kPzvGn"
-          >
-            <h2
-              className="sc-AxhCb ccMvAG"
-            >
-              
-            </h2>
-            
-            
-          </div>
-          <div
-            className="sc-AxgMl iBbARd"
-          >
-            <h2
-              className="sc-AxhCb ccMvAG"
-            >
-              Why ERISA Advisors Should (Really) Consider Stable Value Funds
-            </h2>
-            July 31
-          </div>
-          <div
-            className="sc-AxheI bMxfpb"
-          >
-            
-          </div>
+          
         </div>
-      </div>
-      <div>
+      </article>
+      <article
+        className="sc-Axmtr birpBT"
+      >
         <div
-          className="sc-Axmtr birpBT"
+          className="sc-AxiKw hlbMOm"
         >
-          <div
-            className="sc-AxiKw hlbMOm"
-          >
-            <img
-              alt=""
-              src="//placehold.it/600x400"
-            />
-          </div>
-          <div
-            className="sc-AxhUy kPzvGn"
-          >
-            <h2
-              className="sc-AxhCb ccMvAG"
-            >
-              
-            </h2>
-            
-            
-          </div>
-          <div
-            className="sc-AxgMl iBbARd"
-          >
-            <h2
-              className="sc-AxhCb ccMvAG"
-            >
-              The Shock-Absorbing Retirement Fund
-            </h2>
-            July 31
-          </div>
-          <div
-            className="sc-AxheI bMxfpb"
-          >
-            
-          </div>
+          <img
+            alt=""
+            src="https://www.getshifter.io/static/467f0273b44a0424ee4fecee85fb39d3/79f20/BlogPost-scheduledpublish.jpg"
+          />
         </div>
-      </div>
-      <div>
         <div
-          className="sc-Axmtr birpBT"
+          className="sc-AxhUy kPzvGn"
         >
-          <div
-            className="sc-AxiKw hlbMOm"
-          >
-            <img
-              alt=""
-              src="//placehold.it/600x400"
-            />
-          </div>
-          <div
-            className="sc-AxhUy kPzvGn"
-          >
-            <h2
-              className="sc-AxhCb ccMvAG"
-            >
-              
-            </h2>
-            
-            
-          </div>
-          <div
-            className="sc-AxgMl iBbARd"
-          >
-            <h2
-              className="sc-AxhCb ccMvAG"
-            >
-              Press Release: Stable Value Nets $50 Billion in Inflows Amid 1Q2020 Market Turbulence
-            </h2>
-            July 31
-          </div>
-          <div
-            className="sc-AxheI bMxfpb"
+          <h2
+            className="sc-AxhCb ccMvAG"
           >
             
-          </div>
+          </h2>
+          
+          
         </div>
-      </div>
-    </div>
+        <div
+          className="sc-AxgMl iBbARd"
+        >
+          <a>
+            <h2
+              className="sc-AxhCb ccMvAG"
+            >
+              Scheduled Publishing is now available on Shifter Static
+            </h2>
+          </a>
+          <footer>
+            <p
+              className="sc-AxmLO cAKCgh"
+            >
+              Daniel Olson
+            </p>
+             -
+             
+            <time>
+              Yesterday
+            </time>
+          </footer>
+        </div>
+        <div
+          className="sc-AxheI bMxfpb"
+        >
+          
+        </div>
+      </article>
+      <article
+        className="sc-Axmtr birpBT"
+      >
+        <div
+          className="sc-AxiKw hlbMOm"
+        >
+          <img
+            alt=""
+            src="https://www.getshifter.io/static/13ee57de35ffed5a3bde32aa05da99e9/79f20/WCblog-backups.jpg"
+          />
+        </div>
+        <div
+          className="sc-AxhUy kPzvGn"
+        >
+          <h2
+            className="sc-AxhCb ccMvAG"
+          >
+            
+          </h2>
+          
+          
+        </div>
+        <div
+          className="sc-AxgMl iBbARd"
+        >
+          <a>
+            <h2
+              className="sc-AxhCb ccMvAG"
+            >
+              Shifter Media CDN Is Now Out of Beta
+            </h2>
+          </a>
+          <footer>
+            <p
+              className="sc-AxmLO cAKCgh"
+            >
+              Daniel Olson
+            </p>
+             -
+             
+            <time>
+              Yesterday
+            </time>
+          </footer>
+        </div>
+        <div
+          className="sc-AxheI bMxfpb"
+        >
+          
+        </div>
+      </article>
+      <article
+        className="sc-Axmtr birpBT"
+      >
+        <div
+          className="sc-AxiKw hlbMOm"
+        >
+          <img
+            alt=""
+            src="https://www.getshifter.io/static/2902f1abacb62522fbf45bfd5c5babdd/24a5b/blog-feature-statcVheadless.png"
+          />
+        </div>
+        <div
+          className="sc-AxhUy kPzvGn"
+        >
+          <h2
+            className="sc-AxhCb ccMvAG"
+          >
+            
+          </h2>
+          
+          
+        </div>
+        <div
+          className="sc-AxgMl iBbARd"
+        >
+          <a>
+            <h2
+              className="sc-AxhCb ccMvAG"
+            >
+              Using Shifter Headless with Gridsome and AWS Amplify
+            </h2>
+          </a>
+          <footer>
+            <p
+              className="sc-AxmLO cAKCgh"
+            >
+              Daniel Olson
+            </p>
+             -
+             
+            <time>
+              Yesterday
+            </time>
+          </footer>
+        </div>
+        <div
+          className="sc-AxheI bMxfpb"
+        >
+          
+        </div>
+      </article>
+      <article
+        className="sc-Axmtr birpBT"
+      >
+        <div
+          className="sc-AxiKw hlbMOm"
+        >
+          <img
+            alt=""
+            src="https://www.getshifter.io/static/a35bfe08fe0e6b55f4fba66d07edd30e/79f20/Blog-PickupPhilly.jpg"
+          />
+        </div>
+        <div
+          className="sc-AxhUy kPzvGn"
+        >
+          <h2
+            className="sc-AxhCb ccMvAG"
+          >
+            
+          </h2>
+          
+          
+        </div>
+        <div
+          className="sc-AxgMl iBbARd"
+        >
+          <a>
+            <h2
+              className="sc-AxhCb ccMvAG"
+            >
+              Using Shifter Static Automatic WordPress backups.
+            </h2>
+          </a>
+          <footer>
+            <p
+              className="sc-AxmLO cAKCgh"
+            >
+              Daniel Olson
+            </p>
+             -
+             
+            <time>
+              Yesterday
+            </time>
+          </footer>
+        </div>
+        <div
+          className="sc-AxheI bMxfpb"
+        >
+          
+        </div>
+      </article>
+      <article
+        className="sc-Axmtr birpBT"
+      >
+        <div
+          className="sc-AxiKw hlbMOm"
+        >
+          <img
+            alt=""
+            src="https://www.getshifter.io/static/de14a3e65b495a55b6e7811ff3c80209/24a5b/BlogFeature_HeadlessPlan.png"
+          />
+        </div>
+        <div
+          className="sc-AxhUy kPzvGn"
+        >
+          <h2
+            className="sc-AxhCb ccMvAG"
+          >
+            
+          </h2>
+          
+          
+        </div>
+        <div
+          className="sc-AxgMl iBbARd"
+        >
+          <a>
+            <h2
+              className="sc-AxhCb ccMvAG"
+            >
+              Using AWS Amplify with Gatsby and Shifter Headless
+            </h2>
+          </a>
+          <footer>
+            <p
+              className="sc-AxmLO cAKCgh"
+            >
+              Daniel Olson
+            </p>
+             -
+             
+            <time>
+              Yesterday
+            </time>
+          </footer>
+        </div>
+        <div
+          className="sc-AxheI bMxfpb"
+        >
+          
+        </div>
+      </article>
+    </section>
   </div>
 </div>
 `;

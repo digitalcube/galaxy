@@ -17,7 +17,7 @@ export const postData = {
   title: `Announcing the Shifter Gatsby Recipe`,
   subtitle: `Our Shifter Gatsby Recipe focuses on solving the problem of getting started.`,
   excerpt: `If you want to create a Gatsby site using WordPress and deploy your site to something like Gatsby Cloud, you should be able to do that with just a few commands.`,
-  date: moment().subtract(Math.floor(Math.random() * 10), `days`),
+  date: moment().subtract(Math.floor(Math.random() * 10), `days`).toISOString(),
   author: `Daniel Olson`,
   img: (
     <img
