@@ -12,6 +12,6 @@ const StyledImage = styled.div`
   }
 `;
 
-export const Image: React.FunctionComponent<Image> = ({
-  children = ``,
-}: Image) => <StyledImage>{children}</StyledImage>;
+export const Image: React.FC<Image> = ({ children = `` }: Image) => (
+  <StyledImage>{children}</StyledImage>
+);
