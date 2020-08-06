@@ -1,15 +1,21 @@
 import React from 'react';
 import styled from 'styled-components';
+import { components, colors } from './../../styles';
 
 type Heading = {
-  tag?: string;
-  size?: string;
   children?: string;
+  color?: string;
 };
 
-const StyledHeading = styled.h2``;
+const StyledHeading = styled.h3`
+  display: inline-flex;
+  margin-bottom: ${components.padding};
+  color: ${props => props.color || colors.blue.primary};
+  padding-bottom: ${components.padding};
+  position: relative;
+`;
 
-export const Heading: React.FunctionComponent<Heading> = ({
+export const Heading: React.FC<Heading> = ({
   children = ``,
-  tag = ``,
-}: Heading) => <StyledHeading>{children}</StyledHeading>;
+  color = ``,
+}: Heading) => <StyledHeading color={color}>{children}</StyledHeading>;
