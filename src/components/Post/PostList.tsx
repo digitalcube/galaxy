@@ -1,14 +1,16 @@
-// src/components/PostList.js
-
 import React from 'react';
 import styled from 'styled-components';
-import { Post, PostContent } from './Post';
+import { Row, Col } from '@bootstrap-styled/v4';
+import { components } from './../../styles';
+import { Post } from './Post';
+import { Heading } from './../Heading';
 
 type PostList = {
   title?: string;
   subtitle?: string;
-  content?: Array<PostContent>;
+  content?: Array<Post['content']>;
   col: number;
+  theme?: string;
 };
 
 type PostListTitle = {
@@ -17,11 +19,7 @@ type PostListTitle = {
 
 const PostListTitle = ({ title }: PostListTitle) => {
   if (!title) return null;
-  return (
-    <div>
-      <h2>{title}</h2>
-    </div>
-  );
+  return <Heading>{title}</Heading>;
 };
 
 type PostListSubtitle = {
@@ -33,60 +31,58 @@ const PostListSubtitle = ({ subtitle }: PostListSubtitle) => {
   return <p>{subtitle}</p>;
 };
 
-const StyledPostListItems = styled.section`
-  display: flex;
-  flex-wrap: wrap;
-  justify-content: space-between;
-
-  > * {
-    width: 32%;
-    margin-bottom: 2%; /* (100-32*3)/2 */
-  }
-`;
+const StyledPostListItems = styled.section``;
 
 type PostListItems = {
-  content?: Array<PostContent>;
+  content?: Array<string>;
   col?: number;
+  theme?: string;
 };
 
-const PostListItems = ({ content = [], col = 4 }: PostListItems) => {
+const PostListItems = ({
+  content = [],
+  col = 4,
+  theme = ``,
+}: PostListItems) => {
   if (!content) return null;
   return (
     <StyledPostListItems>
-      {content
-        .filter((item): item is PostContent => !!item)
-        .map((item, i) => {
-          return (
+      <Row>
+        {content.map((item, i) => (
+          <Col key={i} md={col}>
             <Post
-              key={i}
+              theme={theme}
               content={{
                 title: item[`title`],
                 subtitle: item[`subtitle`],
                 excerpt: item[`excerpt`],
                 date: item[`date`],
-                img: item[`img`],
                 author: item[`author`],
+                link: item[`link`],
+                img: item[`img`],
               }}
             />
-          );
-        })}
+          </Col>
+        ))}
+      </Row>
     </StyledPostListItems>
   );
 };
+
+const StyledPostList = styled.section`
+  padding: ${components.section.padding.md} 0;
+`;
 
 export const PostList = ({
   content,
   title = ``,
   subtitle = ``,
   col,
+  theme,
 }: PostList) => (
-  <div>
-    <div>
-      <div>
-        <PostListTitle title={title} />
-        <PostListSubtitle subtitle={subtitle} />
-      </div>
-    </div>
-    <PostListItems content={content} col={col} />
-  </div>
+  <StyledPostList>
+    <PostListTitle title={title} />
+    <PostListSubtitle subtitle={subtitle} />
+    <PostListItems theme={theme} content={content} col={col} />
+  </StyledPostList>
 );
