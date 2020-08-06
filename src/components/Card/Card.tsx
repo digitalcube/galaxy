@@ -11,32 +11,38 @@ export type Card = {
   content?: {
     header?: {
       title?: string;
-      subtitle?: string;
+      subtitle?: React.ReactNode;
       excerpt?: string;
+      link?: string;
     };
     footer?: {
       title?: string;
     };
     image?: {
       img?: React.ReactNode;
+      link?: string;
     };
   };
+  theme?: string;
   children?: React.ReactNode;
 };
 
 const backgroundColor = theme('mode', {
   light: colors.white,
-  dark: colors.purpleDark,
+  dark: colors.purple.primary,
+  bare: colors.transparent,
 });
 
 const boxShadow = theme('mode', {
-  light: colors.white,
-  dark: colors.purpleDark,
+  light: components.boxShadow,
+  dark: components.boxShadow,
+  bare: ``,
 });
 
 const borderRadius = theme('mode', {
   dark: components.borderRadius,
   light: components.borderRadius,
+  bare: ``,
 });
 
 const StyledCard = styled.article`
@@ -57,6 +63,7 @@ export const Card: React.FC<Card> = ({
       title: ``,
       subtitle: ``,
       excerpt: ``,
+      link: ``,
     },
     footer: {
       title: ``,
@@ -66,10 +73,11 @@ export const Card: React.FC<Card> = ({
     },
   },
   children = null,
+  theme = ``,
 }: Card) => {
   const { header, footer, image } = content;
   return (
-    <StyledCard>
+    <StyledCard theme={{ mode: theme }}>
       <CardImage content={image} />
       <CardHeader content={header} />
       <CardBody>{children}</CardBody>

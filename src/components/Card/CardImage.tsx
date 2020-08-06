@@ -1,10 +1,12 @@
 import React from 'react';
 import styled from 'styled-components';
-import { Image } from './../Image';
+// import { Image as GatsbyImage } from "gatsby-image"
+import { Link } from '../Link';
 
 export type CardImage = {
   content?: {
     img?: React.ReactNode;
+    link?: string;
   };
 };
 
@@ -13,12 +15,13 @@ const StyledCardImage = styled.div`
 `;
 
 export const CardImage: React.FC<CardImage> = ({
-  content = { img: null },
+  content = { img: null, link: `` },
 }: CardImage) => {
-  const { img } = content;
+  const { img, link } = content;
+  if (!img) return null;
   return (
-    <StyledCardImage>
-      <Image>{img}</Image>
-    </StyledCardImage>
+    <Link link={link}>
+      <StyledCardImage>{img}</StyledCardImage>
+    </Link>
   );
 };

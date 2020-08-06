@@ -16,5 +16,6 @@ export const CardFooter: React.FC<CardFooter> = ({
   content = { title: `` },
 }: CardFooter) => {
   const { title } = content;
+  if (!title) return null;
   return <StyledCardFooter>{title}</StyledCardFooter>;
 };
