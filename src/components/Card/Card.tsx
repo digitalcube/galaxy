@@ -87,6 +87,21 @@ const borderWidth = theme.variants('mode', 'schema', {
   },
 });
 
+const color = theme.variants('mode', 'schema', {
+  galaxy: {
+    light: colors.system.gray.g700,
+    dark: colors.system.white,
+  },
+  shifter: {
+    light: colors.system.gray.g700,
+    dark: colors.system.white,
+  },
+  amimoto: {
+    light: colors.system.gray.g700,
+    dark: colors.system.white,
+  },
+});
+
 const StyledCard = styled.article`
   position: relative;
   display: flex;
@@ -94,6 +109,7 @@ const StyledCard = styled.article`
   min-width: 0;
   word-wrap: break-word;
   background-clip: border-box;
+  color: ${color};
   background-color: ${backgroundColor};
   border-radius: ${components.borderRadius};
   border-width: ${borderWidth};

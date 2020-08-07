@@ -1,5 +1,6 @@
 import { createGlobalStyle } from 'styled-components';
 import { normalize } from 'styled-normalize';
+import theme from 'styled-theming';
 import { components } from './components';
 import { colors } from './colors';
 import { type } from './type';
@@ -12,7 +13,7 @@ export const GlobalStyle = createGlobalStyle`
   body {
     font-family: ${type.fontFamily};
     background-color: ${themes.shifter.colors.background.light};
-    /* color: ${type.color}; */
+    color: inherit;
   }
 
   /* a {
