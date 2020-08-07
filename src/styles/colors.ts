@@ -2,6 +2,16 @@ export const colors = {
   system: {
     white: `#fff`,
     black: `#000`,
+    gray: {
+      primary: `#000000`,
+      g700: `#373737`,
+      g600: `#636363`,
+      g500: `#9C9C9C`,
+      g400: `#C5C5C5`,
+      g300: `#D8D8D8`,
+      g200: `#E5E5E5`,
+      g100: `#F2F2F2`,
+    },
     transparent: `transparent`,
     shadow: `rgba(0, 0, 0, 0.25)`,
     success: `#36B27E`,
@@ -49,6 +59,7 @@ export const colors = {
     },
     blue: {
       primary: `#004CD3`,
+      b600: `#091A37`,
       b500: `#001A48`,
       b400: `#012668`,
       b300: `#003AA0`,

@@ -28,17 +28,25 @@ export type Card = {
 };
 
 const backgroundColor = theme.variants('mode', 'schema', {
+  galaxy: {
+    light: colors.system.transparent,
+    dark: colors.system.transparent,
+  },
   shifter: {
     light: colors.system.white,
     dark: colors.shifter.purple.p500,
   },
   amimoto: {
     light: colors.system.white,
-    dark: colors.system.transparent,
+    dark: colors.amimoto.blue.b600,
   },
 });
 
 const boxShadow = theme.variants('mode', 'schema', {
+  galaxy: {
+    light: `none`,
+    dark: `none`,
+  },
   shifter: {
     light: components.boxShadow,
     dark: components.boxShadow,
@@ -50,6 +58,10 @@ const boxShadow = theme.variants('mode', 'schema', {
 });
 
 const borderColor = theme.variants('mode', 'schema', {
+  galaxy: {
+    light: colors.system.gray.g200,
+    dark: colors.system.gray.g600,
+  },
   shifter: {
     light: colors.system.transparent,
     dark: colors.system.transparent,
@@ -61,6 +73,10 @@ const borderColor = theme.variants('mode', 'schema', {
 });
 
 const borderWidth = theme.variants('mode', 'schema', {
+  galaxy: {
+    light: components.borderWidth,
+    dark: components.borderWidth,
+  },
   shifter: {
     light: components.borderWidth,
     dark: components.borderWidth,
