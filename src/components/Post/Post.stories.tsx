@@ -1,7 +1,7 @@
-import React from "react"
-import { withKnobs } from "@storybook/addon-knobs"
-import { Post } from "././Post"
-import moment from "moment"
+import React from 'react';
+import { withKnobs } from '@storybook/addon-knobs';
+import { Post } from '././Post';
+import moment from 'moment';
 
 export default {
   component: Post,
@@ -11,7 +11,7 @@ export default {
     (story: any) => <div style={{ padding: `3rem` }}>{story()}</div>,
   ],
   excludeStories: /.*Data$/,
-}
+};
 
 export const postData = {
   title: `Announcing the Shifter Gatsby Recipe`,
@@ -25,6 +25,6 @@ export const postData = {
       src="https://www.getshifter.io/static/40b93d70dfb59d815b49cebb13b97311/79f20/BlogPost-MediaCDNRelease.jpg"
     />
   ),
-}
+};
 
-export const Default = () => <Post content={postData} />
+export const Default = () => <Post content={postData} />;

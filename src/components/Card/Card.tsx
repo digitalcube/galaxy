@@ -1,7 +1,7 @@
 import React, { useContext } from 'react';
 import styled, { ThemeContext } from 'styled-components';
 import theme from 'styled-theming';
-import { colors, components, themes } from './../../styles';
+import { colors, components } from './../../styles';
 import { CardImage } from './CardImage';
 import { CardHeader } from './CardHeader';
 import { CardBody } from './CardBody';
@@ -95,11 +95,11 @@ const color = theme.variants('mode', 'schema', {
   },
   shifter: {
     light: colors.galaxy.gray.g700,
-    dark: colors.galaxy.white,
+    dark: colors.shifter.purple.p100,
   },
   amimoto: {
     light: colors.galaxy.gray.g700,
-    dark: colors.galaxy.white,
+    dark: colors.amimoto.gray.g300,
   },
 });
 

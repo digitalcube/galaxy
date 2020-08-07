@@ -15,13 +15,13 @@ export const GlobalStyle = createGlobalStyle`
     color: inherit;
   }
 
-  /* a {
-    color: black;
-    text-decoration: none;
-  } */
+  a {
+    /* color: black; */
+    /* text-decoration: none; */
+  }
 
   h3 {
-    color: ${type.heading.color};
+    /* color: ${type.heading.color}; */
     font-style: ${type.heading.fontStyle};
     font-weight: ${type.heading.fontWeight};
     font-size: ${type.heading.h3.fontSize};
