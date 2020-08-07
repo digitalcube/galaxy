@@ -1,5 +1,5 @@
-import React from 'react';
-import styled from 'styled-components';
+import React, { useContext } from 'react';
+import styled, { ThemeContext } from 'styled-components';
 import theme from 'styled-theming';
 import { colors, components, themes } from './../../styles';
 import { CardImage } from './CardImage';
@@ -24,6 +24,7 @@ export type Card = {
     };
   };
   schema?: string;
+  mode?: string;
   children?: React.ReactNode;
 };
 
@@ -68,7 +69,7 @@ const borderColor = theme.variants('mode', 'schema', {
   },
   amimoto: {
     light: colors.galaxy.transparent,
-    dark: colors.amimoto.blue.b400,
+    dark: colors.amimoto.blue.b500,
   },
 });
 
@@ -134,11 +135,13 @@ export const Card: React.FC<Card> = ({
     },
   },
   schema = ``,
+  mode = ``,
   children = null,
 }: Card) => {
   const { header, footer, image } = content;
+  const themeContext = useContext(ThemeContext);
   return (
-    <StyledCard schema={schema}>
+    <StyledCard schema={themeContext.schema} mode={themeContext.mode}>
       <CardImage content={image} />
       <CardHeader content={header} />
       <CardBody>{children}</CardBody>

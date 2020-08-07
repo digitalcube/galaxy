@@ -1,6 +1,5 @@
 import React from 'react';
 import { withKnobs } from '@storybook/addon-knobs';
-import props from 'prop-types';
 import { Card } from './Card';
 
 export default {
@@ -28,7 +27,5 @@ export const cardContentData = {
 export const cardBodyData = `So long and thanks for all the fish. 🐬`;
 
 export const Default = () => (
-  <Card schema={`galaxy`} content={cardContentData}>
-    {cardBodyData}
-  </Card>
+  <Card content={cardContentData}>{cardBodyData}</Card>
 );

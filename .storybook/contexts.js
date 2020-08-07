@@ -3,15 +3,15 @@ import { shifter, amimoto, themes } from './../src/styles/themes';
 
 export const contexts = [
   {
-    icon: 'grow', 
-    title: 'Themes',
+    icon: 'switchalt',
+    title: 'Schema',
     components: [ThemeProvider],
     params: [
       {
-        name: 'Shifter',
+        name: 'Galaxy',
         props: {
           theme: {
-            shifter,
+            schema: `galaxy`,
           },
         },
         default: true,
@@ -20,7 +20,44 @@ export const contexts = [
         name: 'Amimoto',
         props: {
           theme: {
-            amimoto,
+            schema: `amimoto`,
+          },
+        },
+      },
+      {
+        name: 'Shifter',
+        props: {
+          theme: {
+            schema: `shifter`,
+          },
+        },
+      },
+    ],
+    options: {
+      deep: true,
+      disable: false,
+      cancelable: false,
+    },
+  },
+  {
+    icon: 'switchalt',
+    title: 'Mode',
+    components: [ThemeProvider],
+    params: [
+      {
+        name: 'Dark',
+        props: {
+          theme: {
+            mode: `dark`,
+          },
+        },
+        default: true,
+      },
+      {
+        name: 'Light',
+        props: {
+          theme: {
+            mode: `light`,
           },
         },
       },
