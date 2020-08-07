@@ -11,12 +11,20 @@ export const GlobalStyle = createGlobalStyle`
 
   body {
     font-family: ${type.fontFamily};
+    /* background-color: ${themes.shifter.colors.background.light}; */
+    color: ${type.color};
+  }
+
+  a {
+    color: inherit;
+    text-decoration: none;
   }
 
   h3 {
-    color: ${type.headings.fontColor};
-    font-style: ${type.headings.fontStyle};
-    font-weight: ${type.headings.fontWeight};
-    font-size: ${type.headings.h3.fontSize};
+    color: ${type.heading.color};
+    font-style: ${type.heading.fontStyle};
+    font-weight: ${type.heading.fontWeight};
+    font-size: ${type.heading.h3.fontSize};
+    margin: 0;
   }
 `;

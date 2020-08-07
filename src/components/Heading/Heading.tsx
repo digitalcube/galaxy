@@ -10,7 +10,7 @@ type Heading = {
 const StyledHeading = styled.h3`
   display: inline-flex;
   margin-bottom: ${components.padding};
-  color: ${props => props.color || colors.blue.primary};
+  color: ${props => props.color || colors.shifter.magenta.primary};
   padding-bottom: ${components.padding};
   position: relative;
 `;

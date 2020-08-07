@@ -4,9 +4,9 @@ export const type = {
   fontWeight: 400,
   fontFamily: `sofia-pro, sans-serif`,
   fontSize: `1rem`,
-  fontColor: colors.black,
-  headings: {
-    fontColor: colors.purpleDark,
+  color: colors.shifter.purple.primary,
+  heading: {
+    color: colors.shifter.magenta.primary,
     fontWeight: 500,
     fontStyle: `normal`,
     h3: {
