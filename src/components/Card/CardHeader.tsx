@@ -14,7 +14,8 @@ export type CardHeader = {
 };
 
 const StyledCardHeader = styled.div`
-  padding: ${components.padding.md} ${components.padding.sm};
+  padding: ${components.padding.md} ${components.padding.sm}
+    ${components.padding.xs};
 `;
 
 export const CardHeader: React.FC<CardHeader> = ({

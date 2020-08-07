@@ -29,3 +29,18 @@ export const cardBodyData = `So long and thanks for all the fish. 🐬`;
 export const Default = () => (
   <Card content={cardContentData}>{cardBodyData}</Card>
 );
+
+export const Extensions = () => (
+  <Card
+    content={{
+      image: {
+        img: null,
+      },
+      header: {
+        title: `Extensions`,
+      },
+    }}
+  >
+    We offer a variety of extension services for Shifter.
+  </Card>
+);
