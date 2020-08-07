@@ -11,6 +11,7 @@ export const GlobalStyle = createGlobalStyle`
 
   body {
     font-family: ${type.fontFamily};
+    background-color: ${colors.shifter.background.dark};
     color: inherit;
   }
 
