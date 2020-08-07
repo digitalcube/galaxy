@@ -7,7 +7,7 @@ export type CardBody = {
 };
 
 const StyledCardBody = styled.div`
-  padding: ${components.padding};
+  padding: ${components.padding.xs} ${components.padding.sm};
 `;
 
 export const CardBody: React.FC<CardBody> = ({ children }: CardBody) => {

@@ -9,9 +9,9 @@ type Heading = {
 
 const StyledHeading = styled.h3`
   display: inline-flex;
-  margin-bottom: ${components.padding};
+  margin-bottom: 0;
   color: ${props => props.color || colors.shifter.magenta.primary};
-  padding-bottom: ${components.padding};
+  padding-bottom: 0;
   position: relative;
 `;
 

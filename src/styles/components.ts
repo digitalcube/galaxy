@@ -3,7 +3,14 @@ import { colors } from './colors';
 export const components = {
   boxShadow: `0px 3px 6px ${colors.system.shadow}`,
   borderRadius: `0.25rem`,
-  padding: `1rem`,
+  padding: {
+    xs: `0.5rem`,
+    sm: `1rem`,
+    md: `1.5rem`,
+    lg: `2rem`,
+    xl: `2.5rem`,
+    xxl: `3rem`,
+  },
   flex: `1 1 auto`,
   borderWidth: `0.0625rem`,
   borderStyle: `solid`,

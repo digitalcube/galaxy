@@ -9,7 +9,7 @@ export type CardFooter = {
 };
 
 const StyledCardFooter = styled.div`
-  padding: 0 ${components.padding};
+  padding: ${components.padding.md} ${components.padding.sm};
 `;
 
 export const CardFooter: React.FC<CardFooter> = ({
