@@ -11,7 +11,7 @@ export const GlobalStyle = createGlobalStyle`
 
   body {
     font-family: ${type.fontFamily};
-    /* background-color: ${themes.shifter.colors.background.light}; */
+    background-color: ${themes.shifter.colors.background.light};
     /* color: ${type.color}; */
   }
 

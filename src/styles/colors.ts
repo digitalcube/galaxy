@@ -3,6 +3,7 @@ export const colors = {
     white: `#fff`,
     black: `#000`,
     transparent: `transparent`,
+    shadow: `rgba(0, 0, 0, 0.25)`,
     success: `#36B27E`,
     warning: `#FFA600`,
     danger: `#FF0000`,
