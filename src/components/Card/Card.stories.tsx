@@ -28,7 +28,7 @@ export const cardContentData = {
 export const cardBodyData = `So long and thanks for all the fish. 🐬`;
 
 export const Default = () => (
-  <Card schema={`amimoto`} content={cardContentData}>
+  <Card schema={`galaxy`} content={cardContentData}>
     {cardBodyData}
   </Card>
 );

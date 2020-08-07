@@ -3,13 +3,13 @@ import { colors } from './colors';
 
 export const shifter = {
   colors: {
-    ...colors[`system`],
+    ...colors[`galaxy`],
     ...colors[`shifter`],
   },
   light: {
     components: {
       card: {
-        backgroundColor: colors.system.white,
+        backgroundColor: colors.galaxy.white,
       },
     },
   },
@@ -24,13 +24,13 @@ export const shifter = {
 
 export const amimoto = {
   colors: {
-    ...colors[`system`],
+    ...colors[`galaxy`],
     ...colors[`amimoto`],
   },
   light: {
     components: {
       card: {
-        backgroundColor: colors.system.white,
+        backgroundColor: colors.galaxy.white,
       },
     },
   },

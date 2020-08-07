@@ -1,9 +1,13 @@
 export const colors = {
-  system: {
+  galaxy: {
     white: `#fff`,
     black: `#000`,
+    background: {
+      light: `#fff`,
+      dark: `#000`,
+    },
     gray: {
-      primary: `#000000`,
+      primary: `#000`,
       g700: `#373737`,
       g600: `#636363`,
       g500: `#9C9C9C`,

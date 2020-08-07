@@ -9,7 +9,7 @@ import { contexts } from './contexts';
 addDecorator(withContexts(contexts));
 addDecorator(storyFn => (
   <>
-    <ThemeProvider theme={{ mode: "light" }}>
+    <ThemeProvider theme={{ mode: "dark" }}>
       <link rel="stylesheet" href="https://use.typekit.net/rrt0shs.css" />
       <GlobalStyle />
       {storyFn()}

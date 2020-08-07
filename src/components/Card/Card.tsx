@@ -29,15 +29,15 @@ export type Card = {
 
 const backgroundColor = theme.variants('mode', 'schema', {
   galaxy: {
-    light: colors.system.transparent,
-    dark: colors.system.transparent,
+    light: colors.galaxy.transparent,
+    dark: colors.galaxy.transparent,
   },
   shifter: {
-    light: colors.system.white,
+    light: colors.galaxy.white,
     dark: colors.shifter.purple.p500,
   },
   amimoto: {
-    light: colors.system.white,
+    light: colors.galaxy.white,
     dark: colors.amimoto.blue.b600,
   },
 });
@@ -59,15 +59,15 @@ const boxShadow = theme.variants('mode', 'schema', {
 
 const borderColor = theme.variants('mode', 'schema', {
   galaxy: {
-    light: colors.system.gray.g200,
-    dark: colors.system.gray.g600,
+    light: colors.galaxy.gray.g200,
+    dark: colors.galaxy.gray.g600,
   },
   shifter: {
-    light: colors.system.transparent,
-    dark: colors.system.transparent,
+    light: colors.galaxy.transparent,
+    dark: colors.galaxy.transparent,
   },
   amimoto: {
-    light: colors.system.transparent,
+    light: colors.galaxy.transparent,
     dark: colors.amimoto.blue.b400,
   },
 });
@@ -89,16 +89,16 @@ const borderWidth = theme.variants('mode', 'schema', {
 
 const color = theme.variants('mode', 'schema', {
   galaxy: {
-    light: colors.system.gray.g700,
-    dark: colors.system.white,
+    light: colors.galaxy.gray.g700,
+    dark: colors.galaxy.white,
   },
   shifter: {
-    light: colors.system.gray.g700,
-    dark: colors.system.white,
+    light: colors.galaxy.gray.g700,
+    dark: colors.galaxy.white,
   },
   amimoto: {
-    light: colors.system.gray.g700,
-    dark: colors.system.white,
+    light: colors.galaxy.gray.g700,
+    dark: colors.galaxy.white,
   },
 });
 

@@ -1,7 +1,7 @@
 import { colors } from './colors';
 
 export const components = {
-  boxShadow: `0px 3px 6px ${colors.system.shadow}`,
+  boxShadow: `0px 3px 6px ${colors.galaxy.shadow}`,
   borderRadius: `0.25rem`,
   padding: {
     xs: `0.5rem`,
