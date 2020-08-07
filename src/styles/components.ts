@@ -1,9 +1,10 @@
 export const components = {
   boxShadow: `0px 3px 6px rgba(0, 0, 0, 0.25)`,
-  borderRadius: ``,
+  borderRadius: `0.25rem`,
   padding: `1rem`,
   flex: `1 1 auto`,
-  borderWidth: `0.125rem`,
+  borderWidth: `0.0625rem`,
+  borderStyle: `solid`,
   transition: `all 0.25s ease`,
   section: {
     padding: {

@@ -12,13 +12,13 @@ export const GlobalStyle = createGlobalStyle`
   body {
     font-family: ${type.fontFamily};
     /* background-color: ${themes.shifter.colors.background.light}; */
-    color: ${type.color};
+    /* color: ${type.color}; */
   }
 
-  a {
-    color: inherit;
+  /* a {
+    color: black;
     text-decoration: none;
-  }
+  } */
 
   h3 {
     color: ${type.heading.color};

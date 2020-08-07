@@ -2,7 +2,7 @@ export const colors = {
   system: {
     white: `#fff`,
     black: `#000`,
-    transparent: ``,
+    transparent: `transparent`,
     success: `#36B27E`,
     warning: `#FFA600`,
     danger: `#FF0000`,
@@ -45,6 +45,14 @@ export const colors = {
       g300: `#CECED1`,
       g200: `#E5E5E5`,
       g100: `#F2F2F2`,
+    },
+    blue: {
+      primary: `#004CD3`,
+      b500: `#001A48`,
+      b400: `#012668`,
+      b300: `#003AA0`,
+      b200: `#5F96F8`,
+      b100: `#C7DBFF`,
     },
   },
 };
