@@ -1,6 +1,5 @@
 import React from 'react';
 import styled from 'styled-components';
-import { Row, Col } from '@bootstrap-styled/v4';
 import { components } from './../../styles';
 import { Post } from './Post';
 import { Heading } from './../Heading';
@@ -10,7 +9,6 @@ type PostList = {
   subtitle?: string;
   content?: Array<Post['content']>;
   col: number;
-  theme?: string;
 };
 
 type PostListTitle = {
@@ -39,19 +37,14 @@ type PostListItems = {
   theme?: string;
 };
 
-const PostListItems = ({
-  content = [],
-  col = 4,
-  theme = ``,
-}: PostListItems) => {
+const PostListItems = ({ content = [], col = 4 }: PostListItems) => {
   if (!content) return null;
   return (
     <StyledPostListItems>
-      <Row>
+      <div>
         {content.map((item, i) => (
-          <Col key={i} md={col}>
+          <div key={i}>
             <Post
-              theme={theme}
               content={{
                 title: item[`title`],
                 subtitle: item[`subtitle`],
@@ -62,9 +55,9 @@ const PostListItems = ({
                 img: item[`img`],
               }}
             />
-          </Col>
+          </div>
         ))}
-      </Row>
+      </div>
     </StyledPostListItems>
   );
 };

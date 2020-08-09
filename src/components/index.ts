@@ -2,7 +2,6 @@ export * from './Animation';
 export * from './Badge';
 export * from './Brand';
 export * from './Browser';
-export * from './Button';
 export * from './Card';
 export * from './Heading';
 export * from './Post';

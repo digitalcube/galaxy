@@ -14,12 +14,14 @@ export type CardHeader = {
 };
 
 const StyledCardHeader = styled.div`
-  padding: ${components.padding.md} ${components.padding.sm}
-    ${components.padding.xs};
+  padding-left: ${components.padding.sm};
+  padding-right: ${components.padding.sm};
+  padding-top: ${components.padding.md};
+  padding-bottom: ${components.padding.xs};
 `;
 
 export const CardHeader: React.FC<CardHeader> = ({
-  content = { title: ``, subtitle: ``, excerpt: ``, link: null },
+  content = { title: ``, subtitle: ``, excerpt: ``, link: `` },
 }: CardHeader) => {
   const { title, subtitle, excerpt, link } = content;
   if (!title) return null;

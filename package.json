@@ -78,11 +78,11 @@
     "typescript": "^3.9.7"
   },
   "dependencies": {
-    "@bootstrap-styled/v4": "^3.4.0",
     "@types/styled-theming": "^2.2.5",
     "moment": "^2.27.0",
     "moment-duration-format": "^2.3.2",
     "react-lottie": "^1.2.3",
+    "react-styled-flexboxgrid": "^3.2.1",
     "styled-components": "^5.1.1",
     "styled-normalize": "^8.0.7"
   }

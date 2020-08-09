@@ -72,7 +72,7 @@ export const Card: React.FC<Card> = ({
   const { header, footer, image } = content;
   const themeContext = useContext(ThemeContext);
   return (
-    <StyledCard schema={themeContext.schema} mode={themeContext.mode}>
+    <StyledCard schema={themeContext.schema}>
       <CardImage content={image} />
       <CardHeader content={header} />
       <CardBody>{children}</CardBody>

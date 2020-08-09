@@ -12,7 +12,6 @@ export type Post = {
     img?: React.ReactNode;
     link?: string;
   };
-  theme?: string;
 };
 
 export const Post: React.FC<Post> = ({
@@ -25,12 +24,10 @@ export const Post: React.FC<Post> = ({
     link: ``,
     img: ``,
   },
-  theme = ``,
 }: Post) => {
   const { title, img, date, link, author } = content;
   return (
     <Card
-      theme={theme}
       content={{
         header: {
           title: title,

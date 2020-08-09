@@ -19,9 +19,5 @@ const StyledHeading = styled.h3`
 
 export const Heading: React.FC<Heading> = ({ children = `` }: Heading) => {
   const themeContext = useContext(ThemeContext);
-  return (
-    <StyledHeading schema={themeContext.schema} mode={themeContext.mode}>
-      {children}
-    </StyledHeading>
-  );
+  return <StyledHeading schema={themeContext.schema}>{children}</StyledHeading>;
 };
