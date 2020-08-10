@@ -43,12 +43,13 @@ const PostListItems = ({ content = [], col = 4 }: PostListItems) => {
     <StyledPostListItems>
       <div>
         {content.map((item, i) => {
-          const { content } = item;
-          if (!content) return null;
-          console.log(content);
+          if (!item.content) return null;
+          const { title, subtitle, excerpt } = item.content;
           return (
             <div key={i}>
-              <Post content={{ title: content.title }} />
+              <Post
+                content={{ title: title, subtitle: subtitle, excerpt: excerpt }}
+              />
             </div>
           );
         })}

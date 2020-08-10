@@ -13,6 +13,10 @@ export default {
   excludeStories: /.*Data$/,
 };
 
-export const postData = { title: `The title` };
+export const postData = {
+  title: `The title`,
+  subtitle: `The subtitle`,
+  excerpt: `The excerpt`,
+};
 
 export const Default = () => <Post content={postData} />;
