@@ -7,5 +7,5 @@ type Date = {
 
 export const Date: React.FC<Date> = ({ children = `` }: Date) => {
   if (!children) return null;
-  return <time>{publishedDate({ children })}</time>;
+  return <time>{publishedDate({ date: children })}</time>;
 };
