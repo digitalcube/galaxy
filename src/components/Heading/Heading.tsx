@@ -1,7 +1,5 @@
 import React, { useContext } from 'react';
 import styled, { ThemeContext } from 'styled-components';
-import theme from 'styled-theming';
-// import { colors } from './../../styles';
 import { color } from './../../styles/themes';
 
 type Heading = {

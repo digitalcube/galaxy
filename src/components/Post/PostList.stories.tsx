@@ -52,4 +52,4 @@ export const postListData = [
   },
 ];
 
-export const Default = () => <PostList content={postListData} col={2} />;
+export const Default = () => <PostList content={postListData} col={4} />;

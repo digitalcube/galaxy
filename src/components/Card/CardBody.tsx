@@ -1,7 +1,6 @@
 import React from 'react';
 import styled from 'styled-components';
-import theme from 'styled-theming';
-import { colors, components } from '../../styles';
+import { components } from '../../styles';
 import { color } from '../../styles/themes';
 
 export type CardBody = {

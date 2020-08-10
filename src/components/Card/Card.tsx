@@ -1,7 +1,6 @@
 import React, { useContext } from 'react';
 import styled, { ThemeContext } from 'styled-components';
-import theme from 'styled-theming';
-import { colors, components } from './../../styles';
+import { components } from './../../styles';
 import {
   color,
   borderColor,

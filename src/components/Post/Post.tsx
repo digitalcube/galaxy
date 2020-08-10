@@ -42,7 +42,7 @@ export const Post: React.FC<Post> = ({
     >
       {category}
       {author}
-      {date}
+      <Date>{date}</Date>
     </Card>
   );
 };
