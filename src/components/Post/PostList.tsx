@@ -1,6 +1,6 @@
 import React from 'react';
 import styled from 'styled-components';
-import { Grid, Col, Row } from 'react-styled-flexboxgrid';
+import { Grid, Cell } from 'styled-css-grid';
 import { components } from '../../styles';
 import { Post } from './Post';
 import { Heading } from '../Heading';
@@ -42,36 +42,36 @@ const PostListItems = ({ content = [], col = 6 }: PostListItems) => {
   if (!content) return null;
   return (
     <StyledPostListItems>
-      <Grid>
-        <Row>
-          {content.map((item, i) => {
-            if (!item.content) return null;
-            const {
-              title,
-              subtitle,
-              excerpt,
-              category,
-              author,
-              date,
-              img,
-            } = item.content;
-            return (
-              <Col key={i} xs={col}>
-                <Post
-                  content={{
-                    title: title,
-                    subtitle: subtitle,
-                    excerpt: excerpt,
-                    category: category,
-                    author: author,
-                    date: date,
-                    img: img,
-                  }}
-                />
-              </Col>
-            );
-          })}
-        </Row>
+      <Grid gap="1.5rem" columns="repeat(auto-fit,minmax(300px,1fr))">
+        {/* <Row> */}
+        {content.map((item, i) => {
+          if (!item.content) return null;
+          const {
+            title,
+            subtitle,
+            excerpt,
+            category,
+            author,
+            date,
+            img,
+          } = item.content;
+          return (
+            <Cell key={i}>
+              <Post
+                content={{
+                  title: title,
+                  subtitle: subtitle,
+                  excerpt: excerpt,
+                  category: category,
+                  author: author,
+                  date: date,
+                  img: img,
+                }}
+              />
+            </Cell>
+          );
+        })}
+        {/* </Row> */}
       </Grid>
     </StyledPostListItems>
   );

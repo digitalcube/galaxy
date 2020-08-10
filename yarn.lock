@@ -9301,11 +9301,6 @@ lodash.debounce@^4.0.8:
   resolved "https://registry.yarnpkg.com/lodash.debounce/-/lodash.debounce-4.0.8.tgz#82d79bff30a67c4005ffd5e2515300ad9ca4d7af"
   integrity sha1-gteb/zCmfEAF/9XiUVMArZyk168=
 
-lodash.isinteger@^4.0.4:
-  version "4.0.4"
-  resolved "https://registry.yarnpkg.com/lodash.isinteger/-/lodash.isinteger-4.0.4.tgz#619c0af3d03f8b04c31f5882840b77b11cd68343"
-  integrity sha1-YZwK89A/iwTDH1iChAt3sRzWg0M=
-
 lodash.memoize@4.x, lodash.memoize@^4.1.2:
   version "4.1.2"
   resolved "https://registry.yarnpkg.com/lodash.memoize/-/lodash.memoize-4.1.2.tgz#bcc6c49a42a2840ed997f323eada5ecd182e0bfe"
@@ -11542,13 +11537,6 @@ react-sizeme@^2.6.7:
     shallowequal "^1.1.0"
     throttle-debounce "^2.1.0"
 
-react-styled-flexboxgrid@^3.2.1:
-  version "3.2.1"
-  resolved "https://registry.yarnpkg.com/react-styled-flexboxgrid/-/react-styled-flexboxgrid-3.2.1.tgz#78b87c9dcf6e4f146e4a305668e894be8fa4f679"
-  integrity sha512-4dRs4CiVHjnyOQssm2Ge7ERCmbWi2rI/rsQtp3A8A5sli9EAKlVErQ6XujMM5Z9uxXN4O30zb2YDL3ufmD5Hiw==
-  dependencies:
-    lodash.isinteger "^4.0.4"
-
 react-syntax-highlighter@^11.0.2:
   version "11.0.2"
   resolved "https://registry.yarnpkg.com/react-syntax-highlighter/-/react-syntax-highlighter-11.0.2.tgz#4e3f376e752b20d2f54e4c55652fd663149e4029"
@@ -13023,6 +13011,13 @@ styled-components@^5.1.1:
     hoist-non-react-statics "^3.0.0"
     shallowequal "^1.1.0"
     supports-color "^5.5.0"
+
+styled-css-grid@^1.2.1:
+  version "1.2.1"
+  resolved "https://registry.yarnpkg.com/styled-css-grid/-/styled-css-grid-1.2.1.tgz#dbaff2c159745002bc590f0fe3414675f1a15945"
+  integrity sha512-ileif/si3F62bfTD6f9yPe2SwNXfMdaaiIL9DYuw7TPMqle1sQBEjXUaIbYCzMpsHklF/xctgGUhBb3+thlZsQ==
+  dependencies:
+    prop-types "^15.6.0"
 
 styled-normalize@^8.0.7:
   version "8.0.7"
