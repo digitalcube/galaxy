@@ -62,7 +62,7 @@ export const Card: React.FC<Card> = ({
       title: ``,
     },
     image: {
-      img: ``,
+      img: null,
     },
   },
   schema = ``,

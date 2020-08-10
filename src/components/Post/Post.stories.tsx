@@ -17,6 +17,13 @@ export const postData = {
   title: `The title`,
   subtitle: `The subtitle`,
   excerpt: `The excerpt`,
+  category: `Announcement`,
+  img: (
+    <img
+      alt=""
+      src="https://www.getshifter.io/static/40b93d70dfb59d815b49cebb13b97311/79f20/BlogPost-MediaCDNRelease.jpg"
+    />
+  ),
 };
 
 export const Default = () => <Post content={postData} />;

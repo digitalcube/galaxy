@@ -44,11 +44,16 @@ const PostListItems = ({ content = [], col = 4 }: PostListItems) => {
       <div>
         {content.map((item, i) => {
           if (!item.content) return null;
-          const { title, subtitle, excerpt } = item.content;
+          const { title, subtitle, excerpt, img } = item.content;
           return (
             <div key={i}>
               <Post
-                content={{ title: title, subtitle: subtitle, excerpt: excerpt }}
+                content={{
+                  title: title,
+                  subtitle: subtitle,
+                  excerpt: excerpt,
+                  img: img,
+                }}
               />
             </div>
           );

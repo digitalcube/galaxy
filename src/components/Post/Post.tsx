@@ -7,6 +7,7 @@ export type Post = {
     title?: string;
     subtitle?: string;
     excerpt?: string;
+    img?: React.ReactNode;
   };
 };
 
@@ -15,9 +16,11 @@ export const Post: React.FC<Post> = ({
     title: ``,
     subtitle: ``,
     excerpt: ``,
+    img: null,
   },
 }: Post) => {
-  const { title, subtitle, excerpt } = content;
+  console.log(content);
+  const { title, subtitle, excerpt, img } = content;
   return (
     <Card
       content={{
@@ -25,6 +28,9 @@ export const Post: React.FC<Post> = ({
           title: title,
           subtitle: subtitle,
           excerpt: excerpt,
+        },
+        image: {
+          img: img,
         },
       }}
     />
