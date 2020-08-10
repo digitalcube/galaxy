@@ -5,38 +5,20 @@ import { Date } from './../Date';
 export type Post = {
   content?: {
     title?: string;
-    subtitle?: React.ReactNode;
-    excerpt?: string;
-    author?: string;
-    date?: string;
-    img?: React.ReactNode;
-    link?: string;
   };
 };
 
 export const Post: React.FC<Post> = ({
   content = {
     title: ``,
-    subtitle: ``,
-    excerpt: ``,
-    date: ``,
-    author: ``,
-    link: ``,
-    img: ``,
   },
 }: Post) => {
-  const { title, img, date, link, author } = content;
+  const { title } = content;
   return (
     <Card
       content={{
         header: {
           title: title,
-          subtitle: <Date>{date}</Date>,
-          link: link,
-        },
-        image: {
-          img: img,
-          link: link,
         },
       }}
     />

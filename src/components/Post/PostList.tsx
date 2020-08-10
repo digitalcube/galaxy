@@ -7,7 +7,7 @@ import { Heading } from './../Heading';
 type PostList = {
   title?: string;
   subtitle?: string;
-  content?: Array<Post['content']>;
+  content?: Post[];
   col: number;
 };
 
@@ -32,7 +32,7 @@ const PostListSubtitle = ({ subtitle }: PostListSubtitle) => {
 const StyledPostListItems = styled.section``;
 
 type PostListItems = {
-  content?: Array<string>;
+  content?: Post[];
   col?: number;
   theme?: string;
 };
@@ -42,21 +42,16 @@ const PostListItems = ({ content = [], col = 4 }: PostListItems) => {
   return (
     <StyledPostListItems>
       <div>
-        {content.map((item, i) => (
-          <div key={i}>
-            <Post
-              content={{
-                title: item[`title`],
-                subtitle: item[`subtitle`],
-                excerpt: item[`excerpt`],
-                date: item[`date`],
-                author: item[`author`],
-                link: item[`link`],
-                img: item[`img`],
-              }}
-            />
-          </div>
-        ))}
+        {content.map((item, i) => {
+          const { content } = item;
+          if (!content) return null;
+          console.log(content);
+          return (
+            <div key={i}>
+              <Post content={{ title: content.title }} />
+            </div>
+          );
+        })}
       </div>
     </StyledPostListItems>
   );
@@ -71,11 +66,10 @@ export const PostList = ({
   title = ``,
   subtitle = ``,
   col,
-  theme,
 }: PostList) => (
   <StyledPostList>
     <PostListTitle title={title} />
     <PostListSubtitle subtitle={subtitle} />
-    <PostListItems theme={theme} content={content} col={col} />
+    <PostListItems content={content} col={col} />
   </StyledPostList>
 );
