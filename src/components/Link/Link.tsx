@@ -12,6 +12,6 @@ const StyledLink = styled.a`
 `;
 
 export const Link: React.FC<Link> = ({ children = null, link = `` }: Link) => {
-  if (!link) return children;
+  if (!children) return null;
   return <StyledLink href={link}>{children}</StyledLink>;
 };
