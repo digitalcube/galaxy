@@ -42,8 +42,7 @@ const PostListItems = ({ content = [], col = 6 }: PostListItems) => {
   if (!content) return null;
   return (
     <StyledPostListItems>
-      <Grid gap="1.5rem" columns="repeat(auto-fit,minmax(300px,1fr))">
-        {/* <Row> */}
+      <Grid gap="1.5rem" columns="repeat(auto-fit,minmax(225px,1fr))">
         {content.map((item, i) => {
           if (!item.content) return null;
           const {
@@ -71,7 +70,6 @@ const PostListItems = ({ content = [], col = 6 }: PostListItems) => {
             </Cell>
           );
         })}
-        {/* </Row> */}
       </Grid>
     </StyledPostListItems>
   );
