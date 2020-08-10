@@ -2,7 +2,6 @@ import React from 'react';
 import { withKnobs } from '@storybook/addon-knobs';
 import { Post } from '../Post';
 import { Image } from '../Image';
-import { Date } from '../Date';
 
 export default {
   component: Post,
