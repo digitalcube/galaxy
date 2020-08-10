@@ -1,5 +1,6 @@
 import React from 'react';
-import { Card } from '../Card/index';
+import { Card } from '../Card';
+import { Heading } from '../Heading';
 import { Date } from '../Date';
 
 export type Post = {
@@ -30,17 +31,15 @@ export const Post: React.FC<Post> = ({
   return (
     <Card
       content={{
-        header: {
-          title: title,
-          subtitle: subtitle,
-          excerpt: excerpt,
-        },
         image: {
           img: img,
         },
       }}
     >
-      {category}
+      <Heading tag="p">{category}</Heading>
+      <Heading tag="h2">{title}</Heading>
+      <Heading tag="h3">{subtitle}</Heading>
+      <Heading tag="p">{excerpt}</Heading>
       {author}
       <Date>{date}</Date>
     </Card>

@@ -8,8 +8,7 @@ type Heading = {
   color?: string;
 };
 
-const StyledHeading = styled.div`
-  display: inline-flex;
+const StyledHeading = styled.p`
   margin-bottom: 0;
   color: ${color};
   padding-bottom: 0;
