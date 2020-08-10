@@ -19,7 +19,7 @@ export const postData = {
   subtitle: `The subtitle`,
   excerpt: `The excerpt`,
   category: `Announcement`,
-  date: <Date>2020-08-10T12:50:52-04:00</Date>,
+  date: `2020-08-10T12:50:52-04:00`,
   author: `Daniel Olson`,
   img: (
     <Image>
