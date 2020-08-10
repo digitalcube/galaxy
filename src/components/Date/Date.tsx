@@ -1,5 +1,5 @@
 import React from 'react';
-import { publishedDate } from './../../lib/utils';
+import { publishedDate } from '../../lib/utils';
 
 type Date = {
   children?: string;

@@ -1,6 +1,6 @@
 import React from 'react';
-import { Card } from './../Card/index';
-import { Date } from './../Date';
+import { Card } from '../Card/index';
+import { Date } from '../Date';
 
 export type Post = {
   content?: {

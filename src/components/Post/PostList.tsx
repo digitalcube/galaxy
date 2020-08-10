@@ -1,9 +1,9 @@
 import React from 'react';
 import styled from 'styled-components';
 import { Grid, Col, Row } from 'react-styled-flexboxgrid';
-import { components } from './../../styles';
+import { components } from '../../styles';
 import { Post } from './Post';
-import { Heading } from './../Heading';
+import { Heading } from '../Heading';
 
 type PostList = {
   title?: string;
