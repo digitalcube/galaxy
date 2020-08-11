@@ -1,5 +1,5 @@
-import React, { useContext } from 'react';
-import styled, { ThemeContext } from 'styled-components';
+import React from 'react';
+import styled from 'styled-components';
 import { color } from '../../styles/themes';
 
 type Heading = {
@@ -16,11 +16,6 @@ const StyledHeading = styled.p`
 `;
 
 export const Heading: React.FC<Heading> = ({ children = ``, tag = `h2` }) => {
-  const themeContext = useContext(ThemeContext);
   if (!children) return null;
-  return (
-    <StyledHeading as={tag} schema={themeContext.schema}>
-      {children}
-    </StyledHeading>
-  );
+  return <StyledHeading as={tag}>{children}</StyledHeading>;
 };

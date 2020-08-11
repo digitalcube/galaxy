@@ -1,4 +1,4 @@
-import React, { useContext } from 'react';
+import React from 'react';
 import styled, { ThemeContext } from 'styled-components';
 import { components } from '../../styles';
 import {
@@ -69,9 +69,8 @@ export const Card: React.FC<Card> = ({
   children = null,
 }: Card) => {
   const { header, footer, image } = content;
-  const themeContext = useContext(ThemeContext);
   return (
-    <StyledCard schema={themeContext.schema}>
+    <StyledCard>
       <CardImage content={image} />
       <CardHeader content={header} />
       <CardBody>{children}</CardBody>
