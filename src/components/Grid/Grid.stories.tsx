@@ -12,12 +12,19 @@ export default {
   excludeStories: /.*Data$/,
 };
 
-export const headingData = {
-  title: `“I could calculate your chance of survival, but you won’t like it.” –Marvin`,
-};
-
 export const Default = () => (
-  <Grid>
-    I could calculate your chance of survival, but you won’t like it.” –Marvin
+  <Grid xl="4" lg="3" md="2">
+    <div>Item</div>
+    <div>Item</div>
+    <div>Item</div>
+    <div>Item</div>
+    <div>Item</div>
+    <div>Item</div>
+    <div>Item</div>
+    <div>Item</div>
+    <div>Item</div>
+    <div>Item</div>
+    <div>Item</div>
+    <div>Item</div>
   </Grid>
 );
