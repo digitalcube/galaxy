@@ -10,9 +10,11 @@ type Heading = {
   size?: string;
 };
 
-function headingFontSize(size = type.heading.size[`default`]) {
+export const headingFontSize = ({
+  size = type.heading.size[`default`],
+}: Heading) => {
   return type.heading.size[size];
-}
+};
 
 const StyledHeading = styled.p`
   margin-bottom: 0;
@@ -25,7 +27,7 @@ const StyledHeading = styled.p`
 export const Heading: React.FC<Heading> = ({
   children = ``,
   tag = `h2`,
-  size,
+  size = type.heading.size[`default`],
 }) => {
   if (!children) return null;
   return (
