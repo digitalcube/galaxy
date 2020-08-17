@@ -49,8 +49,6 @@ const StyledGrid = styled.div`
   }
 `;
 
-console.log(breakpoints({ size: `sm` }));
-
 export const Grid: React.FC<Grid> = ({
   children = null,
   gap = components.row.gap,

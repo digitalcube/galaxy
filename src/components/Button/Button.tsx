@@ -1,6 +1,6 @@
 import React, { FC, HTMLAttributes, ReactChild } from 'react';
-import styled from 'styled-components'
-import { components, colors } from '../../styles'
+import styled from 'styled-components';
+import { components, colors } from '../../styles';
 
 export interface Button extends HTMLAttributes<HTMLDivElement> {
   children?: ReactChild;
@@ -27,7 +27,7 @@ const StyledButton = styled.a`
     background-color: ${colors.shifter.purple.primary};
     color: ${colors.galaxy.white};
   }
-`
+`;
 
 export const Button: FC<Button> = ({ children = null, href }) => {
   if (!children) return null;

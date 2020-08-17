@@ -1,7 +1,6 @@
 import React from 'react';
 import { withKnobs } from '@storybook/addon-knobs';
 import { Post } from './Post';
-import { Image } from '../Image';
 
 export default {
   component: Post,
@@ -20,14 +19,6 @@ export const postData = {
   category: `Announcement`,
   date: `2020-08-10T12:50:52-04:00`,
   author: `Daniel Olson`,
-  img: (
-    <Image>
-      <img
-        alt=""
-        src="https://www.getshifter.io/static/40b93d70dfb59d815b49cebb13b97311/79f20/BlogPost-MediaCDNRelease.jpg"
-      />
-    </Image>
-  ),
 };
 
 export const Default = () => <Post content={postData} />;

@@ -1,6 +1,6 @@
 import React from 'react';
 import { Date } from '../Date';
-import { Content, Text, Card, Heading } from '../index';
+import { Content, Text, Card, Heading } from '../';
 
 export type Post = {
   align?: string;
