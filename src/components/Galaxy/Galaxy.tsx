@@ -8,6 +8,7 @@ type Galaxy = {
 
 const StyledGalaxy = styled.div`
   font-family: ${type.fontFamily};
+  background-color: white;
 `;
 
 export const Galaxy: React.FC<Galaxy> = ({ children = null }: Galaxy) => {
