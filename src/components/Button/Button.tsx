@@ -3,18 +3,19 @@ import styled from 'styled-components';
 import { components, colors } from '../../styles';
 
 export interface Button extends HTMLAttributes<HTMLDivElement> {
-  children?: ReactChild;
+  children: React.ReactNode;
   href?: string;
+  active?: string;
 }
 
-const StyledButton = styled.a`
-  background-color: transparent;
+export const Button = styled.a<Button>`
+  background-color: ${colors.shifter.purple.primary};
   border-width: ${components.button.borderWidth};
   border-style: solid;
+  color: ${colors.galaxy.white};
   border-color: ${colors.shifter.purple.primary};
   border-radius: ${components.borderRadius};
   padding: ${components.button.padding};
-  color: ${colors.shifter.purple.primary};
   min-height: ${components.button.minHeight};
   min-width: ${components.button.minWidth};
   font-size: ${components.button.fontSize};
@@ -25,13 +26,7 @@ const StyledButton = styled.a`
   text-decoration: none;
 
   &:hover {
-    background-color: ${colors.shifter.purple.primary};
+    background-color: ${colors.shifter.purple.p500};
     color: ${colors.galaxy.white};
   }
 `;
-
-export const Button: FC<Button> = ({ children = null, href }) => {
-  if (!children) return null;
-  if (href) return <StyledButton href={href}>{children}</StyledButton>;
-  return <button>{children}</button>;
-};
