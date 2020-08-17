@@ -1,6 +1,6 @@
 import React from 'react';
 import { withKnobs } from '@storybook/addon-knobs';
-import { Card } from './Card';
+import { Card, Button } from '../index';
 
 export default {
   component: Card,
@@ -19,9 +19,11 @@ export const cardContentData = {
   header: {
     title: `Don't Panic.`,
   },
-  footer: `42`,
+  footer: <Button href="#">42</Button>,
 };
 
 export const cardBodyData = `So long and thanks for all the fish. 🐬`;
 
-export const Default = () => <Card content={cardContentData}>hello world</Card>;
+export const Default = () => (
+  <Card content={cardContentData}>{cardBodyData}</Card>
+);

@@ -26,6 +26,6 @@ const headingSizes = Object.keys(type.heading.size).map(size => {
   );
 });
 
-export const Default = () => {
+export const Sizes = () => {
   return headingSizes;
 };

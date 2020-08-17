@@ -22,6 +22,7 @@ const StyledButton = styled.a`
   text-align: center;
   flex-direction: column;
   justify-content: center;
+  text-decoration: none;
 
   &:hover {
     background-color: ${colors.shifter.purple.primary};
