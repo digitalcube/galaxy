@@ -1,6 +1,6 @@
 import React from 'react';
 import styled from 'styled-components';
-import { Image } from '../../../galaxy';
+import { Image } from './../Image';
 import { Link } from '../Link';
 
 export type CardImage = {

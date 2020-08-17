@@ -1,10 +1,10 @@
 import React from 'react';
 import { withKnobs } from '@storybook/addon-knobs';
-import { Heading } from './Heading';
+import { Content } from './Content';
 
 export default {
-  component: Heading,
-  title: `Components/Heading`,
+  component: Content,
+  title: `Components/Content`,
   decorators: [
     withKnobs,
     (story: any) => <div style={{ padding: `3rem` }}>{story()}</div>,
@@ -12,12 +12,8 @@ export default {
   excludeStories: /.*Data$/,
 };
 
-export const headingData = {
-  title: `“I could calculate your chance of survival, but you won’t like it.” –Marvin`,
-};
-
 export const Default = () => (
-  <Heading>
+  <Content>
     I could calculate your chance of survival, but you won’t like it.” –Marvin
-  </Heading>
+  </Content>
 );

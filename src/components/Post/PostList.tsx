@@ -1,7 +1,7 @@
 import React from 'react';
 import styled from 'styled-components';
 import { components } from '../../styles';
-import { Grid, Col, Heading, Post } from '../../../galaxy';
+import { Grid, Col, Heading, Post } from '../index';
 
 type PostList = {
   title?: string;

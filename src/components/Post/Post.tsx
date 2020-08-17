@@ -1,6 +1,6 @@
 import React from 'react';
 import { Date } from '../Date';
-import { Content, Text, Card, Heading } from '../../../galaxy';
+import { Content, Text, Card, Heading } from '../index';
 
 export type Post = {
   align?: string;
