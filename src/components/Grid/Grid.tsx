@@ -1,7 +1,7 @@
 import React from 'react';
 import styled from 'styled-components';
 import { components } from '../../styles';
-import { breakpoints } from '../../lib/utils/breakpoints';
+import { breakpoints } from '../../lib/utils';
 
 type Grid = {
   children?: string;
