@@ -28,7 +28,7 @@ export const colors = {
       dark: `#1A0112`,
     },
     purple: {
-      primary: `#AA1C7F`,
+      primary: `#740151`,
       p500: `#451D39`,
       p400: `#653A58`,
       p300: `#AD8EAB`,

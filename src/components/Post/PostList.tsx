@@ -1,15 +1,15 @@
 import React from 'react';
 import styled from 'styled-components';
-import { Grid, Cell } from 'styled-css-grid';
 import { components } from '../../styles';
-import { Post } from './Post';
-import { Heading } from '../Heading';
+import { Grid, Col, Heading, Post } from '../../../galaxy';
 
 type PostList = {
   title?: string;
   subtitle?: string;
   content?: Post[];
-  col: number;
+  footer?: Post[];
+  col?: number;
+  align?: string;
 };
 
 type PostListTitle = {
@@ -36,15 +36,17 @@ type PostListItems = {
   content?: Post[];
   col?: number;
   theme?: string;
+  align?: string;
+  footer?: Post[];
 };
 
-const PostListItems = ({ content = [], col = 6 }: PostListItems) => {
+const PostListItems = ({ content = [], align }: PostListItems) => {
   if (!content) return null;
   return (
     <StyledPostListItems>
-      <Grid gap="1.5rem" columns="repeat(auto-fit,minmax(225px,1fr))">
-        {content.map((item, i) => {
-          if (!item.content) return null;
+      <Grid md={2} lg={4}>
+        {content.map((node, i) => {
+          if (!node.content) return null;
           const {
             title,
             subtitle,
@@ -53,10 +55,13 @@ const PostListItems = ({ content = [], col = 6 }: PostListItems) => {
             author,
             date,
             img,
-          } = item.content;
+          } = node.content;
+          const footer = node.footer;
           return (
-            <Cell key={i}>
+            <Col key={i}>
               <Post
+                align={align}
+                footer={footer}
                 content={{
                   title: title,
                   subtitle: subtitle,
@@ -67,7 +72,7 @@ const PostListItems = ({ content = [], col = 6 }: PostListItems) => {
                   img: img,
                 }}
               />
-            </Cell>
+            </Col>
           );
         })}
       </Grid>
@@ -83,11 +88,22 @@ export const PostList = ({
   content,
   title = ``,
   subtitle = ``,
-  col,
-}: PostList) => (
-  <StyledPostList>
-    <PostListTitle title={title} />
-    <PostListSubtitle subtitle={subtitle} />
-    <PostListItems content={content} col={col} />
-  </StyledPostList>
-);
+  col = 4,
+  align = ``,
+  footer = null,
+}: PostList) => {
+  if (!content) return null;
+  console.log(content);
+  return (
+    <StyledPostList>
+      <PostListTitle title={title} />
+      <PostListSubtitle subtitle={subtitle} />
+      <PostListItems
+        align={align}
+        content={content}
+        footer={footer}
+        col={col}
+      />
+    </StyledPostList>
+  );
+};

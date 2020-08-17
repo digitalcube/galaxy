@@ -13,6 +13,7 @@ import { CardBody } from './CardBody';
 import { CardFooter } from './CardFooter';
 
 export type Card = {
+  align?: string;
   content?: {
     header?: {
       title?: string;
@@ -20,9 +21,7 @@ export type Card = {
       excerpt?: string;
       link?: string;
     };
-    footer?: {
-      title?: string;
-    };
+    footer?: React.ReactChild;
     image?: {
       img?: React.ReactNode;
       link?: string;
@@ -34,6 +33,7 @@ export type Card = {
 };
 
 const StyledCard = styled.article`
+  text-align: ${props => props.align || ``};
   position: relative;
   display: flex;
   flex-direction: column;
@@ -47,6 +47,7 @@ const StyledCard = styled.article`
   border-color: ${borderColor};
   border-style: ${components.borderStyle};
   box-shadow: ${boxShadow};
+  width: 100%;
 `;
 
 export const Card: React.FC<Card> = ({
@@ -57,9 +58,7 @@ export const Card: React.FC<Card> = ({
       excerpt: ``,
       link: ``,
     },
-    footer: {
-      title: ``,
-    },
+    footer: ``,
     image: {
       img: null,
     },
@@ -67,14 +66,15 @@ export const Card: React.FC<Card> = ({
   schema = ``,
   mode = ``,
   children = null,
+  align = ``,
 }: Card) => {
   const { header, footer, image } = content;
   return (
-    <StyledCard>
+    <StyledCard align={align}>
       <CardImage content={image} />
       <CardHeader content={header} />
       <CardBody>{children}</CardBody>
-      <CardFooter content={footer} />
+      <CardFooter>{footer}</CardFooter>
     </StyledCard>
   );
 };

@@ -1,6 +1,6 @@
 import React from 'react';
 import styled from 'styled-components';
-// import { Image as GatsbyImage } from "gatsby-image"
+import { Image } from '../../../galaxy';
 import { Link } from '../Link';
 
 export type CardImage = {
@@ -20,8 +20,10 @@ export const CardImage: React.FC<CardImage> = ({
   const { img, link } = content;
   if (!img) return null;
   return (
-    <Link link={link}>
-      <StyledCardImage>{img}</StyledCardImage>
+    <Link href={link}>
+      <StyledCardImage>
+        <Image padding="2rem 0 0">{img}</Image>
+      </StyledCardImage>
     </Link>
   );
 };

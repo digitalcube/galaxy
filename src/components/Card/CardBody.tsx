@@ -8,7 +8,7 @@ export type CardBody = {
 };
 
 const StyledCardBody = styled.div`
-  padding: ${components.padding.md} ${components.padding.sm};
+  padding: ${components.spacing.md} ${components.spacing.sm};
   color: ${color};
 `;
 

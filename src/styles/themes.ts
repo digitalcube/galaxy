@@ -1,6 +1,21 @@
 import theme from 'styled-theming';
 import { colors, components } from './index';
 
+export const buttonBackgroundColor = theme.variants('mode', 'schema', {
+  galaxy: {
+    light: colors.galaxy.gray.g700,
+    dark: colors.galaxy.white,
+  },
+  shifter: {
+    light: colors.galaxy.gray.g700,
+    dark: colors.shifter.purple.p100,
+  },
+  amimoto: {
+    light: colors.galaxy.gray.g700,
+    dark: colors.amimoto.gray.g300,
+  },
+});
+
 export const color = theme.variants('mode', 'schema', {
   galaxy: {
     light: colors.galaxy.gray.g700,

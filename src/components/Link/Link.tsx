@@ -3,7 +3,7 @@ import styled from 'styled-components';
 
 type Link = {
   children?: React.ReactNode;
-  link?: string;
+  href?: string;
 };
 
 const StyledLink = styled.a`
@@ -11,7 +11,7 @@ const StyledLink = styled.a`
   display: inline-block;
 `;
 
-export const Link: React.FC<Link> = ({ children = null, link = `` }: Link) => {
+export const Link: React.FC<Link> = ({ children = null, href = `` }: Link) => {
   if (!children) return null;
-  return <StyledLink href={link}>{children}</StyledLink>;
+  return <StyledLink href={href}>{children}</StyledLink>;
 };

@@ -1,9 +1,9 @@
 import React from 'react';
-import { Card } from '../Card';
-import { Heading } from '../Heading';
 import { Date } from '../Date';
+import { Content, Text, Card, Heading } from '../../../galaxy';
 
 export type Post = {
+  align?: string;
   content?: {
     title?: string;
     subtitle?: string;
@@ -13,9 +13,12 @@ export type Post = {
     date?: string;
     img?: React.ReactNode;
   };
+  footer?: React.ReactChild;
 };
 
 export const Post: React.FC<Post> = ({
+  align = ``,
+  footer = ``,
   content = {
     title: ``,
     subtitle: ``,
@@ -26,22 +29,25 @@ export const Post: React.FC<Post> = ({
     img: null,
   },
 }: Post) => {
-  console.log(content);
   const { title, subtitle, excerpt, category, author, date, img } = content;
   return (
     <Card
+      align={align}
       content={{
         image: {
           img: img,
         },
+        footer: footer,
       }}
     >
-      <Heading tag="p">{category}</Heading>
-      <Heading tag="h2">{title}</Heading>
-      <Heading tag="h3">{subtitle}</Heading>
-      <Heading tag="p">{excerpt}</Heading>
-      {author}
-      <Date>{date}</Date>
+      <Content>
+        <Heading tag="p">{category}</Heading>
+        <Heading tag="h2">{title}</Heading>
+        <Heading tag="h3">{subtitle}</Heading>
+        <Text>{excerpt}</Text>
+        {author}
+        <Date>{date}</Date>
+      </Content>
     </Card>
   );
 };

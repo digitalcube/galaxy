@@ -3,19 +3,17 @@ import styled from 'styled-components';
 import { components } from '../../styles';
 
 export type CardFooter = {
-  content?: {
-    title?: string;
-  };
+  children?: React.ReactChild;
 };
 
 const StyledCardFooter = styled.div`
-  padding: ${components.padding.md} ${components.padding.sm};
+  margin-top: auto;
+  padding: 0 ${components.spacing.sm} ${components.spacing.md};
 `;
 
 export const CardFooter: React.FC<CardFooter> = ({
-  content = { title: `` },
+  children = ``,
 }: CardFooter) => {
-  const { title } = content;
-  if (!title) return null;
-  return <StyledCardFooter>{title}</StyledCardFooter>;
+  if (!children) return null;
+  return <StyledCardFooter>{children}</StyledCardFooter>;
 };
