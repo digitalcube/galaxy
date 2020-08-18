@@ -26,7 +26,6 @@ export const Button = styled.a<Button>`
   text-decoration: none;
   transition: ${components.transition.exit.medium};
 
-
   &:hover {
     background-color: ${colors.shifter.purple.p500};
     color: ${colors.galaxy.white};
@@ -37,7 +36,6 @@ export const Button = styled.a<Button>`
     border-width: ${components.button.borderWidth};
     border-color: ${colors.shifter.magenta.primary};
     transition: ${components.transition.entrance.fast};
-
   }
 
   &:active {
