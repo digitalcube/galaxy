@@ -30,4 +30,9 @@ export const Button = styled.a<Button>`
     color: ${colors.galaxy.white};
     transition: ${components.transition.fast};
   }
+
+  &:focus {
+    border-width: ${components.button.borderWidth};
+    border-color: ${colors.shifter.magenta.primary};
+  }
 `;
