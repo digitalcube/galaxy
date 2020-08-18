@@ -14,7 +14,23 @@ export const components = {
   flex: `1 1 auto`,
   borderWidth: `0.0625rem`,
   borderStyle: `solid`,
-  transition: `all 0.25s ease`,
+  transition: {
+    exit: {
+      fast: `all 150ms cubic-bezier(.01,.65,.73,1.01)`,
+      medium: `all .5s cubic-bezier(.01,.65,.73,1.01)`,
+      slow: `all 1s cubic-bezier(.3,0,.45,1)`,
+    },
+    entrance: {
+      fast: `all 150ms cubic-bezier(.55,0,1,.5)`,
+      medium: `all .5s cubic-bezier(.55,0,1,.5)`,
+      slow: `all 1s cubic-bezier(.17,0,.8,.15)`,
+    },
+    ease: {
+      fast: `all 150ms cubic-bezier(.85,.05,.15,.8)`,
+      medium: `all .5s cubic-bezier(.7,.15,.35,.9)`,
+      slow: `all 1s cubic-bezier(.7,.15,.35,.9)`,
+    },
+  },
   section: {
     padding: {
       xl: `5rem`,
