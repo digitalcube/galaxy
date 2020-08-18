@@ -20,5 +20,11 @@ export const buttonData = {
 
 export const Buttons = () => {
   const { label, href } = buttonData;
-  return <Button href={href}>{label}</Button>;
+  return (
+    <>
+      <Button schema="amimoto" href={href}>
+        {label}
+      </Button>
+    </>
+  );
 };

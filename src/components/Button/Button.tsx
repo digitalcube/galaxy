@@ -1,18 +1,51 @@
-import React, { FC, HTMLAttributes, ReactChild } from 'react';
+import { HTMLAttributes, ReactChild } from 'react';
 import styled from 'styled-components';
+import theme from 'styled-theming';
 import { components, colors } from '../../styles';
 
 export interface Button extends HTMLAttributes<HTMLDivElement> {
-  children: React.ReactNode;
+  children: ReactChild;
   href?: string;
   active?: string;
+  mode?: 'light' | 'dark';
+  schema?: 'amimoto' | 'shifter' | 'galaxy';
 }
 
+const backgroundColor = theme.variants('mode', 'schema', {
+  galaxy: {
+    light: colors.galaxy.gray.g700,
+    dark: colors.galaxy.white,
+  },
+  shifter: {
+    light: colors.galaxy.gray.g700,
+    dark: colors.shifter.purple.p100,
+  },
+  amimoto: {
+    light: colors.galaxy.gray.g700,
+    dark: colors.amimoto.gray.g300,
+  },
+});
+
+const color = theme.variants('mode', 'schema', {
+  galaxy: {
+    light: colors.galaxy.gray.g700,
+    dark: colors.galaxy.white,
+  },
+  shifter: {
+    light: colors.galaxy.gray.g700,
+    dark: colors.shifter.purple.p100,
+  },
+  amimoto: {
+    light: colors.galaxy.gray.g700,
+    dark: colors.amimoto.gray.g300,
+  },
+});
+
 export const Button = styled.a<Button>`
-  background-color: ${colors.shifter.purple.primary};
+  background-color: ${backgroundColor};
   border-width: ${components.button.borderWidth};
   border-style: solid;
-  color: ${colors.galaxy.white};
+  color: ${color};
   border-color: ${colors.shifter.purple.primary};
   border-radius: ${components.borderRadius};
   padding: ${components.button.padding};
@@ -26,7 +59,6 @@ export const Button = styled.a<Button>`
   text-decoration: none;
   transition: ${components.transition.exit.medium};
 
-
   &:hover {
     background-color: ${colors.shifter.purple.p500};
     color: ${colors.galaxy.white};
@@ -37,7 +69,6 @@ export const Button = styled.a<Button>`
     border-width: ${components.button.borderWidth};
     border-color: ${colors.shifter.magenta.primary};
     transition: ${components.transition.entrance.fast};
-
   }
 
   &:active {
