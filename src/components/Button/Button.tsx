@@ -71,6 +71,21 @@ const color = theme.variants('mode', 'schema', {
   },
 });
 
+const ghostColor = theme.variants('mode', 'schema', {
+  galaxy: {
+    light: colors.galaxy.black,
+    dark: colors.galaxy.white,
+  },
+  shifter: {
+    light: colors.shifter.purple.primary,
+    dark: colors.shifter.purple.p200,
+  },
+  amimoto: {
+    light: colors.amimoto.blue.primary,
+    dark: colors.amimoto.blue.b200,
+  },
+});
+
 const hoverColor = theme.variants('mode', 'schema', {
   galaxy: {
     light: colors.galaxy.white,
@@ -155,7 +170,11 @@ export const Button = styled.a<Button>`
   }};
   border-width: ${components.button.borderWidth};
   border-style: solid;
-  color: ${color};
+  color: ${props => {
+    if (props.kind === 'primary') return color;
+    if (props.kind === 'ghost') return ghostColor;
+    return color;
+  }};
   border-color: ${borderColor};
   border-radius: ${components.borderRadius};
   padding: ${components.button.padding};
