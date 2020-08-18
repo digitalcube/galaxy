@@ -34,6 +34,21 @@ export const Buttons = () => {
       <Button kind="success" schema="shifter" href={href}>
         {label}
       </Button>
+      <Button kind="outline" schema="galaxy" href={href}>
+        {label}
+      </Button>
+      <Button kind="outline" schema="amimoto" href={href}>
+        {label}
+      </Button>
+      <Button kind="outline" schema="shifter" href={href}>
+        {label}
+      </Button>
+      <Button kind="ghost" schema="galaxy" href={href}>
+        {label}
+      </Button>
+      <Button kind="ghost" schema="amimoto" href={href}>
+        {label}
+      </Button>
       <Button kind="ghost" schema="shifter" href={href}>
         {label}
       </Button>

@@ -9,7 +9,7 @@ export interface Button extends HTMLAttributes<HTMLDivElement> {
   active?: string;
   mode?: 'light' | 'dark';
   schema?: 'amimoto' | 'shifter' | 'galaxy';
-  kind?: 'primary' | 'success' | 'ghost';
+  kind?: 'primary' | 'outline' | 'ghost' | 'success';
 }
 
 const backgroundColor = theme.variants('mode', 'schema', {
