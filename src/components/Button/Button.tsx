@@ -40,4 +40,9 @@ export const Button = styled.a<Button>`
     background-color: ${colors.shifter.purple.p500};
     color: ${colors.galaxy.white};
   }
+
+  &:disabled {
+    background-color: ${colors.shifter.gray.g400};
+    color: ${colors.shifter.gray.g500};
+  }
 `;
