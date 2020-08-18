@@ -133,6 +133,21 @@ const ghostBackgroundColor = theme.variants('mode', 'schema', {
   },
 });
 
+const ghostHoverBackgroundColor = theme.variants('mode', 'schema', {
+  galaxy: {
+    light: colors.galaxy.gray.g100,
+    dark: colors.galaxy.gray.g700,
+  },
+  shifter: {
+    light: colors.shifter.purple.p100,
+    dark: colors.shifter.purple.p500,
+  },
+  amimoto: {
+    light: colors.amimoto.blue.b200,
+    dark: colors.amimoto.blue.b400,
+  },
+});
+
 const borderColor = theme.variants('mode', 'schema', {
   galaxy: {
     light: colors.galaxy.black,
@@ -145,21 +160,6 @@ const borderColor = theme.variants('mode', 'schema', {
   amimoto: {
     light: colors.amimoto.blue.primary,
     dark: colors.amimoto.blue.primary,
-  },
-});
-
-const outlineBorderColor = theme.variants('mode', 'schema', {
-  galaxy: {
-    light: colors.galaxy.black,
-    dark: colors.galaxy.white,
-  },
-  shifter: {
-    light: colors.shifter.purple.primary,
-    dark: colors.shifter.purple.p200,
-  },
-  amimoto: {
-    light: colors.amimoto.blue.primary,
-    dark: colors.amimoto.blue.b200,
   },
 });
 
@@ -215,9 +215,15 @@ export const Button = styled.a<Button>`
     background-color: ${props => {
       if (props.kind === 'primary') return hoverBackgroundColor;
       if (props.kind === 'success') return successHoverBackgroundColor;
+      if (props.kind === 'ghost') return ghostHoverBackgroundColor;
       return hoverBackgroundColor;
     }};
-    color: ${hoverColor};
+
+    color: ${props => {
+      if (props.kind === 'ghost') return ghostColor;
+      return hoverColor;
+    }};
+
     transition: ${components.transition.entrance.fast};
   }
 
