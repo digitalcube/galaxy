@@ -19,8 +19,11 @@ export const colors = {
     transparent: `transparent`,
     shadow: `rgba(0, 0, 0, 0.25)`,
     success: `#36B27E`,
+    successDark: `#0A6450`,
     warning: `#FFA600`,
+    warningDark: `#D17303`,
     danger: `#FF0000`,
+    dangerDark: `#950000`,
   },
   shifter: {
     background: {
