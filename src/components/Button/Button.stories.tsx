@@ -13,11 +13,6 @@ export default {
   excludeStories: /.*Data$/,
 };
 
-export const buttonData = {
-  label: `Hello World`,
-  href: `#`,
-};
-
 const schemas = [`galaxy`, `shifter`, `amimoto`];
 const modes = [`light`, `dark`];
 const kinds = [`primary`, `ghost`, `success`];
@@ -28,7 +23,13 @@ const options = outline.map(outline => {
     return modes.map(mode => {
       return schemas.map(schema => {
         return (
-          <Button outline={outline} mode={mode} schema={schema} kind={kind}>
+          <Button
+            href="#"
+            outline={outline}
+            mode={mode}
+            schema={schema}
+            kind={kind}
+          >
             {schema} / {mode} / {kind}
           </Button>
         );
@@ -38,6 +39,5 @@ const options = outline.map(outline => {
 });
 
 export const Buttons = () => {
-  const { label, href } = buttonData;
-  return <>{options}</>;
+  return options;
 };
