@@ -13,16 +13,16 @@ export interface Button extends HTMLAttributes<HTMLDivElement> {
 
 const backgroundColor = theme.variants('mode', 'schema', {
   galaxy: {
-    light: colors.galaxy.gray.g700,
+    light: colors.galaxy.black,
     dark: colors.galaxy.white,
   },
   shifter: {
-    light: colors.galaxy.gray.g700,
-    dark: colors.shifter.purple.p100,
+    light: colors.shifter.purple.primary,
+    dark: colors.shifter.purple.primary,
   },
   amimoto: {
-    light: colors.galaxy.gray.g700,
-    dark: colors.amimoto.gray.g300,
+    light: colors.amimoto.blue.primary,
+    dark: colors.amimoto.blue.primary,
   },
 });
 
