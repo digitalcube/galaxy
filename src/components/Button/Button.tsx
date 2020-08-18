@@ -146,6 +146,21 @@ const borderColor = theme.variants('mode', 'schema', {
   },
 });
 
+const outlineBorderColor = theme.variants('mode', 'schema', {
+  galaxy: {
+    light: colors.galaxy.black,
+    dark: colors.galaxy.white,
+  },
+  shifter: {
+    light: colors.shifter.purple.primary,
+    dark: colors.shifter.purple.p200,
+  },
+  amimoto: {
+    light: colors.amimoto.blue.primary,
+    dark: colors.amimoto.blue.b200,
+  },
+});
+
 const focusBorderColor = theme.variants('mode', 'schema', {
   galaxy: {
     light: colors.amimoto.blue.secondary,
@@ -166,6 +181,7 @@ export const Button = styled.a<Button>`
     if (props.kind === 'primary') return backgroundColor;
     if (props.kind === 'success') return successBackgroundColor;
     if (props.kind === 'ghost') return ghostBackgroundColor;
+    if (props.kind === 'outline') return ghostBackgroundColor;
     return backgroundColor;
   }};
   border-width: ${components.button.borderWidth};
@@ -173,9 +189,16 @@ export const Button = styled.a<Button>`
   color: ${props => {
     if (props.kind === 'primary') return color;
     if (props.kind === 'ghost') return ghostColor;
+    if (props.kind === 'outline') return ghostColor;
+
     return color;
   }};
-  border-color: ${borderColor};
+  border-color: ${props => {
+    if (props.kind === 'primary') return borderColor;
+    if (props.kind === 'outline') return outlineBorderColor;
+
+    return borderColor;
+  }};
   border-radius: ${components.borderRadius};
   padding: ${components.button.padding};
   min-height: ${components.button.minHeight};
