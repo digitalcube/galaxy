@@ -9,7 +9,7 @@ export interface Button extends HTMLAttributes<HTMLDivElement> {
   active?: string;
   mode?: 'light' | 'dark';
   schema?: 'amimoto' | 'shifter' | 'galaxy';
-  kind?: 'primary' | 'success';
+  kind?: 'primary' | 'success' | 'ghost';
 }
 
 const backgroundColor = theme.variants('mode', 'schema', {
@@ -135,6 +135,8 @@ export const Button = styled.a<Button>`
   background-color: ${props => {
     if (props.kind === 'primary') return backgroundColor;
     if (props.kind === 'success') return successBackgroundColor;
+    if (props.kind === 'ghost') return ghostBackgroundColor;
+
     return backgroundColor;
   }};
   border-width: ${components.button.borderWidth};
