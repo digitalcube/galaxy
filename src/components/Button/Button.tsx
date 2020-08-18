@@ -190,12 +190,14 @@ export const Button = styled.a<Button>`
   border-width: ${components.button.borderWidth};
   border-style: solid;
   color: ${props => {
+    if (props.kind === 'success') return colors.galaxy.success;
     if (props.outline === true) return borderColor;
     if (props.kind === 'ghost') return ghostColor;
 
     return colors.galaxy.white;
   }};
   border-color: ${props => {
+    if (props.kind === 'success') return colors.galaxy.success;
     if (props.outline === true) return borderColor;
     return colors.galaxy.transparent;
   }};
