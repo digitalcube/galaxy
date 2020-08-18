@@ -14,7 +14,11 @@ export const components = {
   flex: `1 1 auto`,
   borderWidth: `0.0625rem`,
   borderStyle: `solid`,
-  transition: `all 0.25s ease`,
+  transition: {
+    fast: `all 200ms cubic-bgitezier(0,.55,0.6,1)`,
+    medium: `all .5s cubic-bezier(.75,0,.45,1)`,
+    slow: `all 1s cubic-bezier(.75,0,.45,1)`,
+  },
   section: {
     padding: {
       xl: `5rem`,
