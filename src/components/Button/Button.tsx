@@ -44,15 +44,15 @@ const color = theme.variants('mode', 'schema', {
 const hoverBackgroundColor = theme.variants('mode', 'schema', {
   galaxy: {
     light: colors.galaxy.gray.g700,
-    dark: colors.galaxy.white,
+    dark: colors.galaxy.gray.g200,
   },
   shifter: {
-    light: colors.galaxy.gray.g300,
-    dark: colors.shifter.purple.p100,
+    light: colors.shifter.purple.p500,
+    dark: colors.shifter.purple.p500,
   },
   amimoto: {
-    light: colors.galaxy.gray.g700,
-    dark: colors.amimoto.gray.g300,
+    light: colors.amimoto.blue.b500,
+    dark: colors.amimoto.blue.b500,
   },
 });
 
