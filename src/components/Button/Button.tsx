@@ -35,4 +35,9 @@ export const Button = styled.a<Button>`
     border-width: ${components.button.borderWidth};
     border-color: ${colors.shifter.magenta.primary};
   }
+
+  &:active {
+    background-color: ${colors.shifter.purple.p500};
+    color: ${colors.galaxy.white};
+  }
 `;
