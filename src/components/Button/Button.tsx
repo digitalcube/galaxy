@@ -41,6 +41,21 @@ const color = theme.variants('mode', 'schema', {
   },
 });
 
+const hoverColor = theme.variants('mode', 'schema', {
+  galaxy: {
+    light: colors.galaxy.white,
+    dark: colors.galaxy.black,
+  },
+  shifter: {
+    light: colors.galaxy.white,
+    dark: colors.galaxy.white,
+  },
+  amimoto: {
+    light: colors.galaxy.white,
+    dark: colors.galaxy.white,
+  },
+});
+
 const hoverBackgroundColor = theme.variants('mode', 'schema', {
   galaxy: {
     light: colors.galaxy.gray.g700,
@@ -106,7 +121,7 @@ export const Button = styled.a<Button>`
 
   &:hover {
     background-color: ${hoverBackgroundColor};
-    color: ${colors.galaxy.white};
+    color: ${hoverColor};
     transition: ${components.transition.entrance.fast};
   }
 
