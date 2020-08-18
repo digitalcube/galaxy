@@ -22,20 +22,20 @@ export const Buttons = () => {
   const { label, href } = buttonData;
   return (
     <>
-      <Button schema="galaxy" href={href}>
+      <Button kind="primary" schema="galaxy" href={href}>
         {label}
       </Button>
-      <Button schema="amimoto" href={href}>
+      <Button kind="primary" schema="amimoto" href={href}>
         {label}
       </Button>
-      <Button kind="primary" schema="shifter" href={href}>
-        {label} Primary
+      <Button schema="shifter" href={href}>
+        {label}
       </Button>
       <Button kind="success" schema="shifter" href={href}>
-        {label} Success
+        {label}
       </Button>
       <Button kind="ghost" schema="shifter" href={href}>
-        {label} Ghost
+        {label}
       </Button>
     </>
   );

@@ -101,6 +101,21 @@ const hoverBackgroundColor = theme.variants('mode', 'schema', {
   },
 });
 
+const ghostBackgroundColor = theme.variants('mode', 'schema', {
+  galaxy: {
+    light: colors.galaxy.transparent,
+    dark: colors.galaxy.transparent,
+  },
+  shifter: {
+    light: colors.galaxy.transparent,
+    dark: colors.galaxy.transparent,
+  },
+  amimoto: {
+    light: colors.galaxy.transparent,
+    dark: colors.galaxy.transparent,
+  },
+});
+
 const borderColor = theme.variants('mode', 'schema', {
   galaxy: {
     light: colors.galaxy.transparent,
@@ -136,7 +151,6 @@ export const Button = styled.a<Button>`
     if (props.kind === 'primary') return backgroundColor;
     if (props.kind === 'success') return successBackgroundColor;
     if (props.kind === 'ghost') return ghostBackgroundColor;
-
     return backgroundColor;
   }};
   border-width: ${components.button.borderWidth};
