@@ -28,16 +28,16 @@ const backgroundColor = theme.variants('mode', 'schema', {
 
 const color = theme.variants('mode', 'schema', {
   galaxy: {
-    light: colors.galaxy.gray.g700,
-    dark: colors.galaxy.white,
+    light: colors.galaxy.white,
+    dark: colors.galaxy.black,
   },
   shifter: {
-    light: colors.galaxy.gray.g700,
-    dark: colors.shifter.purple.p100,
+    light: colors.galaxy.white,
+    dark: colors.galaxy.white,
   },
   amimoto: {
-    light: colors.galaxy.gray.g700,
-    dark: colors.amimoto.gray.g300,
+    light: colors.galaxy.white,
+    dark: colors.galaxy.white,
   },
 });
 
