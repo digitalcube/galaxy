@@ -41,6 +41,21 @@ const color = theme.variants('mode', 'schema', {
   },
 });
 
+const hoverBackgroundColor = theme.variants('mode', 'schema', {
+  galaxy: {
+    light: colors.galaxy.gray.g700,
+    dark: colors.galaxy.white,
+  },
+  shifter: {
+    light: colors.galaxy.gray.g300,
+    dark: colors.shifter.purple.p100,
+  },
+  amimoto: {
+    light: colors.galaxy.gray.g700,
+    dark: colors.amimoto.gray.g300,
+  },
+});
+
 export const Button = styled.a<Button>`
   background-color: ${backgroundColor};
   border-width: ${components.button.borderWidth};
@@ -60,7 +75,7 @@ export const Button = styled.a<Button>`
   transition: ${components.transition.exit.medium};
 
   &:hover {
-    background-color: ${colors.shifter.purple.p500};
+    background-color: ${hoverBackgroundColor};
     color: ${colors.galaxy.white};
     transition: ${components.transition.entrance.fast};
   }
