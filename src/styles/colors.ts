@@ -63,6 +63,7 @@ export const colors = {
     },
     blue: {
       primary: `#004CD3`,
+      secondary: `#00A8FF`,
       b600: `#091A37`,
       b500: `#001A48`,
       b400: `#012668`,
