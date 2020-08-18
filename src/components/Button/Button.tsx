@@ -9,6 +9,7 @@ export interface Button extends HTMLAttributes<HTMLDivElement> {
   active?: string;
   mode?: 'light' | 'dark';
   schema?: 'amimoto' | 'shifter' | 'galaxy';
+  kind?: 'primary' | 'success';
 }
 
 const backgroundColor = theme.variants('mode', 'schema', {
@@ -18,6 +19,21 @@ const backgroundColor = theme.variants('mode', 'schema', {
   },
   shifter: {
     light: colors.shifter.purple.primary,
+    dark: colors.shifter.purple.primary,
+  },
+  amimoto: {
+    light: colors.amimoto.blue.primary,
+    dark: colors.amimoto.blue.primary,
+  },
+});
+
+const successBackgroundColor = theme.variants('mode', 'schema', {
+  galaxy: {
+    light: colors.galaxy.black,
+    dark: colors.galaxy.white,
+  },
+  shifter: {
+    light: colors.galaxy.success,
     dark: colors.shifter.purple.primary,
   },
   amimoto: {
@@ -102,7 +118,11 @@ const focusBorderColor = theme.variants('mode', 'schema', {
 });
 
 export const Button = styled.a<Button>`
-  background-color: ${backgroundColor};
+  background-color: ${props => {
+    if (props.kind === 'primary') return backgroundColor;
+    if (props.kind === 'success') return successBackgroundColor;
+    return backgroundColor;
+  }};
   border-width: ${components.button.borderWidth};
   border-style: solid;
   color: ${color};

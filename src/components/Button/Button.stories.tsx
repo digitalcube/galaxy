@@ -28,8 +28,11 @@ export const Buttons = () => {
       <Button schema="amimoto" href={href}>
         {label}
       </Button>
-      <Button schema="shifter" href={href}>
-        {label}
+      <Button kind="primary" schema="shifter" href={href}>
+        {label} Primary
+      </Button>
+      <Button kind="success" schema="shifter" href={href}>
+        {label} Success
       </Button>
     </>
   );
