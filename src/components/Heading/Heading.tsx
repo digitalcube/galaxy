@@ -25,7 +25,7 @@ const StyledHeading = styled.p`
 export const Heading: React.FC<Heading> = ({
   children = ``,
   tag = `h2`,
-  size = ``,
+  size = `md`,
 }) => {
   if (!children) return null;
   return (

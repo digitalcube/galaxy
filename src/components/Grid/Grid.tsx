@@ -1,4 +1,3 @@
-import React from 'react';
 import styled from 'styled-components';
 import { components } from '../../styles';
 import { breakpoints } from '../../lib/utils';
@@ -15,7 +14,7 @@ type Grid = {
   xxl?: number | string;
 };
 
-const StyledGrid = styled.div`
+export const Grid = styled.div<Grid>`
   display: grid;
   grid-template-columns: repeat(${components.grid.columns}, 1fr);
   gap: ${components.row.gap};
@@ -48,31 +47,3 @@ const StyledGrid = styled.div`
     grid-template-columns: repeat(${props => props.xxl}, 1fr);
   }
 `;
-
-export const Grid: React.FC<Grid> = ({
-  children = null,
-  gap = components.row.gap,
-  xxs,
-  xs,
-  sm,
-  md,
-  lg,
-  xl,
-  xxl,
-}) => {
-  if (!children) return null;
-  return (
-    <StyledGrid
-      gap={gap}
-      xxs={xxs}
-      xs={xs}
-      sm={sm}
-      md={md}
-      lg={lg}
-      xl={xl}
-      xxl={xxl}
-    >
-      {children}
-    </StyledGrid>
-  );
-};

@@ -13,7 +13,7 @@ export default {
 };
 
 export const Default = () => (
-  <Container>
+  <Container size="md">
     I could calculate your chance of survival, but you won’t like it.” –Marvin
   </Container>
 );
