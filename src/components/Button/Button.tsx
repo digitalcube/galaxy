@@ -24,11 +24,12 @@ export const Button = styled.a<Button>`
   flex-direction: column;
   justify-content: center;
   text-decoration: none;
+  transition: ${components.transition.medium};
+
 
   &:hover {
     background-color: ${colors.shifter.purple.p500};
     color: ${colors.galaxy.white};
-    transition: ${components.transition.fast};
   }
 
   &:focus {

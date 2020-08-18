@@ -15,9 +15,16 @@ export const components = {
   borderWidth: `0.0625rem`,
   borderStyle: `solid`,
   transition: {
-    fast: `all 200ms cubic-bgitezier(0,.55,0.6,1)`,
-    medium: `all .5s cubic-bezier(.75,0,.45,1)`,
-    slow: `all 1s cubic-bezier(.75,0,.45,1)`,
+    entrance: {
+      fast: `all 200ms cubic-bezier(.01,.65,.73,1.01)`,
+      medium: `all .5s cubic-bezier(.01,.65,.73,1.01)`,
+      slow: `all 1s cubic-bezier(.3,0,.45,1)`,
+    },
+    exit: {
+      fast: `all 200ms cubic-bezier(.55,0,1,.5)`,
+      medium: `all .5s cubic-bezier(.55,0,1,.5)`,
+      slow: `all 1s cubic-bezier(.17,0,.8,.15)`,
+    },
   },
   section: {
     padding: {
