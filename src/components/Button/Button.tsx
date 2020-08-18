@@ -88,16 +88,16 @@ const borderColor = theme.variants('mode', 'schema', {
 
 const focusBorderColor = theme.variants('mode', 'schema', {
   galaxy: {
-    light: colors.amimoto.blue.b200,
-    dark: colors.amimoto.blue.b200,
+    light: colors.amimoto.blue.secondary,
+    dark: colors.amimoto.blue.secondary,
   },
   shifter: {
     light: colors.shifter.magenta.primary,
     dark: colors.shifter.magenta.primary,
   },
   amimoto: {
-    light: colors.amimoto.blue.b200,
-    dark: colors.amimoto.blue.b200,
+    light: colors.amimoto.blue.secondary,
+    dark: colors.amimoto.blue.secondary,
   },
 });
 
