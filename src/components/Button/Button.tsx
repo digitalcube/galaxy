@@ -28,5 +28,6 @@ export const Button = styled.a<Button>`
   &:hover {
     background-color: ${colors.shifter.purple.p500};
     color: ${colors.galaxy.white};
+    transition: ${components.transition.fast};
   }
 `;
