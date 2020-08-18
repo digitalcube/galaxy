@@ -28,19 +28,25 @@ export const Buttons = () => {
       <Button kind="primary" schema="amimoto" href={href}>
         {label}
       </Button>
-      <Button schema="shifter" href={href}>
+      <Button kind="primary" schema="shifter" href={href}>
         {label}
       </Button>
       <Button kind="success" schema="shifter" href={href}>
         {label}
       </Button>
-      <Button kind="outline" schema="galaxy" href={href}>
+      <Button kind="primary" outline schema="galaxy" href={href}>
         {label}
       </Button>
-      <Button kind="outline" schema="amimoto" href={href}>
+      <Button kind="primary" outline schema="amimoto" href={href}>
         {label}
       </Button>
-      <Button kind="outline" schema="shifter" href={href}>
+      <Button kind="primary" outline schema="shifter" href={href}>
+        {label}
+      </Button>
+      <Button kind="success" outline schema="shifter" href={href}>
+        {label}
+      </Button>
+      <Button kind="success" outline schema="amimoto" href={href}>
         {label}
       </Button>
       <Button kind="ghost" schema="galaxy" href={href}>

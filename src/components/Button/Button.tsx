@@ -9,7 +9,8 @@ export interface Button extends HTMLAttributes<HTMLDivElement> {
   active?: string;
   mode?: 'light' | 'dark';
   schema?: 'amimoto' | 'shifter' | 'galaxy';
-  kind?: 'primary' | 'outline' | 'ghost' | 'success';
+  kind?: 'primary' | 'ghost' | 'success';
+  outline?: boolean;
 }
 
 const backgroundColor = theme.variants('mode', 'schema', {
@@ -56,6 +57,7 @@ const successHoverBackgroundColor = theme.variants('mode', 'schema', {
     dark: colors.galaxy.successDark,
   },
 });
+
 const color = theme.variants('mode', 'schema', {
   galaxy: {
     light: colors.galaxy.white,
@@ -133,16 +135,16 @@ const ghostBackgroundColor = theme.variants('mode', 'schema', {
 
 const borderColor = theme.variants('mode', 'schema', {
   galaxy: {
-    light: colors.galaxy.transparent,
-    dark: colors.galaxy.transparent,
+    light: colors.galaxy.black,
+    dark: colors.galaxy.white,
   },
   shifter: {
-    light: colors.galaxy.transparent,
-    dark: colors.galaxy.transparent,
+    light: colors.shifter.purple.primary,
+    dark: colors.shifter.purple.primary,
   },
   amimoto: {
-    light: colors.galaxy.transparent,
-    dark: colors.galaxy.transparent,
+    light: colors.amimoto.blue.primary,
+    dark: colors.amimoto.blue.primary,
   },
 });
 
@@ -178,6 +180,7 @@ const focusBorderColor = theme.variants('mode', 'schema', {
 
 export const Button = styled.a<Button>`
   background-color: ${props => {
+    if (props.outline === true) return colors.galaxy.transparent;
     if (props.kind === 'primary') return backgroundColor;
     if (props.kind === 'success') return successBackgroundColor;
     if (props.kind === 'ghost') return ghostBackgroundColor;
@@ -187,17 +190,14 @@ export const Button = styled.a<Button>`
   border-width: ${components.button.borderWidth};
   border-style: solid;
   color: ${props => {
-    if (props.kind === 'primary') return color;
+    if (props.outline === true) return borderColor;
     if (props.kind === 'ghost') return ghostColor;
-    if (props.kind === 'outline') return ghostColor;
 
-    return color;
+    return colors.galaxy.white;
   }};
   border-color: ${props => {
-    if (props.kind === 'primary') return borderColor;
-    if (props.kind === 'outline') return outlineBorderColor;
-
-    return borderColor;
+    if (props.outline === true) return borderColor;
+    return colors.galaxy.transparent;
   }};
   border-radius: ${components.borderRadius};
   padding: ${components.button.padding};
