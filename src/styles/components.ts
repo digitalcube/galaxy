@@ -25,6 +25,11 @@ export const components = {
       medium: `all .5s cubic-bezier(.55,0,1,.5)`,
       slow: `all 1s cubic-bezier(.17,0,.8,.15)`,
     },
+    ease: {
+      fast: `all 150ms cubic-bezier(.85,.05,.15,.8)`,
+      medium: `all .5s cubic-bezier(.7,.15,.35,.9)`,
+      slow: `all 1s cubic-bezier(.7,.15,.35,.9)`,
+    },
   },
   section: {
     padding: {
