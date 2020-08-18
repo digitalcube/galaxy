@@ -143,7 +143,7 @@ const ghostHoverBackgroundColor = theme.variants('mode', 'schema', {
     dark: colors.shifter.purple.p500,
   },
   amimoto: {
-    light: colors.amimoto.blue.b200,
+    light: colors.amimoto.blue.b100,
     dark: colors.amimoto.blue.b400,
   },
 });
