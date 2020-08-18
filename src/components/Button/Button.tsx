@@ -29,19 +29,33 @@ const backgroundColor = theme.variants('mode', 'schema', {
 
 const successBackgroundColor = theme.variants('mode', 'schema', {
   galaxy: {
-    light: colors.galaxy.black,
-    dark: colors.galaxy.white,
+    light: colors.galaxy.success,
+    dark: colors.galaxy.success,
   },
   shifter: {
     light: colors.galaxy.success,
-    dark: colors.shifter.purple.primary,
+    dark: colors.galaxy.success,
   },
   amimoto: {
-    light: colors.amimoto.blue.primary,
-    dark: colors.amimoto.blue.primary,
+    light: colors.galaxy.success,
+    dark: colors.galaxy.success,
   },
 });
 
+const successHoverBackgroundColor = theme.variants('mode', 'schema', {
+  galaxy: {
+    light: colors.galaxy.successDark,
+    dark: colors.galaxy.successDark,
+  },
+  shifter: {
+    light: colors.galaxy.successDark,
+    dark: colors.galaxy.successDark,
+  },
+  amimoto: {
+    light: colors.galaxy.successDark,
+    dark: colors.galaxy.successDark,
+  },
+});
 const color = theme.variants('mode', 'schema', {
   galaxy: {
     light: colors.galaxy.white,
@@ -140,7 +154,11 @@ export const Button = styled.a<Button>`
   transition: ${components.transition.exit.medium};
 
   &:hover {
-    background-color: ${hoverBackgroundColor};
+    background-color: ${props => {
+      if (props.kind === 'primary') return hoverBackgroundColor;
+      if (props.kind === 'success') return successHoverBackgroundColor;
+      return hoverBackgroundColor;
+    }};
     color: ${hoverColor};
     transition: ${components.transition.entrance.fast};
   }
