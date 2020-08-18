@@ -56,12 +56,42 @@ const hoverBackgroundColor = theme.variants('mode', 'schema', {
   },
 });
 
+const borderColor = theme.variants('mode', 'schema', {
+  galaxy: {
+    light: colors.galaxy.transparent,
+    dark: colors.galaxy.transparent,
+  },
+  shifter: {
+    light: colors.galaxy.transparent,
+    dark: colors.galaxy.transparent,
+  },
+  amimoto: {
+    light: colors.galaxy.transparent,
+    dark: colors.galaxy.transparent,
+  },
+});
+
+const focusBorderColor = theme.variants('mode', 'schema', {
+  galaxy: {
+    light: colors.amimoto.blue.b200,
+    dark: colors.amimoto.blue.b200,
+  },
+  shifter: {
+    light: colors.shifter.magenta.primary,
+    dark: colors.shifter.magenta.primary,
+  },
+  amimoto: {
+    light: colors.amimoto.blue.b200,
+    dark: colors.amimoto.blue.b200,
+  },
+});
+
 export const Button = styled.a<Button>`
   background-color: ${backgroundColor};
   border-width: ${components.button.borderWidth};
   border-style: solid;
   color: ${color};
-  border-color: ${colors.shifter.purple.primary};
+  border-color: ${borderColor};
   border-radius: ${components.borderRadius};
   padding: ${components.button.padding};
   min-height: ${components.button.minHeight};
@@ -82,7 +112,7 @@ export const Button = styled.a<Button>`
 
   &:focus {
     border-width: ${components.button.borderWidth};
-    border-color: ${colors.shifter.magenta.primary};
+    border-color: ${focusBorderColor};
     transition: ${components.transition.entrance.fast};
   }
 
