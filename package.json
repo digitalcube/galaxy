@@ -44,8 +44,8 @@
     "singleQuote": true,
     "trailingComma": "es5"
   },
-  "name": "galaxy",
-  "author": "Digitalcube",
+  "name": "@digitalcube/galaxy",
+  "author": "DigitalCube",
   "module": "dist/galaxy.esm.js",
   "devDependencies": {
     "@storybook/addon-actions": "^6.0.12",
