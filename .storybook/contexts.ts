@@ -1,5 +1,4 @@
 import { ThemeProvider } from 'styled-components';
-import { shifter, amimoto, themes } from './../src/styles/themes';
 
 export const contexts = [
   {
@@ -36,7 +35,7 @@ export const contexts = [
     options: {
       deep: true,
       disable: false,
-      cancelable: false,
+      cancelable: true,
     },
   },
   {
@@ -65,7 +64,7 @@ export const contexts = [
     options: {
       deep: true,
       disable: false,
-      cancelable: false,
+      cancelable: true,
     },
   },
 ];
