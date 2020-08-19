@@ -163,7 +163,7 @@ const borderColor = theme.variants('mode', 'schema', {
   },
 });
 
-const focusBorderColor = theme.variants('mode', 'schema', {
+const focusOutlineColor = theme.variants('mode', 'schema', {
   galaxy: {
     light: colors.amimoto.blue.secondary,
     dark: colors.amimoto.blue.secondary,
@@ -190,15 +190,14 @@ export const Button = styled.a<Button>`
   border-width: ${components.button.borderWidth};
   border-style: solid;
   color: ${props => {
-    if (props.kind === 'success') return colors.galaxy.success;
     if (props.outline === true) return borderColor;
     if (props.kind === 'ghost') return ghostColor;
 
     return colors.galaxy.white;
   }};
   border-color: ${props => {
-    if (props.kind === 'success') return colors.galaxy.success;
     if (props.outline === true) return borderColor;
+    if (props.kind === true) return successBorderColor;
     return colors.galaxy.transparent;
   }};
   border-radius: ${components.borderRadius};
@@ -230,8 +229,9 @@ export const Button = styled.a<Button>`
   }
 
   &:focus {
-    border-width: ${components.button.borderWidth};
-    border-color: ${focusBorderColor};
+    outline-style: solid;
+    outline-width: ${components.button.borderWidth};
+    outline-color: ${focusOutlineColor};
     transition: ${components.transition.entrance.fast};
   }
 
