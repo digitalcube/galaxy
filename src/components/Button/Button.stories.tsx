@@ -13,48 +13,31 @@ export default {
   excludeStories: /.*Data$/,
 };
 
-export const buttonData = {
-  label: `Hello World`,
-  href: `#`,
-};
+const schemas = [`galaxy`, `shifter`, `amimoto`];
+const modes = [`light`, `dark`];
+const kinds = [`primary`, `ghost`, `success`];
+const outline = [true, false];
+
+const options = outline.map(outline => {
+  return kinds.map(kind => {
+    return modes.map(mode => {
+      return schemas.map(schema => {
+        return (
+          <Button
+            href="#"
+            outline={outline}
+            mode={mode}
+            schema={schema}
+            kind={kind}
+          >
+            {schema} / {mode} / {kind}
+          </Button>
+        );
+      });
+    });
+  });
+});
 
 export const Buttons = () => {
-  const { label, href } = buttonData;
-  return (
-    <>
-      <Button kind="primary" schema="galaxy" href={href}>
-        {label}
-      </Button>
-      <Button kind="primary" schema="amimoto" href={href}>
-        {label}
-      </Button>
-      <Button kind="primary" schema="shifter" href={href}>
-        {label}
-      </Button>
-      <Button kind="success" schema="shifter" href={href}>
-        {label}
-      </Button>
-      <Button kind="primary" outline schema="galaxy" href={href}>
-        {label}
-      </Button>
-      <Button kind="primary" outline schema="amimoto" href={href}>
-        {label}
-      </Button>
-      <Button kind="primary" outline schema="shifter" href={href}>
-        {label}
-      </Button>
-      <Button kind="success" outline schema="shifter" href={href}>
-        {label}
-      </Button>
-      <Button kind="ghost" schema="galaxy" href={href}>
-        {label}
-      </Button>
-      <Button kind="ghost" schema="amimoto" href={href}>
-        {label}
-      </Button>
-      <Button kind="ghost" schema="shifter" href={href}>
-        {label}
-      </Button>
-    </>
-  );
+  return options;
 };
