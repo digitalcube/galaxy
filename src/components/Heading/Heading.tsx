@@ -1,6 +1,5 @@
-import React, { ReactChild } from 'react';
+import { ReactChild } from 'react';
 import styled from 'styled-components';
-import { color } from '../../styles/themes';
 import { components } from '../../styles';
 
 type Heading = {
