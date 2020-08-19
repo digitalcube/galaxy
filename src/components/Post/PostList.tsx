@@ -7,7 +7,6 @@ type PostList = {
   title?: string;
   subtitle?: string;
   content?: Post[];
-  footer?: Post[];
   col?: number;
   align?: string;
 };
@@ -37,7 +36,6 @@ type PostListItems = {
   col?: number;
   theme?: string;
   align?: string;
-  footer?: Post[];
 };
 
 const PostListItems = ({ content = [], align }: PostListItems) => {
@@ -90,7 +88,6 @@ export const PostList = ({
   subtitle = ``,
   col = 4,
   align = ``,
-  footer = null,
 }: PostList) => {
   if (!content) return null;
   console.log(content);
@@ -98,12 +95,7 @@ export const PostList = ({
     <StyledPostList>
       <PostListTitle title={title} />
       <PostListSubtitle subtitle={subtitle} />
-      <PostListItems
-        align={align}
-        content={content}
-        footer={footer}
-        col={col}
-      />
+      <PostListItems align={align} content={content} col={col} />
     </StyledPostList>
   );
 };

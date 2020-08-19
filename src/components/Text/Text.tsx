@@ -1,10 +1,3 @@
-import React from 'react';
+import styled from 'styled-components';
 
-type Text = {
-  children?: React.ReactNode;
-};
-
-export const Text: React.FC<Text> = ({ children = null }) => {
-  if (!children) return null;
-  return <div dangerouslySetInnerHTML={{ __html: children }} />;
-};
+export const Text = styled.div``;

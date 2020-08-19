@@ -41,9 +41,9 @@ export const Post: React.FC<Post> = ({
       }}
     >
       <Content>
-        <Heading tag="p">{category}</Heading>
-        <Heading tag="h2">{title}</Heading>
-        <Heading tag="h3">{subtitle}</Heading>
+        <Heading as="p">{category}</Heading>
+        <Heading as="h2">{title}</Heading>
+        <Heading as="h3">{subtitle}</Heading>
         <Text>{excerpt}</Text>
         {author}
         <Date>{date}</Date>

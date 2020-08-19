@@ -1,10 +1,9 @@
-import { ReactChild } from 'react';
+import React from 'react';
 import styled from 'styled-components';
 import { components } from '../../styles';
 import { breakpoints } from '../../lib/utils';
 
 type Grid = {
-  children: ReactChild;
   gap?: string;
   xxs?: number | string;
   xs?: number | string;

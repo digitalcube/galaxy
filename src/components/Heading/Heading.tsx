@@ -1,10 +1,7 @@
-import { ReactChild } from 'react';
 import styled from 'styled-components';
 import { components } from '../../styles';
 
 type Heading = {
-  children: ReactChild;
-  tag?: keyof JSX.IntrinsicElements;
   size?: `xl` | `lg` | `md` | `sm` | `xs`;
 };
 

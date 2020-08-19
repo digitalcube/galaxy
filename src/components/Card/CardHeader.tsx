@@ -28,7 +28,7 @@ export const CardHeader: React.FC<CardHeader> = ({
   return (
     <StyledCardHeader>
       <Link href={link}>
-        <Heading tag="h2">{title}</Heading>
+        <Heading as="h2">{title}</Heading>
       </Link>
       {subtitle}
       {excerpt}
