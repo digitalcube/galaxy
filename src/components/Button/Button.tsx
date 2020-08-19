@@ -190,7 +190,8 @@ export const Button = styled.a<Button>`
   border-width: ${components.button.borderWidth};
   border-style: solid;
   color: ${props => {
-    if (props.kind === 'success') return colors.galaxy.success;
+    if (props.kind === 'success' && props.outline == true)
+      return colors.galaxy.success;
     if (props.outline === true) return borderColor;
     if (props.kind === 'ghost') return ghostColor;
 
@@ -222,6 +223,7 @@ export const Button = styled.a<Button>`
     }};
 
     color: ${props => {
+      if (props.kind === 'success') return colors.galaxy.white;
       if (props.kind === 'ghost') return ghostColor;
       return hoverColor;
     }};
