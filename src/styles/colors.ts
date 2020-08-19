@@ -19,8 +19,11 @@ export const colors = {
     transparent: `transparent`,
     shadow: `rgba(0, 0, 0, 0.25)`,
     success: `#36B27E`,
+    successDark: `#0A6450`,
     warning: `#FFA600`,
+    warningDark: `#D17303`,
     danger: `#FF0000`,
+    dangerDark: `#950000`,
   },
   shifter: {
     background: {
@@ -63,6 +66,7 @@ export const colors = {
     },
     blue: {
       primary: `#004CD3`,
+      secondary: `#00A8FF`,
       b600: `#091A37`,
       b500: `#001A48`,
       b400: `#012668`,

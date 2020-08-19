@@ -9,44 +9,196 @@ export interface Button extends HTMLAttributes<HTMLDivElement> {
   active?: string;
   mode?: 'light' | 'dark';
   schema?: 'amimoto' | 'shifter' | 'galaxy';
+  kind?: 'primary' | 'ghost' | 'success';
+  outline?: boolean;
 }
 
 const backgroundColor = theme.variants('mode', 'schema', {
   galaxy: {
-    light: colors.galaxy.gray.g700,
+    light: colors.galaxy.black,
     dark: colors.galaxy.white,
   },
   shifter: {
-    light: colors.galaxy.gray.g700,
-    dark: colors.shifter.purple.p100,
+    light: colors.shifter.purple.primary,
+    dark: colors.shifter.purple.primary,
   },
   amimoto: {
-    light: colors.galaxy.gray.g700,
-    dark: colors.amimoto.gray.g300,
+    light: colors.amimoto.blue.primary,
+    dark: colors.amimoto.blue.primary,
+  },
+});
+
+const successBackgroundColor = theme.variants('mode', 'schema', {
+  galaxy: {
+    light: colors.galaxy.success,
+    dark: colors.galaxy.success,
+  },
+  shifter: {
+    light: colors.galaxy.success,
+    dark: colors.galaxy.success,
+  },
+  amimoto: {
+    light: colors.galaxy.success,
+    dark: colors.galaxy.success,
+  },
+});
+
+const successHoverBackgroundColor = theme.variants('mode', 'schema', {
+  galaxy: {
+    light: colors.galaxy.successDark,
+    dark: colors.galaxy.successDark,
+  },
+  shifter: {
+    light: colors.galaxy.successDark,
+    dark: colors.galaxy.successDark,
+  },
+  amimoto: {
+    light: colors.galaxy.successDark,
+    dark: colors.galaxy.successDark,
   },
 });
 
 const color = theme.variants('mode', 'schema', {
   galaxy: {
-    light: colors.galaxy.gray.g700,
+    light: colors.galaxy.white,
+    dark: colors.galaxy.black,
+  },
+  shifter: {
+    light: colors.galaxy.white,
+    dark: colors.galaxy.white,
+  },
+  amimoto: {
+    light: colors.galaxy.white,
+    dark: colors.galaxy.white,
+  },
+});
+
+const ghostColor = theme.variants('mode', 'schema', {
+  galaxy: {
+    light: colors.galaxy.black,
     dark: colors.galaxy.white,
   },
   shifter: {
-    light: colors.galaxy.gray.g700,
-    dark: colors.shifter.purple.p100,
+    light: colors.shifter.purple.primary,
+    dark: colors.shifter.purple.p200,
   },
   amimoto: {
+    light: colors.amimoto.blue.primary,
+    dark: colors.amimoto.blue.b200,
+  },
+});
+
+const hoverColor = theme.variants('mode', 'schema', {
+  galaxy: {
+    light: colors.galaxy.white,
+    dark: colors.galaxy.black,
+  },
+  shifter: {
+    light: colors.galaxy.white,
+    dark: colors.galaxy.white,
+  },
+  amimoto: {
+    light: colors.galaxy.white,
+    dark: colors.galaxy.white,
+  },
+});
+
+const hoverBackgroundColor = theme.variants('mode', 'schema', {
+  galaxy: {
     light: colors.galaxy.gray.g700,
-    dark: colors.amimoto.gray.g300,
+    dark: colors.galaxy.gray.g200,
+  },
+  shifter: {
+    light: colors.shifter.purple.p500,
+    dark: colors.shifter.purple.p500,
+  },
+  amimoto: {
+    light: colors.amimoto.blue.b500,
+    dark: colors.amimoto.blue.b500,
+  },
+});
+
+const ghostBackgroundColor = theme.variants('mode', 'schema', {
+  galaxy: {
+    light: colors.galaxy.transparent,
+    dark: colors.galaxy.transparent,
+  },
+  shifter: {
+    light: colors.galaxy.transparent,
+    dark: colors.galaxy.transparent,
+  },
+  amimoto: {
+    light: colors.galaxy.transparent,
+    dark: colors.galaxy.transparent,
+  },
+});
+
+const ghostHoverBackgroundColor = theme.variants('mode', 'schema', {
+  galaxy: {
+    light: colors.galaxy.gray.g100,
+    dark: colors.galaxy.gray.g700,
+  },
+  shifter: {
+    light: colors.shifter.purple.p100,
+    dark: colors.shifter.purple.p500,
+  },
+  amimoto: {
+    light: colors.amimoto.blue.b100,
+    dark: colors.amimoto.blue.b400,
+  },
+});
+
+const borderColor = theme.variants('mode', 'schema', {
+  galaxy: {
+    light: colors.galaxy.black,
+    dark: colors.galaxy.white,
+  },
+  shifter: {
+    light: colors.shifter.purple.primary,
+    dark: colors.shifter.purple.primary,
+  },
+  amimoto: {
+    light: colors.amimoto.blue.primary,
+    dark: colors.amimoto.blue.primary,
+  },
+});
+
+const focusBorderColor = theme.variants('mode', 'schema', {
+  galaxy: {
+    light: colors.amimoto.blue.secondary,
+    dark: colors.amimoto.blue.secondary,
+  },
+  shifter: {
+    light: colors.shifter.magenta.primary,
+    dark: colors.shifter.magenta.primary,
+  },
+  amimoto: {
+    light: colors.amimoto.blue.secondary,
+    dark: colors.amimoto.blue.secondary,
   },
 });
 
 export const Button = styled.a<Button>`
-  background-color: ${backgroundColor};
+  background-color: ${props => {
+    if (props.outline === true) return colors.galaxy.transparent;
+    if (props.kind === 'primary') return backgroundColor;
+    if (props.kind === 'success') return successBackgroundColor;
+    if (props.kind === 'ghost') return ghostBackgroundColor;
+    if (props.kind === 'outline') return ghostBackgroundColor;
+    return backgroundColor;
+  }};
   border-width: ${components.button.borderWidth};
   border-style: solid;
-  color: ${color};
-  border-color: ${colors.shifter.purple.primary};
+  color: ${props => {
+    if (props.outline === true) return borderColor;
+    if (props.kind === 'ghost') return ghostColor;
+
+    return colors.galaxy.white;
+  }};
+  border-color: ${props => {
+    if (props.outline === true) return borderColor;
+    return colors.galaxy.transparent;
+  }};
   border-radius: ${components.borderRadius};
   padding: ${components.button.padding};
   min-height: ${components.button.minHeight};
@@ -60,14 +212,24 @@ export const Button = styled.a<Button>`
   transition: ${components.transition.exit.medium};
 
   &:hover {
-    background-color: ${colors.shifter.purple.p500};
-    color: ${colors.galaxy.white};
+    background-color: ${props => {
+      if (props.kind === 'primary') return hoverBackgroundColor;
+      if (props.kind === 'success') return successHoverBackgroundColor;
+      if (props.kind === 'ghost') return ghostHoverBackgroundColor;
+      return hoverBackgroundColor;
+    }};
+
+    color: ${props => {
+      if (props.kind === 'ghost') return ghostColor;
+      return hoverColor;
+    }};
+
     transition: ${components.transition.entrance.fast};
   }
 
   &:focus {
     border-width: ${components.button.borderWidth};
-    border-color: ${colors.shifter.magenta.primary};
+    border-color: ${focusBorderColor};
     transition: ${components.transition.entrance.fast};
   }
 
