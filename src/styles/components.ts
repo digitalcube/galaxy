@@ -77,4 +77,16 @@ export const components = {
     minWidth: `8rem`,
     minHeight: `3rem`,
   },
+  heading: {
+    color: colors.shifter.magenta.primary,
+    fontWeight: 500,
+    fontStyle: `normal`,
+    size: {
+      xl: `3rem`,
+      lg: `2rem`,
+      md: `1.5rem`,
+      sm: `1.25rem`,
+      xs: `1rem`,
+    },
+  },
 };

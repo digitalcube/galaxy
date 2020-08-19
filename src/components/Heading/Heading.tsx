@@ -1,36 +1,22 @@
-import React from 'react';
+import React, { ReactChild } from 'react';
 import styled from 'styled-components';
 import { color } from '../../styles/themes';
-import { type } from '../../styles';
+import { components } from '../../styles';
 
 type Heading = {
+  children: ReactChild;
   tag?: keyof JSX.IntrinsicElements;
-  children?: string;
-  color?: string;
-  size?: string;
+  size?: `xl` | `lg` | `md` | `sm` | `xs`;
 };
 
-export const headingFontSize = ({ size = `` }: Heading) => {
-  return type.heading.size[size];
+export const headingFontSize = ({ size = `md` }: Heading) => {
+  return components.heading.size[size];
 };
 
-const StyledHeading = styled.p`
-  margin-bottom: 0;
-  font-size: ${props => props.size};
-  color: ${color};
-  padding-bottom: 0;
+export const Heading = styled.p<Heading>`
+  margin: 0;
+  padding: 0;
+  font-size: ${headingFontSize};
+  font-weight: ${components.heading.fontWeight};
   position: relative;
 `;
-
-export const Heading: React.FC<Heading> = ({
-  children = ``,
-  tag = `h2`,
-  size = `md`,
-}) => {
-  if (!children) return null;
-  return (
-    <StyledHeading size={headingFontSize({ size })} as={tag}>
-      {children}
-    </StyledHeading>
-  );
-};
