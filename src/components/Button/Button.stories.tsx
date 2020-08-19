@@ -1,6 +1,6 @@
 import React from 'react';
 import { withKnobs } from '@storybook/addon-knobs';
-import { Button } from '../../index';
+import { Button, Grid, Col } from '../../index';
 import { type } from '../../styles';
 
 export default {
@@ -23,15 +23,17 @@ const options = outline.map(outline => {
     return modes.map(mode => {
       return schemas.map(schema => {
         return (
-          <Button
-            href="#"
-            outline={outline}
-            mode={mode}
-            schema={schema}
-            kind={kind}
-          >
-            {schema} / {mode} / {kind}
-          </Button>
+          <Col>
+            <Button
+              href="#"
+              outline={outline}
+              mode={mode}
+              schema={schema}
+              kind={kind}
+            >
+              {schema} / {mode} / {kind}
+            </Button>
+          </Col>
         );
       });
     });
@@ -39,5 +41,5 @@ const options = outline.map(outline => {
 });
 
 export const Buttons = () => {
-  return options;
+  return <Grid sm="4">{options}</Grid>;
 };

@@ -190,12 +190,15 @@ export const Button = styled.a<Button>`
   border-width: ${components.button.borderWidth};
   border-style: solid;
   color: ${props => {
+    if (props.kind === 'success' && props.outline == true)
+      return colors.galaxy.success;
     if (props.outline === true) return borderColor;
     if (props.kind === 'ghost') return ghostColor;
 
     return colors.galaxy.white;
   }};
   border-color: ${props => {
+    if (props.kind === 'success') return colors.galaxy.success;
     if (props.outline === true) return borderColor;
     return colors.galaxy.transparent;
   }};
@@ -220,8 +223,15 @@ export const Button = styled.a<Button>`
     }};
 
     color: ${props => {
+      if (props.kind === 'success') return colors.galaxy.white;
       if (props.kind === 'ghost') return ghostColor;
       return hoverColor;
+    }};
+
+    border-color: ${props => {
+      if (props.kind === 'success') return colors.galaxy.successDark;
+      if (props.outline === true) return hoverBackgroundColor;
+      return colors.galaxy.transparent;
     }};
 
     transition: ${components.transition.entrance.fast};
