@@ -23,15 +23,18 @@ const options = outline.map(outline => {
     return modes.map(mode => {
       return schemas.map(schema => {
         return (
-          <Button
-            href="#"
-            outline={outline}
-            mode={mode}
-            schema={schema}
-            kind={kind}
-          >
-            {schema} / {mode} / {kind}
-          </Button>
+          <>
+            <Button
+              href="#"
+              outline={outline}
+              mode={mode}
+              schema={schema}
+              kind={kind}
+            >
+              {schema} / {mode} / {kind}
+            </Button>
+            <br />
+          </>
         );
       });
     });
