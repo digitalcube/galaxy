@@ -1,16 +1,12 @@
-import React from 'react';
+import React, { ReactChild } from 'react';
 import styled from 'styled-components';
 import { type } from '../../styles';
 
 type Galaxy = {
-  children?: null;
+  children: ReactChild;
 };
 
-const StyledGalaxy = styled.div`
+export const Galaxy = styled.div<Galaxy>`
   font-family: ${type.fontFamily};
   background-color: white;
 `;
-
-export const Galaxy: React.FC<Galaxy> = ({ children = null }: Galaxy) => {
-  return <StyledGalaxy>{children}</StyledGalaxy>;
-};
