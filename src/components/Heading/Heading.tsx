@@ -14,5 +14,6 @@ export const Heading = styled.p<Heading>`
   padding: 0;
   font-size: ${headingFontSize};
   font-weight: ${components.heading.fontWeight};
+  line-height: 150%;
   position: relative;
 `;

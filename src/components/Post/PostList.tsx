@@ -42,7 +42,7 @@ const PostListItems = ({ content = [], align }: PostListItems) => {
   if (!content) return null;
   return (
     <StyledPostListItems>
-      <Grid md={2} lg={4}>
+      <Grid md={2} lg={3}>
         {content.map((node, i) => {
           if (!node.content) return null;
           const {
@@ -78,7 +78,7 @@ const PostListItems = ({ content = [], align }: PostListItems) => {
   );
 };
 
-const StyledPostList = styled.section`
+const PostListWrapper = styled.section`
   padding: ${components.section.padding.md} 0;
 `;
 
@@ -92,10 +92,10 @@ export const PostList = ({
   if (!content) return null;
   console.log(content);
   return (
-    <StyledPostList>
+    <PostListWrapper>
       <PostListTitle title={title} />
       <PostListSubtitle subtitle={subtitle} />
       <PostListItems align={align} content={content} col={col} />
-    </StyledPostList>
+    </PostListWrapper>
   );
 };

@@ -10,6 +10,7 @@ export type Card = {
   children: React.ReactNode;
   align?: string;
   content?: {
+    img?: React.ReactNode;
     header?: {
       title?: string;
       subtitle?: React.ReactNode;
@@ -17,10 +18,6 @@ export type Card = {
       link?: string;
     };
     footer?: React.ReactChild;
-    image?: {
-      img?: React.ReactNode;
-      link?: string;
-    };
   };
 };
 
@@ -40,6 +37,7 @@ const StyledCard = styled.article<Card>`
 export const Card: React.FC<Card> = ({
   children = null,
   content = {
+    img: null,
     header: {
       title: ``,
       subtitle: ``,
@@ -47,15 +45,12 @@ export const Card: React.FC<Card> = ({
       link: ``,
     },
     footer: ``,
-    image: {
-      img: null,
-    },
   },
 }: Card) => {
-  const { header, footer, image } = content;
+  const { header, footer, img } = content;
   return (
     <StyledCard>
-      <CardImage content={image} />
+      <CardImage>{img}</CardImage>
       <CardHeader content={header} />
       <CardBody>{children}</CardBody>
       <CardFooter>{footer}</CardFooter>

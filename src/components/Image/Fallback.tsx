@@ -1,7 +1,7 @@
 import React from 'react';
 import { Image } from './Image';
 
-export const Fallback: React.FC<> = () => (
+export const Fallback = (
   <Image>
     <img
       alt=""

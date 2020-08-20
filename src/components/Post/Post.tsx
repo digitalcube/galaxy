@@ -34,9 +34,7 @@ export const Post: React.FC<Post> = ({
     <Card
       align={align}
       content={{
-        image: {
-          img: img,
-        },
+        img: img,
         footer: footer,
       }}
     >

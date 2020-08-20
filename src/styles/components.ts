@@ -55,6 +55,7 @@ export const components = {
   },
   container: {
     maxWidth: {
+      fluid: `100%`,
       sm: `540px`,
       md: `720px`,
       lg: `960px`,

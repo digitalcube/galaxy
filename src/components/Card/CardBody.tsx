@@ -1,7 +1,6 @@
 import React from 'react';
 import styled from 'styled-components';
 import { components } from '../../styles';
-import { color } from '../../styles/themes';
 
 export type CardBody = {
   children: React.ReactNode;
@@ -9,7 +8,6 @@ export type CardBody = {
 
 const StyledCardBody = styled.div`
   padding: ${components.spacing.md} ${components.spacing.sm};
-  color: ${color};
 `;
 
 export const CardBody: React.FC<CardBody> = ({ children }: CardBody) => {
