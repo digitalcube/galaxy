@@ -29,7 +29,7 @@ export const Features = ({
     return {
       ...feature,
       footer: (
-        <Button schema="shifter" mode="dark" href={href}>
+        <Button kind="primary" href={href}>
           {title}
         </Button>
       ),
@@ -47,13 +47,8 @@ export const Features = ({
             <Heading as="h2" size="sm">
               {subtitle}
             </Heading>
-            <Button
-              schema="shifter"
-              mode="dark"
-              kind="primary"
-              href={buttonLink}
-            >
-              See all Features
+            <Button outline kind="primary" href={buttonLink}>
+              See all features
             </Button>
           </Content>
         </Container>

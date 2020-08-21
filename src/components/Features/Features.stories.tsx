@@ -1,4 +1,6 @@
 import React from 'react';
+import styled, { ThemeProvider } from 'styled-components';
+import theme from 'styled-theming';
 import { withKnobs } from '@storybook/addon-knobs';
 import { Features } from './Features';
 
@@ -27,29 +29,34 @@ const features = [
     content: {
       title: `Security Built-in`,
       excerpt: `Don’t spend another minute configuring security Plugins. We have you covered.`,
+      href: `#`,
     },
   },
   {
     content: {
       title: `Integrated CDN`,
       excerpt: `Deliver fast static content to site visitors anywhere in the world with low latency.`,
+      href: `#`,
     },
   },
   {
     content: {
       title: `Maintenance-free`,
       excerpt: `Never worry about security vulnerabilities from WordPress Core, themes, and outdated plugins.`,
+      href: `#`,
     },
   },
 ];
 
 export const Overview = () => {
   return (
+    // <ThemeProvider theme={{ mode: 'light', schema: 'shifter' }}>
     <Features
       title={title}
       subtitle={subtitle}
       buttonLink={buttonLink}
       items={features}
     />
+    // </ThemeProvider>
   );
 };

@@ -1,4 +1,5 @@
 import React from 'react';
+import { ThemeProvider } from 'styled-components';
 import { withKnobs } from '@storybook/addon-knobs';
 import { Button, Grid, Col } from '../../index';
 import { type } from '../../styles';
@@ -24,15 +25,11 @@ const options = outline.map(outline => {
       return schemas.map(schema => {
         return (
           <Col>
-            <Button
-              href="#"
-              outline={outline}
-              mode={mode}
-              schema={schema}
-              kind={kind}
-            >
-              {schema} / {mode} / {kind}
-            </Button>
+            <ThemeProvider theme={{ mode: mode, schema: schema }}>
+              <Button href="#" outline={outline} kind={kind}>
+                {schema} / {mode} / {kind}
+              </Button>
+            </ThemeProvider>
           </Col>
         );
       });
