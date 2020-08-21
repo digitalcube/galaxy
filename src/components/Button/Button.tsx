@@ -60,7 +60,7 @@ const backgroundColor = ({
     // Outline / Initial
     return colors.galaxy.transparent;
   }
-  // Solid / Hover
+  // Initial / Solid / Hover
   if (hover === true) {
     if (schema === `galaxy`)
       return theme.variants('mode', 'kind', {
@@ -97,7 +97,7 @@ const backgroundColor = ({
       });
   }
 
-  // Solid
+  // Initial / Solid
   if (schema === `galaxy`)
     return theme.variants('mode', 'kind', {
       primary: {
@@ -257,8 +257,8 @@ const color = ({
   if (schema === `galaxy`)
     return theme.variants('mode', 'kind', {
       primary: {
-        light: colors.galaxy.black,
-        dark: colors.galaxy.white,
+        light: colors.galaxy.white,
+        dark: colors.galaxy.black,
       },
       success: {
         light: colors.galaxy.white,
