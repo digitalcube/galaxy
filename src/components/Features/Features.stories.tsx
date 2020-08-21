@@ -50,13 +50,11 @@ const features = [
 
 export const Overview = () => {
   return (
-    // <ThemeProvider theme={{ mode: 'light', schema: 'shifter' }}>
     <Features
       title={title}
       subtitle={subtitle}
       buttonLink={buttonLink}
       items={features}
     />
-    // </ThemeProvider>
   );
 };
