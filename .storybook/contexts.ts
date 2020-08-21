@@ -13,7 +13,6 @@ export const contexts = [
             schema: `galaxy`,
           },
         },
-        default: true,
       },
       {
         name: 'Amimoto',
@@ -29,6 +28,7 @@ export const contexts = [
           theme: {
             schema: `shifter`,
           },
+          default: true,
         },
       },
     ],
@@ -50,7 +50,6 @@ export const contexts = [
             mode: `dark`,
           },
         },
-        default: true,
       },
       {
         name: 'Light',
@@ -58,6 +57,7 @@ export const contexts = [
           theme: {
             mode: `light`,
           },
+          default: true,
         },
       },
     ],

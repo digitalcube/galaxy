@@ -1,5 +1,6 @@
 import React from 'react';
 import styled from 'styled-components';
+import { colors } from '../../styles';
 
 type Shape = {
   children?: string;
@@ -35,11 +36,27 @@ const Triangle = () => (
         gradientTransform="rotate(39.6 779.152 -491.273)"
         gradientUnits="userSpaceOnUse"
       >
-        <stop offset="0" stopColor="#dc1b54" />
-        <stop offset="0.36" stopColor="#dc1b54" stopOpacity="0.6" />
-        <stop offset="0.67" stopColor="#dc1b54" stopOpacity="0.27" />
-        <stop offset="0.89" stopColor="#dc1b54" stopOpacity="0.08" />
-        <stop offset="1" stopColor="#dc1b54" stopOpacity="0" />
+        <stop offset="0" stopColor={colors.shifter.magenta.primary} />
+        <stop
+          offset="0.36"
+          stopColor={colors.shifter.magenta.primary}
+          stopOpacity="0.6"
+        />
+        <stop
+          offset="0.67"
+          stopColor={colors.shifter.magenta.primary}
+          stopOpacity="0.27"
+        />
+        <stop
+          offset="0.89"
+          stopColor={colors.shifter.magenta.primary}
+          stopOpacity="0.08"
+        />
+        <stop
+          offset="1"
+          stopColor={colors.shifter.magenta.primary}
+          stopOpacity="0"
+        />
       </linearGradient>
     </defs>
     <path fill="url(#triangle)" d="M17.18 0L0 20.47 36.73 16.41 17.18 0z" />
@@ -62,11 +79,27 @@ const Square = () => (
         gradientTransform="rotate(90 569.575 392.025)"
         gradientUnits="userSpaceOnUse"
       >
-        <stop offset="0" stopColor="#dc1b54" />
-        <stop offset="0.36" stopColor="#dc1b54" stopOpacity="0.6" />
-        <stop offset="0.67" stopColor="#dc1b54" stopOpacity="0.27" />
-        <stop offset="0.89" stopColor="#dc1b54" stopOpacity="0.08" />
-        <stop offset="1" stopColor="#dc1b54" stopOpacity="0" />
+        <stop offset="0" stopColor={colors.shifter.magenta.primary} />
+        <stop
+          offset="0.36"
+          stopColor={colors.shifter.magenta.primary}
+          stopOpacity="0.6"
+        />
+        <stop
+          offset="0.67"
+          stopColor={colors.shifter.magenta.primary}
+          stopOpacity="0.27"
+        />
+        <stop
+          offset="0.89"
+          stopColor={colors.shifter.magenta.primary}
+          stopOpacity="0.08"
+        />
+        <stop
+          offset="1"
+          stopColor={colors.shifter.magenta.primary}
+          stopOpacity="0"
+        />
       </linearGradient>
     </defs>
     <path
@@ -93,8 +126,12 @@ const SemiCircle = () => (
         gradientTransform="rotate(-45 849.955 418.347)"
         gradientUnits="userSpaceOnUse"
       >
-        <stop offset="0" stopColor="#dc1b53" stopOpacity="0" />
-        <stop offset="1" stopColor="#dc1b53" />
+        <stop
+          offset="0"
+          stopColor={colors.shifter.magenta.primary}
+          stopOpacity="0"
+        />
+        <stop offset="1" stopColor={colors.shifter.magenta.primary} />
       </linearGradient>
     </defs>
     <path
