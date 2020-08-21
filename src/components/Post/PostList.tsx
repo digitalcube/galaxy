@@ -7,8 +7,14 @@ type PostList = {
   title?: string;
   subtitle?: string;
   content?: Post[];
-  col?: number;
   align?: string;
+  xxs?: number | string;
+  xs?: number | string;
+  sm?: number | string;
+  md?: number | string;
+  lg?: number | string;
+  xl?: number | string;
+  xxl?: number | string;
 };
 
 type PostListTitle = {
@@ -33,16 +39,32 @@ const StyledPostListItems = styled.section``;
 
 type PostListItems = {
   content?: Post[];
-  col?: number;
   theme?: string;
   align?: string;
+  xxs?: number | string;
+  xs?: number | string;
+  sm?: number | string;
+  md?: number | string;
+  lg?: number | string;
+  xl?: number | string;
+  xxl?: number | string;
 };
 
-const PostListItems = ({ content = [], align }: PostListItems) => {
+const PostListItems = ({
+  content = [],
+  align,
+  xxs,
+  xs,
+  sm,
+  md,
+  lg,
+  xl,
+  xxl,
+}: PostListItems) => {
   if (!content) return null;
   return (
     <StyledPostListItems>
-      <Grid md={2} lg={3}>
+      <Grid sm={sm} md={md} lg={lg}>
         {content.map((node, i) => {
           if (!node.content) return null;
           const {
@@ -86,7 +108,13 @@ export const PostList = ({
   content,
   title = ``,
   subtitle = ``,
-  col = 4,
+  xxs,
+  xs,
+  sm,
+  md,
+  lg,
+  xl,
+  xxl,
   align = ``,
 }: PostList) => {
   if (!content) return null;
@@ -95,7 +123,17 @@ export const PostList = ({
     <PostListWrapper>
       <PostListTitle title={title} />
       <PostListSubtitle subtitle={subtitle} />
-      <PostListItems align={align} content={content} col={col} />
+      <PostListItems
+        xxs={xxs}
+        xs={xs}
+        sm={sm}
+        md={md}
+        lg={lg}
+        xl={xl}
+        xxl={xxl}
+        align={align}
+        content={content}
+      />
     </PostListWrapper>
   );
 };

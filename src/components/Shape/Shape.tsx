@@ -11,7 +11,6 @@ const StyledShape = styled.div`
   opacity: 0.35;
   position: absolute;
   width: 100%;
-  z-index: -1;
 
   > * {
     width: 40%;

@@ -1,17 +1,17 @@
-import { HTMLAttributes, ReactChild } from 'react';
+import { ReactNode } from 'react';
 import styled from 'styled-components';
 import theme from 'styled-theming';
 import { components, colors } from '../../styles';
 
-export interface Button extends HTMLAttributes<HTMLDivElement> {
-  children: ReactChild;
+type Button = {
+  children: ReactNode;
   href?: string;
   active?: string;
   mode?: 'light' | 'dark';
   schema?: 'amimoto' | 'shifter' | 'galaxy';
   kind?: 'primary' | 'ghost' | 'success';
   outline?: boolean;
-}
+};
 
 const backgroundColor = theme.variants('mode', 'schema', {
   galaxy: {

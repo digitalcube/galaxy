@@ -5,4 +5,7 @@ type Col = {
   children: ReactChild;
 };
 
-export const Col = styled.div<Col>``;
+export const Col = styled.div<Col>`
+  display: grid;
+  align-items: stretch;
+`;
