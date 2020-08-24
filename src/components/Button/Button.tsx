@@ -66,7 +66,7 @@ const backgroundColor = ({
       return theme.variants('mode', 'kind', {
         primary: {
           light: colors.galaxy.gray.g700,
-          dark: colors.galaxy.gray.g200,
+          dark: colors.galaxy.gray.g300,
         },
         success: {
           light: colors.galaxy.successDark,
