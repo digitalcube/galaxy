@@ -77,7 +77,7 @@ const backgroundColor = ({
       return theme.variants('mode', 'kind', {
         primary: {
           light: colors.shifter.purple.p500,
-          dark: colors.shifter.purple.primary,
+          dark: colors.shifter.purple.p500,
         },
         success: {
           light: colors.galaxy.successDark,
@@ -88,7 +88,7 @@ const backgroundColor = ({
       return theme.variants('mode', 'kind', {
         primary: {
           light: colors.amimoto.blue.b500,
-          dark: colors.amimoto.blue.primary,
+          dark: colors.amimoto.blue.b500,
         },
         success: {
           light: colors.galaxy.successDark,
