@@ -69,8 +69,8 @@ const backgroundColor = ({
           dark: colors.galaxy.white,
         },
         success: {
-          light: colors.galaxy.success,
-          dark: colors.galaxy.success,
+          light: colors.galaxy.successDark,
+          dark: colors.galaxy.successDark,
         },
       });
     if (schema === `shifter`)
@@ -80,8 +80,8 @@ const backgroundColor = ({
           dark: colors.shifter.purple.primary,
         },
         success: {
-          light: colors.galaxy.success,
-          dark: colors.galaxy.success,
+          light: colors.galaxy.successDark,
+          dark: colors.galaxy.successDark,
         },
       });
     if (schema === `amimoto`)
@@ -91,8 +91,8 @@ const backgroundColor = ({
           dark: colors.amimoto.blue.primary,
         },
         success: {
-          light: colors.galaxy.success,
-          dark: colors.galaxy.success,
+          light: colors.galaxy.successDark,
+          dark: colors.galaxy.successDark,
         },
       });
   }
