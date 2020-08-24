@@ -280,7 +280,7 @@ const color = ({
     return theme.variants('mode', 'kind', {
       primary: {
         light: colors.galaxy.white,
-        dark: colors.amimoto.blue.primary,
+        dark: colors.galaxy.white,
       },
       success: {
         light: colors.galaxy.white,
