@@ -148,7 +148,7 @@ const color = ({
         return theme.variants('mode', 'kind', {
           primary: {
             light: colors.galaxy.white,
-            dark: colors.galaxy.white,
+            dark: colors.galaxy.black,
           },
           success: {
             light: colors.galaxy.white,
