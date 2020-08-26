@@ -10,7 +10,7 @@ type Button = {
   hover?: boolean;
   mode?: 'light' | 'dark';
   schema?: 'amimoto' | 'shifter' | 'galaxy';
-  kind?: 'primary' | 'ghost' | 'success';
+  kind?: 'primary' | 'success';
   outline?: boolean;
 };
 
@@ -69,30 +69,30 @@ const backgroundColor = ({
           dark: colors.galaxy.gray.g500,
         },
         success: {
-          light: colors.galaxy.success,
-          dark: colors.galaxy.success,
+          light: colors.galaxy.successDark,
+          dark: colors.galaxy.successDark,
         },
       });
     if (schema === `shifter`)
       return theme.variants('mode', 'kind', {
         primary: {
           light: colors.shifter.purple.p500,
-          dark: colors.shifter.purple.primary,
+          dark: colors.shifter.purple.p500,
         },
         success: {
-          light: colors.galaxy.success,
-          dark: colors.galaxy.success,
+          light: colors.galaxy.successDark,
+          dark: colors.galaxy.successDark,
         },
       });
     if (schema === `amimoto`)
       return theme.variants('mode', 'kind', {
         primary: {
           light: colors.amimoto.blue.b500,
-          dark: colors.amimoto.blue.primary,
+          dark: colors.amimoto.blue.b500,
         },
         success: {
-          light: colors.galaxy.success,
-          dark: colors.galaxy.success,
+          light: colors.galaxy.successDark,
+          dark: colors.galaxy.successDark,
         },
       });
   }
@@ -280,7 +280,7 @@ const color = ({
     return theme.variants('mode', 'kind', {
       primary: {
         light: colors.galaxy.white,
-        dark: colors.amimoto.blue.primary,
+        dark: colors.galaxy.white,
       },
       success: {
         light: colors.galaxy.white,
@@ -387,8 +387,8 @@ const borderColor = ({
     if (schema === `shifter`)
       return theme.variants('mode', 'kind', {
         primary: {
-          light: colors.galaxy.white,
-          dark: colors.galaxy.white,
+          light: colors.shifter.purple.p500,
+          dark: colors.shifter.purple.p500,
         },
         success: {
           light: colors.galaxy.success,
@@ -398,8 +398,8 @@ const borderColor = ({
     if (schema === `amimoto`)
       return theme.variants('mode', 'kind', {
         primary: {
-          light: colors.galaxy.white,
-          dark: colors.galaxy.white,
+          light: colors.amimoto.blue.b500,
+          dark: colors.amimoto.blue.b500,
         },
         success: {
           light: colors.galaxy.success,
@@ -423,8 +423,8 @@ const borderColor = ({
   if (schema === `shifter`)
     return theme.variants('mode', 'kind', {
       primary: {
-        light: colors.galaxy.white,
-        dark: colors.galaxy.white,
+        light: colors.shifter.purple.primary,
+        dark: colors.shifter.purple.primary,
       },
       success: {
         light: colors.galaxy.success,
@@ -434,7 +434,7 @@ const borderColor = ({
   if (schema === `amimoto`)
     return theme.variants('mode', 'kind', {
       primary: {
-        light: colors.galaxy.white,
+        light: colors.amimoto.blue.primary,
         dark: colors.amimoto.blue.primary,
       },
       success: {
