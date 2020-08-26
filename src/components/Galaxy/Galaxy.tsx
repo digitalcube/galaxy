@@ -1,4 +1,4 @@
-import React, { ReactChild } from 'react';
+import { ReactChild } from 'react';
 import styled from 'styled-components';
 import { type } from '../../styles';
 
@@ -8,5 +8,5 @@ type Galaxy = {
 
 export const Galaxy = styled.div<Galaxy>`
   font-family: ${type.fontFamily};
-  background-color: black;
+  background-color: white;
 `;
