@@ -1,5 +1,4 @@
 import React from 'react';
-import styled from 'styled-components';
 import {
   Heading,
   Button,
@@ -37,21 +36,21 @@ export const Features = ({
   });
   return (
     <section>
+      <Container size="md" align="left">
+        <Content>
+          <Heading as="h2" size="lg">
+            {title}
+          </Heading>
+          <Heading as="h2" size="sm">
+            {subtitle}
+          </Heading>
+          <Button outline kind="primary" href={buttonLink}>
+            See all features
+          </Button>
+        </Content>
+      </Container>
       <Container>
         <Shape shape="square" />
-        <Container>
-          <Content>
-            <Heading as="h2" size="lg">
-              {title}
-            </Heading>
-            <Heading as="h2" size="sm">
-              {subtitle}
-            </Heading>
-            <Button outline kind="primary" href={buttonLink}>
-              See all features
-            </Button>
-          </Content>
-        </Container>
         <PostList md={2} lg={4} align="center" content={features} />
       </Container>
     </section>

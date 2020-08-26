@@ -2,7 +2,8 @@ import styled from 'styled-components';
 import { components } from '../../styles';
 
 type Container = {
-  size?: 'sm' | 'md' | 'lg' | 'xl' | 'xxl' | `fluid` | undefined;
+  size?: 'sm' | 'md' | 'lg' | 'xl' | 'xxl' | `fluid`;
+  align?: 'left' | 'right';
 };
 
 export const containerMaxWidth = ({ size = 'xl' }: Container) => {
@@ -11,6 +12,13 @@ export const containerMaxWidth = ({ size = 'xl' }: Container) => {
 
 export const Container = styled.div<Container>`
   max-width: ${containerMaxWidth};
-  margin: 0 auto;
   position: relative;
+  margin-left: ${props => {
+    if (props.align === `left`) return `0`;
+    return `auto`;
+  }};
+  margin-right: ${props => {
+    if (props.align === `right`) return `0`;
+    return `auto`;
+  }};
 `;
