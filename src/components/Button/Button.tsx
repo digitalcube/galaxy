@@ -376,8 +376,8 @@ const borderColor = ({
     if (schema === `galaxy`)
       return theme.variants('mode', 'kind', {
         primary: {
-          light: colors.galaxy.black,
-          dark: colors.galaxy.white,
+          light: colors.galaxy.gray.g700,
+          dark: colors.galaxy.gray.g300,
         },
         success: {
           light: colors.galaxy.success,
@@ -387,8 +387,8 @@ const borderColor = ({
     if (schema === `shifter`)
       return theme.variants('mode', 'kind', {
         primary: {
-          light: colors.galaxy.white,
-          dark: colors.galaxy.white,
+          light: colors.shifter.purple.p500,
+          dark: colors.shifter.purple.p500,
         },
         success: {
           light: colors.galaxy.success,
@@ -399,7 +399,7 @@ const borderColor = ({
       return theme.variants('mode', 'kind', {
         primary: {
           light: colors.amimoto.blue.b500,
-          dark: colors.amimoto.blue.primary,
+          dark: colors.amimoto.blue.b500,
         },
         success: {
           light: colors.galaxy.success,
@@ -423,8 +423,8 @@ const borderColor = ({
   if (schema === `shifter`)
     return theme.variants('mode', 'kind', {
       primary: {
-        light: colors.galaxy.white,
-        dark: colors.galaxy.white,
+        light: colors.shifter.purple.primary,
+        dark: colors.shifter.purple.primary,
       },
       success: {
         light: colors.galaxy.success,
