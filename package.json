@@ -82,7 +82,6 @@
   },
   "dependencies": {
     "@types/styled-theming": "^2.2.5",
-    "atomic-blocks": "https://github.com/studiopress/atomic-blocks.git",
     "babel-loader": "^8.1.0",
     "moment": "^2.27.0",
     "moment-duration-format": "^2.3.2",
