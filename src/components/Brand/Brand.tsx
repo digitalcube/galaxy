@@ -776,7 +776,11 @@ const LogoSvg = ({ asset, size }: { asset?: string; size?: string }) => {
 
 type Props = { asset?: string; className?: string; size?: string };
 
-export const Brand = ({ asset, className = ``, size = `45` }: Props) => (
+export const Brand = ({
+  asset = `dc-mark`,
+  className = ``,
+  size = `45`,
+}: Props) => (
   <span
     style={{ height: `${size}px`, width: `auto`, display: `inline-block` }}
     className={`logo--shifter logo-${asset} ${className || `logomark-color`}`}

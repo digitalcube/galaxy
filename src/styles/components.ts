@@ -78,6 +78,11 @@ export const components = {
     minWidth: `8rem`,
     minHeight: `3rem`,
   },
+  nav: {
+    link: {
+      padding: `1rem .5rem`,
+    },
+  },
   heading: {
     color: colors.shifter.magenta.primary,
     fontWeight: 500,
