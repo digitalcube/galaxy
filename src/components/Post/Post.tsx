@@ -12,6 +12,7 @@ export type Post = {
     author?: string;
     date?: string;
     img?: React.ReactNode;
+    href?: string;
   };
   footer?: React.ReactChild;
 };

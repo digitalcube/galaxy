@@ -23,6 +23,7 @@ export const Features = ({
   buttonLink,
 }: Features) => {
   const features = items.map(feature => {
+    if (!feature.content) return {};
     const { content } = feature;
     const { title, href } = content;
     return {
