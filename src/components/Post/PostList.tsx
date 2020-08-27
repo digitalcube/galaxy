@@ -118,7 +118,6 @@ export const PostList = ({
   align = ``,
 }: PostList) => {
   if (!content) return null;
-  console.log(content);
   return (
     <PostListWrapper>
       <PostListTitle title={title} />
