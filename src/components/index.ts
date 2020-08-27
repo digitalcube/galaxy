@@ -16,3 +16,4 @@ export * from './Image';
 export * from './Button';
 export * from './Link';
 export * from './Features';
+export * from './Galaxy';
