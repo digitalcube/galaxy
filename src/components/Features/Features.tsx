@@ -37,18 +37,20 @@ export const Features = ({
   });
   return (
     <section>
-      <Container size="md" align="left">
-        <Content>
-          <Heading as="h2" size="lg">
-            {title}
-          </Heading>
-          <Heading as="h2" size="sm">
-            {subtitle}
-          </Heading>
-          <Button outline kind="primary" href={buttonLink}>
-            See all features
-          </Button>
-        </Content>
+      <Container>
+        <Container size="md" align="left">
+          <Content>
+            <Heading as="h2" size="lg">
+              {title}
+            </Heading>
+            <Heading as="h2" size="sm">
+              {subtitle}
+            </Heading>
+            <Button outline kind="primary" href={buttonLink}>
+              See all features
+            </Button>
+          </Content>
+        </Container>
       </Container>
       <Container>
         <Shape shape="square" />
