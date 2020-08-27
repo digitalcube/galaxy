@@ -2,7 +2,6 @@ import React from 'react';
 import { ThemeProvider } from 'styled-components';
 import { withKnobs } from '@storybook/addon-knobs';
 import { Button, Grid, Col } from '../../index';
-import { type } from '../../styles';
 
 export default {
   component: Button,

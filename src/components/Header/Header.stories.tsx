@@ -13,15 +13,18 @@ export default {
   excludeStories: /.*Data$/,
 };
 
-export const navItems = [
+const navItems = [
   {
     label: `Features`,
+    href: `https://google.com/`,
   },
   {
     label: `Blog`,
+    href: `/blog`,
   },
   {
     label: `Solutions`,
+    href: `/solutions`,
   },
   {
     label: `Pricing`,
@@ -32,5 +35,5 @@ export const navItems = [
 ];
 
 export const Primary = () => {
-  return <Header navItems={navItems} logo={<Brand size={`35`} />} />;
+  return <Header navItems={navItems} logo={<Brand size={`45`} />} />;
 };

@@ -80,6 +80,7 @@ export const components = {
   },
   nav: {
     link: {
+      fontSize: `1.125rem`,
       padding: `1rem .5rem`,
     },
   },

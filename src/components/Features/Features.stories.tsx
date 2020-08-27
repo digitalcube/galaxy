@@ -1,6 +1,4 @@
 import React from 'react';
-import styled, { ThemeProvider } from 'styled-components';
-import theme from 'styled-theming';
 import { withKnobs } from '@storybook/addon-knobs';
 import { Features } from './Features';
 
