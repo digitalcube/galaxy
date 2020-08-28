@@ -93,10 +93,18 @@ export const components = {
       padding: `1rem .5rem`,
     },
   },
+  content: {
+    fontWeight: 400,
+    fontFamily: `sofia-pro, sans-serif`,
+    fontSize: `1.25rem`,
+    lineHeight: `2`,
+    color: `inherit`,
+  },
   heading: {
     color: colors.shifter.magenta.primary,
     fontWeight: 500,
     fontStyle: `normal`,
+    lineHeight: `1.6`,
     size: {
       xl: `3rem`,
       lg: `2rem`,
