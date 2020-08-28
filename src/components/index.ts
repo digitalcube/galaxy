@@ -12,6 +12,7 @@ export * from './Galaxy';
 export * from './GetStarted';
 export * from './Grid';
 export * from './Heading';
+export * from './Header';
 export * from './Image';
 export * from './Link';
 export * from './Post';

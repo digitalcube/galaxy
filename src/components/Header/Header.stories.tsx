@@ -1,7 +1,6 @@
 import React from 'react';
 import { withKnobs } from '@storybook/addon-knobs';
-import { Header } from './Header';
-import { Brand } from '../index';
+import { Header, Brand } from '../index';
 
 export default {
   component: Header,
