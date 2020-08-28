@@ -7,7 +7,7 @@ import { CardBody } from './CardBody';
 import { CardFooter } from './CardFooter';
 
 export type Card = {
-  children: React.ReactNode;
+  children?: React.ReactNode;
   align?: string;
   content?: {
     img?: React.ReactNode;
@@ -36,7 +36,7 @@ const StyledCard = styled.article<Card>`
 `;
 
 export const Card: React.FC<Card> = ({
-  children,
+  children = null,
   content = {
     img: null,
     header: {
