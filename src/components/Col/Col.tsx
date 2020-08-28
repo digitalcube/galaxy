@@ -1,8 +1,8 @@
-import { ReactChild } from 'react';
+import { ReactNode } from 'react';
 import styled from 'styled-components';
 
 type Col = {
-  children: ReactChild;
+  children: ReactNode;
 };
 
 export const Col = styled.div<Col>`

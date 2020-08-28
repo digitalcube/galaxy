@@ -26,6 +26,6 @@ const StyledHeading = styled(Heading)<Heading>`
   padding: 0;
   font-size: ${headingFontSize};
   font-weight: ${components.heading.fontWeight};
-  line-height: 150%;
+  line-height: 1.5;
   position: relative;
 `;

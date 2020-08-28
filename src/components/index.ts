@@ -1,5 +1,6 @@
 export * from './Animation';
 export * from './Badge';
+export * from './Benefits';
 export * from './Brand';
 export * from './Browser';
 export * from './Button';
@@ -20,4 +21,5 @@ export * from './Link';
 export * from './Post';
 export * from './Screenshot';
 export * from './Shape';
+export * from './Spacer';
 export * from './Text';

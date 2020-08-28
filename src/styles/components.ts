@@ -31,6 +31,15 @@ export const components = {
       slow: `all 1s cubic-bezier(.7,.15,.35,.9)`,
     },
   },
+  spacer: {
+    size: {
+      xl: `5rem`,
+      lg: `4rem`,
+      md: `3rem`,
+      sm: `2rem`,
+      xs: `1rem`,
+    },
+  },
   section: {
     padding: {
       xl: `5rem`,

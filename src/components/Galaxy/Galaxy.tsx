@@ -9,4 +9,5 @@ type Galaxy = {
 export const Galaxy = styled.div<Galaxy>`
   font-family: ${type.fontFamily};
   background-color: white;
+  line-height: ${type.lineHeight};
 `;
