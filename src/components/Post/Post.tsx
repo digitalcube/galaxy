@@ -20,15 +20,7 @@ export type Post = {
 export const Post: React.FC<Post> = ({
   align = ``,
   footer = ``,
-  content = {
-    title: ``,
-    subtitle: ``,
-    excerpt: ``,
-    category: ``,
-    author: ``,
-    date: ``,
-    img: null,
-  },
+  content = {},
 }: Post) => {
   const { title, subtitle, excerpt, category, author, date, img } = content;
   return (
@@ -41,8 +33,12 @@ export const Post: React.FC<Post> = ({
     >
       <Content>
         <Heading as="p">{category}</Heading>
-        <Heading as="h2">{title}</Heading>
-        <Heading as="h3">{subtitle}</Heading>
+        <Heading as="h2" size="md">
+          {title}
+        </Heading>
+        <Heading as="h3" size="xs">
+          {subtitle}
+        </Heading>
         <Text>{excerpt}</Text>
         {author}
         <Date>{date}</Date>

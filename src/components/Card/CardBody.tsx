@@ -1,9 +1,9 @@
-import React from 'react';
+import React, { ReactNode } from 'react';
 import styled from 'styled-components';
 import { components } from '../../styles';
 
 export type CardBody = {
-  children: React.ReactNode;
+  children: ReactNode;
 };
 
 const StyledCardBody = styled.div`

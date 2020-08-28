@@ -9,5 +9,6 @@ export const Image = styled.div<Image>`
   img {
     width: 100%;
     height: auto;
+    vertical-align: middle;
   }
 `;

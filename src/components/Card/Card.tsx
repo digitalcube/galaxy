@@ -1,6 +1,6 @@
 import React from 'react';
 import styled from 'styled-components';
-import { components } from '../../styles';
+import { components, colors } from '../../styles';
 import { CardImage } from './CardImage';
 import { CardHeader } from './CardHeader';
 import { CardBody } from './CardBody';
@@ -31,11 +31,12 @@ const StyledCard = styled.article<Card>`
   border-radius: ${components.borderRadius};
   border-width: ${components.borderWidth};
   border-style: ${components.borderStyle};
+  background-color: ${colors.galaxy.white};
   width: 100%;
 `;
 
 export const Card: React.FC<Card> = ({
-  children = null,
+  children,
   content = {
     img: null,
     header: {

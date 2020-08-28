@@ -1,7 +1,10 @@
+import React, { ReactChild } from 'react';
 import styled from 'styled-components';
 import { components } from '../../styles';
 
 type Heading = {
+  children?: ReactChild;
+  as?: string;
   size?: `xl` | `lg` | `md` | `sm` | `xs`;
 };
 
@@ -9,7 +12,7 @@ export const headingFontSize = ({ size = `md` }: Heading) => {
   return components.heading.size[size];
 };
 
-export const Heading = styled.p<Heading>`
+const StyledHeading = styled.p<Heading>`
   margin: 0;
   padding: 0;
   font-size: ${headingFontSize};
@@ -17,3 +20,12 @@ export const Heading = styled.p<Heading>`
   line-height: 150%;
   position: relative;
 `;
+
+export const Heading: React.FC<Heading> = ({ size, children, as }: Heading) => {
+  if (!children) return null;
+  return (
+    <StyledHeading as={as} size={size}>
+      {children}
+    </StyledHeading>
+  );
+};
