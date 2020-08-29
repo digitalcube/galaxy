@@ -1,11 +1,11 @@
-import React, { ReactChild } from 'react';
+import React, { ReactNode } from 'react';
 import styled from 'styled-components';
 import { components } from '../../styles';
 
 type Heading = {
-  children?: ReactChild;
+  children?: ReactNode;
   as?: `h1` | `h2` | `h3` | `h4` | `h5` | `h6` | `p`;
-  size?: string;
+  size?: `xl` | `lg` | `md` | `sm` | `xs`;
 };
 
 export const headingFontSize = ({ size = `md` }: Heading) => {

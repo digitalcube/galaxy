@@ -1,9 +1,9 @@
-import React from 'react';
+import React, { ReactNode } from 'react';
 import styled from 'styled-components';
 import { colors } from '../../styles';
 
 type Shape = {
-  children?: string;
+  children?: ReactNode;
   shape?: string;
 };
 
