@@ -32,10 +32,12 @@ const nodeList = ({ nodes = [] }: Benefits) => {
     const { title, excerpt } = content;
     return (
       <Col>
-        <Heading as="h3" size="md">
-          {title}
-        </Heading>
-        <Text>{excerpt}</Text>
+        <Content>
+          <Heading as="h3" size="md">
+            {title}
+          </Heading>
+          <Text>{excerpt}</Text>
+        </Content>
       </Col>
     );
   });

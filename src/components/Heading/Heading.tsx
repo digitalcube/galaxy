@@ -1,4 +1,4 @@
-import React, { ReactChild, ReactNode } from 'react';
+import React, { ReactChild } from 'react';
 import styled from 'styled-components';
 import { components } from '../../styles';
 

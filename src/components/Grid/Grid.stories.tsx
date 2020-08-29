@@ -1,6 +1,6 @@
 import React from 'react';
 import { withKnobs } from '@storybook/addon-knobs';
-import { Grid } from './Grid';
+import { Grid, Col } from '../index';
 
 export default {
   component: Grid,
@@ -26,5 +26,29 @@ export const Default = () => (
     <div>Item</div>
     <div>Item</div>
     <div>Item</div>
+  </Grid>
+);
+
+export const withColumns = () => (
+  <Grid xl="4" lg="3" md="2">
+    <Col>Item</Col>
+    <Col>Item</Col>
+    <Col>Item</Col>
+    <Col>Item</Col>
+    <Col>Item</Col>
+    <Col>Item</Col>
+    <Col>Item</Col>
+    <Col>Item</Col>
+    <Col>Item</Col>
+    <Col>Item</Col>
+    <Col>Item</Col>
+    <Col>Item</Col>
+  </Grid>
+);
+
+export const columnSizing = () => (
+  <Grid xl="4" lg="3" md="2">
+    <Col>Item</Col>
+    <Col width={2}>Item</Col>
   </Grid>
 );

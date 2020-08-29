@@ -113,4 +113,7 @@ export const components = {
       xs: `1rem`,
     },
   },
+  text: {
+    fontSize: `.875rem`,
+  },
 };
