@@ -1,6 +1,6 @@
 import React from 'react';
 import { withKnobs } from '@storybook/addon-knobs';
-import { Benefits, Image } from '../index';
+import { Benefits, Image, Animation } from '../index';
 
 export default {
   component: Benefits,
@@ -51,6 +51,11 @@ const benefits = [
 
 export const Overview = () => {
   return (
-    <Benefits title={title} subtitle={subtitle} nodes={benefits} img={img} />
+    <Benefits
+      title={title}
+      subtitle={subtitle}
+      nodes={benefits}
+      img={<Animation />}
+    />
   );
 };

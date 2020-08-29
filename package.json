@@ -21,7 +21,7 @@
     "test:story": "NODE_ENV=test tsdx test --passWithNoTests tests/storyshots",
     "lint": "tsdx lint",
     "prepare": "tsdx build",
-    "storybook": "start-storybook -p 6006",
+    "storybook": "start-storybook -s ./public -p 6006",
     "chromatic": "chromatic --project-token=fvg2qj7oue",
     "build-storybook": "build-storybook"
   },

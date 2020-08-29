@@ -1,4 +1,4 @@
-export const dashboardAnimationData = {
+export const dashboard = {
   v: '5.5.10',
   fr: 29.9700012207031,
   ip: 0,

@@ -1,14 +1,5 @@
 import React, { ReactNode } from 'react';
-import {
-  Heading,
-  Container,
-  Grid,
-  Col,
-  Shape,
-  Content,
-  Spacer,
-  Text,
-} from '../index';
+import { Heading, Container, Grid, Col, Content, Spacer, Text } from '../index';
 
 type Benefits = {
   title?: string;
@@ -62,7 +53,6 @@ export const Benefits = ({ title, subtitle, img, nodes = [] }: Benefits) => {
         </Container>
       </Container>
       <Container>
-        <Shape shape="square" />
         <Grid md="2">
           <Grid md="2">{nodeList({ nodes: nodes })}</Grid>
           {img}

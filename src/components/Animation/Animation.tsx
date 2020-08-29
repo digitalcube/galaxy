@@ -1,17 +1,22 @@
 import React from 'react';
 import Lottie from 'react-lottie';
-import { dashboardAnimationData } from './datasets/dashboard';
+import { singleClick, dashboard } from './animations';
 
-type AnimationComponentProps = {
-  animation?: any;
+type Animation = {
+  animation?: `singleClick` | `dashbaord`;
 };
 
-export const Animation: React.FC<AnimationComponentProps> = props => (
+export const animationData = ({ animation }: Animation) => {
+  if (animation == `singleClick`) return singleClick;
+  return dashboard;
+};
+
+export const Animation: React.FC<Animation> = props => (
   <Lottie
     options={{
       loop: false,
       autoplay: true,
-      animationData: props.animation || dashboardAnimationData,
+      animationData: props.animation || singleClick,
       rendererSettings: {
         preserveAspectRatio: `xMidYMid slice`,
       },
