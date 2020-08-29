@@ -5,14 +5,18 @@ import { components } from '../../styles';
 type Heading = {
   children?: ReactChild;
   as?: `h1` | `h2` | `h3` | `h4` | `h5` | `h6` | `p`;
-  size?: `xl` | `lg` | `md` | `sm` | `xs`;
+  size?: string;
 };
 
 export const headingFontSize = ({ size = `md` }: Heading) => {
   return components.heading.size[size];
 };
 
-export const Heading: React.FC<Heading> = ({ size, children, as }: Heading) => {
+export const Heading: React.FC<Heading> = ({
+  size = `md`,
+  children,
+  as = `h1`,
+}: Heading) => {
   if (!children) return null;
   return (
     <StyledHeading as={as} size={size}>

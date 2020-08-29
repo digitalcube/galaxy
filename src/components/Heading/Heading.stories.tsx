@@ -19,11 +19,7 @@ export const headingData = {
 
 const headingSizes = Object.keys(components.heading.size).map(size => {
   const { title } = headingData;
-  return (
-    <Heading size={size}>
-      {size}: {title}
-    </Heading>
-  );
+  return <Heading size={size}>{title}</Heading>;
 });
 
 export const Sizes = () => {

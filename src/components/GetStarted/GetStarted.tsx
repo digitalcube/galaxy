@@ -24,16 +24,17 @@ export const GetStarted = ({
 }: GetStarted) => {
   return (
     <section>
-      <Container size="md">
-        <Shape shape="triangle" />
-        <Content align="center">
-          <Heading size="lg">{title}</Heading>
-          <Heading size="md">{subtitle}</Heading>
-          <Button href={href} kind="primary">
-            {buttonLabel}
-          </Button>
-        </Content>
-      </Container>
+      <Shape shape="triangle">
+        <Container size="md">
+          <Content align="center">
+            <Heading size="lg">{title}</Heading>
+            <Heading size="md">{subtitle}</Heading>
+            <Button href={href} kind="primary">
+              {buttonLabel}
+            </Button>
+          </Content>
+        </Container>
+      </Shape>
     </section>
   );
 };
