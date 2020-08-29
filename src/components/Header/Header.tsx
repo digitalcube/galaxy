@@ -141,9 +141,7 @@ export const Header: React.FC<Header> = ({
     <StyledHeader>
       <Container>
         <StyledNav>
-          <a href="#" className="logo">
-            {logo}
-          </a>
+          <a href="/">{logo}</a>
           <ul className="main-nav" id="js-menu">
             {items}
           </ul>
