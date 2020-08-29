@@ -1,6 +1,7 @@
 import React from 'react';
 import Lottie from 'react-lottie';
 import { singleClick, dashboard } from './animations';
+import { Author } from 'components/Author';
 
 type Animation = {
   animation?: `singleClick` | `dashbaord`;
@@ -13,6 +14,8 @@ export const animationData = ({ animation }: Animation) => {
 
 export const Animation: React.FC<Animation> = props => (
   <Lottie
+    height={`auto`}
+    width={`auto`}
     options={{
       loop: false,
       autoplay: true,

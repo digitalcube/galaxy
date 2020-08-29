@@ -3,7 +3,7 @@ import { Heading, Container, Grid, Col, Content, Spacer, Text } from '../index';
 
 type Benefits = {
   title?: string;
-  subtitle?: string;
+  subtitle?: ReactNode;
   img?: ReactNode;
   nodes?: Node[];
 };
