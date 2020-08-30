@@ -1,7 +1,6 @@
 import React from 'react';
 import Lottie from 'react-lottie';
 import { singleClick, dashboard } from './animations';
-import { Author } from 'components/Author';
 
 type Animation = {
   animation?: `singleClick` | `dashbaord`;
