@@ -38,26 +38,28 @@ const nodeList = ({ nodes = [] }: Benefits) => {
 export const Benefits = ({ title, subtitle, img, nodes = [] }: Benefits) => {
   return (
     <section>
-      <Container>
-        <Container size="md" align="left">
-          <Spacer size="lg">
-            <Content>
-              <Heading as="h2" size="lg">
-                {title}
-              </Heading>
-              <Heading as="h2" size="sm">
-                {subtitle}
-              </Heading>
-            </Content>
-          </Spacer>
+      <Spacer size="md">
+        <Container>
+          <Container size="md" align="left">
+            <Spacer size="lg">
+              <Content>
+                <Heading as="h2" size="lg">
+                  {title}
+                </Heading>
+                <Heading as="h2" size="sm">
+                  {subtitle}
+                </Heading>
+              </Content>
+            </Spacer>
+          </Container>
         </Container>
-      </Container>
-      <Container>
-        <Grid md="2">
-          <Grid md="2">{nodeList({ nodes: nodes })}</Grid>
-          {img}
-        </Grid>
-      </Container>
+        <Container>
+          <Grid md="2">
+            <Grid md="2">{nodeList({ nodes: nodes })}</Grid>
+            {img}
+          </Grid>
+        </Container>
+      </Spacer>
     </section>
   );
 };

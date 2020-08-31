@@ -2,9 +2,9 @@ import React from 'react';
 import {
   Heading,
   Button,
+  Spacer,
   PostList,
   Container,
-  Shape,
   Post,
   Content,
 } from '../index';
@@ -37,25 +37,26 @@ export const Features = ({
   });
   return (
     <section>
-      <Container>
-        <Container size="md" align="left">
-          <Content>
-            <Heading as="h2" size="lg">
-              {title}
-            </Heading>
-            <Heading as="h2" size="sm">
-              {subtitle}
-            </Heading>
-            <Button outline kind="primary" href={buttonLink}>
-              See all features
-            </Button>
-          </Content>
+      <Spacer size="md">
+        <Container>
+          <Container size="md" align="left">
+            <Content>
+              <Heading as="h2" size="lg">
+                {title}
+              </Heading>
+              <Heading as="h2" size="sm">
+                {subtitle}
+              </Heading>
+              <Button outline kind="primary" href={buttonLink}>
+                See all features
+              </Button>
+            </Content>
+          </Container>
         </Container>
-      </Container>
-      <Container>
-        <Shape shape="square" />
-        <PostList md={2} lg={4} align="center" content={features} />
-      </Container>
+        <Container>
+          <PostList md={2} lg={4} align="center" content={features} />
+        </Container>
+      </Spacer>
     </section>
   );
 };

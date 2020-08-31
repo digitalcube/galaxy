@@ -4,7 +4,7 @@ import { Hero, Image, Animation, Spacer } from '../index';
 
 export default {
   component: Hero,
-  title: `Components/Hero`,
+  title: `Containers/Hero`,
   decorators: [
     withKnobs,
     (story: any) => <div style={{ padding: `3rem` }}>{story()}</div>,

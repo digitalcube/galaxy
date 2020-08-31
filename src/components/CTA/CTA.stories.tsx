@@ -4,7 +4,7 @@ import { CTA } from './CTA';
 
 export default {
   component: CTA,
-  title: `Components/CTA`,
+  title: `Containers/CTA`,
   decorators: [
     withKnobs,
     (story: any) => <div style={{ padding: `3rem` }}>{story()}</div>,

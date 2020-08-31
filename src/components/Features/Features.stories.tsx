@@ -4,7 +4,7 @@ import { Features } from './Features';
 
 export default {
   component: Features,
-  title: `Components/Features`,
+  title: `Containers/Features`,
   decorators: [
     withKnobs,
     (story: any) => <div style={{ padding: `3rem` }}>{story()}</div>,

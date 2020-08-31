@@ -4,7 +4,7 @@ import { Benefits, Image, Animation } from '../index';
 
 export default {
   component: Benefits,
-  title: `Components/Benefits`,
+  title: `Containers/Benefits`,
   decorators: [
     withKnobs,
     (story: any) => <div style={{ padding: `3rem` }}>{story()}</div>,
