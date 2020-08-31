@@ -1,6 +1,6 @@
 import React from 'react';
 import { withKnobs } from '@storybook/addon-knobs';
-import { Hero, Image, Animation, Spacer } from '../index';
+import { Hero, Image, Animation } from '../index';
 
 export default {
   component: Hero,

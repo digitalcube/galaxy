@@ -13,7 +13,7 @@ export default {
 };
 
 export const Default = () => (
-  <Grid xl="4" lg="3" md="2">
+  <Grid>
     <div>Item</div>
     <div>Item</div>
     <div>Item</div>
@@ -29,7 +29,7 @@ export const Default = () => (
   </Grid>
 );
 
-export const withColumns = () => (
+export const ResponsiveColumns = () => (
   <Grid xl="4" lg="3" md="2">
     <Col>Item</Col>
     <Col>Item</Col>
@@ -47,7 +47,7 @@ export const withColumns = () => (
 );
 
 export const columnSizing = () => (
-  <Grid xl="4" lg="3" md="2">
+  <Grid sm="3">
     <Col>Item</Col>
     <Col width={2}>Item</Col>
   </Grid>

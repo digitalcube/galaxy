@@ -1,7 +1,7 @@
 import React, { ReactNode } from 'react';
 import { Grid } from '../index';
 
-type NodeList = {
+export type NodeList = {
   nodes?: Node[];
   xxs?: number | string;
   xs?: number | string;
@@ -12,7 +12,7 @@ type NodeList = {
   xxl?: number | string;
 };
 
-type Node = {
+export type Node = {
   node: Object;
 };
 
