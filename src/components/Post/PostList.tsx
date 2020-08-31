@@ -103,7 +103,7 @@ const PostListItems = ({
 };
 
 const PostListHeader = ({ title, subtitle }: PostList) => {
-  if (!title || !subtitle) return null;
+  if (!title) return null;
   return (
     <>
       <Content>

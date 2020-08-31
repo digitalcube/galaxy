@@ -52,7 +52,11 @@ export const postListData = [
 
 export const Default = () => <PostList content={postListData} sm={3} />;
 
-export const WithTitles = () => (
+export const WithTitle = () => (
+  <PostList title="Post List Title" content={postListData} sm={3} />
+);
+
+export const WithTitleAndSubTitle = () => (
   <PostList
     title="Post List Title"
     subtitle="In elit ad labore deserunt fugiat ullamco commodo aute non."
