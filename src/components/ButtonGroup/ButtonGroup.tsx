@@ -13,9 +13,9 @@ type ButtonGroup = {
 };
 
 export const ButtonGroup: React.FC<ButtonGroup> = ({
-  buttons,
+  buttons = [],
   xxs,
-  xs,
+  xs = `auto`,
   sm,
   md,
   lg,

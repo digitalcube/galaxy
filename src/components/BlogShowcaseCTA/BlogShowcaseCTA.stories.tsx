@@ -39,6 +39,6 @@ const nodes = [
   },
 ];
 
-export const WithImage = () => {
+export const Default = () => {
   return <BlogShowcaseCTA nodes={nodes} />;
 };

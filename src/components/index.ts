@@ -27,3 +27,4 @@ export * from './Shape';
 export * from './Spacer';
 export * from './Text';
 export * from './BlogShowcaseCTA';
+export * from './SolutionsCTA';
