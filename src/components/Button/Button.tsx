@@ -3,7 +3,7 @@ import styled from 'styled-components';
 import theme from 'styled-theming';
 import { components, colors } from '../../styles';
 
-type Button = {
+export type Button = {
   children?: ReactNode;
   href?: string;
   active?: boolean;
