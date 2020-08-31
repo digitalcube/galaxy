@@ -50,4 +50,13 @@ export const postListData = [
   },
 ];
 
-export const Default = () => <PostList content={postListData} col={4} />;
+export const Default = () => <PostList content={postListData} sm={3} />;
+
+export const WithTitles = () => (
+  <PostList
+    title="Post List Title"
+    subtitle="In elit ad labore deserunt fugiat ullamco commodo aute non."
+    content={postListData}
+    sm={3}
+  />
+);

@@ -12,11 +12,11 @@ export const spacerSize = ({ size = `md` }: Spacer) => {
 };
 
 export const Spacer = styled.div<Spacer>`
-  margin-top: ${props => {
+  padding-top: ${props => {
     const { size } = props;
     return spacerSize({ size: size });
   }};
-  margin-bottom: ${props => {
+  padding-bottom: ${props => {
     const { size } = props;
     return spacerSize({ size: size });
   }};

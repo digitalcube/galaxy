@@ -1,6 +1,5 @@
 import React from 'react';
-import styled from 'styled-components';
-import { Grid, Col, Heading, Post, Spacer } from '../index';
+import { Grid, Col, Heading, Post, Spacer, Content } from '../index';
 
 type PostList = {
   title?: string;
@@ -22,7 +21,11 @@ type PostListTitle = {
 
 const PostListTitle = ({ title }: PostListTitle) => {
   if (!title) return null;
-  return <Heading>{title}</Heading>;
+  return (
+    <Heading as="h4" size="md">
+      {title}
+    </Heading>
+  );
 };
 
 type PostListSubtitle = {
@@ -31,10 +34,12 @@ type PostListSubtitle = {
 
 const PostListSubtitle = ({ subtitle }: PostListSubtitle) => {
   if (!subtitle) return null;
-  return <p>{subtitle}</p>;
+  return (
+    <Heading as="p" size="sm">
+      {subtitle}
+    </Heading>
+  );
 };
-
-const StyledPostListItems = styled.section``;
 
 type PostListItems = {
   content?: Post[];
@@ -62,40 +67,51 @@ const PostListItems = ({
 }: PostListItems) => {
   if (!content) return null;
   return (
-    <StyledPostListItems>
-      <Grid xxs={xxs} xs={xs} sm={sm} md={md} lg={lg} xl={xl} xxl={xxl}>
-        {content.map((node, i) => {
-          if (!node.content) return null;
-          const {
-            title,
-            subtitle,
-            excerpt,
-            category,
-            author,
-            date,
-            img,
-          } = node.content;
-          const footer = node.footer;
-          return (
-            <Col key={i}>
-              <Post
-                align={align}
-                footer={footer}
-                content={{
-                  title: title,
-                  subtitle: subtitle,
-                  excerpt: excerpt,
-                  category: category,
-                  author: author,
-                  date: date,
-                  img: img,
-                }}
-              />
-            </Col>
-          );
-        })}
-      </Grid>
-    </StyledPostListItems>
+    <Grid xxs={xxs} xs={xs} sm={sm} md={md} lg={lg} xl={xl} xxl={xxl}>
+      {content.map((node, i) => {
+        if (!node.content) return null;
+        const {
+          title,
+          subtitle,
+          excerpt,
+          category,
+          author,
+          date,
+          img,
+        } = node.content;
+        const footer = node.footer;
+        return (
+          <Col key={i}>
+            <Post
+              align={align}
+              footer={footer}
+              content={{
+                title: title,
+                subtitle: subtitle,
+                excerpt: excerpt,
+                category: category,
+                author: author,
+                date: date,
+                img: img,
+              }}
+            />
+          </Col>
+        );
+      })}
+    </Grid>
+  );
+};
+
+const PostListHeader = ({ title, subtitle }: PostList) => {
+  if (!title || !subtitle) return null;
+  return (
+    <>
+      <Content>
+        <PostListTitle title={title} />
+        <PostListSubtitle subtitle={subtitle} />
+      </Content>
+      <Spacer size="xs" />
+    </>
   );
 };
 
@@ -115,8 +131,7 @@ export const PostList = ({
   if (!content) return null;
   return (
     <Spacer size="md">
-      <PostListTitle title={title} />
-      <PostListSubtitle subtitle={subtitle} />
+      <PostListHeader title={title} subtitle={subtitle} />
       <PostListItems
         xxs={xxs}
         xs={xs}
