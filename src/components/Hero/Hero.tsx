@@ -1,7 +1,7 @@
 import React from 'react';
 import styled from 'styled-components';
 import { breakpoints } from '../../lib/utils';
-import { Container, Grid, Col, Post, Card, Spacer } from '../index';
+import { Container, Grid, Col, Post, Image, Spacer } from '../index';
 
 type Hero = {
   content: {
@@ -27,9 +27,7 @@ export const Hero: React.FC<Hero> = ({
     <Spacer>
       <Container>
         <Grid md="2">
-          <Col>
-            <Card content={{ img: img }} />
-          </Col>
+          <Col>{img}</Col>
           <StyledHeroContent>
             <Post content={{ title, subtitle, img: null, href: href }} />
           </StyledHeroContent>

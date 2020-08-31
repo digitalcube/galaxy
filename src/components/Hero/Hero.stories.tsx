@@ -1,6 +1,6 @@
 import React from 'react';
 import { withKnobs } from '@storybook/addon-knobs';
-import { Hero, Image } from '../index';
+import { Hero, Image, Animation } from '../index';
 
 export default {
   component: Hero,
@@ -12,7 +12,7 @@ export default {
   excludeStories: /.*Data$/,
 };
 
-export const Default = () => {
+export const WithImage = () => {
   return (
     <Hero
       content={{
@@ -25,6 +25,19 @@ export const Default = () => {
             />
           </Image>
         ),
+        subtitle: `Create or migrate WordPress sites in minutes that are scalable and secure.`,
+        href: `#`,
+      }}
+    />
+  );
+};
+
+export const WithAnimation = () => {
+  return (
+    <Hero
+      content={{
+        title: 'The static site generator for WordPress sites.',
+        img: <Animation />,
         subtitle: `Create or migrate WordPress sites in minutes that are scalable and secure.`,
         href: `#`,
       }}
