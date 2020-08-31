@@ -1,10 +1,10 @@
 import React from 'react';
 import { withKnobs } from '@storybook/addon-knobs';
-import { GetStarted } from './GetStarted';
+import { CTA } from './CTA';
 
 export default {
-  component: GetStarted,
-  title: `Components/Get Started`,
+  component: CTA,
+  title: `Components/CTA`,
   decorators: [
     withKnobs,
     (story: any) => <div style={{ padding: `3rem` }}>{story()}</div>,
@@ -17,9 +17,9 @@ const subtitle = `Shifter is the solution for fast, maintenance-free WordPress w
 const href = `https://go.getshifter.io/`;
 const buttonLabel = `Get Started`;
 
-export const Overview = () => {
+export const GetStarted = () => {
   return (
-    <GetStarted
+    <CTA
       title={title}
       subtitle={subtitle}
       buttonLabel={buttonLabel}
