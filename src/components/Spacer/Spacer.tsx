@@ -1,9 +1,9 @@
-import React, { ReactChild, ReactNode } from 'react';
+import { ReactNode } from 'react';
 import styled from 'styled-components';
 import { components } from '../../styles';
 
 type Spacer = {
-  children?: ReactChild;
+  children?: ReactNode;
   size?: `xl` | `lg` | `md` | `sm` | `xs`;
 };
 
