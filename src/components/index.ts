@@ -18,6 +18,7 @@ export * from './Hero';
 export * from './Image';
 export * from './Image/Fallback';
 export * from './Link';
+export * from './NodeList';
 export * from './PageHeader';
 export * from './Post';
 export * from './Screenshot';

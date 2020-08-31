@@ -24,15 +24,15 @@ export const Hero: React.FC<Hero> = ({
   content: { img, title, subtitle, href },
 }: Hero) => (
   <section>
-    <Spacer>
-      <Container>
-        <Grid md="2">
-          <Col>{img}</Col>
-          <StyledHeroContent>
-            <Post content={{ title, subtitle, img: null, href: href }} />
-          </StyledHeroContent>
-        </Grid>
-      </Container>
-    </Spacer>
+    <Spacer size="md" />
+    <Container>
+      <Grid md="2">
+        <Col>{img}</Col>
+        <StyledHeroContent>
+          <Post content={{ title, subtitle, img: null, href: href }} />
+        </StyledHeroContent>
+      </Grid>
+    </Container>
+    <Spacer size="lg" />
   </section>
 );

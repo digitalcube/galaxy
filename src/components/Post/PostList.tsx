@@ -1,7 +1,6 @@
 import React from 'react';
 import styled from 'styled-components';
-import { components } from '../../styles';
-import { Grid, Col, Heading, Post } from '../index';
+import { Grid, Col, Heading, Post, Spacer } from '../index';
 
 type PostList = {
   title?: string;
@@ -100,10 +99,6 @@ const PostListItems = ({
   );
 };
 
-const PostListWrapper = styled.section`
-  padding: ${components.section.padding.md} 0;
-`;
-
 export const PostList = ({
   content,
   title = ``,
@@ -119,7 +114,7 @@ export const PostList = ({
 }: PostList) => {
   if (!content) return null;
   return (
-    <PostListWrapper>
+    <Spacer size="md">
       <PostListTitle title={title} />
       <PostListSubtitle subtitle={subtitle} />
       <PostListItems
@@ -133,6 +128,6 @@ export const PostList = ({
         align={align}
         content={content}
       />
-    </PostListWrapper>
+    </Spacer>
   );
 };

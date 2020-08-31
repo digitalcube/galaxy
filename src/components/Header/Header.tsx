@@ -1,7 +1,7 @@
 import React from 'react';
 import styled from 'styled-components';
 import theme from 'styled-theming';
-import { Container } from '../index';
+import { Container, Spacer } from '../index';
 import { components, colors } from './../../styles';
 
 type NavItem = {
@@ -58,10 +58,6 @@ const color = ({ schema = `galaxy`, hover = false }: NavItem) => {
 
   return;
 };
-
-const StyledHeader = styled.header`
-  padding: ${components.section.padding.sm} 0 ${components.section.padding.xs};
-`;
 
 const StyledNav = styled.nav<Header>`
   display: flex;
@@ -138,15 +134,17 @@ export const Header: React.FC<Header> = ({
   });
 
   return (
-    <StyledHeader>
-      <Container>
-        <StyledNav>
-          <a href="/">{logo}</a>
-          <ul className="main-nav" id="js-menu">
-            {items}
-          </ul>
-        </StyledNav>
-      </Container>
-    </StyledHeader>
+    <>
+      <Spacer size="sm">
+        <Container>
+          <StyledNav>
+            <a href="/">{logo}</a>
+            <ul className="main-nav" id="js-menu">
+              {items}
+            </ul>
+          </StyledNav>
+        </Container>
+      </Spacer>
+    </>
   );
 };
