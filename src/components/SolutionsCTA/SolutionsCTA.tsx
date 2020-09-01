@@ -1,20 +1,49 @@
 import React from 'react';
-import { Container, Spacer, Button, ButtonGroup } from '../index';
+import {
+  Spacer,
+  ButtonGroup,
+  Heading,
+  Content,
+  Container,
+  NodeList,
+  Node,
+  Post,
+  Button,
+  Image,
+} from '../index';
 
 type SolutionsCTA = {
-  buttons: Button[];
+  title?: string;
+  subtitle?: string;
+  solutionsLinks?: Button[];
+  solutionsShowcase?: Node[];
 };
 
 export const SolutionsCTA: React.FC<SolutionsCTA> = ({
-  buttons,
+  title,
+  subtitle,
+  solutionsLinks = [],
+  solutionsShowcase,
 }: SolutionsCTA) => {
   return (
     <section>
-      <Spacer size="md">
-        <Container>
-          <ButtonGroup buttons={buttons} />
-        </Container>
-      </Spacer>
+      <Container>
+        <Spacer size="md">
+          <Content>
+            <Heading as="h2" size="lg">
+              {title}
+            </Heading>
+            <Heading as="h2" size="sm">
+              {subtitle}
+            </Heading>
+          </Content>
+          <Spacer size="xs" />
+          <ButtonGroup sm="9" buttons={solutionsLinks} />
+        </Spacer>
+      </Container>
+      <Container>
+        <NodeList sm="2" nodes={solutionsShowcase} />
+      </Container>
     </section>
   );
 };

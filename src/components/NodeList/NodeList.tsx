@@ -2,6 +2,8 @@ import React, { ReactNode } from 'react';
 import { Grid } from '../index';
 
 export type NodeList = {
+  display?: `flex` | `grid`;
+  justifyContent?: string;
   nodes?: Node[];
   xxs?: number | string;
   xs?: number | string;
@@ -27,6 +29,8 @@ const nodeList = ({ nodes = [] }: NodeList) => {
 };
 
 export const NodeList = ({
+  display,
+  justifyContent,
   nodes = [],
   xxs,
   xs,
@@ -37,7 +41,17 @@ export const NodeList = ({
   xxl,
 }: NodeList) => {
   return (
-    <Grid xxs={xxs} xs={xs} sm={sm} md={md} lg={lg} xl={xl} xxl={xxl}>
+    <Grid
+      justifyContent={justifyContent}
+      display={display}
+      xxs={xxs}
+      xs={xs}
+      sm={sm}
+      md={md}
+      lg={lg}
+      xl={xl}
+      xxl={xxl}
+    >
       {nodeList({ nodes: nodes })}
     </Grid>
   );

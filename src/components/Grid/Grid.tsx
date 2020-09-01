@@ -4,6 +4,8 @@ import { components } from '../../styles';
 import { breakpoints } from '../../lib/utils';
 
 type Grid = {
+  display?: `flex` | `grid`;
+  justifyContent?: string;
   gap?: string;
   xxs?: number | string;
   xs?: number | string;
@@ -14,8 +16,12 @@ type Grid = {
   xxl?: number | string;
 };
 
+const display = ({ display = 'grid' }: Grid) => {
+  return display;
+};
+
 export const Grid = styled.div<Grid>`
-  display: grid;
+  display: ${display};
   grid-template-columns: repeat(${components.grid.columns}, 1fr);
   gap: ${components.row.gap};
 
