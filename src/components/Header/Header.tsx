@@ -107,6 +107,7 @@ const StyledMenu = styled.ul<Header>`
   padding: ${components.nav.menu.padding};
   margin: 0;
   box-shadow: ${components.boxShadow.primary};
+  z-index: 10;
   background-color: ${props => {
     const { schema } = props.theme;
     return backgroundColor({ schema: schema });
@@ -121,6 +122,7 @@ const StyledMenu = styled.ul<Header>`
     height: initial;
     background-color: initial;
     box-shadow: initial;
+    padding: 0;
   }
 
   &:after {
