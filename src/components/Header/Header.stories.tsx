@@ -34,5 +34,10 @@ const navItems = [
 ];
 
 export const Primary = () => {
-  return <Header navItems={navItems} logo={<Brand size={`45`} />} />;
+  return (
+    <Header
+      navItems={navItems}
+      logo={<Brand asset="shifter-mark" size={`45`} />}
+    />
+  );
 };

@@ -2,6 +2,7 @@ import React from 'react';
 import styled from 'styled-components';
 import theme from 'styled-theming';
 import { Container, Spacer } from '../index';
+import { useToggle } from './useToggle';
 import { breakpoints } from '../../lib/utils';
 import { components, colors } from './../../styles';
 
@@ -177,8 +178,8 @@ const StyledBurger = styled.button<Header>`
   display: flex;
   flex-direction: column;
   justify-content: space-around;
-  width: 2rem;
-  height: 2rem;
+  width: ${components.nav.link.fontSize};
+  height: ${components.nav.link.fontSize};
   background: transparent;
   border: none;
   cursor: pointer;
@@ -194,11 +195,11 @@ const StyledBurger = styled.button<Header>`
   }
 
   div {
-    width: 2rem;
-    height: 0.25rem;
+    width: ${components.nav.link.fontSize};
+    height: 0.125rem;
     background: ${({ toggle }) => (toggle ? '#0D0C1D' : '#0D0C1D')};
-    border-radius: 10px;
-    transition: all 0.3s linear;
+    border-radius: ${components.borderRadius};
+    transition: ${components.transition.ease.fast};
     position: relative;
     transform-origin: 1px;
 
@@ -242,7 +243,7 @@ export const Header: React.FC<Header> = ({
   logo = null,
   navItems = [],
 }: Header) => {
-  const [toggle, toggleNav] = React.useState(false);
+  const [toggle, toggleNav] = useToggle();
   const items = navItems.map(item => {
     const { label, href } = item;
     return <NavItem label={label} href={href} />;
