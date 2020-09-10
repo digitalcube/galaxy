@@ -4,7 +4,7 @@ import { Header, Brand } from '../index';
 
 export default {
   component: Header,
-  title: `Components/Header`,
+  title: `Containers/Header`,
   decorators: [
     withKnobs,
     (story: any) => <div style={{ padding: `3rem` }}>{story()}</div>,
