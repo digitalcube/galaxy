@@ -19,7 +19,7 @@ type Header = {
   navItems?: NavItem[];
   hover?: boolean;
   toggle?: boolean;
-  toggleNav?: boolean;
+  toggleNav?: any;
 };
 
 const color = ({ schema = `galaxy`, hover = false }: NavItem) => {
@@ -241,7 +241,7 @@ export const Header: React.FC<Header> = ({
   logo = null,
   navItems = [],
 }: Header) => {
-  const [toggle, toggleNav] = React.useState<Header>(false);
+  const [toggle, toggleNav] = React.useState(false);
   const items = navItems.map(item => {
     const { label, href } = item;
     return <NavItem label={label} href={href} />;
