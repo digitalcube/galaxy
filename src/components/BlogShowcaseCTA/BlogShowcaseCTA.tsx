@@ -1,15 +1,5 @@
 import React from 'react';
-import {
-  Container,
-  Grid,
-  Col,
-  Post,
-  Image,
-  Spacer,
-  Button,
-  Node,
-  NodeList,
-} from '../index';
+import { Container, Spacer, Node, NodeList } from '../index';
 
 type BlogShowcaseCTA = {
   nodes: Node[];

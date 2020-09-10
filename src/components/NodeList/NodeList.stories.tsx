@@ -25,42 +25,42 @@ const images = [
   {
     node: (
       <Image>
-        <img src="//placehold.it/300x200" alt="Placeholder Image" />
+        <img src="//placehold.it/300x200" alt="" />
       </Image>
     ),
   },
   {
     node: (
       <Image>
-        <img src="//placehold.it/300x200" alt="Placeholder Image" />
+        <img src="//placehold.it/300x200" alt="" />
       </Image>
     ),
   },
   {
     node: (
       <Image>
-        <img src="//placehold.it/300x200" alt="Placeholder Image" />
+        <img src="//placehold.it/300x200" alt="" />
       </Image>
     ),
   },
   {
     node: (
       <Image>
-        <img src="//placehold.it/300x200" alt="Placeholder Image" />
+        <img src="//placehold.it/300x200" alt="" />
       </Image>
     ),
   },
   {
     node: (
       <Image>
-        <img src="//placehold.it/300x200" alt="Placeholder Image" />
+        <img src="//placehold.it/300x200" alt="" />
       </Image>
     ),
   },
   {
     node: (
       <Image>
-        <img src="//placehold.it/300x200" alt="Placeholder Image" />
+        <img src="//placehold.it/300x200" alt="" />
       </Image>
     ),
   },

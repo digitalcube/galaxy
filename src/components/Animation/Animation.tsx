@@ -7,7 +7,7 @@ type Animation = {
 };
 
 export const animationData = ({ animation }: Animation) => {
-  if (animation == `singleClick`) return singleClick;
+  if (animation === `singleClick`) return singleClick;
   return dashboard;
 };
 

@@ -1,5 +1,5 @@
 import React from 'react';
-import { Content, Shape, Button, Heading, Container } from '../index';
+import { Content, Button, Heading, Container } from '../index';
 
 type CTA = {
   title?: string;

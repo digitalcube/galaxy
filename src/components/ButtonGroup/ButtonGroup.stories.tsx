@@ -1,6 +1,6 @@
 import React from 'react';
 import { withKnobs } from '@storybook/addon-knobs';
-import { ButtonGroup, Post, Image } from '../index';
+import { ButtonGroup } from '../index';
 
 export default {
   component: ButtonGroup,

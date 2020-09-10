@@ -1,4 +1,4 @@
-import { ReactNode, FC } from 'react';
+import React, { ReactNode, FC } from 'react';
 import styled from 'styled-components';
 
 type Tabs = {

@@ -7,9 +7,7 @@ import {
   Container,
   NodeList,
   Node,
-  Post,
   Button,
-  Image,
 } from '../index';
 
 type SolutionsCTA = {

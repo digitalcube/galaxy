@@ -1,5 +1,5 @@
 import styled from 'styled-components';
-import { components, type } from '../../styles';
+import { components } from '../../styles';
 
 type Content = {
   align?: `left` | `center` | `right`;

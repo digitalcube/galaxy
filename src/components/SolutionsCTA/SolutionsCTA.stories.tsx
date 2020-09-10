@@ -37,7 +37,7 @@ const solutionsCTA = {
             subtitle: `data.showcaseSpeakMachine.excerpt`,
             img: (
               <Image>
-                <img src="//placehold.it/100x70" />
+                <img alt="" src="//placehold.it/100x70" />
               </Image>
             ),
           }}
@@ -57,7 +57,7 @@ const solutionsCTA = {
             subtitle: `data.showcaseSpeakMachine.excerpt`,
             img: (
               <Image>
-                <img src="//placehold.it/100x70" />
+                <img alt="" src="//placehold.it/100x70" />
               </Image>
             ),
           }}

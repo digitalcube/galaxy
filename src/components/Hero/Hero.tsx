@@ -1,7 +1,7 @@
 import React from 'react';
 import styled from 'styled-components';
 import { breakpoints } from '../../lib/utils';
-import { Container, Grid, Col, Post, Image, Spacer } from '../index';
+import { Container, Grid, Col, Post, Spacer } from '../index';
 
 type Hero = {
   content: {

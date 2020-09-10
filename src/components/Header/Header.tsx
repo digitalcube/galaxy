@@ -119,6 +119,7 @@ const StyledMenu = styled.ul<Header>`
   @media ${breakpoints({ size: `md` })} {
     height: initial;
     background-color: initial;
+    box-shadow: initial;
   }
 
   &:after {
@@ -171,16 +172,6 @@ const StyledNavItem = styled.li<NavItem>`
   }
 `;
 
-export const NavItem = ({ label = ``, href = `#` }: NavItem) => {
-  return (
-    <StyledNavItem>
-      <a href={href} className="nav-links">
-        {label}
-      </a>
-    </StyledNavItem>
-  );
-};
-
 const StyledBurger = styled.button<Header>`
   position: relative;
   display: flex;
@@ -226,6 +217,16 @@ const StyledBurger = styled.button<Header>`
     }
   }
 `;
+
+const NavItem = ({ label = ``, href = `#` }: NavItem) => {
+  return (
+    <StyledNavItem>
+      <a href={href} className="nav-links">
+        {label}
+      </a>
+    </StyledNavItem>
+  );
+};
 
 const Burger = ({ toggle, toggleNav }: Header) => {
   return (

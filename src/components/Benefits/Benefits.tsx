@@ -18,7 +18,7 @@ type Node = {
 const nodeList = ({ nodes = [] }: Benefits) => {
   if (!nodes) return;
   const i = nodes.map((item: Node) => {
-    if (!item.content) return;
+    if (!item.content) return null;
     const { content } = item;
     const { title, excerpt } = content;
     return (
