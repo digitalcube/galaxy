@@ -196,8 +196,14 @@ const StyledBurger = styled.button<Header>`
 
   div {
     width: ${components.nav.link.fontSize};
-    height: 0.125rem;
-    background: ${({ toggle }) => (toggle ? '#0D0C1D' : '#0D0C1D')};
+    height: 0.1875rem;
+    background-color: ${props => {
+      const { schema } = props.theme;
+      return ({ toggle }) =>
+        toggle
+          ? color({ schema: schema, hover: true })
+          : color({ schema: schema });
+    }};
     border-radius: ${components.borderRadius};
     transition: ${components.transition.ease.fast};
     position: relative;
