@@ -1,7 +1,12 @@
 import { colors } from './colors';
 
 export const components = {
-  boxShadow: `0px 3px 6px ${colors.galaxy.shadow}`,
+  boxShadow: {
+    primary: `0px 2px 8px rgba(0, 0, 0, 0.2)`,
+    sm: `0px 1px 8px rgba(0, 0, 0, 0.1)`,
+    md: `0px 8px 15px rgba(0, 0, 0, 0.2), 0px 8px 20px 4px rgba(0, 0, 0, 0.15)`,
+    lg: ` 0px 19px 18px rgba(0, 0, 0, 0.2), 0px 31px 29px rgba(0, 0, 0, 0.15)`,
+  },
   borderRadius: `0.25rem`,
   spacing: {
     xs: `0.5rem`,
@@ -88,6 +93,9 @@ export const components = {
     minHeight: `3rem`,
   },
   nav: {
+    menu: {
+      padding: `2rem 3rem`,
+    },
     link: {
       fontSize: `1.125rem`,
       padding: `1rem .5rem`,
