@@ -23,7 +23,7 @@
     "prepare": "tsdx build",
     "storybook": "start-storybook -s ./public -p 6006",
     "chromatic": "chromatic --project-token=fvg2qj7oue",
-    "build-storybook": "build-storybook"
+    "build-storybook": "build-storybook -s ./public"
   },
   "peerDependencies": {
     "react": ">=16"
