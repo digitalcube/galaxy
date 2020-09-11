@@ -1,7 +1,7 @@
 import React from 'react';
 import styled from 'styled-components';
 import theme from 'styled-theming';
-import { Container, Spacer } from '../index';
+import { Container, Spacer, Brand } from '../index';
 import { useToggle } from './useToggle';
 import { breakpoints } from '../../lib/utils';
 import { components, colors } from './../../styles';
@@ -46,13 +46,13 @@ const color = ({ schema = `galaxy`, hover = false }: NavItem) => {
   // Solid
   if (schema === `galaxy`)
     return theme('mode', {
-      light: colors.galaxy.black,
+      light: colors.galaxy.gray.g600,
       dark: colors.galaxy.white,
     });
   if (schema === `shifter`)
     return theme('mode', {
-      light: colors.shifter.purple.p400,
-      dark: colors.amimoto.blue.primary,
+      light: colors.shifter.purple.p500,
+      dark: colors.shifter.purple.p400,
     });
   if (schema === `amimoto`)
     return theme('mode', {
@@ -248,8 +248,27 @@ const Burger = ({ toggle, toggleNav }: Header) => {
 };
 
 export const Header: React.FC<Header> = ({
-  logo = null,
-  navItems = [],
+  logo = <Brand size={`45`} />,
+  navItems = [
+    {
+      label: `Features`,
+      href: `https://google.com/`,
+    },
+    {
+      label: `Blog`,
+      href: `/blog`,
+    },
+    {
+      label: `Solutions`,
+      href: `/solutions`,
+    },
+    {
+      label: `Pricing`,
+    },
+    {
+      label: `Showcase`,
+    },
+  ],
 }: Header) => {
   const [toggle, toggleNav] = useToggle();
   const items = navItems.map(item => {

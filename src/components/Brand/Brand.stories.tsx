@@ -4,7 +4,7 @@
 
 import React from 'react';
 import { withKnobs } from '@storybook/addon-knobs';
-import Brand from './Brand';
+import { Brand } from './index';
 
 export default {
   component: Brand,
@@ -15,6 +15,8 @@ export default {
   ],
   excludeStories: /.*Data$/,
 };
+
+export const Default = () => <Brand />;
 
 export const DigitalCube = () => <Brand asset="dc-mark" />;
 

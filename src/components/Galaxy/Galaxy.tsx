@@ -4,7 +4,6 @@ import theme from 'styled-theming';
 import { type, colors } from '../../styles';
 
 type Galaxy = {
-  children: ReactChild;
   schema?: 'amimoto' | 'shifter' | 'galaxy';
 };
 

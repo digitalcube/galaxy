@@ -1,11 +1,11 @@
 import React from 'react';
 
-import { Hero, Galaxy } from '../index';
+import { Hero, Layout } from '../index';
 
 export const FrontPage = () => {
   return (
-    <Galaxy>
+    <Layout>
       <Hero />
-    </Galaxy>
+    </Layout>
   );
 };

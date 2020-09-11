@@ -1,4 +1,13 @@
 import React from 'react';
+import styled from 'styled-components';
+import theme from 'styled-theming';
+
+type Brand = {
+  asset?: any;
+  size?: string;
+  className?: string;
+  schema?: 'amimoto' | 'shifter' | 'galaxy';
+};
 
 const AmimotoLogo = ({ size }: { size?: string }) => (
   <svg
@@ -733,7 +742,7 @@ const DigitalCubeMarkDark = ({ size }: { size?: string }) => (
   </svg>
 );
 
-const LogoSvg = ({ asset, size }: { asset?: string; size?: string }) => {
+const LogoSvg = ({ asset, size }: Brand) => {
   switch (asset) {
     case `shifter-mark-light`:
       return <LogoKoBlack size={size} />;
@@ -774,19 +783,17 @@ const LogoSvg = ({ asset, size }: { asset?: string; size?: string }) => {
   }
 };
 
-type Props = { asset?: string; className?: string; size?: string };
-
 export const Brand = ({
-  asset = `dc-mark`,
+  asset = `shifter-mark`,
   className = ``,
   size = `45`,
-}: Props) => (
-  <span
-    style={{ height: `${size}px`, width: `auto`, display: `inline-block` }}
-    className={`logo--shifter logo-${asset} ${className || `logomark-color`}`}
-  >
-    <LogoSvg asset={asset} size={size} />
-  </span>
-);
-
-export default Brand;
+}: Brand) => {
+  return (
+    <span
+      style={{ height: `${size}px`, width: `auto`, display: `inline-block` }}
+      className={`logo--shifter logo-${asset} ${className || `logomark-color`}`}
+    >
+      <LogoSvg asset={asset} size={size} />
+    </span>
+  );
+};

@@ -1,12 +1,12 @@
 import React from 'react';
 import { withKnobs } from '@storybook/addon-knobs';
-import { FrontPage } from './FrontPage';
+import { Layout, Galaxy } from '../index';
 
 export default {
-  component: FrontPage,
-  title: `Templates/FrontPage`,
+  component: Layout,
+  title: `Templates/Layout`,
   decorators: [withKnobs],
   excludeStories: /.*Data$/,
 };
 
-export const Default = () => <FrontPage />;
+export const Default = () => <Layout />;
