@@ -38,7 +38,9 @@ export const Hero: React.FC<Hero> = ({
           <Content>
             <Heading size="xl">{title}</Heading>
             <Heading size="md">{subtitle}</Heading>
-            <Button href={href}>{buttonLabel}</Button>
+            <Spacer size="sm">
+              <Button href={href}>{buttonLabel}</Button>
+            </Spacer>
           </Content>
           <Col>{img}</Col>
         </Grid>
