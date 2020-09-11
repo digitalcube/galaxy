@@ -17,7 +17,7 @@ export const Spacer = styled.div<Spacer>`
     return spacerSize({ size: size });
   }};
   padding-bottom: ${props => {
-    const { size } = props;
-    return spacerSize({ size: size });
+    const { size, children } = props;
+    return children ? spacerSize({ size: size }) : 0;
   }};
 `;
