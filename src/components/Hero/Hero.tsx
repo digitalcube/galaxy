@@ -22,7 +22,7 @@ type Hero = {
 
 export const Hero: React.FC<Hero> = ({
   content = {
-    img: <Animation />,
+    img: <Animation animation="dashboard" />,
     title: `The static site generator for WordPress`,
     subtitle: `Using Shifter, create or migrate WordPress sites in minutes that are scalable, secure from attacks, and 100% static with no security or caching plugins required.`,
     href: `https://go.getshifter.io/register/`,

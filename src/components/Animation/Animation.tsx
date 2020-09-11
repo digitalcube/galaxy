@@ -3,25 +3,31 @@ import Lottie from 'react-lottie';
 import { singleClick, dashboard } from './animations';
 
 type Animation = {
-  animation?: `singleClick` | `dashbaord`;
+  animation?: `singleClick` | `dashboard`;
 };
 
-export const animationData = ({ animation }: Animation) => {
-  if (animation === `singleClick`) return singleClick;
-  return dashboard;
+const animations = {
+  singleClick: singleClick,
+  dashboard: dashboard,
 };
 
-export const Animation: React.FC<Animation> = props => (
-  <Lottie
-    height={`auto`}
-    width={`auto`}
-    options={{
-      loop: false,
-      autoplay: true,
-      animationData: props.animation || singleClick,
-      rendererSettings: {
-        preserveAspectRatio: `xMidYMid slice`,
-      },
-    }}
-  />
-);
+export const animationData = ({ animation = `singleClick` }: Animation) => {
+  return animations[animation];
+};
+
+export const Animation: React.FC<Animation> = ({ animation }) => {
+  return (
+    <Lottie
+      height={`auto`}
+      width={`auto`}
+      options={{
+        loop: false,
+        autoplay: true,
+        animationData: animationData({ animation: animation }),
+        rendererSettings: {
+          preserveAspectRatio: `xMidYMid slice`,
+        },
+      }}
+    />
+  );
+};
