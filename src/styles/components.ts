@@ -45,6 +45,9 @@ export const components = {
       xs: `1rem`,
     },
   },
+  logos: {
+    gap: `3.75rem`,
+  },
   section: {
     padding: {
       xl: `5rem`,
