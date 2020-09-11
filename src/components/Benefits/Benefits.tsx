@@ -81,17 +81,16 @@ export const Benefits = ({
       <Spacer size="md">
         <Container>
           <Container size="md" align="left">
-            <Spacer size="lg">
-              <Content>
-                <Heading as="h2" size="lg">
-                  {title}
-                </Heading>
-                <Heading as="h3" size="xs">
-                  {subtitle}
-                </Heading>
-              </Content>
-            </Spacer>
+            <Content>
+              <Heading as="h2" size="lg">
+                {title}
+              </Heading>
+              <Heading as="h3" size="xs">
+                {subtitle}
+              </Heading>
+            </Content>
           </Container>
+          <Spacer size="md" />
         </Container>
         <Container>
           <Grid md="2">
