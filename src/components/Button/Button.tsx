@@ -1,4 +1,4 @@
-import { ReactNode } from 'react';
+import React, { ReactNode, FC } from 'react';
 import styled from 'styled-components';
 import theme from 'styled-theming';
 import { components, colors } from '../../styles';
@@ -12,6 +12,8 @@ export type Button = {
   schema?: 'amimoto' | 'shifter' | 'galaxy';
   kind?: 'primary' | 'success';
   outline?: boolean;
+  as?: `a` | `button`;
+  size?: `lg` | `sm`;
 };
 
 const backgroundColor = ({
@@ -446,7 +448,23 @@ const borderColor = ({
   return;
 };
 
-export const Button = styled.a<Button>`
+export const Button: FC<Button> = ({
+  children,
+  as = `a`,
+  size = `lg`,
+  href,
+  kind = `primary`,
+  outline,
+}: Button) => {
+  if (!children) return null;
+  return (
+    <StyledButton outline={outline} kind={kind} href={href} as={as} size={size}>
+      {children}
+    </StyledButton>
+  );
+};
+
+const StyledButton = styled(Button)<Button>`
   background-color: ${props => {
     const { outline } = props;
     const { schema } = props.theme;

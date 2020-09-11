@@ -1,38 +1,48 @@
-import React from 'react';
-import styled from 'styled-components';
-import { breakpoints } from '../../lib/utils';
-import { Container, Grid, Col, Post, Spacer } from '../index';
+import React, { ReactNode } from 'react';
+import {
+  Container,
+  Grid,
+  Col,
+  Spacer,
+  Heading,
+  Button,
+  Content,
+} from '../index';
 
 type Hero = {
-  content: {
-    title: string;
-    img?: React.ReactNode;
+  content?: {
+    title?: string;
+    img?: ReactNode;
     subtitle?: string;
+    buttonLabel?: string;
     href?: string;
   };
 };
 
-const StyledHeroContent = styled(Col)`
-  @media ${breakpoints({ size: `md` })} {
-    transform: scale(1.25);
-    transform-origin: right top;
-    align-self: flex-end;
-  }
-`;
-
 export const Hero: React.FC<Hero> = ({
-  content: { img, title, subtitle, href },
-}: Hero) => (
-  <section>
-    <Spacer size="md" />
-    <Container>
-      <Grid md="2">
-        <Col>{img}</Col>
-        <StyledHeroContent>
-          <Post content={{ title, subtitle, img: null, href: href }} />
-        </StyledHeroContent>
-      </Grid>
-    </Container>
-    <Spacer size="lg" />
-  </section>
-);
+  content = {
+    img: null,
+    title: `The static site generator for WordPress`,
+    subtitle: `Using Shifter, create or migrate WordPress sites in minutes that are scalable, secure from attacks, and 100% static with no security or caching plugins required.`,
+    href: `https://go.getshifter.io/register/`,
+    buttonLabel: `Start a free trial`,
+  },
+}: Hero) => {
+  const { title, img, subtitle, href, buttonLabel } = content;
+  return (
+    <section>
+      <Spacer size="md" />
+      <Container>
+        <Grid md="2">
+          <Content>
+            <Heading size="xl">{title}</Heading>
+            <Heading size="md">{subtitle}</Heading>
+            <Button href={href}>{buttonLabel}</Button>
+          </Content>
+          <Col>{img}</Col>
+        </Grid>
+      </Container>
+      <Spacer size="lg" />
+    </section>
+  );
+};

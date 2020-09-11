@@ -50,25 +50,25 @@ const Triangle = () => {
           gradientTransform="rotate(39.6 779.152 -491.273)"
           gradientUnits="userSpaceOnUse"
         >
-          <stop offset="0" stopColor={colors.shifter.magenta.primary} />
+          <stop offset="0" stopColor={colors.shifter.magenta.dark} />
           <stop
             offset="0.36"
-            stopColor={colors.shifter.magenta.primary}
+            stopColor={colors.shifter.magenta.dark}
             stopOpacity="0.6"
           />
           <stop
             offset="0.67"
-            stopColor={colors.shifter.magenta.primary}
+            stopColor={colors.shifter.magenta.dark}
             stopOpacity="0.27"
           />
           <stop
             offset="0.89"
-            stopColor={colors.shifter.magenta.primary}
+            stopColor={colors.shifter.magenta.dark}
             stopOpacity="0.08"
           />
           <stop
             offset="1"
-            stopColor={colors.shifter.magenta.primary}
+            stopColor={colors.shifter.magenta.dark}
             stopOpacity="0"
           />
         </linearGradient>
@@ -95,25 +95,25 @@ const Square = () => {
           gradientTransform="rotate(90 569.575 392.025)"
           gradientUnits="userSpaceOnUse"
         >
-          <stop offset="0" stopColor={colors.shifter.magenta.primary} />
+          <stop offset="0" stopColor={colors.shifter.magenta.dark} />
           <stop
             offset="0.36"
-            stopColor={colors.shifter.magenta.primary}
+            stopColor={colors.shifter.magenta.dark}
             stopOpacity="0.6"
           />
           <stop
             offset="0.67"
-            stopColor={colors.shifter.magenta.primary}
+            stopColor={colors.shifter.magenta.dark}
             stopOpacity="0.27"
           />
           <stop
             offset="0.89"
-            stopColor={colors.shifter.magenta.primary}
+            stopColor={colors.shifter.magenta.dark}
             stopOpacity="0.08"
           />
           <stop
             offset="1"
-            stopColor={colors.shifter.magenta.primary}
+            stopColor={colors.shifter.magenta.dark}
             stopOpacity="0"
           />
         </linearGradient>
@@ -146,10 +146,10 @@ const SemiCircle = () => {
         >
           <stop
             offset="0"
-            stopColor={colors.shifter.magenta.primary}
+            stopColor={colors.shifter.magenta.dark}
             stopOpacity="0"
           />
-          <stop offset="1" stopColor={colors.shifter.magenta.primary} />
+          <stop offset="1" stopColor={colors.shifter.magenta.dark} />
         </linearGradient>
       </defs>
       <path

@@ -109,7 +109,7 @@ export const components = {
     color: `inherit`,
   },
   heading: {
-    color: colors.shifter.magenta.primary,
+    color: colors.shifter.magenta.dark,
     fontWeight: 500,
     fontStyle: `normal`,
     lineHeight: `1.6`,
@@ -119,6 +119,7 @@ export const components = {
       md: `1.5rem`,
       sm: `1.25rem`,
       xs: `1rem`,
+      xxs: `0.75rem`,
     },
   },
   text: {
