@@ -68,6 +68,7 @@ export const components = {
     },
   },
   container: {
+    padding: `0 1.5rem`,
     maxWidth: {
       fluid: `100%`,
       sm: `540px`,

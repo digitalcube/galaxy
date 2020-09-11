@@ -104,7 +104,7 @@ const StyledMenu = styled.ul<Header>`
   right: 0;
   top: 0;
   height: 100vh;
-  padding: ${components.nav.menu.padding};
+  /* padding: ${components.nav.menu.padding}; */
   margin: 0;
   box-shadow: ${components.boxShadow.primary};
   z-index: 10;
