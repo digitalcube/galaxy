@@ -18,7 +18,6 @@ export const spacerSize = ({ size = `md` }: Spacer) => {
 };
 
 export const Spacer = styled.div<Spacer>`
-  border: 1px solid orange;
   padding-top: ${props => {
     const { size } = props;
     return spacerSize({ size: size });
