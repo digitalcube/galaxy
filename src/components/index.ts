@@ -29,3 +29,4 @@ export * from './Text';
 export * from './Layout';
 export * from './BlogShowcaseCTA';
 export * from './SolutionsCTA';
+export * from './Logos';

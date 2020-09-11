@@ -7,6 +7,7 @@ import {
   Heading,
   Button,
   Content,
+  Animation,
 } from '../index';
 
 type Hero = {
@@ -21,7 +22,7 @@ type Hero = {
 
 export const Hero: React.FC<Hero> = ({
   content = {
-    img: null,
+    img: <Animation />,
     title: `The static site generator for WordPress`,
     subtitle: `Using Shifter, create or migrate WordPress sites in minutes that are scalable, secure from attacks, and 100% static with no security or caching plugins required.`,
     href: `https://go.getshifter.io/register/`,
