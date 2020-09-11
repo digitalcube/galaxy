@@ -13,7 +13,7 @@ export const containerMaxWidth = ({ size = 'xl' }: Container) => {
 export const Container = styled.div<Container>`
   max-width: ${containerMaxWidth};
   position: relative;
-  padding: ${components.container.padding};
+  /* padding: ${components.container.padding}; */
   margin-left: ${props => {
     if (props.align === `left`) return `0`;
     return `auto`;

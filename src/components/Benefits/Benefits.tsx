@@ -1,5 +1,14 @@
 import React, { ReactNode } from 'react';
-import { Heading, Container, Grid, Col, Content, Spacer, Text } from '../index';
+import {
+  Heading,
+  Container,
+  Grid,
+  Col,
+  Content,
+  Spacer,
+  Text,
+  Animation,
+} from '../index';
 
 type Benefits = {
   title?: string;
@@ -35,7 +44,37 @@ const nodeList = ({ nodes = [] }: Benefits) => {
   return i;
 };
 
-export const Benefits = ({ title, subtitle, img, nodes = [] }: Benefits) => {
+export const Benefits = ({
+  title = `One Click Setup`,
+  subtitle = `Create a new site or migrate an existing WordPress site in minutes.`,
+  img = <Animation animation="singleClick" />,
+  nodes = [
+    {
+      content: {
+        title: `Easy installation`,
+        excerpt: `Create a new WordPress site right from the Shifter Dashboard, no uploading required.`,
+      },
+    },
+    {
+      content: {
+        title: `Collaborate`,
+        excerpt: `Work with others and share access to your Shifter account using our team features.`,
+      },
+    },
+    {
+      content: {
+        title: `Maintenance-free`,
+        excerpt: `Shifter manages WordPress core so you're always up to date and plugins never vulnerable.`,
+      },
+    },
+    {
+      content: {
+        title: `No coding required`,
+        excerpt: `Easy for non-developers to get started using WordPress themes or page builders.`,
+      },
+    },
+  ],
+}: Benefits) => {
   return (
     <section>
       <Spacer size="md">
