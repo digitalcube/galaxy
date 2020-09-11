@@ -6,7 +6,6 @@ import {
   Col,
   Content,
   Spacer,
-  Text,
   Animation,
 } from '../index';
 
@@ -36,7 +35,9 @@ const nodeList = ({ nodes = [] }: Benefits) => {
           <Heading as="h3" size="md">
             {title}
           </Heading>
-          <Text>{excerpt}</Text>
+          <Heading as="p" size="xs">
+            {excerpt}
+          </Heading>
         </Content>
       </Col>
     );
@@ -85,7 +86,7 @@ export const Benefits = ({
                 <Heading as="h2" size="lg">
                   {title}
                 </Heading>
-                <Heading as="h2" size="sm">
+                <Heading as="h3" size="xs">
                   {subtitle}
                 </Heading>
               </Content>

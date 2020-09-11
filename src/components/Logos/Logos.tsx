@@ -71,7 +71,7 @@ const nodesDefault = [
         <Image>
           <img
             src="https://www.getshifter.io/static/ddc39223e6bd875a213e792560bf26e5/3fc3b/logo-hennge.png"
-            alt=""
+            alt="HENNGE"
           />
         </Image>
       </SwiperSlide>
@@ -107,7 +107,7 @@ const nodesDefault = [
         <Image>
           <img
             src="https://www.getshifter.io/static/ddc39223e6bd875a213e792560bf26e5/3fc3b/logo-hennge.png"
-            alt="SORACOM"
+            alt="HENNGE"
           />
         </Image>
       </SwiperSlide>

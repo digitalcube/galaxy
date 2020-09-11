@@ -1,4 +1,5 @@
-import React from 'react';
+import React, { ReactNode } from 'react';
+import theme from 'styled-theming';
 import styled from 'styled-components';
 import { components, colors } from '../../styles';
 import { CardImage } from './CardImage';
@@ -7,8 +8,9 @@ import { CardBody } from './CardBody';
 import { CardFooter } from './CardFooter';
 
 export type Card = {
-  children?: React.ReactNode;
+  children?: ReactNode;
   align?: string;
+  schema?: 'amimoto' | 'shifter' | 'galaxy';
   content?: {
     img?: React.ReactNode;
     header?: {
@@ -21,6 +23,46 @@ export type Card = {
   };
 };
 
+const backgroundColor = ({ schema = `galaxy` }: Card) => {
+  if (schema === `galaxy`)
+    return theme('mode', {
+      light: colors.galaxy.background.light,
+      dark: colors.galaxy.background.dark,
+    });
+  if (schema === `shifter`)
+    return theme('mode', {
+      light: colors.shifter.white,
+      dark: colors.shifter.purple.p600,
+    });
+  if (schema === `amimoto`)
+    return theme('mode', {
+      light: colors.amimoto.background.light,
+      dark: colors.amimoto.background.dark,
+    });
+
+  return;
+};
+
+const borderColor = ({ schema = `galaxy` }: Card) => {
+  if (schema === `galaxy`)
+    return theme('mode', {
+      light: colors.galaxy.background.light,
+      dark: colors.galaxy.background.dark,
+    });
+  if (schema === `shifter`)
+    return theme('mode', {
+      light: colors.shifter.white,
+      dark: colors.shifter.purple.p600,
+    });
+  if (schema === `amimoto`)
+    return theme('mode', {
+      light: colors.amimoto.background.light,
+      dark: colors.amimoto.background.dark,
+    });
+
+  return;
+};
+
 const StyledCard = styled.article<Card>`
   position: relative;
   display: flex;
@@ -31,7 +73,14 @@ const StyledCard = styled.article<Card>`
   border-radius: ${components.borderRadius};
   border-width: ${components.borderWidth};
   border-style: ${components.borderStyle};
-  background-color: ${colors.galaxy.white};
+  border-color: ${props => {
+    const { schema } = props.theme;
+    return borderColor({ schema: schema });
+  }};
+  background-color: ${props => {
+    const { schema } = props.theme;
+    return backgroundColor({ schema: schema });
+  }};
   width: 100%;
 `;
 

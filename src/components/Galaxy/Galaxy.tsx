@@ -1,4 +1,3 @@
-import { ReactChild } from 'react';
 import styled from 'styled-components';
 import theme from 'styled-theming';
 import { type, colors } from '../../styles';
@@ -36,7 +35,7 @@ const color = ({ schema = `galaxy` }: Galaxy) => {
   if (schema === `shifter`)
     return theme('mode', {
       light: colors.shifter.black,
-      dark: colors.amimoto.blue.b100,
+      dark: colors.shifter.purple.p100,
     });
   if (schema === `amimoto`)
     return theme('mode', {

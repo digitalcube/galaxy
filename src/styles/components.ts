@@ -127,6 +127,6 @@ export const components = {
     },
   },
   text: {
-    fontSize: `1.125rem`,
+    fontSize: `0.875rem`,
   },
 };

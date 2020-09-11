@@ -28,5 +28,5 @@ export * from './Spacer';
 export * from './Text';
 export * from './Layout';
 export * from './BlogShowcaseCTA';
-export * from './SolutionsCTA';
 export * from './Logos';
+export * from './Solutions';

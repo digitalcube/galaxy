@@ -1,10 +1,10 @@
 import React from 'react';
 import { withKnobs, text } from '@storybook/addon-knobs';
-import { Logos, Image } from '../index';
+import { Solutions, Image } from '../index';
 
 export default {
-  component: Logos,
-  title: `Containers/Logos`,
+  component: Solutions,
+  title: `Containers/Solutions`,
   decorators: [withKnobs],
   excludeStories: /.*Data$/,
 };
@@ -27,5 +27,5 @@ export const Default = () => {
     buttonLabel: text(`Button label`, `Get started for free`),
     href: `#`,
   };
-  return <Logos content={content} />;
+  return <Solutions content={content} />;
 };

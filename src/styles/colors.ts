@@ -26,6 +26,7 @@ export const colors = {
   },
   shifter: {
     black: `#25021B`,
+    white: `#FFFFFF`,
     background: {
       light: `#FAFAFA`,
       dark: `#1A0112`,
@@ -39,6 +40,7 @@ export const colors = {
     },
     purple: {
       primary: `#740151`,
+      p700: `#2D0F24`,
       p600: `#451D39`,
       p500: `#653A58`,
       p400: `#AD8EAB`,
