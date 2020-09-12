@@ -9,18 +9,14 @@ import { CardFooter } from './CardFooter';
 
 export type Card = {
   children?: ReactNode;
-  align?: string;
+  align?: `left` | `center` | `right`;
   schema?: 'amimoto' | 'shifter' | 'galaxy';
-  content?: {
-    img?: React.ReactNode;
-    header?: {
-      title?: string;
-      subtitle?: React.ReactNode;
-      excerpt?: string;
-      link?: string;
-    };
-    footer?: React.ReactChild;
-  };
+  img?: React.ReactNode;
+  title?: string;
+  subtitle?: React.ReactNode;
+  excerpt?: string;
+  href?: string;
+  footer?: React.ReactChild;
 };
 
 const backgroundColor = ({ schema = `galaxy` }: Card) => {
@@ -64,6 +60,7 @@ const borderColor = ({ schema = `galaxy` }: Card) => {
 };
 
 const StyledCard = styled.article<Card>`
+  text-align: ${props => props.align};
   position: relative;
   display: flex;
   flex-direction: column;
@@ -85,25 +82,19 @@ const StyledCard = styled.article<Card>`
 `;
 
 export const Card: React.FC<Card> = ({
-  children = null,
-  content = {
-    img: null,
-    header: {
-      title: ``,
-      subtitle: ``,
-      excerpt: ``,
-      link: ``,
-    },
-    footer: ``,
-  },
+  title,
+  subtitle,
+  children,
+  excerpt,
+  img,
+  align,
 }: Card) => {
-  const { header, footer, img } = content;
   return (
-    <StyledCard>
+    <StyledCard align={align}>
       <CardImage>{img}</CardImage>
-      <CardHeader content={header} />
+      <CardHeader title={title} subtitle={subtitle} excerpt={excerpt} />
       <CardBody>{children}</CardBody>
-      <CardFooter>{footer}</CardFooter>
+      {/* <CardFooter>{footer}</CardFooter> */}
     </StyledCard>
   );
 };

@@ -45,18 +45,16 @@ export const Showcase: FC<Solutions> = ({
   const { title, buttonLabel, img, href } = showcase;
   return (
     <Card
-      content={{
-        footer: (
-          <Content align="center">
-            <Text>{title}</Text>
-            <Link href={href}>
-              <Heading as="p" size="xs">
-                {buttonLabel}
-              </Heading>
-            </Link>
-          </Content>
-        ),
-      }}
+      footer={
+        <Content align="center">
+          <Text>{title}</Text>
+          <Link href={href}>
+            <Heading as="p" size="xs">
+              {buttonLabel}
+            </Heading>
+          </Link>
+        </Content>
+      }
     >
       <Spacer size="xs" />
       <Content align="center">
@@ -77,16 +75,14 @@ export const Solution: FC<Solutions> = ({
   const { title, subtitle, buttonLabel, href } = solution;
   return (
     <Card
-      content={{
-        footer: (
-          <Content>
-            <Heading as="p" size="sm">
-              {subtitle}
-            </Heading>
-            <Button href={href}>{buttonLabel}</Button>
-          </Content>
-        ),
-      }}
+      footer={
+        <Content>
+          <Heading as="p" size="sm">
+            {subtitle}
+          </Heading>
+          <Button href={href}>{buttonLabel}</Button>
+        </Content>
+      }
     >
       <Heading as="h2" size="lg">
         {title}

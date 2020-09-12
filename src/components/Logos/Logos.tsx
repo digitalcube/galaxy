@@ -3,7 +3,6 @@ import styled from 'styled-components';
 import { Swiper, SwiperSlide } from 'swiper/react';
 import { Container, Spacer, Heading, Content, Image } from '../index';
 import { components } from '../../styles';
-// import 'swiper/swiper.scss';
 
 type Logos = {
   nodes?: Slide[];

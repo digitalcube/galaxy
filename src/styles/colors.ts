@@ -39,7 +39,7 @@ export const colors = {
       g100: `#F1F1F1`,
     },
     purple: {
-      primary: `#740151`,
+      primary: `#9C036E`,
       p700: `#2D0F24`,
       p600: `#451D39`,
       p500: `#653A58`,

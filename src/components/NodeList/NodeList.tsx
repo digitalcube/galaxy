@@ -21,7 +21,6 @@ export type Node = {
 const nodeList = ({ nodes = [] }: NodeList) => {
   if (!nodes) return;
   const i = nodes.map((node: Node) => {
-    console.log(node.node);
     return node.node;
   });
 

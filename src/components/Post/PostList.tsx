@@ -5,7 +5,7 @@ type PostList = {
   title?: string;
   subtitle?: string;
   content?: Post[];
-  align?: string;
+  align?: `left` | `center` | `right`;
   xxs?: number | string;
   xs?: number | string;
   sm?: number | string;
@@ -44,7 +44,7 @@ const PostListSubtitle = ({ subtitle }: PostListSubtitle) => {
 type PostListItems = {
   content?: Post[];
   theme?: string;
-  align?: string;
+  align?: `left` | `center` | `right`;
   xxs?: number | string;
   xs?: number | string;
   sm?: number | string;
@@ -69,31 +69,21 @@ const PostListItems = ({
   return (
     <Grid xxs={xxs} xs={xs} sm={sm} md={md} lg={lg} xl={xl} xxl={xxl}>
       {content.map((node, i) => {
-        if (!node.content) return null;
-        const {
-          title,
-          subtitle,
-          excerpt,
-          category,
-          author,
-          date,
-          img,
-        } = node.content;
+        if (!node) return null;
+        const { title, subtitle, excerpt, category, author, date, img } = node;
         const footer = node.footer;
         return (
           <Col key={i}>
             <Post
               align={align}
               footer={footer}
-              content={{
-                title: title,
-                subtitle: subtitle,
-                excerpt: excerpt,
-                category: category,
-                author: author,
-                date: date,
-                img: img,
-              }}
+              title={title}
+              subtitle={subtitle}
+              excerpt={excerpt}
+              category={category}
+              author={author}
+              date={date}
+              img={img}
             />
           </Col>
         );
@@ -126,7 +116,7 @@ export const PostList = ({
   lg,
   xl,
   xxl,
-  align = ``,
+  align,
 }: PostList) => {
   if (!content) return null;
   return (

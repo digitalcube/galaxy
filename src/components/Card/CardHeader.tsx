@@ -1,16 +1,14 @@
 import React from 'react';
 import styled from 'styled-components';
 import { components } from '../../styles';
-import { Heading } from '../Heading';
+import { Heading, Text } from '../index';
 import { Link } from '../Link';
 
-export type CardHeader = {
-  content?: {
-    title?: string;
-    subtitle?: React.ReactNode;
-    excerpt?: string;
-    link?: string;
-  };
+type CardHeader = {
+  title?: string;
+  subtitle?: React.ReactNode;
+  excerpt?: string;
+  href?: string;
 };
 
 const StyledCardHeader = styled.div`
@@ -21,17 +19,22 @@ const StyledCardHeader = styled.div`
 `;
 
 export const CardHeader: React.FC<CardHeader> = ({
-  content = { title: ``, subtitle: ``, excerpt: ``, link: `` },
+  title,
+  subtitle,
+  excerpt,
+  href,
 }: CardHeader) => {
-  const { title, subtitle, excerpt, link } = content;
-  if (!title || !subtitle || !excerpt) return null;
   return (
     <StyledCardHeader>
-      <Link href={link}>
-        <Heading as="h2">{title}</Heading>
+      <Link href={href}>
+        <Heading size="md" as="h3">
+          {title}
+        </Heading>
       </Link>
-      {subtitle}
-      {excerpt}
+      <Heading as="h4" size="sm">
+        {subtitle}
+      </Heading>
+      <Text>{excerpt}</Text>
     </StyledCardHeader>
   );
 };

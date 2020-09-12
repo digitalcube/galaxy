@@ -1,13 +1,19 @@
+import React, { ReactNode } from 'react';
 import styled from 'styled-components';
 
 type Image = {
-  padding?: string;
+  children: ReactNode;
+  width?: string;
 };
 
-export const Image = styled.div<Image>`
-  padding: ${props => props.padding};
+export const Image: React.FC<Image> = ({ width, children }: Image) => {
+  if (!children) return null;
+  return <StyledImage width={width}>{children}</StyledImage>;
+};
+
+export const StyledImage = styled(Image)`
   img {
-    width: 100%;
+    width: ${props => props.width || `100%`};
     height: auto;
     vertical-align: middle;
   }

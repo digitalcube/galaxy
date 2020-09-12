@@ -56,6 +56,6 @@ const StyledHeading = styled(Heading)<Heading>`
     return color({ schema: schema });
   }};
   font-weight: ${components.heading.fontWeight};
-  line-height: 1.5;
+  line-height: ${components.heading.lineHeight};
   position: relative;
 `;
