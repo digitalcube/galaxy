@@ -1,13 +1,15 @@
+import React, { ReactNode, FC } from 'react';
 import theme from 'styled-theming';
 import styled from 'styled-components';
+import { Galaxy } from '../index';
 import { colors, components } from '../../styles';
 
 type Content = {
+  children?: ReactNode;
   align?: `left` | `center` | `right`;
-  schema?: 'amimoto' | 'shifter' | 'galaxy';
 };
 
-const color = ({ schema = `galaxy` }: Content) => {
+const color = ({ schema = `galaxy` }: Galaxy) => {
   if (schema === `galaxy`)
     return theme('mode', {
       light: colors.galaxy.gray.g700,
@@ -27,7 +29,12 @@ const color = ({ schema = `galaxy` }: Content) => {
   return;
 };
 
-export const Content = styled.div<Content>`
+export const Content: FC<Content> = ({ align, children }: Content) => {
+  if (!children) return null;
+  return <StyledContent align={align}>{children}</StyledContent>;
+};
+
+export const StyledContent = styled.div<Content>`
   text-align: ${props => props.align};
   line-height: ${components.content.lineHeight};
   font-size: ${components.content.fontSize};

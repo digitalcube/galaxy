@@ -1,6 +1,5 @@
 import React, { FC, ReactNode } from 'react';
 import { ThemeProvider } from 'styled-components';
-import styled from 'styled-components';
 import {
   Container,
   Spacer,
@@ -56,9 +55,10 @@ export const Showcase: FC<Solutions> = ({
         </Content>
       }
     >
-      <Spacer size="xs" />
+      {/* <Spacer size="xs" /> */}
       <Content align="center">
-        <StyledLogo>{img}</StyledLogo>
+        <Spacer size="xs" />
+        <Image width="30%">{img}</Image>
       </Content>
     </Card>
   );
@@ -125,8 +125,3 @@ export const Solutions: FC<Solutions> = ({
     </section>
   );
 };
-
-const StyledLogo = styled(Image)`
-  width: 25%;
-  margin: 0 auto;
-`;

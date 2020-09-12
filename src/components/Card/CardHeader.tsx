@@ -24,6 +24,7 @@ export const CardHeader: React.FC<CardHeader> = ({
   excerpt,
   href,
 }: CardHeader) => {
+  if (!title || !subtitle || !excerpt) return null;
   return (
     <StyledCardHeader>
       <Link href={href}>

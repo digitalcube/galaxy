@@ -88,13 +88,14 @@ export const Card: React.FC<Card> = ({
   excerpt,
   img,
   align,
+  footer,
 }: Card) => {
   return (
     <StyledCard align={align}>
       <CardImage>{img}</CardImage>
       <CardHeader title={title} subtitle={subtitle} excerpt={excerpt} />
       <CardBody>{children}</CardBody>
-      {/* <CardFooter>{footer}</CardFooter> */}
+      <CardFooter>{footer}</CardFooter>
     </StyledCard>
   );
 };

@@ -6,11 +6,11 @@ export const FrontPage = () => {
   return (
     <Layout>
       <Hero />
-      <Logos />
+      {/* <Logos /> */}
       <Benefits />
       <Solutions />
-      <Benefits />
-      <Features />
+      {/* <Benefits /> */}
+      {/* <Features /> */}
     </Layout>
   );
 };
