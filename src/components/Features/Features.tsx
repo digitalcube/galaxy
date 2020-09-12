@@ -20,13 +20,22 @@ type Features = {
 
 export const FeaturesNodes = ({ nodes = [] }: Features) => {
   const featureNodes = nodes.map((node: Card) => {
-    const {
-      title,
-      excerpt,
-      img = <Image width="20%">{node.img}</Image>,
-    } = node;
+    const { title, img, excerpt } = node;
     return {
-      node: <Card align="center" img={img} title={title} excerpt={excerpt} />,
+      node: (
+        <Card
+          align="center"
+          img={
+            <Image width="20%">
+              <Spacer size="sm" />
+              {img}
+            </Image>
+          }
+          title={title}
+          subtitle={`subtitle`}
+          excerpt={excerpt}
+        />
+      ),
     };
   });
 
@@ -103,6 +112,7 @@ export const Features = ({
             </Content>
           </Container>
         </Container>
+        <Spacer size="md" />
         <Container>
           <FeaturesNodes nodes={nodes} />
         </Container>

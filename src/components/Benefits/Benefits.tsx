@@ -90,8 +90,8 @@ export const Benefits = ({
               </Heading>
             </Content>
           </Container>
-          <Spacer size="md" />
         </Container>
+        <Spacer size="md" />
         <Container>
           <Grid md="2">
             <Grid md="2">{nodeList({ nodes: nodes })}</Grid>
