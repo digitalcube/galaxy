@@ -1,13 +1,13 @@
 import React, { ReactNode } from 'react';
 import styled from 'styled-components';
 import theme from 'styled-theming';
+import { Galaxy } from '../index';
 import { components, colors } from '../../styles';
 
 type Heading = {
   children?: ReactNode;
   as?: `h1` | `h2` | `h3` | `h4` | `h5` | `h6` | `p`;
   size?: `xl` | `lg` | `md` | `sm` | `xs`;
-  schema?: 'amimoto' | 'shifter' | 'galaxy';
 };
 
 export const headingFontSize = ({ size = `md` }: Heading) => {
@@ -27,7 +27,7 @@ export const Heading: React.FC<Heading> = ({
   );
 };
 
-const color = ({ schema = `galaxy` }: Heading) => {
+const color = ({ schema = `galaxy` }: Galaxy) => {
   if (schema === `galaxy`)
     return theme('mode', {
       light: colors.galaxy.gray.g500,

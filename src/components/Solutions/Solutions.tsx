@@ -11,6 +11,7 @@ import {
   Card,
   Button,
   Text,
+  Link,
 } from '../index';
 
 type Solutions = {
@@ -48,11 +49,16 @@ export const Showcase: FC<Solutions> = ({
         footer: (
           <Content align="center">
             <Text>{title}</Text>
-            <Button href={href}>{buttonLabel}</Button>
+            <Link href={href}>
+              <Heading as="p" size="xs">
+                {buttonLabel}
+              </Heading>
+            </Link>
           </Content>
         ),
       }}
     >
+      <Spacer size="xs" />
       <Content align="center">
         <StyledLogo>{img}</StyledLogo>
       </Content>

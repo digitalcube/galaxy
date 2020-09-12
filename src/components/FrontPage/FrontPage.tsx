@@ -1,6 +1,6 @@
 import React from 'react';
 
-import { Hero, Layout, Logos, Benefits, Solutions } from '../index';
+import { Hero, Layout, Logos, Benefits, Solutions, Features } from '../index';
 
 export const FrontPage = () => {
   return (
@@ -10,6 +10,7 @@ export const FrontPage = () => {
       <Benefits />
       <Solutions />
       <Benefits />
+      <Features />
     </Layout>
   );
 };

@@ -36,8 +36,8 @@ const backgroundColor = ({ schema = `galaxy` }: Card) => {
     });
   if (schema === `amimoto`)
     return theme('mode', {
-      light: colors.amimoto.background.light,
-      dark: colors.amimoto.background.dark,
+      light: colors.amimoto.blue.b100,
+      dark: colors.amimoto.blue.b600,
     });
 
   return;

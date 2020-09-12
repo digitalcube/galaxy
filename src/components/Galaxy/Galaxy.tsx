@@ -2,7 +2,7 @@ import styled from 'styled-components';
 import theme from 'styled-theming';
 import { type, colors } from '../../styles';
 
-type Galaxy = {
+export type Galaxy = {
   schema?: 'amimoto' | 'shifter' | 'galaxy';
 };
 
