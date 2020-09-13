@@ -1,14 +1,19 @@
 import React from 'react';
 import { Content, Button, Heading, Container } from '../index';
 
-type CTA = {
+export type GetStarted = {
   title?: string;
   subtitle?: string;
   href?: string;
   buttonLabel?: string;
 };
 
-export const CTA = ({ title, subtitle, href, buttonLabel }: CTA) => {
+export const GetStarted = ({
+  title = `Ready to take your site to the next level?`,
+  subtitle = `Shifter is the solution for fast, maintenance-free WordPress websites.`,
+  href = `https://go.getshifter.io/`,
+  buttonLabel = `Get Started`,
+}: GetStarted) => {
   return (
     <section>
       <Container size="md">

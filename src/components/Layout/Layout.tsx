@@ -1,5 +1,5 @@
 import React, { ReactNode } from 'react';
-import { Header, Galaxy } from '../index';
+import { Header, Galaxy, GetStarted } from '../index';
 
 type Layout = {
   children?: ReactNode;
@@ -10,6 +10,7 @@ export const Layout = ({ children }: Layout) => {
     <Galaxy>
       <Header />
       {children ? children : null}
+      <GetStarted />
     </Galaxy>
   );
 };
