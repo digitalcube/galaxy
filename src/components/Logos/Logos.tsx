@@ -116,7 +116,7 @@ const nodesDefault = [
 
 const slides = ({ nodes = [...nodesDefault, ...nodesDefault] }: Logos) => {
   if (!nodes) return;
-  const i = nodes.map((node: Slide) => {
+  const i = nodes.map((node: Slide, i) => {
     return node.node;
   });
 
@@ -131,25 +131,23 @@ export const Logos: React.FC<Logos> = ({
   const { title } = content;
   const spaceBetween = parseFloat(components.logos.gap) * 16;
   return (
-    <section>
-      <Spacer size="md">
-        <Container size="md">
-          <Content align="center">
-            <Heading size="lg">{title}</Heading>
-          </Content>
-        </Container>
-        <Spacer size="md" />
-        <StyledSwiper
-          spaceBetween={spaceBetween}
-          slidesPerView={6}
-          loop={true}
-          centeredSlides={true}
-          autoplay={{ delay: 2500 }}
-        >
-          {slides({ nodes: [...nodesDefault, ...nodesDefault] })}
-        </StyledSwiper>
-      </Spacer>
-    </section>
+    <Spacer as="section" size={3}>
+      <Container size="md">
+        <Content align="center">
+          <Heading size="lg">{title}</Heading>
+        </Content>
+      </Container>
+      <Spacer size={3} />
+      <StyledSwiper
+        spaceBetween={spaceBetween}
+        slidesPerView={6}
+        loop={true}
+        centeredSlides={true}
+        autoplay={{ delay: 2500 }}
+      >
+        {slides({ nodes: [...nodesDefault, ...nodesDefault] })}
+      </StyledSwiper>
+    </Spacer>
   );
 };
 

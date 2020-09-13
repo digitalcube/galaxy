@@ -15,7 +15,7 @@ export const GetStarted = ({
   buttonLabel = `Get Started`,
 }: GetStarted) => {
   return (
-    <Spacer size="md">
+    <Spacer size={3}>
       <Container size="md">
         <Content align="center">
           <Heading size="lg">{title}</Heading>

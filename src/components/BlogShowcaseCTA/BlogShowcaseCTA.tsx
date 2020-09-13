@@ -11,7 +11,7 @@ export const BlogShowcaseCTA: React.FC<BlogShowcaseCTA> = ({
   console.log(nodes);
   return (
     <section>
-      <Spacer size="md">
+      <Spacer size={3}>
         <Container>
           <NodeList md="2" nodes={nodes} />
         </Container>

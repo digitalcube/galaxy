@@ -24,7 +24,7 @@ export const Feature = ({ img, title, excerpt }: Card) => {
       align="center"
       img={
         <Image width="20%">
-          <Spacer size="sm" />
+          <Spacer size={2} />
           {img}
         </Image>
       }
@@ -35,10 +35,10 @@ export const Feature = ({ img, title, excerpt }: Card) => {
 };
 
 export const FeaturesNodes = ({ nodes = [] }: Features) => {
-  const featureNodes = nodes.map((node: Card) => {
+  const featureNodes = nodes.map((node: Card, i) => {
     const { title, img, excerpt } = node;
     return {
-      node: <Feature title={title} img={img} excerpt={excerpt} />,
+      node: <Feature key={i} title={title} img={img} excerpt={excerpt} />,
     };
   });
 
@@ -98,7 +98,7 @@ export const Features = ({
   buttonLabel = `See all features`,
 }: Features) => {
   return (
-    <Spacer as="section" size="md">
+    <Spacer size={3}>
       <Container>
         <Container size="md" align="left">
           <Content>
@@ -114,7 +114,7 @@ export const Features = ({
           </Content>
         </Container>
       </Container>
-      <Spacer size="md" />
+      <Spacer size={3} />
       <Container>
         <FeaturesNodes nodes={nodes} />
       </Container>

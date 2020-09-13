@@ -55,9 +55,9 @@ export const Showcase: FC<Solutions> = ({
         </Content>
       }
     >
-      {/* <Spacer size="xs" /> */}
+      {/* <Spacer size={1} /> */}
       <Content align="center">
-        <Spacer size="xs" />
+        <Spacer size={1} />
         <Image width="30%">{img}</Image>
       </Content>
     </Card>
@@ -112,7 +112,7 @@ export const Solutions: FC<Solutions> = ({
 }: Solutions) => {
   return (
     <section>
-      <Spacer size="md">
+      <Spacer size={3}>
         <Container>
           <Grid md="2">
             <Solution solution={solution} />

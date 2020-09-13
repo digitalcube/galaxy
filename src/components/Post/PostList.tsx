@@ -100,7 +100,7 @@ const PostListHeader = ({ title, subtitle }: PostList) => {
         <PostListTitle title={title} />
         <PostListSubtitle subtitle={subtitle} />
       </Content>
-      <Spacer size="xs" />
+      <Spacer size={1} />
     </>
   );
 };
@@ -120,7 +120,7 @@ export const PostList = ({
 }: PostList) => {
   if (!content) return null;
   return (
-    <Spacer size="md">
+    <Spacer size={3}>
       <PostListHeader title={title} subtitle={subtitle} />
       <PostListItems
         xxs={xxs}

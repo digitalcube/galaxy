@@ -278,7 +278,7 @@ export const Header: React.FC<Header> = ({
 
   return (
     <header>
-      <Spacer size="sm">
+      <Spacer size={2}>
         <StyledContainer>
           <StyledNav toggle={toggle} role="navigation">
             <h1>

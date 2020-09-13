@@ -32,20 +32,20 @@ export const Hero: React.FC<Hero> = ({
   const { title, img, subtitle, href, buttonLabel } = content;
   return (
     <section>
-      <Spacer size="md" />
+      <Spacer size={3} />
       <Container>
         <Grid md="2">
           <Content>
             <Heading size="xl">{title}</Heading>
             <Heading size="md">{subtitle}</Heading>
-            <Spacer size="sm">
+            <Spacer size={2}>
               <Button href={href}>{buttonLabel}</Button>
             </Spacer>
           </Content>
           <Col>{img}</Col>
         </Grid>
       </Container>
-      <Spacer size="lg" />
+      <Spacer size={4} />
     </section>
   );
 };

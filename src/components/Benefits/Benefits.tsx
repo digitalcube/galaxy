@@ -25,12 +25,12 @@ type Node = {
 
 const nodeList = ({ nodes = [] }: Benefits) => {
   if (!nodes) return;
-  const i = nodes.map((item: Node) => {
+  const i = nodes.map((item: Node, i) => {
     if (!item.content) return null;
     const { content } = item;
     const { title, excerpt } = content;
     return (
-      <Col>
+      <Col key={i}>
         <Content>
           <Heading as="h3" size="md">
             {title}
@@ -78,7 +78,7 @@ export const Benefits = ({
 }: Benefits) => {
   return (
     <section>
-      <Spacer size="md">
+      <Spacer size={3}>
         <Container>
           <Container size="md" align="left">
             <Content>
@@ -91,7 +91,7 @@ export const Benefits = ({
             </Content>
           </Container>
         </Container>
-        <Spacer size="md" />
+        <Spacer size={3} />
         <Container>
           <Grid md="2">
             <Grid md="2">{nodeList({ nodes: nodes })}</Grid>
