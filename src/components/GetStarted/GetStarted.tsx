@@ -1,5 +1,5 @@
 import React from 'react';
-import { Content, Button, Heading, Container } from '../index';
+import { Content, Button, Heading, Container, Spacer } from '../index';
 
 export type GetStarted = {
   title?: string;
@@ -15,7 +15,7 @@ export const GetStarted = ({
   buttonLabel = `Get Started`,
 }: GetStarted) => {
   return (
-    <section>
+    <Spacer size="md">
       <Container size="md">
         <Content align="center">
           <Heading size="lg">{title}</Heading>
@@ -25,6 +25,6 @@ export const GetStarted = ({
           </Button>
         </Content>
       </Container>
-    </section>
+    </Spacer>
   );
 };

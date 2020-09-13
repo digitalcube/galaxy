@@ -18,24 +18,27 @@ type Features = {
   nodes?: Card[];
 };
 
+export const Feature = ({ img, title, excerpt }: Card) => {
+  return (
+    <Card
+      align="center"
+      img={
+        <Image width="20%">
+          <Spacer size="sm" />
+          {img}
+        </Image>
+      }
+      title={title}
+      excerpt={excerpt}
+    />
+  );
+};
+
 export const FeaturesNodes = ({ nodes = [] }: Features) => {
   const featureNodes = nodes.map((node: Card) => {
     const { title, img, excerpt } = node;
     return {
-      node: (
-        <Card
-          align="center"
-          img={
-            <Image width="20%">
-              <Spacer size="sm" />
-              {img}
-            </Image>
-          }
-          title={title}
-          subtitle={`subtitle`}
-          excerpt={excerpt}
-        />
-      ),
+      node: <Feature title={title} img={img} excerpt={excerpt} />,
     };
   });
 
@@ -95,28 +98,26 @@ export const Features = ({
   buttonLabel = `See all features`,
 }: Features) => {
   return (
-    <section>
-      <Spacer size="md">
-        <Container>
-          <Container size="md" align="left">
-            <Content>
-              <Heading as="h2" size="lg">
-                {title}
-              </Heading>
-              <Heading as="h2" size="sm">
-                {subtitle}
-              </Heading>
-              <Button outline kind="primary" href={href}>
-                {buttonLabel}
-              </Button>
-            </Content>
-          </Container>
+    <Spacer as="section" size="md">
+      <Container>
+        <Container size="md" align="left">
+          <Content>
+            <Heading as="h2" size="lg">
+              {title}
+            </Heading>
+            <Heading as="h2" size="sm">
+              {subtitle}
+            </Heading>
+            <Button outline kind="primary" href={href}>
+              {buttonLabel}
+            </Button>
+          </Content>
         </Container>
-        <Spacer size="md" />
-        <Container>
-          <FeaturesNodes nodes={nodes} />
-        </Container>
-      </Spacer>
-    </section>
+      </Container>
+      <Spacer size="md" />
+      <Container>
+        <FeaturesNodes nodes={nodes} />
+      </Container>
+    </Spacer>
   );
 };
