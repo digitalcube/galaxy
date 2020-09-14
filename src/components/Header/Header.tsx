@@ -164,23 +164,15 @@ export const Header: React.FC<Header> = ({
   ],
 }: Header) => {
   const [toggle, toggleNav] = useToggle();
-  const items = navItems.map(item => {
-    const { label, href } = item;
-    return <NavItem label={label} href={href} />;
-  });
 
   return (
     <Spacer as="header" size={2}>
       <StyledContainer>
-        <Nav>
+        <Nav navItems={navItems}>
           <h1>
             <a href="/">{logo}</a>
           </h1>
           <Burger toggle={toggle} toggleNav={toggleNav} />
-          <Menu>
-            <Burger toggle={toggle} toggleNav={toggleNav} />
-            {items}
-          </Menu>
         </Nav>
       </StyledContainer>
     </Spacer>

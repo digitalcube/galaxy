@@ -4,6 +4,8 @@ import { NavItem, Menu } from '../index';
 
 type Nav = {
   children?: ReactNode;
+  navItems?: NavItem[];
+  alignment?: `vertical` | `horizontal`;
 };
 
 const StyledNav = styled.nav<Nav>`
@@ -12,6 +14,12 @@ const StyledNav = styled.nav<Nav>`
   align-items: center;
 `;
 
-export const Nav: React.FC<Nav> = ({ children }: Nav) => {
-  return <StyledNav role="navigation">{children}</StyledNav>;
+export const Nav: React.FC<Nav> = ({ children, navItems, alignment }: Nav) => {
+  console.log(navItems);
+  return (
+    <StyledNav role="navigation">
+      {children}
+      <Menu alignment={alignment} navItems={navItems} />
+    </StyledNav>
+  );
 };

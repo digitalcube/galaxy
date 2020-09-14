@@ -17,5 +17,23 @@ export const Default = () => {
 };
 
 export const Vertical = () => {
-  return <Nav alignment="vertical" />;
+  return (
+    <Nav
+      alignment={`vertical`}
+      navItems={[
+        {
+          label: `About`,
+          href: `#`,
+        },
+        {
+          label: `Blog`,
+          href: `#`,
+        },
+        {
+          label: `Press`,
+          href: `#`,
+        },
+      ]}
+    />
+  );
 };

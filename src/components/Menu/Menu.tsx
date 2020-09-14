@@ -1,8 +1,9 @@
 import React from 'react';
 import styled from 'styled-components';
 import { NavItem } from '../index';
+import { components } from '../../styles';
 
-type Menu = {
+export type Menu = {
   navItems?: NavItem[];
   alignment?: `horizontal` | `vertical`;
 };
@@ -13,6 +14,11 @@ const StyledMenu = styled.ul<Menu>`
   padding: 0;
   display: ${props => (props.alignment === `vertical` ? `` : `flex`)};
   flex-direction: ${props => (props.alignment === `vertical` ? `` : `row`)};
+
+  > * {
+    padding: ${props =>
+      props.alignment === `vertical` ? `` : components.nav.link.padding};
+  }
 `;
 
 export const Menu: React.FC<Menu> = ({

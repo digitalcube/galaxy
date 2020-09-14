@@ -64,7 +64,6 @@ const StyledNavItem = styled.li<NavItem>`
   }
 
   a {
-    padding: ${components.nav.link.padding};
     text-decoration: none;
     transition: ${components.transition.exit.medium};
     color: ${props => {
