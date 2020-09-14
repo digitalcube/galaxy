@@ -1,19 +1,10 @@
 import React from 'react';
 import styled from 'styled-components';
 import theme from 'styled-theming';
-import { Container, Spacer, Brand } from '../index';
+import { Container, Spacer, Brand, NavItem, Menu, Nav } from '../index';
 import { useToggle } from './useToggle';
 import { breakpoints } from '../../lib/utils';
 import { components, colors } from './../../styles';
-
-type NavItem = {
-  label?: string;
-  href?: string;
-  active?: boolean;
-  hover?: boolean;
-  mode?: 'light' | 'dark';
-  schema?: 'amimoto' | 'shifter' | 'galaxy';
-};
 
 type Header = {
   logo?: React.ReactNode;
@@ -87,94 +78,6 @@ const StyledContainer = styled(Container)<Header>`
   position: initial;
 `;
 
-const StyledNav = styled.nav<Header>`
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-
-  .logo {
-    display: flex;
-    align-items: center;
-  }
-`;
-
-const StyledMenu = styled.ul<Header>`
-  list-style-type: none;
-  position: absolute;
-  right: 0;
-  top: 0;
-  height: 100vh;
-  /* padding: ${components.nav.menu.padding}; */
-  margin: 0;
-  box-shadow: ${components.boxShadow.primary};
-  z-index: 10;
-  background-color: ${props => {
-    const { schema } = props.theme;
-    return backgroundColor({ schema: schema });
-  }};
-  transform: ${({ toggle }) => (toggle ? 'translateX(0)' : 'translateX(100%)')};
-  transition: ${({ toggle }) =>
-    toggle
-      ? components.transition.ease.medium
-      : components.transition.ease.medium};
-
-  @media ${breakpoints({ size: `md` })} {
-    height: initial;
-    background-color: initial;
-    box-shadow: initial;
-    padding: 0;
-  }
-
-  &:after {
-    content: '';
-    position: absolute;
-    height: 100vh;
-    display: block;
-
-    @media ${breakpoints({ size: `md` })} {
-      height: initial;
-    }
-  }
-
-  @media ${breakpoints({ size: `md` })} {
-    position: relative;
-    transform: none;
-    display: flex;
-    flex-direction: row;
-    justify-content: flex-end;
-  }
-`;
-
-const StyledNavItem = styled.li<NavItem>`
-  font-size: ${components.nav.link.fontSize};
-
-  &:last-of-type {
-    margin-right: 0;
-  }
-
-  &:first-of-type {
-    margin-left: 0;
-  }
-
-  a {
-    padding: ${components.nav.link.padding};
-    text-decoration: none;
-    transition: ${components.transition.exit.medium};
-    color: ${props => {
-      const { schema } = props.theme;
-      return color({ schema: schema });
-    }};
-
-    &:hover {
-      transition: ${components.transition.entrance.fast};
-      color: ${props => {
-        const { schema } = props.theme;
-        return color({ schema: schema, hover: true });
-      }};
-    }
-  }
-`;
-
 const StyledBurger = styled.button<Header>`
   position: relative;
   display: flex;
@@ -227,16 +130,6 @@ const StyledBurger = styled.button<Header>`
   }
 `;
 
-const NavItem = ({ label = ``, href = `#` }: NavItem) => {
-  return (
-    <StyledNavItem>
-      <a href={href} className="nav-links">
-        {label}
-      </a>
-    </StyledNavItem>
-  );
-};
-
 const Burger = ({ toggle, toggleNav }: Header) => {
   return (
     <StyledBurger toggle={toggle} onClick={() => toggleNav(!toggle)}>
@@ -277,21 +170,19 @@ export const Header: React.FC<Header> = ({
   });
 
   return (
-    <header>
-      <Spacer size={2}>
-        <StyledContainer>
-          <StyledNav toggle={toggle} role="navigation">
-            <h1>
-              <a href="/">{logo}</a>
-            </h1>
+    <Spacer as="header" size={2}>
+      <StyledContainer>
+        <Nav>
+          <h1>
+            <a href="/">{logo}</a>
+          </h1>
+          <Burger toggle={toggle} toggleNav={toggleNav} />
+          <Menu>
             <Burger toggle={toggle} toggleNav={toggleNav} />
-            <StyledMenu toggle={toggle}>
-              <Burger toggle={toggle} toggleNav={toggleNav} />
-              {items}
-            </StyledMenu>
-          </StyledNav>
-        </StyledContainer>
-      </Spacer>
-    </header>
+            {items}
+          </Menu>
+        </Nav>
+      </StyledContainer>
+    </Spacer>
   );
 };

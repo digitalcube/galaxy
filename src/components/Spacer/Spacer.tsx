@@ -4,7 +4,7 @@ import { breakpoints } from '../../lib/utils';
 
 export type Spacer = {
   children?: ReactNode;
-  as?: `div` | `section` | `article`;
+  as?: `div` | `section` | `article` | `header` | `footer`;
   size?: 0.5 | 1 | 1.5 | 2 | 2.5 | 3 | 3.5 | 4;
   xs?: 0.5 | 1 | 1.5 | 2 | 2.5 | 3 | 3.5 | 4;
   sm?: 0.5 | 1 | 1.5 | 2 | 2.5 | 3 | 3.5 | 4;
