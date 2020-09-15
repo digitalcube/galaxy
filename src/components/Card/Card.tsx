@@ -59,7 +59,7 @@ const borderColor = ({ schema = `galaxy` }: Card) => {
   return;
 };
 
-const StyledCard = styled.article<Card>`
+export const StyledCard = styled.article<Card>`
   text-align: ${props => props.align};
   position: relative;
   display: flex;

@@ -29,7 +29,7 @@ export const Post: React.FC<Post> = ({
   footer,
 }: Post) => {
   return (
-    <StyledCard align={align} img={img} footer={footer}>
+    <Card align={align} img={img} footer={footer}>
       <Heading as="p">{category}</Heading>
       <Link href={href}>
         <Heading as="h2" size="md">
@@ -42,10 +42,6 @@ export const Post: React.FC<Post> = ({
       <Text>{excerpt}</Text>
       {author}
       <Date>{date}</Date>
-    </StyledCard>
+    </Card>
   );
 };
-
-const StyledCard = styled(Card)`
-  font-size: 1000%;
-`;
