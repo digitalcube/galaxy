@@ -7,6 +7,7 @@ import {
   Benefits,
   Solutions,
   Features,
+  Testimonials,
   Showcase,
 } from '../index';
 
@@ -19,6 +20,7 @@ export const FrontPage = () => {
       <Solutions />
       <Benefits />
       <Features />
+      <Testimonials />
       <Showcase />
     </Layout>
   );

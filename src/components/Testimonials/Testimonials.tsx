@@ -1,4 +1,5 @@
 import React from 'react';
+import styled from 'styled-components';
 import {
   Container,
   Spacer,
@@ -10,11 +11,9 @@ import {
 } from '../index';
 import { components } from '../../styles';
 
-type Logos = {
+type Testimonials = {
   nodes?: Node[];
-  content?: {
-    title?: string;
-  };
+  title?: string;
 };
 
 const nodesDefault = [
@@ -100,13 +99,10 @@ const nodesDefault = [
   },
 ];
 
-export const Logos: React.FC<Logos> = ({
-  content = {
-    title: `Some of the world's leading businesses, thinkers, and creatives call Shifter home. `,
-  },
+export const Testimonials: React.FC<Testimonials> = ({
+  title = `Some of the world's leading businesses, thinkers, and creatives call Shifter home.`,
   nodes = nodesDefault,
-}: Logos) => {
-  const { title } = content;
+}: Testimonials) => {
   const spaceBetween = parseFloat(components.logos.gap) * 16;
   return (
     <Spacer as="section" size={3}>
