@@ -32,7 +32,7 @@ type FooterNav = {
 
 export const FooterNav: FC<FooterNav> = ({ navItems }: FooterNav) => {
   return (
-    <Col width={2}>
+    <Col md={2}>
       <Heading size="sm" as="h3">
         Company
       </Heading>
@@ -45,8 +45,8 @@ export const Footer: FC<Footer> = ({ navs = [] }: Footer) => {
   return (
     <Spacer as="section" size={3}>
       <Container>
-        <Grid sm={12}>
-          <Col width={4}>
+        <Grid sm={2} md={12}>
+          <Col sm={2} md={4}>
             <Content>
               <Heading size="sm" as="h3">
                 Say hello 👋
