@@ -3,7 +3,25 @@ import styled from 'styled-components';
 import theme from 'styled-theming';
 
 type Brand = {
-  asset?: any;
+  asset?:
+    | `amimoto-logo-dark`
+    | `amimoto-logo-light`
+    | `amimoto-logo`
+    | `amimoto-mark-dark`
+    | `amimoto-mark-light`
+    | `amimoto-mark`
+    | `dc-logo-dark`
+    | `dc-logo-light`
+    | `dc-logo`
+    | `dc-mark-dark`
+    | `dc-mark-light`
+    | `dc-mark`
+    | `shifter-logo-dark`
+    | `shifter-logo-light`
+    | `shifter-logo`
+    | `shifter-mark-dark`
+    | `shifter-mark-light`
+    | `shifter-mark`;
   size?: string;
   className?: string;
   schema?: 'amimoto' | 'shifter' | 'galaxy';

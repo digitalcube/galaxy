@@ -2,7 +2,7 @@ import React, { ReactNode } from 'react';
 import styled from 'styled-components';
 import { NavItem, Menu } from '../index';
 
-type Nav = {
+export type Nav = {
   children?: ReactNode;
   navItems?: NavItem[];
   alignment?: `vertical` | `horizontal`;
@@ -15,7 +15,6 @@ const StyledNav = styled.nav<Nav>`
 `;
 
 export const Nav: React.FC<Nav> = ({ children, navItems, alignment }: Nav) => {
-  console.log(navItems);
   return (
     <StyledNav role="navigation">
       {children}

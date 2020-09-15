@@ -1,10 +1,10 @@
-import React from 'react';
+import React, { ReactNode } from 'react';
 import styled from 'styled-components';
 import theme from 'styled-theming';
 import { components, colors } from '../../styles';
 
 export type NavItem = {
-  label?: string;
+  label?: ReactNode;
   href?: string;
   active?: boolean;
   hover?: boolean;

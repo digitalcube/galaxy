@@ -15,15 +15,22 @@ const StyledMenu = styled.ul<Menu>`
   display: ${props => (props.alignment === `vertical` ? `` : `flex`)};
   flex-direction: ${props => (props.alignment === `vertical` ? `` : `row`)};
 
-  > * {
+  > li {
     padding: ${props =>
       props.alignment === `vertical` ? `` : components.nav.link.padding};
+
+    &:first-of-type {
+      padding-left: 0;
+    }
+
+    &:last-of-type {
+      padding-right: 0;
+    }
   }
 `;
 
-export const Menu: React.FC<Menu> = ({
-  alignment,
-  navItems = [
+export const defaultProps = {
+  navItems: [
     {
       label: `Features`,
       href: `https://google.com/`,
@@ -43,6 +50,11 @@ export const Menu: React.FC<Menu> = ({
       label: `Showcase`,
     },
   ],
+};
+
+export const Menu: React.FC<Menu> = ({
+  alignment,
+  navItems = defaultProps.navItems,
 }: Menu) => {
   const items = navItems.map(item => {
     const { label, href } = item;

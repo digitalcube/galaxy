@@ -92,7 +92,7 @@ export const components = {
       padding: `2rem 3rem`,
     },
     link: {
-      fontSize: `1.125rem`,
+      fontSize: `1rem`,
       padding: `1rem .5rem`,
     },
   },
