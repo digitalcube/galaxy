@@ -1,4 +1,4 @@
-import React, { ReactNode } from 'react';
+import React, { ReactNode, FC } from 'react';
 import styled from 'styled-components';
 import { components } from '../../styles';
 import { Heading, Text, Content } from '../index';
@@ -37,23 +37,37 @@ const Excerpt = ({ children }: CardHeader) => {
   return <Text>{children}</Text>;
 };
 
-export const CardHeader: React.FC<CardHeader> = ({
+export const CardHeaderContent: FC<CardHeader> = ({
   title,
   subtitle,
   excerpt,
   href,
 }: CardHeader) => {
   return (
-    <StyledCardHeader>
-      <Content>
-        <Title href={href}>{title}</Title>
-        <Subtitle>{subtitle}</Subtitle>
-        <Excerpt>{excerpt}</Excerpt>
-      </Content>
-    </StyledCardHeader>
+    <Content>
+      <Title href={href}>{title}</Title>
+      <Subtitle>{subtitle}</Subtitle>
+      <Excerpt>{excerpt}</Excerpt>
+    </Content>
   );
 };
 
-const StyledCardHeader = styled.div`
+export const CardHeader: FC<CardHeader> = ({
+  title,
+  subtitle,
+  excerpt,
+  href,
+}: CardHeader) => {
+  if (!title) return null;
+  return (
+    <StyledContent>
+      <Title href={href}>{title}</Title>
+      <Subtitle>{subtitle}</Subtitle>
+      <Excerpt>{excerpt}</Excerpt>
+    </StyledContent>
+  );
+};
+
+const StyledContent = styled.div`
   padding: ${components.spacing.sm} ${components.spacing.sm};
 `;

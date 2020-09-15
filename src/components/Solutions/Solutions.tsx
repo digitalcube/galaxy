@@ -28,7 +28,7 @@ type Solutions = {
   };
 };
 
-export const Showcase: FC<Solutions> = ({
+const Showcase: FC<Solutions> = ({
   showcase = {
     title: `One of the most exciting contemporary design thinkers calls Shifter home.`,
     buttonLabel: `View showcase`,
@@ -64,7 +64,7 @@ export const Showcase: FC<Solutions> = ({
   );
 };
 
-export const Solution: FC<Solutions> = ({
+const Solution: FC<Solutions> = ({
   solution = {
     title: `Designers`,
     subtitle: `Use page builders and themes that will get your site noticed.`,

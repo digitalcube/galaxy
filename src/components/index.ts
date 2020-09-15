@@ -35,3 +35,4 @@ export * from './Nav';
 export * from './NavItem';
 export * from './Navbar';
 export * from './Menu';
+export * from './Showcase';

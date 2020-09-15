@@ -1,6 +1,14 @@
 import React from 'react';
 
-import { Hero, Layout, Logos, Benefits, Solutions, Features } from '../index';
+import {
+  Hero,
+  Layout,
+  Logos,
+  Benefits,
+  Solutions,
+  Features,
+  Showcase,
+} from '../index';
 
 export const FrontPage = () => {
   return (
@@ -11,6 +19,7 @@ export const FrontPage = () => {
       <Solutions />
       <Benefits />
       <Features />
+      <Showcase />
     </Layout>
   );
 };
