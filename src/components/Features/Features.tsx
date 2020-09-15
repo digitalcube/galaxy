@@ -99,24 +99,25 @@ export const Features = ({
 }: Features) => {
   return (
     <Spacer size={3}>
-      <Container>
-        <Container size="md" align="left">
-          <Content>
-            <Heading as="h2" size="lg">
-              {title}
-            </Heading>
-            <Heading as="h2" size="sm">
-              {subtitle}
-            </Heading>
-            <Button outline kind="primary" href={href}>
-              {buttonLabel}
-            </Button>
-          </Content>
-        </Container>
+      <Container size="md">
+        <Content align="center">
+          <Heading as="h2" size="lg">
+            {title}
+          </Heading>
+          <Heading as="h2" size="sm">
+            {subtitle}
+          </Heading>
+        </Content>
       </Container>
       <Spacer size={3} />
       <Container>
         <FeaturesNodes nodes={nodes} />
+        <Spacer size={3} />
+        <Content align="center">
+          <Button outline kind="primary" href={href}>
+            {buttonLabel}
+          </Button>
+        </Content>
       </Container>
     </Spacer>
   );

@@ -4,13 +4,13 @@ import {
   Button,
   Spacer,
   NodeList,
-  Card,
   Container,
   Content,
   Image,
-  Text,
   Grid,
   Col,
+  Post,
+  Link,
 } from '../index';
 
 type Showcase = {
@@ -18,23 +18,16 @@ type Showcase = {
   subtitle?: string;
   href?: string;
   buttonLabel?: string;
-  nodes?: Card[];
-};
-
-export const CaseStudy = ({ img, title, excerpt }: Card) => {
-  return (
-    <Card img={<Image>{img}</Image>}>
-      <Heading size="sm">{title}</Heading>
-      <Text>{title}</Text>
-    </Card>
-  );
+  nodes?: Post[];
 };
 
 export const ShowcaseNodes = ({ nodes = [] }: Showcase) => {
-  const showcaseNodes = nodes.map((node: Card, i) => {
-    const { title, img, excerpt } = node;
+  const showcaseNodes = nodes.map((node: Post, i) => {
+    const { title, img, excerpt, href } = node;
     return {
-      node: <CaseStudy key={i} title={title} img={img} excerpt={excerpt} />,
+      node: (
+        <Post key={i} href={href} title={title} img={img} excerpt={excerpt} />
+      ),
     };
   });
 
@@ -49,22 +42,32 @@ export const Showcase = ({
   nodes = [
     {
       title: `Soracom`,
-      href: `#`,
+      href: `https://example.com`,
+      excerpt: `example.com`,
       img: (
-        <img
-          src="https://www.getshifter.io/static/5b8d04811ce4850fad82e16214795926/39f27/soracom.jpg"
-          alt=""
-        />
+        <Link href={`https://example.com`}>
+          <Image>
+            <img
+              src="https://www.getshifter.io/static/5b8d04811ce4850fad82e16214795926/39f27/soracom.jpg"
+              alt=""
+            />
+          </Image>
+        </Link>
       ),
     },
     {
       title: `Vrije Universiteit Amsterdam`,
-      href: `#`,
+      excerpt: `example.com`,
+      href: `https://example.com`,
       img: (
-        <img
-          src="https://www.getshifter.io/static/1f94269f0d484cd3750314acef23695d/39f27/screenshot-vu.jpg"
-          alt=""
-        />
+        <Link href={`https://example.com`}>
+          <Image>
+            <img
+              src="https://www.getshifter.io/static/1f94269f0d484cd3750314acef23695d/39f27/screenshot-vu.jpg"
+              alt=""
+            />
+          </Image>
+        </Link>
       ),
     },
   ],

@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { FC } from 'react';
 import {
   Container,
   Spacer,
@@ -100,7 +100,7 @@ const nodesDefault = [
   },
 ];
 
-export const Logos: React.FC<Logos> = ({
+export const Logos: FC<Logos> = ({
   content = {
     title: `Some of the world's leading businesses, thinkers, and creatives call Shifter home. `,
   },

@@ -1,6 +1,7 @@
 import React from 'react';
+import styled from 'styled-components';
 import { Date } from '../Date';
-import { Content, Text, Card, Heading } from '../';
+import { Text, Card, Heading, Link } from '../';
 
 export type Post = {
   align?: `left` | `center` | `right`;
@@ -28,19 +29,23 @@ export const Post: React.FC<Post> = ({
   footer,
 }: Post) => {
   return (
-    <Card align={align} img={img} title={title} footer={footer}>
-      <Content>
-        <Heading as="p">{category}</Heading>
+    <StyledCard align={align} img={img} footer={footer}>
+      <Heading as="p">{category}</Heading>
+      <Link href={href}>
         <Heading as="h2" size="md">
           {title}
         </Heading>
-        <Heading as="h3" size="xs">
-          {subtitle}
-        </Heading>
-        <Text>{excerpt}</Text>
-        {author}
-        <Date>{date}</Date>
-      </Content>
-    </Card>
+      </Link>
+      <Heading as="h3" size="xs">
+        {subtitle}
+      </Heading>
+      <Text>{excerpt}</Text>
+      {author}
+      <Date>{date}</Date>
+    </StyledCard>
   );
 };
+
+const StyledCard = styled(Card)`
+  font-size: 1000%;
+`;

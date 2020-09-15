@@ -11,9 +11,9 @@ export type Card = {
   children?: ReactNode;
   align?: `left` | `center` | `right`;
   schema?: 'amimoto' | 'shifter' | 'galaxy';
-  img?: React.ReactNode;
+  img?: ReactNode;
   title?: string;
-  subtitle?: React.ReactNode;
+  subtitle?: ReactNode;
   excerpt?: string;
   href?: string;
   footer?: React.ReactChild;
