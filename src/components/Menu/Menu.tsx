@@ -5,19 +5,19 @@ import { components } from '../../styles';
 
 export type Menu = {
   navItems?: NavItem[];
-  alignment?: `horizontal` | `vertical`;
+  orientation?: `horizontal` | `vertical`;
 };
 
 const StyledMenu = styled.ul<Menu>`
   list-style-type: none;
   margin: 0;
   padding: 0;
-  display: ${props => (props.alignment === `vertical` ? `` : `flex`)};
-  flex-direction: ${props => (props.alignment === `vertical` ? `` : `row`)};
+  display: ${props => (props.orientation === `vertical` ? `` : `flex`)};
+  flex-direction: ${props => (props.orientation === `vertical` ? `` : `row`)};
 
   > li {
     padding: ${props =>
-      props.alignment === `vertical` ? `` : components.nav.link.padding};
+      props.orientation === `vertical` ? `` : components.nav.link.padding};
 
     &:first-of-type {
       padding-left: 0;
@@ -53,7 +53,7 @@ export const defaultProps = {
 };
 
 export const Menu: React.FC<Menu> = ({
-  alignment,
+  orientation,
   navItems = defaultProps.navItems,
 }: Menu) => {
   const items = navItems.map(item => {
@@ -61,5 +61,5 @@ export const Menu: React.FC<Menu> = ({
     return <NavItem label={label} href={href} />;
   });
 
-  return <StyledMenu alignment={alignment}>{items}</StyledMenu>;
+  return <StyledMenu orientation={orientation}>{items}</StyledMenu>;
 };

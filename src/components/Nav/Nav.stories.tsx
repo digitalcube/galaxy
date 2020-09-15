@@ -19,7 +19,7 @@ export const Default = () => {
 export const Vertical = () => {
   return (
     <Nav
-      alignment={`vertical`}
+      orientation={`vertical`}
       navItems={[
         {
           label: `About`,

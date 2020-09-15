@@ -17,5 +17,5 @@ export const Default = () => {
 };
 
 export const Vertical = () => {
-  return <Menu alignment="vertical" />;
+  return <Menu orientation="vertical" />;
 };

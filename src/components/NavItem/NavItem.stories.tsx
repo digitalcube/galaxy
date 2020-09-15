@@ -17,5 +17,5 @@ export const Default = () => {
 };
 
 export const Vertical = () => {
-  return <Nav alignment="vertical" />;
+  return <Nav orientation="vertical" />;
 };

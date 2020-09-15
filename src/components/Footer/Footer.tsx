@@ -37,7 +37,7 @@ export const FooterNav: FC<FooterNav> = ({ title, navItems }: FooterNav) => {
       <Heading size="sm" as="h3">
         {title}
       </Heading>
-      <Nav navItems={navItems} alignment="vertical" />
+      <Nav navItems={navItems} orientation="vertical" />
     </div>
   );
 };
