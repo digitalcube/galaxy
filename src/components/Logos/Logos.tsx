@@ -107,7 +107,6 @@ export const Logos: React.FC<Logos> = ({
   nodes = nodesDefault,
 }: Logos) => {
   const { title } = content;
-  const spaceBetween = parseFloat(components.logos.gap) * 16;
   return (
     <Spacer as="section" size={3}>
       <Container size="md">

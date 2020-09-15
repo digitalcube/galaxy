@@ -7,7 +7,7 @@ import { components, colors } from '../../styles';
 type Heading = {
   children?: ReactNode;
   as?: `h1` | `h2` | `h3` | `h4` | `h5` | `h6` | `p`;
-  size?: `xl` | `lg` | `md` | `sm` | `xs`;
+  size?: `xl` | `lg` | `md` | `sm` | `xs` | `xxs`;
 };
 
 export const headingFontSize = ({ size = `md` }: Heading) => {
