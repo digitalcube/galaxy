@@ -11,6 +11,7 @@ import {
   Button,
   Text,
   Link,
+  Tabs,
 } from '../index';
 
 type Solutions = {
@@ -114,6 +115,7 @@ export const Solutions: FC<Solutions> = ({
     <section>
       <Spacer size={3}>
         <Container>
+          <Tabs />
           <Grid md="2">
             <Solution solution={solution} />
             <ThemeProvider theme={{ mode: `dark` }}>

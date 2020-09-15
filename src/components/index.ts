@@ -39,3 +39,4 @@ export * from './Spacer';
 export * from './Testimonials';
 export * from './Text';
 export * from './Avatar';
+export * from './Tabs';
