@@ -6,6 +6,7 @@ import { components } from '../../styles';
 export type Menu = {
   navItems?: NavItem[];
   orientation?: `horizontal` | `vertical`;
+  align?: `left` | `center` | `right`;
 };
 
 const StyledMenu = styled.ul<Menu>`

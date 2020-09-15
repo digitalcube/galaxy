@@ -6,6 +6,7 @@ export type Nav = {
   children?: ReactNode;
   navItems?: NavItem[];
   orientation?: `vertical` | `horizontal`;
+  align?: `left` | `center` | `right`;
 };
 
 const StyledNav = styled.nav<Nav>`
@@ -18,11 +19,12 @@ export const Nav: React.FC<Nav> = ({
   children,
   navItems,
   orientation,
+  align,
 }: Nav) => {
   return (
     <StyledNav role="navigation">
       {children}
-      <Menu orientation={orientation} navItems={navItems} />
+      <Menu align={align} orientation={orientation} navItems={navItems} />
     </StyledNav>
   );
 };
