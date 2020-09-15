@@ -18,11 +18,12 @@ import {
   NavItem,
   Button,
   Brand,
+  NodeList,
 } from '../index';
 import { components } from '../../styles';
 
 type Footer = {
-  navs?: Nav[];
+  nav?: Nav[];
 };
 
 type FooterNav = {
@@ -30,18 +31,33 @@ type FooterNav = {
   navItems?: NavItem[];
 };
 
-export const FooterNav: FC<FooterNav> = ({ navItems }: FooterNav) => {
+export const FooterNav: FC<FooterNav> = ({ title, navItems }: FooterNav) => {
   return (
-    <Col md={2}>
+    <div>
       <Heading size="sm" as="h3">
-        Company
+        {title}
       </Heading>
       <Nav navItems={navItems} alignment="vertical" />
-    </Col>
+    </div>
   );
 };
 
-export const Footer: FC<Footer> = ({ navs = [] }: Footer) => {
+export const Footer: FC<Footer> = ({ nav }: Footer) => {
+  const footerNavs = [
+    {
+      node: <FooterNav title="Company" />,
+    },
+    {
+      node: <FooterNav title="Product" />,
+    },
+    {
+      node: <FooterNav title="Resources" />,
+    },
+    {
+      node: <FooterNav title="Legal" />,
+    },
+  ];
+
   return (
     <Spacer as="section" size={3}>
       <Container>
@@ -82,10 +98,9 @@ export const Footer: FC<Footer> = ({ navs = [] }: Footer) => {
               <Button href="#">Join our newsletter</Button>
             </Content>
           </Col>
-          <FooterNav />
-          <FooterNav />
-          <FooterNav />
-          <FooterNav />
+          <Col md={8}>
+            <NodeList md={4} nodes={footerNavs} />
+          </Col>
         </Grid>
       </Container>
       <Container>

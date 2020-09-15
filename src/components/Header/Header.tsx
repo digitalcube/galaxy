@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { FC, ReactNode } from 'react';
 import styled from 'styled-components';
 import theme from 'styled-theming';
 import { Container, Spacer, Brand, NavItem, Menu, Nav } from '../index';
@@ -7,7 +7,7 @@ import { breakpoints } from '../../lib/utils';
 import { components, colors } from './../../styles';
 
 type Header = {
-  logo?: React.ReactNode;
+  logo?: ReactNode;
   navItems?: NavItem[];
   hover?: boolean;
   toggle?: boolean;
@@ -140,8 +140,8 @@ const Burger = ({ toggle, toggleNav }: Header) => {
   );
 };
 
-export const Header: React.FC<Header> = ({
-  logo = <Brand size={`45`} />,
+export const Header: FC<Header> = ({
+  logo = <Brand asset="shifter-mark" size={`45`} />,
   navItems = [
     {
       label: `Features`,
