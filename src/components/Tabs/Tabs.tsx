@@ -1,6 +1,6 @@
 import React, { FC, ReactNode } from 'react';
 import styled from 'styled-components';
-import { Tab, Menu } from '../index';
+import { Button, Menu } from '../index';
 
 const defaultProps = {
   navItems: [
@@ -46,7 +46,11 @@ export const Tabs: FC<Tabs> = ({
 }: Tabs) => {
   const items = navItems.map(item => {
     const { label, href } = item;
-    return <Tab label={label} href={href} />;
+    return (
+      <Button kind="ghost" href={href}>
+        {label}
+      </Button>
+    );
   });
 
   return (

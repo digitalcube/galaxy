@@ -116,6 +116,7 @@ export const Solutions: FC<Solutions> = ({
       <Spacer size={3}>
         <Container>
           <Tabs align="center" />
+          <Spacer size={1.5} />
           <Grid md="2">
             <Solution solution={solution} />
             <ThemeProvider theme={{ mode: `dark` }}>

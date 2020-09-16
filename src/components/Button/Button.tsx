@@ -10,7 +10,7 @@ export type Button = {
   hover?: boolean;
   mode?: 'light' | 'dark';
   schema?: 'amimoto' | 'shifter' | 'galaxy';
-  kind?: 'primary' | 'success';
+  kind?: 'primary' | 'success' | 'ghost';
   outline?: boolean;
   as?: `a` | `button`;
   size?: `lg` | `sm`;
@@ -85,6 +85,10 @@ const backgroundColor = ({
           light: colors.galaxy.successDark,
           dark: colors.galaxy.successDark,
         },
+        ghost: {
+          light: colors.shifter.gray.g200,
+          dark: colors.shifter.purple.p500,
+        },
       });
     if (schema === `amimoto`)
       return theme.variants('mode', 'kind', {
@@ -120,6 +124,10 @@ const backgroundColor = ({
       success: {
         light: colors.galaxy.success,
         dark: colors.galaxy.success,
+      },
+      ghost: {
+        light: colors.galaxy.transparent,
+        dark: colors.galaxy.transparent,
       },
     });
   if (schema === `amimoto`)
@@ -431,6 +439,10 @@ const borderColor = ({
       success: {
         light: colors.galaxy.success,
         dark: colors.galaxy.success,
+      },
+      ghost: {
+        light: colors.galaxy.transparent,
+        dark: colors.galaxy.transparent,
       },
     });
   if (schema === `amimoto`)
