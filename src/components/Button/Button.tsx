@@ -20,6 +20,7 @@ const backgroundColor = ({
   schema = `galaxy`,
   outline = false,
   hover = false,
+  active,
 }: Button) => {
   // Outline
   if (outline === true) {
@@ -62,6 +63,48 @@ const backgroundColor = ({
     // Outline / Initial
     return colors.galaxy.transparent;
   }
+
+  // Initial / Solid / Hover
+  if (active === true) {
+    if (schema === `galaxy`)
+      return theme.variants('mode', 'kind', {
+        primary: {
+          light: colors.galaxy.gray.g700,
+          dark: colors.galaxy.gray.g500,
+        },
+        success: {
+          light: colors.galaxy.successDark,
+          dark: colors.galaxy.successDark,
+        },
+      });
+    if (schema === `shifter`)
+      return theme.variants('mode', 'kind', {
+        primary: {
+          light: colors.shifter.purple.p500,
+          dark: colors.shifter.purple.p500,
+        },
+        success: {
+          light: colors.galaxy.successDark,
+          dark: colors.galaxy.successDark,
+        },
+        ghost: {
+          light: colors.shifter.purple.p200,
+          dark: colors.shifter.purple.p600,
+        },
+      });
+    if (schema === `amimoto`)
+      return theme.variants('mode', 'kind', {
+        primary: {
+          light: colors.amimoto.blue.b500,
+          dark: colors.amimoto.blue.b500,
+        },
+        success: {
+          light: colors.galaxy.successDark,
+          dark: colors.galaxy.successDark,
+        },
+      });
+  }
+
   // Initial / Solid / Hover
   if (hover === true) {
     if (schema === `galaxy`)
@@ -508,6 +551,18 @@ const StyledButton = styled(Button)<Button>`
   flex-direction: column;
   justify-content: center;
   text-decoration: none;
+
+  &:active {
+    background-color: ${props => {
+      const { outline } = props;
+      const { schema } = props.theme;
+      return backgroundColor({
+        schema: schema,
+        outline: outline,
+        active: true,
+      });
+    }};
+  }
 
   &:hover {
     transition: ${components.transition.entrance.fast};
