@@ -96,6 +96,11 @@ export const components = {
       padding: `1rem .5rem`,
     },
   },
+  tabs: {
+    tab: {
+      padding: `0.5rem 2rem`,
+    },
+  },
   content: {
     fontWeight: 400,
     fontFamily: `sofia-pro, sans-serif`,

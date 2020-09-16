@@ -4,6 +4,8 @@ import { type, colors } from '../../styles';
 
 export type Galaxy = {
   schema?: 'amimoto' | 'shifter' | 'galaxy';
+  mode?: 'light' | 'dark';
+  hover?: boolean;
 };
 
 const backgroundColor = ({ schema = `galaxy` }: Galaxy) => {

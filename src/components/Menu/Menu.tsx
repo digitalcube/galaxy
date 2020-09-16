@@ -1,18 +1,27 @@
-import React from 'react';
+import React, { FC, ReactNode } from 'react';
 import styled from 'styled-components';
-import { NavItem } from '../index';
 import { components } from '../../styles';
 
 export type Menu = {
-  navItems?: NavItem[];
+  nodes?: ReactNode;
   orientation?: `horizontal` | `vertical`;
   align?: `left` | `center` | `right`;
 };
 
+const margin = ({ align }: Menu) => {
+  if (align === `center`) return `0 auto`;
+  if (align === `left`) return `0 auto 0 0`;
+  if (align === `right`) return `0 0 auto 0`;
+  return `0`;
+};
+
 const StyledMenu = styled.ul<Menu>`
   list-style-type: none;
-  margin: 0;
   padding: 0;
+  margin: ${props => {
+    const { align } = props;
+    return margin({ align: align });
+  }};
   display: ${props => (props.orientation === `vertical` ? `` : `flex`)};
   flex-direction: ${props => (props.orientation === `vertical` ? `` : `row`)};
 
@@ -30,37 +39,10 @@ const StyledMenu = styled.ul<Menu>`
   }
 `;
 
-export const defaultProps = {
-  navItems: [
-    {
-      label: `Features`,
-      href: `https://google.com/`,
-    },
-    {
-      label: `Blog`,
-      href: `/blog`,
-    },
-    {
-      label: `Solutions`,
-      href: `/solutions`,
-    },
-    {
-      label: `Pricing`,
-    },
-    {
-      label: `Showcase`,
-    },
-  ],
-};
-
-export const Menu: React.FC<Menu> = ({
-  orientation,
-  navItems = defaultProps.navItems,
-}: Menu) => {
-  const items = navItems.map(item => {
-    const { label, href } = item;
-    return <NavItem label={label} href={href} />;
-  });
-
-  return <StyledMenu orientation={orientation}>{items}</StyledMenu>;
+export const Menu: FC<Menu> = ({ orientation, nodes, align }: Menu) => {
+  return (
+    <StyledMenu align={align} orientation={orientation}>
+      {nodes}
+    </StyledMenu>
+  );
 };

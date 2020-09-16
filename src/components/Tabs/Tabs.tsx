@@ -1,11 +1,58 @@
-import React from 'react';
-import { Nav } from '../index';
+import React, { FC, ReactNode } from 'react';
+import styled from 'styled-components';
+import { Tab, Menu } from '../index';
 
-type Tabs = {
-  nodes?: any;
+const defaultProps = {
+  navItems: [
+    {
+      label: `Designers`,
+    },
+    {
+      label: `Education`,
+    },
+    {
+      label: `Enterprise`,
+    },
+    {
+      label: `Marketing`,
+    },
+    {
+      label: `Nonprofit`,
+    },
+    {
+      label: `Technology`,
+    },
+  ],
 };
 
-export const Tabs: React.FC<Tabs> = ({ nodes }: Tabs) => {
-  console.log(nodes);
-  return <Nav />;
+export type Tabs = {
+  children?: ReactNode;
+  navItems?: Tab[];
+  orientation?: `vertical` | `horizontal`;
+  align?: `left` | `center` | `right`;
+};
+
+const StyledTabs = styled.nav<Tab>`
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+`;
+
+export const Tabs: FC<Tabs> = ({
+  children,
+  navItems = defaultProps.navItems,
+  orientation,
+  align,
+}: Tabs) => {
+  const items = navItems.map(item => {
+    const { label, href } = item;
+    return <Tab label={label} href={href} />;
+  });
+
+  return (
+    <StyledTabs role="navigation">
+      {children}
+      <Menu align={align} orientation={orientation} nodes={items} />
+    </StyledTabs>
+  );
 };

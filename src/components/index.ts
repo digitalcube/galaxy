@@ -40,3 +40,4 @@ export * from './Testimonials';
 export * from './Text';
 export * from './Avatar';
 export * from './Tabs';
+export * from './Tab';
