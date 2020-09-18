@@ -14,7 +14,7 @@ export default {
 
 export const Default = () => (
   <PageHeader>
-    <Heading size="md" as="h1">
+    <Heading size="5" as="h1">
       Eiusmod laborum nulla elit Lorem nisi nisi officia est cupidatat.
     </Heading>
   </PageHeader>

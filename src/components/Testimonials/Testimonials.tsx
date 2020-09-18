@@ -37,7 +37,7 @@ const Quote = ({}: Quote) => {
         <b>Serverless</b>
       </Text>
       <Link href="#">
-        <Heading size="xxs" as="h3">
+        <Heading size="0" as="h3">
           @serverless
         </Heading>
       </Link>
@@ -80,7 +80,7 @@ export const Testimonials: FC<Testimonials> = ({
     <Spacer as="section" size={3}>
       <Container size="sm">
         <Content align="center">
-          <Heading size="lg">{title}</Heading>
+          <Heading size="6">{title}</Heading>
         </Content>
       </Container>
       <Spacer size={3} />

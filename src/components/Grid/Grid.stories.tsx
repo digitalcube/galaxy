@@ -30,7 +30,7 @@ export const Default = () => (
 );
 
 export const ResponsiveColumns = () => (
-  <Grid xl="4" lg="3" md="2">
+  <Grid columns={[1, 3, 5, 2, '4fr 8fr']}>
     <Col>Item</Col>
     <Col>Item</Col>
     <Col>Item</Col>
@@ -47,8 +47,8 @@ export const ResponsiveColumns = () => (
 );
 
 export const columnSizing = () => (
-  <Grid sm="3">
-    <Col>Item</Col>
-    <Col width={2}>Item</Col>
+  <Grid columns={'1fr 2fr'}>
+    <div>Item</div>
+    <div>Item</div>
   </Grid>
 );

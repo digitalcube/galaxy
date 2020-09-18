@@ -15,6 +15,7 @@ import {
 } from '../index';
 
 type Solutions = {
+  title?: string;
   solution?: {
     title?: string;
     subtitle?: string;
@@ -93,6 +94,7 @@ const Solution: FC<Solutions> = ({
 };
 
 export const Solutions: FC<Solutions> = ({
+  title = `Discover how Shifter empowers every type of business and industry`,
   solution = {
     title: `Designers`,
     subtitle: `Use page builders and themes that will get your site noticed.`,
@@ -115,9 +117,16 @@ export const Solutions: FC<Solutions> = ({
     <section>
       <Spacer size={3}>
         <Container>
+          <Container size="md">
+            <Content align="center">
+              <Heading size="6">
+                <b>{title}</b>
+              </Heading>
+            </Content>
+          </Container>
           <Tabs align="center" />
           <Spacer size={1.5} />
-          <Grid md="2">
+          <Grid columns={[1, null, null, null, 2]}>
             <Solution solution={solution} />
             <ThemeProvider theme={{ mode: `dark` }}>
               <Showcase showcase={showcase} />

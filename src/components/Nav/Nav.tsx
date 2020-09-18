@@ -1,6 +1,6 @@
 import React, { ReactNode } from 'react';
-import styled from 'styled-components';
-import { NavItem, Menu } from '../index';
+import { NavItem } from '../index';
+import { Flex, NavLink } from 'theme-ui';
 
 const defaultProps = {
   navItems: [
@@ -28,31 +28,26 @@ const defaultProps = {
 export type Nav = {
   children?: ReactNode;
   navItems?: NavItem[];
-  orientation?: `vertical` | `horizontal`;
+  direction?: `column` | `row`;
   align?: `left` | `center` | `right`;
 };
 
-const StyledNav = styled.nav<Nav>`
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-`;
-
 export const Nav: React.FC<Nav> = ({
-  children,
   navItems = defaultProps.navItems,
-  orientation,
+  direction,
   align,
 }: Nav) => {
   const items = navItems.map(item => {
     const { label, href } = item;
-    return <NavItem label={label} href={href} />;
+    return <NavLink href={href}>{label}</NavLink>;
   });
 
+  console.log(direction);
+
   return (
-    <StyledNav role="navigation">
-      {children}
-      <Menu align={align} orientation={orientation} nodes={items} />
-    </StyledNav>
+    <Flex sx={{ flexDirection: direction }} as="nav" role="navigation">
+      {direction}
+      {items}
+    </Flex>
   );
 };

@@ -114,12 +114,12 @@ export const components = {
     fontStyle: `normal`,
     lineHeight: `1.6`,
     size: {
-      xl: `3rem`,
-      lg: `2rem`,
-      md: `1.5rem`,
-      sm: `1.25rem`,
-      xs: `1rem`,
-      xxs: `0.75rem`,
+      xl: `3rem`, // 7
+      lg: `2rem`, // 6
+      md: `1.5rem`, // 5
+      sm: `1.25rem`, // 4
+      xs: `1rem`, // 3
+      xxs: `0.75rem`, // 0
     },
   },
   text: {

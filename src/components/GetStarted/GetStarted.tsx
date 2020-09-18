@@ -18,8 +18,8 @@ export const GetStarted = ({
     <Spacer size={3}>
       <Container size="md">
         <Content align="center">
-          <Heading size="lg">{title}</Heading>
-          <Heading size="md">{subtitle}</Heading>
+          <Heading size="6">{title}</Heading>
+          <Heading size="5">{subtitle}</Heading>
           <Button href={href} kind="primary">
             {buttonLabel}
           </Button>

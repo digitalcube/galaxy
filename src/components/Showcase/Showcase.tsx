@@ -3,7 +3,6 @@ import {
   Heading,
   Button,
   Spacer,
-  NodeList,
   Container,
   Content,
   Image,
@@ -11,6 +10,7 @@ import {
   Col,
   Post,
   Link,
+  Grid,
 } from '../index';
 
 type Showcase = {
@@ -24,14 +24,12 @@ type Showcase = {
 export const ShowcaseNodes = ({ nodes = [] }: Showcase) => {
   const showcaseNodes = nodes.map((node: Post, i) => {
     const { title, img, excerpt, href } = node;
-    return {
-      node: (
-        <Post key={i} href={href} title={title} img={img} excerpt={excerpt} />
-      ),
-    };
+    return (
+      <Post key={i} href={href} title={title} img={img} excerpt={excerpt} />
+    );
   });
 
-  return <NodeList md="2" nodes={showcaseNodes} />;
+  return <Grid columns={2}>{showcaseNodes}</Grid>;
 };
 
 export const Showcase = ({
@@ -75,13 +73,13 @@ export const Showcase = ({
   return (
     <Spacer size={3}>
       <Container>
-        <Grid md={3}>
+        <Grid columns={[1, null, null, 2, 3]}>
           <Col sm={1}>
             <Content>
-              <Heading as="h2" size="lg">
+              <Heading as="h2" size="6">
                 {title}
               </Heading>
-              <Heading as="h2" size="sm">
+              <Heading as="h2" size="4">
                 {subtitle}
               </Heading>
               <Button outline kind="primary" href={href}>

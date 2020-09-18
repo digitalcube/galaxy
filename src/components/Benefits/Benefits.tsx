@@ -1,13 +1,5 @@
 import React, { ReactNode } from 'react';
-import {
-  Heading,
-  Container,
-  Grid,
-  Col,
-  Content,
-  Spacer,
-  Animation,
-} from '../index';
+import { Heading, Container, Grid, Content, Spacer, Animation } from '../index';
 
 type Benefits = {
   title?: string;
@@ -30,16 +22,14 @@ const nodeList = ({ nodes = [] }: Benefits) => {
     const { content } = item;
     const { title, excerpt } = content;
     return (
-      <Col key={i}>
-        <Content>
-          <Heading as="h3" size="md">
-            {title}
-          </Heading>
-          <Heading as="p" size="xs">
-            {excerpt}
-          </Heading>
-        </Content>
-      </Col>
+      <Content key={i}>
+        <Heading as="h3" size="5">
+          <b>{title}</b>
+        </Heading>
+        <Heading as="p" size="3">
+          {excerpt}
+        </Heading>
+      </Content>
     );
   });
   return i;
@@ -82,10 +72,10 @@ export const Benefits = ({
         <Container>
           <Container size="md" align="left">
             <Content>
-              <Heading as="h2" size="lg">
-                {title}
+              <Heading as="h2" size="6">
+                <b>{title}</b>
               </Heading>
-              <Heading as="h3" size="xs">
+              <Heading as="h3" size="3">
                 {subtitle}
               </Heading>
             </Content>
@@ -93,8 +83,8 @@ export const Benefits = ({
         </Container>
         <Spacer size={3} />
         <Container>
-          <Grid md="2">
-            <Grid md="2">{nodeList({ nodes: nodes })}</Grid>
+          <Grid columns={2}>
+            <Grid columns={2}>{nodeList({ nodes: nodes })}</Grid>
             {img}
           </Grid>
         </Container>

@@ -111,7 +111,9 @@ export const Logos: FC<Logos> = ({
     <Spacer as="section" size={3}>
       <Container size="md">
         <Content align="center">
-          <Heading size="lg">{title}</Heading>
+          <Heading size="6">
+            <b>{title}</b>
+          </Heading>
         </Content>
       </Container>
       <Spacer size={3} />

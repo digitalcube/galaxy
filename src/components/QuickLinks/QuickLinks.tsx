@@ -32,7 +32,7 @@ export const QuickLinks: FC<QuickLinks> = ({
     <Spacer size={3}>
       <Container>
         <Content align="center">
-          <Heading size="md">{title}</Heading>
+          <Heading size="5">{title}</Heading>
           <Nav align="center" nodes={nodes} />
         </Content>
       </Container>

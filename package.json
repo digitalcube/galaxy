@@ -84,12 +84,14 @@
   "dependencies": {
     "@styled-icons/fa-brands": "^10.18.0",
     "@types/styled-theming": "^2.2.5",
+    "@types/theme-ui": "^0.3.6",
     "babel-loader": "^8.1.0",
     "moment": "^2.27.0",
     "moment-duration-format": "^2.3.2",
     "react-lottie": "^1.2.3",
     "styled-components": "^5.2.0",
     "styled-normalize": "^8.0.7",
-    "swiper": "^6.2.0"
+    "swiper": "^6.2.0",
+    "theme-ui": "^0.3.1"
   }
 }

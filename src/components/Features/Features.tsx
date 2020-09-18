@@ -3,11 +3,11 @@ import {
   Heading,
   Button,
   Spacer,
-  NodeList,
   Card,
   Container,
   Content,
   Image,
+  Grid,
 } from '../index';
 
 type Features = {
@@ -37,12 +37,10 @@ export const Feature = ({ img, title, excerpt }: Card) => {
 export const FeaturesNodes = ({ nodes = [] }: Features) => {
   const featureNodes = nodes.map((node: Card, i) => {
     const { title, img, excerpt } = node;
-    return {
-      node: <Feature key={i} title={title} img={img} excerpt={excerpt} />,
-    };
+    return <Feature key={i} title={title} img={img} excerpt={excerpt} />;
   });
 
-  return <NodeList md="2" lg="4" nodes={featureNodes} />;
+  return <Grid columns={[2, null, null, null, 4]}>{featureNodes}</Grid>;
 };
 
 export const Features = ({
@@ -101,10 +99,10 @@ export const Features = ({
     <Spacer size={3}>
       <Container size="md">
         <Content align="center">
-          <Heading as="h2" size="lg">
+          <Heading as="h2" size="6">
             {title}
           </Heading>
-          <Heading as="h2" size="sm">
+          <Heading as="h3" size="3">
             {subtitle}
           </Heading>
         </Content>

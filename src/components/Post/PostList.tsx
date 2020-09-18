@@ -67,7 +67,7 @@ const PostListItems = ({
 }: PostListItems) => {
   if (!content) return null;
   return (
-    <Grid xxs={xxs} xs={xs} sm={sm} md={md} lg={lg} xl={xl} xxl={xxl}>
+    <Grid>
       {content.map((node, i) => {
         if (!node) return null;
         const { title, subtitle, excerpt, category, author, date, img } = node;

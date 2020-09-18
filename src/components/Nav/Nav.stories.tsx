@@ -1,6 +1,7 @@
 import React from 'react';
 import { withKnobs } from '@storybook/addon-knobs';
 import { Nav } from '../index';
+import { Flex, NavLink } from 'theme-ui';
 
 export default {
   component: Nav,
@@ -19,7 +20,7 @@ export const Default = () => {
 export const Vertical = () => {
   return (
     <Nav
-      orientation={`vertical`}
+      direction="column"
       navItems={[
         {
           label: `About`,
@@ -35,5 +36,15 @@ export const Vertical = () => {
         },
       ]}
     />
+  );
+};
+
+export const ThemeUI = () => {
+  return (
+    <Flex sx={{ flexDirection: 'column' }} as="nav">
+      <NavLink href="#!">Home</NavLink>
+      <NavLink href="#!">Blog</NavLink>
+      <NavLink href="#!">About</NavLink>
+    </Flex>
   );
 };

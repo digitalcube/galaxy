@@ -34,10 +34,12 @@ export const Hero: React.FC<Hero> = ({
     <section>
       <Spacer size={3} />
       <Container>
-        <Grid md="2">
+        <Grid columns={2}>
           <Content>
-            <Heading size="xl">{title}</Heading>
-            <Heading size="md">{subtitle}</Heading>
+            <Heading size="7">
+              <b>{title}</b>
+            </Heading>
+            <Heading size="4">{subtitle}</Heading>
             <Spacer size={2}>
               <Button href={href}>{buttonLabel}</Button>
             </Spacer>

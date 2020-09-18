@@ -1,4 +1,6 @@
-import { ThemeProvider } from 'styled-components';
+// import { ThemeProvider } from 'styled-components';
+import { ThemeProvider } from 'theme-ui';
+import { galaxy, amimoto, shifter } from '../src/themes';
 
 export const contexts = [
   {
@@ -9,25 +11,19 @@ export const contexts = [
       {
         name: 'Galaxy',
         props: {
-          theme: {
-            schema: `galaxy`,
-          },
+          theme: galaxy,
         },
       },
       {
         name: 'Amimoto',
         props: {
-          theme: {
-            schema: `amimoto`,
-          },
+          theme: amimoto,
         },
       },
       {
         name: 'Shifter',
         props: {
-          theme: {
-            schema: `shifter`,
-          },
+          theme: shifter,
           default: true,
         },
       },

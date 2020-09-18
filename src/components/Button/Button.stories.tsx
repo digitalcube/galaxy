@@ -37,5 +37,5 @@ const options = outline.map(outline => {
 });
 
 export const Buttons = () => {
-  return <Grid sm="4">{options}</Grid>;
+  return <Grid columns={4}>{options}</Grid>;
 };
