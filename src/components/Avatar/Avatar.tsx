@@ -1,27 +1,15 @@
 import React, { FC } from 'react';
-import styled from 'styled-components';
-import { Image } from '../index';
+import { Avatar as ThemeUIAvatar } from 'theme-ui';
 
 type Avatar = {
   img?: string;
-  width?: string;
+  size?: string;
 };
 
 export const Avatar: FC<Avatar> = ({
-  img = `https://www.getshifter.io/static/2d0c850166d901b54e69b68f4b3393cf/df94f/Samky52L_400x400.webp`,
-  width,
+  img = `//placehold.it/100`,
+  size,
 }: Avatar) => {
   if (!img) return null;
-  return (
-    <StyledImage width={width}>
-      <img src={img} alt="" />
-    </StyledImage>
-  );
+  return <ThemeUIAvatar variant={size} src={img} />;
 };
-
-const StyledImage = styled(Image)`
-  img {
-    border-radius: 50%;
-    overflow: hidden;
-  }
-`;

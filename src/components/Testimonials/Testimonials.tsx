@@ -20,25 +20,29 @@ type Testimonials = {
   title?: string;
 };
 
-type Quote = {};
+type Quote = {
+  img?: string;
+  quote?: string;
+  author?: string;
+  handle?: string;
+};
 
-const Quote = ({}: Quote) => {
+const Quote = ({
+  img = 'avatar.png',
+  quote = `Proident irure anim non non labore adipisicing.`,
+  author = 'FooBarBaz',
+  handle = `@ExampleFooBarBaz`,
+}: Quote) => {
   return (
     <Content align="center">
+      <Text>{quote}</Text>
+      <Avatar size="1" img={img} />
       <Text>
-        This looks very good. Direction of travel imho for WordPress
-        architecture
-      </Text>
-      <Avatar
-        width="25%"
-        img={`https://www.getshifter.io/static/2d0c850166d901b54e69b68f4b3393cf/df94f/Samky52L_400x400.webp`}
-      />
-      <Text>
-        <b>Serverless</b>
+        <b>{author}</b>
       </Text>
       <Link href="#">
         <Heading size="0" as="h3">
-          @serverless
+          {handle}
         </Heading>
       </Link>
     </Content>
@@ -73,12 +77,12 @@ const nodesDefault = [
 ];
 
 export const Testimonials: FC<Testimonials> = ({
-  title = `Discover what the people are saying about Shifter.`,
+  title = `Dolor dolor exercitation nisi sunt cillum est fugiat eiusmod nisi incididunt dolore duis elit.`,
   nodes = nodesDefault,
 }: Testimonials) => {
   return (
     <Spacer as="section" size={3}>
-      <Container size="sm">
+      <Container size="md">
         <Content align="center">
           <Heading size="6">{title}</Heading>
         </Content>

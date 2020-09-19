@@ -12,3 +12,13 @@ export default {
 export const Default = () => {
   return <Avatar />;
 };
+
+export const Sizes = () => {
+  return (
+    <>
+      <Avatar size="0" />
+      <Avatar size="1" />
+      <Avatar size="2" />
+    </>
+  );
+};

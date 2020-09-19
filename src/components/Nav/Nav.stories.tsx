@@ -6,10 +6,7 @@ import { Flex, NavLink } from 'theme-ui';
 export default {
   component: Nav,
   title: `Components/Nav`,
-  decorators: [
-    withKnobs,
-    (story: any) => <div style={{ padding: `3rem` }}>{story()}</div>,
-  ],
+  decorators: [withKnobs],
   excludeStories: /.*Data$/,
 };
 
@@ -18,25 +15,7 @@ export const Default = () => {
 };
 
 export const Vertical = () => {
-  return (
-    <Nav
-      direction="column"
-      navItems={[
-        {
-          label: `About`,
-          href: `#`,
-        },
-        {
-          label: `Blog`,
-          href: `#`,
-        },
-        {
-          label: `Press`,
-          href: `#`,
-        },
-      ]}
-    />
-  );
+  return <Nav direction="column" />;
 };
 
 export const ThemeUI = () => {

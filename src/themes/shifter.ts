@@ -1,5 +1,7 @@
 // shifter.ts
 
+const avatar = {};
+
 export const shifter = {
   breakpoints: [
     '320px',
@@ -71,6 +73,29 @@ export const shifter = {
     magenta: {
       dark: `#F80A5B`,
       light: `#FEEEF4`,
+    },
+  },
+  images: {
+    avatar: {
+      width: 100,
+      height: 100,
+      borderRadius: 99999,
+      background: 'purple.p600',
+    },
+    0: {
+      variant: 'images.avatar',
+      width: '1rem',
+      height: '1rem',
+    },
+    1: {
+      variant: 'images.avatar',
+      width: '2.5rem',
+      height: '2.5rem',
+    },
+    2: {
+      variant: 'images.avatar',
+      width: '5.5rem',
+      height: '5.5rem',
     },
   },
   links: {

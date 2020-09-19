@@ -1,6 +1,6 @@
 import React, { ReactNode } from 'react';
-import { NavItem } from '../index';
-import { Flex, NavLink } from 'theme-ui';
+import { NavLink } from '../NavLink';
+import { Flex } from 'theme-ui';
 
 const defaultProps = {
   navItems: [
@@ -27,26 +27,21 @@ const defaultProps = {
 
 export type Nav = {
   children?: ReactNode;
-  navItems?: NavItem[];
+  navItems?: NavLink[];
   direction?: `column` | `row`;
-  align?: `left` | `center` | `right`;
 };
 
 export const Nav: React.FC<Nav> = ({
   navItems = defaultProps.navItems,
-  direction,
-  align,
+  direction = 'row',
 }: Nav) => {
   const items = navItems.map(item => {
     const { label, href } = item;
-    return <NavLink href={href}>{label}</NavLink>;
+    return <NavLink href={href} label={label} />;
   });
-
-  console.log(direction);
 
   return (
     <Flex sx={{ flexDirection: direction }} as="nav" role="navigation">
-      {direction}
       {items}
     </Flex>
   );
