@@ -37,6 +37,12 @@ export const shifter = {
     0: `.25rem`,
     1: `.5rem`,
   },
+  shadows: {
+    0: `0px 1px 8px rgba(69, 29, 57, 0.1)`,
+    1: `0px 2px 8px rgba(69, 29, 57, 0.2)`,
+    2: `00px 8px 15px rgba(69, 29, 57, 0.2), 0px 8px 20px 4px rgba(69, 29, 57, 0.15)`,
+    3: `0px 6px 18px rgba(69, 29, 57, 0.29), 0px 19px 29px rgba(69, 29, 57, 0.35)`,
+  },
   space: [0, 8, 16, 24, 32, 40, 48, 56, 64],
   fonts: {
     body: 'Sofia Pro, sans-serif',
@@ -133,6 +139,14 @@ export const shifter = {
       variant: 'badges.primary',
       color: 'white',
       bg: 'status.danger.primary',
+    },
+  },
+  cards: {
+    primary: {
+      bg: `white`,
+      borderRadius: 0,
+      boxShadow: 0,
+      overflow: 'hidden',
     },
   },
   buttons: {
