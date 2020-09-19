@@ -1,6 +1,6 @@
 /** @jsx jsx */
 import { jsx } from 'theme-ui';
-import React, { ReactNode, FC } from 'react';
+import { ReactNode, FC } from 'react';
 
 type Content = {
   children?: ReactNode;
@@ -12,6 +12,7 @@ export const Content: FC<Content> = ({ align, children }: Content) => {
   return (
     <div
       sx={{
+        textAlign: align,
         '& > *': {
           mt: 0,
         },
