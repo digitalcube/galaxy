@@ -16,16 +16,13 @@ export default {
   excludeStories: /.*Data$/,
 };
 
-export const Deploy = () => <Badge deploy={{ state: `DEPLOY_PUBLISHED` }} />;
+export const Default = () => <Badge>Default</Badge>;
 
-export const Setting = () => (
+export const Kinds = () => (
   <>
-    <Badge setting={{ state: `SETTING_AUTO_DEPLOY_ENABLED` }} />
-    {` `}
-    <Badge setting={{ state: `SETTING_AUTO_DEPLOY_DISABLED` }} />
-    {` `}
-    <Badge setting={{ state: `SETTING_CREATE_BACKUP_ENABLED` }} />
-    {` `}
-    <Badge setting={{ state: `SETTING_CREATE_BACKUP_DISABLED` }} />
+    <Badge kind="primary">Primary</Badge>
+    <Badge kind="success">Success</Badge>
+    <Badge kind="warning">Warning</Badge>
+    <Badge kind="danger">Danger</Badge>
   </>
 );

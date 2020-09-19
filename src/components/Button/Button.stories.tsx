@@ -44,16 +44,19 @@ export const Kinds = () => {
   return (
     <>
       <Button kind="primary" href="#!">
-        Hello world
+        Primary
       </Button>
       <Button kind="success" href="#!">
-        Hello world
+        Success
       </Button>
       <Button kind="ghost" href="#!">
-        Hello world
+        Ghost
       </Button>
       <Button kind="white" href="#!">
-        Hello world
+        White
+      </Button>
+      <Button kind="danger" href="#!">
+        Danger
       </Button>
     </>
   );

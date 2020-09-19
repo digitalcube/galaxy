@@ -14,7 +14,15 @@ export default {
 };
 
 const headingSizes = Object.keys(shifter.text).map((size: Heading) => {
-  return <Heading size={`${size}`}>Hello world</Heading>;
+  return (
+    <>
+      <Heading size={`${size}`}>heading / size: {size}</Heading>
+      <br />
+      <Heading size={`${size}`}>
+        <b>heading / {size}</b>
+      </Heading>
+    </>
+  );
 });
 
 export const Sizes = () => {

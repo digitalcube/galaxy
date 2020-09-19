@@ -33,6 +33,10 @@ export const shifter = {
     '1440px',
     '2560px',
   ],
+  radii: {
+    0: `.25rem`,
+    1: `.5rem`,
+  },
   space: [0, 8, 16, 24, 32, 40, 48, 56, 64],
   fonts: {
     body: 'Sofia Pro, sans-serif',
@@ -61,6 +65,14 @@ export const shifter = {
       success: {
         primary: `#0B8451`,
         dark: `#0A6450`,
+      },
+      warning: {
+        primary: `#FFA600`,
+        dark: `#D17303`,
+      },
+      danger: {
+        primary: `#CE1616`,
+        dark: `#950000`,
       },
     },
     gray: {
@@ -92,10 +104,35 @@ export const shifter = {
     nav: {
       fontSize: 3,
       fontWeight: '400',
-      color: 'purple.p600',
+      color: 'primary',
       '&:hover': {
         color: 'purple.primary',
       },
+    },
+  },
+  badges: {
+    primary: {
+      fontSize: 0,
+      color: 'white',
+      bg: 'primary',
+      px: 2,
+      py: 1 / 2,
+      borderRadius: 99999,
+    },
+    success: {
+      variant: 'badges.primary',
+      color: 'white',
+      bg: 'status.success.primary',
+    },
+    warning: {
+      variant: 'badges.primary',
+      color: 'white',
+      bg: 'status.warning.primary',
+    },
+    danger: {
+      variant: 'badges.primary',
+      color: 'white',
+      bg: 'status.danger.primary',
     },
   },
   buttons: {
@@ -104,9 +141,10 @@ export const shifter = {
       color: 'white',
       px: 4,
       py: 1,
+      borderRadius: 0,
       bg: 'purple.primary',
       '&:hover': {
-        bg: 'purple.p600',
+        bg: 'primary',
       },
     },
     success: {
@@ -127,61 +165,73 @@ export const shifter = {
     },
     white: {
       variant: 'buttons.primary',
-      color: 'purple.p600',
+      color: 'primary',
       bg: 'white',
       '&:hover': {
         bg: 'gray.g300',
       },
     },
+    danger: {
+      variant: 'buttons.primary',
+      bg: 'status.danger.primary',
+      color: 'white',
+      '&:hover': {
+        bg: 'status.danger.dark',
+      },
+    },
   },
   text: {
+    heading: {
+      color: 'primary',
+      fontWeight: 400,
+    },
     0: {
       variant: 'text.heading',
       fontSize: 0,
       lineHeight: 1,
-      color: 'purple.p600',
+      color: 'primary',
     },
     1: {
       variant: 'text.heading',
       fontSize: 1,
       lineHeight: 1.375,
-      color: 'purple.p600',
+      color: 'primary',
     },
     2: {
       variant: 'text.heading',
       fontSize: 2,
       lineHeight: 1.5,
-      color: 'purple.p600',
+      color: 'primary',
     },
     3: {
       variant: 'text.heading',
       fontSize: 3,
       lineHeight: 1.444,
-      color: 'purple.p600',
+      color: 'primary',
     },
     4: {
       variant: 'text.heading',
       fontSize: 4,
       lineHeight: 1.6,
-      color: 'purple.p600',
+      color: 'primary',
     },
     5: {
       variant: 'text.heading',
       fontSize: 5,
       lineHeight: 1.75,
-      color: 'purple.p600',
+      color: 'primary',
     },
     6: {
       variant: 'text.heading',
       fontSize: 6,
       lineHeight: 1.444,
-      color: 'purple.p600',
+      color: 'primary',
     },
     7: {
       variant: 'text.heading',
       fontSize: 7,
       lineHeight: 1.333,
-      color: 'purple.p600',
+      color: 'primary',
     },
   },
   styles: {
