@@ -1,6 +1,27 @@
 // shifter.ts
 
-const avatar = {};
+const avatar = {
+  avatar: {
+    width: 100,
+    height: 100,
+    borderRadius: 99999,
+  },
+  0: {
+    variant: 'images.avatar',
+    width: '1rem',
+    height: '1rem',
+  },
+  1: {
+    variant: 'images.avatar',
+    width: '2.5rem',
+    height: '2.5rem',
+  },
+  2: {
+    variant: 'images.avatar',
+    width: '5.5rem',
+    height: '5.5rem',
+  },
+};
 
 export const shifter = {
   breakpoints: [
@@ -29,30 +50,19 @@ export const shifter = {
     heading: null,
   },
   colors: {
-    modes: {
-      dark: {
-        text: '#fff',
-        background: '#000',
-        primary: '#0cf',
-        secondary: '#09c',
-        muted: '#111',
-      },
-      light: {
-        text: '#fff',
-        background: '#000',
-        primary: '#0cf',
-        secondary: '#09c',
-        muted: '#111',
-      },
-    },
     text: '#000',
-    primary: '#07c',
-    secondary: '#30c',
-    muted: '#f6f6f6',
-    danger: '#FF0000',
+    primary: '#9C036E',
+    secondary: '#451D39',
     black: `#25021B`,
     white: `#FFFFFF`,
+    success: `#0B8451`,
     background: `#FAFAFA`,
+    status: {
+      success: {
+        primary: `#0B8451`,
+        dark: `#0A6450`,
+      },
+    },
     gray: {
       g500: `#797679`,
       g400: `#A29CA1`,
@@ -76,27 +86,7 @@ export const shifter = {
     },
   },
   images: {
-    avatar: {
-      width: 100,
-      height: 100,
-      borderRadius: 99999,
-      background: 'purple.p600',
-    },
-    0: {
-      variant: 'images.avatar',
-      width: '1rem',
-      height: '1rem',
-    },
-    1: {
-      variant: 'images.avatar',
-      width: '2.5rem',
-      height: '2.5rem',
-    },
-    2: {
-      variant: 'images.avatar',
-      width: '5.5rem',
-      height: '5.5rem',
-    },
+    ...avatar,
   },
   links: {
     nav: {
@@ -105,6 +95,42 @@ export const shifter = {
       color: 'purple.p600',
       '&:hover': {
         color: 'purple.primary',
+      },
+    },
+  },
+  buttons: {
+    primary: {
+      fontSize: 1,
+      color: 'white',
+      px: 4,
+      py: 1,
+      bg: 'purple.primary',
+      '&:hover': {
+        bg: 'purple.p600',
+      },
+    },
+    success: {
+      variant: 'buttons.primary',
+      color: 'white',
+      bg: 'status.success.primary',
+      '&:hover': {
+        bg: 'status.success.dark',
+      },
+    },
+    ghost: {
+      variant: 'buttons.primary',
+      color: 'purple.primary',
+      bg: 'transparent',
+      '&:hover': {
+        bg: 'gray.g200',
+      },
+    },
+    white: {
+      variant: 'buttons.primary',
+      color: 'purple.p600',
+      bg: 'white',
+      '&:hover': {
+        bg: 'gray.g300',
       },
     },
   },

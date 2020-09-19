@@ -36,6 +36,29 @@ const options = outline.map(outline => {
   });
 });
 
-export const Buttons = () => {
+export const Default = () => {
+  return <Button href="#!">Hello world</Button>;
+};
+
+export const Kinds = () => {
+  return (
+    <>
+      <Button kind="primary" href="#!">
+        Hello world
+      </Button>
+      <Button kind="success" href="#!">
+        Hello world
+      </Button>
+      <Button kind="ghost" href="#!">
+        Hello world
+      </Button>
+      <Button kind="white" href="#!">
+        Hello world
+      </Button>
+    </>
+  );
+};
+
+export const All = () => {
   return <Grid columns={4}>{options}</Grid>;
 };
