@@ -4,11 +4,12 @@ import { Link as ThemeUILink } from 'theme-ui';
 type Link = {
   href?: string;
   children?: ReactNode;
+  kind?: string;
 };
 
-export const Link: FC<Link> = ({ href, children }: Link) => {
+export const Link: FC<Link> = ({ href, children, kind }: Link) => {
   return (
-    <ThemeUILink variant="primary" href={href}>
+    <ThemeUILink variant={kind} href={href}>
       {children}
     </ThemeUILink>
   );

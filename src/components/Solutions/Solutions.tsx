@@ -1,5 +1,6 @@
 import React, { FC, ReactNode } from 'react';
 import { ThemeProvider } from 'styled-components';
+import { Flex } from 'theme-ui';
 import {
   Container,
   Spacer,
@@ -124,8 +125,14 @@ export const Solutions: FC<Solutions> = ({
               </Heading>
             </Content>
           </Container>
-          <Tabs align="center" />
-          <Spacer size={1.5} />
+          <Flex
+            sx={{
+              justifyContent: 'center',
+              my: 3,
+            }}
+          >
+            <Tabs />
+          </Flex>
           <Grid columns={[1, null, null, null, 2]}>
             <Solution solution={solution} />
             <ThemeProvider theme={{ colorMode: `dark` }}>

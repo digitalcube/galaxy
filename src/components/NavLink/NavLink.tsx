@@ -4,8 +4,13 @@ import { NavLink as ThemeUINavLink } from 'theme-ui';
 export type NavLink = {
   label?: ReactNode;
   href?: string;
+  kind?: string;
 };
 
-export const NavLink: React.FC<NavLink> = ({ href, label }: NavLink) => {
-  return <ThemeUINavLink href={href}>{label}</ThemeUINavLink>;
+export const NavLink: React.FC<NavLink> = ({ href, label, kind }: NavLink) => {
+  return (
+    <ThemeUINavLink variant={kind} href={href}>
+      {label}
+    </ThemeUINavLink>
+  );
 };

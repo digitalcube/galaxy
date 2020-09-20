@@ -124,9 +124,15 @@ export const shifter = {
       '&:hover': {
         color: 'purple.primary',
       },
+    },
+    row: {
+      variant: 'links.nav',
       '&:not(:first-child)': {
         ml: 4,
       },
+    },
+    column: {
+      variant: 'links.nav',
     },
     primary: {
       variant: 'buttons.primary',

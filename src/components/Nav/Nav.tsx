@@ -6,21 +6,23 @@ const defaultProps = {
   navItems: [
     {
       label: `Features`,
-      href: `https://google.com/`,
+      href: `#!`,
     },
     {
       label: `Blog`,
-      href: `/blog`,
+      href: `#!`,
     },
     {
       label: `Solutions`,
-      href: `/solutions`,
+      href: `#!`,
     },
     {
       label: `Pricing`,
+      href: `#!`,
     },
     {
       label: `Showcase`,
+      href: `#!`,
     },
   ],
 };
@@ -37,7 +39,13 @@ export const Nav: React.FC<Nav> = ({
 }: Nav) => {
   const items = navItems.map(item => {
     const { label, href } = item;
-    return <NavLink href={href} label={label} />;
+    return (
+      <NavLink
+        kind={direction === 'column' ? 'column' : `row`}
+        href={href}
+        label={label}
+      />
+    );
   });
 
   return (
