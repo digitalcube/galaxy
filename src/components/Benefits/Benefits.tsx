@@ -70,7 +70,7 @@ export const Benefits = ({
     <section>
       <Spacer size={3}>
         <Container>
-          <Container size="md" align="left">
+          <Container size="1" align="left">
             <Content>
               <Heading as="h2" size="6">
                 <b>{title}</b>

@@ -109,7 +109,7 @@ export const Logos: FC<Logos> = ({
   const { title } = content;
   return (
     <Spacer as="section" size={3}>
-      <Container size="md">
+      <Container size="1">
         <Content align="center">
           <Heading size="6">
             <b>{title}</b>

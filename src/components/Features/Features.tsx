@@ -97,7 +97,7 @@ export const Features = ({
 }: Features) => {
   return (
     <Spacer size={3}>
-      <Container size="md">
+      <Container size="1">
         <Content align="center">
           <Heading as="h2" size="6">
             {title}

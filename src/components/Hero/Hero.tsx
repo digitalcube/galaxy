@@ -33,7 +33,7 @@ export const Hero: React.FC<Hero> = ({
   return (
     <section>
       <Spacer size={3} />
-      <Container>
+      <Container size="4">
         <Grid columns={2}>
           <Content>
             <Heading size="7">

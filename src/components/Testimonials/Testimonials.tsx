@@ -82,7 +82,7 @@ export const Testimonials: FC<Testimonials> = ({
 }: Testimonials) => {
   return (
     <Spacer as="section" size={3}>
-      <Container size="md">
+      <Container size="1">
         <Content align="center">
           <Heading size="6">{title}</Heading>
         </Content>

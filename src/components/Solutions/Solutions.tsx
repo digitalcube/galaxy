@@ -117,7 +117,7 @@ export const Solutions: FC<Solutions> = ({
     <section>
       <Spacer size={3}>
         <Container>
-          <Container size="md">
+          <Container size="1">
             <Content align="center">
               <Heading size="6">
                 <b>{title}</b>

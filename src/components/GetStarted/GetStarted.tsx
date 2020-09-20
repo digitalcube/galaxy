@@ -16,7 +16,7 @@ export const GetStarted = ({
 }: GetStarted) => {
   return (
     <Spacer size={3}>
-      <Container size="md">
+      <Container size="1">
         <Content align="center">
           <Heading size="6">{title}</Heading>
           <Heading size="5">{subtitle}</Heading>
