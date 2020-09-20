@@ -128,7 +128,7 @@ export const Solutions: FC<Solutions> = ({
           <Spacer size={1.5} />
           <Grid columns={[1, null, null, null, 2]}>
             <Solution solution={solution} />
-            <ThemeProvider theme={{ mode: `dark` }}>
+            <ThemeProvider theme={{ colorMode: `dark` }}>
               <Showcase showcase={showcase} />
             </ThemeProvider>
           </Grid>

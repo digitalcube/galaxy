@@ -63,7 +63,14 @@ export const shifter = {
     heading: null,
   },
   colors: {
-    text: '#000',
+    modes: {
+      dark: {
+        text: '#fff',
+        background: '#1A0112',
+        primary: '#0cf',
+      },
+    },
+    text: '#25021B',
     primary: '#9C036E',
     secondary: '#451D39',
     black: `#25021B`,
@@ -112,11 +119,17 @@ export const shifter = {
   links: {
     nav: {
       fontSize: 3,
-      fontWeight: '400',
+      fontWeight: 'body',
       color: 'primary',
       '&:hover': {
         color: 'purple.primary',
       },
+      '&:not(:first-child)': {
+        ml: 4,
+      },
+    },
+    primary: {
+      variant: 'buttons.primary',
     },
   },
   layout: {
@@ -167,6 +180,11 @@ export const shifter = {
       borderRadius: 0,
       boxShadow: 0,
       overflow: 'hidden',
+      modes: {
+        dark: {
+          bg: `purple.p600`,
+        },
+      },
     },
   },
   buttons: {
@@ -176,6 +194,7 @@ export const shifter = {
       px: 4,
       py: 1,
       borderRadius: 0,
+      textDecoration: 'none',
       bg: 'purple.primary',
       '&:hover': {
         bg: 'primary',
@@ -216,56 +235,48 @@ export const shifter = {
   },
   text: {
     heading: {
-      color: 'primary',
+      color: 'text',
       fontWeight: 400,
     },
     0: {
       variant: 'text.heading',
       fontSize: 0,
       lineHeight: 1,
-      color: 'primary',
     },
     1: {
       variant: 'text.heading',
       fontSize: 1,
       lineHeight: 1.375,
-      color: 'primary',
     },
     2: {
       variant: 'text.heading',
       fontSize: 2,
       lineHeight: 1.5,
-      color: 'primary',
     },
     3: {
       variant: 'text.heading',
       fontSize: 3,
       lineHeight: 1.444,
-      color: 'primary',
     },
     4: {
       variant: 'text.heading',
       fontSize: 4,
       lineHeight: 1.6,
-      color: 'primary',
     },
     5: {
       variant: 'text.heading',
       fontSize: 5,
       lineHeight: 1.75,
-      color: 'primary',
     },
     6: {
       variant: 'text.heading',
       fontSize: 6,
       lineHeight: 1.444,
-      color: 'primary',
     },
     7: {
       variant: 'text.heading',
       fontSize: 7,
       lineHeight: 1.333,
-      color: 'primary',
     },
   },
   styles: {

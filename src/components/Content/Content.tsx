@@ -1,6 +1,7 @@
 /** @jsx jsx */
 import { jsx } from 'theme-ui';
 import { ReactNode, FC } from 'react';
+import { useThemeUI } from 'theme-ui';
 
 type Content = {
   children?: ReactNode;
@@ -8,6 +9,8 @@ type Content = {
 };
 
 export const Content: FC<Content> = ({ align, children }: Content) => {
+  const context = useThemeUI();
+  console.log(context);
   if (!children) return null;
   return (
     <div
