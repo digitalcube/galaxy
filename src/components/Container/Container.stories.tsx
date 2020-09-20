@@ -12,8 +12,22 @@ export default {
   excludeStories: /.*Data$/,
 };
 
-export const Default = () => (
-  <Container size="md">
-    I could calculate your chance of survival, but you won’t like it.” –Marvin
-  </Container>
+export const Sizes = () => (
+  <>
+    <Container align="right" size="0">
+      Voluptate nisi dolore exercitation amet mollit.
+    </Container>
+    <Container size="1">
+      Voluptate nisi dolore exercitation amet mollit.
+    </Container>
+    <Container size="2">
+      Voluptate nisi dolore exercitation amet mollit.
+    </Container>
+    <Container size="3">
+      Voluptate nisi dolore exercitation amet mollit.
+    </Container>
+    <Container size="4">
+      Voluptate nisi dolore exercitation amet mollit.
+    </Container>
+  </>
 );

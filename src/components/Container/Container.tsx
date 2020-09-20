@@ -1,25 +1,28 @@
-import styled from 'styled-components';
-import { components } from '../../styles';
+/** @jsx jsx */
+import { jsx } from 'theme-ui';
+import { FC, ReactNode } from 'react';
+import { Container as ThemeUIContainer } from 'theme-ui';
 
 type Container = {
-  size?: 'sm' | 'md' | 'lg' | 'xl' | 'xxl' | `fluid`;
+  size?: string;
+  children?: ReactNode;
   align?: 'left' | 'right';
 };
 
-export const containerMaxWidth = ({ size = 'xl' }: Container) => {
-  return components.container.maxWidth[size];
+export const Container: FC<Container> = ({
+  size,
+  children,
+  align,
+}: Container) => {
+  return (
+    <ThemeUIContainer
+      sx={{
+        mr: align === `right` ? `0` : null,
+        ml: align === `left` ? `0` : null,
+      }}
+      variant={size}
+    >
+      {children}
+    </ThemeUIContainer>
+  );
 };
-
-export const Container = styled.div<Container>`
-  max-width: ${containerMaxWidth};
-  position: relative;
-  /* padding: ${components.container.padding}; */
-  margin-left: ${props => {
-    if (props.align === `left`) return `0`;
-    return `auto`;
-  }};
-  margin-right: ${props => {
-    if (props.align === `right`) return `0`;
-    return `auto`;
-  }};
-`;

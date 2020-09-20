@@ -50,6 +50,9 @@ export const shifter = {
     monospace: 'Menlo, monospace',
   },
   fontSizes: [12, 14, 16, 18, 20, 24, 32, 48],
+  sizes: {
+    container: [540, 768, 1200],
+  },
   fontWeights: {
     body: 400,
     heading: 400,
@@ -114,6 +117,23 @@ export const shifter = {
       '&:hover': {
         color: 'purple.primary',
       },
+    },
+  },
+  layout: {
+    0: {
+      maxWidth: 540,
+    },
+    1: {
+      maxWidth: 720,
+    },
+    2: {
+      maxWidth: 960,
+    },
+    3: {
+      maxWidth: 1140,
+    },
+    4: {
+      maxWidth: 1320,
     },
   },
   badges: {
