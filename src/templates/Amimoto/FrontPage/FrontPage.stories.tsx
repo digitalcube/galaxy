@@ -4,7 +4,7 @@ import { FrontPage } from './FrontPage';
 
 export default {
   component: FrontPage,
-  title: `Templates/FrontPage`,
+  title: `Amimoto/Templates/FrontPage`,
   decorators: [withKnobs],
   excludeStories: /.*Data$/,
 };

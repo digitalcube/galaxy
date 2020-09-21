@@ -9,6 +9,12 @@ export const contexts = [
     components: [ThemeProvider],
     params: [
       {
+        name: 'Shifter',
+        props: {
+          theme: shifter,
+        },
+      },
+      {
         name: 'Galaxy',
         props: {
           theme: galaxy,
@@ -18,42 +24,6 @@ export const contexts = [
         name: 'Amimoto',
         props: {
           theme: amimoto,
-        },
-      },
-      {
-        name: 'Shifter',
-        props: {
-          theme: shifter,
-          default: true,
-        },
-      },
-    ],
-    options: {
-      deep: true,
-      disable: false,
-      cancelable: true,
-    },
-  },
-  {
-    icon: 'switchalt',
-    title: 'Mode',
-    components: [ThemeProvider],
-    params: [
-      {
-        name: 'Dark',
-        props: {
-          theme: {
-            mode: `dark`,
-          },
-        },
-      },
-      {
-        name: 'Light',
-        props: {
-          theme: {
-            mode: `light`,
-          },
-          default: true,
         },
       },
     ],

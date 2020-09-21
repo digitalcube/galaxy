@@ -1,41 +1,56 @@
 import React, { FC, ReactNode } from 'react';
-import { NavItem, Nav, Heading, Container, Spacer, Content } from '../index';
-
-const defaultProps = {
-  nodes: [
-    {
-      label: `Resources`,
-    },
-    {
-      label: `Frequently Asked Questions`,
-    },
-    {
-      label: `Contact Us`,
-    },
-    {
-      label: `Glossary`,
-    },
-  ],
-};
+import { NavLink, Nav, Heading, Container, Content } from '../index';
 
 export type QuickLinks = {
   title?: string;
   children?: ReactNode;
-  nodes?: NavItem[];
+  nav?: NavLink[];
 };
 
-export const QuickLinks: FC<QuickLinks> = ({
-  title = `Quick Links`,
-  nodes = defaultProps.nodes,
-}: QuickLinks) => {
+export const QuickLinks: FC<QuickLinks> = ({ title, nav }: QuickLinks) => {
   return (
-    <Spacer size={3}>
-      <Container>
-        <Content align="center">
-          <Heading size="5">{title}</Heading>
-          <Nav align="center" nodes={nodes} />
-        </Content>
-      </Container>
-    </Spacer>
+    <Container
+      as="section"
+      size="4"
+      sx={{
+        py: 5,
+        display: 'flex',
+        flexDirection: 'column',
+        alignItems: 'center',
+      }}
+    >
+      <Content align="center">
+        <Heading as="h3" size="5">
+          {title}
+        </Heading>
+        <Nav navItems={nav} />
+      </Content>
+    </Container>
   );
+};
+
+QuickLinks.defaultProps = {
+  title: `Esse excepteur`,
+  nav: [
+    {
+      label: `Duis Adipisicing`,
+      href: `#!`,
+      kind: `primary`,
+    },
+    {
+      label: `Consequat`,
+      href: `#!`,
+      kind: `primary`,
+    },
+    {
+      label: `Et Tempor`,
+      href: `#!`,
+      kind: `primary`,
+    },
+    {
+      label: `Cupidatat`,
+      href: `#!`,
+      kind: `primary`,
+    },
+  ],
 };

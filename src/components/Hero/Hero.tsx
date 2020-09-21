@@ -10,11 +10,11 @@ type Hero = {
 };
 
 export const Hero: React.FC<Hero> = ({
-  img = <Animation animation="dashboard" />,
-  title = `Jamstack solutions for WordPress`,
-  subtitle = `Using Shifter, create or migrate WordPress sites in minutes that are scalable, secure from attacks, and 100% static with no security or caching plugins required.`,
-  href = `https://go.getshifter.io/register/`,
-  buttonLabel = `Start a free trial`,
+  title,
+  subtitle,
+  img,
+  href,
+  buttonLabel,
 }: Hero) => {
   return (
     <Container
@@ -37,4 +37,12 @@ export const Hero: React.FC<Hero> = ({
       </Grid>
     </Container>
   );
+};
+
+Hero.defaultProps = {
+  img: <Animation animation="dashboard" />,
+  title: `In commodo id minim fugiat ex qui anim cupidatat reprehenderit.`,
+  subtitle: `Laborum elit fugiat esse nisi eu magna est anim nisi officia deserunt eiusmod consequat voluptate eiusmod aliquip labore, id duis duis aliquip eiusmod.`,
+  href: `#!`,
+  buttonLabel: `Dolor aute exercitation`,
 };

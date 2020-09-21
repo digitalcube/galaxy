@@ -11,7 +11,6 @@ import {
   Showcase,
   Image,
   Brand,
-  QuickLinks,
 } from '../../../components/index';
 
 export const FrontPage = () => {
@@ -79,31 +78,6 @@ export const FrontPage = () => {
             />
           </Image>
         }
-      />
-      <QuickLinks
-        title="Quick Links"
-        nav={[
-          {
-            label: `Resources`,
-            href: `#!`,
-            kind: `primary`,
-          },
-          {
-            label: `Frequently Asked Questions`,
-            href: `#!`,
-            kind: `primary`,
-          },
-          {
-            label: `Contact Us`,
-            href: `#!`,
-            kind: `primary`,
-          },
-          {
-            label: `Glossary`,
-            href: `#!`,
-            kind: `primary`,
-          },
-        ]}
       />
     </Layout>
   );

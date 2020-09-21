@@ -41,3 +41,5 @@ export * from './Text';
 export * from './Avatar';
 export * from './Tabs';
 export * from './Tab';
+export * from './QuickLinks';
+export * from './NavLink';
