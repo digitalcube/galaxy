@@ -32,11 +32,11 @@ export const Post: React.FC<Post> = ({
     <Card align={align} img={img} footer={footer}>
       <Heading as="p">{category}</Heading>
       <Link href={href}>
-        <Heading as="h2" size="md">
+        <Heading as="h2" size="4">
           {title}
         </Heading>
       </Link>
-      <Heading as="h3" size="xs">
+      <Heading as="h3" size="2">
         {subtitle}
       </Heading>
       <Text>{excerpt}</Text>

@@ -50,12 +50,9 @@ export const Header: FC<Header> = ({
                   href: `#!`,
                 },
                 {
-                  label: (
-                    <Link href="#!" kind="primary">
-                      Sign Up
-                    </Link>
-                  ),
+                  label: `Sign Up`,
                   href: `#!`,
+                  kind: `primary`,
                 },
               ]}
             />

@@ -127,6 +127,7 @@ export const shifter = {
     },
     row: {
       variant: 'links.nav',
+      alignItems: 'center',
       '&:not(:first-child)': {
         ml: 4,
       },
@@ -198,12 +199,14 @@ export const shifter = {
       fontSize: 1,
       color: 'white',
       px: 4,
-      py: 2,
+      py: 1,
+      display: 'inline-block',
       borderRadius: 0,
       textDecoration: 'none',
       bg: 'purple.primary',
       '&:hover': {
-        bg: 'primary',
+        bg: 'purple.p600',
+        color: 'white',
       },
     },
     success: {
@@ -243,6 +246,7 @@ export const shifter = {
     heading: {
       color: 'text',
       fontWeight: 400,
+      textDecoration: 'none',
     },
     0: {
       variant: 'text.heading',

@@ -20,7 +20,6 @@ export const Content: FC<Content> = ({ align, children }: Content) => {
           mt: 0,
         },
         '& > :not(:first-child)': {
-          display: 'inline-block',
           mt: 2,
           mb: 0,
         },
