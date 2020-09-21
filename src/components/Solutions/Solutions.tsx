@@ -36,12 +36,7 @@ const Showcase: FC<Solutions> = ({
     title: `One of the most exciting contemporary design thinkers calls Shifter home.`,
     buttonLabel: `View showcase`,
     href: `#`,
-    img: (
-      <img
-        src="https://www.getshifter.io/static/3f1aa2e6f5aa25eb64f6ddf4b7e582b9/cd6dd/logo-howtospeakmachine.webp"
-        alt="Internet Society"
-      />
-    ),
+    img: <img src="logo-howtospeakmachine.webp" alt="Internet Society" />,
   },
 }: Solutions) => {
   const { title, buttonLabel, img, href } = showcase;
