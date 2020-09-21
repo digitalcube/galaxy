@@ -39,7 +39,7 @@ export const Nav: React.FC<Nav> = ({
 }: Nav) => {
   const items = navItems.map(item => {
     const { label, href, kind } = item;
-    return <NavLink kind={kind} href={href} label={label} />;
+    return <NavLink kind={kind ? kind : direction} href={href} label={label} />;
   });
 
   const alignItems = direction === `row` ? `center` : ``;

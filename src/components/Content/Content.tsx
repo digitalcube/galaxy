@@ -20,7 +20,7 @@ export const Content: FC<Content> = ({ align, children }: Content) => {
           mt: 0,
         },
         '& > :not(:first-child)': {
-          mt: 2,
+          mt: 3,
           mb: 0,
         },
       }}
