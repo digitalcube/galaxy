@@ -198,7 +198,7 @@ export const shifter = {
       fontSize: 1,
       color: 'white',
       px: 4,
-      py: 1,
+      py: 2,
       borderRadius: 0,
       textDecoration: 'none',
       bg: 'purple.primary',

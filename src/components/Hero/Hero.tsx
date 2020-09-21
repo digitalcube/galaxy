@@ -1,14 +1,5 @@
 import React, { ReactNode } from 'react';
-import {
-  Container,
-  Grid,
-  Col,
-  Spacer,
-  Heading,
-  Button,
-  Content,
-  Animation,
-} from '../index';
+import { Container, Grid, Heading, Content, Animation, Link } from '../index';
 
 type Hero = {
   content?: {
@@ -23,7 +14,7 @@ type Hero = {
 export const Hero: React.FC<Hero> = ({
   content = {
     img: <Animation animation="dashboard" />,
-    title: `The static site generator for WordPress`,
+    title: `Jamstack solutions for WordPress`,
     subtitle: `Using Shifter, create or migrate WordPress sites in minutes that are scalable, secure from attacks, and 100% static with no security or caching plugins required.`,
     href: `https://go.getshifter.io/register/`,
     buttonLabel: `Start a free trial`,
@@ -32,7 +23,6 @@ export const Hero: React.FC<Hero> = ({
   const { title, img, subtitle, href, buttonLabel } = content;
   return (
     <section>
-      <Spacer size={3} />
       <Container size="4">
         <Grid columns={2}>
           <Content>
@@ -40,14 +30,13 @@ export const Hero: React.FC<Hero> = ({
               <b>{title}</b>
             </Heading>
             <Heading size="4">{subtitle}</Heading>
-            <Spacer size={2}>
-              <Button href={href}>{buttonLabel}</Button>
-            </Spacer>
+            <Link kind="primary" href={href}>
+              {buttonLabel}
+            </Link>
           </Content>
-          <Col>{img}</Col>
+          <div>{img}</div>
         </Grid>
       </Container>
-      <Spacer size={4} />
     </section>
   );
 };
