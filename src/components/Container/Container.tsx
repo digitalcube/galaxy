@@ -8,6 +8,7 @@ type Container = {
   size?: string;
   children?: ReactNode;
   align?: 'left' | 'right';
+  sx?: object;
 };
 
 export const Container: FC<Container> = ({
@@ -15,6 +16,7 @@ export const Container: FC<Container> = ({
   children,
   align,
   as,
+  sx,
 }: Container) => {
   return (
     <ThemeUIContainer
@@ -22,6 +24,7 @@ export const Container: FC<Container> = ({
       sx={{
         mr: align === `right` ? `0` : null,
         ml: align === `left` ? `0` : null,
+        ...sx,
       }}
       variant={size}
     >

@@ -1,16 +1,15 @@
 /** @jsx jsx */
-import React, { FC, ReactNode } from 'react';
 import { jsx } from 'theme-ui';
-import { Flex, Box } from 'theme-ui';
-import { Container, Spacer, Brand, NavItem, Menu, Nav, Link } from '../index';
+import { FC, ReactNode } from 'react';
+import { Flex } from 'theme-ui';
+import { Container, Nav } from '../index';
 
 type Header = {
-  logo?: ReactNode;
+  brand?: ReactNode;
+  nav?: object;
 };
 
-export const Header: FC<Header> = ({
-  logo = <Brand asset="shifter-mark" size={`45`} />,
-}: Header) => {
+export const Header: FC<Header> = ({ brand, nav }: Header) => {
   return (
     <div
       sx={{
@@ -25,7 +24,7 @@ export const Header: FC<Header> = ({
           }}
         >
           <Flex>
-            {logo}
+            {brand}
             <Flex
               sx={{
                 flexDirection: 'column',
@@ -33,7 +32,7 @@ export const Header: FC<Header> = ({
                 ml: 8,
               }}
             >
-              <Nav />
+              <Nav navItems={nav[0]} />
             </Flex>
           </Flex>
           <Flex
@@ -43,19 +42,7 @@ export const Header: FC<Header> = ({
               ml: 8,
             }}
           >
-            <Nav
-              navItems={[
-                {
-                  label: `Login`,
-                  href: `#!`,
-                },
-                {
-                  label: `Sign Up`,
-                  href: `#!`,
-                  kind: `primary`,
-                },
-              ]}
-            />
+            <Nav navItems={nav[1]} />
           </Flex>
         </Flex>
       </Container>
@@ -66,7 +53,7 @@ export const Header: FC<Header> = ({
 // import React, { FC, ReactNode } from 'react';
 // import styled from 'styled-components';
 // import theme from 'styled-theming';
-// import { Container, Spacer, Brand, NavItem, Menu, Nav } from '../index';
+// import { Container, Spacer, NavItem, Menu, Nav } from '../index';
 // import { useToggle } from './useToggle';
 // import { breakpoints } from '../../lib/utils';
 // import { components, colors } from './../../styles';

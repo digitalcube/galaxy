@@ -3,12 +3,13 @@ import { Header, Galaxy, GetStarted, Footer } from '../index';
 
 type Layout = {
   children?: ReactNode;
+  header?: object;
 };
 
-export const Layout = ({ children }: Layout) => {
+export const Layout = ({ children, header }: Layout) => {
   return (
     <Galaxy>
-      <Header />
+      <Header {...header} />
       {children ? children : null}
       <GetStarted />
       <Footer />
