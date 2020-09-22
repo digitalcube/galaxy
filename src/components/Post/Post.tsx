@@ -1,7 +1,6 @@
 import React from 'react';
-import styled from 'styled-components';
 import { Date } from '../Date';
-import { Text, Card, Heading, Link } from '../';
+import { Text, Card, Heading, Link } from '../index';
 
 export type Post = {
   align?: `left` | `center` | `right`;

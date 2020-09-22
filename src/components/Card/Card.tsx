@@ -21,6 +21,7 @@ export const Card: FC<Card> = ({
   title,
   subtitle,
   excerpt,
+  href,
   img,
   children,
   footer,
@@ -28,7 +29,12 @@ export const Card: FC<Card> = ({
   return (
     <ThemeUICard>
       <CardImage>{img}</CardImage>
-      <CardHeader title={title} subtitle={subtitle} excerpt={excerpt} />
+      <CardHeader
+        href={href}
+        title={title}
+        subtitle={subtitle}
+        excerpt={excerpt}
+      />
       <CardBody>{children}</CardBody>
       <CardFooter>{footer}</CardFooter>
     </ThemeUICard>

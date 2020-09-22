@@ -138,6 +138,9 @@ export const shifter = {
     primary: {
       variant: 'buttons.primary',
     },
+    white: {
+      variant: 'buttons.white',
+    },
   },
   layout: {
     0: {
