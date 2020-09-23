@@ -20,11 +20,11 @@ export const GetStarted = ({
   if (variant === `0`) {
     return (
       <Container
-        sx={{
-          py: 5,
-        }}
         size="1"
         as="section"
+        sx={{
+          py: 6,
+        }}
       >
         <Content align="center">
           <Heading size="6">{title}</Heading>
