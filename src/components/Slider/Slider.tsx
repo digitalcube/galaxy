@@ -1,7 +1,7 @@
 import React, { FC } from 'react';
 import styled from 'styled-components';
 import { Swiper, SwiperSlide } from 'swiper/react';
-import { Image, Node } from '../index';
+import { Node } from '../index';
 import { components } from '../../styles';
 
 type Slider = {
@@ -39,100 +39,10 @@ export const Slider: FC<Slider> = ({ nodes }: Slider) => {
 Slider.defaultProps = {
   nodes: [
     {
-      node: (
-        <Image
-          sx={{
-            display: 'flex',
-            m: '0 auto',
-          }}
-          img="https://www.getshifter.io/static/ffe74e144da991b2e626b7a0a78bd3e2/3fc3b/logo-lixil.png"
-          alt="LIXIL"
-        />
-      ),
+      node: 'Slide',
     },
     {
-      node: (
-        <Image
-          sx={{
-            display: 'flex',
-            m: '0 auto',
-          }}
-          img="https://www.getshifter.io/static/a2658d8f3ead05a877311f79474f169a/3fc3b/logo-docomo.png"
-          alt="NTT docomo"
-        />
-      ),
-    },
-    {
-      node: (
-        <Image
-          sx={{
-            display: 'flex',
-            m: '0 auto',
-          }}
-          img="https://www.getshifter.io/static/3e210d8d40d591c5f417f42a0ac9d296/3fc3b/logo-mikihouse.png"
-          alt="MIKI HOUSE"
-        />
-      ),
-    },
-    {
-      node: (
-        <Image
-          sx={{
-            display: 'flex',
-            m: '0 auto',
-          }}
-          img="https://www.getshifter.io/static/8976ea03ac4454c575d0d1a47e34d5dc/3fc3b/logo-vu.png"
-          alt="University Amsterdam"
-        />
-      ),
-    },
-    {
-      node: (
-        <Image
-          sx={{
-            display: 'flex',
-            m: '0 auto',
-          }}
-          img="https://www.getshifter.io/static/ddc39223e6bd875a213e792560bf26e5/3fc3b/logo-hennge.png"
-          alt="HENNGE"
-        />
-      ),
-    },
-    {
-      node: (
-        <Image
-          sx={{
-            display: 'flex',
-            m: '0 auto',
-          }}
-          img="https://www.getshifter.io/static/3ebe60dc5f227bc436af5e71b8c6327f/3fc3b/logo-internetsociety.png"
-          alt="Internet Society"
-        />
-      ),
-    },
-    {
-      node: (
-        <Image
-          sx={{
-            display: 'flex',
-            m: '0 auto',
-          }}
-          img="https://www.getshifter.io/static/ba6263244c43d10585bdf0215e35886b/3fc3b/logo-soracom.png"
-          alt="Soracom"
-        />
-      ),
-    },
-    {
-      node: (
-        <Image
-          sx={{
-            display: 'flex',
-            m: '0 auto',
-          }}
-          img="https://www.getshifter.io/static/ddc39223e6bd875a213e792560bf26e5/3fc3b/logo-hennge.png"
-          alt="HENNGE"
-        />
-      ),
+      node: 'Slide',
     },
   ],
 };
