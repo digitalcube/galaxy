@@ -43,10 +43,14 @@ const Showcase: FC<Showcase> = ({
 }: Showcase) => {
   return (
     <Card
+      sx={{
+        bg: 'purple.p600',
+        color: 'white',
+      }}
       footer={
         <Content align="center">
           <Text>{title}</Text>
-          <Link href={href}>
+          <Link kind="white" href={href}>
             <Heading as="p" size="1">
               {buttonLabel}
             </Heading>
@@ -55,7 +59,14 @@ const Showcase: FC<Showcase> = ({
       }
     >
       <Content align="center">
-        <Image>{img}</Image>
+        <Image
+          sx={{
+            mt: 2,
+            width: ['50%', null, null, '25%'],
+          }}
+        >
+          {img}
+        </Image>
       </Content>
     </Card>
   );
@@ -96,8 +107,9 @@ export const Solutions: FC<Solutions> = ({
   return (
     <Container
       as="section"
+      size="4"
       sx={{
-        py: 6,
+        py: 7,
       }}
     >
       <Container>

@@ -1,5 +1,5 @@
 import React, { ReactNode } from 'react';
-import { Heading, Container, Grid, Content, Spacer, Animation } from '../index';
+import { Heading, Container, Grid, Content, Animation } from '../index';
 
 type Benefits = {
   title?: string;
@@ -15,7 +15,7 @@ type Node = {
   };
 };
 
-const nodeList = ({ nodes = [] }: Benefits) => {
+const BenefitsNodes = ({ nodes }: Benefits) => {
   if (!nodes) return;
   const i = nodes.map((item: Node, i) => {
     if (!item.content) return null;
@@ -35,11 +35,46 @@ const nodeList = ({ nodes = [] }: Benefits) => {
   return i;
 };
 
-export const Benefits = ({
-  title = `One Click Setup`,
-  subtitle = `Create a new site or migrate an existing WordPress site in minutes.`,
-  img = <Animation animation="singleClick" />,
-  nodes = [
+export const Benefits = ({ title, subtitle, img, nodes }: Benefits) => {
+  return (
+    <Container
+      as="section"
+      size="4"
+      sx={{
+        py: 7,
+      }}
+    >
+      <Container
+        size="1"
+        align="left"
+        sx={{
+          mb: 5,
+        }}
+      >
+        <Content>
+          <Heading as="h2" size="6">
+            <b>{title}</b>
+          </Heading>
+          <Heading as="h3" size="3">
+            {subtitle}
+          </Heading>
+        </Content>
+      </Container>
+      <Container>
+        <Grid columns={2}>
+          <Grid columns={2}>{BenefitsNodes({ nodes: nodes })}</Grid>
+          {img}
+        </Grid>
+      </Container>
+    </Container>
+  );
+};
+
+Benefits.defaultProps = {
+  title: `One Click Setup`,
+  subtitle: `Create a new site or migrate an existing WordPress site in minutes.`,
+  img: <Animation animation="singleClick" />,
+  nodes: [
     {
       content: {
         title: `Easy installation`,
@@ -65,30 +100,4 @@ export const Benefits = ({
       },
     },
   ],
-}: Benefits) => {
-  return (
-    <section>
-      <Spacer size={3}>
-        <Container>
-          <Container size="1" align="left">
-            <Content>
-              <Heading as="h2" size="6">
-                <b>{title}</b>
-              </Heading>
-              <Heading as="h3" size="3">
-                {subtitle}
-              </Heading>
-            </Content>
-          </Container>
-        </Container>
-        <Spacer size={3} />
-        <Container>
-          <Grid columns={2}>
-            <Grid columns={2}>{nodeList({ nodes: nodes })}</Grid>
-            {img}
-          </Grid>
-        </Container>
-      </Spacer>
-    </section>
-  );
 };

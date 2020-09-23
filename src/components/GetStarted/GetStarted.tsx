@@ -23,7 +23,7 @@ export const GetStarted = ({
         size="1"
         as="section"
         sx={{
-          py: 6,
+          py: 7,
         }}
       >
         <Content align="center">

@@ -23,7 +23,7 @@ export const Hero: React.FC<Hero> = ({
         py: 5,
       }}
     >
-      <Grid columns={2}>
+      <Grid columns={[1, null, null, null, 2]}>
         <Content>
           <Heading size="7">
             <b>{title}</b>

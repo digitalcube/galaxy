@@ -28,8 +28,9 @@ export const Showcase = ({
   return (
     <Container
       as="section"
+      size="4"
       sx={{
-        py: 6,
+        py: 7,
       }}
     >
       <Grid columns={[1, null, null, 2]}>

@@ -19,18 +19,8 @@ type Feature = {
 export const Feature = ({ img, title, excerpt }: Feature) => {
   return (
     <Card
-      align="center"
-      img={
-        <Image
-          sx={{
-            display: 'flex',
-            mx: 'auto',
-            my: 2,
-            mb: 0,
-          }}
-          img={img}
-        />
-      }
+      sx={{ textAlign: 'center', p: 4 }}
+      img={<Image img={img} />}
       title={title}
       excerpt={excerpt}
     />
@@ -44,7 +34,7 @@ export const FeaturesNodes = ({ nodes }: Features) => {
     return <Feature key={i} title={title} img={img} excerpt={excerpt} />;
   });
 
-  return <Grid columns={[2, null, null, null, 4]}>{featureNodes}</Grid>;
+  return <Grid columns={[2, null, null, null, null, 4]}>{featureNodes}</Grid>;
 };
 
 export const Features = ({
@@ -56,8 +46,10 @@ export const Features = ({
 }: Features) => {
   return (
     <Container
+      as="section"
+      size="4"
       sx={{
-        py: 6,
+        py: 7,
       }}
     >
       <Container

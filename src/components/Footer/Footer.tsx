@@ -41,7 +41,13 @@ export const FooterNav: FC<FooterNav> = ({ title, navItems }: FooterNav) => {
 
 export const Footer: FC<Footer> = ({ nav }: Footer) => {
   return (
-    <Container as="footer">
+    <Container
+      size="4"
+      as="footer"
+      sx={{
+        pt: 7,
+      }}
+    >
       <Container as="footer">
         <Grid columns={[1, null, null, null, '4fr 8fr']}>
           <Content>

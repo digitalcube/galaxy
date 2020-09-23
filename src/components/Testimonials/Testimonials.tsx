@@ -47,8 +47,9 @@ export const Testimonials: FC<Testimonials> = ({
   return (
     <Container
       as="section"
+      size="4"
       sx={{
-        py: 6,
+        py: 7,
       }}
     >
       <Container
