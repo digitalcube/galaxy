@@ -8,7 +8,12 @@ type Logos = {
 
 export const Logos: FC<Logos> = ({ title, nodes }: Logos) => {
   return (
-    <Container as="section">
+    <Container
+      as="section"
+      sx={{
+        py: 5,
+      }}
+    >
       <Container
         size="1"
         sx={{
