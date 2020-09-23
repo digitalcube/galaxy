@@ -2,18 +2,14 @@ import React, { FC } from 'react';
 import styled from 'styled-components';
 import {
   Container,
-  Spacer,
   Heading,
   Content,
-  Image,
   Node,
   Slider,
   Text,
-  Header,
   Link,
   Avatar,
 } from '../index';
-import { components } from '../../styles';
 
 type Testimonials = {
   nodes?: Node[];
@@ -27,12 +23,7 @@ type Quote = {
   handle?: string;
 };
 
-const Quote = ({
-  img = 'avatar.png',
-  quote = `Proident irure anim non non labore adipisicing.`,
-  author = 'FooBarBaz',
-  handle = `@ExampleFooBarBaz`,
-}: Quote) => {
+const Quote = ({ img, quote, author, handle }: Quote) => {
   return (
     <Content align="center">
       <Text>{quote}</Text>
@@ -49,46 +40,94 @@ const Quote = ({
   );
 };
 
-const nodesDefault = [
-  {
-    node: <Quote />,
-  },
-  {
-    node: <Quote />,
-  },
-  {
-    node: <Quote />,
-  },
-  {
-    node: <Quote />,
-  },
-  {
-    node: <Quote />,
-  },
-  {
-    node: <Quote />,
-  },
-  {
-    node: <Quote />,
-  },
-  {
-    node: <Quote />,
-  },
-];
-
 export const Testimonials: FC<Testimonials> = ({
-  title = `Dolor dolor exercitation nisi sunt cillum est fugiat eiusmod nisi incididunt dolore duis elit.`,
-  nodes = nodesDefault,
+  title,
+  nodes,
 }: Testimonials) => {
   return (
-    <Spacer as="section" size={3}>
-      <Container size="1">
+    <Container
+      as="section"
+      sx={{
+        py: 6,
+      }}
+    >
+      <Container
+        size="1"
+        sx={{
+          mb: 5,
+        }}
+      >
         <Content align="center">
           <Heading size="6">{title}</Heading>
         </Content>
       </Container>
-      <Spacer size={3} />
       <Slider nodes={nodes} />
-    </Spacer>
+    </Container>
   );
+};
+
+Testimonials.defaultProps = {
+  title: `Esse reprehenderit incididunt in deserunt enim nostrud tempor proident exercitation duis dolore ullamco proident.`,
+  nodes: [
+    {
+      node: (
+        <Quote
+          img="avatar.png"
+          quote="Proident irure anim non non labore adipisicing."
+          author="FooBarBaz"
+          handle="@ExampleFooBarBaz"
+        />
+      ),
+    },
+    {
+      node: (
+        <Quote
+          img="avatar.png"
+          quote="Proident irure anim non non labore adipisicing."
+          author="FooBarBaz"
+          handle="@ExampleFooBarBaz"
+        />
+      ),
+    },
+    {
+      node: (
+        <Quote
+          img="avatar.png"
+          quote="Proident irure anim non non labore adipisicing."
+          author="FooBarBaz"
+          handle="@ExampleFooBarBaz"
+        />
+      ),
+    },
+    {
+      node: (
+        <Quote
+          img="avatar.png"
+          quote="Proident irure anim non non labore adipisicing."
+          author="FooBarBaz"
+          handle="@ExampleFooBarBaz"
+        />
+      ),
+    },
+    {
+      node: (
+        <Quote
+          img="avatar.png"
+          quote="Proident irure anim non non labore adipisicing."
+          author="FooBarBaz"
+          handle="@ExampleFooBarBaz"
+        />
+      ),
+    },
+    {
+      node: (
+        <Quote
+          img="avatar.png"
+          quote="Proident irure anim non non labore adipisicing."
+          author="FooBarBaz"
+          handle="@ExampleFooBarBaz"
+        />
+      ),
+    },
+  ],
 };
