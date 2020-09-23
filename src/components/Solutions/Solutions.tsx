@@ -1,9 +1,7 @@
 import React, { FC, ReactNode } from 'react';
 import { ThemeProvider } from 'styled-components';
-import { Flex } from 'theme-ui';
 import {
   Container,
-  Spacer,
   Heading,
   Content,
   Grid,
@@ -57,7 +55,7 @@ const Showcase: FC<Showcase> = ({
       }
     >
       <Content align="center">
-        <Image width="30%">{img}</Image>
+        <Image>{img}</Image>
       </Content>
     </Card>
   );
@@ -96,34 +94,36 @@ export const Solutions: FC<Solutions> = ({
   showcase,
 }: Solutions) => {
   return (
-    <section>
-      <Spacer size={3}>
-        <Container>
-          <Container size="1">
-            <Content align="center">
-              <Heading size="6">
-                <b>{title}</b>
-              </Heading>
-              <Heading as="p" size="3">
-                <b>{subtitle}</b>
-              </Heading>
-            </Content>
-          </Container>
-          <Flex
-            sx={{
-              justifyContent: 'center',
-              my: 3,
-            }}
-          ></Flex>
-          <Grid columns={[1, null, null, null, 2]}>
-            <Solution {...solution} />
-            <ThemeProvider theme={{ colorMode: `dark` }}>
-              <Showcase {...showcase} />
-            </ThemeProvider>
-          </Grid>
+    <Container
+      as="section"
+      sx={{
+        py: 6,
+      }}
+    >
+      <Container>
+        <Container
+          size="1"
+          sx={{
+            mb: 5,
+          }}
+        >
+          <Content align="center">
+            <Heading size="6">
+              <b>{title}</b>
+            </Heading>
+            <Heading as="p" size="3">
+              <b>{subtitle}</b>
+            </Heading>
+          </Content>
         </Container>
-      </Spacer>
-    </section>
+        <Grid columns={[1, null, null, null, 2]}>
+          <Solution {...solution} />
+          <ThemeProvider theme={{ colorMode: `dark` }}>
+            <Showcase {...showcase} />
+          </ThemeProvider>
+        </Grid>
+      </Container>
+    </Container>
   );
 };
 

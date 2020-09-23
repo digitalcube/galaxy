@@ -11,13 +11,13 @@ export const Logos: FC<Logos> = ({ title, nodes }: Logos) => {
     <Container
       as="section"
       sx={{
-        py: 5,
+        py: 6,
       }}
     >
       <Container
         size="1"
         sx={{
-          mb: 6,
+          mb: 5,
         }}
       >
         <Content align="center">

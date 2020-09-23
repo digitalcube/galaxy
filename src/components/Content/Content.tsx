@@ -1,16 +1,18 @@
 /** @jsx jsx */
 import { jsx } from 'theme-ui';
 import { ReactNode, FC } from 'react';
+import { Box } from 'theme-ui';
 
 type Content = {
   children?: ReactNode;
   align?: `left` | `center` | `right`;
+  sx?: object;
 };
 
-export const Content: FC<Content> = ({ align, children }: Content) => {
+export const Content: FC<Content> = ({ align, children, sx }: Content) => {
   if (!children) return null;
   return (
-    <div
+    <Box
       sx={{
         textAlign: align,
         '& > *': {
@@ -20,9 +22,10 @@ export const Content: FC<Content> = ({ align, children }: Content) => {
           mt: 3,
           mb: 0,
         },
+        ...sx,
       }}
     >
       {children}
-    </div>
+    </Box>
   );
 };
