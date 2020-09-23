@@ -68,6 +68,7 @@ export const shifter = {
         text: '#fff',
         background: '#1A0112',
         primary: '#0cf',
+        white: '#451D39',
       },
     },
     text: '#25021B',
@@ -197,11 +198,6 @@ export const shifter = {
       borderRadius: 0,
       boxShadow: 0,
       overflow: 'hidden',
-      modes: {
-        dark: {
-          bg: `purple.p600`,
-        },
-      },
     },
   },
   buttons: {

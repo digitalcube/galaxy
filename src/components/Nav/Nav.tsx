@@ -7,7 +7,7 @@ import { Box } from 'theme-ui';
 export type Nav = {
   children?: ReactNode;
   navItems?: NavLink[];
-  kind?: String;
+  kind?: string;
   sx?: object;
 };
 

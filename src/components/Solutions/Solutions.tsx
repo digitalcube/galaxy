@@ -9,80 +9,80 @@ import {
   Grid,
   Image,
   Card,
-  Button,
-  Text,
   Link,
-  Tabs,
+  Text,
 } from '../index';
 
 type Solutions = {
   title?: string;
-  solution?: {
-    title?: string;
-    subtitle?: string;
-    buttonLabel?: string;
-    href?: string;
-  };
-  showcase?: {
-    title?: string;
-    img?: ReactNode;
-    buttonLabel?: string;
-    href?: string;
-  };
+  subtitle?: string;
+  buttonLabel?: string;
+  href?: string;
+  solution?: Solution;
+  showcase?: Showcase;
 };
 
-const Showcase: FC<Solutions> = ({
-  showcase = {
-    title: `One of the most exciting contemporary design thinkers calls Shifter home.`,
-    buttonLabel: `View showcase`,
-    href: `#`,
-    img: <img src="logo-howtospeakmachine.webp" alt="Internet Society" />,
-  },
-}: Solutions) => {
-  const { title, buttonLabel, img, href } = showcase;
+type Solution = {
+  title?: string;
+  subtitle?: string;
+  href?: string;
+  buttonLabel?: string;
+};
+
+type Showcase = {
+  title?: string;
+  subtitle?: string;
+  img?: ReactNode;
+  buttonLabel?: string;
+  href?: string;
+};
+
+const Showcase: FC<Showcase> = ({
+  title,
+  buttonLabel,
+  href,
+  img,
+}: Showcase) => {
   return (
     <Card
       footer={
         <Content align="center">
           <Text>{title}</Text>
           <Link href={href}>
-            <Heading as="p" size="xs">
+            <Heading as="p" size="1">
               {buttonLabel}
             </Heading>
           </Link>
         </Content>
       }
     >
-      {/* <Spacer size={1} /> */}
       <Content align="center">
-        <Spacer size={1} />
         <Image width="30%">{img}</Image>
       </Content>
     </Card>
   );
 };
 
-const Solution: FC<Solutions> = ({
-  solution = {
-    title: `Designers`,
-    subtitle: `Use page builders and themes that will get your site noticed.`,
-    buttonLabel: `Solutions for designers`,
-    href: `#`,
-  },
-}: Solutions) => {
-  const { title, subtitle, buttonLabel, href } = solution;
+const Solution: FC<Solution> = ({
+  title,
+  subtitle,
+  buttonLabel,
+  href,
+}: Solution) => {
   return (
     <Card
       footer={
         <Content>
-          <Heading as="p" size="sm">
+          <Heading as="p" size="4">
             {subtitle}
           </Heading>
-          <Button href={href}>{buttonLabel}</Button>
+          <Link kind="primary" href={href}>
+            {buttonLabel}
+          </Link>
         </Content>
       }
     >
-      <Heading as="h2" size="lg">
+      <Heading as="h2" size="5">
         {title}
       </Heading>
     </Card>
@@ -90,24 +90,10 @@ const Solution: FC<Solutions> = ({
 };
 
 export const Solutions: FC<Solutions> = ({
-  title = `Discover how Shifter empowers every type of business and industry`,
-  solution = {
-    title: `Designers`,
-    subtitle: `Use page builders and themes that will get your site noticed.`,
-    buttonLabel: `Solutions for designers`,
-    href: `#`,
-  },
-  showcase = {
-    title: `One of the most exciting contemporary design thinkers calls Shifter home.`,
-    buttonLabel: `View showcase`,
-    href: `#`,
-    img: (
-      <img
-        src="https://www.getshifter.io/static/3f1aa2e6f5aa25eb64f6ddf4b7e582b9/cd6dd/logo-howtospeakmachine.webp"
-        alt="Internet Society"
-      />
-    ),
-  },
+  title,
+  subtitle,
+  solution,
+  showcase,
 }: Solutions) => {
   return (
     <section>
@@ -118,6 +104,9 @@ export const Solutions: FC<Solutions> = ({
               <Heading size="6">
                 <b>{title}</b>
               </Heading>
+              <Heading as="p" size="3">
+                <b>{subtitle}</b>
+              </Heading>
             </Content>
           </Container>
           <Flex
@@ -125,17 +114,39 @@ export const Solutions: FC<Solutions> = ({
               justifyContent: 'center',
               my: 3,
             }}
-          >
-            <Tabs />
-          </Flex>
+          ></Flex>
           <Grid columns={[1, null, null, null, 2]}>
-            <Solution solution={solution} />
+            <Solution {...solution} />
             <ThemeProvider theme={{ colorMode: `dark` }}>
-              <Showcase showcase={showcase} />
+              <Showcase {...showcase} />
             </ThemeProvider>
           </Grid>
         </Container>
       </Spacer>
     </section>
   );
+};
+
+Solutions.defaultProps = {
+  title: `Esse mollit aliquip occaecat`,
+  subtitle: `Nostrud nostrud elit cillum id culpa ea ex irure deserunt officia dolore cillum est.`,
+};
+
+Solution.defaultProps = {
+  title: `Designers`,
+  subtitle: `Use page builders and themes that will get your site noticed.`,
+  buttonLabel: `Solutions for designers`,
+  href: `#`,
+};
+
+Showcase.defaultProps = {
+  title: `Ea consequat esse non ullamco occaecat.`,
+  buttonLabel: `Excepteur adipisicing`,
+  href: `#`,
+  img: (
+    <img
+      src="https://www.getshifter.io/static/3f1aa2e6f5aa25eb64f6ddf4b7e582b9/cd6dd/logo-howtospeakmachine.webp"
+      alt=""
+    />
+  ),
 };

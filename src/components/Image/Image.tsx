@@ -1,13 +1,26 @@
-import styled from 'styled-components';
+/** @jsx jsx */
+import { jsx } from 'theme-ui';
+import React, { FC } from 'react';
+import { Image as ThemeUIImage } from 'theme-ui';
 
 type Image = {
-  width?: string;
+  img?: string;
+  alt?: string;
+  sx?: object;
 };
 
-export const Image = styled.div<Image>`
-  img {
-    width: ${props => props.width || `100%`};
-    height: auto;
-    vertical-align: middle;
-  }
-`;
+export const Image: FC<Image> = ({ img, sx }: Image) => {
+  if (!img) return null;
+  return (
+    <ThemeUIImage
+      sx={{
+        ...sx,
+      }}
+      src={img}
+    />
+  );
+};
+
+Image.defaultProps = {
+  img: `logo-howtospeakmachine.webp`,
+};

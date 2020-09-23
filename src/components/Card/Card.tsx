@@ -1,3 +1,5 @@
+/** @jsx jsx */
+import { jsx } from 'theme-ui';
 import React, { FC, ReactNode } from 'react';
 import { Card as ThemeUICard } from 'theme-ui';
 import { CardHeader } from './CardHeader';
@@ -15,6 +17,7 @@ export type Card = {
   excerpt?: string;
   href?: string;
   footer?: React.ReactChild;
+  sx?: object;
 };
 
 export const Card: FC<Card> = ({
@@ -25,9 +28,14 @@ export const Card: FC<Card> = ({
   img,
   children,
   footer,
+  sx,
 }: Card) => {
   return (
-    <ThemeUICard>
+    <ThemeUICard
+      sx={{
+        ...sx,
+      }}
+    >
       <CardImage>{img}</CardImage>
       <CardHeader
         href={href}
