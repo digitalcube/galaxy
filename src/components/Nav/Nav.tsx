@@ -33,7 +33,7 @@ export const Nav: React.FC<Nav> = ({ navItems, kind, sx }: Nav) => {
 };
 
 Nav.defaultProps = {
-  kind: `row`,
+  kind: `primary`,
   navItems: [
     {
       label: `Proident`,

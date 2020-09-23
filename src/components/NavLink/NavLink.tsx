@@ -14,3 +14,7 @@ export const NavLink: React.FC<NavLink> = ({ href, label, kind }: NavLink) => {
     </ThemeUINavLink>
   );
 };
+
+NavLink.defaultProps = {
+  kind: `nav`,
+};

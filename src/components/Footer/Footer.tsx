@@ -49,6 +49,7 @@ export const Footer: FC<Footer> = ({ nav }: Footer) => {
               Say hello 👋
             </Heading>
             <Nav
+              kind="row"
               sx={{
                 '& > :not(:first-child)': {
                   ml: 2,

@@ -32,7 +32,7 @@ export const Header: FC<Header> = ({ brand, nav }: Header) => {
                 ml: 8,
               }}
             >
-              <Nav navItems={nav[0]} />
+              <Nav kind="row" navItems={nav[0]} />
             </Flex>
           </Flex>
           <Flex
@@ -42,7 +42,7 @@ export const Header: FC<Header> = ({ brand, nav }: Header) => {
               ml: 8,
             }}
           >
-            <Nav navItems={nav[1]} />
+            <Nav kind="row" navItems={nav[1]} />
           </Flex>
         </Flex>
       </Container>

@@ -151,7 +151,7 @@ export const shifter = {
   },
   nav: {
     primary: {
-      display: 'inline-flex',
+      display: 'flex',
     },
     row: {
       variant: 'nav.primary',
