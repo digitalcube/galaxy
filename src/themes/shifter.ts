@@ -125,16 +125,6 @@ export const shifter = {
         color: 'purple.primary',
       },
     },
-    row: {
-      variant: 'links.nav',
-      alignItems: 'center',
-      '&:not(:first-child)': {
-        ml: 4,
-      },
-    },
-    column: {
-      variant: 'links.nav',
-    },
     primary: {
       variant: 'buttons.primary',
     },
@@ -157,6 +147,23 @@ export const shifter = {
     },
     4: {
       maxWidth: 1320,
+    },
+  },
+  nav: {
+    primary: {
+      display: 'inline-flex',
+    },
+    row: {
+      variant: 'nav.primary',
+      alignItems: 'center',
+      flexDirection: 'row',
+      '& > :not(:first-child)': {
+        ml: 4,
+      },
+    },
+    column: {
+      variant: 'nav.primary',
+      flexDirection: 'column',
     },
   },
   badges: {
