@@ -1,5 +1,5 @@
 import React, { ReactNode } from 'react';
-import { Header, Galaxy, GetStarted, Footer } from '../index';
+import { Header, Galaxy, Footer } from '../index';
 
 type Layout = {
   children?: ReactNode;
@@ -11,7 +11,6 @@ export const Layout = ({ children, header }: Layout) => {
     <Galaxy>
       <Header {...header} />
       {children ? children : null}
-      <GetStarted />
       <Footer />
     </Galaxy>
   );

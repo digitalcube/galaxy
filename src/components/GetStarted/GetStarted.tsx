@@ -41,11 +41,12 @@ export const GetStarted = ({
       <Box
         sx={{
           bg: 'primary',
+          my: 5,
         }}
       >
         <Container
           sx={{
-            py: 5,
+            py: 3,
           }}
           size="3"
           as="section"

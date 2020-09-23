@@ -9,6 +9,7 @@ import {
   Features,
   Testimonials,
   Showcase,
+  GetStarted,
 } from '../../../components/index';
 
 export const FrontPage = () => {
@@ -85,6 +86,7 @@ export const FrontPage = () => {
       <Features />
       <Testimonials />
       <Showcase />
+      <GetStarted />
     </Layout>
   );
 };
