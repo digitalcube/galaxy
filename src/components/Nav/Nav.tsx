@@ -1,3 +1,5 @@
+/** @jsx jsx */
+import { jsx } from 'theme-ui';
 import React, { ReactNode } from 'react';
 import { NavLink } from '../NavLink';
 import { Box } from 'theme-ui';
@@ -6,9 +8,10 @@ export type Nav = {
   children?: ReactNode;
   navItems?: NavLink[];
   kind?: String;
+  sx?: object;
 };
 
-export const Nav: React.FC<Nav> = ({ navItems, kind }: Nav) => {
+export const Nav: React.FC<Nav> = ({ navItems, kind, sx }: Nav) => {
   if (!navItems) return null;
   const items = navItems.map(item => {
     const { label, href, kind } = item;
@@ -16,7 +19,14 @@ export const Nav: React.FC<Nav> = ({ navItems, kind }: Nav) => {
   });
 
   return (
-    <Box variant={`nav.${kind}`} as="nav" role="navigation">
+    <Box
+      sx={{
+        ...sx,
+      }}
+      variant={`nav.${kind}`}
+      as="nav"
+      role="navigation"
+    >
       {items}
     </Box>
   );
