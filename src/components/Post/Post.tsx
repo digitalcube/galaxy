@@ -1,6 +1,5 @@
-import React, { ReactNode } from 'react';
-import { Date } from '../Date';
-import { Text, Card, Heading, Link } from '../index';
+import React, { FC, ReactNode } from 'react';
+import { Text, Card, Heading, Link, Content, PostMeta } from '../index';
 
 export type Post = {
   align?: `left` | `center` | `right`;
@@ -18,7 +17,7 @@ export type Post = {
   sx?: object;
 };
 
-export const Post: React.FC<Post> = ({
+export const Post: FC<Post> = ({
   align,
   author,
   category,
@@ -40,18 +39,26 @@ export const Post: React.FC<Post> = ({
       img={img}
       footer={footer}
     >
-      <Heading as="p">{category}</Heading>
-      <Link href={href}>
-        <Heading as="h2" size="4">
-          {title}
+      <Content
+        sx={{
+          '& > :not(:first-child)': {
+            mt: 1,
+            mb: 0,
+          },
+        }}
+      >
+        <Heading as="p">{category}</Heading>
+        <Link href={href}>
+          <Heading as="h2" size="5">
+            <b>{title}</b>
+          </Heading>
+        </Link>
+        <Heading as="h3" size="2">
+          {subtitle}
         </Heading>
-      </Link>
-      <Heading as="h3" size="2">
-        {subtitle}
-      </Heading>
-      <Text>{excerpt}</Text>
-      {author}
-      <Date>{date}</Date>
+        <Text>{excerpt}</Text>
+        <PostMeta author={author} date={date} />
+      </Content>
     </Card>
   );
 };

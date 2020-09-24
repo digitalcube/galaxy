@@ -33,6 +33,7 @@ export * from './PageHeader';
 export * from './Post';
 export * from './PostHeader';
 export * from './Posts';
+export * from './PostMeta';
 export * from './QuickLinks';
 export * from './RecentPosts';
 export * from './Resources';
