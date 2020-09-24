@@ -14,7 +14,7 @@ export const RecentPosts: FC<RecentPosts> = ({ title, nodes }: RecentPosts) => {
       as="section"
       size="4"
       sx={{
-        py: 5,
+        py: 7,
         display: 'flex',
         flexDirection: 'column',
         alignItems: 'center',
