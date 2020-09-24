@@ -11,7 +11,7 @@ export type Card = {
   children?: ReactNode;
   align?: `left` | `center` | `right`;
   schema?: 'amimoto' | 'shifter' | 'galaxy';
-  img?: ReactNode;
+  img?: string;
   title?: string;
   subtitle?: ReactNode;
   excerpt?: string;
@@ -36,7 +36,7 @@ export const Card: FC<Card> = ({
         ...sx,
       }}
     >
-      <CardImage>{img}</CardImage>
+      <CardImage img={img} />
       <CardHeader
         href={href}
         title={title}

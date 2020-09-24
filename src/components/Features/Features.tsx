@@ -20,7 +20,7 @@ export const Feature = ({ img, title, excerpt }: Feature) => {
   return (
     <Card
       sx={{ textAlign: 'center', p: 4 }}
-      img={<Image img={img} />}
+      img={img}
       title={title}
       excerpt={excerpt}
     />
@@ -63,7 +63,7 @@ export const Features = ({
             <b>{title}</b>
           </Heading>
           <Heading as="p" size="3">
-            <b>{subtitle}</b>
+            {subtitle}
           </Heading>
         </Content>
       </Container>

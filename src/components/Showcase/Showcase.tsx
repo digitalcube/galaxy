@@ -36,7 +36,7 @@ export const Showcase = ({
       <Grid columns={[1, null, null, 2]}>
         <Content>
           <Heading as="h2" size="6">
-            {title}
+            <b>{title}</b>
           </Heading>
           <Heading as="h2" size="4">
             {subtitle}
@@ -52,30 +52,22 @@ export const Showcase = ({
 };
 
 Showcase.defaultProps = {
-  title: `Get Inspired`,
-  subtitle: `See how our customers are already building static sites with Shifter.`,
-  buttonLabel: `View the Showcase`,
+  title: `Mollit nisi reprehenderit do officia`,
+  subtitle: `Et ullamco enim Lorem irure consequat commodo officia consequat laboris excepteur culpa.`,
+  buttonLabel: `Laboris labore`,
   href: `#`,
   nodes: [
     {
       title: `Soracom`,
       href: `https://example.com`,
       excerpt: `example.com`,
-      img: (
-        <Link href="https://example.com">
-          <Image img="https://www.getshifter.io/static/5b8d04811ce4850fad82e16214795926/39f27/soracom.jpg" />
-        </Link>
-      ),
+      img: `https://www.getshifter.io/static/5b8d04811ce4850fad82e16214795926/39f27/soracom.jpg`,
     },
     {
       title: `Vrije Universiteit Amsterdam`,
       excerpt: `example.com`,
       href: `https://example.com`,
-      img: (
-        <Link href="https://example.com">
-          <Image img="https://www.getshifter.io/static/1f94269f0d484cd3750314acef23695d/39f27/screenshot-vu.jpg" />
-        </Link>
-      ),
+      img: `https://www.getshifter.io/static/1f94269f0d484cd3750314acef23695d/39f27/screenshot-vu.jpg`,
     },
   ],
 };

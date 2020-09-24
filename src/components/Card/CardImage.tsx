@@ -1,15 +1,12 @@
-import React, { FC, ReactNode } from 'react';
-import styled from 'styled-components';
+import React, { FC } from 'react';
+import { Image } from '../index';
 
 type CardImage = {
-  children: ReactNode;
+  img: string;
 };
 
-export const CardImage: FC<CardImage> = ({ children }: CardImage) => {
-  if (!children) return null;
-  return <StyledCardImage>{children}</StyledCardImage>;
+export const CardImage: FC<CardImage> = ({ img }: CardImage) => {
+  if (!img) return null;
+  console.log(img);
+  return <Image img={img} />;
 };
-
-export const StyledCardImage = styled.div`
-  overflow: hidden;
-`;

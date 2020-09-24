@@ -59,7 +59,9 @@ export const Testimonials: FC<Testimonials> = ({
         }}
       >
         <Content align="center">
-          <Heading size="6">{title}</Heading>
+          <Heading size="6">
+            <b>{title}</b>
+          </Heading>
         </Content>
       </Container>
       <Slider nodes={nodes} />

@@ -6,7 +6,6 @@ export * from './BlogShowcaseCTA';
 export * from './Brand';
 export * from './Browser';
 export * from './Button';
-export * from './ButtonGroup';
 export * from './Card';
 export * from './Col';
 export * from './Container';

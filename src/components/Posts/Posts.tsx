@@ -1,4 +1,4 @@
-import React, { FC, ReactNode } from 'react';
+import React, { FC } from 'react';
 import { Post, Grid } from '../index';
 
 export type Posts = {

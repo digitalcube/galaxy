@@ -27,8 +27,10 @@ export const GetStarted = ({
         }}
       >
         <Content align="center">
-          <Heading size="6">{title}</Heading>
-          <Heading size="5">{subtitle}</Heading>
+          <Heading size="6">
+            <b>{title}</b>
+          </Heading>
+          <Heading size="4">{subtitle}</Heading>
           <Link href={href} kind="primary">
             {linkLabel}
           </Link>
@@ -66,8 +68,8 @@ export const GetStarted = ({
 };
 
 GetStarted.defaultProps = {
-  title: `Fugiat ut consequat cillum ullamco aute nulla?`,
-  subtitle: `Qui ut Lorem ex occaecat ea deserunt eserunt in irure ipsum veniam enim quis.`,
+  title: `Fugiat ut ullamco aute nulla?`,
+  subtitle: `Qui ut Lorem ex occaecat ea deserunt eserunt in irure ipsum veniam enim quis consequat cillum.`,
   href: `#!`,
   linkLabel: `Nisi veniam laboris`,
   variant: `0`,

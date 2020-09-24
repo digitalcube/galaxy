@@ -10,7 +10,7 @@ export type Post = {
   category?: string;
   author?: string;
   date?: string;
-  img?: React.ReactNode;
+  img?: string;
   href?: string;
   footer?: React.ReactChild;
 };

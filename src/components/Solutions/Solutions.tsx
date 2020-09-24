@@ -30,7 +30,7 @@ type Solution = {
 type Showcase = {
   title?: string;
   subtitle?: string;
-  img?: ReactNode;
+  img?: string;
   buttonLabel?: string;
   href?: string;
 };
@@ -60,13 +60,12 @@ const Showcase: FC<Showcase> = ({
     >
       <Content align="center">
         <Image
+          img={img}
           sx={{
             mt: 2,
             width: ['50%', null, null, '25%'],
           }}
-        >
-          {img}
-        </Image>
+        />
       </Content>
     </Card>
   );
@@ -124,7 +123,7 @@ export const Solutions: FC<Solutions> = ({
               <b>{title}</b>
             </Heading>
             <Heading as="p" size="3">
-              <b>{subtitle}</b>
+              {subtitle}
             </Heading>
           </Content>
         </Container>
@@ -155,10 +154,5 @@ Showcase.defaultProps = {
   title: `Ea consequat esse non ullamco occaecat.`,
   buttonLabel: `Excepteur adipisicing`,
   href: `#`,
-  img: (
-    <img
-      src="https://www.getshifter.io/static/3f1aa2e6f5aa25eb64f6ddf4b7e582b9/cd6dd/logo-howtospeakmachine.webp"
-      alt=""
-    />
-  ),
+  img: `https://www.getshifter.io/static/3f1aa2e6f5aa25eb64f6ddf4b7e582b9/cd6dd/logo-howtospeakmachine.webp`,
 };
