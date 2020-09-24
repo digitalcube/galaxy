@@ -1,7 +1,5 @@
 import React, { ReactNode, FC } from 'react';
-import styled from 'styled-components';
-import { components } from '../../styles';
-import { Heading, Text, Content } from '../index';
+import { Heading, Text, Content, Box } from '../index';
 import { Link } from '../Link';
 
 type CardHeader = {
@@ -10,6 +8,7 @@ type CardHeader = {
   subtitle?: ReactNode | string;
   excerpt?: ReactNode | string;
   href?: string;
+  sx?: object;
 };
 
 const Title = ({ href, children }: CardHeader) => {
@@ -57,17 +56,14 @@ export const CardHeader: FC<CardHeader> = ({
   subtitle,
   excerpt,
   href,
+  sx,
 }: CardHeader) => {
   if (!title) return null;
   return (
-    <StyledContent>
+    <Box sx={{ ...sx }}>
       <Title href={href}>{title}</Title>
       <Subtitle>{subtitle}</Subtitle>
       <Excerpt>{excerpt}</Excerpt>
-    </StyledContent>
+    </Box>
   );
 };
-
-const StyledContent = styled.div`
-  padding: ${components.spacing.sm} ${components.spacing.sm};
-`;
