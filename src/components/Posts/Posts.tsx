@@ -6,16 +6,21 @@ export type Posts = {
   nodes?: any;
   columns?: any;
   node?: Post;
+  sx?: object;
 };
 
-export const Posts: FC<Posts> = ({ nodes, columns, variant }: Posts) => {
+export const Posts: FC<Posts> = ({ nodes, columns, variant, sx }: Posts) => {
   if (!nodes) return null;
 
   const items = nodes.map((node: Post) => {
     return <Post {...node} variant={variant} />;
   });
 
-  return <Grid columns={columns}>{items}</Grid>;
+  return (
+    <Grid sx={{ ...sx }} columns={columns}>
+      {items}
+    </Grid>
+  );
 };
 
 Posts.defaultProps = {

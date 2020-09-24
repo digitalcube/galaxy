@@ -1,5 +1,5 @@
 import React, { ReactNode } from 'react';
-import { Header, Footer, Categories, NavLink } from '../index';
+import { Header, Footer, Categories, NavLink, RecentPosts } from '../index';
 
 type Layout = {
   children?: ReactNode;
@@ -18,6 +18,7 @@ export const Layout = ({ children, header, postType, categories }: Layout) => {
         <Header {...header} />
         <Categories {...categories} />
         {children ? children : null}
+        <RecentPosts />
         <Footer />
       </>
     );

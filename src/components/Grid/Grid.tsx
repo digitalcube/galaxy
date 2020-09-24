@@ -1,12 +1,19 @@
-import React, { ReactNode } from 'react';
-import { Grid as ThemeUIGrid, GridProps } from 'theme-ui';
+/** @jsx jsx */
+import { jsx } from 'theme-ui';
+import { ReactNode } from 'react';
+import { Grid as ThemeUIGrid } from 'theme-ui';
 
 export type Grid = {
   columns?: any;
   children?: ReactNode;
+  sx?: object;
 };
 
-export const Grid = ({ children, columns }: Grid) => {
+export const Grid = ({ children, columns, sx }: Grid) => {
   if (!children) return null;
-  return <ThemeUIGrid columns={columns}>{children}</ThemeUIGrid>;
+  return (
+    <ThemeUIGrid sx={{ ...sx }} columns={columns}>
+      {children}
+    </ThemeUIGrid>
+  );
 };

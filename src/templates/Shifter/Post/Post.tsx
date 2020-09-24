@@ -38,7 +38,7 @@ export const Post = ({
         />
         <FeaturedImage img={img} />
         <Container
-          size="2"
+          size="1"
           sx={{
             my: 4,
           }}
