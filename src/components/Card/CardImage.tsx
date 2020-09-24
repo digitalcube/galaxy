@@ -2,11 +2,10 @@ import React, { FC } from 'react';
 import { Image } from '../index';
 
 type CardImage = {
-  img: string;
+  img?: string;
 };
 
 export const CardImage: FC<CardImage> = ({ img }: CardImage) => {
   if (!img) return null;
-  console.log(img);
   return <Image img={img} />;
 };

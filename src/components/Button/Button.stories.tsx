@@ -1,7 +1,7 @@
 import React from 'react';
 import { ThemeProvider } from 'styled-components';
 import { withKnobs } from '@storybook/addon-knobs';
-import { Button, Grid, Col } from '../../index';
+import { Button, Grid } from '../../index';
 
 export default {
   component: Button,
@@ -15,49 +15,34 @@ export default {
 
 const schemas = [`galaxy`, `shifter`, `amimoto`];
 const modes = [`light`, `dark`];
-const kinds = [`primary`, `ghost`, `success`];
-const outline = [true, false];
+const kinds = [`primary`, `ghost`, `success`, 'white', 'danger'];
 
-const options = outline.map(outline => {
-  return kinds.map(kind => {
-    return modes.map(mode => {
-      return schemas.map(schema => {
-        return (
-          <Col>
-            <ThemeProvider theme={{ mode: mode, schema: schema }}>
-              <Button href="#" outline={outline} kind={kind}>
-                {schema} / {mode} / {kind}
-              </Button>
-            </ThemeProvider>
-          </Col>
-        );
-      });
+const options = kinds.map(kind => {
+  return modes.map(mode => {
+    return schemas.map(schema => {
+      return (
+        <ThemeProvider theme={{ mode: mode, schema: schema }}>
+          <Button kind={kind}>
+            {schema} / {mode} / {kind}
+          </Button>
+        </ThemeProvider>
+      );
     });
   });
 });
 
 export const Default = () => {
-  return <Button href="#!">Hello world</Button>;
+  return <Button>Hello world</Button>;
 };
 
 export const Kinds = () => {
   return (
     <>
-      <Button kind="primary" href="#!">
-        Primary
-      </Button>
-      <Button kind="success" href="#!">
-        Success
-      </Button>
-      <Button kind="ghost" href="#!">
-        Ghost
-      </Button>
-      <Button kind="white" href="#!">
-        White
-      </Button>
-      <Button kind="danger" href="#!">
-        Danger
-      </Button>
+      <Button kind="primary">Primary</Button>
+      <Button kind="success">Success</Button>
+      <Button kind="ghost">Ghost</Button>
+      <Button kind="white">White</Button>
+      <Button kind="danger">Danger</Button>
     </>
   );
 };

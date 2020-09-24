@@ -19,7 +19,7 @@ type Feature = {
 export const Feature = ({ img, title, excerpt }: Feature) => {
   return (
     <Card
-      sx={{ textAlign: 'center', p: 4 }}
+      sx={{ textAlign: 'center', px: 2, py: 4 }}
       img={img}
       title={title}
       excerpt={excerpt}
