@@ -82,7 +82,6 @@
     "typescript": "^4.0.2"
   },
   "dependencies": {
-    "@emotion/core": "^10.0.35",
     "@styled-icons/fa-brands": "^10.18.0",
     "@types/styled-theming": "^2.2.5",
     "@types/theme-ui": "^0.3.6",

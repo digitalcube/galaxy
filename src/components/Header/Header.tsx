@@ -1,6 +1,6 @@
 import React, { FC, ReactNode } from 'react';
 import { Flex } from 'theme-ui';
-import { Container, Nav, Brand } from '../index';
+import { Container, Nav, Brand, Link } from '../index';
 
 type Header = {
   brand?: ReactNode;
@@ -26,7 +26,7 @@ export const Header: FC<Header> = ({ brand, nav, sx }: Header) => {
         }}
       >
         <Flex>
-          {brand}
+          <Link href="/">{brand}</Link>
           <Flex
             sx={{
               flexDirection: 'column',
