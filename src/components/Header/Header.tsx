@@ -1,6 +1,4 @@
-/** @jsx jsx */
-import { jsx } from 'theme-ui';
-import { FC, ReactNode } from 'react';
+import React, { FC, ReactNode } from 'react';
 import { Flex } from 'theme-ui';
 import { Container, Nav } from '../index';
 
