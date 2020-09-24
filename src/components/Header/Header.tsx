@@ -6,35 +6,29 @@ import { Container, Nav } from '../index';
 
 type Header = {
   brand?: ReactNode;
-  nav?: object;
+  nav?: any;
+  length?: number;
+  sx?: object;
 };
 
-export const Header: FC<Header> = ({ brand, nav }: Header) => {
+export const Header: FC<Header> = ({ brand, nav, sx }: Header) => {
   return (
-    <div
+    <Container
       sx={{
-        mt: 3,
-        mb: 6,
+        pt: 3,
+        pb: 6,
+        ...sx,
       }}
+      as="header"
+      size="4"
     >
-      <Container as="header" size="4">
-        <Flex
-          sx={{
-            justifyContent: 'space-between',
-          }}
-        >
-          <Flex>
-            {brand}
-            <Flex
-              sx={{
-                flexDirection: 'column',
-                justifyContent: 'space-around',
-                ml: 8,
-              }}
-            >
-              <Nav kind="row" navItems={nav[0]} />
-            </Flex>
-          </Flex>
+      <Flex
+        sx={{
+          justifyContent: 'space-between',
+        }}
+      >
+        <Flex>
+          {brand}
           <Flex
             sx={{
               flexDirection: 'column',
@@ -42,12 +36,59 @@ export const Header: FC<Header> = ({ brand, nav }: Header) => {
               ml: 8,
             }}
           >
-            <Nav kind="row" navItems={nav[1]} />
+            <Nav kind="row" navItems={nav[0]} />
           </Flex>
         </Flex>
-      </Container>
-    </div>
+        <Flex
+          sx={{
+            flexDirection: 'column',
+            justifyContent: 'space-around',
+            ml: 8,
+          }}
+        >
+          <Nav kind="row" navItems={nav[1]} />
+        </Flex>
+      </Flex>
+    </Container>
   );
+};
+
+Header.defaultProps = {
+  nav: [
+    [
+      {
+        label: `Qui sint`,
+        href: `#!`,
+      },
+      {
+        label: `Cupidatat`,
+        href: `#!`,
+      },
+      {
+        label: `Excepteur`,
+        href: `#!`,
+      },
+      {
+        label: `Laborum`,
+        href: `#!`,
+      },
+      {
+        label: `Pariatur`,
+        href: `#!`,
+      },
+    ],
+    [
+      {
+        label: `Login`,
+        href: `#!`,
+      },
+      {
+        label: `Sign Up`,
+        href: `#!`,
+        kind: `primary`,
+      },
+    ],
+  ],
 };
 
 // import React, { FC, ReactNode } from 'react';

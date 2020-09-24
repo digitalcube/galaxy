@@ -120,7 +120,7 @@ export const shifter = {
   },
   links: {
     nav: {
-      fontSize: 3,
+      fontSize: 2,
       fontWeight: 'body',
       color: 'purple.p700',
       '&:hover': {
@@ -166,6 +166,9 @@ export const shifter = {
     column: {
       variant: 'nav.primary',
       flexDirection: 'column',
+      '& > :not(:first-child)': {
+        mt: 1,
+      },
     },
   },
   badges: {

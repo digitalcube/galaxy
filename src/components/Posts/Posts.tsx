@@ -2,7 +2,7 @@ import React, { FC } from 'react';
 import { Post, Grid } from '../index';
 
 export type Posts = {
-  nodes?: object;
+  nodes?: any;
   columns?: Array<string | number | null>;
 };
 

@@ -31,8 +31,14 @@ type FooterNav = {
 export const FooterNav: FC<FooterNav> = ({ title, navItems }: FooterNav) => {
   return (
     <div>
-      <Heading size="4" as="h3">
-        {title}
+      <Heading
+        sx={{
+          mb: 2,
+        }}
+        size="4"
+        as="h3"
+      >
+        <b>{title}</b>
       </Heading>
       <Nav navItems={navItems} kind="column" />
     </div>
