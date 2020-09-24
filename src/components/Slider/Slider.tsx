@@ -1,3 +1,5 @@
+/** @jsx jsx */
+import { jsx } from 'theme-ui';
 import React, { FC } from 'react';
 import styled from 'styled-components';
 import { Swiper, SwiperSlide } from 'swiper/react';
@@ -6,6 +8,7 @@ import { components } from '../../styles';
 
 type Slider = {
   nodes?: Node[];
+  sx?: object;
 };
 
 type Slides = {
@@ -21,10 +24,13 @@ const slides = ({ nodes }: Slides) => {
   return i;
 };
 
-export const Slider: FC<Slider> = ({ nodes }: Slider) => {
+export const Slider: FC<Slider> = ({ nodes, sx }: Slider) => {
   const spaceBetween = parseFloat(components.logos.gap) * 16;
   return (
     <StyledSwiper
+      sx={{
+        ...sx,
+      }}
       spaceBetween={spaceBetween}
       slidesPerView={6}
       loop={true}
