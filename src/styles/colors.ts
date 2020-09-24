@@ -25,14 +25,13 @@ export const colors = {
     dangerDark: `#950000`,
   },
   shifter: {
-    black: `#25021B`,
+    black: `#0F0D0D`,
     white: `#FFFFFF`,
     background: {
       light: `#FAFAFA`,
       dark: `#1A0112`,
     },
     gray: {
-      g900: `#0F0D0D`,
       g800: `#2B2628`,
       g700: `#484043`,
       g600: `#645B5E`,
