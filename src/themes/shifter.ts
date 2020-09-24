@@ -45,7 +45,7 @@ export const shifter = {
   },
   space: [0, 8, 16, 24, 32, 40, 48, 56, 64],
   fonts: {
-    body: 'Sofia Pro, sans-serif',
+    body: 'sofia-pro, sans-serif',
     heading: 'inherit',
     monospace: 'Menlo, monospace',
   },
