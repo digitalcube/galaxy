@@ -75,7 +75,7 @@ Testimonials.defaultProps = {
     {
       node: (
         <Quote
-          img="avatar.png"
+          img="user-avatar.png"
           quote="Proident irure anim non non labore adipisicing."
           author="FooBarBaz"
           handle="@ExampleFooBarBaz"
@@ -85,7 +85,7 @@ Testimonials.defaultProps = {
     {
       node: (
         <Quote
-          img="avatar.png"
+          img="user-avatar.png"
           quote="Proident irure anim non non labore adipisicing."
           author="FooBarBaz"
           handle="@ExampleFooBarBaz"
@@ -95,7 +95,7 @@ Testimonials.defaultProps = {
     {
       node: (
         <Quote
-          img="avatar.png"
+          img="user-avatar.png"
           quote="Proident irure anim non non labore adipisicing."
           author="FooBarBaz"
           handle="@ExampleFooBarBaz"
@@ -105,7 +105,7 @@ Testimonials.defaultProps = {
     {
       node: (
         <Quote
-          img="avatar.png"
+          img="user-avatar.png"
           quote="Proident irure anim non non labore adipisicing."
           author="FooBarBaz"
           handle="@ExampleFooBarBaz"
@@ -115,7 +115,7 @@ Testimonials.defaultProps = {
     {
       node: (
         <Quote
-          img="avatar.png"
+          img="user-avatar.png"
           quote="Proident irure anim non non labore adipisicing."
           author="FooBarBaz"
           handle="@ExampleFooBarBaz"
@@ -125,7 +125,7 @@ Testimonials.defaultProps = {
     {
       node: (
         <Quote
-          img="avatar.png"
+          img="user-avatar.png"
           quote="Proident irure anim non non labore adipisicing."
           author="FooBarBaz"
           handle="@ExampleFooBarBaz"

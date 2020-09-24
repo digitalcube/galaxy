@@ -21,6 +21,10 @@ const avatar = {
     width: '5.5rem',
     height: '5.5rem',
   },
+  responsive: {
+    width: '100%',
+    height: 'auto',
+  },
 };
 
 export const shifter = {
