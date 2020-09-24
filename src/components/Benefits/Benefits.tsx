@@ -35,7 +35,7 @@ export const Benefits = ({ title, subtitle, img, nodes }: Benefits) => {
       </Container>
       <Container>
         <Grid columns={2}>
-          <Posts columns={2} nodes={nodes} />
+          <Posts variant="basic" columns={2} nodes={nodes} />
           {img}
         </Grid>
       </Container>

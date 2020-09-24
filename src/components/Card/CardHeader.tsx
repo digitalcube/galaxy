@@ -9,6 +9,7 @@ type CardHeader = {
   excerpt?: ReactNode | string;
   href?: string;
   sx?: object;
+  variant?: string;
 };
 
 const Title = ({ href, children }: CardHeader) => {
@@ -57,13 +58,18 @@ export const CardHeader: FC<CardHeader> = ({
   excerpt,
   href,
   sx,
+  variant,
 }: CardHeader) => {
   if (!title) return null;
   return (
-    <Box sx={{ ...sx }}>
+    <Box variant={variant} sx={{ ...sx }}>
       <Title href={href}>{title}</Title>
       <Subtitle>{subtitle}</Subtitle>
       <Excerpt>{excerpt}</Excerpt>
     </Box>
   );
+};
+
+CardHeader.defaultProps = {
+  variant: 'cards.primary',
 };

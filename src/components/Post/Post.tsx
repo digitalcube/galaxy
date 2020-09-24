@@ -4,32 +4,42 @@ import { Text, Card, Heading, Link } from '../index';
 
 export type Post = {
   align?: `left` | `center` | `right`;
-  title?: string;
-  subtitle?: string;
-  excerpt?: string;
-  category?: string;
   author?: string;
+  category?: string;
   date?: string;
-  img?: string;
-  href?: string;
+  excerpt?: string;
   footer?: ReactNode;
+  href?: string;
+  img?: string;
   node?: any;
+  subtitle?: string;
+  title?: string;
+  variant?: string;
+  sx?: object;
 };
 
 export const Post: React.FC<Post> = ({
   align,
-  title,
-  subtitle,
-  excerpt,
-  category,
   author,
+  category,
   date,
-  img,
-  href,
+  excerpt,
   footer,
+  href,
+  img,
+  subtitle,
+  title,
+  sx,
+  variant,
 }: Post) => {
   return (
-    <Card align={align} img={img} footer={footer}>
+    <Card
+      sx={{ ...sx }}
+      variant={variant}
+      align={align}
+      img={img}
+      footer={footer}
+    >
       <Heading as="p">{category}</Heading>
       <Link href={href}>
         <Heading as="h2" size="4">

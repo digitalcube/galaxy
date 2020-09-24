@@ -18,6 +18,7 @@ export type Card = {
   href?: string;
   footer?: ReactNode;
   sx?: object;
+  variant?: string;
 };
 
 export const Card: FC<Card> = ({
@@ -29,9 +30,11 @@ export const Card: FC<Card> = ({
   children,
   footer,
   sx,
+  variant,
 }: Card) => {
   return (
     <ThemeUICard
+      variant={variant}
       sx={{
         ...sx,
       }}
@@ -42,9 +45,14 @@ export const Card: FC<Card> = ({
         title={title}
         subtitle={subtitle}
         excerpt={excerpt}
+        variant={variant}
       />
-      <CardBody>{children}</CardBody>
+      <CardBody variant={variant}>{children}</CardBody>
       <CardFooter>{footer}</CardFooter>
     </ThemeUICard>
   );
+};
+
+Card.defaultProps = {
+  variant: 'primary',
 };

@@ -2,11 +2,24 @@ import React, { ReactNode } from 'react';
 import { Box } from '../index';
 
 export type CardBody = {
-  children: ReactNode;
+  children?: ReactNode;
+  variant?: string;
   sx?: object;
 };
 
-export const CardBody: React.FC<CardBody> = ({ children, sx }: CardBody) => {
+export const CardBody: React.FC<CardBody> = ({
+  children,
+  sx,
+  variant,
+}: CardBody) => {
   if (!children) return null;
-  return <Box sx={{ p: 2, ...sx }}>{children}</Box>;
+  return (
+    <Box variant={variant} sx={{ ...sx }}>
+      {children}
+    </Box>
+  );
+};
+
+CardBody.defaultProps = {
+  variant: `cards.primary`,
 };

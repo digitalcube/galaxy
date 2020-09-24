@@ -210,6 +210,15 @@ export const shifter = {
       borderRadius: 0,
       boxShadow: 0,
       overflow: 'hidden',
+      '& >': {
+        p: 2,
+      },
+    },
+    basic: {
+      '& >': {
+        p: 0,
+        bg: null,
+      },
     },
   },
   buttons: {

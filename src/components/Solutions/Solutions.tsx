@@ -79,6 +79,7 @@ const Solution: FC<Solution> = ({
 }: Solution) => {
   return (
     <Card
+      variant="primary"
       footer={
         <Content>
           <Heading as="p" size="4">
