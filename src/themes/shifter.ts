@@ -74,7 +74,7 @@ export const shifter = {
     text: '#3C1533',
     heading: '#571B52',
     primary: '#68296A',
-    secondary: '#451D39',
+    secondary: '#797679',
     black: `#25021B`,
     white: `#FFFFFF`,
     success: `#0B8451`,

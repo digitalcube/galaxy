@@ -1,16 +1,14 @@
+/** @jsx jsx */
+import { jsx } from 'theme-ui';
 import React, { ReactNode } from 'react';
-import styled from 'styled-components';
-import { components } from '../../styles';
+import { Box } from '../index';
 
 export type CardBody = {
   children: ReactNode;
+  sx?: object;
 };
 
-const StyledCardBody = styled.div`
-  padding: ${components.spacing.sm} ${components.spacing.sm};
-`;
-
-export const CardBody: React.FC<CardBody> = ({ children }: CardBody) => {
+export const CardBody: React.FC<CardBody> = ({ children, sx }: CardBody) => {
   if (!children) return null;
-  return <StyledCardBody>{children}</StyledCardBody>;
+  return <Box sx={{ ...sx }}>{children}</Box>;
 };

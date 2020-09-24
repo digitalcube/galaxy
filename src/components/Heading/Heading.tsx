@@ -1,3 +1,5 @@
+/** @jsx jsx */
+import { jsx } from 'theme-ui';
 import React, { ReactNode } from 'react';
 import { Heading as ThemeUIHeading } from 'theme-ui';
 
@@ -6,11 +8,18 @@ export type Heading = {
   as?: 'h1' | 'h2' | 'h3' | 'h4' | 'h5' | 'h6' | 'p';
   size?: '0' | '1' | '2' | '3' | '4' | '5' | '6' | '7';
   variant?: '0' | '1' | '2' | '3' | '4' | '5' | '6' | '7';
+  sx?: object;
 };
 
-export const Heading = ({ children, as, size }: Heading) => {
+export const Heading = ({ children, as, size, sx }: Heading) => {
   return (
-    <ThemeUIHeading variant={size} as={as}>
+    <ThemeUIHeading
+      variant={size}
+      as={as}
+      sx={{
+        ...sx,
+      }}
+    >
       {children}
     </ThemeUIHeading>
   );
