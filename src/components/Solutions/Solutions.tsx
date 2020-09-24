@@ -43,6 +43,7 @@ const Showcase: FC<Showcase> = ({
 }: Showcase) => {
   return (
     <Card
+      variant="primary"
       sx={{
         bg: 'purple.p600',
         color: 'white',

@@ -210,7 +210,7 @@ export const shifter = {
       borderRadius: 0,
       boxShadow: 0,
       overflow: 'hidden',
-      '& >': {
+      '& > div': {
         p: 2,
       },
     },
