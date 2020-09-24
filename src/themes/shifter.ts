@@ -91,6 +91,7 @@ export const shifter = {
     heading: null,
   },
   colors: {
+    ...colors,
     modes: {
       dark: {
         text: '#fff',
@@ -262,7 +263,7 @@ export const shifter = {
   text: {
     heading: {
       color: 'heading',
-      fontWeight: 400,
+      fontWeight: 'heading',
       textDecoration: 'none',
     },
     0: {
