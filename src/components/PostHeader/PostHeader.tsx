@@ -1,5 +1,5 @@
 import React, { FC } from 'react';
-import { Box, Heading, Text } from '../index';
+import { Box, Heading, Text, Container } from '../index';
 
 export type PostHeader = {
   title?: string;
@@ -16,7 +16,8 @@ export const PostHeader: FC<PostHeader> = ({
   date,
 }: PostHeader) => {
   return (
-    <Box
+    <Container
+      size="2"
       sx={{
         py: 7,
         textAlign: 'center',
@@ -50,6 +51,6 @@ export const PostHeader: FC<PostHeader> = ({
         <span>|</span>
         <Text>{date}</Text>
       </Box>
-    </Box>
+    </Container>
   );
 };

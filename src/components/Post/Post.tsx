@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { ReactNode } from 'react';
 import { Date } from '../Date';
 import { Text, Card, Heading, Link } from '../index';
 
@@ -12,7 +12,8 @@ export type Post = {
   date?: string;
   img?: string;
   href?: string;
-  footer?: React.ReactChild;
+  footer?: ReactNode;
+  node?: any;
 };
 
 export const Post: React.FC<Post> = ({

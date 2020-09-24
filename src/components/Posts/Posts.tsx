@@ -1,16 +1,20 @@
 import React, { FC } from 'react';
+import { GridProps } from 'theme-ui';
 import { Post, Grid } from '../index';
 
 export type Posts = {
   nodes?: any;
-  columns?: Array<string | number | null>;
+  columns?: any;
+  node?: Post;
 };
 
 export const Posts: FC<Posts> = ({ nodes, columns }: Posts) => {
   if (!nodes) return null;
-  const items = nodes.map(node => {
+
+  const items = nodes.map((node: Post) => {
     return <Post {...node} />;
   });
+
   return <Grid columns={columns}>{items}</Grid>;
 };
 

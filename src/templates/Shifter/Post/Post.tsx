@@ -51,7 +51,7 @@ export const Post = ({
 };
 
 Post.defaultProps = {
-  title: `Ad Consectetur`,
+  title: `Velit a non Consectetur Sint Offica Sunt Commodo ad Proident`,
   category: `Proident`,
   author: `Magna Aliqua`,
   date: `Velit 4, 2049`,

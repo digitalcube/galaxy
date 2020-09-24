@@ -1,38 +1,11 @@
 import React, { ReactNode } from 'react';
-import { Heading, Container, Grid, Content, Animation } from '../index';
+import { Heading, Container, Grid, Content, Animation, Posts } from '../index';
 
 type Benefits = {
   title?: string;
   subtitle?: ReactNode;
   img?: ReactNode;
-  nodes?: Node[];
-};
-
-type Node = {
-  content: {
-    title: string;
-    excerpt: string;
-  };
-};
-
-const BenefitsNodes = ({ nodes }: Benefits) => {
-  if (!nodes) return;
-  const i = nodes.map((item: Node, i) => {
-    if (!item.content) return null;
-    const { content } = item;
-    const { title, excerpt } = content;
-    return (
-      <Content key={i}>
-        <Heading as="h3" size="5">
-          <b>{title}</b>
-        </Heading>
-        <Heading as="p" size="3">
-          {excerpt}
-        </Heading>
-      </Content>
-    );
-  });
-  return i;
+  nodes?: any;
 };
 
 export const Benefits = ({ title, subtitle, img, nodes }: Benefits) => {
@@ -62,7 +35,7 @@ export const Benefits = ({ title, subtitle, img, nodes }: Benefits) => {
       </Container>
       <Container>
         <Grid columns={2}>
-          <Grid columns={2}>{BenefitsNodes({ nodes: nodes })}</Grid>
+          <Posts columns={2} nodes={nodes} />
           {img}
         </Grid>
       </Container>
@@ -71,33 +44,25 @@ export const Benefits = ({ title, subtitle, img, nodes }: Benefits) => {
 };
 
 Benefits.defaultProps = {
-  title: `One Click Setup`,
-  subtitle: `Create a new site or migrate an existing WordPress site in minutes.`,
+  title: `Id Lorem aliquip`,
+  subtitle: `Commodo culpa deserunt id magna esse. Et dolore elit nulla veniam in anim ut est.`,
   img: <Animation animation="singleClick" />,
   nodes: [
     {
-      content: {
-        title: `Easy installation`,
-        excerpt: `Create a new WordPress site right from the Shifter Dashboard, no uploading required.`,
-      },
+      title: `Easy installation`,
+      excerpt: `Create a new WordPress site right from the Shifter Dashboard, no uploading required.`,
     },
     {
-      content: {
-        title: `Collaborate`,
-        excerpt: `Work with others and share access to your Shifter account using our team features.`,
-      },
+      title: `Collaborate`,
+      excerpt: `Work with others and share access to your Shifter account using our team features.`,
     },
     {
-      content: {
-        title: `Maintenance-free`,
-        excerpt: `Shifter manages WordPress core so you're always up to date and plugins never vulnerable.`,
-      },
+      title: `Maintenance-free`,
+      excerpt: `Shifter manages WordPress core so you're always up to date and plugins never vulnerable.`,
     },
     {
-      content: {
-        title: `No coding required`,
-        excerpt: `Easy for non-developers to get started using WordPress themes or page builders.`,
-      },
+      title: `No coding required`,
+      excerpt: `Easy for non-developers to get started using WordPress themes or page builders.`,
     },
   ],
 };

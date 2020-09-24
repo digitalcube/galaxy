@@ -1,6 +1,6 @@
 /** @jsx jsx */
 import { jsx } from 'theme-ui';
-import React, { FC, ReactNode } from 'react';
+import { FC, ReactNode } from 'react';
 import { Card as ThemeUICard } from 'theme-ui';
 import { CardHeader } from './CardHeader';
 import { CardImage } from './CardImage';
@@ -16,7 +16,7 @@ export type Card = {
   subtitle?: ReactNode;
   excerpt?: string;
   href?: string;
-  footer?: React.ReactChild;
+  footer?: ReactNode;
   sx?: object;
 };
 

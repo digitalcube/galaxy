@@ -1,10 +1,8 @@
 import React, { FC } from 'react';
-import styled from 'styled-components';
 import {
   Container,
   Heading,
   Content,
-  Node,
   Slider,
   Text,
   Link,
@@ -12,7 +10,7 @@ import {
 } from '../index';
 
 type Testimonials = {
-  nodes?: Node[];
+  nodes?: any;
   title?: string;
 };
 

@@ -1,23 +1,23 @@
 /** @jsx jsx */
 import { jsx } from 'theme-ui';
-import React, { FC } from 'react';
+import { FC } from 'react';
 import styled from 'styled-components';
 import { Swiper, SwiperSlide } from 'swiper/react';
-import { Node } from '../index';
 import { components } from '../../styles';
 
 type Slider = {
-  nodes?: Node[];
+  nodes?: any;
   sx?: object;
 };
 
 type Slides = {
-  nodes?: Node[];
+  nodes?: any;
+  node?: any;
 };
 
 const slides = ({ nodes }: Slides) => {
   if (!nodes) return;
-  const i = nodes.map((node: Node) => {
+  const i = nodes.map((node: Slides) => {
     return <SwiperSlide>{node.node}</SwiperSlide>;
   });
 

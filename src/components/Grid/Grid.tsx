@@ -1,61 +1,12 @@
 import React, { ReactNode } from 'react';
 import { Grid as ThemeUIGrid, GridProps } from 'theme-ui';
 
-export const Grid = ({ children, columns }: GridProps) => {
-  return <ThemeUIGrid columns={columns}>{children}</ThemeUIGrid>;
+export type Grid = {
+  columns?: any;
+  children?: ReactNode;
 };
 
-// import styled from 'styled-components';
-// import { components } from '../../styles';
-// import { breakpoints } from '../../lib/utils';
-
-// type Grid = {
-//   display?: `flex` | `grid`;
-//   justifyContent?: string;
-//   gap?: string;
-//   xxs?: number | string;
-//   xs?: number | string;
-//   sm?: number | string;
-//   md?: number | string;
-//   lg?: number | string;
-//   xl?: number | string;
-//   xxl?: number | string;
-// };
-
-// const display = ({ display = 'grid' }: Grid) => {
-//   return display;
-// };
-
-// export const Grid = styled.div<Grid>`
-//   display: ${display};
-//   grid-template-columns: repeat(${components.grid.columns}, 1fr);
-//   gap: ${components.row.gap};
-
-//   @media ${breakpoints({ size: `xxs` })} {
-//     grid-template-columns: repeat(${props => props.xxs}, 1fr);
-//   }
-
-//   @media ${breakpoints({ size: `xs` })} {
-//     grid-template-columns: repeat(${props => props.xs}, 1fr);
-//   }
-
-//   @media ${breakpoints({ size: `sm` })} {
-//     grid-template-columns: repeat(${props => props.sm}, 1fr);
-//   }
-
-//   @media ${breakpoints({ size: `md` })} {
-//     grid-template-columns: repeat(${props => props.md}, 1fr);
-//   }
-
-//   @media ${breakpoints({ size: `lg` })} {
-//     grid-template-columns: repeat(${props => props.lg}, 1fr);
-//   }
-
-//   @media ${breakpoints({ size: `xl` })} {
-//     grid-template-columns: repeat(${props => props.xl}, 1fr);
-//   }
-
-//   @media ${breakpoints({ size: `xxl` })} {
-//     grid-template-columns: repeat(${props => props.xxl}, 1fr);
-//   }
-// `;
+export const Grid = ({ children, columns }: Grid) => {
+  if (!children) return null;
+  return <ThemeUIGrid columns={columns}>{children}</ThemeUIGrid>;
+};

@@ -1,19 +1,15 @@
-import React from 'react';
-import styled from 'styled-components';
-import { components } from '../../styles';
+import React, { ReactNode } from 'react';
+import { Box } from '../index';
 
 export type CardFooter = {
-  children?: React.ReactChild;
+  children?: ReactNode;
+  sx?: object;
 };
 
-const StyledCardFooter = styled.div`
-  margin-top: auto;
-  padding: 0 ${components.spacing.sm} ${components.spacing.md};
-`;
-
 export const CardFooter: React.FC<CardFooter> = ({
-  children = ``,
+  children,
+  sx,
 }: CardFooter) => {
   if (!children) return null;
-  return <StyledCardFooter>{children}</StyledCardFooter>;
+  return <Box sx={{ p: 2, ...sx }}>{children}</Box>;
 };

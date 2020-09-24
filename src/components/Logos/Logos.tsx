@@ -1,12 +1,13 @@
 import React, { FC } from 'react';
-import { Container, Heading, Content, Image, Node, Slider } from '../index';
+import { Container, Heading, Content, Image, Slider } from '../index';
 
 type Logos = {
-  nodes?: Node[];
+  nodes?: any;
   title?: string;
 };
 
 export const Logos: FC<Logos> = ({ title, nodes }: Logos) => {
+  if (!nodes) return null;
   return (
     <Container
       size="4"
