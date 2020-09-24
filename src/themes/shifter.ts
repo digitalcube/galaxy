@@ -1,5 +1,29 @@
 // shifter.ts
 
+const colors = {
+  gray: {
+    g500: `#797679`,
+    g400: `#A29CA1`,
+    g300: `#C8C5C7`,
+    g200: `#D7D7D7`,
+    g100: `#F1F1F1`,
+  },
+  purple: {
+    primary: `#77266F`,
+    p700: `#3C1533`,
+    p600: `#571B52`,
+    p500: `#68296A`,
+    p400: `#AD8EAB`,
+    p300: `#AD8EAB`,
+    p200: `#DBCADA`,
+    p100: `#EFE9EF`,
+  },
+  magenta: {
+    dark: `#F80A5B`,
+    light: `#FEEEF4`,
+  },
+};
+
 const avatar = {
   avatar: {
     width: 100,
@@ -96,27 +120,6 @@ export const shifter = {
         primary: `#CE1616`,
         dark: `#950000`,
       },
-    },
-    gray: {
-      g500: `#797679`,
-      g400: `#A29CA1`,
-      g300: `#C8C5C7`,
-      g200: `#D7D7D7`,
-      g100: `#F1F1F1`,
-    },
-    purple: {
-      primary: `#77266F`,
-      p700: `#3C1533`,
-      p600: `#571B52`,
-      p500: `#68296A`,
-      p400: `#AD8EAB`,
-      p300: `#AD8EAB`,
-      p200: `#DBCADA`,
-      p100: `#EFE9EF`,
-    },
-    magenta: {
-      dark: `#F80A5B`,
-      light: `#FEEEF4`,
     },
   },
   images: {
