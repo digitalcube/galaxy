@@ -251,7 +251,7 @@ export const shifter = {
   },
   text: {
     heading: {
-      color: 'text',
+      color: 'heading',
       fontWeight: 400,
       textDecoration: 'none',
     },
