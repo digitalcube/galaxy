@@ -1,14 +1,7 @@
 import React, { ReactNode } from 'react';
-import {
-  Header,
-  Footer,
-  Categories,
-  NavLink,
-  RecentPosts,
-  GetStarted,
-} from '../index';
+import { Header, Footer, Categories, RecentPosts, GetStarted } from '../index';
 
-type Layout = {
+export type Layout = {
   children?: ReactNode;
   postType?: string;
   header?: Header;
@@ -23,6 +16,7 @@ export const Layout = ({
   categories,
   getStarted,
 }: Layout) => {
+  console.log(header);
   if (postType === `showcase`) {
     return (
       <>
