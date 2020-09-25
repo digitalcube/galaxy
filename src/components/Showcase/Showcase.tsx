@@ -45,7 +45,7 @@ export const Showcase = ({
             {buttonLabel}
           </Link>
         </Content>
-        <Posts columns={[2]} nodes={nodes} />
+        <Posts columns={[1, null, null, null, 2]} nodes={nodes} />
       </Grid>
     </Container>
   );
