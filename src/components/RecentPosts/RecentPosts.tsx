@@ -28,14 +28,14 @@ export const RecentPosts: FC<RecentPosts> = ({ title, nodes }: RecentPosts) => {
           variant="blog"
           sx={{
             '& > :first-child': {
-              gridRow: '1 / 4',
-              gridColumn: 2,
+              gridRow: [null, null, null, null, '1 / 4'],
+              gridColumn: [null, null, null, null, 2],
             },
             '& > :not(:first-child)': {
-              variant: 'cards.row',
+              variant: [null, null, null, null, 'cards.row'],
             },
           }}
-          columns={['2fr 1fr']}
+          columns={[1, null, null, null, '2fr 1fr']}
           nodes={nodes}
         />
       </Content>
