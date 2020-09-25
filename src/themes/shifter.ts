@@ -69,7 +69,7 @@ export const shifter = {
     heading: null,
   },
   colors: {
-    ...colors,
+    ...colors.shifter,
     modes: {
       dark: {
         text: '#fff',
