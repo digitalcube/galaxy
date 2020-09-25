@@ -127,6 +127,9 @@ export const shifter = {
     ...avatar,
   },
   links: {
+    a: {
+      textDecoration: 'none',
+    },
     nav: {
       fontSize: 2,
       fontWeight: 'body',
@@ -210,6 +213,14 @@ export const shifter = {
       borderRadius: 0,
       boxShadow: 0,
       overflow: 'hidden',
+      '& > div': {
+        p: 2,
+      },
+    },
+    blog: {
+      bg: null,
+      borderRadius: null,
+      boxShadow: null,
       '& > div': {
         p: 2,
       },

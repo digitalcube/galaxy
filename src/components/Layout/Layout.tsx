@@ -34,6 +34,17 @@ export const Layout = ({
     );
   }
 
+  if (postType === `blog`) {
+    return (
+      <>
+        <Header {...header} />
+        <Categories {...categories} />
+        {children ? children : null}
+        <Footer />
+      </>
+    );
+  }
+
   if (postType === `post`) {
     return (
       <>
