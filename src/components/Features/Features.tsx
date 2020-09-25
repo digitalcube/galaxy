@@ -1,50 +1,12 @@
 import React from 'react';
-import {
-  Heading,
-  Link,
-  Post,
-  Container,
-  Content,
-  Image,
-  Grid,
-  Posts,
-} from '../index';
+import { Heading, Link, Container, Content, Posts } from '../index';
 
 type Features = {
   title?: string;
   subtitle?: string;
   href?: string;
   buttonLabel?: string;
-  nodes?: Feature[];
-};
-
-type Feature = {
-  title?: string;
-  excerpt?: string;
-  href?: string;
-  img?: string;
-};
-
-export const Feature = ({ img, title, excerpt }: Feature) => {
-  return (
-    <Post
-      variant="cards.primary"
-      sx={{ textAlign: 'center', px: 2, py: 4 }}
-      img={img}
-      title={title}
-      excerpt={excerpt}
-    />
-  );
-};
-
-export const FeaturesNodes = ({ nodes }: Features) => {
-  if (!nodes) return null;
-  const featureNodes = nodes.map((node: Post, i) => {
-    const { title, img, excerpt } = node;
-    return <Feature key={i} title={title} img={img} excerpt={excerpt} />;
-  });
-
-  return <Grid columns={[2, null, null, null, null, 4]}>{featureNodes}</Grid>;
+  nodes?: Posts;
 };
 
 export const Features = ({
@@ -79,6 +41,7 @@ export const Features = ({
       </Container>
       <Container>
         <Posts
+          columns={[1, 2, null, null, null, 4]}
           sx={{
             textAlign: 'center',
           }}

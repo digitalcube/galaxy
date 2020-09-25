@@ -33,7 +33,7 @@ export const Showcase = ({
         py: 7,
       }}
     >
-      <Grid columns={[1, null, null, '1fr 2fr']}>
+      <Grid columns={[1, null, null, null, null, '1fr 2fr']}>
         <Content>
           <Heading as="h2" size="6">
             <b>{title}</b>

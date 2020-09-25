@@ -2,7 +2,7 @@
 
 import { colors } from '../styles/colors';
 
-const avatar = {
+const images = {
   avatar: {
     width: 100,
     height: 100,
@@ -24,8 +24,11 @@ const avatar = {
     height: '5.5rem',
   },
   responsive: {
-    width: '100%',
+    display: 'flex',
+    minWidth: '25%',
+    maxWidth: '100%',
     height: 'auto',
+    m: '0 auto',
   },
 };
 
@@ -102,7 +105,7 @@ export const shifter = {
     },
   },
   images: {
-    ...avatar,
+    ...images,
   },
   links: {
     a: {
