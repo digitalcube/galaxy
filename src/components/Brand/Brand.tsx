@@ -2,7 +2,7 @@ import React from 'react';
 import styled from 'styled-components';
 import theme from 'styled-theming';
 
-type Brand = {
+export type Brand = {
   asset?:
     | `amimoto-logo-dark`
     | `amimoto-logo-light`

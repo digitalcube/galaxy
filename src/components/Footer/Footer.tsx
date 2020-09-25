@@ -15,7 +15,7 @@ import {
   Nav,
   NavItem,
   Link,
-  Brand,
+  Copyright,
 } from '../index';
 import { components } from '../../styles';
 
@@ -106,9 +106,7 @@ export const Footer: FC<Footer> = ({ nav }: Footer) => {
           </Grid>
         </Grid>
       </Container>
-      <Container>
-        <Brand size={components.nav.link.fontSize} asset="dc-logo" />
-      </Container>
+      <Copyright />
     </Container>
   );
 };
