@@ -115,6 +115,7 @@ export const shifter = {
       fontSize: 2,
       fontWeight: 'body',
       color: 'text',
+      whiteSpace: 'nowrap',
       '&:hover': {
         color: colors.shifter.purple.primary,
       },
@@ -145,14 +146,14 @@ export const shifter = {
   },
   nav: {
     primary: {
-      display: 'flex',
+      display: 'inline-flex',
     },
     row: {
       variant: 'nav.primary',
       alignItems: 'center',
       flexDirection: 'row',
       '& > :not(:first-child)': {
-        ml: 4,
+        ml: [1, null, null, null, 4],
       },
     },
     column: {
@@ -160,6 +161,12 @@ export const shifter = {
       flexDirection: 'column',
       '& > :not(:first-child)': {
         mt: 1,
+      },
+    },
+    mobile: {
+      variant: 'nav.column',
+      '& > :not(:first-child)': {
+        mt: 2,
       },
     },
   },
@@ -230,6 +237,9 @@ export const shifter = {
     },
   },
   buttons: {
+    icon: {
+      cursor: 'pointer',
+    },
     primary: {
       fontSize: 1,
       color: 'white',

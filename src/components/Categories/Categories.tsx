@@ -13,6 +13,7 @@ export const Categories: FC<Categories> = ({ title, nodes }: Categories) => {
         display: 'flex',
         borderTop: '1px solid #D7D7D7',
         borderBottom: '1px solid #D7D7D7',
+        flex: [2, null, null, null, 'initial'],
       }}
     >
       <Container sx={{ display: 'flex' }} size="4">
@@ -36,6 +37,10 @@ export const Categories: FC<Categories> = ({ title, nodes }: Categories) => {
         </Box>
         <Nav
           sx={{
+            display: 'block',
+            overflow: 'scroll',
+            whiteSpace: 'nowrap',
+            flex: [5, null, null, null, 'initial'],
             '& > *': {
               py: 2,
               pl: 2,

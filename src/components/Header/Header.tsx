@@ -53,7 +53,11 @@ export const Header: FC<Header> = ({ brand, nav, sx }: Header) => {
             sx={{ display: ['none', null, null, null, 'flex'] }}
             navItems={nav[1]}
           />
-          <MobileNav nodes={nav[2]} />
+          <MobileNav
+            sx={{ display: [null, null, null, null, 'none'] }}
+            brand={brand}
+            nodes={nav[2]}
+          />
         </Flex>
       </Flex>
     </Container>
