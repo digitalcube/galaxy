@@ -25,7 +25,7 @@ export const colors = {
     dangerDark: `#950000`,
   },
   shifter: {
-    black: `#0F0D0D`,
+    black: `#25021B`,
     white: `#FFFFFF`,
     background: {
       light: `#FAFAFA`,
@@ -43,7 +43,6 @@ export const colors = {
     },
     purple: {
       primary: `#77266F`,
-      p900: `#0C0208`,
       p800: `#331729`,
       p700: `#3C1533`,
       p600: `#571B52`,
@@ -78,11 +77,14 @@ export const colors = {
         light: `#D1EFFF`,
         dark: ` #00A8FF`,
       },
-      b600: `#002361`,
-      b500: `#0C398A`,
-      b400: `#5F96F8`,
-      b200: `#C7DBFF`,
-      b100: `#E8F0FF`,
+      b800: `#020E44`,
+      b700: `#041A64`,
+      b600: `#082884`,
+      b500: `#0C39A2`,
+      b400: `#4A7DD8`,
+      b300: `#8DB2EA`,
+      b200: `#C0D9F8`,
+      b100: `#E0F0FD`,
     },
   },
 };
