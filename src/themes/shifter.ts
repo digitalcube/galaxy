@@ -58,7 +58,7 @@ export const shifter = {
     heading: 'inherit',
     monospace: 'Menlo, monospace',
   },
-  fontSizes: [12, 14, 16, 18, 20, 24, 32, 48],
+  fontSizes: [10, 12, 14, 16, 18, 22, 30, 38, 50],
   sizes: {
     container: [540, 768, 1200],
   },
