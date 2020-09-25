@@ -1,28 +1,6 @@
 // shifter.ts
 
-const colors = {
-  gray: {
-    g500: `#797679`,
-    g400: `#A29CA1`,
-    g300: `#C8C5C7`,
-    g200: `#D7D7D7`,
-    g100: `#F1F1F1`,
-  },
-  purple: {
-    primary: `#77266F`,
-    p700: `#3C1533`,
-    p600: `#571B52`,
-    p500: `#68296A`,
-    p400: `#AD8EAB`,
-    p300: `#AD8EAB`,
-    p200: `#DBCADA`,
-    p100: `#EFE9EF`,
-  },
-  magenta: {
-    dark: `#F80A5B`,
-    light: `#FEEEF4`,
-  },
-};
+import { colors } from '../styles/colors';
 
 const avatar = {
   avatar: {
@@ -91,7 +69,7 @@ export const shifter = {
     heading: null,
   },
   colors: {
-    ...colors,
+    ...colors.shifter,
     modes: {
       dark: {
         text: '#fff',
@@ -100,26 +78,26 @@ export const shifter = {
         white: '#451D39',
       },
     },
-    text: '#3C1533',
-    heading: '#571B52',
-    primary: '#68296A',
-    secondary: '#797679',
-    black: `#25021B`,
-    white: `#FFFFFF`,
-    success: `#0B8451`,
-    background: `#FAFAFA`,
+    text: colors.shifter.purple.p700,
+    heading: colors.shifter.purple.p600,
+    primary: colors.shifter.purple.p500,
+    secondary: colors.shifter.gray.g500,
+    black: colors.shifter.black,
+    white: colors.shifter.white,
+    success: colors.galaxy.success,
+    background: colors.shifter.background.light,
     status: {
       success: {
-        primary: `#0B8451`,
-        dark: `#0A6450`,
+        primary: colors.galaxy.success,
+        dark: colors.galaxy.successDark,
       },
       warning: {
-        primary: `#FFA600`,
-        dark: `#D17303`,
+        primary: colors.galaxy.warning,
+        dark: colors.galaxy.warningDark,
       },
       danger: {
-        primary: `#CE1616`,
-        dark: `#950000`,
+        primary: colors.galaxy.danger,
+        dark: colors.galaxy.dangerDark,
       },
     },
   },
@@ -133,9 +111,9 @@ export const shifter = {
     nav: {
       fontSize: 2,
       fontWeight: 'body',
-      color: 'purple.p700',
+      color: 'text',
       '&:hover': {
-        color: 'purple.primary',
+        color: colors.shifter.purple.primary,
       },
     },
     primary: {
@@ -257,9 +235,9 @@ export const shifter = {
       display: 'inline-block',
       borderRadius: 0,
       textDecoration: 'none',
-      bg: 'purple.primary',
+      bg: colors.shifter.purple.primary,
       '&:hover': {
-        bg: 'purple.p600',
+        bg: colors.shifter.purple.p600,
         color: 'white',
       },
     },
@@ -273,10 +251,10 @@ export const shifter = {
     },
     ghost: {
       variant: 'buttons.primary',
-      color: 'purple.primary',
+      color: colors.shifter.purple.primary,
       bg: 'transparent',
       '&:hover': {
-        bg: 'gray.g200',
+        bg: colors.shifter.gray.g200,
       },
     },
     white: {
@@ -284,7 +262,7 @@ export const shifter = {
       color: 'primary',
       bg: 'white',
       '&:hover': {
-        bg: 'gray.g300',
+        bg: colors.shifter.gray.g300,
       },
     },
     danger: {
