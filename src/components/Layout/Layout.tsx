@@ -1,17 +1,39 @@
 import React, { ReactNode } from 'react';
-import { Header, Footer, Categories, NavLink, RecentPosts } from '../index';
+import {
+  Header,
+  Footer,
+  Categories,
+  NavLink,
+  RecentPosts,
+  GetStarted,
+} from '../index';
 
 type Layout = {
   children?: ReactNode;
-  header?: object;
   postType?: string;
-  categories?: {
-    title?: string;
-    nodes?: NavLink[];
-  };
+  header?: Header;
+  getStarted?: GetStarted;
+  categories?: Categories;
 };
 
-export const Layout = ({ children, header, postType, categories }: Layout) => {
+export const Layout = ({
+  children,
+  header,
+  postType,
+  categories,
+  getStarted,
+}: Layout) => {
+  if (postType === `showcase`) {
+    return (
+      <>
+        <Header {...header} />
+        {children ? children : null}
+        <GetStarted {...getStarted} />
+        <Footer />
+      </>
+    );
+  }
+
   if (postType === `post`) {
     return (
       <>

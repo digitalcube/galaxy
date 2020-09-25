@@ -1,88 +1,93 @@
-import React, { ReactNode } from 'react';
+import React from 'react';
 import {
   Layout,
-  PostHeader,
-  Categories,
-  FeaturedImage,
+  Posts,
   Container,
-  Content,
+  PageHeader,
+  GetStarted,
 } from '../../../components/index';
 
 type Showcase = {
   title?: string;
-  category?: string;
-  img?: string;
-  author?: string;
-  date?: string;
-  categories?: Categories;
-  content?: ReactNode;
+  subtitle?: string;
+  nodes?: any;
+  getStarted?: GetStarted;
 };
 
-export const Showcase = ({
-  title,
-  category,
-  author,
-  date,
-  categories,
-  img,
-  content,
-}: Showcase) => {
+export const Showcase = ({ title, subtitle, nodes, getStarted }: Showcase) => {
   return (
-    <Layout postType="post" categories={{ ...categories }}>
+    <Layout postType="showcase" getStarted={getStarted}>
       <Container size="4">
-        <PostHeader
-          title={title}
-          category={category}
-          author={author}
-          date={date}
-        />
-        <FeaturedImage img={img} />
-        <Container
-          size="1"
-          sx={{
-            my: 4,
-          }}
-        >
-          <Content>{content}</Content>
-        </Container>
+        <PageHeader title={title} subtitle={subtitle} />
+        <Posts variant="minimal" columns={[1, null, null, 2]} nodes={nodes} />
       </Container>
     </Layout>
   );
 };
 
 Showcase.defaultProps = {
-  title: `Velit a non Consectetur Sint Offica Sunt Commodo ad Proident`,
-  category: `Proident`,
-  author: `Magna Aliqua`,
-  date: `Velit 4, 2049`,
-  postType: `post`,
-  categories: {
-    title: `Adipisicing`,
-  },
-  content: (
-    <>
-      <h4>
-        Eiusmod laborum nulla elit Lorem nisi nisi officia est cupidatat.
-        Commodo magna magna esse voluptate consectetur aliquip proident nulla
-        consectetur nulla culpa aliquip exercitation. In velit velit do
-        consectetur aute. Esse id consequat aute magna.
-      </h4>
-
-      <p>
-        Non adipisicing non deserunt esse. Eu aliqua deserunt incididunt irure
-        officia adipisicing adipisicing excepteur irure non aliqua fugiat
-        exercitation laborum. Pariatur proident nulla tempor ea. Dolore dolor
-        aute officia id laborum duis amet ea ut ex sint nostrud. Deserunt labore
-        aute officia duis aliquip non cupidatat aliquip occaecat minim.
-      </p>
-
-      <p>
-        Cillum consequat exercitation eu ea enim culpa magna nostrud id ipsum
-        eiusmod eu est. Exercitation exercitation quis irure adipisicing sit
-        laborum do officia qui non ad consequat magna. Quis ullamco irure
-        laboris ullamco eiusmod mollit sunt velit reprehenderit deserunt minim
-        occaecat aliqua.
-      </p>
-    </>
-  ),
+  title: `Velit a non`,
+  subtitle: `Est cupidatat sunt est sint reprehenderit eiusmod exercitation in tempor.`,
+  nodes: [
+    {
+      title: `Soracom`,
+      href: `https://example.com`,
+      excerpt: `example.com`,
+      img: `https://www.getshifter.io/static/5b8d04811ce4850fad82e16214795926/39f27/soracom.jpg`,
+    },
+    {
+      title: `Vrije Universiteit Amsterdam`,
+      excerpt: `example.com`,
+      href: `https://example.com`,
+      img: `https://www.getshifter.io/static/1f94269f0d484cd3750314acef23695d/39f27/screenshot-vu.jpg`,
+    },
+    {
+      title: `Soracom`,
+      href: `https://example.com`,
+      excerpt: `example.com`,
+      img: `https://www.getshifter.io/static/5b8d04811ce4850fad82e16214795926/39f27/soracom.jpg`,
+    },
+    {
+      title: `Vrije Universiteit Amsterdam`,
+      excerpt: `example.com`,
+      href: `https://example.com`,
+      img: `https://www.getshifter.io/static/1f94269f0d484cd3750314acef23695d/39f27/screenshot-vu.jpg`,
+    },
+    {
+      title: `Soracom`,
+      href: `https://example.com`,
+      excerpt: `example.com`,
+      img: `https://www.getshifter.io/static/5b8d04811ce4850fad82e16214795926/39f27/soracom.jpg`,
+    },
+    {
+      title: `Vrije Universiteit Amsterdam`,
+      excerpt: `example.com`,
+      href: `https://example.com`,
+      img: `https://www.getshifter.io/static/1f94269f0d484cd3750314acef23695d/39f27/screenshot-vu.jpg`,
+    },
+    {
+      title: `Soracom`,
+      href: `https://example.com`,
+      excerpt: `example.com`,
+      img: `https://www.getshifter.io/static/5b8d04811ce4850fad82e16214795926/39f27/soracom.jpg`,
+    },
+    {
+      title: `Vrije Universiteit Amsterdam`,
+      excerpt: `example.com`,
+      href: `https://example.com`,
+      img: `https://www.getshifter.io/static/1f94269f0d484cd3750314acef23695d/39f27/screenshot-vu.jpg`,
+    },
+    {
+      title: `Soracom`,
+      href: `https://example.com`,
+      excerpt: `example.com`,
+      img: `https://www.getshifter.io/static/5b8d04811ce4850fad82e16214795926/39f27/soracom.jpg`,
+    },
+    {
+      title: `Vrije Universiteit Amsterdam`,
+      excerpt: `example.com`,
+      href: `https://example.com`,
+      img: `https://www.getshifter.io/static/1f94269f0d484cd3750314acef23695d/39f27/screenshot-vu.jpg`,
+    },
+  ],
 };

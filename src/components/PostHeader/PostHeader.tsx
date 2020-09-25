@@ -1,5 +1,5 @@
 import React, { FC } from 'react';
-import { Box, Heading, Text, Container } from '../index';
+import { Heading, Container, PostMeta } from '../index';
 
 export type PostHeader = {
   title?: string;
@@ -21,6 +21,9 @@ export const PostHeader: FC<PostHeader> = ({
       sx={{
         py: 7,
         textAlign: 'center',
+        display: 'flex',
+        alignItems: 'center',
+        flexDirection: 'column',
       }}
     >
       <Heading
@@ -36,21 +39,7 @@ export const PostHeader: FC<PostHeader> = ({
       <Heading as="h1" size="7">
         <b>{title}</b>
       </Heading>
-      <Box
-        sx={{
-          display: 'flex',
-          justifyContent: 'center',
-          color: 'secondary',
-          mt: 3,
-          '& > :not(:first-child)': {
-            ml: 1,
-          },
-        }}
-      >
-        <Text>{author}</Text>
-        <span>|</span>
-        <Text>{date}</Text>
-      </Box>
+      <PostMeta author={author} date={date} />
     </Container>
   );
 };

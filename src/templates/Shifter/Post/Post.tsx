@@ -55,7 +55,6 @@ Post.defaultProps = {
   category: `Proident`,
   author: `Magna Aliqua`,
   date: `Velit 4, 2049`,
-  postType: `post`,
   categories: {
     title: `Adipisicing`,
   },

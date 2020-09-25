@@ -2,7 +2,7 @@ import React, { FC, ReactNode } from 'react';
 import { Flex } from 'theme-ui';
 import { Container, Nav, Brand, Link } from '../index';
 
-type Header = {
+export type Header = {
   brand?: ReactNode;
   nav?: any;
   length?: number;
