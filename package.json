@@ -89,6 +89,7 @@
     "moment": "^2.27.0",
     "moment-duration-format": "^2.3.2",
     "react-lottie": "^1.2.3",
+    "react-modal": "^3.11.2",
     "styled-components": "^5.2.0",
     "styled-normalize": "^8.0.7",
     "swiper": "^6.2.0",

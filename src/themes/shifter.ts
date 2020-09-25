@@ -239,6 +239,7 @@ export const shifter = {
       borderRadius: 0,
       textDecoration: 'none',
       bg: colors.shifter.purple.primary,
+      whiteSpace: 'nowrap',
       '&:hover': {
         bg: colors.shifter.purple.p600,
         color: 'white',

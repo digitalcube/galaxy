@@ -1,6 +1,6 @@
 import React, { FC, ReactNode } from 'react';
 import { Flex } from 'theme-ui';
-import { Container, Nav, Brand, Link } from '../index';
+import { Container, Nav, Brand, Link, MobileNav } from '../index';
 
 export type Header = {
   brand?: ReactNode;
@@ -31,20 +31,29 @@ export const Header: FC<Header> = ({ brand, nav, sx }: Header) => {
             sx={{
               flexDirection: 'column',
               justifyContent: 'space-around',
-              ml: 8,
+              ml: [null, null, null, null, 8],
             }}
           >
-            <Nav kind="row" navItems={nav[0]} />
+            <Nav
+              kind="row"
+              sx={{ display: ['none', null, null, null, 'flex'] }}
+              navItems={nav[0]}
+            />
           </Flex>
         </Flex>
         <Flex
           sx={{
             flexDirection: 'column',
             justifyContent: 'space-around',
-            ml: 8,
+            ml: [null, null, null, null, 8],
           }}
         >
-          <Nav kind="row" navItems={nav[1]} />
+          <Nav
+            kind="row"
+            sx={{ display: ['none', null, null, null, 'flex'] }}
+            navItems={nav[1]}
+          />
+          <MobileNav nodes={nav[2]} />
         </Flex>
       </Flex>
     </Container>
@@ -77,6 +86,37 @@ Header.defaultProps = {
       },
     ],
     [
+      {
+        label: `Login`,
+        href: `#!`,
+      },
+      {
+        label: `Sign Up`,
+        href: `#!`,
+        kind: `primary`,
+      },
+    ],
+    [
+      {
+        label: `Qui sint`,
+        href: `#!`,
+      },
+      {
+        label: `Cupidatat`,
+        href: `#!`,
+      },
+      {
+        label: `Excepteur`,
+        href: `#!`,
+      },
+      {
+        label: `Laborum`,
+        href: `#!`,
+      },
+      {
+        label: `Pariatur`,
+        href: `#!`,
+      },
       {
         label: `Login`,
         href: `#!`,
