@@ -20,7 +20,9 @@ export const PostMeta: FC<PostMeta> = ({ author, date }: PostMeta) => {
         },
       }}
     >
-      <Text>{author}</Text>
+      <Text>
+        <b>{author}</b>
+      </Text>
       <span>|</span>
       <Text>
         <Date>{date}</Date>
