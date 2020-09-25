@@ -62,7 +62,10 @@ export const CardHeader: FC<CardHeader> = ({
 }: CardHeader) => {
   if (!title) return null;
   return (
-    <Box variant={variant} sx={{ ...sx }}>
+    <Box
+      variant={variant}
+      sx={{ display: 'flex', padding: null, flex: 1, ...sx }}
+    >
       <Title href={href}>{title}</Title>
       <Subtitle>{subtitle}</Subtitle>
       <Excerpt>{excerpt}</Excerpt>

@@ -15,10 +15,10 @@ export const Image: FC<Image> = ({ img, sx, kind }: Image) => {
   return (
     <ThemeUIImage
       variant={kind}
+      src={img}
       sx={{
         ...sx,
       }}
-      src={img}
     />
   );
 };

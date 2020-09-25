@@ -231,6 +231,17 @@ export const shifter = {
         bg: null,
       },
     },
+    row: {
+      bg: '#ff6600',
+      borderRadius: null,
+      boxShadow: null,
+      display: 'flex',
+      padding: null,
+      flex: 1,
+      '& > :first-child': {
+        p: 100,
+      },
+    },
   },
   buttons: {
     primary: {
