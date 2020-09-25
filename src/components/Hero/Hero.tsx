@@ -25,7 +25,12 @@ export const Hero: React.FC<Hero> = ({
     >
       <Grid columns={[1, null, null, null, 2]}>
         <Content>
-          <Heading size="7">
+          <Heading
+            sx={{
+              fontSize: [6, null, null, 7],
+            }}
+            size="7"
+          >
             <b>{title}</b>
           </Heading>
           <Heading size="4">{subtitle}</Heading>

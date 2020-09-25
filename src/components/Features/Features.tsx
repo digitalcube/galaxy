@@ -41,7 +41,7 @@ export const Features = ({
       </Container>
       <Container>
         <Posts
-          columns={[1, 2, null, null, null, 4]}
+          columns={[1, null, 2, null, null, 4]}
           sx={{
             textAlign: 'center',
           }}

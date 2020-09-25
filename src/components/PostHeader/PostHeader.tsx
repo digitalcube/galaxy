@@ -36,7 +36,13 @@ export const PostHeader: FC<PostHeader> = ({
       >
         {category}
       </Heading>
-      <Heading as="h1" size="7">
+      <Heading
+        as="h1"
+        sx={{
+          fontSize: [6, null, null, 7],
+        }}
+        size="7"
+      >
         <b>{title}</b>
       </Heading>
       <PostMeta author={author} date={date} />
