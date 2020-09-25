@@ -1,5 +1,14 @@
 import React from 'react';
-import { Heading, Link, Card, Container, Content, Image, Grid } from '../index';
+import {
+  Heading,
+  Link,
+  Post,
+  Container,
+  Content,
+  Image,
+  Grid,
+  Posts,
+} from '../index';
 
 type Features = {
   title?: string;
@@ -18,7 +27,8 @@ type Feature = {
 
 export const Feature = ({ img, title, excerpt }: Feature) => {
   return (
-    <Card
+    <Post
+      variant="cards.primary"
       sx={{ textAlign: 'center', px: 2, py: 4 }}
       img={img}
       title={title}
@@ -29,7 +39,7 @@ export const Feature = ({ img, title, excerpt }: Feature) => {
 
 export const FeaturesNodes = ({ nodes }: Features) => {
   if (!nodes) return null;
-  const featureNodes = nodes.map((node: Card, i) => {
+  const featureNodes = nodes.map((node: Post, i) => {
     const { title, img, excerpt } = node;
     return <Feature key={i} title={title} img={img} excerpt={excerpt} />;
   });
@@ -68,7 +78,12 @@ export const Features = ({
         </Content>
       </Container>
       <Container>
-        <FeaturesNodes nodes={nodes} />
+        <Posts
+          sx={{
+            textAlign: 'center',
+          }}
+          nodes={nodes}
+        />
         <Content
           align="center"
           sx={{

@@ -49,7 +49,7 @@ export const Post: FC<Post> = ({
       >
         <Heading as="p">{category}</Heading>
         <Link href={href}>
-          <Heading as="h2" size="5">
+          <Heading as="h2" size="4">
             <b>{title}</b>
           </Heading>
         </Link>

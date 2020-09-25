@@ -25,6 +25,7 @@ export const RecentPosts: FC<RecentPosts> = ({ title, nodes }: RecentPosts) => {
           <b>{title}</b>
         </Heading>
         <Posts
+          variant="blog"
           sx={{
             '& > :first-child': {
               gridRow: '1 / 4',
@@ -50,28 +51,33 @@ RecentPosts.defaultProps = {
       date: `Jan 1, 2049`,
       href: `#!`,
       img: `post-featured-image.png`,
-      title: `Esse quis nostrud commodo in nostrud mollit`,
+      title: `Introducing Pickup Philly, an open-source business directory built on the Jamstack`,
+      category: `Events`,
     },
     {
       author: `Cupidatat Proident`,
       date: `Jan 1, 2049`,
       href: `#!`,
-      img: `post-featured-image.png`,
-      title: `In commodo aliqua voluptate et sint magna`,
+      img: `post-featured-image-1.png`,
+      title: `Explaining the Difference Between Shifter Static and Shifter Headless`,
+      category: `Blog`,
     },
     {
       author: `Reprehenderit Officia`,
       date: `Jan 1, 2049`,
       href: `#!`,
-      img: `post-featured-image.png`,
-      title: `Est officia minim ad mollit ea elit sint aliqua`,
+      img: `post-featured-image-2.png`,
+      title: `Upgrade your business with a purpose-built form and Shifter Static integration`,
+      category: `Announcement`,
     },
     {
       author: `Labore Proident`,
       date: `Jan 1, 2049`,
       href: `#!`,
       img: `post-featured-image.png`,
-      title: `Adipisicing ea ea anim cillum ipsum culpa quis sit officia magna`,
+
+      category: `Announcement`,
+      title: `Upgrade your business with a purpose-built form and Shifter Static integration`,
     },
   ],
 };

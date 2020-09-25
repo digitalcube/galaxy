@@ -1,4 +1,6 @@
-import React, { FC } from 'react';
+/** @jsx jsx */
+import { jsx } from 'theme-ui';
+import { FC } from 'react';
 import { AspectRatio as ThemeUIAspectRatio } from 'theme-ui';
 import { Image } from '../index';
 
@@ -9,12 +11,18 @@ type CardImage = {
 export const CardImage: FC<CardImage> = ({ img }: CardImage) => {
   if (!img) return null;
   return (
-    <ThemeUIAspectRatio ratio={16 / 9}>
+    <ThemeUIAspectRatio
+      sx={{
+        display: 'flex',
+        alignItems: 'center',
+      }}
+      ratio={16 / 9}
+    >
       <Image
-        img={img}
         sx={{
-          objectFit: 'cover',
+          minWidth: '25%',
         }}
+        img={img}
       />
     </ThemeUIAspectRatio>
   );

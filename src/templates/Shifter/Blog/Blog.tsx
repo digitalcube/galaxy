@@ -9,7 +9,7 @@ export const Blog = ({ nodes }: Blog) => {
   return (
     <Layout postType="blog">
       <Container size="4" sx={{ py: 7 }}>
-        <Posts variant="blog" columns={[1, null, 2, 3]} nodes={nodes} />
+        <Posts variant="blog" columns={[1, null, 2, null, 3]} nodes={nodes} />
       </Container>
     </Layout>
   );

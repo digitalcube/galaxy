@@ -98,7 +98,7 @@ export const Footer: FC<Footer> = ({ nav }: Footer) => {
               Join our newsletter
             </Link>
           </Content>
-          <Grid columns={[1, null, null, 2, 4]}>
+          <Grid columns={[1, 2, null, null, 4]}>
             <FooterNav title="Company" />
             <FooterNav title="Product" />
             <FooterNav title="Resources" />

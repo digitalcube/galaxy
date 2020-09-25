@@ -232,14 +232,19 @@ export const shifter = {
       },
     },
     row: {
-      bg: '#ff6600',
+      variant: 'cards.blog',
       borderRadius: null,
       boxShadow: null,
       display: 'flex',
-      padding: null,
-      flex: 1,
+      '& > div': {
+        py: 0,
+        pr: 0,
+        flex: 2,
+      },
       '& > :first-child': {
-        p: 100,
+        display: 'flex',
+        flex: 1,
+        p: 0,
       },
     },
   },
