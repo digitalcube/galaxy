@@ -1,8 +1,15 @@
 import React, { FC, ReactNode } from 'react';
-import { Text, Card, Heading, Link, Content, PostMeta } from '../index';
+import {
+  Text,
+  Card,
+  Heading,
+  Link,
+  Content,
+  PlanMeta,
+  NavLink,
+} from '../index';
 
-export type Post = {
-  align?: `left` | `center` | `right`;
+export type Plan = {
   author?: string;
   category?: string;
   date?: string;
@@ -13,16 +20,13 @@ export type Post = {
   node?: any;
   subtitle?: string;
   title?: string;
-  variant?: string;
   sx?: object;
   children?: ReactNode;
+  planMeta?: NavLink[];
 };
 
-export const Post: FC<Post> = ({
-  align,
-  author,
+export const Plan: FC<Plan> = ({
   category,
-  date,
   excerpt,
   footer,
   href,
@@ -30,19 +34,22 @@ export const Post: FC<Post> = ({
   subtitle,
   title,
   sx,
-  variant,
   children,
-}: Post) => {
+  planMeta,
+}: Plan) => {
   return (
     <Card
       sx={{ ...sx }}
-      variant={variant}
-      align={align}
+      variant="primary"
+      align="center"
       img={img}
       footer={footer}
     >
       <Content
         sx={{
+          display: 'flex',
+          alignItems: 'center',
+          flexDirection: 'column',
           '& > :not(:first-child)': {
             mt: 1,
             mb: 0,
@@ -59,9 +66,15 @@ export const Post: FC<Post> = ({
           {subtitle}
         </Heading>
         <Text>{excerpt}</Text>
-        <PostMeta author={author} date={date} />
+        <PlanMeta nodes={planMeta} />
         {children ? children : null}
       </Content>
     </Card>
   );
+};
+
+Plan.defaultProps = {
+  img: 'pricing-plan-icon-1.png',
+  title: `Free`,
+  href: `#!`,
 };

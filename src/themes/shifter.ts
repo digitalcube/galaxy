@@ -126,6 +126,9 @@ export const shifter = {
     white: {
       variant: 'buttons.white',
     },
+    ghost: {
+      variant: 'buttons.ghost',
+    },
   },
   layout: {
     0: {
@@ -241,7 +244,7 @@ export const shifter = {
       cursor: 'pointer',
     },
     primary: {
-      fontSize: 1,
+      fontSize: 2,
       color: 'white',
       px: 4,
       py: 1,
@@ -250,6 +253,7 @@ export const shifter = {
       textDecoration: 'none',
       bg: colors.shifter.purple.primary,
       whiteSpace: 'nowrap',
+      textAlign: 'center',
       '&:hover': {
         bg: colors.shifter.purple.p600,
         color: 'white',
