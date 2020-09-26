@@ -63,6 +63,7 @@ export const Footer: FC<Footer> = ({ nav }: Footer) => {
             <Nav
               kind="row"
               sx={{
+                display: 'flex',
                 '& > :not(:first-child)': {
                   ml: 2,
                 },

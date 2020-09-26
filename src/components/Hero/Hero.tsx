@@ -27,9 +27,9 @@ export const Hero: React.FC<Hero> = ({
         <Content>
           <Heading
             sx={{
-              fontSize: [6, null, null, 7],
+              fontSize: [7, null, null, 8],
             }}
-            size="7"
+            size="8"
           >
             <b>{title}</b>
           </Heading>

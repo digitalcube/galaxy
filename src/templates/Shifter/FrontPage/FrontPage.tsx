@@ -99,7 +99,7 @@ FrontPage.defaultProps = {
     subtitle: `Shifter is the solution for fast, maintenance-free WordPress websites.`,
   },
   hero: {
-    title: `Jamnstack solutiosn for WordPress`,
+    title: `Jamstack solutions for WordPress`,
     subtitle: `Using Shifter, create or migrate WordPress sites in minutes that are scalable, secure from attacks, and 100% static with no security or caching plugins required.`,
   },
 };

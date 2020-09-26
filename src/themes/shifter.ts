@@ -65,7 +65,7 @@ export const shifter = {
   fontWeights: {
     body: 400,
     heading: 400,
-    bold: 800,
+    bold: 700,
   },
   lineHeights: {
     body: 1.5,
@@ -112,7 +112,7 @@ export const shifter = {
       textDecoration: 'none',
     },
     nav: {
-      fontSize: 2,
+      fontSize: 4,
       fontWeight: 'body',
       color: 'text',
       whiteSpace: 'nowrap',
@@ -333,6 +333,16 @@ export const shifter = {
       variant: 'text.heading',
       fontSize: 7,
       lineHeight: 1.333,
+    },
+    8: {
+      variant: 'text.heading',
+      fontSize: 8,
+      lineHeight: 1.25,
+    },
+    9: {
+      variant: 'text.heading',
+      fontSize: 9,
+      lineHeight: 1.25,
     },
   },
   styles: {
