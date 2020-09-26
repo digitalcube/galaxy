@@ -25,7 +25,7 @@ export const Benefits = ({ title, subtitle, img, nodes }: Benefits) => {
         }}
       >
         <Content>
-          <Heading as="h2" size="6">
+          <Heading as="h2" size="8">
             <b>{title}</b>
           </Heading>
           <Heading as="h3" size="3">

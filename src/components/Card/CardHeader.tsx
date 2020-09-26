@@ -16,7 +16,7 @@ const Title = ({ href, children }: CardHeader) => {
   if (!children) return null;
   return (
     <Link href={href}>
-      <Heading size="5" as="h3">
+      <Heading size="6" as="h3">
         <b>{children}</b>
       </Heading>
     </Link>
