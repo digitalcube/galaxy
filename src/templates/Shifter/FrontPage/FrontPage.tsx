@@ -12,6 +12,7 @@ import {
   GetStarted,
   Brand,
   Header,
+  Footer,
 } from '../../../components/index';
 
 type FrontPage = {
@@ -24,6 +25,7 @@ type FrontPage = {
   features?: Features;
   showcase?: Showcase;
   testimonials?: Testimonials;
+  footer?: Footer;
 };
 
 export const FrontPage = ({
@@ -36,9 +38,10 @@ export const FrontPage = ({
   features,
   showcase,
   testimonials,
+  footer,
 }: FrontPage) => {
   return (
-    <Layout header={{ ...header }}>
+    <Layout header={header} footer={footer}>
       <Hero {...hero} />
       <Logos {...logos} />
       <Benefits {...benefits} />
