@@ -7,6 +7,7 @@ export type Features = {
   href?: string;
   buttonLabel?: string;
   nodes?: Posts;
+  kind?: string;
 };
 
 export const Features = ({
@@ -15,6 +16,7 @@ export const Features = ({
   nodes,
   href,
   buttonLabel,
+  kind,
 }: Features) => {
   return (
     <Container
@@ -41,6 +43,7 @@ export const Features = ({
       </Container>
       <Container>
         <Posts
+          variant={kind}
           columns={[1, null, null, 2, null, 4]}
           sx={{
             textAlign: 'center',

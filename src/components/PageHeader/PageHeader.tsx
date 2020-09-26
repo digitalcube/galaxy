@@ -8,25 +8,27 @@ export type PageHeader = {
 
 export const PageHeader: FC<PageHeader> = ({ title, subtitle }: PageHeader) => {
   return (
-    <Container
-      size="0"
-      align="left"
-      sx={{
-        py: 7,
-      }}
-    >
-      <Content>
-        <Heading
-          as="h4"
-          size="4"
-          sx={{
-            lineHeight: null,
-          }}
-        >
-          <b>{title}</b>
-        </Heading>
-        <Heading size="5">{subtitle}</Heading>
-      </Content>
+    <Container size="4">
+      <Container
+        size="0"
+        align="left"
+        sx={{
+          py: 7,
+        }}
+      >
+        <Content>
+          <Heading
+            as="h4"
+            size="4"
+            sx={{
+              lineHeight: null,
+            }}
+          >
+            <b>{title}</b>
+          </Heading>
+          <Heading size="5">{subtitle}</Heading>
+        </Content>
+      </Container>
     </Container>
   );
 };

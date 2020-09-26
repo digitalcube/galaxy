@@ -1,5 +1,4 @@
 import React from 'react';
-
 import {
   Layout,
   PageHeader,
@@ -8,6 +7,8 @@ import {
   Brand,
   GetStarted,
   Plans,
+  Features,
+  Benefits,
 } from '../../../components/index';
 
 type Pricing = {
@@ -17,6 +18,8 @@ type Pricing = {
   getStarted?: GetStarted;
   footer?: Footer;
   plans?: Plans;
+  features?: Features;
+  benefits?: Benefits;
 };
 
 export const Pricing = ({
@@ -25,10 +28,14 @@ export const Pricing = ({
   subtitle,
   plans,
   getStarted,
+  features,
   footer,
+  benefits,
 }: Pricing) => {
   return (
     <Layout header={header} footer={footer}>
+      <PageHeader title={title} subtitle={subtitle} />
+      <Plans {...plans} />
       <PageHeader title={title} subtitle={subtitle} />
       <Plans {...plans} />
       <GetStarted {...getStarted} />
@@ -79,8 +86,7 @@ Pricing.defaultProps = {
     title: `Ready to take your site to the next level?`,
     subtitle: `Shifter is the solution for fast, maintenance-free WordPress websites.`,
   },
-  hero: {
-    title: `Jamstack solutions for WordPress`,
-    subtitle: `Using Shifter, create or migrate WordPress sites in minutes that are scalable, secure from attacks, and 100% static with no security or caching plugins required.`,
+  features: {
+    buttonLabel: null,
   },
 };

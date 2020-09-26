@@ -8,6 +8,7 @@ type Link = {
 };
 
 export const Link: FC<Link> = ({ href, children, kind }: Link) => {
+  if (!children) return null;
   return (
     <ThemeUILink variant={kind} href={href}>
       {children}
