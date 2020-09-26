@@ -6,6 +6,7 @@ import {
   FeaturedImage,
   Container,
   Content,
+  RecentPosts,
 } from '../../../components/index';
 
 type Post = {
@@ -15,6 +16,7 @@ type Post = {
   author?: string;
   date?: string;
   categories?: Categories;
+  recentPosts?: RecentPosts;
   content?: ReactNode;
 };
 
@@ -26,9 +28,11 @@ export const Post = ({
   categories,
   img,
   content,
+  recentPosts,
 }: Post) => {
   return (
-    <Layout postType="post" categories={{ ...categories }}>
+    <Layout>
+      <Categories {...categories} />
       <Container size="4">
         <PostHeader
           title={title}
@@ -46,6 +50,7 @@ export const Post = ({
           <Content>{content}</Content>
         </Container>
       </Container>
+      <RecentPosts {...recentPosts} />
     </Layout>
   );
 };

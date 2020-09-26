@@ -11,7 +11,7 @@ import {
   Text,
 } from '../index';
 
-type Solutions = {
+export type Solutions = {
   title?: string;
   subtitle?: string;
   buttonLabel?: string;

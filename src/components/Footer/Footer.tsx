@@ -19,7 +19,7 @@ import {
 } from '../index';
 import { components } from '../../styles';
 
-type Footer = {
+export type Footer = {
   nav?: Nav[];
 };
 

@@ -16,11 +16,12 @@ type Showcase = {
 
 export const Showcase = ({ title, subtitle, nodes, getStarted }: Showcase) => {
   return (
-    <Layout postType="showcase" getStarted={getStarted}>
+    <Layout>
       <Container size="4">
         <PageHeader title={title} subtitle={subtitle} />
         <Posts variant="minimal" columns={[1, null, null, 2]} nodes={nodes} />
       </Container>
+      <GetStarted {...getStarted} />
     </Layout>
   );
 };

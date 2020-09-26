@@ -10,7 +10,7 @@ import {
   Posts,
 } from '../index';
 
-type Showcase = {
+export type Showcase = {
   title?: string;
   subtitle?: string;
   href?: string;

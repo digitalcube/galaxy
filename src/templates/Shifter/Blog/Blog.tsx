@@ -1,13 +1,20 @@
 import React from 'react';
-import { Layout, Posts, Container } from '../../../components/index';
+import {
+  Layout,
+  Posts,
+  Container,
+  Categories,
+} from '../../../components/index';
 
 type Blog = {
   nodes?: any;
+  categories?: Categories;
 };
 
-export const Blog = ({ nodes }: Blog) => {
+export const Blog = ({ nodes, categories }: Blog) => {
   return (
-    <Layout postType="blog">
+    <Layout>
+      <Categories {...categories} />
       <Container size="4" sx={{ py: 7 }}>
         <Posts variant="blog" columns={[1, null, 2, null, 3]} nodes={nodes} />
       </Container>

@@ -1,7 +1,7 @@
 import React, { FC } from 'react';
 import { Container, Heading, Content, Image, Slider } from '../index';
 
-type Logos = {
+export type Logos = {
   nodes?: any;
   title?: string;
 };

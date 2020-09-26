@@ -1,7 +1,7 @@
 import React, { ReactNode } from 'react';
 import { Heading, Container, Grid, Content, Animation, Posts } from '../index';
 
-type Benefits = {
+export type Benefits = {
   title?: string;
   subtitle?: ReactNode;
   img?: ReactNode;

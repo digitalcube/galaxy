@@ -1,7 +1,7 @@
 import React, { ReactNode } from 'react';
 import { Container, Grid, Heading, Content, Animation, Link } from '../index';
 
-type Hero = {
+export type Hero = {
   title?: string;
   img?: ReactNode;
   subtitle?: string;

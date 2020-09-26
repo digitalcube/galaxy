@@ -1,7 +1,7 @@
 import React from 'react';
 import { Heading, Link, Container, Content, Posts } from '../index';
 
-type Features = {
+export type Features = {
   title?: string;
   subtitle?: string;
   href?: string;

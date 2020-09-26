@@ -9,7 +9,7 @@ import {
   Avatar,
 } from '../index';
 
-type Testimonials = {
+export type Testimonials = {
   nodes?: any;
   title?: string;
 };

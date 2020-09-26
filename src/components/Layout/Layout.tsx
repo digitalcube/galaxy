@@ -1,61 +1,18 @@
 import React, { ReactNode } from 'react';
-import { Header, Footer, Categories, RecentPosts, GetStarted } from '../index';
+import { Header, Footer } from '../index';
 
 export type Layout = {
   children?: ReactNode;
-  postType?: string;
   header?: Header;
-  getStarted?: GetStarted;
-  categories?: Categories;
+  footer?: Footer;
 };
 
-export const Layout = ({
-  children,
-  header,
-  postType,
-  categories,
-  getStarted,
-}: Layout) => {
-  console.log(header);
-  if (postType === `showcase`) {
-    return (
-      <>
-        <Header {...header} />
-        {children ? children : null}
-        <GetStarted {...getStarted} />
-        <Footer />
-      </>
-    );
-  }
-
-  if (postType === `blog`) {
-    return (
-      <>
-        <Header {...header} />
-        <Categories {...categories} />
-        {children ? children : null}
-        <Footer />
-      </>
-    );
-  }
-
-  if (postType === `post`) {
-    return (
-      <>
-        <Header {...header} />
-        <Categories {...categories} />
-        {children ? children : null}
-        <RecentPosts />
-        <Footer />
-      </>
-    );
-  }
-
+export const Layout = ({ children, header, footer }: Layout) => {
   return (
     <>
       <Header {...header} />
       {children ? children : null}
-      <Footer />
+      <Footer {...footer} />
     </>
   );
 };
