@@ -1,6 +1,6 @@
 import React from 'react';
 import { withKnobs } from '@storybook/addon-knobs';
-import { FrontPage } from './FrontPage';
+import { FrontPage } from '../../../templates';
 
 export default {
   component: FrontPage,
