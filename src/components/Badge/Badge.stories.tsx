@@ -9,10 +9,7 @@ import { Badge } from './Badge';
 export default {
   component: Badge,
   title: `Components/Badge`,
-  decorators: [
-    withKnobs,
-    (story: any) => <div style={{ padding: `3rem` }}>{story()}</div>,
-  ],
+  decorators: [withKnobs],
   excludeStories: /.*Data$/,
 };
 

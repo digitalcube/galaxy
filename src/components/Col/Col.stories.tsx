@@ -5,10 +5,7 @@ import { Col } from './Col';
 export default {
   component: Col,
   title: `Components/Col`,
-  decorators: [
-    withKnobs,
-    (story: any) => <div style={{ padding: `3rem` }}>{story()}</div>,
-  ],
+  decorators: [withKnobs],
   excludeStories: /.*Data$/,
 };
 

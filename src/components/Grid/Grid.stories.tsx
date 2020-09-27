@@ -5,10 +5,7 @@ import { Grid, Col } from '../index';
 export default {
   component: Grid,
   title: `Components/Grid`,
-  decorators: [
-    withKnobs,
-    (story: any) => <div style={{ padding: `3rem` }}>{story()}</div>,
-  ],
+  decorators: [withKnobs],
   excludeStories: /.*Data$/,
 };
 

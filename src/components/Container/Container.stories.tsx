@@ -5,10 +5,7 @@ import { Container } from './Container';
 export default {
   component: Container,
   title: `Components/Container`,
-  decorators: [
-    withKnobs,
-    (story: any) => <div style={{ padding: `3rem` }}>{story()}</div>,
-  ],
+  decorators: [withKnobs],
   excludeStories: /.*Data$/,
 };
 

@@ -9,10 +9,7 @@ import { Brand } from './index';
 export default {
   component: Brand,
   title: `Components/Brand`,
-  decorators: [
-    withKnobs,
-    (story: any) => <div style={{ padding: `3rem` }}>{story()}</div>,
-  ],
+  decorators: [withKnobs],
   excludeStories: /.*Data$/,
 };
 

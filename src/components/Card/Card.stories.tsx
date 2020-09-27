@@ -5,10 +5,7 @@ import { Card, Button, Image } from '../index';
 export default {
   component: Card,
   title: `Components/Card`,
-  decorators: [
-    withKnobs,
-    (story: any) => <div style={{ padding: `3rem` }}>{story()}</div>,
-  ],
+  decorators: [withKnobs],
   excludeStories: /.*Data$/,
 };
 

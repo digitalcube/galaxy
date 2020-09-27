@@ -5,10 +5,7 @@ import { Spacer } from './Spacer';
 export default {
   component: Spacer,
   title: `Components/Spacer`,
-  decorators: [
-    withKnobs,
-    (story: any) => <div style={{ padding: `3rem` }}>{story()}</div>,
-  ],
+  decorators: [withKnobs],
   excludeStories: /.*Data$/,
 };
 

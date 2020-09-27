@@ -5,10 +5,7 @@ import { Nav } from '../index';
 export default {
   component: Nav,
   title: `Components/Nav`,
-  decorators: [
-    withKnobs,
-    (story: any) => <div style={{ padding: `3rem` }}>{story()}</div>,
-  ],
+  decorators: [withKnobs],
   excludeStories: /.*Data$/,
 };
 

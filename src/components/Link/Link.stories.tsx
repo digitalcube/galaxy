@@ -6,10 +6,7 @@ import { Heading } from '../Heading';
 export default {
   component: Link,
   title: `Components/Link`,
-  decorators: [
-    withKnobs,
-    (story: any) => <div style={{ padding: `3rem` }}>{story()}</div>,
-  ],
+  decorators: [withKnobs],
   excludeStories: /.*Data$/,
 };
 

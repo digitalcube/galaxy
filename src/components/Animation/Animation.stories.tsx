@@ -5,10 +5,7 @@ import { Animation } from '../index';
 export default {
   component: Animation,
   title: `Components/Animation`,
-  decorators: [
-    withKnobs,
-    (story: any) => <div style={{ padding: `3rem` }}>{story()}</div>,
-  ],
+  decorators: [withKnobs],
   excludeStories: /.*Data$/,
 };
 

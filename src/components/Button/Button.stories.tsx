@@ -6,10 +6,7 @@ import { Button, Grid } from '../../index';
 export default {
   component: Button,
   title: `Components/Button`,
-  decorators: [
-    withKnobs,
-    (story: any) => <div style={{ padding: `3rem` }}>{story()}</div>,
-  ],
+  decorators: [withKnobs],
   excludeStories: /.*Data$/,
 };
 

@@ -6,10 +6,7 @@ import { Heading, Text, Content } from '../index';
 export default {
   component: Heading,
   title: `Components/Heading`,
-  decorators: [
-    withKnobs,
-    (story: any) => <div style={{ padding: `3rem` }}>{story()}</div>,
-  ],
+  decorators: [withKnobs],
   excludeStories: /.*Data$/,
 };
 

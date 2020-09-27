@@ -5,10 +5,7 @@ import { Navbar } from '../index';
 export default {
   component: Navbar,
   title: `Components/Navbar`,
-  decorators: [
-    withKnobs,
-    (story: any) => <div style={{ padding: `3rem` }}>{story()}</div>,
-  ],
+  decorators: [withKnobs],
   excludeStories: /.*Data$/,
 };
 

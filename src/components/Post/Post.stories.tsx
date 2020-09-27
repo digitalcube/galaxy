@@ -5,10 +5,7 @@ import { Post } from './Post';
 export default {
   component: Post,
   title: `Components/Post`,
-  decorators: [
-    withKnobs,
-    (story: any) => <div style={{ padding: `3rem` }}>{story()}</div>,
-  ],
+  decorators: [withKnobs],
   excludeStories: /.*Data$/,
 };
 

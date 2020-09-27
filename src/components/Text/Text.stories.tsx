@@ -5,10 +5,7 @@ import { Text } from './Text';
 export default {
   component: Text,
   title: `Components/Text`,
-  decorators: [
-    withKnobs,
-    (story: any) => <div style={{ padding: `3rem` }}>{story()}</div>,
-  ],
+  decorators: [withKnobs],
   excludeStories: /.*Data$/,
 };
 
