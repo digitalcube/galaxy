@@ -1,19 +1,16 @@
 import React from 'react';
-
-import {
-  Hero,
-  Layout,
-  Logos,
-  Benefits,
-  Solutions,
-  Features,
-  Testimonials,
-  Showcase,
-  GetStarted,
-  Brand,
-  Header,
-  Footer,
-} from '../../../components/index';
+import { Hero } from '../../../components/Hero';
+import { Layout } from '../../../components/Layout';
+import { Logos } from '../../../components/Logos';
+import { Benefits } from '../../../components/Benefits';
+import { Solutions } from '../../../components/Solutions';
+import { Features } from '../../../components/Features';
+import { Testimonials } from '../../../components/Testimonials';
+import { Showcase } from '../../../components/Showcase';
+import { GetStarted } from '../../../components/GetStarted';
+import { Brand } from '../../../components/Brand';
+import { Header } from '../../../components/Header';
+import { Footer } from '../../../components/Footer';
 
 type FrontPage = {
   header?: Header;
