@@ -1,12 +1,10 @@
 import React, { FC, ReactNode } from 'react';
-import {
-  Twitter,
-  Facebook,
-  Instagram,
-  Youtube,
-  Github,
-  Wordpress,
-} from '@styled-icons/fa-brands';
+import { Facebook } from '@styled-icons/fa-brands/Facebook';
+import { Instagram } from '@styled-icons/fa-brands/Instagram';
+import { Youtube } from '@styled-icons/fa-brands/Youtube';
+import { Github } from '@styled-icons/fa-brands/Github';
+import { Wordpress } from '@styled-icons/fa-brands/Wordpress';
+import { Twitter } from '@styled-icons/fa-brands/Twitter';
 import { Container } from '../Container';
 import { Heading } from '../Heading';
 import { Content } from '../Content';
