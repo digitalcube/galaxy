@@ -40,6 +40,12 @@ export const Testimonials: FC<Testimonials> = ({
   title,
   nodes,
 }: Testimonials) => {
+  const quotes = nodes.map((node: Quote) => {
+    return {
+      node: <Quote {...node} />,
+    };
+  });
+
   return (
     <Container
       as="section"
@@ -60,7 +66,7 @@ export const Testimonials: FC<Testimonials> = ({
           </Heading>
         </Content>
       </Container>
-      <Slider nodes={nodes} />
+      <Slider nodes={quotes} />
     </Container>
   );
 };
@@ -69,64 +75,34 @@ Testimonials.defaultProps = {
   title: `Esse reprehenderit incididunt in deserunt enim nostrud tempor proident exercitation duis dolore ullamco proident.`,
   nodes: [
     {
-      node: (
-        <Quote
-          img="user-avatar.png"
-          quote="Proident irure anim non non labore adipisicing."
-          author="FooBarBaz"
-          handle="@ExampleFooBarBaz"
-        />
-      ),
+      img: 'user-avatar.png',
+      quote: 'Proident irure anim non non labore adipisicing.',
+      author: 'FooBarBaz',
+      handle: '@ExampleFooBarBaz',
     },
     {
-      node: (
-        <Quote
-          img="user-avatar.png"
-          quote="Proident irure anim non non labore adipisicing."
-          author="FooBarBaz"
-          handle="@ExampleFooBarBaz"
-        />
-      ),
+      img: 'user-avatar.png',
+      quote: 'Proident irure anim non non labore adipisicing.',
+      author: 'FooBarBaz',
+      handle: '@ExampleFooBarBaz',
     },
     {
-      node: (
-        <Quote
-          img="user-avatar.png"
-          quote="Proident irure anim non non labore adipisicing."
-          author="FooBarBaz"
-          handle="@ExampleFooBarBaz"
-        />
-      ),
+      img: 'user-avatar.png',
+      quote: 'Proident irure anim non non labore adipisicing.',
+      author: 'FooBarBaz',
+      handle: '@ExampleFooBarBaz',
     },
     {
-      node: (
-        <Quote
-          img="user-avatar.png"
-          quote="Proident irure anim non non labore adipisicing."
-          author="FooBarBaz"
-          handle="@ExampleFooBarBaz"
-        />
-      ),
+      img: 'user-avatar.png',
+      quote: 'Proident irure anim non non labore adipisicing.',
+      author: 'FooBarBaz',
+      handle: '@ExampleFooBarBaz',
     },
     {
-      node: (
-        <Quote
-          img="user-avatar.png"
-          quote="Proident irure anim non non labore adipisicing."
-          author="FooBarBaz"
-          handle="@ExampleFooBarBaz"
-        />
-      ),
-    },
-    {
-      node: (
-        <Quote
-          img="user-avatar.png"
-          quote="Proident irure anim non non labore adipisicing."
-          author="FooBarBaz"
-          handle="@ExampleFooBarBaz"
-        />
-      ),
+      img: 'user-avatar.png',
+      quote: 'Proident irure anim non non labore adipisicing.',
+      author: 'FooBarBaz',
+      handle: '@ExampleFooBarBaz',
     },
   ],
 };
