@@ -1,6 +1,7 @@
 import React, { FC } from 'react';
 import { components } from '../../styles';
-import { Container, Brand } from '../index';
+import { Container } from '../Container';
+import { Brand } from '../Brand';
 
 type Copyright = {};
 

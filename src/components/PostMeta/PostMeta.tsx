@@ -1,6 +1,7 @@
 import React, { FC } from 'react';
 import { Date } from '../Date';
-import { Box, Text } from '../index';
+import { Box } from '../Box';
+import { Text } from '../Text';
 
 type PostMeta = {
   author?: string;

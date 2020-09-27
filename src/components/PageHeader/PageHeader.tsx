@@ -1,5 +1,7 @@
 import React, { FC } from 'react';
-import { Heading, Container, Content } from '../index';
+import { Heading } from '../Heading';
+import { Container } from '../Container';
+import { Content } from '../Content';
 
 export type PageHeader = {
   title?: string;

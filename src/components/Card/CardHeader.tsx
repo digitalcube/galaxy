@@ -1,5 +1,8 @@
 import React, { ReactNode, FC } from 'react';
-import { Heading, Text, Content, Box } from '../index';
+import { Heading } from '../Heading';
+import { Text } from '../Text';
+import { Content } from '../Content';
+import { Box } from '../Box';
 import { Link } from '../Link';
 
 type CardHeader = {

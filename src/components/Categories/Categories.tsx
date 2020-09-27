@@ -1,5 +1,9 @@
 import React, { FC } from 'react';
-import { Container, Box, Nav, NavLink, Heading } from '../index';
+import { Container } from '../Container';
+import { Box } from '../Box';
+import { Nav } from '../Nav';
+import { NavLink } from '../NavLink';
+import { Heading } from '../Heading';
 
 export type Categories = {
   title?: string;

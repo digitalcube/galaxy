@@ -1,14 +1,15 @@
 import React, { FC } from 'react';
-import { PlanMeta, Container, Grid, Plan } from '../index';
+import { Container } from '../Container';
+import { Grid } from '../Grid';
+import { Plan } from '../Plan';
 
 export type Plans = {
-  columns?: any;
   nodes?: Plan[];
   node?: Plan;
   sx?: object;
 };
 
-export const Plans: FC<Plans> = ({ nodes, columns, sx }: Plans) => {
+export const Plans: FC<Plans> = ({ nodes, sx }: Plans) => {
   if (!nodes) return null;
 
   const items = nodes.map((node: Plan) => {

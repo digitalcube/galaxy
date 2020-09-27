@@ -1,6 +1,9 @@
 import React from 'react';
-import { Content, Link, Heading, Container } from '../index';
-import { Box } from 'theme-ui';
+import { Content } from '../Content';
+import { Link } from '../Link';
+import { Heading } from '../Heading';
+import { Container } from '../Container';
+import { Box } from '../Box';
 
 export type GetStarted = {
   title?: string;

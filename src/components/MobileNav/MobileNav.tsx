@@ -3,7 +3,11 @@ import { useThemeUI, IconButton } from 'theme-ui';
 import { Times, Bars } from '@styled-icons/fa-solid';
 import Popup from 'reactjs-popup';
 import { Flex } from 'theme-ui';
-import { Nav, NavLink, Container, Link, Brand } from '../index';
+import { Nav } from '../Nav';
+import { NavLink } from '../NavLink';
+import { Container } from '../Container';
+import { Link } from '../Link';
+import { Brand } from '../Brand';
 
 type MobileNav = {
   nodes?: NavLink[];
@@ -32,7 +36,7 @@ export const MobileNav: FC<MobileNav> = ({ nodes, sx, brand }: MobileNav) => {
           overlayStyle,
         }}
       >
-        {close => (
+        {(close: any) => (
           <Container
             sx={{
               pt: 3,

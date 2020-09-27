@@ -1,5 +1,7 @@
 import React, { FC } from 'react';
-import { Heading, Container, PostMeta } from '../index';
+import { Heading } from '../Heading';
+import { Container } from '../Container';
+import { PostMeta } from '../PostMeta';
 
 export type PostHeader = {
   title?: string;

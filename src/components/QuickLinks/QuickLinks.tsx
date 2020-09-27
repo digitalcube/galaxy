@@ -1,5 +1,9 @@
 import React, { FC, ReactNode } from 'react';
-import { NavLink, Nav, Heading, Container, Content } from '../index';
+import { NavLink } from '../NavLink';
+import { Nav } from '../Nav';
+import { Heading } from '../Heading';
+import { Container } from '../Container';
+import { Content } from '../Content';
 
 export type QuickLinks = {
   title?: string;

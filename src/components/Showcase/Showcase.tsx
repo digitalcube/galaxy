@@ -1,14 +1,12 @@
 import React from 'react';
-import {
-  Heading,
-  Link,
-  Container,
-  Content,
-  Image,
-  Post,
-  Grid,
-  Posts,
-} from '../index';
+import { Heading } from '../Heading';
+import { Link } from '../Link';
+import { Container } from '../Container';
+import { Content } from '../Content';
+import { Image } from '../Image';
+import { Post } from '../Post';
+import { Grid } from '../Grid';
+import { Posts } from '../Posts';
 
 export type Showcase = {
   title?: string;

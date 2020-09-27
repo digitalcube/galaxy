@@ -1,13 +1,11 @@
 import React, { FC, ReactNode } from 'react';
-import {
-  Text,
-  Card,
-  Heading,
-  Link,
-  Content,
-  PlanMeta,
-  NavLink,
-} from '../index';
+import { Text } from '../Text';
+import { Card } from '../Card';
+import { Heading } from '../Heading';
+import { Link } from '../Link';
+import { Content } from '../Content';
+import { PlanMeta } from '../PlanMeta';
+import { NavLink } from '../NavLink';
 
 export type Plan = {
   author?: string;

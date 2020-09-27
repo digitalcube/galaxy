@@ -7,16 +7,14 @@ import {
   Github,
   Wordpress,
 } from '@styled-icons/fa-brands';
-import {
-  Container,
-  Heading,
-  Content,
-  Grid,
-  Nav,
-  NavItem,
-  Link,
-  Copyright,
-} from '../index';
+import { Container } from '../Container';
+import { Heading } from '../Heading';
+import { Content } from '../Content';
+import { Grid } from '../Grid';
+import { Nav } from '../Nav';
+import { NavItem } from '../NavItem';
+import { Link } from '../Link';
+import { Copyright } from '../Copyright';
 import { components } from '../../styles';
 
 export type Footer = {

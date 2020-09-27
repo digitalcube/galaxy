@@ -1,6 +1,10 @@
 import React, { FC } from 'react';
 import { Flex } from 'theme-ui';
-import { Nav, NavLink, Box, Link, Heading } from '../index';
+import { Nav } from '../Nav';
+import { NavLink } from '../NavLink';
+import { Box } from '../Box';
+import { Link } from '../Link';
+import { Heading } from '../Heading';
 
 export type PlanMeta = {
   href?: string;

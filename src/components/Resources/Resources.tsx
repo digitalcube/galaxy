@@ -1,5 +1,8 @@
 import React, { FC, ReactNode } from 'react';
-import { Posts, Heading, Container, Content, Grid } from '../index';
+import { Posts } from '../Posts';
+import { Heading } from '../Heading';
+import { Container } from '../Container';
+import { Content } from '../Content';
 
 export type Resources = {
   title?: string;

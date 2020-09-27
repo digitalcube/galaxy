@@ -1,5 +1,9 @@
 import React, { FC } from 'react';
-import { Container, Heading, Content, Image, Slider } from '../index';
+import { Container } from '../Container';
+import { Heading } from '../Heading';
+import { Content } from '../Content';
+import { Image } from '../Image';
+import { Slider } from '../Slider';
 
 export type Logos = {
   nodes?: any;

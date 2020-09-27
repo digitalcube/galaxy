@@ -2,7 +2,7 @@
 import { jsx } from 'theme-ui';
 import { FC } from 'react';
 import { AspectRatio as ThemeUIAspectRatio } from 'theme-ui';
-import { Image } from '../index';
+import { Image } from '../Image';
 
 type CardImage = {
   img?: string;

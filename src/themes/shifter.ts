@@ -112,7 +112,7 @@ export const shifter = {
       textDecoration: 'none',
     },
     nav: {
-      fontSize: 4,
+      fontSize: 3,
       fontWeight: 'body',
       color: 'text',
       whiteSpace: 'nowrap',

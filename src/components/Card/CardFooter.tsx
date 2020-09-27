@@ -1,5 +1,5 @@
 import React, { ReactNode } from 'react';
-import { Box } from '../index';
+import { Box } from '../Box';
 
 export type CardFooter = {
   children?: ReactNode;

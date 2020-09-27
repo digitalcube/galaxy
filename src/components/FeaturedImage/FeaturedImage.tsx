@@ -1,5 +1,5 @@
 import React, { FC } from 'react';
-import { Image } from '../index';
+import { Image } from '../Image';
 
 type FeaturedImage = {
   img?: string;

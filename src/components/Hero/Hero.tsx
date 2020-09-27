@@ -1,5 +1,10 @@
 import React, { ReactNode } from 'react';
-import { Container, Grid, Heading, Content, Animation, Link } from '../index';
+import { Container } from '../Container';
+import { Grid } from '../Grid';
+import { Heading } from '../Heading';
+import { Content } from '../Content';
+import { Animation } from '../Animation';
+import { Link } from '../Link';
 
 export type Hero = {
   title?: string;

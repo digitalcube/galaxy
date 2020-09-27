@@ -1,5 +1,6 @@
 import React, { ReactNode } from 'react';
-import { Header, Footer } from '../index';
+import { Header } from '../Header';
+import { Footer } from '../Footer';
 
 export type Layout = {
   children?: ReactNode;

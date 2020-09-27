@@ -1,5 +1,10 @@
 import React, { ReactNode } from 'react';
-import { Heading, Container, Grid, Content, Animation, Posts } from '../index';
+import { Heading } from '../Heading';
+import { Container } from '../Container';
+import { Grid } from '../Grid';
+import { Content } from '../Content';
+import { Animation } from '../Animation';
+import { Posts } from '../Posts';
 
 export type Benefits = {
   title?: string;

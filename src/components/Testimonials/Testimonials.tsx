@@ -1,13 +1,11 @@
 import React, { FC } from 'react';
-import {
-  Container,
-  Heading,
-  Content,
-  Slider,
-  Text,
-  Link,
-  Avatar,
-} from '../index';
+import { Container } from '../Container';
+import { Heading } from '../Heading';
+import { Content } from '../Content';
+import { Slider } from '../Slider';
+import { Text } from '../Text';
+import { Link } from '../Link';
+import { Avatar } from '../Avatar';
 
 export type Testimonials = {
   nodes?: any;

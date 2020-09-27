@@ -1,6 +1,10 @@
 import React, { FC, ReactNode } from 'react';
 import { Flex } from 'theme-ui';
-import { Container, Nav, Brand, Link, MobileNav } from '../index';
+import { Container } from '../Container';
+import { Nav } from '../Nav';
+import { Brand } from '../Brand';
+import { Link } from '../Link';
+import { MobileNav } from '../MobileNav';
 
 export type Header = {
   brand?: ReactNode;

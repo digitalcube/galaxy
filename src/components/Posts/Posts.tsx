@@ -1,5 +1,6 @@
 import React, { FC } from 'react';
-import { Post, Grid } from '../index';
+import { Post } from '../Post';
+import { Grid } from '../Grid';
 
 export type Posts = {
   variant?: string;

@@ -1,7 +1,10 @@
 import React from 'react';
 import { Box } from 'theme-ui';
-import { Content, Link, Heading, Container } from '../../index';
-import { GetStarted } from '../index';
+import { Content } from '../../Content';
+import { Link } from '../../Link';
+import { Heading } from '../../Heading';
+import { Container } from '../../Container';
+import { GetStarted } from '../GetStarted';
 
 export default function Default({
   title,
