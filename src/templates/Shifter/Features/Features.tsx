@@ -20,11 +20,7 @@ export const Features = ({
 }: Features) => {
   return (
     <Layout header={header} footer={footer}>
-      <FeaturesComponent
-        buttonLabel={''}
-        columns={[1, null, 2, null, null, 3]}
-        {...features}
-      />
+      <FeaturesComponent buttonLabel={''} {...features} />
       <GetStarted {...getStarted} />
     </Layout>
   );
