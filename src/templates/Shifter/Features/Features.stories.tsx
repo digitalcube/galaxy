@@ -1,12 +1,12 @@
 import React from 'react';
 import { withKnobs } from '@storybook/addon-knobs';
-import { FrontPage } from './FrontPage';
+import { Features } from './Features';
 
 export default {
-  component: FrontPage,
-  title: `Shifter/Templates/FrontPage`,
+  component: Features,
+  title: `Shifter/Templates/Features`,
   decorators: [withKnobs],
   excludeStories: /.*Data$/,
 };
 
-export const Default = () => <FrontPage />;
+export const Default = () => <Features />;

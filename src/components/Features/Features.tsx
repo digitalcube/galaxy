@@ -12,6 +12,7 @@ export type Features = {
   buttonLabel?: string;
   nodes?: Posts;
   kind?: string;
+  columns?: any;
 };
 
 export const Features = ({
@@ -21,6 +22,7 @@ export const Features = ({
   href,
   buttonLabel,
   kind,
+  columns,
 }: Features) => {
   return (
     <Container
@@ -48,7 +50,7 @@ export const Features = ({
       <Container>
         <Posts
           variant={kind}
-          columns={[1, null, null, 2, null, 4]}
+          columns={columns}
           sx={{
             textAlign: 'center',
           }}
@@ -74,6 +76,7 @@ Features.defaultProps = {
   subtitle: `Et cillum non cupidatat non dolore nostrud ad nisi.`,
   href: `#!`,
   buttonLabel: `Nostrud nisi`,
+  columns: [1, null, null, 2, null, 4],
   nodes: [
     {
       title: `Magic Link Logins`,
