@@ -96,7 +96,23 @@ export const Footer: FC<Footer> = ({ nav }: Footer) => {
             </Link>
           </Content>
           <Grid columns={[1, 2, null, null, 4]}>
-            <FooterNav title="Company" />
+            <FooterNav
+              navItems={[
+                {
+                  label: `Blog`,
+                  href: `/blog/`,
+                },
+                {
+                  label: `About`,
+                  href: `/about/`,
+                },
+                {
+                  label: `Press`,
+                  href: `#!`,
+                },
+              ]}
+              title="Company"
+            />
             <FooterNav title="Product" />
             <FooterNav title="Resources" />
             <FooterNav title="Legal" />
