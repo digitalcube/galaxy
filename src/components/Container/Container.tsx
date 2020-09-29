@@ -21,12 +21,12 @@ export const Container: FC<Container> = ({
   return (
     <ThemeUIContainer
       as={as}
+      variant={size}
       sx={{
         mr: align === `right` ? `0` : null,
         ml: align === `left` ? `0` : null,
         ...sx,
       }}
-      variant={size}
     >
       {children}
     </ThemeUIContainer>

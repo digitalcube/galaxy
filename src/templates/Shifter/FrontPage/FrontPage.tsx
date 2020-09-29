@@ -1,6 +1,5 @@
 import React from 'react';
 import { Hero } from '../../../components/Hero';
-import { Layout } from '../../../components/Layout';
 import { Logos } from '../../../components/Logos';
 import { Benefits } from '../../../components/Benefits';
 import { Solutions } from '../../../components/Solutions';
@@ -13,7 +12,6 @@ import { Header } from '../../../components/Header';
 import { Footer } from '../../../components/Footer';
 
 type FrontPage = {
-  header?: Header;
   getStarted?: GetStarted;
   hero?: Hero;
   logos?: Logos;
@@ -22,11 +20,9 @@ type FrontPage = {
   features?: Features;
   showcase?: Showcase;
   testimonials?: Testimonials;
-  footer?: Footer;
 };
 
 export const FrontPage = ({
-  header,
   getStarted,
   hero,
   logos,
@@ -35,10 +31,9 @@ export const FrontPage = ({
   features,
   showcase,
   testimonials,
-  footer,
 }: FrontPage) => {
   return (
-    <Layout header={header} footer={footer}>
+    <>
       <Hero {...hero} />
       <Logos {...logos} />
       <Benefits {...benefits} />
@@ -47,49 +42,11 @@ export const FrontPage = ({
       <Testimonials {...testimonials} />
       <Showcase {...showcase} />
       <GetStarted {...getStarted} />
-    </Layout>
+    </>
   );
 };
 
 FrontPage.defaultProps = {
-  header: {
-    brand: <Brand asset="shifter-mark" size="40" />,
-    nav: [
-      [
-        {
-          label: `Features`,
-          href: `#!`,
-        },
-        {
-          label: `Blog`,
-          href: `#!`,
-        },
-        {
-          label: `Solutions`,
-          href: `#!`,
-        },
-        {
-          label: `Pricing`,
-          href: `#!`,
-        },
-        {
-          label: `Showcase`,
-          href: `#!`,
-        },
-      ],
-      [
-        {
-          label: `Login`,
-          href: `#!`,
-        },
-        {
-          label: `Sign Up`,
-          href: `#!`,
-          kind: `primary`,
-        },
-      ],
-    ],
-  },
   getStarted: {
     title: `Ready to take your site to the next level?`,
     subtitle: `Shifter is the solution for fast, maintenance-free WordPress websites.`,
