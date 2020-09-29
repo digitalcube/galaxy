@@ -1,15 +1,13 @@
 import React from 'react';
-import {
-  Layout,
-  PageHeader,
-  Header,
-  Footer,
-  Brand,
-  GetStarted,
-  Plans,
-  Features,
-  Benefits,
-} from '../../../components/index';
+import { Layout } from '../../../components/Layout';
+import { PageHeader } from '../../../components/PageHeader';
+import { Header } from '../../../components/Header';
+import { Footer } from '../../../components/Footer';
+import { Brand } from '../../../components/Brand';
+import { GetStarted } from '../../../components/GetStarted';
+import { Plans } from '../../../components/Plans';
+import { Features } from '../../../components/Features';
+import { Benefits } from '../../../components/Benefits';
 
 type Pricing = {
   header?: Header;
@@ -28,9 +26,7 @@ export const Pricing = ({
   subtitle,
   plans,
   getStarted,
-  features,
   footer,
-  benefits,
 }: Pricing) => {
   return (
     <Layout header={header} footer={footer}>
