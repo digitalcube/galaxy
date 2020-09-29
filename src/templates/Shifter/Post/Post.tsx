@@ -1,13 +1,10 @@
 import React, { ReactNode } from 'react';
-import { Layout } from '../../../components/Layout';
 import { PostHeader } from '../../../components/PostHeader';
 import { Categories } from '../../../components/Categories';
 import { FeaturedImage } from '../../../components/FeaturedImage';
 import { Container } from '../../../components/Container';
 import { Content } from '../../../components/Content';
 import { RecentPosts } from '../../../components/RecentPosts';
-import { Header } from '../../../components/Header';
-import { Footer } from '../../../components/Footer';
 
 type Post = {
   title?: string;
@@ -18,8 +15,6 @@ type Post = {
   categories?: Categories;
   recentPosts?: RecentPosts;
   content?: ReactNode;
-  header?: Header;
-  footer?: Footer;
 };
 
 export const Post = ({
@@ -31,11 +26,9 @@ export const Post = ({
   img,
   content,
   recentPosts,
-  header,
-  footer,
 }: Post) => {
   return (
-    <Layout {...header} {...footer}>
+    <>
       <Categories {...categories} />
       <Container size="4">
         <PostHeader
@@ -55,7 +48,7 @@ export const Post = ({
         </Container>
       </Container>
       <RecentPosts {...recentPosts} />
-    </Layout>
+    </>
   );
 };
 

@@ -1,26 +1,21 @@
 import React from 'react';
-import { Layout } from '../../../components/Layout';
 import { Posts } from '../../../components/Posts';
 import { Container } from '../../../components/Container';
 import { Categories } from '../../../components/Categories';
-import { Header } from '../../../components/Header';
-import { Footer } from '../../../components/Footer';
 
 type Blog = {
   nodes?: any;
   categories?: Categories;
-  header?: Header;
-  footer?: Footer;
 };
 
-export const Blog = ({ nodes, categories, header, footer }: Blog) => {
+export const Blog = ({ nodes, categories }: Blog) => {
   return (
-    <Layout {...header} {...footer}>
+    <>
       <Categories {...categories} />
       <Container size="4" sx={{ py: 7 }}>
         <Posts variant="blog" columns={[1, null, 2, null, 3]} nodes={nodes} />
       </Container>
-    </Layout>
+    </>
   );
 };
 
