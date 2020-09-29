@@ -43,7 +43,6 @@ export const FrontPage = ({
       <Logos {...logos} />
       <Benefits {...benefits} />
       <Solutions {...solutions} />
-      <Benefits {...benefits} />
       <Features {...features} />
       <Testimonials {...testimonials} />
       <Showcase {...showcase} />

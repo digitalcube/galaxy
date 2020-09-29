@@ -12,7 +12,6 @@ export type Logos = {
 
 export const Logos: FC<Logos> = ({ title, nodes }: Logos) => {
   if (!nodes) return null;
-  console.log(nodes);
 
   const logos = nodes.map((node: Logo) => {
     return {
