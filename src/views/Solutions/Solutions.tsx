@@ -9,7 +9,7 @@ import { Image } from '../../components/Image';
 import { Card } from '../Card';
 import { Link } from '../../components/Link';
 import { Text } from '../../components/Text';
-import { Nav } from '../../components/Nav';
+import { Box } from '../../components/Box';
 
 export type Solutions = {
   title?: string;
@@ -136,9 +136,22 @@ export const Solutions: FC<Solutions> = ({ nodes }: Solutions) => {
         px: '5%',
       }}
     >
-      <Nav navItems={solutionsNav} />
       <Tabs>
-        <TabList>{solutionsNav}</TabList>
+        <Box
+          sx={{
+            display: 'flex',
+            justifyContent: 'center',
+            ul: {
+              display: 'flex',
+              listStyle: 'none',
+              mt: 0,
+              mb: 4,
+              p: 0,
+            },
+          }}
+        >
+          <TabList>{solutionsNav}</TabList>
+        </Box>
         {solutions}
       </Tabs>
     </Container>

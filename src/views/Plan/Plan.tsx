@@ -47,6 +47,7 @@ export const Plan: FC<Plan> = ({
         sx={{
           display: 'flex',
           alignItems: 'center',
+          textAlign: 'center',
           flexDirection: 'column',
           '& > :not(:first-child)': {
             mt: 1,
