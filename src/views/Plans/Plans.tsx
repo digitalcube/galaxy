@@ -20,6 +20,7 @@ export const Plans: FC<Plans> = ({ nodes, sx }: Plans) => {
     <Container
       size="4"
       sx={{
+        px: '5%',
         py: 4,
       }}
     >
