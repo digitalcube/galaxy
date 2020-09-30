@@ -3,10 +3,9 @@ import { Heading } from '../../components/Heading';
 import { Link } from '../../components/Link';
 import { Container } from '../../components/Container';
 import { Content } from '../../components/Content';
-import { Image } from '../../components/Image';
 import { Post } from '../Post';
 import { Grid } from '../../components/Grid';
-import { Posts } from '../Posts';
+import { Posts } from '../../views/Posts';
 
 export type Showcase = {
   title?: string;

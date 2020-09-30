@@ -1,10 +1,10 @@
 import React from 'react';
-import { PageHeader } from '../../../components/PageHeader';
+import { PageHeader } from '../../../views/PageHeader';
 import { Brand } from '../../../components/Brand';
-import { GetStarted } from '../../../components/GetStarted';
-import { Plans } from '../../../components/Plans';
-import { Features } from '../../../components/Features';
-import { Benefits } from '../../../components/Benefits';
+import { GetStarted } from '../../../views/GetStarted';
+import { Plans } from '../../../views/Plans';
+import { Features } from '../../../views/Features';
+import { Benefits } from '../../../views/Benefits';
 
 type Pricing = {
   title?: string;

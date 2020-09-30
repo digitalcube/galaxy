@@ -1,6 +1,6 @@
 import React from 'react';
-import { GetStarted } from '../../../components/GetStarted';
-import { Features as FeaturesComponent } from '../../../components/Features';
+import { GetStarted } from '../../../views/GetStarted';
+import { Features as FeaturesComponent } from '../../../views/Features';
 
 type Features = {
   getStarted?: GetStarted;

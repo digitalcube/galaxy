@@ -1,7 +1,7 @@
 import React from 'react';
-import { Posts } from '../../../components/Posts';
+import { Posts } from '../../../views/Posts';
 import { Container } from '../../../components/Container';
-import { Categories } from '../../../components/Categories';
+import { Categories } from '../../../views/Categories';
 
 type Blog = {
   nodes?: any;

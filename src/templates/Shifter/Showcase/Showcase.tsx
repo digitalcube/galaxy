@@ -1,8 +1,8 @@
 import React from 'react';
-import { Posts } from '../../../components/Posts';
+import { Posts } from '../../../views/Posts';
 import { Container } from '../../../components/Container';
-import { PageHeader } from '../../../components/PageHeader';
-import { GetStarted } from '../../../components/GetStarted';
+import { PageHeader } from '../../../views/PageHeader';
+import { GetStarted } from '../../../views/GetStarted';
 
 type Showcase = {
   title?: string;

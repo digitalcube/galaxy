@@ -3,20 +3,13 @@ import React from 'react';
 import {
   Hero,
   Layout,
-  Logos,
-  Benefits,
-  Solutions,
-  Features,
-  Testimonials,
-  Showcase,
-  Image,
-  Brand,
   QuickLinks,
-  Posts,
   Resources,
   RecentPosts,
   GetStarted,
-} from '../../../components/index';
+} from '../../../views/index';
+
+import { Image } from '../../../components';
 
 export const FrontPage = () => {
   return (

@@ -1,6 +1,7 @@
 import React from 'react';
 
-import { Hero, Layout } from '../../components/index';
+import { Hero } from '../../views/Hero';
+import { Layout } from '../../views/Layout';
 
 export const Post = () => {
   return (

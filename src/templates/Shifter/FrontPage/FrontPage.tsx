@@ -1,15 +1,12 @@
 import React from 'react';
-import { Hero } from '../../../components/Hero';
-import { Logos } from '../../../components/Logos';
-import { Benefits } from '../../../components/Benefits';
-import { Solutions } from '../../../components/Solutions';
-import { Features } from '../../../components/Features';
-import { Testimonials } from '../../../components/Testimonials';
-import { Showcase } from '../../../components/Showcase';
-import { GetStarted } from '../../../components/GetStarted';
-import { Brand } from '../../../components/Brand';
-import { Header } from '../../../components/Header';
-import { Footer } from '../../../components/Footer';
+import { Hero } from '../../../views/Hero';
+import { Logos } from '../../../views/Logos';
+import { Benefits } from '../../../views/Benefits';
+import { Solutions } from '../../../views/Solutions';
+import { Features } from '../../../views/Features';
+import { Testimonials } from '../../../views/Testimonials';
+import { Showcase } from '../../../views/Showcase';
+import { GetStarted } from '../../../views/GetStarted';
 
 type FrontPage = {
   getStarted?: GetStarted;

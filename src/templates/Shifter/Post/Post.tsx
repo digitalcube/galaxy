@@ -1,6 +1,6 @@
 import React, { ReactNode } from 'react';
-import { PostHeader } from '../../../components/PostHeader';
-import { FeaturedImage } from '../../../components/FeaturedImage';
+import { PostHeader } from '../../../views/PostHeader';
+import { FeaturedImage } from '../../../views/FeaturedImage';
 import { Container } from '../../../components/Container';
 import { Content } from '../../../components/Content';
 

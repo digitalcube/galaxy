@@ -1,9 +1,9 @@
 import React from 'react';
 import { Box } from 'theme-ui';
-import { Content } from '../../Content';
-import { Link } from '../../Link';
-import { Heading } from '../../Heading';
-import { Container } from '../../Container';
+import { Content } from '../../../components/Content';
+import { Link } from '../../../components/Link';
+import { Heading } from '../../../components/Heading';
+import { Container } from '../../../components/Container';
 import { GetStarted } from '../GetStarted';
 
 export default function Default({
