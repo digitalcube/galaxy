@@ -1,10 +1,8 @@
 import React, { ReactNode } from 'react';
 import { PostHeader } from '../../../components/PostHeader';
-import { Categories } from '../../../components/Categories';
 import { FeaturedImage } from '../../../components/FeaturedImage';
 import { Container } from '../../../components/Container';
 import { Content } from '../../../components/Content';
-import { RecentPosts } from '../../../components/RecentPosts';
 
 type Post = {
   title?: string;
@@ -12,24 +10,12 @@ type Post = {
   img?: string;
   author?: string;
   date?: string;
-  categories?: Categories;
-  recentPosts?: RecentPosts;
   content?: ReactNode;
 };
 
-export const Post = ({
-  title,
-  category,
-  author,
-  date,
-  categories,
-  img,
-  content,
-  recentPosts,
-}: Post) => {
+export const Post = ({ title, category, author, date, img, content }: Post) => {
   return (
     <>
-      <Categories {...categories} />
       <Container size="4">
         <PostHeader
           title={title}
@@ -47,7 +33,6 @@ export const Post = ({
           <Content>{content}</Content>
         </Container>
       </Container>
-      <RecentPosts {...recentPosts} />
     </>
   );
 };
@@ -57,9 +42,6 @@ Post.defaultProps = {
   category: `Proident`,
   author: `Magna Aliqua`,
   date: `Velit 4, 2049`,
-  categories: {
-    title: `Adipisicing`,
-  },
   content: (
     <>
       <h4>
