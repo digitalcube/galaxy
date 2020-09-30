@@ -4,7 +4,7 @@ import { Post } from './Post';
 
 export default {
   component: Post,
-  title: `Galaxy/Containers/Post`,
+  title: `Galaxy/Views/Post`,
   decorators: [withKnobs],
   excludeStories: /.*Data$/,
 };

@@ -16,6 +16,7 @@ export const PageHeader: FC<PageHeader> = ({ title, subtitle }: PageHeader) => {
         align="left"
         sx={{
           py: 7,
+          px: '5%',
         }}
       >
         <Content>

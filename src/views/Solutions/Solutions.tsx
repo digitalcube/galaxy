@@ -133,6 +133,7 @@ export const Solutions: FC<Solutions> = ({ nodes }: Solutions) => {
       size="4"
       sx={{
         py: 7,
+        px: '5%',
       }}
     >
       <Nav navItems={solutionsNav} />
@@ -176,63 +177,3 @@ Solutions.defaultProps = {
     },
   ],
 };
-
-// export const Solutions: FC<Solutions> = ({
-//   title,
-//   subtitle,
-//   solution,
-//   showcase,
-// }: Solutions) => {
-//   return (
-//     <Container
-//       as="section"
-//       size="4"
-//       sx={{
-//         py: 7,
-//       }}
-//     >
-//       <Container>
-//         <Container
-//           size="1"
-//           sx={{
-//             mb: 5,
-//           }}
-//         >
-//           <Content align="center">
-//             <Heading size="6">
-//               <b>{title}</b>
-//             </Heading>
-//             <Heading as="p" size="3">
-//               {subtitle}
-//             </Heading>
-//           </Content>
-//         </Container>
-//         <Grid columns={[1, null, null, null, 2]}>
-//           <Solution {...solution} />
-//           <ThemeProvider theme={{ colorMode: `dark` }}>
-//             <Showcase {...showcase} />
-//           </ThemeProvider>
-//         </Grid>
-//       </Container>
-//     </Container>
-//   );
-// };
-
-// Solutions.defaultProps = {
-//   title: `Esse mollit aliquip occaecat`,
-//   subtitle: `Nostrud nostrud elit cillum id culpa ea ex irure deserunt officia dolore cillum est.`,
-// };
-
-// Solution.defaultProps = {
-//   title: `Designers`,
-//   subtitle: `Use page builders and themes that will get your site noticed.`,
-//   buttonLabel: `Solutions for designers`,
-//   href: `#`,
-// };
-
-// Showcase.defaultProps = {
-//   title: `Ea consequat esse non ullamco occaecat.`,
-//   buttonLabel: `Excepteur adipisicing`,
-//   href: `#`,
-//   img: `https://www.getshifter.io/static/3f1aa2e6f5aa25eb64f6ddf4b7e582b9/cd6dd/logo-howtospeakmachine.webp`,
-// };

@@ -20,6 +20,7 @@ export const Benefits = ({ title, subtitle, img, nodes }: Benefits) => {
       size="4"
       sx={{
         py: 7,
+        px: '5%',
       }}
     >
       <Container

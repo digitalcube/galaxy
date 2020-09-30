@@ -18,6 +18,7 @@ export const RecentPosts: FC<RecentPosts> = ({ title, nodes }: RecentPosts) => {
       size="4"
       sx={{
         py: 7,
+        px: '5%',
         display: 'flex',
         flexDirection: 'column',
         alignItems: 'center',

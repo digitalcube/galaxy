@@ -19,6 +19,7 @@ export const Header: FC<Header> = ({ brand, nav, sx }: Header) => {
       sx={{
         pt: 3,
         pb: 6,
+        px: '5%',
         ...sx,
       }}
       as="header"

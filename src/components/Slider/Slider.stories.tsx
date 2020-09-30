@@ -4,7 +4,7 @@ import { Slider } from '../index';
 
 export default {
   component: Slider,
-  title: `Galaxy/Containers/Slider`,
+  title: `Galaxy/Components/Slider`,
   decorators: [withKnobs],
   excludeStories: /.*Data$/,
 };

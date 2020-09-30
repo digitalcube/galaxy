@@ -27,6 +27,7 @@ export const GetStarted = ({
         as="section"
         sx={{
           py: 7,
+          px: '5%',
         }}
       >
         <Content align="center">

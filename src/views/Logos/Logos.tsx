@@ -25,6 +25,7 @@ export const Logos: FC<Logos> = ({ title, nodes }: Logos) => {
       as="section"
       sx={{
         py: 7,
+        px: '5%',
       }}
     >
       <Container

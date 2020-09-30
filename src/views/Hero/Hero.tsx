@@ -25,6 +25,7 @@ export const Hero: React.FC<Hero> = ({
     <Container
       size="4"
       sx={{
+        px: '5%',
         py: 5,
       }}
     >

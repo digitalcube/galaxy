@@ -10,9 +10,9 @@ import { Heading } from '../../components/Heading';
 import { Content } from '../../components/Content';
 import { Grid } from '../../components/Grid';
 import { Nav } from '../../components/Nav';
-import { NavItem } from '../NavItem';
+import { NavItem } from '../../components/NavItem';
 import { Link } from '../../components/Link';
-import { Copyright } from '../Copyright';
+import { Copyright } from '../../views/Copyright';
 import { components } from '../../styles';
 
 export type Footer = {
@@ -48,6 +48,7 @@ export const Footer: FC<Footer> = ({ nav }: Footer) => {
       as="footer"
       sx={{
         pt: 7,
+        px: '5%',
       }}
     >
       <Container as="footer">

@@ -28,6 +28,7 @@ export const Showcase = ({
       size="4"
       sx={{
         py: 7,
+        px: '5%',
       }}
     >
       <Grid columns={[1, null, null, null, null, '1fr 2fr']}>

@@ -22,6 +22,7 @@ export const PostHeader: FC<PostHeader> = ({
       size="2"
       sx={{
         py: 7,
+        px: '5%',
         textAlign: 'center',
         display: 'flex',
         alignItems: 'center',
