@@ -12,10 +12,8 @@ type Showcase = {
 export const Showcase = ({ title, subtitle, nodes }: Showcase) => {
   return (
     <>
-      <Container size="4">
-        <PageHeader title={title} subtitle={subtitle} />
-        <Posts variant="minimal" columns={[1, null, null, 2]} nodes={nodes} />
-      </Container>
+      <PageHeader title={title} subtitle={subtitle} />
+      <Posts variant="minimal" columns={[1, null, null, 2]} nodes={nodes} />
     </>
   );
 };
