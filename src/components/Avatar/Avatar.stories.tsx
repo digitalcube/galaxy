@@ -4,7 +4,7 @@ import { Avatar } from './Avatar';
 
 export default {
   component: Avatar,
-  title: `Components/Avatar`,
+  title: `Galaxy/Components/Avatar`,
   decorators: [withKnobs],
   excludeStories: /.*Data$/,
 };

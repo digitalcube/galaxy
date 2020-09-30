@@ -8,7 +8,7 @@ import { Badge } from './Badge';
 
 export default {
   component: Badge,
-  title: `Components/Badge`,
+  title: `Galaxy/Components/Badge`,
   decorators: [withKnobs],
   excludeStories: /.*Data$/,
 };

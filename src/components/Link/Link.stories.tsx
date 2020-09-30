@@ -5,7 +5,7 @@ import { Heading } from '../Heading';
 
 export default {
   component: Link,
-  title: `Components/Link`,
+  title: `Galaxy/Components/Link`,
   decorators: [withKnobs],
   excludeStories: /.*Data$/,
 };

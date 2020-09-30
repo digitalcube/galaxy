@@ -4,7 +4,7 @@ import { Animation } from '../index';
 
 export default {
   component: Animation,
-  title: `Components/Animation`,
+  title: `Galaxy/Components/Animation`,
   decorators: [withKnobs],
   excludeStories: /.*Data$/,
 };

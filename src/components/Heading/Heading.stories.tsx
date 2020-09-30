@@ -5,7 +5,7 @@ import { Heading, Text, Content } from '../index';
 
 export default {
   component: Heading,
-  title: `Components/Heading`,
+  title: `Galaxy/Components/Heading`,
   decorators: [withKnobs],
   excludeStories: /.*Data$/,
 };

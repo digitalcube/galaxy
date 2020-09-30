@@ -4,7 +4,7 @@ import { Navbar } from '../index';
 
 export default {
   component: Navbar,
-  title: `Components/Navbar`,
+  title: `Galaxy/Components/Navbar`,
   decorators: [withKnobs],
   excludeStories: /.*Data$/,
 };

@@ -4,7 +4,7 @@ import { Grid, Col } from '../index';
 
 export default {
   component: Grid,
-  title: `Components/Grid`,
+  title: `Galaxy/Components/Grid`,
   decorators: [withKnobs],
   excludeStories: /.*Data$/,
 };

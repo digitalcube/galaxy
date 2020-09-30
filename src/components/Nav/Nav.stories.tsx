@@ -5,7 +5,7 @@ import { Flex, NavLink } from 'theme-ui';
 
 export default {
   component: Nav,
-  title: `Components/Nav`,
+  title: `Galaxy/Components/Nav`,
   decorators: [withKnobs],
   excludeStories: /.*Data$/,
 };

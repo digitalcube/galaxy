@@ -4,7 +4,7 @@ import { Text } from './Text';
 
 export default {
   component: Text,
-  title: `Components/Text`,
+  title: `Galaxy/Components/Text`,
   decorators: [withKnobs],
   excludeStories: /.*Data$/,
 };

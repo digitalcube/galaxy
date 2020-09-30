@@ -8,7 +8,7 @@ import { Brand } from './index';
 
 export default {
   component: Brand,
-  title: `Components/Brand`,
+  title: `Galaxy/Components/Brand`,
   decorators: [withKnobs],
   excludeStories: /.*Data$/,
 };

@@ -4,7 +4,7 @@ import { Box } from './Box';
 
 export default {
   component: Box,
-  title: `Components/Box`,
+  title: `Galaxy/Components/Box`,
   decorators: [withKnobs],
   excludeStories: /.*Data$/,
 };

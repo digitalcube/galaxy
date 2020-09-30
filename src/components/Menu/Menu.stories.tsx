@@ -4,7 +4,7 @@ import { Menu } from '../index';
 
 export default {
   component: Menu,
-  title: `Components/Menu`,
+  title: `Galaxy/Components/Menu`,
   decorators: [withKnobs],
   excludeStories: /.*Data$/,
 };

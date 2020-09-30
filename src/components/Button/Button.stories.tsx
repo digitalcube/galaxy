@@ -5,7 +5,7 @@ import { Button, Grid } from '../../index';
 
 export default {
   component: Button,
-  title: `Components/Button`,
+  title: `Galaxy/Components/Button`,
   decorators: [withKnobs],
   excludeStories: /.*Data$/,
 };

@@ -4,7 +4,7 @@ import { Nav } from '../index';
 
 export default {
   component: Nav,
-  title: `Components/Nav`,
+  title: `Galaxy/Components/Nav`,
   decorators: [withKnobs],
   excludeStories: /.*Data$/,
 };

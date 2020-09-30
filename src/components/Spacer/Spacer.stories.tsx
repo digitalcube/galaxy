@@ -4,7 +4,7 @@ import { Spacer } from './Spacer';
 
 export default {
   component: Spacer,
-  title: `Components/Spacer`,
+  title: `Galaxy/Components/Spacer`,
   decorators: [withKnobs],
   excludeStories: /.*Data$/,
 };

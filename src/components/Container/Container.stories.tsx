@@ -4,7 +4,7 @@ import { Container } from './Container';
 
 export default {
   component: Container,
-  title: `Components/Container`,
+  title: `Galaxy/Components/Container`,
   decorators: [withKnobs],
   excludeStories: /.*Data$/,
 };

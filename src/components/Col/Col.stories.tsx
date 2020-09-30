@@ -4,7 +4,7 @@ import { Col } from './Col';
 
 export default {
   component: Col,
-  title: `Components/Col`,
+  title: `Galaxy/Components/Col`,
   decorators: [withKnobs],
   excludeStories: /.*Data$/,
 };
