@@ -11,7 +11,7 @@ import { Heading } from '../../components/Heading';
 import { Content } from '../../components/Content';
 import { Grid } from '../../components/Grid';
 import { Nav } from '../../components/Nav';
-import { NavItem } from '../../components/NavItem';
+import { NavLink } from '../../components/NavLink';
 import { Link } from '../../components/Link';
 import { Copyright } from '../../views/Copyright';
 
@@ -21,7 +21,7 @@ export type Footer = {
 
 type FooterNav = {
   title?: ReactNode;
-  navItems?: NavItem[];
+  navItems?: NavLink[];
 };
 
 export const FooterNav: FC<FooterNav> = ({ title, navItems }: FooterNav) => {
