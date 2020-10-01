@@ -17,8 +17,9 @@ type MobileNav = {
 
 export const MobileNav: FC<MobileNav> = ({ nodes, sx, brand }: MobileNav) => {
   const context = useThemeUI();
-  if (!nodes) return null;
   const { theme } = context;
+
+  if (!nodes) return null;
   const overlayStyle = { background: theme?.colors?.background };
   const contentStyle = { margin: '', display: 'flex', width: '100%' };
 

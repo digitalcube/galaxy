@@ -2,8 +2,8 @@
 import { jsx } from 'theme-ui';
 import { FC } from 'react';
 import styled from 'styled-components';
+import { useThemeUI } from 'theme-ui';
 import { Swiper, SwiperSlide } from 'swiper/react';
-import { components } from '../../styles';
 
 type Slider = {
   slidesPerView?: number;
@@ -32,7 +32,10 @@ export const Slider: FC<Slider> = ({
   slidesPerView,
   centeredSlides,
 }: Slider) => {
-  const spaceBetween = parseFloat(components.logos.gap) * 16;
+  const context = useThemeUI();
+  const { theme } = context;
+  const spaceBetween = theme?.space ? theme?.space[2] : null;
+  console.log(spaceBetween);
   return (
     <StyledSwiper
       sx={{

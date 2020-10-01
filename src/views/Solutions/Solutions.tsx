@@ -1,6 +1,6 @@
 import React, { FC } from 'react';
 import { Tab, Tabs, TabList, TabPanel } from 'react-tabs';
-import { ThemeProvider } from 'styled-components';
+import { ThemeProvider } from 'theme-ui';
 import { Container } from '../../components/Container';
 import { Heading } from '../../components/Heading';
 import { Content } from '../../components/Content';

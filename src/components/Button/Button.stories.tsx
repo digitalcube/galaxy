@@ -1,5 +1,5 @@
 import React from 'react';
-import { ThemeProvider } from 'styled-components';
+import { ThemeProvider } from 'theme-ui';
 import { withKnobs } from '@storybook/addon-knobs';
 import { Button, Grid } from '../../index';
 
@@ -18,7 +18,7 @@ const options = kinds.map(kind => {
   return modes.map(mode => {
     return schemas.map(schema => {
       return (
-        <ThemeProvider theme={{ mode: mode, schema: schema }}>
+        <ThemeProvider theme={{ colorMode: mode }}>
           <Button kind={kind}>
             {schema} / {mode} / {kind}
           </Button>

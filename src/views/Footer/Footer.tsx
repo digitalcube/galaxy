@@ -1,4 +1,5 @@
 import React, { FC, ReactNode } from 'react';
+import { useThemeUI } from 'theme-ui';
 import { Facebook } from '@styled-icons/fa-brands/Facebook';
 import { Instagram } from '@styled-icons/fa-brands/Instagram';
 import { Youtube } from '@styled-icons/fa-brands/Youtube';
@@ -13,7 +14,6 @@ import { Nav } from '../../components/Nav';
 import { NavItem } from '../../components/NavItem';
 import { Link } from '../../components/Link';
 import { Copyright } from '../../views/Copyright';
-import { components } from '../../styles';
 
 export type Footer = {
   nav?: Nav[];
@@ -42,6 +42,9 @@ export const FooterNav: FC<FooterNav> = ({ title, navItems }: FooterNav) => {
 };
 
 export const Footer: FC<Footer> = ({ nav }: Footer) => {
+  const context = useThemeUI();
+  const { theme } = context;
+  const iconSize = theme?.space ? theme?.space[2] : ``;
   return (
     <Container
       size="4"
@@ -67,32 +70,35 @@ export const Footer: FC<Footer> = ({ nav }: Footer) => {
               }}
               navItems={[
                 {
-                  label: <Twitter size={components.nav.link.fontSize} />,
-                  href: `#`,
+                  label: <Twitter size={`${iconSize}`} />,
+                  href: `https://twitter.com/getshifter`,
                 },
                 {
-                  label: <Facebook size={components.nav.link.fontSize} />,
-                  href: `#`,
+                  label: <Facebook size={`${iconSize}`} />,
+                  href: `https://www.facebook.com/getshifter`,
                 },
                 {
-                  label: <Instagram size={components.nav.link.fontSize} />,
-                  href: `#`,
+                  label: <Instagram size={`${iconSize}`} />,
+                  href: `https://www.instagram.com/getsfhiter/`,
                 },
                 {
-                  label: <Youtube size={components.nav.link.fontSize} />,
-                  href: `#`,
+                  label: <Youtube size={`${iconSize}`} />,
+                  href: `https://www.youtube.com/channel/UCkw20zzfSAxD-KNKUEW3bAw`,
                 },
                 {
-                  label: <Github size={components.nav.link.fontSize} />,
-                  href: `#`,
+                  label: <Github size={`${iconSize}`} />,
+                  href: `https://github.com/getshifter`,
                 },
                 {
-                  label: <Wordpress size={components.nav.link.fontSize} />,
-                  href: `#`,
+                  label: <Wordpress size={`${iconSize}`} />,
+                  href: `https://profiles.wordpress.org/getshifter/`,
                 },
               ]}
             />
-            <Link kind="primary" href="#">
+            <Link
+              kind="primary"
+              href="https://confirmsubscription.com/h/j/B547D3210F66E486"
+            >
               Join our newsletter
             </Link>
           </Content>
@@ -114,9 +120,57 @@ export const Footer: FC<Footer> = ({ nav }: Footer) => {
               ]}
               title="Company"
             />
-            <FooterNav title="Product" />
-            <FooterNav title="Resources" />
-            <FooterNav title="Legal" />
+            <FooterNav
+              navItems={[
+                {
+                  label: `Pricing`,
+                  href: `/pricing/`,
+                },
+                {
+                  label: `Features`,
+                  href: `/features/`,
+                },
+                {
+                  label: `Showcase`,
+                  href: `/showcase/`,
+                },
+              ]}
+              title="Product"
+            />
+            <FooterNav
+              title="Resources"
+              navItems={[
+                {
+                  label: `Documentation`,
+                  href: `https://support.getshifter.io/en/`,
+                },
+                {
+                  label: `Getting Started`,
+                  href: `https://support.getshifter.io/en/collections/1394546-creating-sites-on-shifter`,
+                },
+                {
+                  label: `Open Source`,
+                  href: `https://github.com/getshifter`,
+                },
+              ]}
+            />
+            <FooterNav
+              title="Legal"
+              navItems={[
+                {
+                  label: `Terms`,
+                  href: `/terms-of-service/`,
+                },
+                {
+                  label: `Privacy Policy`,
+                  href: `/privacy-policy/`,
+                },
+                {
+                  label: `Open Source`,
+                  href: `https://github.com/getshifter`,
+                },
+              ]}
+            />
           </Grid>
         </Grid>
       </Container>

@@ -1,6 +1,6 @@
 import React from 'react';
 import { withKnobs } from '@storybook/addon-knobs';
-import { Grid, Col } from '../index';
+import { Grid } from '../index';
 
 export default {
   component: Grid,
@@ -23,23 +23,6 @@ export const Default = () => (
     <div>Item</div>
     <div>Item</div>
     <div>Item</div>
-  </Grid>
-);
-
-export const ResponsiveColumns = () => (
-  <Grid columns={[1, 3, 5, 2, '4fr 8fr']}>
-    <Col>Item</Col>
-    <Col>Item</Col>
-    <Col>Item</Col>
-    <Col>Item</Col>
-    <Col>Item</Col>
-    <Col>Item</Col>
-    <Col>Item</Col>
-    <Col>Item</Col>
-    <Col>Item</Col>
-    <Col>Item</Col>
-    <Col>Item</Col>
-    <Col>Item</Col>
   </Grid>
 );
 
