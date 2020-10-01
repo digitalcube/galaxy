@@ -18,7 +18,7 @@ export const Posts: FC<Posts> = ({ nodes, columns, variant, sx }: Posts) => {
   });
 
   return (
-    <Grid sx={{ px: '5%', ...sx }} columns={columns}>
+    <Grid sx={{ ...sx }} columns={columns}>
       {items}
     </Grid>
   );

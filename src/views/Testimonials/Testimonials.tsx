@@ -67,7 +67,32 @@ export const Testimonials: FC<Testimonials> = ({
           </Heading>
         </Content>
       </Container>
-      <Slider nodes={quotes} />
+      <Slider
+        slidesPerView={2}
+        nodes={quotes}
+        sx={{
+          position: 'relative',
+          '::before,::after': {
+            content: '""',
+            display: 'block',
+            position: 'absolute',
+            top: 0,
+            bottom: 0,
+            width: '20%',
+            zIndex: 2,
+          },
+          '::before': {
+            left: 0,
+            backgroundImage:
+              'linear-gradient(to right, rgba(250, 250, 250, 1), rgba(250, 250, 250, 0))',
+          },
+          '::after': {
+            right: 0,
+            backgroundImage:
+              'linear-gradient(to right, rgba(250, 250, 250, 0), rgba(250, 250, 250, 1))',
+          },
+        }}
+      />
     </Container>
   );
 };

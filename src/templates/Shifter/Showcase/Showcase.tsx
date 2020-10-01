@@ -1,6 +1,5 @@
 import React from 'react';
 import { Posts } from '../../../views/Posts';
-import { Container } from '../../../components/Container';
 import { PageHeader } from '../../../views/PageHeader';
 
 type Showcase = {
