@@ -30,6 +30,7 @@ export const Features = ({
       size="4"
       sx={{
         py: 7,
+        px: '5%',
       }}
     >
       <Container

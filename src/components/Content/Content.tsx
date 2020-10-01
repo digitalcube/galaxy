@@ -17,6 +17,9 @@ export const Content: FC<Content> = ({ align, children, sx }: Content) => {
         a: {
           color: 'primary',
         },
+        img: {
+          variant: 'images.responsive',
+        },
         textAlign: align,
         '& > *': {
           mt: 0,

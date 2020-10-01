@@ -1,4 +1,5 @@
 import React from 'react';
+import { Container } from '../../../components/Container';
 import { Posts } from '../../../views/Posts';
 import { PageHeader } from '../../../views/PageHeader';
 
@@ -12,7 +13,15 @@ export const Showcase = ({ title, subtitle, nodes }: Showcase) => {
   return (
     <>
       <PageHeader title={title} subtitle={subtitle} />
-      <Posts variant="minimal" columns={[1, null, null, 2]} nodes={nodes} />
+      <Container
+        as="section"
+        size="4"
+        sx={{
+          px: '5%',
+        }}
+      >
+        <Posts variant="minimal" columns={[1, null, null, 2]} nodes={nodes} />
+      </Container>
     </>
   );
 };
