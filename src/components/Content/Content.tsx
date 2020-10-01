@@ -14,9 +14,6 @@ export const Content: FC<Content> = ({ align, children, sx }: Content) => {
   return (
     <Box
       sx={{
-        a: {
-          color: 'primary',
-        },
         img: {
           variant: 'images.responsive',
         },
