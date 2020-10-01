@@ -20,7 +20,12 @@ export const Showcase = ({ title, subtitle, nodes }: Showcase) => {
           px: '5%',
         }}
       >
-        <Posts variant="minimal" columns={[1, null, null, 2]} nodes={nodes} />
+        <Posts
+          variant="minimal"
+          columns={[1, null, null, 2]}
+          sx={{ img: { alignSelf: 'flex-start' } }}
+          nodes={nodes}
+        />
       </Container>
     </>
   );
