@@ -1,5 +1,6 @@
 import React, { FC } from 'react';
 import { Flex } from 'theme-ui';
+import { Tab, Tabs, TabList, TabPanel } from 'react-tabs';
 import { Nav } from '../../components/Nav';
 import { NavLink } from '../../components/NavLink';
 import { Box } from '../../components/Box';
@@ -11,9 +12,11 @@ export type PlanMeta = {
   detailsLabel?: string;
   buttonLabel?: string;
   nodes?: NavLink[];
+  price?: any;
 };
 
 export const PlanMeta: FC<PlanMeta> = ({
+  price,
   nodes,
   href,
   detailsLabel,
@@ -41,10 +44,46 @@ export const PlanMeta: FC<PlanMeta> = ({
           },
         }}
       >
-        <Heading size="8">
-          <b>$16</b>
-        </Heading>
-        <Heading size="2">/ month</Heading>
+        <Tabs defaultIndex={1} onSelect={index => console.log(index)}>
+          <Box
+            sx={{
+              display: 'flex',
+              justifyContent: 'center',
+              ul: {
+                display: 'flex',
+                listStyle: 'none',
+                mt: 0,
+                mb: 4,
+                p: 0,
+              },
+            }}
+          >
+            <TabList>
+              <Tab>
+                <Link kind="ghost">Month</Link>
+              </Tab>
+              <Tab>
+                <Link kind="ghost">Year</Link>
+              </Tab>
+            </TabList>
+          </Box>
+          <Heading size="8">
+            <TabPanel>
+              <b>{price?.year}</b>
+            </TabPanel>
+            <TabPanel>
+              <b>{price?.month}</b>
+            </TabPanel>
+          </Heading>
+          <Heading size="2">
+            <TabPanel>
+              / <span>month</span>
+            </TabPanel>
+            <TabPanel>
+              <span>year</span>
+            </TabPanel>
+          </Heading>
+        </Tabs>
       </Flex>
       <Link href={href} kind="primary">
         {buttonLabel}
@@ -70,6 +109,10 @@ export const PlanMeta: FC<PlanMeta> = ({
 PlanMeta.defaultProps = {
   detailsLabel: `View all details`,
   buttonLabel: `Select Tier 1`,
+  price: {
+    year: `$144`,
+    month: `$16`,
+  },
   nodes: [
     {
       label: `5 HB Anim`,

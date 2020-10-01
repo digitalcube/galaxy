@@ -37,6 +37,7 @@ Plans.defaultProps = {
       img: 'pricing-plan-icon-1.png',
       title: `Free`,
       href: `#!`,
+      planMeta: [{ label: 'hello world' }],
     },
     {
       img: 'pricing-plan-icon-1.png',

@@ -9,7 +9,6 @@ import { NavLink } from '../../components/NavLink';
 
 export type Plan = {
   author?: string;
-  category?: string;
   date?: string;
   excerpt?: string;
   footer?: ReactNode;
@@ -24,7 +23,6 @@ export type Plan = {
 };
 
 export const Plan: FC<Plan> = ({
-  category,
   excerpt,
   footer,
   href,
@@ -55,7 +53,6 @@ export const Plan: FC<Plan> = ({
           },
         }}
       >
-        <Heading as="p">{category}</Heading>
         <Link href={href}>
           <Heading as="h2" size="5">
             <b>{title}</b>
