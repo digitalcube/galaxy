@@ -18,6 +18,7 @@ type MobileNav = {
 export const MobileNav: FC<MobileNav> = ({ nodes, sx, brand }: MobileNav) => {
   const context = useThemeUI();
   const { theme } = context;
+  const iconSize = theme?.space ? theme?.space[2] : ``;
 
   if (!nodes) return null;
   const overlayStyle = { background: theme?.colors?.background };
@@ -29,7 +30,7 @@ export const MobileNav: FC<MobileNav> = ({ nodes, sx, brand }: MobileNav) => {
         modal
         trigger={
           <IconButton>
-            <Bars size={'1rem'} />
+            <Bars size={`${iconSize}`} />
           </IconButton>
         }
         {...{
@@ -66,7 +67,7 @@ export const MobileNav: FC<MobileNav> = ({ nodes, sx, brand }: MobileNav) => {
                     close();
                   }}
                 >
-                  <Times size={'1rem'} />
+                  <Times size={`${iconSize}`} />
                 </IconButton>
               </Flex>
             </Flex>
