@@ -70,7 +70,8 @@ export const Testimonials: FC<Testimonials> = ({
         </Content>
       </Container>
       <Slider
-        slidesPerView={2}
+        slidesPerView={4}
+        centeredSlides={false}
         nodes={quotes}
         sx={{
           position: 'relative',

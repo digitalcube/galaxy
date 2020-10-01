@@ -25,7 +25,6 @@ const images = {
   },
   responsive: {
     display: 'flex',
-    minWidth: '25%',
     maxWidth: '100%',
     height: 'auto',
     m: '0 auto',

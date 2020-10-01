@@ -7,6 +7,7 @@ import { components } from '../../styles';
 
 type Slider = {
   slidesPerView?: number;
+  centeredSlides?: boolean;
   nodes?: any;
   sx?: object;
 };
@@ -25,7 +26,12 @@ const slides = ({ nodes }: Slides) => {
   return i;
 };
 
-export const Slider: FC<Slider> = ({ nodes, sx, slidesPerView }: Slider) => {
+export const Slider: FC<Slider> = ({
+  nodes,
+  sx,
+  slidesPerView,
+  centeredSlides,
+}: Slider) => {
   const spaceBetween = parseFloat(components.logos.gap) * 16;
   return (
     <StyledSwiper
@@ -35,7 +41,7 @@ export const Slider: FC<Slider> = ({ nodes, sx, slidesPerView }: Slider) => {
       spaceBetween={spaceBetween}
       slidesPerView={slidesPerView}
       loop={true}
-      centeredSlides={true}
+      centeredSlides={centeredSlides}
       autoplay={true}
     >
       {slides({ nodes: nodes })}
@@ -45,6 +51,7 @@ export const Slider: FC<Slider> = ({ nodes, sx, slidesPerView }: Slider) => {
 
 Slider.defaultProps = {
   slidesPerView: 6,
+  centeredSlides: true,
   nodes: [
     {
       node: 'Slide',
