@@ -20,7 +20,7 @@ export const Categories: FC<Categories> = ({ title, nodes }: Categories) => {
         flex: [2, null, null, null, 'initial'],
       }}
     >
-      <Container sx={{ display: 'flex' }} size="4">
+      <Container sx={{ display: 'flex', px: '5%' }} size="4">
         <Box
           sx={{
             borderRight: '1px solid #D7D7D7',

@@ -14,7 +14,7 @@ export type Testimonials = {
 
 type Quote = {
   img?: string;
-  quote?: string | undefined;
+  quote?: string;
   author?: string;
   handle?: string;
 };
@@ -23,7 +23,7 @@ const Quote = ({ img, quote, author, handle }: Quote) => {
   return (
     <Content align="center">
       <Text>
-        <div dangerouslySetInnerHTML={{ __html: quote }} />
+        <div dangerouslySetInnerHTML={{ __html: quote ? quote : `` }} />
       </Text>
       <Avatar size="1" img={img} />
       <Text>
