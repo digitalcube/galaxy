@@ -14,6 +14,9 @@ export const Content: FC<Content> = ({ align, children, sx }: Content) => {
   return (
     <Box
       sx={{
+        a: {
+          color: 'primary',
+        },
         textAlign: align,
         '& > *': {
           mt: 0,

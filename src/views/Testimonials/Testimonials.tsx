@@ -22,7 +22,9 @@ type Quote = {
 const Quote = ({ img, quote, author, handle }: Quote) => {
   return (
     <Content align="center">
-      <Text>{quote}</Text>
+      <Text>
+        <div dangerouslySetInnerHTML={{ __html: quote }} />
+      </Text>
       <Avatar size="1" img={img} />
       <Text>
         <b>{author}</b>
@@ -102,31 +104,36 @@ Testimonials.defaultProps = {
   nodes: [
     {
       img: 'user-avatar.png',
-      quote: 'Proident irure anim non non labore adipisicing.',
+      quote:
+        'DigitalCube Launches Shifter, Serverless Hosting for WordPress. <a href="https://wptavern.com/digitalcube-launches-shifter-serverless-hosting-for-wordpress">Read more.</a>',
       author: 'FooBarBaz',
       handle: '@ExampleFooBarBaz',
     },
     {
       img: 'user-avatar.png',
-      quote: 'Proident irure anim non non labore adipisicing.',
+      quote:
+        'DigitalCube Launches Shifter, Serverless Hosting for WordPress. <a href="https://wptavern.com/digitalcube-launches-shifter-serverless-hosting-for-wordpress">Read more.</a>',
       author: 'FooBarBaz',
       handle: '@ExampleFooBarBaz',
     },
     {
       img: 'user-avatar.png',
-      quote: 'Proident irure anim non non labore adipisicing.',
+      quote:
+        'DigitalCube Launches Shifter, Serverless Hosting for WordPress. <a href="https://wptavern.com/digitalcube-launches-shifter-serverless-hosting-for-wordpress">Read more.</a>',
       author: 'FooBarBaz',
       handle: '@ExampleFooBarBaz',
     },
     {
       img: 'user-avatar.png',
-      quote: 'Proident irure anim non non labore adipisicing.',
+      quote:
+        'DigitalCube Launches Shifter, Serverless Hosting for WordPress. <a href="https://wptavern.com/digitalcube-launches-shifter-serverless-hosting-for-wordpress">Read more.</a>',
       author: 'FooBarBaz',
       handle: '@ExampleFooBarBaz',
     },
     {
       img: 'user-avatar.png',
-      quote: 'Proident irure anim non non labore adipisicing.',
+      quote:
+        'DigitalCube Launches Shifter, Serverless Hosting for WordPress. <a href="https://wptavern.com/digitalcube-launches-shifter-serverless-hosting-for-wordpress">Read more.</a>',
       author: 'FooBarBaz',
       handle: '@ExampleFooBarBaz',
     },
