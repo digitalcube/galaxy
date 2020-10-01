@@ -6,7 +6,9 @@ import { useThemeUI } from 'theme-ui';
 import { FC } from 'react';
 import { Check } from '@styled-icons/fa-solid';
 
-export type FeatureTable = {};
+export type FeatureTable = {
+  dark: any;
+};
 
 export const StyledCheck = styled(Check)`
   color: ${props => props.color};
