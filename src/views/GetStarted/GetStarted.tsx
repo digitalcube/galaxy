@@ -1,5 +1,6 @@
 import React from 'react';
 import { Content } from '../../components/Content';
+import { Shape } from '../../components/Shape';
 import { Link } from '../../components/Link';
 import { Heading } from '../../components/Heading';
 import { Container } from '../../components/Container';
@@ -30,15 +31,17 @@ export const GetStarted = ({
           px: '5%',
         }}
       >
-        <Content align="center">
-          <Heading size="6">
-            <b>{title}</b>
-          </Heading>
-          <Heading size="4">{subtitle}</Heading>
-          <Link href={href} kind="primary">
-            {linkLabel}
-          </Link>
-        </Content>
+        <Shape shape="semi-circle">
+          <Content align="center">
+            <Heading size="6">
+              <b>{title}</b>
+            </Heading>
+            <Heading size="4">{subtitle}</Heading>
+            <Link href={href} kind="primary">
+              {linkLabel}
+            </Link>
+          </Content>
+        </Shape>
       </Container>
     );
   }

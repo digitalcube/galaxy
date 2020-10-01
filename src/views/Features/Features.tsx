@@ -1,9 +1,10 @@
 import React from 'react';
 import { Heading } from '../../components/Heading';
 import { Link } from '../../components/Link';
+import { Shape } from '../../components/Shape';
 import { Container } from '../../components/Container';
 import { Content } from '../../components/Content';
-import { Posts } from '../Posts';
+import { Posts } from '../../views/Posts';
 
 export type Features = {
   title?: string;
@@ -33,41 +34,43 @@ export const Features = ({
         px: '5%',
       }}
     >
-      <Container
-        size="1"
-        sx={{
-          mb: 5,
-        }}
-      >
-        <Content align="center">
-          <Heading size="6">
-            <b>{title}</b>
-          </Heading>
-          <Heading as="p" size="3">
-            {subtitle}
-          </Heading>
-        </Content>
-      </Container>
-      <Container>
-        <Posts
-          variant={kind}
-          columns={columns}
+      <Shape shape="triangle">
+        <Container
+          size="1"
           sx={{
-            textAlign: 'center',
-          }}
-          nodes={nodes}
-        />
-        <Content
-          align="center"
-          sx={{
-            mt: 5,
+            mb: 5,
           }}
         >
-          <Link kind="primary" href={href}>
-            {buttonLabel}
-          </Link>
-        </Content>
-      </Container>
+          <Content align="center">
+            <Heading size="6">
+              <b>{title}</b>
+            </Heading>
+            <Heading as="p" size="3">
+              {subtitle}
+            </Heading>
+          </Content>
+        </Container>
+        <Container>
+          <Posts
+            variant={kind}
+            columns={columns}
+            sx={{
+              textAlign: 'center',
+            }}
+            nodes={nodes}
+          />
+          <Content
+            align="center"
+            sx={{
+              mt: 5,
+            }}
+          >
+            <Link kind="primary" href={href}>
+              {buttonLabel}
+            </Link>
+          </Content>
+        </Container>
+      </Shape>
     </Container>
   );
 };
