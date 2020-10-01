@@ -14,7 +14,7 @@ export type Testimonials = {
 
 type Quote = {
   img?: string;
-  quote?: string;
+  quote?: string | undefined;
   author?: string;
   handle?: string;
 };
