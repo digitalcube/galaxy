@@ -48,6 +48,7 @@ const Showcase: FC<Showcase> = ({
       sx={{
         bg: 'purple.p600',
         color: 'white',
+        pt: 2,
       }}
       footer={
         <Content align="center">
