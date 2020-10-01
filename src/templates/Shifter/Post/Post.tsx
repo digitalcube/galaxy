@@ -10,7 +10,7 @@ type Post = {
   img?: string;
   author?: string;
   date?: string;
-  content?: ReactNode;
+  content?: string;
 };
 
 export const Post = ({ title, category, author, date, img, content }: Post) => {
@@ -31,7 +31,7 @@ export const Post = ({ title, category, author, date, img, content }: Post) => {
           }}
         >
           <Content>
-            <div dangerouslySetInnerHTML={{ __html: content }} />
+            <div dangerouslySetInnerHTML={{ __html: content ? content : `` }} />
           </Content>
         </Container>
       </Container>
