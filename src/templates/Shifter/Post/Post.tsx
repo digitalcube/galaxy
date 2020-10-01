@@ -30,7 +30,13 @@ export const Post = ({ title, category, author, date, img, content }: Post) => {
             my: 4,
           }}
         >
-          <Content>
+          <Content
+            sx={{
+              a: {
+                color: 'primary',
+              },
+            }}
+          >
             <div dangerouslySetInnerHTML={{ __html: content ? content : `` }} />
           </Content>
         </Container>
