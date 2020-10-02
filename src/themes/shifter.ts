@@ -390,26 +390,30 @@ export const shifter = {
       fontSize: 'inherit',
     },
     table: {
+      variant: 'cards.primary',
       width: '100%',
-      borderCollapse: 'separate',
+      borderCollapse: 'collapse',
       borderSpacing: 0,
       bg: 'white',
       borderRadius: 0,
     },
+    tr: {
+      ':not(:last-child)': {
+        borderBottomColor: colors.shifter.gray.g200,
+        borderBottomStyle: 'solid',
+        borderBottomWidth: '1px',
+      },
+    },
     th: {
       fontWeight: 'body',
-      borderBottomColor: colors.shifter.gray.g200,
-      borderBottomStyle: 'solid',
-      borderBottomWidth: '1px',
       textAlign: 'left',
+      color: 'text',
       p: 2,
     },
     td: {
-      borderBottomColor: colors.shifter.gray.g100,
-      borderBottomStyle: 'solid',
-      borderBottomWidth: '1px',
       p: 2,
       textAlign: 'center',
+      color: 'secondary',
     },
   },
 };
