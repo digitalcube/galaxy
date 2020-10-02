@@ -272,6 +272,7 @@ export const shifter = {
       bg: colors.shifter.purple.primary,
       whiteSpace: 'nowrap',
       textAlign: 'center',
+      fontWeight: `bold`,
       transition: transitions.ease.fast,
       '&:hover': {
         bg: colors.shifter.purple.p600,
