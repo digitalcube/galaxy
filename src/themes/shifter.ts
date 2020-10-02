@@ -99,10 +99,9 @@ export const shifter = {
       },
     },
     text: colors.shifter.purple.p700,
-    heading: colors.shifter.purple.p600,
+    heading: colors.shifter.purple.p500,
     primary: colors.shifter.purple.p500,
     secondary: colors.shifter.gray.g500,
-    accent: colors.shifter.magenta.dark,
     black: colors.shifter.black,
     white: colors.shifter.white,
     success: colors.galaxy.success,
@@ -322,12 +321,12 @@ export const shifter = {
     0: {
       variant: 'text.heading',
       fontSize: 0,
-      lineHeight: 1,
+      lineHeight: 1.5,
     },
     1: {
       variant: 'text.heading',
       fontSize: 1,
-      lineHeight: 1.375,
+      lineHeight: 1.5,
     },
     2: {
       variant: 'text.heading',
@@ -337,27 +336,27 @@ export const shifter = {
     3: {
       variant: 'text.heading',
       fontSize: 3,
-      lineHeight: 1.444,
+      lineHeight: 1.5,
     },
     4: {
       variant: 'text.heading',
       fontSize: 4,
-      lineHeight: 1.6,
+      lineHeight: 1.5,
     },
     5: {
       variant: 'text.heading',
       fontSize: 5,
-      lineHeight: 1.75,
+      lineHeight: 1.25,
     },
     6: {
       variant: 'text.heading',
       fontSize: 6,
-      lineHeight: 1.444,
+      lineHeight: 1.25,
     },
     7: {
       variant: 'text.heading',
       fontSize: 7,
-      lineHeight: 1.333,
+      lineHeight: 1.25,
     },
     8: {
       variant: 'text.heading',
