@@ -34,13 +34,13 @@ export const Features = ({
         px: '5%',
       }}
     >
-      <Shape shape="triangle">
-        <Container
-          size="1"
-          sx={{
-            mb: 5,
-          }}
-        >
+      <Container
+        size="1"
+        sx={{
+          mb: 5,
+        }}
+      >
+        <Shape shape="triangle">
           <Content align="center">
             <Heading size="6">
               <b>{title}</b>
@@ -49,28 +49,28 @@ export const Features = ({
               {subtitle}
             </Heading>
           </Content>
-        </Container>
-        <Container>
-          <Posts
-            variant={kind}
-            columns={columns}
-            sx={{
-              textAlign: 'center',
-            }}
-            nodes={nodes}
-          />
-          <Content
-            align="center"
-            sx={{
-              mt: 5,
-            }}
-          >
-            <Link kind="primary" href={href}>
-              {buttonLabel}
-            </Link>
-          </Content>
-        </Container>
-      </Shape>
+        </Shape>
+      </Container>
+      <Container>
+        <Posts
+          variant={kind}
+          columns={columns}
+          sx={{
+            textAlign: 'center',
+          }}
+          nodes={nodes}
+        />
+        <Content
+          align="center"
+          sx={{
+            mt: 5,
+          }}
+        >
+          <Link kind="primary" href={href}>
+            {buttonLabel}
+          </Link>
+        </Content>
+      </Container>
     </Container>
   );
 };
@@ -80,7 +80,7 @@ Features.defaultProps = {
   subtitle: `Et cillum non cupidatat non dolore nostrud ad nisi.`,
   href: `#!`,
   buttonLabel: `Nostrud nisi`,
-  columns: [1, null, null, 2, null, 4],
+  columns: [1, null, null, null, 2, 4],
   nodes: [
     {
       title: `Magic Link Logins`,

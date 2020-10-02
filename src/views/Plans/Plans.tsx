@@ -24,7 +24,7 @@ export const Plans: FC<Plans> = ({ nodes, sx }: Plans) => {
         py: 4,
       }}
     >
-      <Grid sx={{ ...sx }} columns={[1, 2, null, null, 4]}>
+      <Grid sx={{ ...sx }} columns={[1, null, null, null, 2, 4]}>
         {items}
       </Grid>
     </Container>
