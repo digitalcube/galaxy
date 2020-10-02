@@ -398,14 +398,14 @@ export const shifter = {
     },
     th: {
       fontWeight: 'body',
-      borderBottomColor: 'primary',
+      borderBottomColor: colors.shifter.gray.g200,
       borderBottomStyle: 'solid',
       borderBottomWidth: '1px',
       textAlign: 'left',
       p: 2,
     },
     td: {
-      borderBottomColor: 'primary',
+      borderBottomColor: colors.shifter.gray.g100,
       borderBottomStyle: 'solid',
       borderBottomWidth: '1px',
       p: 2,

@@ -3,7 +3,7 @@ import { PageHeader } from '../../../views/PageHeader';
 import { Brand } from '../../../components/Brand';
 import { GetStarted } from '../../../views/GetStarted';
 import { Plans } from '../../../views/Plans';
-import { Features } from '../../../views/Features';
+import { FeatureTable } from '../../../views/FeatureTable';
 import { Benefits } from '../../../views/Benefits';
 
 type Pricing = {
@@ -11,7 +11,7 @@ type Pricing = {
   subtitle?: string;
   getStarted?: GetStarted;
   plans?: Plans;
-  features?: Features;
+  featureTable?: FeatureTable;
   benefits?: Benefits;
 };
 
@@ -20,6 +20,7 @@ export const Pricing = ({ title, subtitle, plans, getStarted }: Pricing) => {
     <>
       <PageHeader title={title} subtitle={subtitle} />
       <Plans {...plans} />
+      <FeatureTable />
       <PageHeader title={title} subtitle={subtitle} />
       <Plans {...plans} />
       <GetStarted {...getStarted} />

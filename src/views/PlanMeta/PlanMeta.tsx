@@ -44,7 +44,7 @@ export const PlanMeta: FC<PlanMeta> = ({
           },
         }}
       >
-        <Tabs defaultIndex={1} onSelect={index => console.log(index)}>
+        <Tabs defaultIndex={1}>
           <Box
             sx={{
               display: 'flex',
