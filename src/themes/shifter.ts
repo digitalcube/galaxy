@@ -264,7 +264,7 @@ export const shifter = {
       fontSize: 2,
       color: 'white',
       px: 4,
-      py: 1,
+      py: 2,
       cursor: `pointer`,
       display: 'inline-block',
       borderRadius: 0,
