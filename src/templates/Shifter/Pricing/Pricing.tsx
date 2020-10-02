@@ -15,12 +15,18 @@ type Pricing = {
   benefits?: Benefits;
 };
 
-export const Pricing = ({ title, subtitle, plans, getStarted }: Pricing) => {
+export const Pricing = ({
+  title,
+  subtitle,
+  plans,
+  getStarted,
+  featureTable,
+}: Pricing) => {
   return (
     <>
       <PageHeader title={title} subtitle={subtitle} />
       <Plans {...plans} />
-      <FeatureTable />
+      <FeatureTable {...featureTable} />
       <PageHeader title={title} subtitle={subtitle} />
       <Plans {...plans} />
       <GetStarted {...getStarted} />

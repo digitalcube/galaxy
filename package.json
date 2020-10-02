@@ -1,5 +1,5 @@
 {
-  "version": "0.1.62",
+  "version": "0.1.63",
   "license": "MIT",
   "main": "dist/index.js",
   "typings": "dist/index.d.ts",
@@ -84,12 +84,14 @@
   "dependencies": {
     "@styled-icons/fa-brands": "^10.18.0",
     "@styled-icons/fa-solid": "^10.18.0",
+    "@types/react-table": "^7.0.23",
     "@types/react-tabs": "^2.3.2",
     "@types/theme-ui": "^0.3.6",
     "babel-loader": "^8.1.0",
     "moment": "^2.27.0",
     "moment-duration-format": "^2.3.2",
     "react-lottie": "^1.2.3",
+    "react-table": "^7.5.1",
     "react-tabs": "^3.1.1",
     "reactjs-popup": "^2.0.4",
     "styled-components": "^5.2.0",

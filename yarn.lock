@@ -3373,6 +3373,13 @@
   dependencies:
     "@types/react" "*"
 
+"@types/react-table@^7.0.23":
+  version "7.0.23"
+  resolved "https://registry.yarnpkg.com/@types/react-table/-/react-table-7.0.23.tgz#77d10ac36be759f6598f2b185865905425b47833"
+  integrity sha512-1L2wFQVm6QcrSUbAdTUpk2PTYX5Wqx11Kh+wuN/kYYRWNI4OGpj3sIn3QAQ1jOwXKpyLMTL6lpEcUfKw2ZEieQ==
+  dependencies:
+    "@types/react" "*"
+
 "@types/react-tabs@^2.3.2":
   version "2.3.2"
   resolved "https://registry.yarnpkg.com/@types/react-tabs/-/react-tabs-2.3.2.tgz#99fb6866bbc6912d44f7bbc99eca03fbbd217960"
@@ -12370,6 +12377,11 @@ react-syntax-highlighter@^12.2.1:
     lowlight "1.12.1"
     prismjs "^1.8.4"
     refractor "^2.4.1"
+
+react-table@^7.5.1:
+  version "7.5.1"
+  resolved "https://registry.yarnpkg.com/react-table/-/react-table-7.5.1.tgz#b6a9b46e52c0f37ff91717ac478f430c6a357e41"
+  integrity sha512-rprrUElCqvj79lyY2XbUoYLzwA5Mm4CGS8ElQ8OyzocvmkvCcmunvvfbpIg9Jm9HnMBjVZcVyPFPZ1BFelIBKw==
 
 react-tabs@^3.1.1:
   version "3.1.1"
