@@ -2,6 +2,24 @@
 
 import { colors } from '../styles/colors';
 
+const transitions = {
+  exit: {
+    fast: `all 150ms cubic-bezier(.01,.65,.73,1.01)`,
+    medium: `all .5s cubic-bezier(.01,.65,.73,1.01)`,
+    slow: `all 1s cubic-bezier(.3,0,.45,1)`,
+  },
+  entrance: {
+    fast: `all 150ms cubic-bezier(.55,0,1,.5)`,
+    medium: `all .5s cubic-bezier(.55,0,1,.5)`,
+    slow: `all 1s cubic-bezier(.17,0,.8,.15)`,
+  },
+  ease: {
+    fast: `all 150ms cubic-bezier(.85,.05,.15,.8)`,
+    medium: `all .5s cubic-bezier(.7,.15,.35,.9)`,
+    slow: `all 1s cubic-bezier(.7,.15,.35,.9)`,
+  },
+};
+
 const images = {
   avatar: {
     width: 100,
@@ -253,6 +271,7 @@ export const shifter = {
       bg: colors.shifter.purple.primary,
       whiteSpace: 'nowrap',
       textAlign: 'center',
+      transition: transitions.ease.slow,
       '&:hover': {
         bg: colors.shifter.purple.p600,
         color: 'white',
