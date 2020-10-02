@@ -271,7 +271,7 @@ export const shifter = {
       bg: colors.shifter.purple.primary,
       whiteSpace: 'nowrap',
       textAlign: 'center',
-      transition: transitions.ease.slow,
+      transition: transitions.ease.fast,
       '&:hover': {
         bg: colors.shifter.purple.p600,
         color: 'white',
