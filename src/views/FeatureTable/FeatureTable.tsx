@@ -16,7 +16,7 @@ export const FeatureTable: FC<FeatureTable> = ({}: FeatureTable) => {
   const context = useThemeUI();
   const { theme } = context;
   const iconSize = theme?.space ? theme?.space[2] : ``;
-  const iconColor = theme?.colors?.primary;
+  const iconColor = theme?.colors?.accent;
   return (
     <Container
       size="4"

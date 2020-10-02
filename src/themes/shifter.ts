@@ -102,6 +102,7 @@ export const shifter = {
     heading: colors.shifter.purple.p600,
     primary: colors.shifter.purple.p500,
     secondary: colors.shifter.gray.g500,
+    accent: colors.shifter.magenta.dark,
     black: colors.shifter.black,
     white: colors.shifter.white,
     success: colors.galaxy.success,
