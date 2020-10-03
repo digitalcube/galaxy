@@ -143,6 +143,9 @@ export const Solutions: FC<Solutions> = ({ nodes }: Solutions) => {
             display: 'flex',
             justifyContent: 'center',
             ul: {
+              // display: 'block',
+              overflow: 'scroll',
+              whiteSpace: 'nowrap',
               display: 'flex',
               listStyle: 'none',
               mt: 0,
@@ -165,6 +168,76 @@ Solutions.defaultProps = {
       solution: {
         title: `Education`,
         subtitle: `Cupidatat pariatur ea irure ea laborum.`,
+        href: `#!`,
+        buttonLabel: `Veniam qui`,
+      },
+      showcase: {
+        title: `Eiusmod laborum`,
+        buttonLabel: `Culpa amet`,
+        href: `#!`,
+        img: `logo-howtospeakmachine.webp`,
+      },
+    },
+    {
+      solution: {
+        title: `Designers`,
+        subtitle: `Lorem commodo amet dolor quis aliquip aliqua esse non et Lorem.`,
+        href: `#!`,
+        buttonLabel: `Veniam qui`,
+      },
+      showcase: {
+        title: `Eiusmod laborum`,
+        buttonLabel: `Culpa amet`,
+        href: `#!`,
+        img: `logo-howtospeakmachine.webp`,
+      },
+    },
+    {
+      solution: {
+        title: `Designers`,
+        subtitle: `Lorem commodo amet dolor quis aliquip aliqua esse non et Lorem.`,
+        href: `#!`,
+        buttonLabel: `Veniam qui`,
+      },
+      showcase: {
+        title: `Eiusmod laborum`,
+        buttonLabel: `Culpa amet`,
+        href: `#!`,
+        img: `logo-howtospeakmachine.webp`,
+      },
+    },
+    {
+      solution: {
+        title: `Designers`,
+        subtitle: `Lorem commodo amet dolor quis aliquip aliqua esse non et Lorem.`,
+        href: `#!`,
+        buttonLabel: `Veniam qui`,
+      },
+      showcase: {
+        title: `Eiusmod laborum`,
+        buttonLabel: `Culpa amet`,
+        href: `#!`,
+        img: `logo-howtospeakmachine.webp`,
+      },
+    },
+    {
+      solution: {
+        title: `Designers`,
+        subtitle: `Lorem commodo amet dolor quis aliquip aliqua esse non et Lorem.`,
+        href: `#!`,
+        buttonLabel: `Veniam qui`,
+      },
+      showcase: {
+        title: `Eiusmod laborum`,
+        buttonLabel: `Culpa amet`,
+        href: `#!`,
+        img: `logo-howtospeakmachine.webp`,
+      },
+    },
+    {
+      solution: {
+        title: `Designers`,
+        subtitle: `Lorem commodo amet dolor quis aliquip aliqua esse non et Lorem.`,
         href: `#!`,
         buttonLabel: `Veniam qui`,
       },
