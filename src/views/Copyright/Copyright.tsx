@@ -5,7 +5,7 @@ import { Brand } from '../../components/Brand';
 
 type Copyright = {};
 
-export const Copyright: FC<Copyright> = ({}: Copyright) => {
+export const Copyright: FC<Copyright> = () => {
   const context = useThemeUI();
   const { theme } = context;
   const iconSize = theme?.space ? theme?.space[2] : ``;

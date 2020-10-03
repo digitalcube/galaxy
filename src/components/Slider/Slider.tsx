@@ -33,9 +33,6 @@ export const Slider: FC<Slider> = ({
   slidesPerView,
   centeredSlides,
 }: Slider) => {
-  // const context = useThemeUI();
-  // const { theme } = context;
-  // const spaceBetween = theme?.space ? theme?.space[2] : null;
   return (
     <StyledSwiper
       sx={{
@@ -116,6 +113,8 @@ const StyledSwiper = styled(Swiper)`
     height: 100%;
     position: relative;
     transition-property: transform;
+    display: flex;
+    align-self: center;
   }
   .swiper-slide-invisible-blank {
     visibility: hidden;

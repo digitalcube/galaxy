@@ -58,7 +58,10 @@ export const Footer: FC<Footer> = ({ nav }: Footer) => {
         <Grid columns={[1, null, null, null, '4fr 8fr']}>
           <Content>
             <Heading size="4" as="h3">
-              Say hello 👋
+              Say hello{' '}
+              <span role="img" aria-label="Say hello waving hand">
+                👋
+              </span>
             </Heading>
             <Nav
               kind="row"

@@ -1,7 +1,6 @@
 import React from 'react';
 import { withKnobs } from '@storybook/addon-knobs';
 import { Nav } from '../index';
-import { Flex, NavLink } from 'theme-ui';
 
 export default {
   component: Nav,

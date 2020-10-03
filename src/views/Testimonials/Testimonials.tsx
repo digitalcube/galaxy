@@ -106,21 +106,21 @@ Testimonials.defaultProps = {
     {
       img: 'user-avatar.png',
       quote:
-        'DigitalCube Launches Shifter, Serverless Hosting for WordPress. <a href="https://wptavern.com/digitalcube-launches-shifter-serverless-hosting-for-wordpress">Read more.</a>',
+        'Cillum magna quis culpa in et ea laborum eiusmod reprehenderit tempor ea labore.. <a href="https://wptavern.com/digitalcube-launches-shifter-serverless-hosting-for-wordpress">Read more.</a>',
       author: 'FooBarBaz',
       handle: '@ExampleFooBarBaz',
     },
     {
       img: 'user-avatar.png',
       quote:
-        'DigitalCube Launches Shifter, Serverless Hosting for WordPress. <a href="https://wptavern.com/digitalcube-launches-shifter-serverless-hosting-for-wordpress">Read more.</a>',
+        'Ullamco aute nulla amet commodo magna.. <a href="https://wptavern.com/digitalcube-launches-shifter-serverless-hosting-for-wordpress">Read more.</a>',
       author: 'FooBarBaz',
       handle: '@ExampleFooBarBaz',
     },
     {
       img: 'user-avatar.png',
       quote:
-        'DigitalCube Launches Shifter, Serverless Hosting for WordPress. <a href="https://wptavern.com/digitalcube-launches-shifter-serverless-hosting-for-wordpress">Read more.</a>',
+        'Aute ea eiusmod eu consectetur velit cillum dolore quis voluptate eu eiusmod.. <a href="https://wptavern.com/digitalcube-launches-shifter-serverless-hosting-for-wordpress">Read more.</a>',
       author: 'FooBarBaz',
       handle: '@ExampleFooBarBaz',
     },

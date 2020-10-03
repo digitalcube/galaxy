@@ -105,7 +105,7 @@ export const Solutions: FC<Solutions> = ({ nodes }: Solutions) => {
   if (!nodes) return null;
 
   const solutionsNav = nodes.map((node: Solutions) => {
-    if (!node) return;
+    if (!node) return null;
     const label = node.solution?.title;
 
     return (
