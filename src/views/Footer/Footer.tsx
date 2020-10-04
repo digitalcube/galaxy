@@ -107,6 +107,7 @@ export const Footer: FC<Footer> = ({ nav }: Footer) => {
           </Content>
           <Grid columns={[1, 2, null, null, 4]}>
             <FooterNav
+              title="Company"
               navItems={[
                 {
                   label: `Blog`,
@@ -114,14 +115,13 @@ export const Footer: FC<Footer> = ({ nav }: Footer) => {
                 },
                 {
                   label: `About`,
-                  href: `/about/`,
+                  href: `/company/`,
                 },
                 {
-                  label: `Press`,
-                  href: `#!`,
+                  label: `DigitalCube`,
+                  href: `https://en.digitalcube.jp/`,
                 },
               ]}
-              title="Company"
             />
             <FooterNav
               navItems={[
@@ -161,16 +161,16 @@ export const Footer: FC<Footer> = ({ nav }: Footer) => {
               title="Legal"
               navItems={[
                 {
+                  label: `Email Us`,
+                  href: `mailto:hello@getshifter.io`,
+                },
+                {
                   label: `Terms`,
                   href: `/terms-of-service/`,
                 },
                 {
                   label: `Privacy Policy`,
                   href: `/privacy-policy/`,
-                },
-                {
-                  label: `Open Source`,
-                  href: `https://github.com/getshifter`,
                 },
               ]}
             />

@@ -119,7 +119,7 @@ export const Shape: React.FC<Shape> = ({ shape = `square`, children }) => {
   const color = theme?.colors?.primary;
   return (
     <Box sx={{ position: 'relative' }}>
-      <Box sx={{ zIndex: '-1', position: 'relative' }}>{children}</Box>
+      <Box sx={{ zIndex: '0', position: 'relative' }}>{children}</Box>
       <Box
         sx={{
           top: '-5%',
