@@ -2,7 +2,6 @@ import React, { FC, ReactNode } from 'react';
 import { AspectRatio as ThemeUIAspectRatio } from 'theme-ui';
 import { Image } from '../../components/Image';
 import { Text } from '../../components/Text';
-import { Card } from '../Card';
 import { Heading } from '../../components/Heading';
 import { Content } from '../../components/Content';
 

@@ -21,7 +21,7 @@ export const Showcase = ({ title, subtitle, nodes }: Showcase) => {
         }}
       >
         <Posts
-          variant="minimal"
+          variant="blog"
           columns={[1, null, null, null, 2]}
           sx={{ img: { alignSelf: 'flex-start' } }}
           nodes={nodes}
