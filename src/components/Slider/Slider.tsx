@@ -2,7 +2,7 @@
 import { jsx } from 'theme-ui';
 import { FC } from 'react';
 import styled from 'styled-components';
-// import { useThemeUI } from 'theme-ui';
+import SwiperCore, { Autoplay } from 'swiper';
 import { Swiper, SwiperSlide } from 'swiper/react';
 
 type Slider = {
@@ -33,6 +33,7 @@ export const Slider: FC<Slider> = ({
   slidesPerView,
   centeredSlides,
 }: Slider) => {
+  SwiperCore.use([Autoplay]);
   return (
     <StyledSwiper
       sx={{
@@ -42,7 +43,8 @@ export const Slider: FC<Slider> = ({
       slidesPerView={slidesPerView}
       loop={true}
       centeredSlides={centeredSlides}
-      autoplay={true}
+      autoplay={{ delay: 2000 }}
+      speed={3000}
     >
       {slides({ nodes: nodes })}
     </StyledSwiper>
