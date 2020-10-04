@@ -1,6 +1,7 @@
 import React, { FC } from 'react';
 import { TeamMember } from '../TeamMember';
 import { Grid } from '../../components/Grid';
+import { Container } from '../../components/Container';
 
 export type Team = {
   nodes?: any;
@@ -17,9 +18,11 @@ export const Team: FC<Team> = ({ nodes, columns, sx }: Team) => {
   });
 
   return (
-    <Grid sx={{ ...sx }} columns={columns}>
-      {items}
-    </Grid>
+    <Container size="4" sx={{ px: `5%` }}>
+      <Grid sx={{ ...sx }} columns={columns}>
+        {items}
+      </Grid>
+    </Container>
   );
 };
 
