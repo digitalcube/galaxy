@@ -20,6 +20,7 @@ export type Plan = {
   sx?: object;
   children?: ReactNode;
   planMeta?: NavLink[];
+  price?: any;
 };
 
 export const Plan: FC<Plan> = ({
@@ -32,7 +33,9 @@ export const Plan: FC<Plan> = ({
   sx,
   children,
   planMeta,
+  price,
 }: Plan) => {
+  console.log(price);
   return (
     <Card
       sx={{ ...sx }}
@@ -62,7 +65,7 @@ export const Plan: FC<Plan> = ({
           {subtitle}
         </Heading>
         <Text>{excerpt}</Text>
-        <PlanMeta nodes={planMeta} />
+        <PlanMeta price={price} nodes={planMeta} />
         {children ? children : null}
       </Content>
     </Card>
@@ -73,4 +76,8 @@ Plan.defaultProps = {
   img: 'pricing-plan-icon-1.png',
   title: `Free`,
   href: `#!`,
+  price: {
+    year: `$1`,
+    month: `$1`,
+  },
 };

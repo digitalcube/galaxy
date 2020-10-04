@@ -37,22 +37,38 @@ Plans.defaultProps = {
       img: 'pricing-plan-icon-1.png',
       title: `Free`,
       href: `#!`,
+      price: {
+        month: `$1`,
+        year: `$2`,
+      },
       planMeta: [{ label: 'hello world' }],
     },
     {
       img: 'pricing-plan-icon-1.png',
       href: `#!`,
       title: `Tier 1`,
+      price: {
+        month: `$1`,
+        year: `$2`,
+      },
     },
     {
       img: 'pricing-plan-icon-1.png',
       href: `#!`,
       title: `Tier 2`,
+      price: {
+        month: `$1`,
+        year: `$2`,
+      },
     },
     {
       img: 'pricing-plan-icon-1.png',
       href: `#!`,
       title: `Tier 3`,
+      price: {
+        month: `$1`,
+        year: `$2`,
+      },
     },
   ],
 };

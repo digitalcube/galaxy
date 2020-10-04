@@ -23,11 +23,13 @@ export const PlanMeta: FC<PlanMeta> = ({
   buttonLabel,
 }: PlanMeta) => {
   if (!nodes) return null;
+  console.log(price);
   return (
     <Box
       sx={{
         display: 'inline-flex',
         flexDirection: 'column',
+        textAlign: 'center',
         '& > :not(:first-child)': {
           mt: 3,
         },
@@ -44,7 +46,7 @@ export const PlanMeta: FC<PlanMeta> = ({
           },
         }}
       >
-        <Tabs defaultIndex={1}>
+        <Tabs defaultIndex={0}>
           <Box
             sx={{
               display: 'flex',
@@ -55,6 +57,16 @@ export const PlanMeta: FC<PlanMeta> = ({
                 mt: 0,
                 mb: 4,
                 p: 0,
+              },
+              li: {
+                '&:not(:first-child)': {
+                  ml: 1,
+                },
+                '&[aria-selected="true"]': {
+                  a: {
+                    variant: 'buttons.ghostHover',
+                  },
+                },
               },
             }}
           >
@@ -69,18 +81,16 @@ export const PlanMeta: FC<PlanMeta> = ({
           </Box>
           <Heading size="8">
             <TabPanel>
-              <b>{price?.year}</b>
-            </TabPanel>
-            <TabPanel>
               <b>{price?.month}</b>
-            </TabPanel>
-          </Heading>
-          <Heading size="2">
-            <TabPanel>
-              / <span>month</span>
+              <Heading size="2">
+                / <span>month</span>
+              </Heading>
             </TabPanel>
             <TabPanel>
-              <span>year</span>
+              <b>{price?.year}</b>
+              <Heading size="2">
+                / <span>year</span>
+              </Heading>
             </TabPanel>
           </Heading>
         </Tabs>

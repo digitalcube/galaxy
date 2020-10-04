@@ -295,6 +295,14 @@ export const shifter = {
         bg: colors.shifter.gray.g200,
       },
     },
+    ghostHover: {
+      variant: 'buttons.ghost',
+      color: colors.shifter.purple.primary,
+      bg: colors.shifter.gray.g100,
+      '&:hover': {
+        bg: colors.shifter.gray.g200,
+      },
+    },
     white: {
       variant: 'buttons.primary',
       color: 'primary',
