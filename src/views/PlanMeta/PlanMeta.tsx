@@ -10,6 +10,7 @@ import { Heading } from '../../components/Heading';
 export type PlanMeta = {
   href?: string;
   detailsLabel?: string;
+  detailsLink?: string;
   buttonLabel?: string;
   nodes?: NavLink[];
   price?: any;
@@ -21,6 +22,7 @@ export const PlanMeta: FC<PlanMeta> = ({
   href,
   detailsLabel,
   buttonLabel,
+  detailsLink,
 }: PlanMeta) => {
   if (!nodes) return null;
   console.log(price);
@@ -109,7 +111,7 @@ export const PlanMeta: FC<PlanMeta> = ({
         kind="column"
         navItems={nodes}
       />
-      <Link href="#!" kind="ghost">
+      <Link href={detailsLink} kind="ghost">
         {detailsLabel}
       </Link>
     </Box>
@@ -118,6 +120,8 @@ export const PlanMeta: FC<PlanMeta> = ({
 
 PlanMeta.defaultProps = {
   detailsLabel: `View all details`,
+  href: `https://go.getshifter.io`,
+  detailsLink: `#static`,
   buttonLabel: `Select Tier 1`,
   price: {
     year: `$144`,
