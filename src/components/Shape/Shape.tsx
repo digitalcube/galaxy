@@ -123,7 +123,7 @@ export const Shape: React.FC<Shape> = ({ shape = `square`, children }) => {
       <Box
         sx={{
           top: '-5%',
-          opacity: '0.35',
+          opacity: '0.075',
           position: 'absolute',
           width: '100%',
           zIndex: '-2',
