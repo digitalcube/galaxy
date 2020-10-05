@@ -428,7 +428,7 @@ export const shifter = {
     },
     tr: {
       ':not(:last-child)': {
-        borderBottomColor: colors.shifter.gray.g200,
+        borderBottomColor: colors.shifter.gray.g100,
         borderBottomStyle: 'solid',
         borderBottomWidth: '1px',
       },

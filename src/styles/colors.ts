@@ -41,7 +41,7 @@ export const colors = {
       g400: `#9E9699`,
       g300: `#BDB6B8`,
       g200: `#DBD7D8`,
-      g100: `#F9F8F8`,
+      g100: `#F8F5F5`,
     },
     purple: {
       primary: `#77266F`,
