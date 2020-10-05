@@ -36,7 +36,10 @@ Plans.defaultProps = {
     {
       img: 'pricing-plan-icon-1.png',
       title: `Free`,
-      href: `#!`,
+      buttonLabel: `hello world`,
+      detailsLabel: `View more`,
+      detailsLink: `#!buttonLink`,
+      href: `//google.com/`,
       price: {
         month: `$1`,
         year: `$2`,

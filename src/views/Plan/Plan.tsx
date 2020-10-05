@@ -19,8 +19,11 @@ export type Plan = {
   title?: string;
   sx?: object;
   children?: ReactNode;
+  buttonLabel?: string;
   planMeta?: NavLink[];
   price?: any;
+  detailsLabel?: string;
+  detailsLink?: string;
 };
 
 export const Plan: FC<Plan> = ({
@@ -34,6 +37,9 @@ export const Plan: FC<Plan> = ({
   children,
   planMeta,
   price,
+  buttonLabel,
+  detailsLink,
+  detailsLabel,
 }: Plan) => {
   console.log(price);
   return (
@@ -65,7 +71,14 @@ export const Plan: FC<Plan> = ({
           {subtitle}
         </Heading>
         <Text>{excerpt}</Text>
-        <PlanMeta price={price} nodes={planMeta} />
+        <PlanMeta
+          detailsLink={detailsLink}
+          detailsLabel={detailsLabel}
+          href={href}
+          buttonLabel={buttonLabel}
+          price={price}
+          nodes={planMeta}
+        />
         {children ? children : null}
       </Content>
     </Card>
