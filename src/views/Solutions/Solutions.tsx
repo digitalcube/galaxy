@@ -56,7 +56,7 @@ const Showcase: FC<Showcase> = ({
           img={img}
           sx={{
             mt: 2,
-            width: ['50%', null, null, '25%'],
+            width: ['50%', null, null, 'auto'],
           }}
         />
         <Text>{title}</Text>

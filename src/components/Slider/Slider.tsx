@@ -115,8 +115,7 @@ const StyledSwiper = styled(Swiper)`
     height: 100%;
     position: relative;
     transition-property: transform;
-    display: flex;
-    align-self: center;
+    display: block;
   }
   .swiper-slide-invisible-blank {
     visibility: hidden;

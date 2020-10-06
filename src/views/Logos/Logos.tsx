@@ -41,6 +41,7 @@ export const Logos: FC<Logos> = ({ title, nodes }: Logos) => {
         </Content>
       </Container>
       <Slider
+        slidesPerView={5}
         sx={{
           position: 'relative',
           '::before,::after': {
