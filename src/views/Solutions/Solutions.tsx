@@ -46,17 +46,13 @@ const Showcase: FC<Showcase> = ({
     <Card
       variant="primary"
       sx={{
-        bg: 'purple.p600',
-        color: 'white',
         pt: 2,
       }}
       footer={
         <Content align="center">
           <Text>{title}</Text>
-          <Link kind="white" href={href}>
-            <Heading as="p" size="1">
-              {buttonLabel}
-            </Heading>
+          <Link kind="primary" href={href}>
+            {buttonLabel}
           </Link>
         </Content>
       }
@@ -83,20 +79,41 @@ const Solution: FC<Solution> = ({
   return (
     <Card
       variant="primary"
+      sx={{
+        bg: 'purple.p600',
+      }}
       footer={
-        <Content>
-          <Heading as="p" size="4">
-            {subtitle}
-          </Heading>
-          <Link kind="primary" href={href}>
-            {buttonLabel}
-          </Link>
-        </Content>
+        <Link kind="white" href={href} sx={{ mt: 'auto' }}>
+          {buttonLabel}
+        </Link>
       }
     >
-      <Heading as="h2" size="5">
-        {title}
-      </Heading>
+      <Content
+        sx={{
+          color: 'white',
+        }}
+      >
+        <Heading
+          as="h2"
+          size="5"
+          sx={{
+            color: 'white',
+            display: 'flex',
+            flexGrow: 1,
+          }}
+        >
+          {title}
+        </Heading>
+        <Heading
+          as="p"
+          size="4"
+          sx={{
+            color: 'white',
+          }}
+        >
+          {subtitle}
+        </Heading>
+      </Content>
     </Card>
   );
 };
@@ -120,10 +137,10 @@ export const Solutions: FC<Solutions> = ({ nodes }: Solutions) => {
     return (
       <TabPanel>
         <Grid columns={[1, null, null, null, 2]}>
-          <Solution {...solution} />
           <ThemeProvider theme={{ colorMode: `dark` }}>
-            <Showcase {...showcase} />
+            <Solution {...solution} />
           </ThemeProvider>
+          <Showcase {...showcase} />
         </Grid>
       </TabPanel>
     );
