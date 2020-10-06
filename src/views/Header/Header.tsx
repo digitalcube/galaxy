@@ -8,12 +8,13 @@ import { MobileNav } from '../MobileNav';
 
 export type Header = {
   brand?: ReactNode;
+  href?: String;
   nav?: any;
   length?: number;
   sx?: object;
 };
 
-export const Header: FC<Header> = ({ brand, nav, sx }: Header) => {
+export const Header: FC<Header> = ({ brand, href, nav, sx }: Header) => {
   return (
     <Container
       sx={{
@@ -31,7 +32,7 @@ export const Header: FC<Header> = ({ brand, nav, sx }: Header) => {
         }}
       >
         <Flex>
-          <Link href="/">{brand}</Link>
+          <Link href={`${href}`}>{brand}</Link>
           <Flex
             sx={{
               flexDirection: 'column',
@@ -71,6 +72,7 @@ export const Header: FC<Header> = ({ brand, nav, sx }: Header) => {
 
 Header.defaultProps = {
   brand: <Brand asset="shifter-mark" size="45" />,
+  href: `/`,
   nav: [
     [
       {

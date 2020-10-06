@@ -10,5 +10,5 @@ export default {
 };
 
 export const Default = () => {
-  return <Header />;
+  return <Header href="/ja/" />;
 };
