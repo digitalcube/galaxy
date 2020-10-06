@@ -46,16 +46,10 @@ const Showcase: FC<Showcase> = ({
     <Card
       variant="primary"
       sx={{
-        pt: 2,
+        justifyContent: 'center',
+        flexDirection: 'column',
+        display: 'flex',
       }}
-      footer={
-        <Content align="center">
-          <Text>{title}</Text>
-          <Link kind="primary" href={href}>
-            {buttonLabel}
-          </Link>
-        </Content>
-      }
     >
       <Content align="center">
         <Image
@@ -65,6 +59,7 @@ const Showcase: FC<Showcase> = ({
             width: ['50%', null, null, '25%'],
           }}
         />
+        <Text>{title}</Text>
       </Content>
     </Card>
   );
@@ -192,7 +187,7 @@ Solutions.defaultProps = {
         title: `Eiusmod laborum`,
         buttonLabel: `Culpa amet`,
         href: `#!`,
-        img: `logo-howtospeakmachine.webp`,
+        img: `logo-vu.png`,
       },
     },
     {
