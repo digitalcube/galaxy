@@ -9,6 +9,14 @@ export default {
   excludeStories: /.*Data$/,
 };
 
-export const Overview = () => {
+export const Default = () => {
   return <Animation />;
+};
+
+export const Dashboard = () => {
+  return <Animation animation="dashboard" />;
+};
+
+export const SingleClick = () => {
+  return <Animation animation="singleClick" />;
 };
