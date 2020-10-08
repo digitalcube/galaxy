@@ -1,4 +1,4 @@
-export const singleClick= {
+export const singleClick = {
   v: '5.5.10',
   fr: 29.9700012207031,
   ip: 0,
@@ -47,13 +47,7 @@ export const singleClick= {
                 100
               ]
             }
-          ],
-          ix: 11
-        },
-        r: {
-          a: 0,
-          k: 0,
-          ix: 10
+          ]
         },
         p: {
           a: 1,
@@ -92,8 +86,7 @@ export const singleClick= {
                 0
               ]
             }
-          ],
-          ix: 2
+          ]
         },
         a: {
           a: 0,
@@ -101,17 +94,7 @@ export const singleClick= {
             379,
             247,
             0
-          ],
-          ix: 1
-        },
-        s: {
-          a: 0,
-          k: [
-            100,
-            100,
-            100
-          ],
-          ix: 6
+          ]
         }
       },
       ao: 0,
@@ -122,7 +105,6 @@ export const singleClick= {
             {
               ind: 0,
               ty: 'sh',
-              ix: 1,
               ks: {
                 a: 0,
                 k: {
@@ -169,11 +151,9 @@ export const singleClick= {
                     ]
                   ],
                   c: true
-                },
-                ix: 2
+                }
               },
               nm: 'Path 1',
-              mn: 'ADBE Vector Shape - Group',
               hd: false
             },
             {
@@ -185,18 +165,15 @@ export const singleClick= {
                   0.011764705882,
                   0.345098039216,
                   1
-                ],
-                ix: 4
+                ]
               },
               o: {
                 a: 0,
-                k: 100,
-                ix: 5
+                k: 100
               },
               r: 1,
               bm: 0,
               nm: 'Fill 1',
-              mn: 'ADBE Vector Graphic - Fill',
               hd: false
             },
             {
@@ -206,54 +183,43 @@ export const singleClick= {
                 k: [
                   0,
                   0
-                ],
-                ix: 2
+                ]
               },
               a: {
                 a: 0,
                 k: [
                   0,
                   0
-                ],
-                ix: 1
+                ]
               },
               s: {
                 a: 0,
                 k: [
                   100,
                   100
-                ],
-                ix: 3
+                ]
               },
               r: {
                 a: 0,
-                k: 0,
-                ix: 6
+                k: 0
               },
               o: {
                 a: 0,
-                k: 100,
-                ix: 7
+                k: 100
               },
               sk: {
                 a: 0,
-                k: 0,
-                ix: 4
+                k: 0
               },
               sa: {
                 a: 0,
-                k: 0,
-                ix: 5
+                k: 0
               },
               nm: 'Transform'
             }
           ],
           nm: 'Shape 1',
-          np: 3,
-          cix: 2,
           bm: 0,
-          ix: 1,
-          mn: 'ADBE Vector Group',
           hd: false
         }
       ],
@@ -270,24 +236,13 @@ export const singleClick= {
       parent: 1,
       sr: 1,
       ks: {
-        o: {
-          a: 0,
-          k: 100,
-          ix: 11
-        },
-        r: {
-          a: 0,
-          k: 0,
-          ix: 10
-        },
         p: {
           a: 0,
           k: [
             -33,
             99.63,
             0
-          ],
-          ix: 2
+          ]
         },
         a: {
           a: 0,
@@ -295,8 +250,7 @@ export const singleClick= {
             -904,
             -395,
             0
-          ],
-          ix: 1
+          ]
         },
         s: {
           a: 0,
@@ -304,8 +258,7 @@ export const singleClick= {
             80,
             100,
             100
-          ],
-          ix: 6
+          ]
         }
       },
       ao: 0,
@@ -321,24 +274,20 @@ export const singleClick= {
                 k: [
                   54.727,
                   173.18
-                ],
-                ix: 2
+                ]
               },
               p: {
                 a: 0,
                 k: [
                   0,
                   0
-                ],
-                ix: 3
+                ]
               },
               r: {
                 a: 0,
-                k: 0,
-                ix: 4
+                k: 0
               },
               nm: 'Rectangle Path 1',
-              mn: 'ADBE Vector Shape - Rect',
               hd: false
             },
             {
@@ -374,8 +323,7 @@ export const singleClick= {
                       70
                     ]
                   }
-                ],
-                ix: 10
+                ]
               },
               r: 1,
               bm: 0,
@@ -402,8 +350,7 @@ export const singleClick= {
                     0.5,
                     1,
                     0
-                  ],
-                  ix: 9
+                  ]
                 }
               },
               s: {
@@ -411,8 +358,7 @@ export const singleClick= {
                 k: [
                   3.477,
                   -87.994
-                ],
-                ix: 5
+                ]
               },
               e: {
                 a: 1,
@@ -447,12 +393,10 @@ export const singleClick= {
                       -84.65
                     ]
                   }
-                ],
-                ix: 6
+                ]
               },
               t: 1,
               nm: 'Gradient Fill 1',
-              mn: 'ADBE Vector Graphic - G-Fill',
               hd: false
             },
             {
@@ -462,54 +406,43 @@ export const singleClick= {
                 k: [
                   -392.637,
                   -123.812
-                ],
-                ix: 2
+                ]
               },
               a: {
                 a: 0,
                 k: [
                   0,
                   0
-                ],
-                ix: 1
+                ]
               },
               s: {
                 a: 0,
                 k: [
                   100,
                   152.034
-                ],
-                ix: 3
+                ]
               },
               r: {
                 a: 0,
-                k: 0,
-                ix: 6
+                k: 0
               },
               o: {
                 a: 0,
-                k: 100,
-                ix: 7
+                k: 100
               },
               sk: {
                 a: 0,
-                k: 0,
-                ix: 4
+                k: 0
               },
               sa: {
                 a: 0,
-                k: 0,
-                ix: 5
+                k: 0
               },
               nm: 'Transform'
             }
           ],
           nm: 'Rectangle 1',
-          np: 3,
-          cix: 2,
           bm: 0,
-          ix: 1,
-          mn: 'ADBE Vector Group',
           hd: false
         }
       ],
@@ -556,13 +489,7 @@ export const singleClick= {
                 100
               ]
             }
-          ],
-          ix: 11
-        },
-        r: {
-          a: 0,
-          k: 0,
-          ix: 10
+          ]
         },
         p: {
           a: 1,
@@ -601,8 +528,7 @@ export const singleClick= {
                 0
               ]
             }
-          ],
-          ix: 2
+          ]
         },
         a: {
           a: 0,
@@ -610,8 +536,7 @@ export const singleClick= {
             -396,
             -347,
             0
-          ],
-          ix: 1
+          ]
         },
         s: {
           a: 0,
@@ -619,8 +544,7 @@ export const singleClick= {
             96.25,
             97.222,
             100
-          ],
-          ix: 6
+          ]
         }
       },
       ao: 0,
@@ -631,7 +555,6 @@ export const singleClick= {
             {
               ind: 0,
               ty: 'sh',
-              ix: 1,
               ks: {
                 a: 0,
                 k: {
@@ -678,11 +601,9 @@ export const singleClick= {
                     ]
                   ],
                   c: true
-                },
-                ix: 2
+                }
               },
               nm: 'Path 1',
-              mn: 'ADBE Vector Shape - Group',
               hd: false
             },
             {
@@ -694,18 +615,15 @@ export const singleClick= {
                   0.011764705882,
                   0.345098039216,
                   1
-                ],
-                ix: 4
+                ]
               },
               o: {
                 a: 0,
-                k: 100,
-                ix: 5
+                k: 100
               },
               r: 1,
               bm: 0,
               nm: 'Fill 1',
-              mn: 'ADBE Vector Graphic - Fill',
               hd: false
             },
             {
@@ -715,54 +633,43 @@ export const singleClick= {
                 k: [
                   0,
                   0
-                ],
-                ix: 2
+                ]
               },
               a: {
                 a: 0,
                 k: [
                   0,
                   0
-                ],
-                ix: 1
+                ]
               },
               s: {
                 a: 0,
                 k: [
                   100,
                   100
-                ],
-                ix: 3
+                ]
               },
               r: {
                 a: 0,
-                k: 0,
-                ix: 6
+                k: 0
               },
               o: {
                 a: 0,
-                k: 100,
-                ix: 7
+                k: 100
               },
               sk: {
                 a: 0,
-                k: 0,
-                ix: 4
+                k: 0
               },
               sa: {
                 a: 0,
-                k: 0,
-                ix: 5
+                k: 0
               },
               nm: 'Transform'
             }
           ],
           nm: 'Shape 1',
-          np: 3,
-          cix: 2,
           bm: 0,
-          ix: 1,
-          mn: 'ADBE Vector Group',
           hd: false
         }
       ],
@@ -809,13 +716,7 @@ export const singleClick= {
                 1
               ]
             }
-          ],
-          ix: 11
-        },
-        r: {
-          a: 0,
-          k: 0,
-          ix: 10
+          ]
         },
         p: {
           a: 1,
@@ -932,8 +833,7 @@ export const singleClick= {
                 0
               ]
             }
-          ],
-          ix: 2
+          ]
         },
         a: {
           a: 0,
@@ -941,8 +841,7 @@ export const singleClick= {
             470,
             509,
             0
-          ],
-          ix: 1
+          ]
         },
         s: {
           a: 0,
@@ -950,8 +849,7 @@ export const singleClick= {
             15.539,
             15.539,
             100
-          ],
-          ix: 6
+          ]
         }
       },
       ao: 0,
@@ -962,7 +860,6 @@ export const singleClick= {
             {
               ind: 0,
               ty: 'sh',
-              ix: 1,
               ks: {
                 a: 0,
                 k: {
@@ -1261,11 +1158,9 @@ export const singleClick= {
                     ]
                   ],
                   c: true
-                },
-                ix: 2
+                }
               },
               nm: 'Path 1',
-              mn: 'ADBE Vector Shape - Group',
               hd: false
             },
             {
@@ -1277,18 +1172,15 @@ export const singleClick= {
                   0.113999998803,
                   0.224000010771,
                   1
-                ],
-                ix: 4
+                ]
               },
               o: {
                 a: 0,
-                k: 100,
-                ix: 5
+                k: 100
               },
               r: 1,
               bm: 0,
               nm: 'Fill 1',
-              mn: 'ADBE Vector Graphic - Fill',
               hd: false
             },
             {
@@ -1298,54 +1190,43 @@ export const singleClick= {
                 k: [
                   237.472,
                   622.96
-                ],
-                ix: 2
+                ]
               },
               a: {
                 a: 0,
                 k: [
                   0,
                   0
-                ],
-                ix: 1
+                ]
               },
               s: {
                 a: 0,
                 k: [
                   100,
                   100
-                ],
-                ix: 3
+                ]
               },
               r: {
                 a: 0,
-                k: 0,
-                ix: 6
+                k: 0
               },
               o: {
                 a: 0,
-                k: 100,
-                ix: 7
+                k: 100
               },
               sk: {
                 a: 0,
-                k: 0,
-                ix: 4
+                k: 0
               },
               sa: {
                 a: 0,
-                k: 0,
-                ix: 5
+                k: 0
               },
               nm: 'Transform'
             }
           ],
           nm: 'Group 1',
-          np: 2,
-          cix: 2,
           bm: 0,
-          ix: 1,
-          mn: 'ADBE Vector Group',
           hd: false
         },
         {
@@ -1354,7 +1235,6 @@ export const singleClick= {
             {
               ind: 0,
               ty: 'sh',
-              ix: 1,
               ks: {
                 a: 0,
                 k: {
@@ -1509,11 +1389,9 @@ export const singleClick= {
                     ]
                   ],
                   c: true
-                },
-                ix: 2
+                }
               },
               nm: 'Path 1',
-              mn: 'ADBE Vector Shape - Group',
               hd: false
             },
             {
@@ -1525,18 +1403,15 @@ export const singleClick= {
                   0.113999998803,
                   0.224000010771,
                   1
-                ],
-                ix: 4
+                ]
               },
               o: {
                 a: 0,
-                k: 100,
-                ix: 5
+                k: 100
               },
               r: 1,
               bm: 0,
               nm: 'Fill 1',
-              mn: 'ADBE Vector Graphic - Fill',
               hd: false
             },
             {
@@ -1546,54 +1421,43 @@ export const singleClick= {
                 k: [
                   373.57,
                   544.913
-                ],
-                ix: 2
+                ]
               },
               a: {
                 a: 0,
                 k: [
                   0,
                   0
-                ],
-                ix: 1
+                ]
               },
               s: {
                 a: 0,
                 k: [
                   100,
                   100
-                ],
-                ix: 3
+                ]
               },
               r: {
                 a: 0,
-                k: 0,
-                ix: 6
+                k: 0
               },
               o: {
                 a: 0,
-                k: 100,
-                ix: 7
+                k: 100
               },
               sk: {
                 a: 0,
-                k: 0,
-                ix: 4
+                k: 0
               },
               sa: {
                 a: 0,
-                k: 0,
-                ix: 5
+                k: 0
               },
               nm: 'Transform'
             }
           ],
           nm: 'Group 2',
-          np: 2,
-          cix: 2,
           bm: 0,
-          ix: 2,
-          mn: 'ADBE Vector Group',
           hd: false
         },
         {
@@ -1602,7 +1466,6 @@ export const singleClick= {
             {
               ind: 0,
               ty: 'sh',
-              ix: 1,
               ks: {
                 a: 0,
                 k: {
@@ -1757,11 +1620,9 @@ export const singleClick= {
                     ]
                   ],
                   c: true
-                },
-                ix: 2
+                }
               },
               nm: 'Path 1',
-              mn: 'ADBE Vector Shape - Group',
               hd: false
             },
             {
@@ -1773,18 +1634,15 @@ export const singleClick= {
                   0.113999998803,
                   0.224000010771,
                   1
-                ],
-                ix: 4
+                ]
               },
               o: {
                 a: 0,
-                k: 100,
-                ix: 5
+                k: 100
               },
               r: 1,
               bm: 0,
               nm: 'Fill 1',
-              mn: 'ADBE Vector Graphic - Fill',
               hd: false
             },
             {
@@ -1794,54 +1652,43 @@ export const singleClick= {
                 k: [
                   295.97,
                   544.913
-                ],
-                ix: 2
+                ]
               },
               a: {
                 a: 0,
                 k: [
                   0,
                   0
-                ],
-                ix: 1
+                ]
               },
               s: {
                 a: 0,
                 k: [
                   100,
                   100
-                ],
-                ix: 3
+                ]
               },
               r: {
                 a: 0,
-                k: 0,
-                ix: 6
+                k: 0
               },
               o: {
                 a: 0,
-                k: 100,
-                ix: 7
+                k: 100
               },
               sk: {
                 a: 0,
-                k: 0,
-                ix: 4
+                k: 0
               },
               sa: {
                 a: 0,
-                k: 0,
-                ix: 5
+                k: 0
               },
               nm: 'Transform'
             }
           ],
           nm: 'Group 3',
-          np: 2,
-          cix: 2,
           bm: 0,
-          ix: 3,
-          mn: 'ADBE Vector Group',
           hd: false
         },
         {
@@ -1850,7 +1697,6 @@ export const singleClick= {
             {
               ind: 0,
               ty: 'sh',
-              ix: 1,
               ks: {
                 a: 0,
                 k: {
@@ -1909,11 +1755,9 @@ export const singleClick= {
                     ]
                   ],
                   c: true
-                },
-                ix: 2
+                }
               },
               nm: 'Path 1',
-              mn: 'ADBE Vector Shape - Group',
               hd: false
             },
             {
@@ -1925,18 +1769,15 @@ export const singleClick= {
                   0.113999998803,
                   0.224000010771,
                   1
-                ],
-                ix: 4
+                ]
               },
               o: {
                 a: 0,
-                k: 100,
-                ix: 5
+                k: 100
               },
               r: 1,
               bm: 0,
               nm: 'Fill 1',
-              mn: 'ADBE Vector Graphic - Fill',
               hd: false
             },
             {
@@ -1946,54 +1787,43 @@ export const singleClick= {
                 k: [
                   412.369,
                   681.406
-                ],
-                ix: 2
+                ]
               },
               a: {
                 a: 0,
                 k: [
                   0,
                   0
-                ],
-                ix: 1
+                ]
               },
               s: {
                 a: 0,
                 k: [
                   100,
                   100
-                ],
-                ix: 3
+                ]
               },
               r: {
                 a: 0,
-                k: 0,
-                ix: 6
+                k: 0
               },
               o: {
                 a: 0,
-                k: 100,
-                ix: 7
+                k: 100
               },
               sk: {
                 a: 0,
-                k: 0,
-                ix: 4
+                k: 0
               },
               sa: {
                 a: 0,
-                k: 0,
-                ix: 5
+                k: 0
               },
               nm: 'Transform'
             }
           ],
           nm: 'Group 4',
-          np: 2,
-          cix: 2,
           bm: 0,
-          ix: 4,
-          mn: 'ADBE Vector Group',
           hd: false
         },
         {
@@ -2002,7 +1832,6 @@ export const singleClick= {
             {
               ind: 0,
               ty: 'sh',
-              ix: 1,
               ks: {
                 a: 0,
                 k: {
@@ -2133,11 +1962,9 @@ export const singleClick= {
                     ]
                   ],
                   c: true
-                },
-                ix: 2
+                }
               },
               nm: 'Path 1',
-              mn: 'ADBE Vector Shape - Group',
               hd: false
             },
             {
@@ -2149,18 +1976,15 @@ export const singleClick= {
                   0.113999998803,
                   0.224000010771,
                   1
-                ],
-                ix: 4
+                ]
               },
               o: {
                 a: 0,
-                k: 100,
-                ix: 5
+                k: 100
               },
               r: 1,
               bm: 0,
               nm: 'Fill 1',
-              mn: 'ADBE Vector Graphic - Fill',
               hd: false
             },
             {
@@ -2170,54 +1994,43 @@ export const singleClick= {
                 k: [
                   43.815,
                   447.346
-                ],
-                ix: 2
+                ]
               },
               a: {
                 a: 0,
                 k: [
                   0,
                   0
-                ],
-                ix: 1
+                ]
               },
               s: {
                 a: 0,
                 k: [
                   100,
                   100
-                ],
-                ix: 3
+                ]
               },
               r: {
                 a: 0,
-                k: 0,
-                ix: 6
+                k: 0
               },
               o: {
                 a: 0,
-                k: 100,
-                ix: 7
+                k: 100
               },
               sk: {
                 a: 0,
-                k: 0,
-                ix: 4
+                k: 0
               },
               sa: {
                 a: 0,
-                k: 0,
-                ix: 5
+                k: 0
               },
               nm: 'Transform'
             }
           ],
           nm: 'Group 5',
-          np: 2,
-          cix: 2,
           bm: 0,
-          ix: 5,
-          mn: 'ADBE Vector Group',
           hd: false
         },
         {
@@ -2226,7 +2039,6 @@ export const singleClick= {
             {
               ind: 0,
               ty: 'sh',
-              ix: 1,
               ks: {
                 a: 0,
                 k: {
@@ -2405,11 +2217,9 @@ export const singleClick= {
                     ]
                   ],
                   c: true
-                },
-                ix: 2
+                }
               },
               nm: 'Path 1',
-              mn: 'ADBE Vector Shape - Group',
               hd: false
             },
             {
@@ -2421,18 +2231,15 @@ export const singleClick= {
                   0.113999998803,
                   0.224000010771,
                   1
-                ],
-                ix: 4
+                ]
               },
               o: {
                 a: 0,
-                k: 100,
-                ix: 5
+                k: 100
               },
               r: 1,
               bm: 0,
               nm: 'Fill 1',
-              mn: 'ADBE Vector Graphic - Fill',
               hd: false
             },
             {
@@ -2442,54 +2249,43 @@ export const singleClick= {
                 k: [
                   528.77,
                   427.528
-                ],
-                ix: 2
+                ]
               },
               a: {
                 a: 0,
                 k: [
                   0,
                   0
-                ],
-                ix: 1
+                ]
               },
               s: {
                 a: 0,
                 k: [
                   100,
                   100
-                ],
-                ix: 3
+                ]
               },
               r: {
                 a: 0,
-                k: 0,
-                ix: 6
+                k: 0
               },
               o: {
                 a: 0,
-                k: 100,
-                ix: 7
+                k: 100
               },
               sk: {
                 a: 0,
-                k: 0,
-                ix: 4
+                k: 0
               },
               sa: {
                 a: 0,
-                k: 0,
-                ix: 5
+                k: 0
               },
               nm: 'Transform'
             }
           ],
           nm: 'Group 6',
-          np: 2,
-          cix: 2,
           bm: 0,
-          ix: 6,
-          mn: 'ADBE Vector Group',
           hd: false
         },
         {
@@ -2498,7 +2294,6 @@ export const singleClick= {
             {
               ind: 0,
               ty: 'sh',
-              ix: 1,
               ks: {
                 a: 0,
                 k: {
@@ -2917,11 +2712,9 @@ export const singleClick= {
                     ]
                   ],
                   c: true
-                },
-                ix: 2
+                }
               },
               nm: 'Path 1',
-              mn: 'ADBE Vector Shape - Group',
               hd: false
             },
             {
@@ -2933,18 +2726,15 @@ export const singleClick= {
                   0.113999998803,
                   0.224000010771,
                   1
-                ],
-                ix: 4
+                ]
               },
               o: {
                 a: 0,
-                k: 100,
-                ix: 5
+                k: 100
               },
               r: 1,
               bm: 0,
               nm: 'Fill 1',
-              mn: 'ADBE Vector Graphic - Fill',
               hd: false
             },
             {
@@ -2954,54 +2744,43 @@ export const singleClick= {
                 k: [
                   489.97,
                   603.457
-                ],
-                ix: 2
+                ]
               },
               a: {
                 a: 0,
                 k: [
                   0,
                   0
-                ],
-                ix: 1
+                ]
               },
               s: {
                 a: 0,
                 k: [
                   100,
                   100
-                ],
-                ix: 3
+                ]
               },
               r: {
                 a: 0,
-                k: 0,
-                ix: 6
+                k: 0
               },
               o: {
                 a: 0,
-                k: 100,
-                ix: 7
+                k: 100
               },
               sk: {
                 a: 0,
-                k: 0,
-                ix: 4
+                k: 0
               },
               sa: {
                 a: 0,
-                k: 0,
-                ix: 5
+                k: 0
               },
               nm: 'Transform'
             }
           ],
           nm: 'Group 7',
-          np: 2,
-          cix: 2,
           bm: 0,
-          ix: 7,
-          mn: 'ADBE Vector Group',
           hd: false
         },
         {
@@ -3010,7 +2789,6 @@ export const singleClick= {
             {
               ind: 0,
               ty: 'sh',
-              ix: 1,
               ks: {
                 a: 0,
                 k: {
@@ -3525,11 +3303,9 @@ export const singleClick= {
                     ]
                   ],
                   c: true
-                },
-                ix: 2
+                }
               },
               nm: 'Path 1',
-              mn: 'ADBE Vector Shape - Group',
               hd: false
             },
             {
@@ -3541,18 +3317,15 @@ export const singleClick= {
                   0.113999998803,
                   0.224000010771,
                   1
-                ],
-                ix: 4
+                ]
               },
               o: {
                 a: 0,
-                k: 100,
-                ix: 5
+                k: 100
               },
               r: 1,
               bm: 0,
               nm: 'Fill 1',
-              mn: 'ADBE Vector Graphic - Fill',
               hd: false
             },
             {
@@ -3562,54 +3335,43 @@ export const singleClick= {
                 k: [
                   257.232,
                   290.783
-                ],
-                ix: 2
+                ]
               },
               a: {
                 a: 0,
                 k: [
                   0,
                   0
-                ],
-                ix: 1
+                ]
               },
               s: {
                 a: 0,
                 k: [
                   100,
                   100
-                ],
-                ix: 3
+                ]
               },
               r: {
                 a: 0,
-                k: 0,
-                ix: 6
+                k: 0
               },
               o: {
                 a: 0,
-                k: 100,
-                ix: 7
+                k: 100
               },
               sk: {
                 a: 0,
-                k: 0,
-                ix: 4
+                k: 0
               },
               sa: {
                 a: 0,
-                k: 0,
-                ix: 5
+                k: 0
               },
               nm: 'Transform'
             }
           ],
           nm: 'Group 8',
-          np: 2,
-          cix: 2,
           bm: 0,
-          ix: 8,
-          mn: 'ADBE Vector Group',
           hd: false
         },
         {
@@ -3618,7 +3380,6 @@ export const singleClick= {
             {
               ind: 0,
               ty: 'sh',
-              ix: 1,
               ks: {
                 a: 0,
                 k: {
@@ -3989,11 +3750,9 @@ export const singleClick= {
                     ]
                   ],
                   c: true
-                },
-                ix: 2
+                }
               },
               nm: 'Path 1',
-              mn: 'ADBE Vector Shape - Group',
               hd: false
             },
             {
@@ -4005,18 +3764,15 @@ export const singleClick= {
                   0.917999985639,
                   0.917999985639,
                   1
-                ],
-                ix: 4
+                ]
               },
               o: {
                 a: 0,
-                k: 100,
-                ix: 5
+                k: 100
               },
               r: 1,
               bm: 0,
               nm: 'Fill 1',
-              mn: 'ADBE Vector Graphic - Fill',
               hd: false
             },
             {
@@ -4026,54 +3782,43 @@ export const singleClick= {
                 k: [
                   296.008,
                   432.572
-                ],
-                ix: 2
+                ]
               },
               a: {
                 a: 0,
                 k: [
                   0,
                   0
-                ],
-                ix: 1
+                ]
               },
               s: {
                 a: 0,
                 k: [
                   100,
                   100
-                ],
-                ix: 3
+                ]
               },
               r: {
                 a: 0,
-                k: 0,
-                ix: 6
+                k: 0
               },
               o: {
                 a: 0,
-                k: 100,
-                ix: 7
+                k: 100
               },
               sk: {
                 a: 0,
-                k: 0,
-                ix: 4
+                k: 0
               },
               sa: {
                 a: 0,
-                k: 0,
-                ix: 5
+                k: 0
               },
               nm: 'Transform'
             }
           ],
           nm: 'Group 9',
-          np: 2,
-          cix: 2,
           bm: 0,
-          ix: 9,
-          mn: 'ADBE Vector Group',
           hd: false
         }
       ],
@@ -4164,8 +3909,7 @@ export const singleClick= {
                 1
               ]
             }
-          ],
-          ix: 11
+          ]
         },
         r: {
           a: 1,
@@ -4198,8 +3942,7 @@ export const singleClick= {
                 -9
               ]
             }
-          ],
-          ix: 10
+          ]
         },
         p: {
           a: 1,
@@ -4316,8 +4059,7 @@ export const singleClick= {
                 0
               ]
             }
-          ],
-          ix: 2
+          ]
         },
         a: {
           a: 0,
@@ -4325,17 +4067,7 @@ export const singleClick= {
             67,
             67,
             0
-          ],
-          ix: 1
-        },
-        s: {
-          a: 0,
-          k: [
-            100,
-            100,
-            100
-          ],
-          ix: 6
+          ]
         }
       },
       ao: 0,
@@ -4346,7 +4078,6 @@ export const singleClick= {
             {
               ind: 0,
               ty: 'sh',
-              ix: 1,
               ks: {
                 a: 0,
                 k: {
@@ -4501,11 +4232,9 @@ export const singleClick= {
                     ]
                   ],
                   c: true
-                },
-                ix: 2
+                }
               },
               nm: 'Path 1',
-              mn: 'ADBE Vector Shape - Group',
               hd: false
             },
             {
@@ -4517,18 +4246,15 @@ export const singleClick= {
                   0.160784313725,
                   0.41568627451,
                   1
-                ],
-                ix: 4
+                ]
               },
               o: {
                 a: 0,
-                k: 100,
-                ix: 5
+                k: 100
               },
               r: 1,
               bm: 0,
               nm: 'Fill 1',
-              mn: 'ADBE Vector Graphic - Fill',
               hd: false
             },
             {
@@ -4538,54 +4264,43 @@ export const singleClick= {
                 k: [
                   66.75,
                   66.75
-                ],
-                ix: 2
+                ]
               },
               a: {
                 a: 0,
                 k: [
                   0,
                   0
-                ],
-                ix: 1
+                ]
               },
               s: {
                 a: 0,
                 k: [
                   100,
                   100
-                ],
-                ix: 3
+                ]
               },
               r: {
                 a: 0,
-                k: 0,
-                ix: 6
+                k: 0
               },
               o: {
                 a: 0,
-                k: 100,
-                ix: 7
+                k: 100
               },
               sk: {
                 a: 0,
-                k: 0,
-                ix: 4
+                k: 0
               },
               sa: {
                 a: 0,
-                k: 0,
-                ix: 5
+                k: 0
               },
               nm: 'Transform'
             }
           ],
           nm: 'Group 1',
-          np: 2,
-          cix: 2,
           bm: 0,
-          ix: 1,
-          mn: 'ADBE Vector Group',
           hd: false
         }
       ],
@@ -4676,13 +4391,7 @@ export const singleClick= {
                 1
               ]
             }
-          ],
-          ix: 11
-        },
-        r: {
-          a: 0,
-          k: 0,
-          ix: 10
+          ]
         },
         p: {
           a: 1,
@@ -4799,8 +4508,7 @@ export const singleClick= {
                 0
               ]
             }
-          ],
-          ix: 2
+          ]
         },
         a: {
           a: 0,
@@ -4808,17 +4516,7 @@ export const singleClick= {
             107.5,
             107.5,
             0
-          ],
-          ix: 1
-        },
-        s: {
-          a: 0,
-          k: [
-            100,
-            100,
-            100
-          ],
-          ix: 6
+          ]
         }
       },
       ao: 0,
@@ -4829,7 +4527,6 @@ export const singleClick= {
             {
               ind: 0,
               ty: 'sh',
-              ix: 1,
               ks: {
                 a: 0,
                 k: {
@@ -4888,11 +4585,9 @@ export const singleClick= {
                     ]
                   ],
                   c: true
-                },
-                ix: 2
+                }
               },
               nm: 'Path 1',
-              mn: 'ADBE Vector Shape - Group',
               hd: false
             },
             {
@@ -4904,18 +4599,15 @@ export const singleClick= {
                   0.756862745098,
                   0.835294117647,
                   1
-                ],
-                ix: 4
+                ]
               },
               o: {
                 a: 0,
-                k: 100,
-                ix: 5
+                k: 100
               },
               r: 1,
               bm: 0,
               nm: 'Fill 1',
-              mn: 'ADBE Vector Graphic - Fill',
               hd: false
             },
             {
@@ -4925,54 +4617,43 @@ export const singleClick= {
                 k: [
                   107.25,
                   107.25
-                ],
-                ix: 2
+                ]
               },
               a: {
                 a: 0,
                 k: [
                   0,
                   0
-                ],
-                ix: 1
+                ]
               },
               s: {
                 a: 0,
                 k: [
                   100,
                   100
-                ],
-                ix: 3
+                ]
               },
               r: {
                 a: 0,
-                k: 0,
-                ix: 6
+                k: 0
               },
               o: {
                 a: 0,
-                k: 100,
-                ix: 7
+                k: 100
               },
               sk: {
                 a: 0,
-                k: 0,
-                ix: 4
+                k: 0
               },
               sa: {
                 a: 0,
-                k: 0,
-                ix: 5
+                k: 0
               },
               nm: 'Transform'
             }
           ],
           nm: 'Group 1',
-          np: 2,
-          cix: 2,
           bm: 0,
-          ix: 1,
-          mn: 'ADBE Vector Group',
           hd: false
         }
       ],
@@ -5019,13 +4700,7 @@ export const singleClick= {
                 0
               ]
             }
-          ],
-          ix: 11
-        },
-        r: {
-          a: 0,
-          k: 0,
-          ix: 10
+          ]
         },
         p: {
           a: 1,
@@ -5064,8 +4739,7 @@ export const singleClick= {
                 0
               ]
             }
-          ],
-          ix: 2
+          ]
         },
         a: {
           a: 0,
@@ -5073,17 +4747,7 @@ export const singleClick= {
             88,
             -139,
             0
-          ],
-          ix: 1
-        },
-        s: {
-          a: 0,
-          k: [
-            100,
-            100,
-            100
-          ],
-          ix: 6
+          ]
         }
       },
       ao: 0,
@@ -5094,7 +4758,6 @@ export const singleClick= {
             {
               ind: 0,
               ty: 'sh',
-              ix: 1,
               ks: {
                 a: 0,
                 k: {
@@ -5153,11 +4816,9 @@ export const singleClick= {
                     ]
                   ],
                   c: true
-                },
-                ix: 2
+                }
               },
               nm: 'Path 1',
-              mn: 'ADBE Vector Shape - Group',
               hd: false
             },
             {
@@ -5169,18 +4830,15 @@ export const singleClick= {
                   0.011764705882,
                   0.345098039216,
                   1
-                ],
-                ix: 4
+                ]
               },
               o: {
                 a: 0,
-                k: 100,
-                ix: 5
+                k: 100
               },
               r: 1,
               bm: 0,
               nm: 'Fill 1',
-              mn: 'ADBE Vector Graphic - Fill',
               hd: false
             },
             {
@@ -5190,54 +4848,43 @@ export const singleClick= {
                 k: [
                   86.805,
                   -141.195
-                ],
-                ix: 2
+                ]
               },
               a: {
                 a: 0,
                 k: [
                   0,
                   0
-                ],
-                ix: 1
+                ]
               },
               s: {
                 a: 0,
                 k: [
                   100,
                   100
-                ],
-                ix: 3
+                ]
               },
               r: {
                 a: 0,
-                k: 0,
-                ix: 6
+                k: 0
               },
               o: {
                 a: 0,
-                k: 100,
-                ix: 7
+                k: 100
               },
               sk: {
                 a: 0,
-                k: 0,
-                ix: 4
+                k: 0
               },
               sa: {
                 a: 0,
-                k: 0,
-                ix: 5
+                k: 0
               },
               nm: 'Transform'
             }
           ],
           nm: 'Ellipse 1',
-          np: 3,
-          cix: 2,
           bm: 0,
-          ix: 1,
-          mn: 'ADBE Vector Group',
           hd: false
         }
       ],
@@ -5284,8 +4931,7 @@ export const singleClick= {
                 0
               ]
             }
-          ],
-          ix: 11
+          ]
         },
         r: {
           a: 1,
@@ -5318,8 +4964,7 @@ export const singleClick= {
                 92
               ]
             }
-          ],
-          ix: 10
+          ]
         },
         p: {
           a: 1,
@@ -5358,8 +5003,7 @@ export const singleClick= {
                 0
               ]
             }
-          ],
-          ix: 2
+          ]
         },
         a: {
           a: 0,
@@ -5367,17 +5011,7 @@ export const singleClick= {
             239.764,
             -218.501,
             0
-          ],
-          ix: 1
-        },
-        s: {
-          a: 0,
-          k: [
-            100,
-            100,
-            100
-          ],
-          ix: 6
+          ]
         }
       },
       ao: 0,
@@ -5388,7 +5022,6 @@ export const singleClick= {
             {
               ind: 0,
               ty: 'sh',
-              ix: 1,
               ks: {
                 a: 0,
                 k: {
@@ -5435,11 +5068,9 @@ export const singleClick= {
                     ]
                   ],
                   c: true
-                },
-                ix: 2
+                }
               },
               nm: 'Path 1',
-              mn: 'ADBE Vector Shape - Group',
               hd: false
             },
             {
@@ -5451,18 +5082,15 @@ export const singleClick= {
                   0.011764705882,
                   0.345098039216,
                   1
-                ],
-                ix: 4
+                ]
               },
               o: {
                 a: 0,
-                k: 100,
-                ix: 5
+                k: 100
               },
               r: 1,
               bm: 0,
               nm: 'Fill 1',
-              mn: 'ADBE Vector Graphic - Fill',
               hd: false
             },
             {
@@ -5472,54 +5100,43 @@ export const singleClick= {
                 k: [
                   101.799,
                   -6.09
-                ],
-                ix: 2
+                ]
               },
               a: {
                 a: 0,
                 k: [
                   0,
                   0
-                ],
-                ix: 1
+                ]
               },
               s: {
                 a: 0,
                 k: [
                   100,
                   100
-                ],
-                ix: 3
+                ]
               },
               r: {
                 a: 0,
-                k: 0,
-                ix: 6
+                k: 0
               },
               o: {
                 a: 0,
-                k: 100,
-                ix: 7
+                k: 100
               },
               sk: {
                 a: 0,
-                k: 0,
-                ix: 4
+                k: 0
               },
               sa: {
                 a: 0,
-                k: 0,
-                ix: 5
+                k: 0
               },
               nm: 'Transform'
             }
           ],
           nm: 'Shape 1',
-          np: 3,
-          cix: 2,
           bm: 0,
-          ix: 1,
-          mn: 'ADBE Vector Group',
           hd: false
         }
       ],
@@ -5566,8 +5183,7 @@ export const singleClick= {
                 0
               ]
             }
-          ],
-          ix: 11
+          ]
         },
         r: {
           a: 1,
@@ -5600,8 +5216,7 @@ export const singleClick= {
                 -49
               ]
             }
-          ],
-          ix: 10
+          ]
         },
         p: {
           a: 1,
@@ -5640,8 +5255,7 @@ export const singleClick= {
                 0
               ]
             }
-          ],
-          ix: 2
+          ]
         },
         a: {
           a: 0,
@@ -5649,17 +5263,7 @@ export const singleClick= {
             24,
             25,
             0
-          ],
-          ix: 1
-        },
-        s: {
-          a: 0,
-          k: [
-            100,
-            100,
-            100
-          ],
-          ix: 6
+          ]
         }
       },
       ao: 0,
@@ -5675,24 +5279,20 @@ export const singleClick= {
                 k: [
                   49.758,
                   49.758
-                ],
-                ix: 2
+                ]
               },
               p: {
                 a: 0,
                 k: [
                   0,
                   0
-                ],
-                ix: 3
+                ]
               },
               r: {
                 a: 0,
-                k: 0,
-                ix: 4
+                k: 0
               },
               nm: 'Rectangle Path 1',
-              mn: 'ADBE Vector Shape - Rect',
               hd: false
             },
             {
@@ -5704,18 +5304,15 @@ export const singleClick= {
                   0.011764705882,
                   0.345098039216,
                   1
-                ],
-                ix: 4
+                ]
               },
               o: {
                 a: 0,
-                k: 100,
-                ix: 5
+                k: 100
               },
               r: 1,
               bm: 0,
               nm: 'Fill 1',
-              mn: 'ADBE Vector Graphic - Fill',
               hd: false
             },
             {
@@ -5725,54 +5322,43 @@ export const singleClick= {
                 k: [
                   23.848,
                   22.379
-                ],
-                ix: 2
+                ]
               },
               a: {
                 a: 0,
                 k: [
                   0,
                   0
-                ],
-                ix: 1
+                ]
               },
               s: {
                 a: 0,
                 k: [
                   100,
                   100
-                ],
-                ix: 3
+                ]
               },
               r: {
                 a: 0,
-                k: 0,
-                ix: 6
+                k: 0
               },
               o: {
                 a: 0,
-                k: 100,
-                ix: 7
+                k: 100
               },
               sk: {
                 a: 0,
-                k: 0,
-                ix: 4
+                k: 0
               },
               sa: {
                 a: 0,
-                k: 0,
-                ix: 5
+                k: 0
               },
               nm: 'Transform'
             }
           ],
           nm: 'Rectangle 1',
-          np: 3,
-          cix: 2,
           bm: 0,
-          ix: 1,
-          mn: 'ADBE Vector Group',
           hd: false
         }
       ],
@@ -5788,24 +5374,13 @@ export const singleClick= {
       nm: 'Click-Circle 2',
       sr: 1,
       ks: {
-        o: {
-          a: 0,
-          k: 100,
-          ix: 11
-        },
-        r: {
-          a: 0,
-          k: 0,
-          ix: 10
-        },
         p: {
           a: 0,
           k: [
             475,
             417,
             0
-          ],
-          ix: 2
+          ]
         },
         a: {
           a: 0,
@@ -5813,8 +5388,7 @@ export const singleClick= {
             272.086,
             212.086,
             0
-          ],
-          ix: 1
+          ]
         },
         s: {
           a: 0,
@@ -5822,8 +5396,7 @@ export const singleClick= {
             45.696,
             45.696,
             100
-          ],
-          ix: 6
+          ]
         }
       },
       ao: 0,
@@ -5834,7 +5407,6 @@ export const singleClick= {
             {
               ind: 0,
               ty: 'sh',
-              ix: 1,
               ks: {
                 a: 0,
                 k: {
@@ -5893,11 +5465,9 @@ export const singleClick= {
                     ]
                   ],
                   c: true
-                },
-                ix: 2
+                }
               },
               nm: 'Path 1',
-              mn: 'ADBE Vector Shape - Group',
               hd: false
             },
             {
@@ -5909,13 +5479,11 @@ export const singleClick= {
                   0.160784313725,
                   0.41568627451,
                   1
-                ],
-                ix: 3
+                ]
               },
               o: {
                 a: 0,
-                k: 100,
-                ix: 4
+                k: 100
               },
               w: {
                 a: 1,
@@ -5970,15 +5538,13 @@ export const singleClick= {
                       0
                     ]
                   }
-                ],
-                ix: 5
+                ]
               },
               lc: 1,
               lj: 1,
               ml: 4,
               bm: 0,
               nm: 'Stroke 1',
-              mn: 'ADBE Vector Graphic - Stroke',
               hd: false
             },
             {
@@ -5988,16 +5554,14 @@ export const singleClick= {
                 k: [
                   246.851,
                   237.714
-                ],
-                ix: 2
+                ]
               },
               a: {
                 a: 0,
                 k: [
                   0,
                   0
-                ],
-                ix: 1
+                ]
               },
               s: {
                 a: 1,
@@ -6063,38 +5627,29 @@ export const singleClick= {
                       336.895
                     ]
                   }
-                ],
-                ix: 3
+                ]
               },
               r: {
                 a: 0,
-                k: 0,
-                ix: 6
+                k: 0
               },
               o: {
                 a: 0,
-                k: 100,
-                ix: 7
+                k: 100
               },
               sk: {
                 a: 0,
-                k: 0,
-                ix: 4
+                k: 0
               },
               sa: {
                 a: 0,
-                k: 0,
-                ix: 5
+                k: 0
               },
               nm: 'Transform'
             }
           ],
           nm: 'Ellipse 2',
-          np: 3,
-          cix: 2,
           bm: 0,
-          ix: 1,
-          mn: 'ADBE Vector Group',
           hd: false
         },
         {
@@ -6103,7 +5658,6 @@ export const singleClick= {
             {
               ind: 0,
               ty: 'sh',
-              ix: 1,
               ks: {
                 a: 0,
                 k: {
@@ -6162,11 +5716,9 @@ export const singleClick= {
                     ]
                   ],
                   c: true
-                },
-                ix: 2
+                }
               },
               nm: 'Path 1',
-              mn: 'ADBE Vector Shape - Group',
               hd: false
             },
             {
@@ -6178,13 +5730,11 @@ export const singleClick= {
                   0.160784313725,
                   0.41568627451,
                   1
-                ],
-                ix: 3
+                ]
               },
               o: {
                 a: 0,
-                k: 100,
-                ix: 4
+                k: 100
               },
               w: {
                 a: 1,
@@ -6239,15 +5789,13 @@ export const singleClick= {
                       0
                     ]
                   }
-                ],
-                ix: 5
+                ]
               },
               lc: 1,
               lj: 1,
               ml: 4,
               bm: 0,
               nm: 'Stroke 1',
-              mn: 'ADBE Vector Graphic - Stroke',
               hd: false
             },
             {
@@ -6257,16 +5805,14 @@ export const singleClick= {
                 k: [
                   246.851,
                   237.714
-                ],
-                ix: 2
+                ]
               },
               a: {
                 a: 0,
                 k: [
                   0,
                   0
-                ],
-                ix: 1
+                ]
               },
               s: {
                 a: 1,
@@ -6332,38 +5878,29 @@ export const singleClick= {
                       336.895
                     ]
                   }
-                ],
-                ix: 3
+                ]
               },
               r: {
                 a: 0,
-                k: 0,
-                ix: 6
+                k: 0
               },
               o: {
                 a: 0,
-                k: 100,
-                ix: 7
+                k: 100
               },
               sk: {
                 a: 0,
-                k: 0,
-                ix: 4
+                k: 0
               },
               sa: {
                 a: 0,
-                k: 0,
-                ix: 5
+                k: 0
               },
               nm: 'Transform'
             }
           ],
           nm: 'Ellipse 1',
-          np: 3,
-          cix: 2,
           bm: 0,
-          ix: 2,
-          mn: 'ADBE Vector Group',
           hd: false
         }
       ],
@@ -6454,13 +5991,7 @@ export const singleClick= {
                 1
               ]
             }
-          ],
-          ix: 11
-        },
-        r: {
-          a: 0,
-          k: 0,
-          ix: 10
+          ]
         },
         p: {
           a: 1,
@@ -6577,8 +6108,7 @@ export const singleClick= {
                 0
               ]
             }
-          ],
-          ix: 2
+          ]
         },
         a: {
           a: 0,
@@ -6586,17 +6116,7 @@ export const singleClick= {
             212.5,
             21,
             0
-          ],
-          ix: 1
-        },
-        s: {
-          a: 0,
-          k: [
-            100,
-            100,
-            100
-          ],
-          ix: 6
+          ]
         }
       },
       ao: 0,
@@ -6607,7 +6127,6 @@ export const singleClick= {
             {
               ind: 0,
               ty: 'sh',
-              ix: 1,
               ks: {
                 a: 0,
                 k: {
@@ -6678,17 +6197,14 @@ export const singleClick= {
                     ]
                   ],
                   c: true
-                },
-                ix: 2
+                }
               },
               nm: 'Path 1',
-              mn: 'ADBE Vector Shape - Group',
               hd: false
             },
             {
               ind: 1,
               ty: 'sh',
-              ix: 2,
               ks: {
                 a: 0,
                 k: {
@@ -6903,18 +6419,15 @@ export const singleClick= {
                     ]
                   ],
                   c: true
-                },
-                ix: 2
+                }
               },
               nm: 'Path 2',
-              mn: 'ADBE Vector Shape - Group',
               hd: false
             },
             {
               ty: 'mm',
               mm: 1,
               nm: 'Merge Paths 1',
-              mn: 'ADBE Vector Filter - Merge',
               hd: false
             },
             {
@@ -6926,18 +6439,15 @@ export const singleClick= {
                   0.160784313725,
                   0.41568627451,
                   1
-                ],
-                ix: 4
+                ]
               },
               o: {
                 a: 0,
-                k: 100,
-                ix: 5
+                k: 100
               },
               r: 1,
               bm: 0,
               nm: 'Fill 1',
-              mn: 'ADBE Vector Graphic - Fill',
               hd: false
             },
             {
@@ -6947,54 +6457,43 @@ export const singleClick= {
                 k: [
                   409.883,
                   26.352
-                ],
-                ix: 2
+                ]
               },
               a: {
                 a: 0,
                 k: [
                   0,
                   0
-                ],
-                ix: 1
+                ]
               },
               s: {
                 a: 0,
                 k: [
                   100,
                   100
-                ],
-                ix: 3
+                ]
               },
               r: {
                 a: 0,
-                k: 0,
-                ix: 6
+                k: 0
               },
               o: {
                 a: 0,
-                k: 100,
-                ix: 7
+                k: 100
               },
               sk: {
                 a: 0,
-                k: 0,
-                ix: 4
+                k: 0
               },
               sa: {
                 a: 0,
-                k: 0,
-                ix: 5
+                k: 0
               },
               nm: 'Transform'
             }
           ],
           nm: 'Group 1',
-          np: 4,
-          cix: 2,
           bm: 0,
-          ix: 1,
-          mn: 'ADBE Vector Group',
           hd: false
         },
         {
@@ -7003,7 +6502,6 @@ export const singleClick= {
             {
               ind: 0,
               ty: 'sh',
-              ix: 1,
               ks: {
                 a: 0,
                 k: {
@@ -7242,11 +6740,9 @@ export const singleClick= {
                     ]
                   ],
                   c: true
-                },
-                ix: 2
+                }
               },
               nm: 'Path 1',
-              mn: 'ADBE Vector Shape - Group',
               hd: false
             },
             {
@@ -7258,18 +6754,15 @@ export const singleClick= {
                   0.160784313725,
                   0.41568627451,
                   1
-                ],
-                ix: 4
+                ]
               },
               o: {
                 a: 0,
-                k: 100,
-                ix: 5
+                k: 100
               },
               r: 1,
               bm: 0,
               nm: 'Fill 1',
-              mn: 'ADBE Vector Graphic - Fill',
               hd: false
             },
             {
@@ -7279,54 +6772,43 @@ export const singleClick= {
                 k: [
                   383.384,
                   23.411
-                ],
-                ix: 2
+                ]
               },
               a: {
                 a: 0,
                 k: [
                   0,
                   0
-                ],
-                ix: 1
+                ]
               },
               s: {
                 a: 0,
                 k: [
                   100,
                   100
-                ],
-                ix: 3
+                ]
               },
               r: {
                 a: 0,
-                k: 0,
-                ix: 6
+                k: 0
               },
               o: {
                 a: 0,
-                k: 100,
-                ix: 7
+                k: 100
               },
               sk: {
                 a: 0,
-                k: 0,
-                ix: 4
+                k: 0
               },
               sa: {
                 a: 0,
-                k: 0,
-                ix: 5
+                k: 0
               },
               nm: 'Transform'
             }
           ],
           nm: 'Group 2',
-          np: 2,
-          cix: 2,
           bm: 0,
-          ix: 2,
-          mn: 'ADBE Vector Group',
           hd: false
         },
         {
@@ -7335,7 +6817,6 @@ export const singleClick= {
             {
               ind: 0,
               ty: 'sh',
-              ix: 1,
               ks: {
                 a: 0,
                 k: {
@@ -7394,17 +6875,14 @@ export const singleClick= {
                     ]
                   ],
                   c: true
-                },
-                ix: 2
+                }
               },
               nm: 'Path 1',
-              mn: 'ADBE Vector Shape - Group',
               hd: false
             },
             {
               ind: 1,
               ty: 'sh',
-              ix: 2,
               ks: {
                 a: 0,
                 k: {
@@ -7511,18 +6989,15 @@ export const singleClick= {
                     ]
                   ],
                   c: true
-                },
-                ix: 2
+                }
               },
               nm: 'Path 2',
-              mn: 'ADBE Vector Shape - Group',
               hd: false
             },
             {
               ty: 'mm',
               mm: 1,
               nm: 'Merge Paths 1',
-              mn: 'ADBE Vector Filter - Merge',
               hd: false
             },
             {
@@ -7534,18 +7009,15 @@ export const singleClick= {
                   0.160784313725,
                   0.41568627451,
                   1
-                ],
-                ix: 4
+                ]
               },
               o: {
                 a: 0,
-                k: 100,
-                ix: 5
+                k: 100
               },
               r: 1,
               bm: 0,
               nm: 'Fill 1',
-              mn: 'ADBE Vector Graphic - Fill',
               hd: false
             },
             {
@@ -7555,54 +7027,43 @@ export const singleClick= {
                 k: [
                   365.258,
                   20.311
-                ],
-                ix: 2
+                ]
               },
               a: {
                 a: 0,
                 k: [
                   0,
                   0
-                ],
-                ix: 1
+                ]
               },
               s: {
                 a: 0,
                 k: [
                   100,
                   100
-                ],
-                ix: 3
+                ]
               },
               r: {
                 a: 0,
-                k: 0,
-                ix: 6
+                k: 0
               },
               o: {
                 a: 0,
-                k: 100,
-                ix: 7
+                k: 100
               },
               sk: {
                 a: 0,
-                k: 0,
-                ix: 4
+                k: 0
               },
               sa: {
                 a: 0,
-                k: 0,
-                ix: 5
+                k: 0
               },
               nm: 'Transform'
             }
           ],
           nm: 'Group 3',
-          np: 4,
-          cix: 2,
           bm: 0,
-          ix: 3,
-          mn: 'ADBE Vector Group',
           hd: false
         },
         {
@@ -7611,7 +7072,6 @@ export const singleClick= {
             {
               ind: 0,
               ty: 'sh',
-              ix: 1,
               ks: {
                 a: 0,
                 k: {
@@ -8006,11 +7466,9 @@ export const singleClick= {
                     ]
                   ],
                   c: true
-                },
-                ix: 2
+                }
               },
               nm: 'Path 1',
-              mn: 'ADBE Vector Shape - Group',
               hd: false
             },
             {
@@ -8022,18 +7480,15 @@ export const singleClick= {
                   0.160784313725,
                   0.41568627451,
                   1
-                ],
-                ix: 4
+                ]
               },
               o: {
                 a: 0,
-                k: 100,
-                ix: 5
+                k: 100
               },
               r: 1,
               bm: 0,
               nm: 'Fill 1',
-              mn: 'ADBE Vector Graphic - Fill',
               hd: false
             },
             {
@@ -8043,54 +7498,43 @@ export const singleClick= {
                 k: [
                   341.435,
                   21.821
-                ],
-                ix: 2
+                ]
               },
               a: {
                 a: 0,
                 k: [
                   0,
                   0
-                ],
-                ix: 1
+                ]
               },
               s: {
                 a: 0,
                 k: [
                   100,
                   100
-                ],
-                ix: 3
+                ]
               },
               r: {
                 a: 0,
-                k: 0,
-                ix: 6
+                k: 0
               },
               o: {
                 a: 0,
-                k: 100,
-                ix: 7
+                k: 100
               },
               sk: {
                 a: 0,
-                k: 0,
-                ix: 4
+                k: 0
               },
               sa: {
                 a: 0,
-                k: 0,
-                ix: 5
+                k: 0
               },
               nm: 'Transform'
             }
           ],
           nm: 'Group 4',
-          np: 2,
-          cix: 2,
           bm: 0,
-          ix: 4,
-          mn: 'ADBE Vector Group',
           hd: false
         },
         {
@@ -8099,7 +7543,6 @@ export const singleClick= {
             {
               ind: 0,
               ty: 'sh',
-              ix: 1,
               ks: {
                 a: 0,
                 k: {
@@ -8266,11 +7709,9 @@ export const singleClick= {
                     ]
                   ],
                   c: true
-                },
-                ix: 2
+                }
               },
               nm: 'Path 1',
-              mn: 'ADBE Vector Shape - Group',
               hd: false
             },
             {
@@ -8282,18 +7723,15 @@ export const singleClick= {
                   0.160784313725,
                   0.41568627451,
                   1
-                ],
-                ix: 4
+                ]
               },
               o: {
                 a: 0,
-                k: 100,
-                ix: 5
+                k: 100
               },
               r: 1,
               bm: 0,
               nm: 'Fill 1',
-              mn: 'ADBE Vector Graphic - Fill',
               hd: false
             },
             {
@@ -8303,54 +7741,43 @@ export const singleClick= {
                 k: [
                   286.899,
                   26.326
-                ],
-                ix: 2
+                ]
               },
               a: {
                 a: 0,
                 k: [
                   0,
                   0
-                ],
-                ix: 1
+                ]
               },
               s: {
                 a: 0,
                 k: [
                   100,
                   100
-                ],
-                ix: 3
+                ]
               },
               r: {
                 a: 0,
-                k: 0,
-                ix: 6
+                k: 0
               },
               o: {
                 a: 0,
-                k: 100,
-                ix: 7
+                k: 100
               },
               sk: {
                 a: 0,
-                k: 0,
-                ix: 4
+                k: 0
               },
               sa: {
                 a: 0,
-                k: 0,
-                ix: 5
+                k: 0
               },
               nm: 'Transform'
             }
           ],
           nm: 'Group 5',
-          np: 2,
-          cix: 2,
           bm: 0,
-          ix: 5,
-          mn: 'ADBE Vector Group',
           hd: false
         },
         {
@@ -8359,7 +7786,6 @@ export const singleClick= {
             {
               ind: 0,
               ty: 'sh',
-              ix: 1,
               ks: {
                 a: 0,
                 k: {
@@ -8430,17 +7856,14 @@ export const singleClick= {
                     ]
                   ],
                   c: true
-                },
-                ix: 2
+                }
               },
               nm: 'Path 1',
-              mn: 'ADBE Vector Shape - Group',
               hd: false
             },
             {
               ind: 1,
               ty: 'sh',
-              ix: 2,
               ks: {
                 a: 0,
                 k: {
@@ -8655,18 +8078,15 @@ export const singleClick= {
                     ]
                   ],
                   c: true
-                },
-                ix: 2
+                }
               },
               nm: 'Path 2',
-              mn: 'ADBE Vector Shape - Group',
               hd: false
             },
             {
               ty: 'mm',
               mm: 1,
               nm: 'Merge Paths 1',
-              mn: 'ADBE Vector Filter - Merge',
               hd: false
             },
             {
@@ -8678,18 +8098,15 @@ export const singleClick= {
                   0.160784313725,
                   0.41568627451,
                   1
-                ],
-                ix: 4
+                ]
               },
               o: {
                 a: 0,
-                k: 100,
-                ix: 5
+                k: 100
               },
               r: 1,
               bm: 0,
               nm: 'Fill 1',
-              mn: 'ADBE Vector Graphic - Fill',
               hd: false
             },
             {
@@ -8699,54 +8116,43 @@ export const singleClick= {
                 k: [
                   247.386,
                   26.352
-                ],
-                ix: 2
+                ]
               },
               a: {
                 a: 0,
                 k: [
                   0,
                   0
-                ],
-                ix: 1
+                ]
               },
               s: {
                 a: 0,
                 k: [
                   100,
                   100
-                ],
-                ix: 3
+                ]
               },
               r: {
                 a: 0,
-                k: 0,
-                ix: 6
+                k: 0
               },
               o: {
                 a: 0,
-                k: 100,
-                ix: 7
+                k: 100
               },
               sk: {
                 a: 0,
-                k: 0,
-                ix: 4
+                k: 0
               },
               sa: {
                 a: 0,
-                k: 0,
-                ix: 5
+                k: 0
               },
               nm: 'Transform'
             }
           ],
           nm: 'Group 6',
-          np: 4,
-          cix: 2,
           bm: 0,
-          ix: 6,
-          mn: 'ADBE Vector Group',
           hd: false
         },
         {
@@ -8755,7 +8161,6 @@ export const singleClick= {
             {
               ind: 0,
               ty: 'sh',
-              ix: 1,
               ks: {
                 a: 0,
                 k: {
@@ -8886,11 +8291,9 @@ export const singleClick= {
                     ]
                   ],
                   c: true
-                },
-                ix: 2
+                }
               },
               nm: 'Path 1',
-              mn: 'ADBE Vector Shape - Group',
               hd: false
             },
             {
@@ -8902,18 +8305,15 @@ export const singleClick= {
                   0.160784313725,
                   0.41568627451,
                   1
-                ],
-                ix: 4
+                ]
               },
               o: {
                 a: 0,
-                k: 100,
-                ix: 5
+                k: 100
               },
               r: 1,
               bm: 0,
               nm: 'Fill 1',
-              mn: 'ADBE Vector Graphic - Fill',
               hd: false
             },
             {
@@ -8923,54 +8323,43 @@ export const singleClick= {
                 k: [
                   209.651,
                   21.822
-                ],
-                ix: 2
+                ]
               },
               a: {
                 a: 0,
                 k: [
                   0,
                   0
-                ],
-                ix: 1
+                ]
               },
               s: {
                 a: 0,
                 k: [
                   100,
                   100
-                ],
-                ix: 3
+                ]
               },
               r: {
                 a: 0,
-                k: 0,
-                ix: 6
+                k: 0
               },
               o: {
                 a: 0,
-                k: 100,
-                ix: 7
+                k: 100
               },
               sk: {
                 a: 0,
-                k: 0,
-                ix: 4
+                k: 0
               },
               sa: {
                 a: 0,
-                k: 0,
-                ix: 5
+                k: 0
               },
               nm: 'Transform'
             }
           ],
           nm: 'Group 7',
-          np: 2,
-          cix: 2,
           bm: 0,
-          ix: 7,
-          mn: 'ADBE Vector Group',
           hd: false
         },
         {
@@ -8979,7 +8368,6 @@ export const singleClick= {
             {
               ind: 0,
               ty: 'sh',
-              ix: 1,
               ks: {
                 a: 0,
                 k: {
@@ -9050,17 +8438,14 @@ export const singleClick= {
                     ]
                   ],
                   c: true
-                },
-                ix: 2
+                }
               },
               nm: 'Path 1',
-              mn: 'ADBE Vector Shape - Group',
               hd: false
             },
             {
               ind: 1,
               ty: 'sh',
-              ix: 2,
               ks: {
                 a: 0,
                 k: {
@@ -9275,18 +8660,15 @@ export const singleClick= {
                     ]
                   ],
                   c: true
-                },
-                ix: 2
+                }
               },
               nm: 'Path 2',
-              mn: 'ADBE Vector Shape - Group',
               hd: false
             },
             {
               ty: 'mm',
               mm: 1,
               nm: 'Merge Paths 1',
-              mn: 'ADBE Vector Filter - Merge',
               hd: false
             },
             {
@@ -9298,18 +8680,15 @@ export const singleClick= {
                   0.160784313725,
                   0.41568627451,
                   1
-                ],
-                ix: 4
+                ]
               },
               o: {
                 a: 0,
-                k: 100,
-                ix: 5
+                k: 100
               },
               r: 1,
               bm: 0,
               nm: 'Fill 1',
-              mn: 'ADBE Vector Graphic - Fill',
               hd: false
             },
             {
@@ -9319,54 +8698,43 @@ export const singleClick= {
                 k: [
                   157.658,
                   26.352
-                ],
-                ix: 2
+                ]
               },
               a: {
                 a: 0,
                 k: [
                   0,
                   0
-                ],
-                ix: 1
+                ]
               },
               s: {
                 a: 0,
                 k: [
                   100,
                   100
-                ],
-                ix: 3
+                ]
               },
               r: {
                 a: 0,
-                k: 0,
-                ix: 6
+                k: 0
               },
               o: {
                 a: 0,
-                k: 100,
-                ix: 7
+                k: 100
               },
               sk: {
                 a: 0,
-                k: 0,
-                ix: 4
+                k: 0
               },
               sa: {
                 a: 0,
-                k: 0,
-                ix: 5
+                k: 0
               },
               nm: 'Transform'
             }
           ],
           nm: 'Group 8',
-          np: 4,
-          cix: 2,
           bm: 0,
-          ix: 8,
-          mn: 'ADBE Vector Group',
           hd: false
         },
         {
@@ -9375,7 +8743,6 @@ export const singleClick= {
             {
               ind: 0,
               ty: 'sh',
-              ix: 1,
               ks: {
                 a: 0,
                 k: {
@@ -9614,11 +8981,9 @@ export const singleClick= {
                     ]
                   ],
                   c: true
-                },
-                ix: 2
+                }
               },
               nm: 'Path 1',
-              mn: 'ADBE Vector Shape - Group',
               hd: false
             },
             {
@@ -9630,18 +8995,15 @@ export const singleClick= {
                   0.160784313725,
                   0.41568627451,
                   1
-                ],
-                ix: 4
+                ]
               },
               o: {
                 a: 0,
-                k: 100,
-                ix: 5
+                k: 100
               },
               r: 1,
               bm: 0,
               nm: 'Fill 1',
-              mn: 'ADBE Vector Graphic - Fill',
               hd: false
             },
             {
@@ -9651,54 +9013,43 @@ export const singleClick= {
                 k: [
                   131.158,
                   23.411
-                ],
-                ix: 2
+                ]
               },
               a: {
                 a: 0,
                 k: [
                   0,
                   0
-                ],
-                ix: 1
+                ]
               },
               s: {
                 a: 0,
                 k: [
                   100,
                   100
-                ],
-                ix: 3
+                ]
               },
               r: {
                 a: 0,
-                k: 0,
-                ix: 6
+                k: 0
               },
               o: {
                 a: 0,
-                k: 100,
-                ix: 7
+                k: 100
               },
               sk: {
                 a: 0,
-                k: 0,
-                ix: 4
+                k: 0
               },
               sa: {
                 a: 0,
-                k: 0,
-                ix: 5
+                k: 0
               },
               nm: 'Transform'
             }
           ],
           nm: 'Group 9',
-          np: 2,
-          cix: 2,
           bm: 0,
-          ix: 9,
-          mn: 'ADBE Vector Group',
           hd: false
         },
         {
@@ -9707,7 +9058,6 @@ export const singleClick= {
             {
               ind: 0,
               ty: 'sh',
-              ix: 1,
               ks: {
                 a: 0,
                 k: {
@@ -9802,17 +9152,14 @@ export const singleClick= {
                     ]
                   ],
                   c: true
-                },
-                ix: 2
+                }
               },
               nm: 'Path 1',
-              mn: 'ADBE Vector Shape - Group',
               hd: false
             },
             {
               ind: 1,
               ty: 'sh',
-              ix: 2,
               ks: {
                 a: 0,
                 k: {
@@ -10063,18 +9410,15 @@ export const singleClick= {
                     ]
                   ],
                   c: true
-                },
-                ix: 2
+                }
               },
               nm: 'Path 2',
-              mn: 'ADBE Vector Shape - Group',
               hd: false
             },
             {
               ty: 'mm',
               mm: 1,
               nm: 'Merge Paths 1',
-              mn: 'ADBE Vector Filter - Merge',
               hd: false
             },
             {
@@ -10086,18 +9430,15 @@ export const singleClick= {
                   0.160784313725,
                   0.41568627451,
                   1
-                ],
-                ix: 4
+                ]
               },
               o: {
                 a: 0,
-                k: 100,
-                ix: 5
+                k: 100
               },
               r: 1,
               bm: 0,
               nm: 'Fill 1',
-              mn: 'ADBE Vector Graphic - Fill',
               hd: false
             },
             {
@@ -10107,54 +9448,43 @@ export const singleClick= {
                 k: [
                   103.625,
                   26.353
-                ],
-                ix: 2
+                ]
               },
               a: {
                 a: 0,
                 k: [
                   0,
                   0
-                ],
-                ix: 1
+                ]
               },
               s: {
                 a: 0,
                 k: [
                   100,
                   100
-                ],
-                ix: 3
+                ]
               },
               r: {
                 a: 0,
-                k: 0,
-                ix: 6
+                k: 0
               },
               o: {
                 a: 0,
-                k: 100,
-                ix: 7
+                k: 100
               },
               sk: {
                 a: 0,
-                k: 0,
-                ix: 4
+                k: 0
               },
               sa: {
                 a: 0,
-                k: 0,
-                ix: 5
+                k: 0
               },
               nm: 'Transform'
             }
           ],
           nm: 'Group 10',
-          np: 4,
-          cix: 2,
           bm: 0,
-          ix: 10,
-          mn: 'ADBE Vector Group',
           hd: false
         },
         {
@@ -10163,7 +9493,6 @@ export const singleClick= {
             {
               ind: 0,
               ty: 'sh',
-              ix: 1,
               ks: {
                 a: 0,
                 k: {
@@ -10234,17 +9563,14 @@ export const singleClick= {
                     ]
                   ],
                   c: true
-                },
-                ix: 2
+                }
               },
               nm: 'Path 1',
-              mn: 'ADBE Vector Shape - Group',
               hd: false
             },
             {
               ind: 1,
               ty: 'sh',
-              ix: 2,
               ks: {
                 a: 0,
                 k: {
@@ -10459,18 +9785,15 @@ export const singleClick= {
                     ]
                   ],
                   c: true
-                },
-                ix: 2
+                }
               },
               nm: 'Path 2',
-              mn: 'ADBE Vector Shape - Group',
               hd: false
             },
             {
               ty: 'mm',
               mm: 1,
               nm: 'Merge Paths 1',
-              mn: 'ADBE Vector Filter - Merge',
               hd: false
             },
             {
@@ -10482,18 +9805,15 @@ export const singleClick= {
                   0.160784313725,
                   0.41568627451,
                   1
-                ],
-                ix: 4
+                ]
               },
               o: {
                 a: 0,
-                k: 100,
-                ix: 5
+                k: 100
               },
               r: 1,
               bm: 0,
               nm: 'Fill 1',
-              mn: 'ADBE Vector Graphic - Fill',
               hd: false
             },
             {
@@ -10503,54 +9823,43 @@ export const singleClick= {
                 k: [
                   73.335,
                   26.352
-                ],
-                ix: 2
+                ]
               },
               a: {
                 a: 0,
                 k: [
                   0,
                   0
-                ],
-                ix: 1
+                ]
               },
               s: {
                 a: 0,
                 k: [
                   100,
                   100
-                ],
-                ix: 3
+                ]
               },
               r: {
                 a: 0,
-                k: 0,
-                ix: 6
+                k: 0
               },
               o: {
                 a: 0,
-                k: 100,
-                ix: 7
+                k: 100
               },
               sk: {
                 a: 0,
-                k: 0,
-                ix: 4
+                k: 0
               },
               sa: {
                 a: 0,
-                k: 0,
-                ix: 5
+                k: 0
               },
               nm: 'Transform'
             }
           ],
           nm: 'Group 11',
-          np: 4,
-          cix: 2,
           bm: 0,
-          ix: 11,
-          mn: 'ADBE Vector Group',
           hd: false
         },
         {
@@ -10559,7 +9868,6 @@ export const singleClick= {
             {
               ind: 0,
               ty: 'sh',
-              ix: 1,
               ks: {
                 a: 0,
                 k: {
@@ -10702,11 +10010,9 @@ export const singleClick= {
                     ]
                   ],
                   c: true
-                },
-                ix: 2
+                }
               },
               nm: 'Path 1',
-              mn: 'ADBE Vector Shape - Group',
               hd: false
             },
             {
@@ -10718,18 +10024,15 @@ export const singleClick= {
                   0.160784313725,
                   0.41568627451,
                   1
-                ],
-                ix: 4
+                ]
               },
               o: {
                 a: 0,
-                k: 100,
-                ix: 5
+                k: 100
               },
               r: 1,
               bm: 0,
               nm: 'Fill 1',
-              mn: 'ADBE Vector Graphic - Fill',
               hd: false
             },
             {
@@ -10739,54 +10042,43 @@ export const singleClick= {
                 k: [
                   48.4,
                   26.194
-                ],
-                ix: 2
+                ]
               },
               a: {
                 a: 0,
                 k: [
                   0,
                   0
-                ],
-                ix: 1
+                ]
               },
               s: {
                 a: 0,
                 k: [
                   100,
                   100
-                ],
-                ix: 3
+                ]
               },
               r: {
                 a: 0,
-                k: 0,
-                ix: 6
+                k: 0
               },
               o: {
                 a: 0,
-                k: 100,
-                ix: 7
+                k: 100
               },
               sk: {
                 a: 0,
-                k: 0,
-                ix: 4
+                k: 0
               },
               sa: {
                 a: 0,
-                k: 0,
-                ix: 5
+                k: 0
               },
               nm: 'Transform'
             }
           ],
           nm: 'Group 12',
-          np: 2,
-          cix: 2,
           bm: 0,
-          ix: 12,
-          mn: 'ADBE Vector Group',
           hd: false
         },
         {
@@ -10795,7 +10087,6 @@ export const singleClick= {
             {
               ind: 0,
               ty: 'sh',
-              ix: 1,
               ks: {
                 a: 0,
                 k: {
@@ -11046,11 +10337,9 @@ export const singleClick= {
                     ]
                   ],
                   c: true
-                },
-                ix: 2
+                }
               },
               nm: 'Path 1',
-              mn: 'ADBE Vector Shape - Group',
               hd: false
             },
             {
@@ -11062,18 +10351,15 @@ export const singleClick= {
                   0.160784313725,
                   0.41568627451,
                   1
-                ],
-                ix: 4
+                ]
               },
               o: {
                 a: 0,
-                k: 100,
-                ix: 5
+                k: 100
               },
               r: 1,
               bm: 0,
               nm: 'Fill 1',
-              mn: 'ADBE Vector Graphic - Fill',
               hd: false
             },
             {
@@ -11083,54 +10369,43 @@ export const singleClick= {
                 k: [
                   17.13,
                   21.821
-                ],
-                ix: 2
+                ]
               },
               a: {
                 a: 0,
                 k: [
                   0,
                   0
-                ],
-                ix: 1
+                ]
               },
               s: {
                 a: 0,
                 k: [
                   100,
                   100
-                ],
-                ix: 3
+                ]
               },
               r: {
                 a: 0,
-                k: 0,
-                ix: 6
+                k: 0
               },
               o: {
                 a: 0,
-                k: 100,
-                ix: 7
+                k: 100
               },
               sk: {
                 a: 0,
-                k: 0,
-                ix: 4
+                k: 0
               },
               sa: {
                 a: 0,
-                k: 0,
-                ix: 5
+                k: 0
               },
               nm: 'Transform'
             }
           ],
           nm: 'Group 13',
-          np: 2,
-          cix: 2,
           bm: 0,
-          ix: 13,
-          mn: 'ADBE Vector Group',
           hd: false
         }
       ],
@@ -11146,24 +10421,13 @@ export const singleClick= {
       nm: 'browser-top',
       sr: 1,
       ks: {
-        o: {
-          a: 0,
-          k: 100,
-          ix: 11
-        },
-        r: {
-          a: 0,
-          k: 0,
-          ix: 10
-        },
         p: {
           a: 0,
           k: [
             460.75,
             129.25,
             0
-          ],
-          ix: 2
+          ]
         },
         a: {
           a: 0,
@@ -11171,8 +10435,7 @@ export const singleClick= {
             190,
             8,
             0
-          ],
-          ix: 1
+          ]
         },
         s: {
           a: 0,
@@ -11180,8 +10443,7 @@ export const singleClick= {
             172.862,
             173.914,
             100
-          ],
-          ix: 6
+          ]
         }
       },
       ao: 0,
@@ -11325,18 +10587,15 @@ export const singleClick= {
                   }
                 ]
               }
-            ],
-            ix: 1
+            ]
           },
           o: {
             a: 0,
-            k: 100,
-            ix: 3
+            k: 100
           },
           x: {
             a: 0,
-            k: 0,
-            ix: 4
+            k: 0
           },
           nm: 'Mask 1'
         }
@@ -11348,7 +10607,6 @@ export const singleClick= {
             {
               ind: 0,
               ty: 'sh',
-              ix: 1,
               ks: {
                 a: 0,
                 k: {
@@ -11407,11 +10665,9 @@ export const singleClick= {
                     ]
                   ],
                   c: true
-                },
-                ix: 2
+                }
               },
               nm: 'Path 1',
-              mn: 'ADBE Vector Shape - Group',
               hd: false
             },
             {
@@ -11423,18 +10679,15 @@ export const singleClick= {
                   0.823999980852,
                   0.842999985639,
                   1
-                ],
-                ix: 4
+                ]
               },
               o: {
                 a: 0,
-                k: 100,
-                ix: 5
+                k: 100
               },
               r: 1,
               bm: 0,
               nm: 'Fill 1',
-              mn: 'ADBE Vector Graphic - Fill',
               hd: false
             },
             {
@@ -11444,54 +10697,43 @@ export const singleClick= {
                 k: [
                   46,
                   8
-                ],
-                ix: 2
+                ]
               },
               a: {
                 a: 0,
                 k: [
                   0,
                   0
-                ],
-                ix: 1
+                ]
               },
               s: {
                 a: 0,
                 k: [
                   100,
                   100
-                ],
-                ix: 3
+                ]
               },
               r: {
                 a: 0,
-                k: 0,
-                ix: 6
+                k: 0
               },
               o: {
                 a: 0,
-                k: 100,
-                ix: 7
+                k: 100
               },
               sk: {
                 a: 0,
-                k: 0,
-                ix: 4
+                k: 0
               },
               sa: {
                 a: 0,
-                k: 0,
-                ix: 5
+                k: 0
               },
               nm: 'Transform'
             }
           ],
           nm: 'Group 1',
-          np: 4,
-          cix: 2,
           bm: 0,
-          ix: 1,
-          mn: 'ADBE Vector Group',
           hd: false
         },
         {
@@ -11500,7 +10742,6 @@ export const singleClick= {
             {
               ind: 0,
               ty: 'sh',
-              ix: 1,
               ks: {
                 a: 0,
                 k: {
@@ -11559,11 +10800,9 @@ export const singleClick= {
                     ]
                   ],
                   c: true
-                },
-                ix: 2
+                }
               },
               nm: 'Path 1',
-              mn: 'ADBE Vector Shape - Group',
               hd: false
             },
             {
@@ -11575,18 +10814,15 @@ export const singleClick= {
                   0.823999980852,
                   0.842999985639,
                   1
-                ],
-                ix: 4
+                ]
               },
               o: {
                 a: 0,
-                k: 100,
-                ix: 5
+                k: 100
               },
               r: 1,
               bm: 0,
               nm: 'Fill 1',
-              mn: 'ADBE Vector Graphic - Fill',
               hd: false
             },
             {
@@ -11596,54 +10832,43 @@ export const singleClick= {
                 k: [
                   30,
                   8
-                ],
-                ix: 2
+                ]
               },
               a: {
                 a: 0,
                 k: [
                   0,
                   0
-                ],
-                ix: 1
+                ]
               },
               s: {
                 a: 0,
                 k: [
                   100,
                   100
-                ],
-                ix: 3
+                ]
               },
               r: {
                 a: 0,
-                k: 0,
-                ix: 6
+                k: 0
               },
               o: {
                 a: 0,
-                k: 100,
-                ix: 7
+                k: 100
               },
               sk: {
                 a: 0,
-                k: 0,
-                ix: 4
+                k: 0
               },
               sa: {
                 a: 0,
-                k: 0,
-                ix: 5
+                k: 0
               },
               nm: 'Transform'
             }
           ],
           nm: 'Group 2',
-          np: 4,
-          cix: 2,
           bm: 0,
-          ix: 2,
-          mn: 'ADBE Vector Group',
           hd: false
         },
         {
@@ -11652,7 +10877,6 @@ export const singleClick= {
             {
               ind: 0,
               ty: 'sh',
-              ix: 1,
               ks: {
                 a: 0,
                 k: {
@@ -11711,11 +10935,9 @@ export const singleClick= {
                     ]
                   ],
                   c: true
-                },
-                ix: 2
+                }
               },
               nm: 'Path 1',
-              mn: 'ADBE Vector Shape - Group',
               hd: false
             },
             {
@@ -11727,18 +10949,15 @@ export const singleClick= {
                   0.823999980852,
                   0.842999985639,
                   1
-                ],
-                ix: 4
+                ]
               },
               o: {
                 a: 0,
-                k: 100,
-                ix: 5
+                k: 100
               },
               r: 1,
               bm: 0,
               nm: 'Fill 1',
-              mn: 'ADBE Vector Graphic - Fill',
               hd: false
             },
             {
@@ -11748,54 +10967,43 @@ export const singleClick= {
                 k: [
                   14,
                   8
-                ],
-                ix: 2
+                ]
               },
               a: {
                 a: 0,
                 k: [
                   0,
                   0
-                ],
-                ix: 1
+                ]
               },
               s: {
                 a: 0,
                 k: [
                   100,
                   100
-                ],
-                ix: 3
+                ]
               },
               r: {
                 a: 0,
-                k: 0,
-                ix: 6
+                k: 0
               },
               o: {
                 a: 0,
-                k: 100,
-                ix: 7
+                k: 100
               },
               sk: {
                 a: 0,
-                k: 0,
-                ix: 4
+                k: 0
               },
               sa: {
                 a: 0,
-                k: 0,
-                ix: 5
+                k: 0
               },
               nm: 'Transform'
             }
           ],
           nm: 'Group 3',
-          np: 4,
-          cix: 2,
           bm: 0,
-          ix: 3,
-          mn: 'ADBE Vector Group',
           hd: false
         },
         {
@@ -11804,7 +11012,6 @@ export const singleClick= {
             {
               ind: 0,
               ty: 'sh',
-              ix: 1,
               ks: {
                 a: 0,
                 k: {
@@ -11887,11 +11094,9 @@ export const singleClick= {
                     ]
                   ],
                   c: true
-                },
-                ix: 2
+                }
               },
               nm: 'Path 1',
-              mn: 'ADBE Vector Shape - Group',
               hd: false
             },
             {
@@ -11903,18 +11108,15 @@ export const singleClick= {
                   0.160784313725,
                   0.41568627451,
                   1
-                ],
-                ix: 4
+                ]
               },
               o: {
                 a: 0,
-                k: 100,
-                ix: 5
+                k: 100
               },
               r: 1,
               bm: 0,
               nm: 'Fill 1',
-              mn: 'ADBE Vector Graphic - Fill',
               hd: false
             },
             {
@@ -11924,54 +11126,43 @@ export const singleClick= {
                 k: [
                   190,
                   8
-                ],
-                ix: 2
+                ]
               },
               a: {
                 a: 0,
                 k: [
                   0,
                   0
-                ],
-                ix: 1
+                ]
               },
               s: {
                 a: 0,
                 k: [
                   100,
                   100
-                ],
-                ix: 3
+                ]
               },
               r: {
                 a: 0,
-                k: 0,
-                ix: 6
+                k: 0
               },
               o: {
                 a: 0,
-                k: 100,
-                ix: 7
+                k: 100
               },
               sk: {
                 a: 0,
-                k: 0,
-                ix: 4
+                k: 0
               },
               sa: {
                 a: 0,
-                k: 0,
-                ix: 5
+                k: 0
               },
               nm: 'Transform'
             }
           ],
           nm: 'Group 4',
-          np: 4,
-          cix: 2,
           bm: 0,
-          ix: 4,
-          mn: 'ADBE Vector Group',
           hd: false
         },
         {
@@ -11980,7 +11171,6 @@ export const singleClick= {
             {
               ind: 0,
               ty: 'sh',
-              ix: 1,
               ks: {
                 a: 0,
                 k: {
@@ -12063,11 +11253,9 @@ export const singleClick= {
                     ]
                   ],
                   c: true
-                },
-                ix: 2
+                }
               },
               nm: 'Path 1',
-              mn: 'ADBE Vector Shape - Group',
               hd: false
             },
             {
@@ -12079,18 +11267,15 @@ export const singleClick= {
                   1,
                   1,
                   1
-                ],
-                ix: 4
+                ]
               },
               o: {
                 a: 0,
-                k: 100,
-                ix: 5
+                k: 100
               },
               r: 1,
               bm: 0,
               nm: 'Fill 1',
-              mn: 'ADBE Vector Graphic - Fill',
               hd: false
             },
             {
@@ -12100,54 +11285,43 @@ export const singleClick= {
                 k: [
                   190,
                   8
-                ],
-                ix: 2
+                ]
               },
               a: {
                 a: 0,
                 k: [
                   0,
                   0
-                ],
-                ix: 1
+                ]
               },
               s: {
                 a: 0,
                 k: [
                   100,
                   100
-                ],
-                ix: 3
+                ]
               },
               r: {
                 a: 0,
-                k: 0,
-                ix: 6
+                k: 0
               },
               o: {
                 a: 0,
-                k: 100,
-                ix: 7
+                k: 100
               },
               sk: {
                 a: 0,
-                k: 0,
-                ix: 4
+                k: 0
               },
               sa: {
                 a: 0,
-                k: 0,
-                ix: 5
+                k: 0
               },
               nm: 'Transform'
             }
           ],
           nm: 'Group 5',
-          np: 4,
-          cix: 2,
           bm: 0,
-          ix: 5,
-          mn: 'ADBE Vector Group',
           hd: false
         }
       ],
@@ -12163,16 +11337,6 @@ export const singleClick= {
       nm: 'Site-BG',
       sr: 1,
       ks: {
-        o: {
-          a: 0,
-          k: 100,
-          ix: 11
-        },
-        r: {
-          a: 0,
-          k: 0,
-          ix: 10
-        },
         p: {
           a: 1,
           k: [
@@ -12236,8 +11400,7 @@ export const singleClick= {
                 0
               ]
             }
-          ],
-          ix: 2
+          ]
         },
         a: {
           a: 0,
@@ -12245,8 +11408,7 @@ export const singleClick= {
             327.5,
             312,
             0
-          ],
-          ix: 1
+          ]
         },
         s: {
           a: 0,
@@ -12254,8 +11416,7 @@ export const singleClick= {
             102.449,
             96.987,
             100
-          ],
-          ix: 6
+          ]
         }
       },
       ao: 0,
@@ -12271,24 +11432,20 @@ export const singleClick= {
                 k: [
                   644.438,
                   644.438
-                ],
-                ix: 2
+                ]
               },
               p: {
                 a: 0,
                 k: [
                   0,
                   0
-                ],
-                ix: 3
+                ]
               },
               r: {
                 a: 0,
-                k: 20,
-                ix: 4
+                k: 20
               },
               nm: 'Rectangle Path 1',
-              mn: 'ADBE Vector Shape - Rect',
               hd: false
             },
             {
@@ -12324,8 +11481,7 @@ export const singleClick= {
                       100
                     ]
                   }
-                ],
-                ix: 1
+                ]
               },
               e: {
                 a: 1,
@@ -12358,18 +11514,14 @@ export const singleClick= {
                       100
                     ]
                   }
-                ],
-                ix: 2
+                ]
               },
               o: {
                 a: 0,
-                k: -47.5,
-                ix: 3
+                k: -47.5
               },
               m: 1,
-              ix: 2,
               nm: 'Trim Paths 1',
-              mn: 'ADBE Vector Filter - Trim',
               hd: false
             },
             {
@@ -12381,24 +11533,20 @@ export const singleClick= {
                   0.160784313725,
                   0.41568627451,
                   1
-                ],
-                ix: 3
+                ]
               },
               o: {
                 a: 0,
-                k: 100,
-                ix: 4
+                k: 100
               },
               w: {
                 a: 0,
-                k: 20,
-                ix: 5
+                k: 20
               },
               lc: 2,
               lj: 3,
               bm: 0,
               nm: 'Stroke 1',
-              mn: 'ADBE Vector Graphic - Stroke',
               hd: false
             },
             {
@@ -12410,18 +11558,15 @@ export const singleClick= {
                   0.937119427849,
                   0.943963443532,
                   1
-                ],
-                ix: 4
+                ]
               },
               o: {
                 a: 0,
-                k: 0,
-                ix: 5
+                k: 0
               },
               r: 1,
               bm: 0,
               nm: 'Fill 1',
-              mn: 'ADBE Vector Graphic - Fill',
               hd: false
             },
             {
@@ -12431,54 +11576,43 @@ export const singleClick= {
                 k: [
                   382.243,
                   403.57
-                ],
-                ix: 2
+                ]
               },
               a: {
                 a: 0,
                 k: [
                   0,
                   0
-                ],
-                ix: 1
+                ]
               },
               s: {
                 a: 0,
                 k: [
                   95.874,
                   97.611
-                ],
-                ix: 3
+                ]
               },
               r: {
                 a: 0,
-                k: 0,
-                ix: 6
+                k: 0
               },
               o: {
                 a: 0,
-                k: 100,
-                ix: 7
+                k: 100
               },
               sk: {
                 a: 0,
-                k: 0,
-                ix: 4
+                k: 0
               },
               sa: {
                 a: 0,
-                k: 0,
-                ix: 5
+                k: 0
               },
               nm: 'Transform'
             }
           ],
           nm: 'Rectangle 1',
-          np: 4,
-          cix: 2,
           bm: 0,
-          ix: 1,
-          mn: 'ADBE Vector Group',
           hd: false
         }
       ],
@@ -12494,42 +11628,13 @@ export const singleClick= {
       nm: 'Screen Elements',
       sr: 1,
       ks: {
-        o: {
-          a: 0,
-          k: 100,
-          ix: 11
-        },
-        r: {
-          a: 0,
-          k: 0,
-          ix: 10
-        },
         p: {
           a: 0,
           k: [
             460,
             430,
             0
-          ],
-          ix: 2
-        },
-        a: {
-          a: 0,
-          k: [
-            0,
-            0,
-            0
-          ],
-          ix: 1
-        },
-        s: {
-          a: 0,
-          k: [
-            100,
-            100,
-            100
-          ],
-          ix: 6
+          ]
         }
       },
       ao: 0,
@@ -12596,18 +11701,15 @@ export const singleClick= {
                 ]
               ],
               c: true
-            },
-            ix: 1
+            }
           },
           o: {
             a: 0,
-            k: 100,
-            ix: 3
+            k: 100
           },
           x: {
             a: 0,
-            k: 0,
-            ix: 4
+            k: 0
           },
           nm: 'Mask 1'
         }
@@ -12624,19 +11726,16 @@ export const singleClick= {
                 k: [
                   42.121,
                   42.121
-                ],
-                ix: 2
+                ]
               },
               p: {
                 a: 0,
                 k: [
                   0,
                   0
-                ],
-                ix: 3
+                ]
               },
               nm: 'Ellipse Path 1',
-              mn: 'ADBE Vector Shape - Ellipse',
               hd: false
             },
             {
@@ -12648,18 +11747,15 @@ export const singleClick= {
                   0.160784313725,
                   0.41568627451,
                   1
-                ],
-                ix: 4
+                ]
               },
               o: {
                 a: 0,
-                k: 100,
-                ix: 5
+                k: 100
               },
               r: 1,
               bm: 0,
               nm: 'Fill 1',
-              mn: 'ADBE Vector Graphic - Fill',
               hd: false
             },
             {
@@ -12697,54 +11793,43 @@ export const singleClick= {
                       -239.725
                     ]
                   }
-                ],
-                ix: 2
+                ]
               },
               a: {
                 a: 0,
                 k: [
                   0,
                   0
-                ],
-                ix: 1
+                ]
               },
               s: {
                 a: 0,
                 k: [
                   76.761,
                   76.761
-                ],
-                ix: 3
+                ]
               },
               r: {
                 a: 0,
-                k: 0,
-                ix: 6
+                k: 0
               },
               o: {
                 a: 0,
-                k: 100,
-                ix: 7
+                k: 100
               },
               sk: {
                 a: 0,
-                k: 0,
-                ix: 4
+                k: 0
               },
               sa: {
                 a: 0,
-                k: 0,
-                ix: 5
+                k: 0
               },
               nm: 'Transform'
             }
           ],
           nm: 'Nav Circle Right 3',
-          np: 3,
-          cix: 2,
           bm: 0,
-          ix: 1,
-          mn: 'ADBE Vector Group',
           hd: false
         },
         {
@@ -12758,19 +11843,16 @@ export const singleClick= {
                 k: [
                   42.121,
                   42.121
-                ],
-                ix: 2
+                ]
               },
               p: {
                 a: 0,
                 k: [
                   0,
                   0
-                ],
-                ix: 3
+                ]
               },
               nm: 'Ellipse Path 1',
-              mn: 'ADBE Vector Shape - Ellipse',
               hd: false
             },
             {
@@ -12782,18 +11864,15 @@ export const singleClick= {
                   0.160784313725,
                   0.41568627451,
                   1
-                ],
-                ix: 4
+                ]
               },
               o: {
                 a: 0,
-                k: 100,
-                ix: 5
+                k: 100
               },
               r: 1,
               bm: 0,
               nm: 'Fill 1',
-              mn: 'ADBE Vector Graphic - Fill',
               hd: false
             },
             {
@@ -12831,54 +11910,43 @@ export const singleClick= {
                       -239.725
                     ]
                   }
-                ],
-                ix: 2
+                ]
               },
               a: {
                 a: 0,
                 k: [
                   0,
                   0
-                ],
-                ix: 1
+                ]
               },
               s: {
                 a: 0,
                 k: [
                   76.761,
                   76.761
-                ],
-                ix: 3
+                ]
               },
               r: {
                 a: 0,
-                k: 0,
-                ix: 6
+                k: 0
               },
               o: {
                 a: 0,
-                k: 100,
-                ix: 7
+                k: 100
               },
               sk: {
                 a: 0,
-                k: 0,
-                ix: 4
+                k: 0
               },
               sa: {
                 a: 0,
-                k: 0,
-                ix: 5
+                k: 0
               },
               nm: 'Transform'
             }
           ],
           nm: 'Nav Circle Right 2',
-          np: 3,
-          cix: 2,
           bm: 0,
-          ix: 2,
-          mn: 'ADBE Vector Group',
           hd: false
         },
         {
@@ -12892,19 +11960,16 @@ export const singleClick= {
                 k: [
                   42.121,
                   42.121
-                ],
-                ix: 2
+                ]
               },
               p: {
                 a: 0,
                 k: [
                   0,
                   0
-                ],
-                ix: 3
+                ]
               },
               nm: 'Ellipse Path 1',
-              mn: 'ADBE Vector Shape - Ellipse',
               hd: false
             },
             {
@@ -12916,18 +11981,15 @@ export const singleClick= {
                   0.160784313725,
                   0.41568627451,
                   1
-                ],
-                ix: 4
+                ]
               },
               o: {
                 a: 0,
-                k: 100,
-                ix: 5
+                k: 100
               },
               r: 1,
               bm: 0,
               nm: 'Fill 1',
-              mn: 'ADBE Vector Graphic - Fill',
               hd: false
             },
             {
@@ -12965,54 +12027,43 @@ export const singleClick= {
                       -239.725
                     ]
                   }
-                ],
-                ix: 2
+                ]
               },
               a: {
                 a: 0,
                 k: [
                   0,
                   0
-                ],
-                ix: 1
+                ]
               },
               s: {
                 a: 0,
                 k: [
                   76.761,
                   76.761
-                ],
-                ix: 3
+                ]
               },
               r: {
                 a: 0,
-                k: 0,
-                ix: 6
+                k: 0
               },
               o: {
                 a: 0,
-                k: 100,
-                ix: 7
+                k: 100
               },
               sk: {
                 a: 0,
-                k: 0,
-                ix: 4
+                k: 0
               },
               sa: {
                 a: 0,
-                k: 0,
-                ix: 5
+                k: 0
               },
               nm: 'Transform'
             }
           ],
           nm: 'Nav Circle Right',
-          np: 3,
-          cix: 2,
           bm: 0,
-          ix: 3,
-          mn: 'ADBE Vector Group',
           hd: false
         },
         {
@@ -13026,24 +12077,20 @@ export const singleClick= {
                 k: [
                   224.316,
                   128.809
-                ],
-                ix: 2
+                ]
               },
               p: {
                 a: 0,
                 k: [
                   0,
                   0
-                ],
-                ix: 3
+                ]
               },
               r: {
                 a: 0,
-                k: 0,
-                ix: 4
+                k: 0
               },
               nm: 'Rectangle Path 1',
-              mn: 'ADBE Vector Shape - Rect',
               hd: false
             },
             {
@@ -13055,18 +12102,15 @@ export const singleClick= {
                   0.011764705882,
                   0.345098039216,
                   1
-                ],
-                ix: 4
+                ]
               },
               o: {
                 a: 0,
-                k: 100,
-                ix: 5
+                k: 100
               },
               r: 1,
               bm: 0,
               nm: 'Fill 1',
-              mn: 'ADBE Vector Graphic - Fill',
               hd: false
             },
             {
@@ -13104,54 +12148,43 @@ export const singleClick= {
                       183.186
                     ]
                   }
-                ],
-                ix: 2
+                ]
               },
               a: {
                 a: 0,
                 k: [
                   0,
                   0
-                ],
-                ix: 1
+                ]
               },
               s: {
                 a: 0,
                 k: [
                   112.239,
                   8.614
-                ],
-                ix: 3
+                ]
               },
               r: {
                 a: 0,
-                k: 0,
-                ix: 6
+                k: 0
               },
               o: {
                 a: 0,
-                k: 100,
-                ix: 7
+                k: 100
               },
               sk: {
                 a: 0,
-                k: 0,
-                ix: 4
+                k: 0
               },
               sa: {
                 a: 0,
-                k: 0,
-                ix: 5
+                k: 0
               },
               nm: 'Transform'
             }
           ],
           nm: 'Text Bar Top',
-          np: 3,
-          cix: 2,
           bm: 0,
-          ix: 4,
-          mn: 'ADBE Vector Group',
           hd: false
         },
         {
@@ -13165,24 +12198,20 @@ export const singleClick= {
                 k: [
                   224.316,
                   128.809
-                ],
-                ix: 2
+                ]
               },
               p: {
                 a: 0,
                 k: [
                   0,
                   0
-                ],
-                ix: 3
+                ]
               },
               r: {
                 a: 0,
-                k: 0,
-                ix: 4
+                k: 0
               },
               nm: 'Rectangle Path 1',
-              mn: 'ADBE Vector Shape - Rect',
               hd: false
             },
             {
@@ -13194,18 +12223,15 @@ export const singleClick= {
                   0.011764705882,
                   0.345098039216,
                   1
-                ],
-                ix: 4
+                ]
               },
               o: {
                 a: 0,
-                k: 100,
-                ix: 5
+                k: 100
               },
               r: 1,
               bm: 0,
               nm: 'Fill 1',
-              mn: 'ADBE Vector Graphic - Fill',
               hd: false
             },
             {
@@ -13243,54 +12269,43 @@ export const singleClick= {
                       219.326
                     ]
                   }
-                ],
-                ix: 2
+                ]
               },
               a: {
                 a: 0,
                 k: [
                   0,
                   0
-                ],
-                ix: 1
+                ]
               },
               s: {
                 a: 0,
                 k: [
                   112.239,
                   8.614
-                ],
-                ix: 3
+                ]
               },
               r: {
                 a: 0,
-                k: 0,
-                ix: 6
+                k: 0
               },
               o: {
                 a: 0,
-                k: 100,
-                ix: 7
+                k: 100
               },
               sk: {
                 a: 0,
-                k: 0,
-                ix: 4
+                k: 0
               },
               sa: {
                 a: 0,
-                k: 0,
-                ix: 5
+                k: 0
               },
               nm: 'Transform'
             }
           ],
           nm: 'Text Bar Top 2',
-          np: 3,
-          cix: 2,
           bm: 0,
-          ix: 5,
-          mn: 'ADBE Vector Group',
           hd: false
         },
         {
@@ -13304,24 +12319,20 @@ export const singleClick= {
                 k: [
                   224.316,
                   128.809
-                ],
-                ix: 2
+                ]
               },
               p: {
                 a: 0,
                 k: [
                   0,
                   0
-                ],
-                ix: 3
+                ]
               },
               r: {
                 a: 0,
-                k: 0,
-                ix: 4
+                k: 0
               },
               nm: 'Rectangle Path 1',
-              mn: 'ADBE Vector Shape - Rect',
               hd: false
             },
             {
@@ -13333,18 +12344,15 @@ export const singleClick= {
                   0.011764705882,
                   0.345098039216,
                   1
-                ],
-                ix: 4
+                ]
               },
               o: {
                 a: 0,
-                k: 100,
-                ix: 5
+                k: 100
               },
               r: 1,
               bm: 0,
               nm: 'Fill 1',
-              mn: 'ADBE Vector Graphic - Fill',
               hd: false
             },
             {
@@ -13382,54 +12390,43 @@ export const singleClick= {
                       257.311
                     ]
                   }
-                ],
-                ix: 2
+                ]
               },
               a: {
                 a: 0,
                 k: [
                   0,
                   0
-                ],
-                ix: 1
+                ]
               },
               s: {
                 a: 0,
                 k: [
                   112.239,
                   8.614
-                ],
-                ix: 3
+                ]
               },
               r: {
                 a: 0,
-                k: 0,
-                ix: 6
+                k: 0
               },
               o: {
                 a: 0,
-                k: 100,
-                ix: 7
+                k: 100
               },
               sk: {
                 a: 0,
-                k: 0,
-                ix: 4
+                k: 0
               },
               sa: {
                 a: 0,
-                k: 0,
-                ix: 5
+                k: 0
               },
               nm: 'Transform'
             }
           ],
           nm: 'Text Bar Bottom 2',
-          np: 3,
-          cix: 2,
           bm: 0,
-          ix: 6,
-          mn: 'ADBE Vector Group',
           hd: false
         },
         {
@@ -13443,24 +12440,20 @@ export const singleClick= {
                 k: [
                   224.316,
                   128.809
-                ],
-                ix: 2
+                ]
               },
               p: {
                 a: 0,
                 k: [
                   0,
                   0
-                ],
-                ix: 3
+                ]
               },
               r: {
                 a: 0,
-                k: 0,
-                ix: 4
+                k: 0
               },
               nm: 'Rectangle Path 1',
-              mn: 'ADBE Vector Shape - Rect',
               hd: false
             },
             {
@@ -13472,18 +12465,15 @@ export const singleClick= {
                   0.011764705882,
                   0.345098039216,
                   1
-                ],
-                ix: 4
+                ]
               },
               o: {
                 a: 0,
-                k: 100,
-                ix: 5
+                k: 100
               },
               r: 1,
               bm: 0,
               nm: 'Fill 1',
-              mn: 'ADBE Vector Graphic - Fill',
               hd: false
             },
             {
@@ -13521,54 +12511,43 @@ export const singleClick= {
                       296.193
                     ]
                   }
-                ],
-                ix: 2
+                ]
               },
               a: {
                 a: 0,
                 k: [
                   0,
                   0
-                ],
-                ix: 1
+                ]
               },
               s: {
                 a: 0,
                 k: [
                   112.239,
                   8.614
-                ],
-                ix: 3
+                ]
               },
               r: {
                 a: 0,
-                k: 0,
-                ix: 6
+                k: 0
               },
               o: {
                 a: 0,
-                k: 100,
-                ix: 7
+                k: 100
               },
               sk: {
                 a: 0,
-                k: 0,
-                ix: 4
+                k: 0
               },
               sa: {
                 a: 0,
-                k: 0,
-                ix: 5
+                k: 0
               },
               nm: 'Transform'
             }
           ],
           nm: 'Text Bar Bottom',
-          np: 3,
-          cix: 2,
           bm: 0,
-          ix: 7,
-          mn: 'ADBE Vector Group',
           hd: false
         },
         {
@@ -13582,32 +12561,27 @@ export const singleClick= {
                 k: [
                   224.316,
                   128.809
-                ],
-                ix: 2
+                ]
               },
               p: {
                 a: 0,
                 k: [
                   0,
                   0
-                ],
-                ix: 3
+                ]
               },
               r: {
                 a: 0,
-                k: 0,
-                ix: 4
+                k: 0
               },
               nm: 'Rectangle Path 1',
-              mn: 'ADBE Vector Shape - Rect',
               hd: false
             },
             {
               ty: 'gf',
               o: {
                 a: 0,
-                k: 100,
-                ix: 10
+                k: 100
               },
               r: 1,
               bm: 0,
@@ -13634,8 +12608,7 @@ export const singleClick= {
                     0.5,
                     1,
                     0
-                  ],
-                  ix: 9
+                  ]
                 }
               },
               s: {
@@ -13643,20 +12616,17 @@ export const singleClick= {
                 k: [
                   688.142,
                   441.391
-                ],
-                ix: 5
+                ]
               },
               e: {
                 a: 0,
                 k: [
                   -128.829,
                   -77.602
-                ],
-                ix: 6
+                ]
               },
               t: 1,
               nm: 'Gradient Fill 1',
-              mn: 'ADBE Vector Graphic - G-Fill',
               hd: false
             },
             {
@@ -13717,54 +12687,43 @@ export const singleClick= {
                       240.443
                     ]
                   }
-                ],
-                ix: 2
+                ]
               },
               a: {
                 a: 0,
                 k: [
                   0,
                   0
-                ],
-                ix: 1
+                ]
               },
               s: {
                 a: 0,
                 k: [
                   112.239,
                   100
-                ],
-                ix: 3
+                ]
               },
               r: {
                 a: 0,
-                k: 0,
-                ix: 6
+                k: 0
               },
               o: {
                 a: 0,
-                k: 100,
-                ix: 7
+                k: 100
               },
               sk: {
                 a: 0,
-                k: 0,
-                ix: 4
+                k: 0
               },
               sa: {
                 a: 0,
-                k: 0,
-                ix: 5
+                k: 0
               },
               nm: 'Transform'
             }
           ],
           nm: 'Image',
-          np: 3,
-          cix: 2,
           bm: 0,
-          ix: 8,
-          mn: 'ADBE Vector Group',
           hd: false
         },
         {
@@ -13773,7 +12732,6 @@ export const singleClick= {
             {
               ind: 0,
               ty: 'sh',
-              ix: 1,
               ks: {
                 a: 0,
                 k: {
@@ -13832,11 +12790,9 @@ export const singleClick= {
                     ]
                   ],
                   c: true
-                },
-                ix: 2
+                }
               },
               nm: 'Path 1',
-              mn: 'ADBE Vector Shape - Group',
               hd: false
             },
             {
@@ -13848,18 +12804,15 @@ export const singleClick= {
                   0.160784313725,
                   0.41568627451,
                   1
-                ],
-                ix: 4
+                ]
               },
               o: {
                 a: 0,
-                k: 100,
-                ix: 5
+                k: 100
               },
               r: 1,
               bm: 0,
               nm: 'Fill 1',
-              mn: 'ADBE Vector Graphic - Fill',
               hd: false
             },
             {
@@ -13897,54 +12850,43 @@ export const singleClick= {
                       104.99
                     ]
                   }
-                ],
-                ix: 2
+                ]
               },
               a: {
                 a: 0,
                 k: [
                   0,
                   0
-                ],
-                ix: 1
+                ]
               },
               s: {
                 a: 0,
                 k: [
                   100,
                   100
-                ],
-                ix: 3
+                ]
               },
               r: {
                 a: 0,
-                k: 0,
-                ix: 6
+                k: 0
               },
               o: {
                 a: 0,
-                k: 100,
-                ix: 7
+                k: 100
               },
               sk: {
                 a: 0,
-                k: 0,
-                ix: 4
+                k: 0
               },
               sa: {
                 a: 0,
-                k: 0,
-                ix: 5
+                k: 0
               },
               nm: 'Transform'
             }
           ],
           nm: 'Feature Circle Far Right',
-          np: 3,
-          cix: 2,
           bm: 0,
-          ix: 9,
-          mn: 'ADBE Vector Group',
           hd: false
         },
         {
@@ -13953,7 +12895,6 @@ export const singleClick= {
             {
               ind: 0,
               ty: 'sh',
-              ix: 1,
               ks: {
                 a: 0,
                 k: {
@@ -14012,11 +12953,9 @@ export const singleClick= {
                     ]
                   ],
                   c: true
-                },
-                ix: 2
+                }
               },
               nm: 'Path 1',
-              mn: 'ADBE Vector Shape - Group',
               hd: false
             },
             {
@@ -14028,18 +12967,15 @@ export const singleClick= {
                   0.160784313725,
                   0.41568627451,
                   1
-                ],
-                ix: 4
+                ]
               },
               o: {
                 a: 0,
-                k: 100,
-                ix: 5
+                k: 100
               },
               r: 1,
               bm: 0,
               nm: 'Fill 1',
-              mn: 'ADBE Vector Graphic - Fill',
               hd: false
             },
             {
@@ -14077,54 +13013,43 @@ export const singleClick= {
                       105.768
                     ]
                   }
-                ],
-                ix: 2
+                ]
               },
               a: {
                 a: 0,
                 k: [
                   0,
                   0
-                ],
-                ix: 1
+                ]
               },
               s: {
                 a: 0,
                 k: [
                   100,
                   100
-                ],
-                ix: 3
+                ]
               },
               r: {
                 a: 0,
-                k: 0,
-                ix: 6
+                k: 0
               },
               o: {
                 a: 0,
-                k: 100,
-                ix: 7
+                k: 100
               },
               sk: {
                 a: 0,
-                k: 0,
-                ix: 4
+                k: 0
               },
               sa: {
                 a: 0,
-                k: 0,
-                ix: 5
+                k: 0
               },
               nm: 'Transform'
             }
           ],
           nm: 'Feature Circle Right',
-          np: 3,
-          cix: 2,
           bm: 0,
-          ix: 10,
-          mn: 'ADBE Vector Group',
           hd: false
         },
         {
@@ -14133,7 +13058,6 @@ export const singleClick= {
             {
               ind: 0,
               ty: 'sh',
-              ix: 1,
               ks: {
                 a: 0,
                 k: {
@@ -14192,11 +13116,9 @@ export const singleClick= {
                     ]
                   ],
                   c: true
-                },
-                ix: 2
+                }
               },
               nm: 'Path 1',
-              mn: 'ADBE Vector Shape - Group',
               hd: false
             },
             {
@@ -14208,18 +13130,15 @@ export const singleClick= {
                   0.160784313725,
                   0.41568627451,
                   1
-                ],
-                ix: 4
+                ]
               },
               o: {
                 a: 0,
-                k: 100,
-                ix: 5
+                k: 100
               },
               r: 1,
               bm: 0,
               nm: 'Fill 1',
-              mn: 'ADBE Vector Graphic - Fill',
               hd: false
             },
             {
@@ -14257,54 +13176,43 @@ export const singleClick= {
                       105.768
                     ]
                   }
-                ],
-                ix: 2
+                ]
               },
               a: {
                 a: 0,
                 k: [
                   0,
                   0
-                ],
-                ix: 1
+                ]
               },
               s: {
                 a: 0,
                 k: [
                   100,
                   100
-                ],
-                ix: 3
+                ]
               },
               r: {
                 a: 0,
-                k: 0,
-                ix: 6
+                k: 0
               },
               o: {
                 a: 0,
-                k: 100,
-                ix: 7
+                k: 100
               },
               sk: {
                 a: 0,
-                k: 0,
-                ix: 4
+                k: 0
               },
               sa: {
                 a: 0,
-                k: 0,
-                ix: 5
+                k: 0
               },
               nm: 'Transform'
             }
           ],
           nm: 'Feature Circle Left',
-          np: 3,
-          cix: 2,
           bm: 0,
-          ix: 11,
-          mn: 'ADBE Vector Group',
           hd: false
         },
         {
@@ -14313,7 +13221,6 @@ export const singleClick= {
             {
               ind: 0,
               ty: 'sh',
-              ix: 1,
               ks: {
                 a: 0,
                 k: {
@@ -14372,11 +13279,9 @@ export const singleClick= {
                     ]
                   ],
                   c: true
-                },
-                ix: 2
+                }
               },
               nm: 'Path 1',
-              mn: 'ADBE Vector Shape - Group',
               hd: false
             },
             {
@@ -14388,18 +13293,15 @@ export const singleClick= {
                   0.160784313725,
                   0.41568627451,
                   1
-                ],
-                ix: 4
+                ]
               },
               o: {
                 a: 0,
-                k: 100,
-                ix: 5
+                k: 100
               },
               r: 1,
               bm: 0,
               nm: 'Fill 1',
-              mn: 'ADBE Vector Graphic - Fill',
               hd: false
             },
             {
@@ -14437,54 +13339,43 @@ export const singleClick= {
                       105.768
                     ]
                   }
-                ],
-                ix: 2
+                ]
               },
               a: {
                 a: 0,
                 k: [
                   0,
                   0
-                ],
-                ix: 1
+                ]
               },
               s: {
                 a: 0,
                 k: [
                   100,
                   100
-                ],
-                ix: 3
+                ]
               },
               r: {
                 a: 0,
-                k: 0,
-                ix: 6
+                k: 0
               },
               o: {
                 a: 0,
-                k: 100,
-                ix: 7
+                k: 100
               },
               sk: {
                 a: 0,
-                k: 0,
-                ix: 4
+                k: 0
               },
               sa: {
                 a: 0,
-                k: 0,
-                ix: 5
+                k: 0
               },
               nm: 'Transform'
             }
           ],
           nm: 'Feature Circle Far Left',
-          np: 3,
-          cix: 2,
           bm: 0,
-          ix: 12,
-          mn: 'ADBE Vector Group',
           hd: false
         },
         {
@@ -14498,32 +13389,27 @@ export const singleClick= {
                 k: [
                   544.633,
                   173.953
-                ],
-                ix: 2
+                ]
               },
               p: {
                 a: 0,
                 k: [
                   0,
                   0
-                ],
-                ix: 3
+                ]
               },
               r: {
                 a: 0,
-                k: 0,
-                ix: 4
+                k: 0
               },
               nm: 'Rectangle Path 1',
-              mn: 'ADBE Vector Shape - Rect',
               hd: false
             },
             {
               ty: 'gf',
               o: {
                 a: 0,
-                k: 100,
-                ix: 10
+                k: 100
               },
               r: 1,
               bm: 0,
@@ -14550,8 +13436,7 @@ export const singleClick= {
                     0.5,
                     1,
                     0
-                  ],
-                  ix: 9
+                  ]
                 }
               },
               s: {
@@ -14559,20 +13444,17 @@ export const singleClick= {
                 k: [
                   1405.506,
                   697.496
-                ],
-                ix: 5
+                ]
               },
               e: {
                 a: 0,
                 k: [
                   -268.268,
                   -98.955
-                ],
-                ix: 6
+                ]
               },
               t: 1,
               nm: 'Gradient Fill 1',
-              mn: 'ADBE Vector Graphic - G-Fill',
               hd: false
             },
             {
@@ -14610,54 +13492,43 @@ export const singleClick= {
                       -80.781
                     ]
                   }
-                ],
-                ix: 2
+                ]
               },
               a: {
                 a: 0,
                 k: [
                   0,
                   0
-                ],
-                ix: 1
+                ]
               },
               s: {
                 a: 0,
                 k: [
                   101.508,
                   141.691
-                ],
-                ix: 3
+                ]
               },
               r: {
                 a: 0,
-                k: 0,
-                ix: 6
+                k: 0
               },
               o: {
                 a: 0,
-                k: 100,
-                ix: 7
+                k: 100
               },
               sk: {
                 a: 0,
-                k: 0,
-                ix: 4
+                k: 0
               },
               sa: {
                 a: 0,
-                k: 0,
-                ix: 5
+                k: 0
               },
               nm: 'Transform'
             }
           ],
           nm: 'Hero',
-          np: 3,
-          cix: 2,
           bm: 0,
-          ix: 13,
-          mn: 'ADBE Vector Group',
           hd: false
         }
       ],
@@ -14673,16 +13544,6 @@ export const singleClick= {
       nm: 'Card-BG',
       sr: 1,
       ks: {
-        o: {
-          a: 0,
-          k: 100,
-          ix: 11
-        },
-        r: {
-          a: 0,
-          k: 0,
-          ix: 10
-        },
         p: {
           a: 1,
           k: [
@@ -14746,8 +13607,7 @@ export const singleClick= {
                 0
               ]
             }
-          ],
-          ix: 2
+          ]
         },
         a: {
           a: 0,
@@ -14755,8 +13615,7 @@ export const singleClick= {
             327.5,
             312,
             0
-          ],
-          ix: 1
+          ]
         },
         s: {
           a: 1,
@@ -14801,8 +13660,7 @@ export const singleClick= {
                 100
               ]
             }
-          ],
-          ix: 6
+          ]
         }
       },
       ao: 0,
@@ -14813,7 +13671,6 @@ export const singleClick= {
             {
               ind: 0,
               ty: 'sh',
-              ix: 1,
               ks: {
                 a: 0,
                 k: {
@@ -14920,11 +13777,9 @@ export const singleClick= {
                     ]
                   ],
                   c: true
-                },
-                ix: 2
+                }
               },
               nm: 'Path 1',
-              mn: 'ADBE Vector Shape - Group',
               hd: false
             },
             {
@@ -15091,18 +13946,15 @@ export const singleClick= {
                       1
                     ]
                   }
-                ],
-                ix: 4
+                ]
               },
               o: {
                 a: 0,
-                k: 100,
-                ix: 5
+                k: 100
               },
               r: 1,
               bm: 0,
               nm: 'Fill 1',
-              mn: 'ADBE Vector Graphic - Fill',
               hd: false
             },
             {
@@ -15112,54 +13964,43 @@ export const singleClick= {
                 k: [
                   327.25,
                   311.75
-                ],
-                ix: 2
+                ]
               },
               a: {
                 a: 0,
                 k: [
                   0,
                   0
-                ],
-                ix: 1
+                ]
               },
               s: {
                 a: 0,
                 k: [
                   100,
                   100
-                ],
-                ix: 3
+                ]
               },
               r: {
                 a: 0,
-                k: 0,
-                ix: 6
+                k: 0
               },
               o: {
                 a: 0,
-                k: 100,
-                ix: 7
+                k: 100
               },
               sk: {
                 a: 0,
-                k: 0,
-                ix: 4
+                k: 0
               },
               sa: {
                 a: 0,
-                k: 0,
-                ix: 5
+                k: 0
               },
               nm: 'Transform'
             }
           ],
           nm: 'Group 1',
-          np: 2,
-          cix: 2,
           bm: 0,
-          ix: 1,
-          mn: 'ADBE Vector Group',
           hd: false
         }
       ],
@@ -15176,16 +14017,6 @@ export const singleClick= {
       td: 1,
       sr: 1,
       ks: {
-        o: {
-          a: 0,
-          k: 100,
-          ix: 11
-        },
-        r: {
-          a: 0,
-          k: 0,
-          ix: 10
-        },
         p: {
           a: 1,
           k: [
@@ -15249,8 +14080,7 @@ export const singleClick= {
                 0
               ]
             }
-          ],
-          ix: 2
+          ]
         },
         a: {
           a: 0,
@@ -15258,8 +14088,7 @@ export const singleClick= {
             327.5,
             312,
             0
-          ],
-          ix: 1
+          ]
         },
         s: {
           a: 1,
@@ -15304,8 +14133,7 @@ export const singleClick= {
                 100
               ]
             }
-          ],
-          ix: 6
+          ]
         }
       },
       ao: 0,
@@ -15316,7 +14144,6 @@ export const singleClick= {
             {
               ind: 0,
               ty: 'sh',
-              ix: 1,
               ks: {
                 a: 0,
                 k: {
@@ -15423,11 +14250,9 @@ export const singleClick= {
                     ]
                   ],
                   c: true
-                },
-                ix: 2
+                }
               },
               nm: 'Path 1',
-              mn: 'ADBE Vector Shape - Group',
               hd: false
             },
             {
@@ -15519,18 +14344,15 @@ export const singleClick= {
                       1
                     ]
                   }
-                ],
-                ix: 4
+                ]
               },
               o: {
                 a: 0,
-                k: 100,
-                ix: 5
+                k: 100
               },
               r: 1,
               bm: 0,
               nm: 'Fill 1',
-              mn: 'ADBE Vector Graphic - Fill',
               hd: false
             },
             {
@@ -15540,54 +14362,43 @@ export const singleClick= {
                 k: [
                   327.25,
                   311.75
-                ],
-                ix: 2
+                ]
               },
               a: {
                 a: 0,
                 k: [
                   0,
                   0
-                ],
-                ix: 1
+                ]
               },
               s: {
                 a: 0,
                 k: [
                   100,
                   100
-                ],
-                ix: 3
+                ]
               },
               r: {
                 a: 0,
-                k: 0,
-                ix: 6
+                k: 0
               },
               o: {
                 a: 0,
-                k: 100,
-                ix: 7
+                k: 100
               },
               sk: {
                 a: 0,
-                k: 0,
-                ix: 4
+                k: 0
               },
               sa: {
                 a: 0,
-                k: 0,
-                ix: 5
+                k: 0
               },
               nm: 'Transform'
             }
           ],
           nm: 'Group 1',
-          np: 2,
-          cix: 2,
           bm: 0,
-          ix: 1,
-          mn: 'ADBE Vector Group',
           hd: false
         }
       ],
@@ -15604,42 +14415,13 @@ export const singleClick= {
       tt: 1,
       sr: 1,
       ks: {
-        o: {
-          a: 0,
-          k: 100,
-          ix: 11
-        },
-        r: {
-          a: 0,
-          k: 0,
-          ix: 10
-        },
         p: {
           a: 0,
           k: [
             460,
             430,
             0
-          ],
-          ix: 2
-        },
-        a: {
-          a: 0,
-          k: [
-            0,
-            0,
-            0
-          ],
-          ix: 1
-        },
-        s: {
-          a: 0,
-          k: [
-            100,
-            100,
-            100
-          ],
-          ix: 6
+          ]
         }
       },
       ao: 0,
@@ -15655,24 +14437,20 @@ export const singleClick= {
                 k: [
                   746.75,
                   740.273
-                ],
-                ix: 2
+                ]
               },
               p: {
                 a: 0,
                 k: [
                   0,
                   0
-                ],
-                ix: 3
+                ]
               },
               r: {
                 a: 0,
-                k: 0,
-                ix: 4
+                k: 0
               },
               nm: 'Rectangle Path 1',
-              mn: 'ADBE Vector Shape - Rect',
               hd: false
             },
             {
@@ -15684,18 +14462,15 @@ export const singleClick= {
                   0.756862745098,
                   0.835294117647,
                   1
-                ],
-                ix: 4
+                ]
               },
               o: {
                 a: 0,
-                k: 100,
-                ix: 5
+                k: 100
               },
               r: 1,
               bm: 0,
               nm: 'Fill 1',
-              mn: 'ADBE Vector Graphic - Fill',
               hd: false
             },
             {
@@ -15705,54 +14480,43 @@ export const singleClick= {
                 k: [
                   7.375,
                   8.137
-                ],
-                ix: 2
+                ]
               },
               a: {
                 a: 0,
                 k: [
                   0,
                   0
-                ],
-                ix: 1
+                ]
               },
               s: {
                 a: 0,
                 k: [
                   100,
                   100
-                ],
-                ix: 3
+                ]
               },
               r: {
                 a: 0,
-                k: 0,
-                ix: 6
+                k: 0
               },
               o: {
                 a: 0,
-                k: 100,
-                ix: 7
+                k: 100
               },
               sk: {
                 a: 0,
-                k: 0,
-                ix: 4
+                k: 0
               },
               sa: {
                 a: 0,
-                k: 0,
-                ix: 5
+                k: 0
               },
               nm: 'Transform'
             }
           ],
           nm: 'Rectangle 1',
-          np: 3,
-          cix: 2,
           bm: 0,
-          ix: 1,
-          mn: 'ADBE Vector Group',
           hd: false
         }
       ],
@@ -15768,24 +14532,13 @@ export const singleClick= {
       nm: 'Background Rectangle',
       sr: 1,
       ks: {
-        o: {
-          a: 0,
-          k: 100,
-          ix: 11
-        },
-        r: {
-          a: 0,
-          k: 0,
-          ix: 10
-        },
         p: {
           a: 0,
           k: [
             636,
             130,
             0
-          ],
-          ix: 2
+          ]
         },
         a: {
           a: 0,
@@ -15793,8 +14546,7 @@ export const singleClick= {
             182,
             -288,
             0
-          ],
-          ix: 1
+          ]
         },
         s: {
           a: 0,
@@ -15802,8 +14554,7 @@ export const singleClick= {
             107.424,
             84.184,
             100
-          ],
-          ix: 6
+          ]
         }
       },
       ao: 0,
@@ -15819,32 +14570,27 @@ export const singleClick= {
                 k: [
                   493.023,
                   194.828
-                ],
-                ix: 2
+                ]
               },
               p: {
                 a: 0,
                 k: [
                   0,
                   0
-                ],
-                ix: 3
+                ]
               },
               r: {
                 a: 0,
-                k: 0,
-                ix: 4
+                k: 0
               },
               nm: 'Rectangle Path 1',
-              mn: 'ADBE Vector Shape - Rect',
               hd: false
             },
             {
               ty: 'gf',
               o: {
                 a: 0,
-                k: 100,
-                ix: 10
+                k: 100
               },
               r: 1,
               bm: 0,
@@ -15857,7 +14603,7 @@ export const singleClick= {
                     0.922,
                     0.894,
                     0.929,
-                    0.5,
+                    0.371,
                     0.922,
                     0.894,
                     0.929,
@@ -15871,8 +14617,7 @@ export const singleClick= {
                     0.5,
                     1,
                     1
-                  ],
-                  ix: 9
+                  ]
                 }
               },
               s: {
@@ -15908,20 +14653,17 @@ export const singleClick= {
                       193.046
                     ]
                   }
-                ],
-                ix: 5
+                ]
               },
               e: {
                 a: 0,
                 k: [
                   289.841,
                   -698.468
-                ],
-                ix: 6
+                ]
               },
               t: 1,
               nm: 'Gradient Fill 1',
-              mn: 'ADBE Vector Graphic - G-Fill',
               hd: false
             },
             {
@@ -15931,54 +14673,43 @@ export const singleClick= {
                 k: [
                   177.941,
                   -284.25
-                ],
-                ix: 2
+                ]
               },
               a: {
                 a: 0,
                 k: [
                   0,
                   0
-                ],
-                ix: 1
+                ]
               },
               s: {
                 a: 0,
                 k: [
                   100,
                   100
-                ],
-                ix: 3
+                ]
               },
               r: {
                 a: 0,
-                k: 0,
-                ix: 6
+                k: 0
               },
               o: {
                 a: 0,
-                k: 100,
-                ix: 7
+                k: 100
               },
               sk: {
                 a: 0,
-                k: 0,
-                ix: 4
+                k: 0
               },
               sa: {
                 a: 0,
-                k: 0,
-                ix: 5
+                k: 0
               },
               nm: 'Transform'
             }
           ],
           nm: 'Rectangle 1',
-          np: 3,
-          cix: 2,
           bm: 0,
-          ix: 1,
-          mn: 'ADBE Vector Group',
           hd: false
         }
       ],
@@ -15996,13 +14727,7 @@ export const singleClick= {
       ks: {
         o: {
           a: 0,
-          k: 57,
-          ix: 11
-        },
-        r: {
-          a: 0,
-          k: 0,
-          ix: 10
+          k: 57
         },
         p: {
           a: 1,
@@ -16041,8 +14766,7 @@ export const singleClick= {
                 0
               ]
             }
-          ],
-          ix: 2
+          ]
         },
         a: {
           a: 0,
@@ -16050,17 +14774,7 @@ export const singleClick= {
             327.5,
             312,
             0
-          ],
-          ix: 1
-        },
-        s: {
-          a: 0,
-          k: [
-            100,
-            100,
-            100
-          ],
-          ix: 6
+          ]
         }
       },
       ao: 0,
@@ -16080,8 +14794,7 @@ export const singleClick= {
               ix: 1,
               v: {
                 a: 0,
-                k: 85,
-                ix: 1
+                k: 85
               }
             },
             {
@@ -16091,8 +14804,7 @@ export const singleClick= {
               ix: 2,
               v: {
                 a: 0,
-                k: 1,
-                ix: 2
+                k: 1
               }
             },
             {
@@ -16102,8 +14814,7 @@ export const singleClick= {
               ix: 3,
               v: {
                 a: 0,
-                k: 0,
-                ix: 3
+                k: 0
               }
             }
           ]
@@ -16116,7 +14827,6 @@ export const singleClick= {
             {
               ind: 0,
               ty: 'sh',
-              ix: 1,
               ks: {
                 a: 0,
                 k: {
@@ -16223,11 +14933,9 @@ export const singleClick= {
                     ]
                   ],
                   c: true
-                },
-                ix: 2
+                }
               },
               nm: 'Path 1',
-              mn: 'ADBE Vector Shape - Group',
               hd: false
             },
             {
@@ -16269,8 +14977,7 @@ export const singleClick= {
                       1
                     ]
                   }
-                ],
-                ix: 4
+                ]
               },
               o: {
                 a: 1,
@@ -16303,13 +15010,11 @@ export const singleClick= {
                       60
                     ]
                   }
-                ],
-                ix: 5
+                ]
               },
               r: 1,
               bm: 0,
               nm: 'Fill 1',
-              mn: 'ADBE Vector Graphic - Fill',
               hd: false
             },
             {
@@ -16319,54 +15024,43 @@ export const singleClick= {
                 k: [
                   327.25,
                   311.75
-                ],
-                ix: 2
+                ]
               },
               a: {
                 a: 0,
                 k: [
                   0,
                   0
-                ],
-                ix: 1
+                ]
               },
               s: {
                 a: 0,
                 k: [
                   100,
                   100
-                ],
-                ix: 3
+                ]
               },
               r: {
                 a: 0,
-                k: 0,
-                ix: 6
+                k: 0
               },
               o: {
                 a: 0,
-                k: 100,
-                ix: 7
+                k: 100
               },
               sk: {
                 a: 0,
-                k: 0,
-                ix: 4
+                k: 0
               },
               sa: {
                 a: 0,
-                k: 0,
-                ix: 5
+                k: 0
               },
               nm: 'Transform'
             }
           ],
           nm: 'Group 1',
-          np: 2,
-          cix: 2,
           bm: 0,
-          ix: 1,
-          mn: 'ADBE Vector Group',
           hd: false
         }
       ],
@@ -16382,24 +15076,13 @@ export const singleClick= {
       nm: 'Background Circle',
       sr: 1,
       ks: {
-        o: {
-          a: 0,
-          k: 100,
-          ix: 11
-        },
-        r: {
-          a: 0,
-          k: 0,
-          ix: 10
-        },
         p: {
           a: 0,
           k: [
             190,
             676,
             0
-          ],
-          ix: 2
+          ]
         },
         a: {
           a: 0,
@@ -16407,8 +15090,7 @@ export const singleClick= {
             -270,
             246,
             0
-          ],
-          ix: 1
+          ]
         },
         s: {
           a: 1,
@@ -16453,8 +15135,7 @@ export const singleClick= {
                 100
               ]
             }
-          ],
-          ix: 6
+          ]
         }
       },
       ao: 0,
@@ -16465,7 +15146,6 @@ export const singleClick= {
             {
               ind: 0,
               ty: 'sh',
-              ix: 1,
               ks: {
                 a: 0,
                 k: {
@@ -16524,19 +15204,16 @@ export const singleClick= {
                     ]
                   ],
                   c: true
-                },
-                ix: 2
+                }
               },
               nm: 'Path 1',
-              mn: 'ADBE Vector Shape - Group',
               hd: false
             },
             {
               ty: 'gf',
               o: {
                 a: 0,
-                k: 100,
-                ix: 10
+                k: 100
               },
               r: 1,
               bm: 0,
@@ -16557,8 +15234,7 @@ export const singleClick= {
                     0.996,
                     0.012,
                     0.345
-                  ],
-                  ix: 9
+                  ]
                 }
               },
               s: {
@@ -16566,20 +15242,17 @@ export const singleClick= {
                 k: [
                   159.367,
                   -30.57
-                ],
-                ix: 5
+                ]
               },
               e: {
                 a: 0,
                 k: [
                   -684.961,
                   -44.031
-                ],
-                ix: 6
+                ]
               },
               t: 1,
               nm: 'Gradient Fill 1',
-              mn: 'ADBE Vector Graphic - G-Fill',
               hd: false
             },
             {
@@ -16589,54 +15262,43 @@ export const singleClick= {
                 k: [
                   -270.633,
                   239.641
-                ],
-                ix: 2
+                ]
               },
               a: {
                 a: 0,
                 k: [
                   0,
                   0
-                ],
-                ix: 1
+                ]
               },
               s: {
                 a: 0,
                 k: [
                   100,
                   100
-                ],
-                ix: 3
+                ]
               },
               r: {
                 a: 0,
-                k: 0,
-                ix: 6
+                k: 0
               },
               o: {
                 a: 0,
-                k: 100,
-                ix: 7
+                k: 100
               },
               sk: {
                 a: 0,
-                k: 0,
-                ix: 4
+                k: 0
               },
               sa: {
                 a: 0,
-                k: 0,
-                ix: 5
+                k: 0
               },
               nm: 'Transform'
             }
           ],
           nm: 'Ellipse 1',
-          np: 3,
-          cix: 2,
           bm: 0,
-          ix: 1,
-          mn: 'ADBE Vector Group',
           hd: false
         }
       ],
