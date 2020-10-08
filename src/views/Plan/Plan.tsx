@@ -41,7 +41,6 @@ export const Plan: FC<Plan> = ({
   detailsLink,
   detailsLabel,
 }: Plan) => {
-  console.log(price);
   return (
     <Card
       sx={{ ...sx }}

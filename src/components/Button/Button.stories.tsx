@@ -16,9 +16,9 @@ const kinds = [`primary`, `ghost`, `success`, 'white', 'danger'];
 
 const options = kinds.map(kind => {
   return modes.map(mode => {
-    return schemas.map(schema => {
+    return schemas.map((schema, i) => {
       return (
-        <ThemeProvider theme={{ colorMode: mode }}>
+        <ThemeProvider key={i} theme={{ colorMode: mode }}>
           <Button kind={kind}>
             {schema} / {mode} / {kind}
           </Button>

@@ -13,9 +13,9 @@ export type Nav = {
 
 export const Nav: React.FC<Nav> = ({ navItems, kind, sx }: Nav) => {
   if (!navItems) return null;
-  const items = navItems.map(item => {
+  const items = navItems.map((item, i) => {
     const { label, href, kind } = item;
-    return <NavLink kind={kind} href={href} label={label} />;
+    return <NavLink key={i} kind={kind} href={href} label={label} />;
   });
 
   return (

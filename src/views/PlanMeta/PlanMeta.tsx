@@ -25,7 +25,6 @@ export const PlanMeta: FC<PlanMeta> = ({
   detailsLink,
 }: PlanMeta) => {
   if (!nodes) return null;
-  console.log(price);
   return (
     <Box
       sx={{

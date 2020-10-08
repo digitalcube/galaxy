@@ -12,8 +12,8 @@ export type Plans = {
 export const Plans: FC<Plans> = ({ nodes, sx }: Plans) => {
   if (!nodes) return null;
 
-  const items = nodes.map((node: Plan) => {
-    return <Plan {...node} />;
+  const items = nodes.map((node: Plan, i: number) => {
+    return <Plan key={i} {...node} />;
   });
 
   return (

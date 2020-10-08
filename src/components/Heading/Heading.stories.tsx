@@ -23,7 +23,6 @@ const headingSizes = Object.keys(shifter.text).map((size: Heading) => {
 });
 
 export const Sizes = () => {
-  console.log(Object.keys(shifter.text));
   return headingSizes;
 };
 
