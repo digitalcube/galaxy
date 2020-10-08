@@ -20,8 +20,8 @@ type Slides = {
 
 const slides = ({ nodes }: Slides) => {
   if (!nodes) return;
-  const i = nodes.map((node: Slides) => {
-    return <SwiperSlide>{node.node}</SwiperSlide>;
+  const i = nodes.map((node: Slides, i: number) => {
+    return <SwiperSlide key={i}>{node.node}</SwiperSlide>;
   });
 
   return i;

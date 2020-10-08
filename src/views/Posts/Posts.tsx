@@ -13,8 +13,8 @@ export type Posts = {
 export const Posts: FC<Posts> = ({ nodes, columns, variant, sx }: Posts) => {
   if (!nodes) return null;
 
-  const items = nodes.map((node: Post) => {
-    return <Post {...node} variant={variant} />;
+  const items = nodes.map((node: Post, i: number) => {
+    return <Post key={i} {...node} variant={variant} />;
   });
 
   return (

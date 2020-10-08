@@ -116,21 +116,21 @@ const Solution: FC<Solution> = ({
 export const Solutions: FC<Solutions> = ({ nodes }: Solutions) => {
   if (!nodes) return null;
 
-  const solutionsNav = nodes.map((node: Solutions) => {
+  const solutionsNav = nodes.map((node: Solutions, i: number) => {
     if (!node) return null;
     const label = node.solution?.title;
 
     return (
-      <Tab>
+      <Tab key={i}>
         <Link kind="ghost">{label}</Link>
       </Tab>
     );
   });
 
-  const solutions = nodes.map((node: Solutions) => {
+  const solutions = nodes.map((node: Solutions, i: number) => {
     const { solution, showcase } = node;
     return (
-      <TabPanel>
+      <TabPanel key={i}>
         <Grid columns={[1, null, null, null, 2]}>
           <ThemeProvider theme={{ colorMode: `dark` }}>
             <Solution {...solution} />
