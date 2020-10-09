@@ -66,30 +66,13 @@ export const dashboard = {
           nm: 'Guides',
           sr: 1,
           ks: {
-            o: {
-              a: 0,
-              k: 100,
-              ix: 11,
-            },
-            r: {
-              a: 0,
-              k: 0,
-              ix: 10,
-            },
             p: {
               a: 0,
               k: [971.5, 389, 0],
-              ix: 2,
             },
             a: {
               a: 0,
               k: [19.5, -16, 0],
-              ix: 1,
-            },
-            s: {
-              a: 0,
-              k: [100, 100, 100],
-              ix: 6,
             },
           },
           ao: 0,
@@ -119,7 +102,6 @@ export const dashboard = {
               a: {
                 a: 0,
                 k: [0, 0],
-                ix: 2,
               },
             },
             a: [],
@@ -136,30 +118,13 @@ export const dashboard = {
           nm: 'Account',
           sr: 1,
           ks: {
-            o: {
-              a: 0,
-              k: 100,
-              ix: 11,
-            },
-            r: {
-              a: 0,
-              k: 0,
-              ix: 10,
-            },
             p: {
               a: 0,
               k: [928.5, 389, 0],
-              ix: 2,
             },
             a: {
               a: 0,
               k: [19.5, -16, 0],
-              ix: 1,
-            },
-            s: {
-              a: 0,
-              k: [100, 100, 100],
-              ix: 6,
             },
           },
           ao: 0,
@@ -189,7 +154,6 @@ export const dashboard = {
               a: {
                 a: 0,
                 k: [0, 0],
-                ix: 2,
               },
             },
             a: [],
@@ -206,30 +170,13 @@ export const dashboard = {
           nm: 'Teams',
           sr: 1,
           ks: {
-            o: {
-              a: 0,
-              k: 100,
-              ix: 11,
-            },
-            r: {
-              a: 0,
-              k: 0,
-              ix: 10,
-            },
             p: {
               a: 0,
               k: [885.5, 389, 0],
-              ix: 2,
             },
             a: {
               a: 0,
               k: [19.5, -16, 0],
-              ix: 1,
-            },
-            s: {
-              a: 0,
-              k: [100, 100, 100],
-              ix: 6,
             },
           },
           ao: 0,
@@ -259,7 +206,6 @@ export const dashboard = {
               a: {
                 a: 0,
                 k: [0, 0],
-                ix: 2,
               },
             },
             a: [],
@@ -276,30 +222,13 @@ export const dashboard = {
           nm: 'Sites',
           sr: 1,
           ks: {
-            o: {
-              a: 0,
-              k: 100,
-              ix: 11,
-            },
-            r: {
-              a: 0,
-              k: 0,
-              ix: 10,
-            },
             p: {
               a: 0,
               k: [847, 389, 0],
-              ix: 2,
             },
             a: {
               a: 0,
               k: [19.5, -16, 0],
-              ix: 1,
-            },
-            s: {
-              a: 0,
-              k: [100, 100, 100],
-              ix: 6,
             },
           },
           ao: 0,
@@ -329,7 +258,6 @@ export const dashboard = {
               a: {
                 a: 0,
                 k: [0, 0],
-                ix: 2,
               },
             },
             a: [],
@@ -346,30 +274,9 @@ export const dashboard = {
           nm: 'Avatar',
           sr: 1,
           ks: {
-            o: {
-              a: 0,
-              k: 100,
-              ix: 11,
-            },
-            r: {
-              a: 0,
-              k: 0,
-              ix: 10,
-            },
             p: {
               a: 0,
               k: [720, 625, 0],
-              ix: 2,
-            },
-            a: {
-              a: 0,
-              k: [0, 0, 0],
-              ix: 1,
-            },
-            s: {
-              a: 0,
-              k: [100, 100, 100],
-              ix: 6,
             },
           },
           ao: 0,
@@ -380,7 +287,6 @@ export const dashboard = {
                 {
                   ind: 0,
                   ty: 'sh',
-                  ix: 1,
                   ks: {
                     a: 0,
                     k: {
@@ -404,10 +310,8 @@ export const dashboard = {
                       ],
                       c: true,
                     },
-                    ix: 2,
                   },
                   nm: 'Path 1',
-                  mn: 'ADBE Vector Shape - Group',
                   hd: false,
                 },
                 {
@@ -415,7 +319,6 @@ export const dashboard = {
                   o: {
                     a: 0,
                     k: 100,
-                    ix: 10,
                   },
                   r: 1,
                   bm: 0,
@@ -437,22 +340,18 @@ export const dashboard = {
                         0.97,
                         0.043,
                       ],
-                      ix: 9,
                     },
                   },
                   s: {
                     a: 0,
                     k: [-9.408, 5.616],
-                    ix: 5,
                   },
                   e: {
                     a: 0,
                     k: [13.369, -10.618],
-                    ix: 6,
                   },
                   t: 1,
                   nm: 'Gradient Fill 1',
-                  mn: 'ADBE Vector Graphic - G-Fill',
                   hd: false,
                 },
                 {
@@ -460,47 +359,36 @@ export const dashboard = {
                   p: {
                     a: 0,
                     k: [288.26, -235.618],
-                    ix: 2,
                   },
                   a: {
                     a: 0,
                     k: [0, 0],
-                    ix: 1,
                   },
                   s: {
                     a: 0,
                     k: [100, 100],
-                    ix: 3,
                   },
                   r: {
                     a: 0,
                     k: 0,
-                    ix: 6,
                   },
                   o: {
                     a: 0,
                     k: 100,
-                    ix: 7,
                   },
                   sk: {
                     a: 0,
                     k: 0,
-                    ix: 4,
                   },
                   sa: {
                     a: 0,
                     k: 0,
-                    ix: 5,
                   },
                   nm: 'Transform',
                 },
               ],
               nm: 'Ellipse 1',
-              np: 3,
-              cix: 2,
               bm: 0,
-              ix: 1,
-              mn: 'ADBE Vector Group',
               hd: false,
             },
           ],
@@ -523,30 +411,13 @@ export const dashboard = {
           td: 1,
           sr: 1,
           ks: {
-            o: {
-              a: 0,
-              k: 100,
-              ix: 11,
-            },
-            r: {
-              a: 0,
-              k: 0,
-              ix: 10,
-            },
             p: {
               a: 0,
               k: [-336, 55, 0],
-              ix: 2,
             },
             a: {
               a: 0,
               k: [-336, 55, 0],
-              ix: 1,
-            },
-            s: {
-              a: 0,
-              k: [100, 100, 100],
-              ix: 6,
             },
           },
           ao: 0,
@@ -560,20 +431,16 @@ export const dashboard = {
                   s: {
                     a: 0,
                     k: [241.199, 318.305],
-                    ix: 2,
                   },
                   p: {
                     a: 0,
                     k: [0, 0],
-                    ix: 3,
                   },
                   r: {
                     a: 0,
                     k: 8,
-                    ix: 4,
                   },
                   nm: 'Rectangle Path 1',
-                  mn: 'ADBE Vector Shape - Rect',
                   hd: false,
                 },
                 {
@@ -581,17 +448,14 @@ export const dashboard = {
                   c: {
                     a: 0,
                     k: [0.996078431373, 0.011764705882, 0.345098039216, 1],
-                    ix: 4,
                   },
                   o: {
                     a: 0,
                     k: 100,
-                    ix: 5,
                   },
                   r: 1,
                   bm: 0,
                   nm: 'Fill 1',
-                  mn: 'ADBE Vector Graphic - Fill',
                   hd: false,
                 },
                 {
@@ -599,47 +463,36 @@ export const dashboard = {
                   p: {
                     a: 0,
                     k: [-339.4, 46.152],
-                    ix: 2,
                   },
                   a: {
                     a: 0,
                     k: [0, 0],
-                    ix: 1,
                   },
                   s: {
                     a: 0,
                     k: [100, 100],
-                    ix: 3,
                   },
                   r: {
                     a: 0,
                     k: 0,
-                    ix: 6,
                   },
                   o: {
                     a: 0,
                     k: 100,
-                    ix: 7,
                   },
                   sk: {
                     a: 0,
                     k: 0,
-                    ix: 4,
                   },
                   sa: {
                     a: 0,
                     k: 0,
-                    ix: 5,
                   },
                   nm: 'Transform',
                 },
               ],
               nm: 'Rectangle 1',
-              np: 3,
-              cix: 2,
               bm: 0,
-              ix: 1,
-              mn: 'ADBE Vector Group',
               hd: false,
             },
           ],
@@ -658,30 +511,17 @@ export const dashboard = {
           refId: 'image_0',
           sr: 1,
           ks: {
-            o: {
-              a: 0,
-              k: 100,
-              ix: 11,
-            },
-            r: {
-              a: 0,
-              k: 0,
-              ix: 10,
-            },
             p: {
               a: 0,
               k: [-340, 73, 0],
-              ix: 2,
             },
             a: {
               a: 0,
               k: [177.5, 227.5, 0],
-              ix: 1,
             },
             s: {
               a: 0,
               k: [69.386, 69.386, 100],
-              ix: 6,
             },
           },
           ao: 0,
@@ -697,16 +537,6 @@ export const dashboard = {
           nm: 'Card 3 BG',
           sr: 1,
           ks: {
-            o: {
-              a: 0,
-              k: 100,
-              ix: 11,
-            },
-            r: {
-              a: 0,
-              k: 0,
-              ix: 10,
-            },
             p: {
               a: 1,
               k: [
@@ -729,17 +559,10 @@ export const dashboard = {
                   s: [897, 680, 0],
                 },
               ],
-              ix: 2,
             },
             a: {
               a: 0,
               k: [-336, 55, 0],
-              ix: 1,
-            },
-            s: {
-              a: 0,
-              k: [100, 100, 100],
-              ix: 6,
             },
           },
           ao: 0,
@@ -760,7 +583,6 @@ export const dashboard = {
                   v: {
                     a: 0,
                     k: [0.270588248968, 0.113725490868, 0.223529413342, 1],
-                    ix: 1,
                   },
                 },
                 {
@@ -771,7 +593,6 @@ export const dashboard = {
                   v: {
                     a: 0,
                     k: 24,
-                    ix: 2,
                   },
                 },
                 {
@@ -782,7 +603,6 @@ export const dashboard = {
                   v: {
                     a: 0,
                     k: 139,
-                    ix: 3,
                   },
                 },
                 {
@@ -793,7 +613,6 @@ export const dashboard = {
                   v: {
                     a: 0,
                     k: 0.75,
-                    ix: 4,
                   },
                 },
                 {
@@ -804,7 +623,6 @@ export const dashboard = {
                   v: {
                     a: 0,
                     k: 2,
-                    ix: 5,
                   },
                 },
                 {
@@ -815,7 +633,6 @@ export const dashboard = {
                   v: {
                     a: 0,
                     k: 0,
-                    ix: 6,
                   },
                 },
               ],
@@ -831,20 +648,16 @@ export const dashboard = {
                   s: {
                     a: 0,
                     k: [241.199, 318.305],
-                    ix: 2,
                   },
                   p: {
                     a: 0,
                     k: [0, 0],
-                    ix: 3,
                   },
                   r: {
                     a: 0,
                     k: 8,
-                    ix: 4,
                   },
                   nm: 'Rectangle Path 1',
-                  mn: 'ADBE Vector Shape - Rect',
                   hd: false,
                 },
                 {
@@ -852,17 +665,14 @@ export const dashboard = {
                   c: {
                     a: 0,
                     k: [0.996078431373, 1, 1, 1],
-                    ix: 4,
                   },
                   o: {
                     a: 0,
                     k: 100,
-                    ix: 5,
                   },
                   r: 1,
                   bm: 0,
                   nm: 'Fill 1',
-                  mn: 'ADBE Vector Graphic - Fill',
                   hd: false,
                 },
                 {
@@ -870,47 +680,36 @@ export const dashboard = {
                   p: {
                     a: 0,
                     k: [-339.4, 46.152],
-                    ix: 2,
                   },
                   a: {
                     a: 0,
                     k: [0, 0],
-                    ix: 1,
                   },
                   s: {
                     a: 0,
                     k: [100, 100],
-                    ix: 3,
                   },
                   r: {
                     a: 0,
                     k: 0,
-                    ix: 6,
                   },
                   o: {
                     a: 0,
                     k: 100,
-                    ix: 7,
                   },
                   sk: {
                     a: 0,
                     k: 0,
-                    ix: 4,
                   },
                   sa: {
                     a: 0,
                     k: 0,
-                    ix: 5,
                   },
                   nm: 'Transform',
                 },
               ],
               nm: 'Rectangle 1',
-              np: 3,
-              cix: 2,
               bm: 0,
-              ix: 1,
-              mn: 'ADBE Vector Group',
               hd: false,
             },
           ],
@@ -928,30 +727,13 @@ export const dashboard = {
           td: 1,
           sr: 1,
           ks: {
-            o: {
-              a: 0,
-              k: 100,
-              ix: 11,
-            },
-            r: {
-              a: 0,
-              k: 0,
-              ix: 10,
-            },
             p: {
               a: 0,
               k: [-336, 55, 0],
-              ix: 2,
             },
             a: {
               a: 0,
               k: [-336, 55, 0],
-              ix: 1,
-            },
-            s: {
-              a: 0,
-              k: [100, 100, 100],
-              ix: 6,
             },
           },
           ao: 0,
@@ -965,20 +747,16 @@ export const dashboard = {
                   s: {
                     a: 0,
                     k: [241.199, 318.305],
-                    ix: 2,
                   },
                   p: {
                     a: 0,
                     k: [0, 0],
-                    ix: 3,
                   },
                   r: {
                     a: 0,
                     k: 8,
-                    ix: 4,
                   },
                   nm: 'Rectangle Path 1',
-                  mn: 'ADBE Vector Shape - Rect',
                   hd: false,
                 },
                 {
@@ -986,17 +764,14 @@ export const dashboard = {
                   c: {
                     a: 0,
                     k: [0.996078431373, 1, 1, 1],
-                    ix: 4,
                   },
                   o: {
                     a: 0,
                     k: 100,
-                    ix: 5,
                   },
                   r: 1,
                   bm: 0,
                   nm: 'Fill 1',
-                  mn: 'ADBE Vector Graphic - Fill',
                   hd: false,
                 },
                 {
@@ -1004,47 +779,36 @@ export const dashboard = {
                   p: {
                     a: 0,
                     k: [-339.4, 46.152],
-                    ix: 2,
                   },
                   a: {
                     a: 0,
                     k: [0, 0],
-                    ix: 1,
                   },
                   s: {
                     a: 0,
                     k: [100, 100],
-                    ix: 3,
                   },
                   r: {
                     a: 0,
                     k: 0,
-                    ix: 6,
                   },
                   o: {
                     a: 0,
                     k: 100,
-                    ix: 7,
                   },
                   sk: {
                     a: 0,
                     k: 0,
-                    ix: 4,
                   },
                   sa: {
                     a: 0,
                     k: 0,
-                    ix: 5,
                   },
                   nm: 'Transform',
                 },
               ],
               nm: 'Rectangle 1',
-              np: 3,
-              cix: 2,
               bm: 0,
-              ix: 1,
-              mn: 'ADBE Vector Group',
               hd: false,
             },
           ],
@@ -1063,30 +827,17 @@ export const dashboard = {
           refId: 'image_1',
           sr: 1,
           ks: {
-            o: {
-              a: 0,
-              k: 100,
-              ix: 11,
-            },
-            r: {
-              a: 0,
-              k: 0,
-              ix: 10,
-            },
             p: {
               a: 0,
               k: [-341.5, 44, 0],
-              ix: 2,
             },
             a: {
               a: 0,
               k: [177.5, 226.5, 0],
-              ix: 1,
             },
             s: {
               a: 0,
               k: [70.095, 70.095, 100],
-              ix: 6,
             },
           },
           ao: 0,
@@ -1102,16 +853,6 @@ export const dashboard = {
           nm: 'Card 2 BG',
           sr: 1,
           ks: {
-            o: {
-              a: 0,
-              k: 100,
-              ix: 11,
-            },
-            r: {
-              a: 0,
-              k: 0,
-              ix: 10,
-            },
             p: {
               a: 1,
               k: [
@@ -1134,17 +875,10 @@ export const dashboard = {
                   s: [642, 680, 0],
                 },
               ],
-              ix: 2,
             },
             a: {
               a: 0,
               k: [-336, 55, 0],
-              ix: 1,
-            },
-            s: {
-              a: 0,
-              k: [100, 100, 100],
-              ix: 6,
             },
           },
           ao: 0,
@@ -1165,7 +899,6 @@ export const dashboard = {
                   v: {
                     a: 0,
                     k: [0.270588248968, 0.113725490868, 0.223529413342, 1],
-                    ix: 1,
                   },
                 },
                 {
@@ -1176,7 +909,6 @@ export const dashboard = {
                   v: {
                     a: 0,
                     k: 24,
-                    ix: 2,
                   },
                 },
                 {
@@ -1187,7 +919,6 @@ export const dashboard = {
                   v: {
                     a: 0,
                     k: 139,
-                    ix: 3,
                   },
                 },
                 {
@@ -1198,7 +929,6 @@ export const dashboard = {
                   v: {
                     a: 0,
                     k: 0.75,
-                    ix: 4,
                   },
                 },
                 {
@@ -1209,7 +939,6 @@ export const dashboard = {
                   v: {
                     a: 0,
                     k: 2,
-                    ix: 5,
                   },
                 },
                 {
@@ -1220,7 +949,6 @@ export const dashboard = {
                   v: {
                     a: 0,
                     k: 0,
-                    ix: 6,
                   },
                 },
               ],
@@ -1236,20 +964,16 @@ export const dashboard = {
                   s: {
                     a: 0,
                     k: [241.199, 318.305],
-                    ix: 2,
                   },
                   p: {
                     a: 0,
                     k: [0, 0],
-                    ix: 3,
                   },
                   r: {
                     a: 0,
                     k: 8,
-                    ix: 4,
                   },
                   nm: 'Rectangle Path 1',
-                  mn: 'ADBE Vector Shape - Rect',
                   hd: false,
                 },
                 {
@@ -1257,17 +981,14 @@ export const dashboard = {
                   c: {
                     a: 0,
                     k: [0.996078431373, 1, 1, 1],
-                    ix: 4,
                   },
                   o: {
                     a: 0,
                     k: 100,
-                    ix: 5,
                   },
                   r: 1,
                   bm: 0,
                   nm: 'Fill 1',
-                  mn: 'ADBE Vector Graphic - Fill',
                   hd: false,
                 },
                 {
@@ -1275,47 +996,36 @@ export const dashboard = {
                   p: {
                     a: 0,
                     k: [-339.4, 46.152],
-                    ix: 2,
                   },
                   a: {
                     a: 0,
                     k: [0, 0],
-                    ix: 1,
                   },
                   s: {
                     a: 0,
                     k: [100, 100],
-                    ix: 3,
                   },
                   r: {
                     a: 0,
                     k: 0,
-                    ix: 6,
                   },
                   o: {
                     a: 0,
                     k: 100,
-                    ix: 7,
                   },
                   sk: {
                     a: 0,
                     k: 0,
-                    ix: 4,
                   },
                   sa: {
                     a: 0,
                     k: 0,
-                    ix: 5,
                   },
                   nm: 'Transform',
                 },
               ],
               nm: 'Rectangle 1',
-              np: 3,
-              cix: 2,
               bm: 0,
-              ix: 1,
-              mn: 'ADBE Vector Group',
               hd: false,
             },
           ],
@@ -1333,30 +1043,13 @@ export const dashboard = {
           td: 1,
           sr: 1,
           ks: {
-            o: {
-              a: 0,
-              k: 100,
-              ix: 11,
-            },
-            r: {
-              a: 0,
-              k: 0,
-              ix: 10,
-            },
             p: {
               a: 0,
               k: [-339, 53, 0],
-              ix: 2,
             },
             a: {
               a: 0,
               k: [-339, 53, 0],
-              ix: 1,
-            },
-            s: {
-              a: 0,
-              k: [100, 100, 100],
-              ix: 6,
             },
           },
           ao: 0,
@@ -1370,20 +1063,16 @@ export const dashboard = {
                   s: {
                     a: 0,
                     k: [241.199, 318.305],
-                    ix: 2,
                   },
                   p: {
                     a: 0,
                     k: [0, 0],
-                    ix: 3,
                   },
                   r: {
                     a: 0,
                     k: 8,
-                    ix: 4,
                   },
                   nm: 'Rectangle Path 1',
-                  mn: 'ADBE Vector Shape - Rect',
                   hd: false,
                 },
                 {
@@ -1391,17 +1080,14 @@ export const dashboard = {
                   c: {
                     a: 0,
                     k: [0.996078431373, 0.011764705882, 0.345098039216, 1],
-                    ix: 4,
                   },
                   o: {
                     a: 0,
                     k: 100,
-                    ix: 5,
                   },
                   r: 1,
                   bm: 0,
                   nm: 'Fill 1',
-                  mn: 'ADBE Vector Graphic - Fill',
                   hd: false,
                 },
                 {
@@ -1409,47 +1095,36 @@ export const dashboard = {
                   p: {
                     a: 0,
                     k: [-339.4, 46.152],
-                    ix: 2,
                   },
                   a: {
                     a: 0,
                     k: [0, 0],
-                    ix: 1,
                   },
                   s: {
                     a: 0,
                     k: [100, 100],
-                    ix: 3,
                   },
                   r: {
                     a: 0,
                     k: 0,
-                    ix: 6,
                   },
                   o: {
                     a: 0,
                     k: 100,
-                    ix: 7,
                   },
                   sk: {
                     a: 0,
                     k: 0,
-                    ix: 4,
                   },
                   sa: {
                     a: 0,
                     k: 0,
-                    ix: 5,
                   },
                   nm: 'Transform',
                 },
               ],
               nm: 'Rectangle 1',
-              np: 3,
-              cix: 2,
               bm: 0,
-              ix: 1,
-              mn: 'ADBE Vector Group',
               hd: false,
             },
           ],
@@ -1468,30 +1143,17 @@ export const dashboard = {
           refId: 'image_2',
           sr: 1,
           ks: {
-            o: {
-              a: 0,
-              k: 100,
-              ix: 11,
-            },
-            r: {
-              a: 0,
-              k: 0,
-              ix: 10,
-            },
             p: {
               a: 0,
               k: [-339.5, 38, 0],
-              ix: 2,
             },
             a: {
               a: 0,
               k: [177.5, 226.5, 0],
-              ix: 1,
             },
             s: {
               a: 0,
               k: [73.068, 73.068, 100],
-              ix: 6,
             },
           },
           ao: 0,
@@ -1507,16 +1169,6 @@ export const dashboard = {
           nm: 'Card 1 BG',
           sr: 1,
           ks: {
-            o: {
-              a: 0,
-              k: 100,
-              ix: 11,
-            },
-            r: {
-              a: 0,
-              k: 0,
-              ix: 10,
-            },
             p: {
               a: 1,
               k: [
@@ -1539,17 +1191,10 @@ export const dashboard = {
                   s: [382, 679, 0],
                 },
               ],
-              ix: 2,
             },
             a: {
               a: 0,
               k: [-339, 53, 0],
-              ix: 1,
-            },
-            s: {
-              a: 0,
-              k: [100, 100, 100],
-              ix: 6,
             },
           },
           ao: 0,
@@ -1570,7 +1215,6 @@ export const dashboard = {
                   v: {
                     a: 0,
                     k: [0.270588248968, 0.113725490868, 0.223529413342, 1],
-                    ix: 1,
                   },
                 },
                 {
@@ -1581,7 +1225,6 @@ export const dashboard = {
                   v: {
                     a: 0,
                     k: 24,
-                    ix: 2,
                   },
                 },
                 {
@@ -1592,7 +1235,6 @@ export const dashboard = {
                   v: {
                     a: 0,
                     k: 139,
-                    ix: 3,
                   },
                 },
                 {
@@ -1603,7 +1245,6 @@ export const dashboard = {
                   v: {
                     a: 0,
                     k: 0.75,
-                    ix: 4,
                   },
                 },
                 {
@@ -1614,7 +1255,6 @@ export const dashboard = {
                   v: {
                     a: 0,
                     k: 2,
-                    ix: 5,
                   },
                 },
                 {
@@ -1625,7 +1265,6 @@ export const dashboard = {
                   v: {
                     a: 0,
                     k: 0,
-                    ix: 6,
                   },
                 },
               ],
@@ -1641,20 +1280,16 @@ export const dashboard = {
                   s: {
                     a: 0,
                     k: [241.199, 318.305],
-                    ix: 2,
                   },
                   p: {
                     a: 0,
                     k: [0, 0],
-                    ix: 3,
                   },
                   r: {
                     a: 0,
                     k: 8,
-                    ix: 4,
                   },
                   nm: 'Rectangle Path 1',
-                  mn: 'ADBE Vector Shape - Rect',
                   hd: false,
                 },
                 {
@@ -1662,17 +1297,14 @@ export const dashboard = {
                   c: {
                     a: 0,
                     k: [0.996078431606, 1, 1, 1],
-                    ix: 4,
                   },
                   o: {
                     a: 0,
                     k: 100,
-                    ix: 5,
                   },
                   r: 1,
                   bm: 0,
                   nm: 'Fill 1',
-                  mn: 'ADBE Vector Graphic - Fill',
                   hd: false,
                 },
                 {
@@ -1680,47 +1312,36 @@ export const dashboard = {
                   p: {
                     a: 0,
                     k: [-339.4, 46.152],
-                    ix: 2,
                   },
                   a: {
                     a: 0,
                     k: [0, 0],
-                    ix: 1,
                   },
                   s: {
                     a: 0,
                     k: [100, 100],
-                    ix: 3,
                   },
                   r: {
                     a: 0,
                     k: 0,
-                    ix: 6,
                   },
                   o: {
                     a: 0,
                     k: 100,
-                    ix: 7,
                   },
                   sk: {
                     a: 0,
                     k: 0,
-                    ix: 4,
                   },
                   sa: {
                     a: 0,
                     k: 0,
-                    ix: 5,
                   },
                   nm: 'Transform',
                 },
               ],
               nm: 'Rectangle 1',
-              np: 3,
-              cix: 2,
               bm: 0,
-              ix: 1,
-              mn: 'ADBE Vector Group',
               hd: false,
             },
           ],
@@ -1738,30 +1359,13 @@ export const dashboard = {
           td: 1,
           sr: 1,
           ks: {
-            o: {
-              a: 0,
-              k: 100,
-              ix: 11,
-            },
-            r: {
-              a: 0,
-              k: 0,
-              ix: 10,
-            },
             p: {
               a: 0,
               k: [-336, 55, 0],
-              ix: 2,
             },
             a: {
               a: 0,
               k: [-336, 55, 0],
-              ix: 1,
-            },
-            s: {
-              a: 0,
-              k: [100, 100, 100],
-              ix: 6,
             },
           },
           ao: 0,
@@ -1775,20 +1379,16 @@ export const dashboard = {
                   s: {
                     a: 0,
                     k: [241.199, 318.305],
-                    ix: 2,
                   },
                   p: {
                     a: 0,
                     k: [0, 0],
-                    ix: 3,
                   },
                   r: {
                     a: 0,
                     k: 8,
-                    ix: 4,
                   },
                   nm: 'Rectangle Path 1',
-                  mn: 'ADBE Vector Shape - Rect',
                   hd: false,
                 },
                 {
@@ -1796,17 +1396,14 @@ export const dashboard = {
                   c: {
                     a: 0,
                     k: [0.996078431373, 0.011764705882, 0.345098039216, 1],
-                    ix: 4,
                   },
                   o: {
                     a: 0,
                     k: 100,
-                    ix: 5,
                   },
                   r: 1,
                   bm: 0,
                   nm: 'Fill 1',
-                  mn: 'ADBE Vector Graphic - Fill',
                   hd: false,
                 },
                 {
@@ -1814,47 +1411,36 @@ export const dashboard = {
                   p: {
                     a: 0,
                     k: [-339.4, 46.152],
-                    ix: 2,
                   },
                   a: {
                     a: 0,
                     k: [0, 0],
-                    ix: 1,
                   },
                   s: {
                     a: 0,
                     k: [100, 100],
-                    ix: 3,
                   },
                   r: {
                     a: 0,
                     k: 0,
-                    ix: 6,
                   },
                   o: {
                     a: 0,
                     k: 100,
-                    ix: 7,
                   },
                   sk: {
                     a: 0,
                     k: 0,
-                    ix: 4,
                   },
                   sa: {
                     a: 0,
                     k: 0,
-                    ix: 5,
                   },
                   nm: 'Transform',
                 },
               ],
               nm: 'Rectangle 1',
-              np: 3,
-              cix: 2,
               bm: 0,
-              ix: 1,
-              mn: 'ADBE Vector Group',
               hd: false,
             },
           ],
@@ -1873,30 +1459,17 @@ export const dashboard = {
           refId: 'image_3',
           sr: 1,
           ks: {
-            o: {
-              a: 0,
-              k: 100,
-              ix: 11,
-            },
-            r: {
-              a: 0,
-              k: 0,
-              ix: 10,
-            },
             p: {
               a: 0,
               k: [-339.5, -21.622, 0],
-              ix: 2,
             },
             a: {
               a: 0,
               k: [176.5, 127.5, 0],
-              ix: 1,
             },
             s: {
               a: 0,
               k: [67.989, 69.804, 100],
-              ix: 6,
             },
           },
           ao: 0,
@@ -1912,16 +1485,6 @@ export const dashboard = {
           nm: 'Card 4',
           sr: 1,
           ks: {
-            o: {
-              a: 0,
-              k: 100,
-              ix: 11,
-            },
-            r: {
-              a: 0,
-              k: 0,
-              ix: 10,
-            },
             p: {
               a: 1,
               k: [
@@ -1944,17 +1507,10 @@ export const dashboard = {
                   s: [385, 1010, 0],
                 },
               ],
-              ix: 2,
             },
             a: {
               a: 0,
               k: [-336, 55, 0],
-              ix: 1,
-            },
-            s: {
-              a: 0,
-              k: [100, 100, 100],
-              ix: 6,
             },
           },
           ao: 0,
@@ -1975,7 +1531,6 @@ export const dashboard = {
                   v: {
                     a: 0,
                     k: [0.270588248968, 0.113725490868, 0.223529413342, 1],
-                    ix: 1,
                   },
                 },
                 {
@@ -1986,7 +1541,6 @@ export const dashboard = {
                   v: {
                     a: 0,
                     k: 24,
-                    ix: 2,
                   },
                 },
                 {
@@ -1997,7 +1551,6 @@ export const dashboard = {
                   v: {
                     a: 0,
                     k: 139,
-                    ix: 3,
                   },
                 },
                 {
@@ -2008,7 +1561,6 @@ export const dashboard = {
                   v: {
                     a: 0,
                     k: 0.75,
-                    ix: 4,
                   },
                 },
                 {
@@ -2019,7 +1571,6 @@ export const dashboard = {
                   v: {
                     a: 0,
                     k: 2,
-                    ix: 5,
                   },
                 },
                 {
@@ -2030,7 +1581,6 @@ export const dashboard = {
                   v: {
                     a: 0,
                     k: 0,
-                    ix: 6,
                   },
                 },
               ],
@@ -2046,20 +1596,16 @@ export const dashboard = {
                   s: {
                     a: 0,
                     k: [241.199, 318.305],
-                    ix: 2,
                   },
                   p: {
                     a: 0,
                     k: [0, 0],
-                    ix: 3,
                   },
                   r: {
                     a: 0,
                     k: 8,
-                    ix: 4,
                   },
                   nm: 'Rectangle Path 1',
-                  mn: 'ADBE Vector Shape - Rect',
                   hd: false,
                 },
                 {
@@ -2067,17 +1613,14 @@ export const dashboard = {
                   c: {
                     a: 0,
                     k: [0.996078431373, 1, 1, 1],
-                    ix: 4,
                   },
                   o: {
                     a: 0,
                     k: 100,
-                    ix: 5,
                   },
                   r: 1,
                   bm: 0,
                   nm: 'Fill 1',
-                  mn: 'ADBE Vector Graphic - Fill',
                   hd: false,
                 },
                 {
@@ -2085,47 +1628,36 @@ export const dashboard = {
                   p: {
                     a: 0,
                     k: [-339.4, 46.152],
-                    ix: 2,
                   },
                   a: {
                     a: 0,
                     k: [0, 0],
-                    ix: 1,
                   },
                   s: {
                     a: 0,
                     k: [100, 100],
-                    ix: 3,
                   },
                   r: {
                     a: 0,
                     k: 0,
-                    ix: 6,
                   },
                   o: {
                     a: 0,
                     k: 100,
-                    ix: 7,
                   },
                   sk: {
                     a: 0,
                     k: 0,
-                    ix: 4,
                   },
                   sa: {
                     a: 0,
                     k: 0,
-                    ix: 5,
                   },
                   nm: 'Transform',
                 },
               ],
               nm: 'Rectangle 1',
-              np: 3,
-              cix: 2,
               bm: 0,
-              ix: 1,
-              mn: 'ADBE Vector Group',
               hd: false,
             },
           ],
@@ -2143,30 +1675,13 @@ export const dashboard = {
           td: 1,
           sr: 1,
           ks: {
-            o: {
-              a: 0,
-              k: 100,
-              ix: 11,
-            },
-            r: {
-              a: 0,
-              k: 0,
-              ix: 10,
-            },
             p: {
               a: 0,
               k: [-336, 55, 0],
-              ix: 2,
             },
             a: {
               a: 0,
               k: [-336, 55, 0],
-              ix: 1,
-            },
-            s: {
-              a: 0,
-              k: [100, 100, 100],
-              ix: 6,
             },
           },
           ao: 0,
@@ -2180,20 +1695,16 @@ export const dashboard = {
                   s: {
                     a: 0,
                     k: [241.199, 318.305],
-                    ix: 2,
                   },
                   p: {
                     a: 0,
                     k: [0, 0],
-                    ix: 3,
                   },
                   r: {
                     a: 0,
                     k: 8,
-                    ix: 4,
                   },
                   nm: 'Rectangle Path 1',
-                  mn: 'ADBE Vector Shape - Rect',
                   hd: false,
                 },
                 {
@@ -2201,17 +1712,14 @@ export const dashboard = {
                   c: {
                     a: 0,
                     k: [0.996078431373, 0.011764705882, 0.345098039216, 1],
-                    ix: 4,
                   },
                   o: {
                     a: 0,
                     k: 100,
-                    ix: 5,
                   },
                   r: 1,
                   bm: 0,
                   nm: 'Fill 1',
-                  mn: 'ADBE Vector Graphic - Fill',
                   hd: false,
                 },
                 {
@@ -2219,47 +1727,36 @@ export const dashboard = {
                   p: {
                     a: 0,
                     k: [-339.4, 46.152],
-                    ix: 2,
                   },
                   a: {
                     a: 0,
                     k: [0, 0],
-                    ix: 1,
                   },
                   s: {
                     a: 0,
                     k: [100, 100],
-                    ix: 3,
                   },
                   r: {
                     a: 0,
                     k: 0,
-                    ix: 6,
                   },
                   o: {
                     a: 0,
                     k: 100,
-                    ix: 7,
                   },
                   sk: {
                     a: 0,
                     k: 0,
-                    ix: 4,
                   },
                   sa: {
                     a: 0,
                     k: 0,
-                    ix: 5,
                   },
                   nm: 'Transform',
                 },
               ],
               nm: 'Rectangle 1',
-              np: 3,
-              cix: 2,
               bm: 0,
-              ix: 1,
-              mn: 'ADBE Vector Group',
               hd: false,
             },
           ],
@@ -2278,30 +1775,17 @@ export const dashboard = {
           refId: 'image_4',
           sr: 1,
           ks: {
-            o: {
-              a: 0,
-              k: 100,
-              ix: 11,
-            },
-            r: {
-              a: 0,
-              k: 0,
-              ix: 10,
-            },
             p: {
               a: 0,
               k: [-339.5, -17.5, 0],
-              ix: 2,
             },
             a: {
               a: 0,
               k: [176.5, 127.5, 0],
-              ix: 1,
             },
             s: {
               a: 0,
               k: [69.405, 75.294, 100],
-              ix: 6,
             },
           },
           ao: 0,
@@ -2317,16 +1801,6 @@ export const dashboard = {
           nm: 'Card 5 BG',
           sr: 1,
           ks: {
-            o: {
-              a: 0,
-              k: 100,
-              ix: 11,
-            },
-            r: {
-              a: 0,
-              k: 0,
-              ix: 10,
-            },
             p: {
               a: 1,
               k: [
@@ -2349,17 +1823,10 @@ export const dashboard = {
                   s: [635, 1010, 0],
                 },
               ],
-              ix: 2,
             },
             a: {
               a: 0,
               k: [-336, 55, 0],
-              ix: 1,
-            },
-            s: {
-              a: 0,
-              k: [100, 100, 100],
-              ix: 6,
             },
           },
           ao: 0,
@@ -2380,7 +1847,6 @@ export const dashboard = {
                   v: {
                     a: 0,
                     k: [0.270588248968, 0.113725490868, 0.223529413342, 1],
-                    ix: 1,
                   },
                 },
                 {
@@ -2391,7 +1857,6 @@ export const dashboard = {
                   v: {
                     a: 0,
                     k: 24,
-                    ix: 2,
                   },
                 },
                 {
@@ -2402,7 +1867,6 @@ export const dashboard = {
                   v: {
                     a: 0,
                     k: 139,
-                    ix: 3,
                   },
                 },
                 {
@@ -2413,7 +1877,6 @@ export const dashboard = {
                   v: {
                     a: 0,
                     k: 0.75,
-                    ix: 4,
                   },
                 },
                 {
@@ -2424,7 +1887,6 @@ export const dashboard = {
                   v: {
                     a: 0,
                     k: 2,
-                    ix: 5,
                   },
                 },
                 {
@@ -2435,7 +1897,6 @@ export const dashboard = {
                   v: {
                     a: 0,
                     k: 0,
-                    ix: 6,
                   },
                 },
               ],
@@ -2451,20 +1912,16 @@ export const dashboard = {
                   s: {
                     a: 0,
                     k: [241.199, 318.305],
-                    ix: 2,
                   },
                   p: {
                     a: 0,
                     k: [0, 0],
-                    ix: 3,
                   },
                   r: {
                     a: 0,
                     k: 8,
-                    ix: 4,
                   },
                   nm: 'Rectangle Path 1',
-                  mn: 'ADBE Vector Shape - Rect',
                   hd: false,
                 },
                 {
@@ -2472,17 +1929,14 @@ export const dashboard = {
                   c: {
                     a: 0,
                     k: [0.996078431373, 1, 1, 1],
-                    ix: 4,
                   },
                   o: {
                     a: 0,
                     k: 100,
-                    ix: 5,
                   },
                   r: 1,
                   bm: 0,
                   nm: 'Fill 1',
-                  mn: 'ADBE Vector Graphic - Fill',
                   hd: false,
                 },
                 {
@@ -2490,47 +1944,36 @@ export const dashboard = {
                   p: {
                     a: 0,
                     k: [-339.4, 46.152],
-                    ix: 2,
                   },
                   a: {
                     a: 0,
                     k: [0, 0],
-                    ix: 1,
                   },
                   s: {
                     a: 0,
                     k: [100, 100],
-                    ix: 3,
                   },
                   r: {
                     a: 0,
                     k: 0,
-                    ix: 6,
                   },
                   o: {
                     a: 0,
                     k: 100,
-                    ix: 7,
                   },
                   sk: {
                     a: 0,
                     k: 0,
-                    ix: 4,
                   },
                   sa: {
                     a: 0,
                     k: 0,
-                    ix: 5,
                   },
                   nm: 'Transform',
                 },
               ],
               nm: 'Rectangle 1',
-              np: 3,
-              cix: 2,
               bm: 0,
-              ix: 1,
-              mn: 'ADBE Vector Group',
               hd: false,
             },
           ],
@@ -2548,30 +1991,13 @@ export const dashboard = {
           td: 1,
           sr: 1,
           ks: {
-            o: {
-              a: 0,
-              k: 100,
-              ix: 11,
-            },
-            r: {
-              a: 0,
-              k: 0,
-              ix: 10,
-            },
             p: {
               a: 0,
               k: [-336, 55, 0],
-              ix: 2,
             },
             a: {
               a: 0,
               k: [-336, 55, 0],
-              ix: 1,
-            },
-            s: {
-              a: 0,
-              k: [100, 100, 100],
-              ix: 6,
             },
           },
           ao: 0,
@@ -2585,20 +2011,16 @@ export const dashboard = {
                   s: {
                     a: 0,
                     k: [241.199, 318.305],
-                    ix: 2,
                   },
                   p: {
                     a: 0,
                     k: [0, 0],
-                    ix: 3,
                   },
                   r: {
                     a: 0,
                     k: 8,
-                    ix: 4,
                   },
                   nm: 'Rectangle Path 1',
-                  mn: 'ADBE Vector Shape - Rect',
                   hd: false,
                 },
                 {
@@ -2606,17 +2028,14 @@ export const dashboard = {
                   c: {
                     a: 0,
                     k: [0.996078431373, 0.011764705882, 0.345098039216, 1],
-                    ix: 4,
                   },
                   o: {
                     a: 0,
                     k: 100,
-                    ix: 5,
                   },
                   r: 1,
                   bm: 0,
                   nm: 'Fill 1',
-                  mn: 'ADBE Vector Graphic - Fill',
                   hd: false,
                 },
                 {
@@ -2624,47 +2043,36 @@ export const dashboard = {
                   p: {
                     a: 0,
                     k: [-339.4, 46.152],
-                    ix: 2,
                   },
                   a: {
                     a: 0,
                     k: [0, 0],
-                    ix: 1,
                   },
                   s: {
                     a: 0,
                     k: [100, 100],
-                    ix: 3,
                   },
                   r: {
                     a: 0,
                     k: 0,
-                    ix: 6,
                   },
                   o: {
                     a: 0,
                     k: 100,
-                    ix: 7,
                   },
                   sk: {
                     a: 0,
                     k: 0,
-                    ix: 4,
                   },
                   sa: {
                     a: 0,
                     k: 0,
-                    ix: 5,
                   },
                   nm: 'Transform',
                 },
               ],
               nm: 'Rectangle 1',
-              np: 3,
-              cix: 2,
               bm: 0,
-              ix: 1,
-              mn: 'ADBE Vector Group',
               hd: false,
             },
           ],
@@ -2683,30 +2091,17 @@ export const dashboard = {
           refId: 'image_5',
           sr: 1,
           ks: {
-            o: {
-              a: 0,
-              k: 100,
-              ix: 11,
-            },
-            r: {
-              a: 0,
-              k: 0,
-              ix: 10,
-            },
             p: {
               a: 0,
               k: [-340, -22, 0],
-              ix: 2,
             },
             a: {
               a: 0,
               k: [177, 127.5, 0],
-              ix: 1,
             },
             s: {
               a: 0,
               k: [71.186, 73.333, 100],
-              ix: 6,
             },
           },
           ao: 0,
@@ -2722,16 +2117,6 @@ export const dashboard = {
           nm: 'Card 6 BG',
           sr: 1,
           ks: {
-            o: {
-              a: 0,
-              k: 100,
-              ix: 11,
-            },
-            r: {
-              a: 0,
-              k: 0,
-              ix: 10,
-            },
             p: {
               a: 1,
               k: [
@@ -2754,17 +2139,10 @@ export const dashboard = {
                   s: [897, 1010, 0],
                 },
               ],
-              ix: 2,
             },
             a: {
               a: 0,
               k: [-336, 55, 0],
-              ix: 1,
-            },
-            s: {
-              a: 0,
-              k: [100, 100, 100],
-              ix: 6,
             },
           },
           ao: 0,
@@ -2785,7 +2163,6 @@ export const dashboard = {
                   v: {
                     a: 0,
                     k: [0.270588248968, 0.113725490868, 0.223529413342, 1],
-                    ix: 1,
                   },
                 },
                 {
@@ -2796,7 +2173,6 @@ export const dashboard = {
                   v: {
                     a: 0,
                     k: 24,
-                    ix: 2,
                   },
                 },
                 {
@@ -2807,7 +2183,6 @@ export const dashboard = {
                   v: {
                     a: 0,
                     k: 139,
-                    ix: 3,
                   },
                 },
                 {
@@ -2818,7 +2193,6 @@ export const dashboard = {
                   v: {
                     a: 0,
                     k: 0.75,
-                    ix: 4,
                   },
                 },
                 {
@@ -2829,7 +2203,6 @@ export const dashboard = {
                   v: {
                     a: 0,
                     k: 2,
-                    ix: 5,
                   },
                 },
                 {
@@ -2840,7 +2213,6 @@ export const dashboard = {
                   v: {
                     a: 0,
                     k: 0,
-                    ix: 6,
                   },
                 },
               ],
@@ -2856,20 +2228,16 @@ export const dashboard = {
                   s: {
                     a: 0,
                     k: [241.199, 318.305],
-                    ix: 2,
                   },
                   p: {
                     a: 0,
                     k: [0, 0],
-                    ix: 3,
                   },
                   r: {
                     a: 0,
                     k: 8,
-                    ix: 4,
                   },
                   nm: 'Rectangle Path 1',
-                  mn: 'ADBE Vector Shape - Rect',
                   hd: false,
                 },
                 {
@@ -2877,17 +2245,14 @@ export const dashboard = {
                   c: {
                     a: 0,
                     k: [0.996078431373, 1, 1, 1],
-                    ix: 4,
                   },
                   o: {
                     a: 0,
                     k: 100,
-                    ix: 5,
                   },
                   r: 1,
                   bm: 0,
                   nm: 'Fill 1',
-                  mn: 'ADBE Vector Graphic - Fill',
                   hd: false,
                 },
                 {
@@ -2895,47 +2260,36 @@ export const dashboard = {
                   p: {
                     a: 0,
                     k: [-339.4, 46.152],
-                    ix: 2,
                   },
                   a: {
                     a: 0,
                     k: [0, 0],
-                    ix: 1,
                   },
                   s: {
                     a: 0,
                     k: [100, 100],
-                    ix: 3,
                   },
                   r: {
                     a: 0,
                     k: 0,
-                    ix: 6,
                   },
                   o: {
                     a: 0,
                     k: 100,
-                    ix: 7,
                   },
                   sk: {
                     a: 0,
                     k: 0,
-                    ix: 4,
                   },
                   sa: {
                     a: 0,
                     k: 0,
-                    ix: 5,
                   },
                   nm: 'Transform',
                 },
               ],
               nm: 'Rectangle 1',
-              np: 3,
-              cix: 2,
               bm: 0,
-              ix: 1,
-              mn: 'ADBE Vector Group',
               hd: false,
             },
           ],
@@ -2971,16 +2325,6 @@ export const dashboard = {
       nm: 'Sites',
       sr: 1,
       ks: {
-        o: {
-          a: 0,
-          k: 100,
-          ix: 11,
-        },
-        r: {
-          a: 0,
-          k: 0,
-          ix: 10,
-        },
         p: {
           a: 1,
           k: [
@@ -3003,17 +2347,14 @@ export const dashboard = {
               s: [281.25, 452.625, 0],
             },
           ],
-          ix: 2,
         },
         a: {
           a: 0,
           k: [27.551, -8.122, 0],
-          ix: 1,
         },
         s: {
           a: 0,
           k: [92.556, 98.5, 100],
-          ix: 6,
         },
       },
       ao: 0,
@@ -3043,7 +2384,6 @@ export const dashboard = {
           a: {
             a: 0,
             k: [0, 0],
-            ix: 2,
           },
         },
         a: [],
@@ -3080,12 +2420,6 @@ export const dashboard = {
               s: [100],
             },
           ],
-          ix: 11,
-        },
-        r: {
-          a: 0,
-          k: 0,
-          ix: 10,
         },
         p: {
           a: 1,
@@ -3109,17 +2443,14 @@ export const dashboard = {
               s: [271.25, 392.25, 0],
             },
           ],
-          ix: 2,
         },
         a: {
           a: 0,
           k: [291, 294, 0],
-          ix: 1,
         },
         s: {
           a: 0,
           k: [4.922, 4.922, 100],
-          ix: 6,
         },
       },
       ao: 0,
@@ -3130,7 +2461,6 @@ export const dashboard = {
             {
               ind: 0,
               ty: 'sh',
-              ix: 1,
               ks: {
                 a: 0,
                 k: {
@@ -3154,16 +2484,13 @@ export const dashboard = {
                   ],
                   c: true,
                 },
-                ix: 2,
               },
               nm: 'Path 1',
-              mn: 'ADBE Vector Shape - Group',
               hd: false,
             },
             {
               ind: 1,
               ty: 'sh',
-              ix: 2,
               ks: {
                 a: 0,
                 k: {
@@ -3187,16 +2514,13 @@ export const dashboard = {
                   ],
                   c: true,
                 },
-                ix: 2,
               },
               nm: 'Path 2',
-              mn: 'ADBE Vector Shape - Group',
               hd: false,
             },
             {
               ind: 2,
               ty: 'sh',
-              ix: 3,
               ks: {
                 a: 0,
                 k: {
@@ -3220,16 +2544,13 @@ export const dashboard = {
                   ],
                   c: true,
                 },
-                ix: 2,
               },
               nm: 'Path 3',
-              mn: 'ADBE Vector Shape - Group',
               hd: false,
             },
             {
               ind: 3,
               ty: 'sh',
-              ix: 4,
               ks: {
                 a: 0,
                 k: {
@@ -3250,16 +2571,13 @@ export const dashboard = {
                   ],
                   c: true,
                 },
-                ix: 2,
               },
               nm: 'Path 4',
-              mn: 'ADBE Vector Shape - Group',
               hd: false,
             },
             {
               ind: 4,
               ty: 'sh',
-              ix: 5,
               ks: {
                 a: 0,
                 k: {
@@ -3280,17 +2598,14 @@ export const dashboard = {
                   ],
                   c: true,
                 },
-                ix: 2,
               },
               nm: 'Path 5',
-              mn: 'ADBE Vector Shape - Group',
               hd: false,
             },
             {
               ty: 'mm',
               mm: 1,
               nm: 'Merge Paths 1',
-              mn: 'ADBE Vector Filter - Merge',
               hd: false,
             },
             {
@@ -3298,17 +2613,14 @@ export const dashboard = {
               c: {
                 a: 0,
                 k: [0.972999961703, 0.039000002543, 0.356999984442, 1],
-                ix: 4,
               },
               o: {
                 a: 0,
                 k: 100,
-                ix: 5,
               },
               r: 1,
               bm: 0,
               nm: 'Fill 1',
-              mn: 'ADBE Vector Graphic - Fill',
               hd: false,
             },
             {
@@ -3316,47 +2628,36 @@ export const dashboard = {
               p: {
                 a: 0,
                 k: [296.851, 282.085],
-                ix: 2,
               },
               a: {
                 a: 0,
                 k: [0, 0],
-                ix: 1,
               },
               s: {
                 a: 0,
                 k: [100, 100],
-                ix: 3,
               },
               r: {
                 a: 0,
                 k: 0,
-                ix: 6,
               },
               o: {
                 a: 0,
                 k: 100,
-                ix: 7,
               },
               sk: {
                 a: 0,
                 k: 0,
-                ix: 4,
               },
               sa: {
                 a: 0,
                 k: 0,
-                ix: 5,
               },
               nm: 'Transform',
             },
           ],
           nm: 'Group 1',
-          np: 7,
-          cix: 2,
           bm: 0,
-          ix: 1,
-          mn: 'ADBE Vector Group',
           hd: false,
         },
       ],
@@ -3393,12 +2694,6 @@ export const dashboard = {
               s: [100],
             },
           ],
-          ix: 11,
-        },
-        r: {
-          a: 0,
-          k: 0,
-          ix: 10,
         },
         p: {
           a: 1,
@@ -3422,17 +2717,10 @@ export const dashboard = {
               s: [720, 625, 0],
             },
           ],
-          ix: 2,
         },
         a: {
           a: 0,
           k: [720, 625, 0],
-          ix: 1,
-        },
-        s: {
-          a: 0,
-          k: [100, 100, 100],
-          ix: 6,
         },
       },
       ao: 0,
@@ -3470,12 +2758,6 @@ export const dashboard = {
               s: [100],
             },
           ],
-          ix: 11,
-        },
-        r: {
-          a: 0,
-          k: 0,
-          ix: 10,
         },
         p: {
           a: 1,
@@ -3499,17 +2781,10 @@ export const dashboard = {
               s: [144, 743, 0],
             },
           ],
-          ix: 2,
         },
         a: {
           a: 0,
           k: [-568, 94, 0],
-          ix: 1,
-        },
-        s: {
-          a: 0,
-          k: [100, 100, 100],
-          ix: 6,
         },
       },
       ao: 0,
@@ -3520,7 +2795,6 @@ export const dashboard = {
             {
               ind: 0,
               ty: 'sh',
-              ix: 1,
               ks: {
                 a: 0,
                 k: {
@@ -3544,10 +2818,8 @@ export const dashboard = {
                   ],
                   c: true,
                 },
-                ix: 2,
               },
               nm: 'Path 1',
-              mn: 'ADBE Vector Shape - Group',
               hd: false,
             },
             {
@@ -3555,17 +2827,14 @@ export const dashboard = {
               c: {
                 a: 0,
                 k: [0.996078431373, 0.011764705882, 0.345098039216, 1],
-                ix: 4,
               },
               o: {
                 a: 0,
                 k: 100,
-                ix: 5,
               },
               r: 1,
               bm: 0,
               nm: 'Fill 1',
-              mn: 'ADBE Vector Graphic - Fill',
               hd: false,
             },
             {
@@ -3573,47 +2842,36 @@ export const dashboard = {
               p: {
                 a: 0,
                 k: [-569.879, 93.711],
-                ix: 2,
               },
               a: {
                 a: 0,
                 k: [0, 0],
-                ix: 1,
               },
               s: {
                 a: 0,
                 k: [100, 100],
-                ix: 3,
               },
               r: {
                 a: 0,
                 k: 0,
-                ix: 6,
               },
               o: {
                 a: 0,
                 k: 100,
-                ix: 7,
               },
               sk: {
                 a: 0,
                 k: 0,
-                ix: 4,
               },
               sa: {
                 a: 0,
                 k: 0,
-                ix: 5,
               },
               nm: 'Transform',
             },
           ],
           nm: 'Ellipse 1',
-          np: 3,
-          cix: 2,
           bm: 0,
-          ix: 1,
-          mn: 'ADBE Vector Group',
           hd: false,
         },
       ],
@@ -3629,15 +2887,9 @@ export const dashboard = {
       nm: 'Rectangle',
       sr: 1,
       ks: {
-        o: {
-          a: 0,
-          k: 100,
-          ix: 11,
-        },
         r: {
           a: 0,
           k: 6,
-          ix: 10,
         },
         p: {
           a: 1,
@@ -3661,17 +2913,14 @@ export const dashboard = {
               s: [1291, 323, 0],
             },
           ],
-          ix: 2,
         },
         a: {
           a: 0,
           k: [600, -328, 0],
-          ix: 1,
         },
         s: {
           a: 0,
           k: [93.69, 93.003, 100],
-          ix: 6,
         },
       },
       ao: 0,
@@ -3685,20 +2934,16 @@ export const dashboard = {
               s: {
                 a: 0,
                 k: [70.031, 175.688],
-                ix: 2,
               },
               p: {
                 a: 0,
                 k: [0, 0],
-                ix: 3,
               },
               r: {
                 a: 0,
                 k: 0,
-                ix: 4,
               },
               nm: 'Rectangle Path 1',
-              mn: 'ADBE Vector Shape - Rect',
               hd: false,
             },
             {
@@ -3706,17 +2951,14 @@ export const dashboard = {
               c: {
                 a: 0,
                 k: [0.996078431373, 0.011764705882, 0.345098039216, 1],
-                ix: 4,
               },
               o: {
                 a: 0,
                 k: 100,
-                ix: 5,
               },
               r: 1,
               bm: 0,
               nm: 'Fill 1',
-              mn: 'ADBE Vector Graphic - Fill',
               hd: false,
             },
             {
@@ -3724,47 +2966,36 @@ export const dashboard = {
               p: {
                 a: 0,
                 k: [599.016, -329.156],
-                ix: 2,
               },
               a: {
                 a: 0,
                 k: [0, 0],
-                ix: 1,
               },
               s: {
                 a: 0,
                 k: [100, 100],
-                ix: 3,
               },
               r: {
                 a: 0,
                 k: 0,
-                ix: 6,
               },
               o: {
                 a: 0,
                 k: 100,
-                ix: 7,
               },
               sk: {
                 a: 0,
                 k: 0,
-                ix: 4,
               },
               sa: {
                 a: 0,
                 k: 0,
-                ix: 5,
               },
               nm: 'Transform',
             },
           ],
           nm: 'Rectangle 1',
-          np: 3,
-          cix: 2,
           bm: 0,
-          ix: 1,
-          mn: 'ADBE Vector Group',
           hd: false,
         },
       ],
@@ -3800,12 +3031,10 @@ export const dashboard = {
               s: [100],
             },
           ],
-          ix: 11,
         },
         r: {
           a: 0,
           k: 44,
-          ix: 10,
         },
         p: {
           a: 1,
@@ -3829,17 +3058,10 @@ export const dashboard = {
               s: [1254, 889, 0],
             },
           ],
-          ix: 2,
         },
         a: {
           a: 0,
           k: [550, 242, 0],
-          ix: 1,
-        },
-        s: {
-          a: 0,
-          k: [100, 100, 100],
-          ix: 6,
         },
       },
       ao: 0,
@@ -3853,20 +3075,16 @@ export const dashboard = {
               s: {
                 a: 0,
                 k: [94.664, 94.664],
-                ix: 2,
               },
               p: {
                 a: 0,
                 k: [0, 0],
-                ix: 3,
               },
               r: {
                 a: 0,
                 k: 0,
-                ix: 4,
               },
               nm: 'Rectangle Path 1',
-              mn: 'ADBE Vector Shape - Rect',
               hd: false,
             },
             {
@@ -3874,17 +3092,14 @@ export const dashboard = {
               c: {
                 a: 0,
                 k: [0.996078431373, 0.011764705882, 0.345098039216, 1],
-                ix: 4,
               },
               o: {
                 a: 0,
                 k: 100,
-                ix: 5,
               },
               r: 1,
               bm: 0,
               nm: 'Fill 1',
-              mn: 'ADBE Vector Graphic - Fill',
               hd: false,
             },
             {
@@ -3892,47 +3107,36 @@ export const dashboard = {
               p: {
                 a: 0,
                 k: [547.332, 240.332],
-                ix: 2,
               },
               a: {
                 a: 0,
                 k: [0, 0],
-                ix: 1,
               },
               s: {
                 a: 0,
                 k: [100, 100],
-                ix: 3,
               },
               r: {
                 a: 0,
                 k: 0,
-                ix: 6,
               },
               o: {
                 a: 0,
                 k: 100,
-                ix: 7,
               },
               sk: {
                 a: 0,
                 k: 0,
-                ix: 4,
               },
               sa: {
                 a: 0,
                 k: 0,
-                ix: 5,
               },
               nm: 'Transform',
             },
           ],
           nm: 'Rectangle 1',
-          np: 3,
-          cix: 2,
           bm: 0,
-          ix: 1,
-          mn: 'ADBE Vector Group',
           hd: false,
         },
       ],
@@ -3948,30 +3152,17 @@ export const dashboard = {
       nm: 'Browser Top',
       sr: 1,
       ks: {
-        o: {
-          a: 0,
-          k: 100,
-          ix: 11,
-        },
-        r: {
-          a: 0,
-          k: 0,
-          ix: 10,
-        },
         p: {
           a: 0,
           k: [636, 309, 0],
-          ix: 2,
         },
         a: {
           a: 0,
           k: [-15.176, -254.627, 0],
-          ix: 1,
         },
         s: {
           a: 0,
           k: [118.605, 118.605, 100],
-          ix: 6,
         },
       },
       ao: 0,
@@ -3982,7 +3173,6 @@ export const dashboard = {
             {
               ind: 0,
               ty: 'sh',
-              ix: 1,
               ks: {
                 a: 0,
                 k: {
@@ -4006,10 +3196,8 @@ export const dashboard = {
                   ],
                   c: true,
                 },
-                ix: 2,
               },
               nm: 'Path 1',
-              mn: 'ADBE Vector Shape - Group',
               hd: false,
             },
             {
@@ -4017,17 +3205,14 @@ export const dashboard = {
               c: {
                 a: 0,
                 k: [0.866666666667, 0.850980392157, 0.854901960784, 1],
-                ix: 4,
               },
               o: {
                 a: 0,
                 k: 100,
-                ix: 5,
               },
               r: 1,
               bm: 0,
               nm: 'Fill 1',
-              mn: 'ADBE Vector Graphic - Fill',
               hd: false,
             },
             {
@@ -4054,22 +3239,18 @@ export const dashboard = {
                     s: [-310.094, -230.263],
                   },
                 ],
-                ix: 2,
               },
               a: {
                 a: 0,
                 k: [0, 0],
-                ix: 1,
               },
               s: {
                 a: 0,
                 k: [49.218, 49.218],
-                ix: 3,
               },
               r: {
                 a: 0,
                 k: 0,
-                ix: 6,
               },
               o: {
                 a: 1,
@@ -4091,27 +3272,20 @@ export const dashboard = {
                     s: [100],
                   },
                 ],
-                ix: 7,
               },
               sk: {
                 a: 0,
                 k: 0,
-                ix: 4,
               },
               sa: {
                 a: 0,
                 k: 0,
-                ix: 5,
               },
               nm: 'Transform',
             },
           ],
           nm: 'Dot Right',
-          np: 3,
-          cix: 2,
           bm: 0,
-          ix: 1,
-          mn: 'ADBE Vector Group',
           hd: false,
         },
         {
@@ -4120,7 +3294,6 @@ export const dashboard = {
             {
               ind: 0,
               ty: 'sh',
-              ix: 1,
               ks: {
                 a: 0,
                 k: {
@@ -4144,10 +3317,8 @@ export const dashboard = {
                   ],
                   c: true,
                 },
-                ix: 2,
               },
               nm: 'Path 1',
-              mn: 'ADBE Vector Shape - Group',
               hd: false,
             },
             {
@@ -4155,17 +3326,14 @@ export const dashboard = {
               c: {
                 a: 0,
                 k: [0.866666666667, 0.850980392157, 0.854901960784, 1],
-                ix: 4,
               },
               o: {
                 a: 0,
                 k: 100,
-                ix: 5,
               },
               r: 1,
               bm: 0,
               nm: 'Fill 1',
-              mn: 'ADBE Vector Graphic - Fill',
               hd: false,
             },
             {
@@ -4192,22 +3360,18 @@ export const dashboard = {
                     s: [-355.792, -230.263],
                   },
                 ],
-                ix: 2,
               },
               a: {
                 a: 0,
                 k: [0, 0],
-                ix: 1,
               },
               s: {
                 a: 0,
                 k: [49.218, 49.218],
-                ix: 3,
               },
               r: {
                 a: 0,
                 k: 0,
-                ix: 6,
               },
               o: {
                 a: 1,
@@ -4229,27 +3393,20 @@ export const dashboard = {
                     s: [100],
                   },
                 ],
-                ix: 7,
               },
               sk: {
                 a: 0,
                 k: 0,
-                ix: 4,
               },
               sa: {
                 a: 0,
                 k: 0,
-                ix: 5,
               },
               nm: 'Transform',
             },
           ],
           nm: 'Dot Center',
-          np: 3,
-          cix: 2,
           bm: 0,
-          ix: 2,
-          mn: 'ADBE Vector Group',
           hd: false,
         },
         {
@@ -4258,7 +3415,6 @@ export const dashboard = {
             {
               ind: 0,
               ty: 'sh',
-              ix: 1,
               ks: {
                 a: 0,
                 k: {
@@ -4282,10 +3438,8 @@ export const dashboard = {
                   ],
                   c: true,
                 },
-                ix: 2,
               },
               nm: 'Path 1',
-              mn: 'ADBE Vector Shape - Group',
               hd: false,
             },
             {
@@ -4293,17 +3447,14 @@ export const dashboard = {
               c: {
                 a: 0,
                 k: [0.866666666667, 0.850980392157, 0.854901960784, 1],
-                ix: 4,
               },
               o: {
                 a: 0,
                 k: 100,
-                ix: 5,
               },
               r: 1,
               bm: 0,
               nm: 'Fill 1',
-              mn: 'ADBE Vector Graphic - Fill',
               hd: false,
             },
             {
@@ -4330,22 +3481,18 @@ export const dashboard = {
                     s: [-399.271, -230.263],
                   },
                 ],
-                ix: 2,
               },
               a: {
                 a: 0,
                 k: [0, 0],
-                ix: 1,
               },
               s: {
                 a: 0,
                 k: [49.218, 49.218],
-                ix: 3,
               },
               r: {
                 a: 0,
                 k: 0,
-                ix: 6,
               },
               o: {
                 a: 1,
@@ -4367,27 +3514,20 @@ export const dashboard = {
                     s: [100],
                   },
                 ],
-                ix: 7,
               },
               sk: {
                 a: 0,
                 k: 0,
-                ix: 4,
               },
               sa: {
                 a: 0,
                 k: 0,
-                ix: 5,
               },
               nm: 'Transform',
             },
           ],
           nm: 'Dot Left',
-          np: 3,
-          cix: 2,
           bm: 0,
-          ix: 3,
-          mn: 'ADBE Vector Group',
           hd: false,
         },
         {
@@ -4398,17 +3538,14 @@ export const dashboard = {
               c: {
                 a: 0,
                 k: [0.270588235294, 0.113725490196, 0.223529411765, 1],
-                ix: 4,
               },
               o: {
                 a: 0,
                 k: 100,
-                ix: 5,
               },
               r: 1,
               bm: 0,
               nm: 'Fill 1',
-              mn: 'ADBE Vector Graphic - Fill',
               hd: false,
             },
             {
@@ -4416,47 +3553,36 @@ export const dashboard = {
               p: {
                 a: 0,
                 k: [0, 0],
-                ix: 2,
               },
               a: {
                 a: 0,
                 k: [0, 0],
-                ix: 1,
               },
               s: {
                 a: 0,
                 k: [100, 100],
-                ix: 3,
               },
               r: {
                 a: 0,
                 k: 0,
-                ix: 6,
               },
               o: {
                 a: 0,
                 k: 100,
-                ix: 7,
               },
               sk: {
                 a: 0,
                 k: 0,
-                ix: 4,
               },
               sa: {
                 a: 0,
                 k: 0,
-                ix: 5,
               },
               nm: 'Transform',
             },
           ],
           nm: 'Shape 1',
-          np: 2,
-          cix: 2,
           bm: 0,
-          ix: 4,
-          mn: 'ADBE Vector Group',
           hd: false,
         },
         {
@@ -4468,20 +3594,16 @@ export const dashboard = {
               s: {
                 a: 0,
                 k: [827.145, 43.254],
-                ix: 2,
               },
               p: {
                 a: 0,
                 k: [0, 0],
-                ix: 3,
               },
               r: {
                 a: 0,
                 k: 0,
-                ix: 4,
               },
               nm: 'Rectangle Path 1',
-              mn: 'ADBE Vector Shape - Rect',
               hd: false,
             },
             {
@@ -4489,17 +3611,14 @@ export const dashboard = {
               c: {
                 a: 0,
                 k: [0.341176470588, 0.105882352941, 0.321568627451, 1],
-                ix: 4,
               },
               o: {
                 a: 0,
                 k: 100,
-                ix: 5,
               },
               r: 1,
               bm: 0,
               nm: 'Fill 1',
-              mn: 'ADBE Vector Graphic - Fill',
               hd: false,
             },
             {
@@ -4507,12 +3626,10 @@ export const dashboard = {
               p: {
                 a: 0,
                 k: [-433.65, -230.827],
-                ix: 2,
               },
               a: {
                 a: 0,
                 k: [-413.788, 0],
-                ix: 1,
               },
               s: {
                 a: 1,
@@ -4534,12 +3651,10 @@ export const dashboard = {
                     s: [100.487, 97.991],
                   },
                 ],
-                ix: 3,
               },
               r: {
                 a: 0,
                 k: 0,
-                ix: 6,
               },
               o: {
                 a: 1,
@@ -4561,27 +3676,20 @@ export const dashboard = {
                     s: [100],
                   },
                 ],
-                ix: 7,
               },
               sk: {
                 a: 0,
                 k: 0,
-                ix: 4,
               },
               sa: {
                 a: 0,
                 k: 0,
-                ix: 5,
               },
               nm: 'Transform',
             },
           ],
           nm: 'Rectangle 1',
-          np: 3,
-          cix: 2,
           bm: 0,
-          ix: 5,
-          mn: 'ADBE Vector Group',
           hd: false,
         },
       ],
@@ -4598,30 +3706,17 @@ export const dashboard = {
       td: 1,
       sr: 1,
       ks: {
-        o: {
-          a: 0,
-          k: 100,
-          ix: 11,
-        },
-        r: {
-          a: 0,
-          k: 0,
-          ix: 10,
-        },
         p: {
           a: 0,
           k: [630, 1033, 0],
-          ix: 2,
         },
         a: {
           a: 0,
           k: [-1.993, 173.455, 0],
-          ix: 1,
         },
         s: {
           a: 0,
           k: [200.667, 196.016, 100],
-          ix: 6,
         },
       },
       ao: 0,
@@ -4635,20 +3730,16 @@ export const dashboard = {
               s: {
                 a: 0,
                 k: [490, 344],
-                ix: 2,
               },
               p: {
                 a: 0,
                 k: [0, 0],
-                ix: 3,
               },
               r: {
                 a: 0,
                 k: 10,
-                ix: 4,
               },
               nm: 'Rectangle Path 1',
-              mn: 'ADBE Vector Shape - Rect',
               hd: false,
             },
             {
@@ -4656,17 +3747,14 @@ export const dashboard = {
               c: {
                 a: 0,
                 k: [0.960784313725, 0.960784313725, 0.960784313725, 1],
-                ix: 4,
               },
               o: {
                 a: 0,
                 k: 100,
-                ix: 5,
               },
               r: 1,
               bm: 0,
               nm: 'Fill 1',
-              mn: 'ADBE Vector Graphic - Fill',
               hd: false,
             },
             {
@@ -4674,47 +3762,36 @@ export const dashboard = {
               p: {
                 a: 0,
                 k: [-1, 0],
-                ix: 2,
               },
               a: {
                 a: 0,
                 k: [0, 0],
-                ix: 1,
               },
               s: {
                 a: 0,
                 k: [100, 100],
-                ix: 3,
               },
               r: {
                 a: 0,
                 k: 0,
-                ix: 6,
               },
               o: {
                 a: 0,
                 k: 100,
-                ix: 7,
               },
               sk: {
                 a: 0,
                 k: 0,
-                ix: 4,
               },
               sa: {
                 a: 0,
                 k: 0,
-                ix: 5,
               },
               nm: 'Transform',
             },
           ],
           nm: 'Rectangle 1',
-          np: 3,
-          cix: 2,
           bm: 0,
-          ix: 1,
-          mn: 'ADBE Vector Group',
           hd: false,
         },
       ],
@@ -4732,30 +3809,13 @@ export const dashboard = {
       refId: 'comp_1',
       sr: 1,
       ks: {
-        o: {
-          a: 0,
-          k: 100,
-          ix: 11,
-        },
-        r: {
-          a: 0,
-          k: 0,
-          ix: 10,
-        },
         p: {
           a: 0,
           k: [720, 625, 0],
-          ix: 2,
         },
         a: {
           a: 0,
           k: [720, 625, 0],
-          ix: 1,
-        },
-        s: {
-          a: 0,
-          k: [100, 100, 100],
-          ix: 6,
         },
       },
       ao: 0,
@@ -4774,30 +3834,13 @@ export const dashboard = {
       parent: 12,
       sr: 1,
       ks: {
-        o: {
-          a: 0,
-          k: 100,
-          ix: 11,
-        },
-        r: {
-          a: 0,
-          k: 0,
-          ix: 10,
-        },
         p: {
           a: 0,
           k: [251, -138, 0],
-          ix: 2,
         },
         a: {
           a: 0,
           k: [19.5, -16, 0],
-          ix: 1,
-        },
-        s: {
-          a: 0,
-          k: [100, 100, 100],
-          ix: 6,
         },
       },
       ao: 0,
@@ -4827,7 +3870,6 @@ export const dashboard = {
           a: {
             a: 0,
             k: [0, 0],
-            ix: 2,
           },
         },
         a: [],
@@ -4844,16 +3886,6 @@ export const dashboard = {
       nm: 'Button BG',
       sr: 1,
       ks: {
-        o: {
-          a: 0,
-          k: 100,
-          ix: 11,
-        },
-        r: {
-          a: 0,
-          k: 0,
-          ix: 10,
-        },
         p: {
           a: 1,
           k: [
@@ -4876,17 +3908,10 @@ export const dashboard = {
               s: [970.5, 487, 0],
             },
           ],
-          ix: 2,
         },
         a: {
           a: 0,
           k: [256, -138, 0],
-          ix: 1,
-        },
-        s: {
-          a: 0,
-          k: [100, 100, 100],
-          ix: 6,
         },
       },
       ao: 0,
@@ -4900,20 +3925,16 @@ export const dashboard = {
               s: {
                 a: 0,
                 k: [87.752, 31.289],
-                ix: 2,
               },
               p: {
                 a: 0,
                 k: [0, 0],
-                ix: 3,
               },
               r: {
                 a: 0,
                 k: 0,
-                ix: 4,
               },
               nm: 'Rectangle Path 1',
-              mn: 'ADBE Vector Shape - Rect',
               hd: false,
             },
             {
@@ -4921,17 +3942,14 @@ export const dashboard = {
               c: {
                 a: 0,
                 k: [0.341176470588, 0.105882352941, 0.321568627451, 1],
-                ix: 4,
               },
               o: {
                 a: 0,
                 k: 100,
-                ix: 5,
               },
               r: 1,
               bm: 0,
               nm: 'Fill 1',
-              mn: 'ADBE Vector Graphic - Fill',
               hd: false,
             },
             {
@@ -4939,47 +3957,36 @@ export const dashboard = {
               p: {
                 a: 0,
                 k: [251.376, -137.355],
-                ix: 2,
               },
               a: {
                 a: 0,
                 k: [0, 0],
-                ix: 1,
               },
               s: {
                 a: 0,
                 k: [100, 100],
-                ix: 3,
               },
               r: {
                 a: 0,
                 k: 0,
-                ix: 6,
               },
               o: {
                 a: 0,
                 k: 100,
-                ix: 7,
               },
               sk: {
                 a: 0,
                 k: 0,
-                ix: 4,
               },
               sa: {
                 a: 0,
                 k: 0,
-                ix: 5,
               },
               nm: 'Transform',
             },
           ],
           nm: 'Rectangle 1',
-          np: 3,
-          cix: 2,
           bm: 0,
-          ix: 1,
-          mn: 'ADBE Vector Group',
           hd: false,
         },
       ],
@@ -4995,25 +4002,13 @@ export const dashboard = {
       nm: 'Site BG',
       sr: 1,
       ks: {
-        o: {
-          a: 0,
-          k: 100,
-          ix: 11,
-        },
-        r: {
-          a: 0,
-          k: 0,
-          ix: 10,
-        },
         p: {
           a: 0,
           k: [630, 1033, 0],
-          ix: 2,
         },
         a: {
           a: 0,
           k: [-1.993, 173.455, 0],
-          ix: 1,
         },
         s: {
           a: 1,
@@ -5035,7 +4030,6 @@ export const dashboard = {
               s: [200.667, 196.016, 100],
             },
           ],
-          ix: 6,
         },
       },
       ao: 0,
@@ -5049,20 +4043,16 @@ export const dashboard = {
               s: {
                 a: 0,
                 k: [490, 344],
-                ix: 2,
               },
               p: {
                 a: 0,
                 k: [0, 0],
-                ix: 3,
               },
               r: {
                 a: 0,
                 k: 10,
-                ix: 4,
               },
               nm: 'Rectangle Path 1',
-              mn: 'ADBE Vector Shape - Rect',
               hd: false,
             },
             {
@@ -5070,17 +4060,14 @@ export const dashboard = {
               c: {
                 a: 0,
                 k: [0.960784313725, 0.960784313725, 0.960784313725, 1],
-                ix: 4,
               },
               o: {
                 a: 0,
                 k: 100,
-                ix: 5,
               },
               r: 1,
               bm: 0,
               nm: 'Fill 1',
-              mn: 'ADBE Vector Graphic - Fill',
               hd: false,
             },
             {
@@ -5088,47 +4075,36 @@ export const dashboard = {
               p: {
                 a: 0,
                 k: [-1, 0],
-                ix: 2,
               },
               a: {
                 a: 0,
                 k: [0, 0],
-                ix: 1,
               },
               s: {
                 a: 0,
                 k: [100, 100],
-                ix: 3,
               },
               r: {
                 a: 0,
                 k: 0,
-                ix: 6,
               },
               o: {
                 a: 0,
                 k: 100,
-                ix: 7,
               },
               sk: {
                 a: 0,
                 k: 0,
-                ix: 4,
               },
               sa: {
                 a: 0,
                 k: 0,
-                ix: 5,
               },
               nm: 'Transform',
             },
           ],
           nm: 'Rectangle 1',
-          np: 3,
-          cix: 2,
           bm: 0,
-          ix: 1,
-          mn: 'ADBE Vector Group',
           hd: false,
         },
       ],
@@ -5164,22 +4140,14 @@ export const dashboard = {
               s: [35],
             },
           ],
-          ix: 11,
-        },
-        r: {
-          a: 0,
-          k: 0,
-          ix: 10,
         },
         p: {
           a: 0,
           k: [678, 1063, 0],
-          ix: 2,
         },
         a: {
           a: 0,
           k: [-1.993, 173.455, 0],
-          ix: 1,
         },
         s: {
           a: 1,
@@ -5201,7 +4169,6 @@ export const dashboard = {
               s: [218.666, 210.885, 100],
             },
           ],
-          ix: 6,
         },
       },
       ao: 0,
@@ -5222,7 +4189,6 @@ export const dashboard = {
               v: {
                 a: 0,
                 k: 78.2,
-                ix: 1,
               },
             },
             {
@@ -5233,7 +4199,6 @@ export const dashboard = {
               v: {
                 a: 0,
                 k: 1,
-                ix: 2,
               },
             },
             {
@@ -5244,7 +4209,6 @@ export const dashboard = {
               v: {
                 a: 0,
                 k: 0,
-                ix: 3,
               },
             },
           ],
@@ -5260,20 +4224,16 @@ export const dashboard = {
               s: {
                 a: 0,
                 k: [490, 344],
-                ix: 2,
               },
               p: {
                 a: 0,
                 k: [0, 0],
-                ix: 3,
               },
               r: {
                 a: 0,
                 k: 10,
-                ix: 4,
               },
               nm: 'Rectangle Path 1',
-              mn: 'ADBE Vector Shape - Rect',
               hd: false,
             },
             {
@@ -5281,17 +4241,14 @@ export const dashboard = {
               c: {
                 a: 0,
                 k: [0.341176470588, 0.105882360421, 0.321568627451, 1],
-                ix: 4,
               },
               o: {
                 a: 0,
                 k: 100,
-                ix: 5,
               },
               r: 1,
               bm: 0,
               nm: 'Fill 1',
-              mn: 'ADBE Vector Graphic - Fill',
               hd: false,
             },
             {
@@ -5299,47 +4256,36 @@ export const dashboard = {
               p: {
                 a: 0,
                 k: [0.452, 14.532],
-                ix: 2,
               },
               a: {
                 a: 0,
                 k: [0, 0],
-                ix: 1,
               },
               s: {
                 a: 0,
                 k: [92.674, 95.285],
-                ix: 3,
               },
               r: {
                 a: 0,
                 k: 0,
-                ix: 6,
               },
               o: {
                 a: 0,
                 k: 100,
-                ix: 7,
               },
               sk: {
                 a: 0,
                 k: 0,
-                ix: 4,
               },
               sa: {
                 a: 0,
                 k: 0,
-                ix: 5,
               },
               nm: 'Transform',
             },
           ],
           nm: 'Rectangle 1',
-          np: 3,
-          cix: 2,
           bm: 0,
-          ix: 1,
-          mn: 'ADBE Vector Group',
           hd: false,
         },
       ],
@@ -5355,25 +4301,13 @@ export const dashboard = {
       nm: 'Background Triangle',
       sr: 1,
       ks: {
-        o: {
-          a: 0,
-          k: 100,
-          ix: 11,
-        },
-        r: {
-          a: 0,
-          k: 0,
-          ix: 10,
-        },
         p: {
           a: 0,
           k: [82, 1151, 0],
-          ix: 2,
         },
         a: {
           a: 0,
           k: [-522.811, 466.595, 0],
-          ix: 1,
         },
         s: {
           a: 1,
@@ -5395,7 +4329,6 @@ export const dashboard = {
               s: [142.308, 142.308, 100],
             },
           ],
-          ix: 6,
         },
       },
       ao: 0,
@@ -5406,7 +4339,6 @@ export const dashboard = {
             {
               ind: 0,
               ty: 'sh',
-              ix: 1,
               ks: {
                 a: 0,
                 k: {
@@ -5427,10 +4359,8 @@ export const dashboard = {
                   ],
                   c: true,
                 },
-                ix: 2,
               },
               nm: 'Path 1',
-              mn: 'ADBE Vector Shape - Group',
               hd: false,
             },
             {
@@ -5438,7 +4368,6 @@ export const dashboard = {
               o: {
                 a: 0,
                 k: 100,
-                ix: 10,
               },
               r: 1,
               bm: 0,
@@ -5460,22 +4389,18 @@ export const dashboard = {
                     0.106,
                     0.322,
                   ],
-                  ix: 9,
                 },
               },
               s: {
                 a: 0,
                 k: [-961.273, 676.312],
-                ix: 5,
               },
               e: {
                 a: 0,
                 k: [-274.281, 189.773],
-                ix: 6,
               },
               t: 1,
               nm: 'Gradient Fill 1',
-              mn: 'ADBE Vector Graphic - G-Fill',
               hd: false,
             },
             {
@@ -5483,47 +4408,36 @@ export const dashboard = {
               p: {
                 a: 0,
                 k: [0, 0],
-                ix: 2,
               },
               a: {
                 a: 0,
                 k: [0, 0],
-                ix: 1,
               },
               s: {
                 a: 0,
                 k: [100, 100],
-                ix: 3,
               },
               r: {
                 a: 0,
                 k: 0,
-                ix: 6,
               },
               o: {
                 a: 0,
                 k: 100,
-                ix: 7,
               },
               sk: {
                 a: 0,
                 k: 0,
-                ix: 4,
               },
               sa: {
                 a: 0,
                 k: 0,
-                ix: 5,
               },
               nm: 'Transform',
             },
           ],
           nm: 'Shape 1',
-          np: 3,
-          cix: 2,
           bm: 0,
-          ix: 1,
-          mn: 'ADBE Vector Group',
           hd: false,
         },
       ],
@@ -5539,30 +4453,13 @@ export const dashboard = {
       nm: 'Background Gradient Circle',
       sr: 1,
       ks: {
-        o: {
-          a: 0,
-          k: 100,
-          ix: 11,
-        },
-        r: {
-          a: 0,
-          k: 0,
-          ix: 10,
-        },
         p: {
           a: 0,
           k: [674, 643, 0],
-          ix: 2,
-        },
-        a: {
-          a: 0,
-          k: [0, 0, 0],
-          ix: 1,
         },
         s: {
           a: 0,
           k: [115.753, 115.753, 100],
-          ix: 6,
         },
       },
       ao: 0,
@@ -5573,7 +4470,6 @@ export const dashboard = {
             {
               ind: 0,
               ty: 'sh',
-              ix: 1,
               ks: {
                 a: 0,
                 k: {
@@ -5597,10 +4493,8 @@ export const dashboard = {
                   ],
                   c: true,
                 },
-                ix: 2,
               },
               nm: 'Path 1',
-              mn: 'ADBE Vector Shape - Group',
               hd: false,
             },
             {
@@ -5608,7 +4502,6 @@ export const dashboard = {
               o: {
                 a: 0,
                 k: 100,
-                ix: 10,
               },
               r: 1,
               bm: 0,
@@ -5636,13 +4529,11 @@ export const dashboard = {
                     1,
                     0,
                   ],
-                  ix: 9,
                 },
               },
               s: {
                 a: 0,
                 k: [421.517, -401.578],
-                ix: 5,
               },
               e: {
                 a: 1,
@@ -5666,11 +4557,9 @@ export const dashboard = {
                     s: [-19.044, 36.816],
                   },
                 ],
-                ix: 6,
               },
               t: 1,
               nm: 'Gradient Fill 1',
-              mn: 'ADBE Vector Graphic - G-Fill',
               hd: false,
             },
             {
@@ -5678,47 +4567,36 @@ export const dashboard = {
               p: {
                 a: 0,
                 k: [246.902, -99.402],
-                ix: 2,
               },
               a: {
                 a: 0,
                 k: [0, 0],
-                ix: 1,
               },
               s: {
                 a: 0,
                 k: [141.839, 141.839],
-                ix: 3,
               },
               r: {
                 a: 0,
                 k: 0,
-                ix: 6,
               },
               o: {
                 a: 0,
                 k: 100,
-                ix: 7,
               },
               sk: {
                 a: 0,
                 k: 0,
-                ix: 4,
               },
               sa: {
                 a: 0,
                 k: 0,
-                ix: 5,
               },
               nm: 'Transform',
             },
           ],
           nm: 'Ellipse 1',
-          np: 3,
-          cix: 2,
           bm: 0,
-          ix: 1,
-          mn: 'ADBE Vector Group',
           hd: false,
         },
       ],
@@ -5743,7 +4621,6 @@ export const dashboard = {
               {
                 ind: 0,
                 ty: 'sh',
-                ix: 1,
                 ks: {
                   a: 0,
                   k: {
@@ -5851,19 +4728,13 @@ export const dashboard = {
                     ],
                     c: true,
                   },
-                  ix: 2,
                 },
                 nm: 'S',
-                mn: 'ADBE Vector Shape - Group',
                 hd: false,
               },
             ],
             nm: 'S',
-            np: 3,
-            cix: 2,
             bm: 0,
-            ix: 1,
-            mn: 'ADBE Vector Group',
             hd: false,
           },
         ],
@@ -5883,7 +4754,6 @@ export const dashboard = {
               {
                 ind: 0,
                 ty: 'sh',
-                ix: 1,
                 ks: {
                   a: 0,
                   k: {
@@ -5907,16 +4777,13 @@ export const dashboard = {
                     ],
                     c: true,
                   },
-                  ix: 2,
                 },
                 nm: 'i',
-                mn: 'ADBE Vector Shape - Group',
                 hd: false,
               },
               {
                 ind: 1,
                 ty: 'sh',
-                ix: 2,
                 ks: {
                   a: 0,
                   k: {
@@ -5952,19 +4819,13 @@ export const dashboard = {
                     ],
                     c: true,
                   },
-                  ix: 2,
                 },
                 nm: 'i',
-                mn: 'ADBE Vector Shape - Group',
                 hd: false,
               },
             ],
             nm: 'i',
-            np: 5,
-            cix: 2,
             bm: 0,
-            ix: 1,
-            mn: 'ADBE Vector Group',
             hd: false,
           },
         ],
@@ -5984,7 +4845,6 @@ export const dashboard = {
               {
                 ind: 0,
                 ty: 'sh',
-                ix: 1,
                 ks: {
                   a: 0,
                   k: {
@@ -6053,19 +4913,13 @@ export const dashboard = {
                     ],
                     c: true,
                   },
-                  ix: 2,
                 },
                 nm: 't',
-                mn: 'ADBE Vector Shape - Group',
                 hd: false,
               },
             ],
             nm: 't',
-            np: 3,
-            cix: 2,
             bm: 0,
-            ix: 1,
-            mn: 'ADBE Vector Group',
             hd: false,
           },
         ],
@@ -6085,7 +4939,6 @@ export const dashboard = {
               {
                 ind: 0,
                 ty: 'sh',
-                ix: 1,
                 ks: {
                   a: 0,
                   k: {
@@ -6148,16 +5001,13 @@ export const dashboard = {
                     ],
                     c: true,
                   },
-                  ix: 2,
                 },
                 nm: 'e',
-                mn: 'ADBE Vector Shape - Group',
                 hd: false,
               },
               {
                 ind: 1,
                 ty: 'sh',
-                ix: 2,
                 ks: {
                   a: 0,
                   k: {
@@ -6184,19 +5034,13 @@ export const dashboard = {
                     ],
                     c: true,
                   },
-                  ix: 2,
                 },
                 nm: 'e',
-                mn: 'ADBE Vector Shape - Group',
                 hd: false,
               },
             ],
             nm: 'e',
-            np: 5,
-            cix: 2,
             bm: 0,
-            ix: 1,
-            mn: 'ADBE Vector Group',
             hd: false,
           },
         ],
@@ -6216,7 +5060,6 @@ export const dashboard = {
               {
                 ind: 0,
                 ty: 'sh',
-                ix: 1,
                 ks: {
                   a: 0,
                   k: {
@@ -6306,19 +5149,13 @@ export const dashboard = {
                     ],
                     c: true,
                   },
-                  ix: 2,
                 },
                 nm: 's',
-                mn: 'ADBE Vector Shape - Group',
                 hd: false,
               },
             ],
             nm: 's',
-            np: 3,
-            cix: 2,
             bm: 0,
-            ix: 1,
-            mn: 'ADBE Vector Group',
             hd: false,
           },
         ],
@@ -6338,7 +5175,6 @@ export const dashboard = {
               {
                 ind: 0,
                 ty: 'sh',
-                ix: 1,
                 ks: {
                   a: 0,
                   k: {
@@ -6374,19 +5210,13 @@ export const dashboard = {
                     ],
                     c: true,
                   },
-                  ix: 2,
                 },
                 nm: 'T',
-                mn: 'ADBE Vector Shape - Group',
                 hd: false,
               },
             ],
             nm: 'T',
-            np: 3,
-            cix: 2,
             bm: 0,
-            ix: 1,
-            mn: 'ADBE Vector Group',
             hd: false,
           },
         ],
@@ -6406,7 +5236,6 @@ export const dashboard = {
               {
                 ind: 0,
                 ty: 'sh',
-                ix: 1,
                 ks: {
                   a: 0,
                   k: {
@@ -6469,16 +5298,13 @@ export const dashboard = {
                     ],
                     c: true,
                   },
-                  ix: 2,
                 },
                 nm: 'e',
-                mn: 'ADBE Vector Shape - Group',
                 hd: false,
               },
               {
                 ind: 1,
                 ty: 'sh',
-                ix: 2,
                 ks: {
                   a: 0,
                   k: {
@@ -6505,19 +5331,13 @@ export const dashboard = {
                     ],
                     c: true,
                   },
-                  ix: 2,
                 },
                 nm: 'e',
-                mn: 'ADBE Vector Shape - Group',
                 hd: false,
               },
             ],
             nm: 'e',
-            np: 5,
-            cix: 2,
             bm: 0,
-            ix: 1,
-            mn: 'ADBE Vector Group',
             hd: false,
           },
         ],
@@ -6537,7 +5357,6 @@ export const dashboard = {
               {
                 ind: 0,
                 ty: 'sh',
-                ix: 1,
                 ks: {
                   a: 0,
                   k: {
@@ -6609,16 +5428,13 @@ export const dashboard = {
                     ],
                     c: true,
                   },
-                  ix: 2,
                 },
                 nm: 'a',
-                mn: 'ADBE Vector Shape - Group',
                 hd: false,
               },
               {
                 ind: 1,
                 ty: 'sh',
-                ix: 2,
                 ks: {
                   a: 0,
                   k: {
@@ -6651,19 +5467,13 @@ export const dashboard = {
                     ],
                     c: true,
                   },
-                  ix: 2,
                 },
                 nm: 'a',
-                mn: 'ADBE Vector Shape - Group',
                 hd: false,
               },
             ],
             nm: 'a',
-            np: 5,
-            cix: 2,
             bm: 0,
-            ix: 1,
-            mn: 'ADBE Vector Group',
             hd: false,
           },
         ],
@@ -6683,7 +5493,6 @@ export const dashboard = {
               {
                 ind: 0,
                 ty: 'sh',
-                ix: 1,
                 ks: {
                   a: 0,
                   k: {
@@ -6776,19 +5585,13 @@ export const dashboard = {
                     ],
                     c: true,
                   },
-                  ix: 2,
                 },
                 nm: 'm',
-                mn: 'ADBE Vector Shape - Group',
                 hd: false,
               },
             ],
             nm: 'm',
-            np: 3,
-            cix: 2,
             bm: 0,
-            ix: 1,
-            mn: 'ADBE Vector Group',
             hd: false,
           },
         ],
@@ -6808,7 +5611,6 @@ export const dashboard = {
               {
                 ind: 0,
                 ty: 'sh',
-                ix: 1,
                 ks: {
                   a: 0,
                   k: {
@@ -6872,51 +5674,15 @@ export const dashboard = {
                       [2.266, 1.8],
                       [4, 1.166],
                     ],
-                    v: [
-                      [24.3, 0.6],
-                      [41.05, -3.65],
-                      [47.2, -15.1],
-                      [44.4, -23.5],
-                      [37.65, -27.75],
-                      [27.3, -30.1],
-                      [19.85, -31.7],
-                      [15.4, -33.9],
-                      [13.6, -38],
-                      [16.8, -43.3],
-                      [26.1, -45.3],
-                      [41.4, -41.1],
-                      [45.5, -48.7],
-                      [36.8, -52.2],
-                      [26.2, -53.5],
-                      [10.1, -49.15],
-                      [4.1, -37.6],
-                      [7, -28.9],
-                      [13.95, -24.5],
-                      [24.4, -22.2],
-                      [31.65, -20.75],
-                      [35.9, -18.7],
-                      [37.6, -14.9],
-                      [25, -7.7],
-                      [14.9, -9.2],
-                      [6.4, -13.2],
-                      [2.4, -5.6],
-                      [11.8, -1.15],
-                    ],
                     c: true,
                   },
-                  ix: 2,
                 },
                 nm: 's',
-                mn: 'ADBE Vector Shape - Group',
                 hd: false,
               },
             ],
             nm: 's',
-            np: 3,
-            cix: 2,
             bm: 0,
-            ix: 1,
-            mn: 'ADBE Vector Group',
             hd: false,
           },
         ],
@@ -6936,7 +5702,6 @@ export const dashboard = {
               {
                 ind: 0,
                 ty: 'sh',
-                ix: 1,
                 ks: {
                   a: 0,
                   k: {
@@ -6972,16 +5737,13 @@ export const dashboard = {
                     ],
                     c: true,
                   },
-                  ix: 2,
                 },
                 nm: 'A',
-                mn: 'ADBE Vector Shape - Group',
                 hd: false,
               },
               {
                 ind: 1,
                 ty: 'sh',
-                ix: 2,
                 ks: {
                   a: 0,
                   k: {
@@ -7002,19 +5764,13 @@ export const dashboard = {
                     ],
                     c: true,
                   },
-                  ix: 2,
                 },
                 nm: 'A',
-                mn: 'ADBE Vector Shape - Group',
                 hd: false,
               },
             ],
             nm: 'A',
-            np: 5,
-            cix: 2,
             bm: 0,
-            ix: 1,
-            mn: 'ADBE Vector Group',
             hd: false,
           },
         ],
@@ -7034,7 +5790,6 @@ export const dashboard = {
               {
                 ind: 0,
                 ty: 'sh',
-                ix: 1,
                 ks: {
                   a: 0,
                   k: {
@@ -7106,19 +5861,13 @@ export const dashboard = {
                     ],
                     c: true,
                   },
-                  ix: 2,
                 },
                 nm: 'c',
-                mn: 'ADBE Vector Shape - Group',
                 hd: false,
               },
             ],
             nm: 'c',
-            np: 3,
-            cix: 2,
             bm: 0,
-            ix: 1,
-            mn: 'ADBE Vector Group',
             hd: false,
           },
         ],
@@ -7138,7 +5887,6 @@ export const dashboard = {
               {
                 ind: 0,
                 ty: 'sh',
-                ix: 1,
                 ks: {
                   a: 0,
                   k: {
@@ -7186,16 +5934,13 @@ export const dashboard = {
                     ],
                     c: true,
                   },
-                  ix: 2,
                 },
                 nm: 'o',
-                mn: 'ADBE Vector Shape - Group',
                 hd: false,
               },
               {
                 ind: 1,
                 ty: 'sh',
-                ix: 2,
                 ks: {
                   a: 0,
                   k: {
@@ -7231,19 +5976,13 @@ export const dashboard = {
                     ],
                     c: true,
                   },
-                  ix: 2,
                 },
                 nm: 'o',
-                mn: 'ADBE Vector Shape - Group',
                 hd: false,
               },
             ],
             nm: 'o',
-            np: 5,
-            cix: 2,
             bm: 0,
-            ix: 1,
-            mn: 'ADBE Vector Group',
             hd: false,
           },
         ],
@@ -7263,7 +6002,6 @@ export const dashboard = {
               {
                 ind: 0,
                 ty: 'sh',
-                ix: 1,
                 ks: {
                   a: 0,
                   k: {
@@ -7303,39 +6041,33 @@ export const dashboard = {
                       [0, 0],
                       [0, 0],
                     ],
-                    v: [
-                      [47.4, -53.4],
-                      [47.4, -26.4],
-                      [43.45, -14.45],
-                      [32.8, -10.3],
-                      [23.55, -13.85],
-                      [20.3, -24.6],
-                      [20.3, -53.4],
-                      [7.8, -53.4],
-                      [7.8, -22.9],
-                      [13.95, -5.25],
-                      [30.8, 0.7],
-                      [40.5, -1.25],
-                      [48, -6.8],
-                      [48, 0],
-                      [59.9, 0],
-                      [59.9, -53.4],
+                    o: [
+                      [0, 0],
+                      [0, 5.2],
+                      [-2.634, 2.767],
+                      [-4, 0],
+                      [-2.167, -2.366],
+                      [0, 0],
+                      [0, 0],
+                      [0, 0],
+                      [0, 7.8],
+                      [4.1, 3.967],
+                      [3.466, 0],
+                      [3, -1.3],
+                      [0, 0],
+                      [0, 0],
+                      [0, 0],
+                      [0, 0],
                     ],
                     c: true,
                   },
-                  ix: 2,
                 },
                 nm: 'u',
-                mn: 'ADBE Vector Shape - Group',
                 hd: false,
               },
             ],
             nm: 'u',
-            np: 3,
-            cix: 2,
             bm: 0,
-            ix: 1,
-            mn: 'ADBE Vector Group',
             hd: false,
           },
         ],
@@ -7355,7 +6087,6 @@ export const dashboard = {
               {
                 ind: 0,
                 ty: 'sh',
-                ix: 1,
                 ks: {
                   a: 0,
                   k: {
@@ -7415,19 +6146,13 @@ export const dashboard = {
                     ],
                     c: true,
                   },
-                  ix: 2,
                 },
                 nm: 'n',
-                mn: 'ADBE Vector Shape - Group',
                 hd: false,
               },
             ],
             nm: 'n',
-            np: 3,
-            cix: 2,
             bm: 0,
-            ix: 1,
-            mn: 'ADBE Vector Group',
             hd: false,
           },
         ],
@@ -7447,7 +6172,6 @@ export const dashboard = {
               {
                 ind: 0,
                 ty: 'sh',
-                ix: 1,
                 ks: {
                   a: 0,
                   k: {
@@ -7525,19 +6249,13 @@ export const dashboard = {
                     ],
                     c: true,
                   },
-                  ix: 2,
                 },
                 nm: 'G',
-                mn: 'ADBE Vector Shape - Group',
                 hd: false,
               },
             ],
             nm: 'G',
-            np: 3,
-            cix: 2,
             bm: 0,
-            ix: 1,
-            mn: 'ADBE Vector Group',
             hd: false,
           },
         ],
@@ -7557,7 +6275,6 @@ export const dashboard = {
               {
                 ind: 0,
                 ty: 'sh',
-                ix: 1,
                 ks: {
                   a: 0,
                   k: {
@@ -7614,16 +6331,13 @@ export const dashboard = {
                     ],
                     c: true,
                   },
-                  ix: 2,
                 },
                 nm: 'd',
-                mn: 'ADBE Vector Shape - Group',
                 hd: false,
               },
               {
                 ind: 1,
                 ty: 'sh',
-                ix: 2,
                 ks: {
                   a: 0,
                   k: {
@@ -7671,19 +6385,13 @@ export const dashboard = {
                     ],
                     c: true,
                   },
-                  ix: 2,
                 },
                 nm: 'd',
-                mn: 'ADBE Vector Shape - Group',
                 hd: false,
               },
             ],
             nm: 'd',
-            np: 5,
-            cix: 2,
             bm: 0,
-            ix: 1,
-            mn: 'ADBE Vector Group',
             hd: false,
           },
         ],
@@ -7703,7 +6411,6 @@ export const dashboard = {
               {
                 ind: 0,
                 ty: 'sh',
-                ix: 1,
                 ks: {
                   a: 0,
                   k: {
@@ -7775,19 +6482,13 @@ export const dashboard = {
                     ],
                     c: true,
                   },
-                  ix: 2,
                 },
                 nm: 'C',
-                mn: 'ADBE Vector Shape - Group',
                 hd: false,
               },
             ],
             nm: 'C',
-            np: 3,
-            cix: 2,
             bm: 0,
-            ix: 1,
-            mn: 'ADBE Vector Group',
             hd: false,
           },
         ],
@@ -7807,7 +6508,6 @@ export const dashboard = {
               {
                 ind: 0,
                 ty: 'sh',
-                ix: 1,
                 ks: {
                   a: 0,
                   k: {
@@ -7852,19 +6552,13 @@ export const dashboard = {
                     ],
                     c: true,
                   },
-                  ix: 2,
                 },
                 nm: 'r',
-                mn: 'ADBE Vector Shape - Group',
                 hd: false,
               },
             ],
             nm: 'r',
-            np: 3,
-            cix: 2,
             bm: 0,
-            ix: 1,
-            mn: 'ADBE Vector Group',
             hd: false,
           },
         ],
@@ -7884,7 +6578,6 @@ export const dashboard = {
               {
                 ind: 0,
                 ty: 'sh',
-                ix: 1,
                 ks: {
                   a: 0,
                   k: {
@@ -7953,19 +6646,13 @@ export const dashboard = {
                     ],
                     c: true,
                   },
-                  ix: 2,
                 },
                 nm: 't',
-                mn: 'ADBE Vector Shape - Group',
                 hd: false,
               },
             ],
             nm: 't',
-            np: 3,
-            cix: 2,
             bm: 0,
-            ix: 1,
-            mn: 'ADBE Vector Group',
             hd: false,
           },
         ],
@@ -7993,7 +6680,6 @@ export const dashboard = {
               {
                 ind: 0,
                 ty: 'sh',
-                ix: 1,
                 ks: {
                   a: 0,
                   k: {
@@ -8035,19 +6721,13 @@ export const dashboard = {
                     ],
                     c: true,
                   },
-                  ix: 2,
                 },
                 nm: 'N',
-                mn: 'ADBE Vector Shape - Group',
                 hd: false,
               },
             ],
             nm: 'N',
-            np: 3,
-            cix: 2,
             bm: 0,
-            ix: 1,
-            mn: 'ADBE Vector Group',
             hd: false,
           },
         ],
@@ -8067,7 +6747,6 @@ export const dashboard = {
               {
                 ind: 0,
                 ty: 'sh',
-                ix: 1,
                 ks: {
                   a: 0,
                   k: {
@@ -8118,19 +6797,13 @@ export const dashboard = {
                     ],
                     c: true,
                   },
-                  ix: 2,
                 },
                 nm: 'w',
-                mn: 'ADBE Vector Shape - Group',
                 hd: false,
               },
             ],
             nm: 'w',
-            np: 3,
-            cix: 2,
             bm: 0,
-            ix: 1,
-            mn: 'ADBE Vector Group',
             hd: false,
           },
         ],
@@ -8150,7 +6823,6 @@ export const dashboard = {
               {
                 ind: 0,
                 ty: 'sh',
-                ix: 1,
                 ks: {
                   a: 0,
                   k: {
@@ -8258,19 +6930,13 @@ export const dashboard = {
                     ],
                     c: true,
                   },
-                  ix: 2,
                 },
                 nm: 'S',
-                mn: 'ADBE Vector Shape - Group',
                 hd: false,
               },
             ],
             nm: 'S',
-            np: 3,
-            cix: 2,
             bm: 0,
-            ix: 1,
-            mn: 'ADBE Vector Group',
             hd: false,
           },
         ],
@@ -8290,7 +6956,6 @@ export const dashboard = {
               {
                 ind: 0,
                 ty: 'sh',
-                ix: 1,
                 ks: {
                   a: 0,
                   k: {
@@ -8314,16 +6979,13 @@ export const dashboard = {
                     ],
                     c: true,
                   },
-                  ix: 2,
                 },
                 nm: 'i',
-                mn: 'ADBE Vector Shape - Group',
                 hd: false,
               },
               {
                 ind: 1,
                 ty: 'sh',
-                ix: 2,
                 ks: {
                   a: 0,
                   k: {
@@ -8359,19 +7021,13 @@ export const dashboard = {
                     ],
                     c: true,
                   },
-                  ix: 2,
                 },
                 nm: 'i',
-                mn: 'ADBE Vector Shape - Group',
                 hd: false,
               },
             ],
             nm: 'i',
-            np: 5,
-            cix: 2,
             bm: 0,
-            ix: 1,
-            mn: 'ADBE Vector Group',
             hd: false,
           },
         ],
