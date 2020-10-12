@@ -32,7 +32,15 @@ export const Header: FC<Header> = ({ brand, href, nav, sx }: Header) => {
         }}
       >
         <Flex>
-          <Link href={`${href}`}>{brand}</Link>
+          <Link
+            sx={{
+              display: 'flex',
+              alignSelf: 'center',
+            }}
+            href={`${href}`}
+          >
+            {brand}
+          </Link>
           <Flex
             sx={{
               flexDirection: 'column',
