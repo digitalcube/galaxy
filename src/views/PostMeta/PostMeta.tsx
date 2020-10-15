@@ -1,7 +1,6 @@
 import React, { FC } from 'react';
 import { Date } from '../../components/Date';
-import { Box } from '../../components/Box';
-import { Text } from '../../components/Text';
+import { Nav } from '../../components/Nav';
 
 type PostMeta = {
   author?: string;
@@ -9,26 +8,18 @@ type PostMeta = {
 };
 
 export const PostMeta: FC<PostMeta> = ({ author, date }: PostMeta) => {
-  if (!author) return null;
+  const seperator = author && date ? `|` : null;
   return (
-    <Box
+    <Nav
       sx={{
-        display: 'flex',
-        justifyContent: 'center',
-        color: 'secondary',
-        mt: 3,
-        '& > :not(:first-child)': {
-          ml: 1,
-        },
+        my: 3,
       }}
-    >
-      <Text>
-        <b>{author}</b>
-      </Text>
-      <span>|</span>
-      <Text>
-        <Date>{date}</Date>
-      </Text>
-    </Box>
+      kind="row"
+      navItems={[
+        { label: <b>{author}</b> },
+        { label: seperator },
+        { label: <Date>{date}</Date> },
+      ]}
+    />
   );
 };

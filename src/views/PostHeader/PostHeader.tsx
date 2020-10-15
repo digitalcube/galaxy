@@ -36,6 +36,7 @@ export const PostHeader: FC<PostHeader> = ({
         sx={{
           display: 'flex',
           alignContent: 'center',
+          alignItems: 'center',
           flexDirection: 'column',
         }}
       >
