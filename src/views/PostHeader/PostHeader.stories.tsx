@@ -4,7 +4,7 @@ import { PostHeader } from './PostHeader';
 
 export default {
   component: PostHeader,
-  title: `Galaxy/Components/PostHeader`,
+  title: `Galaxy/Views/PostHeader`,
   decorators: [withKnobs],
   excludeStories: /.*Data$/,
 };

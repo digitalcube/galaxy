@@ -14,6 +14,7 @@ export const PostMeta: FC<PostMeta> = ({ author, date }: PostMeta) => {
     <Box
       sx={{
         display: 'flex',
+        justifyContent: 'center',
         color: 'secondary',
         mt: 3,
         '& > :not(:first-child)': {
