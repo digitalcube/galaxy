@@ -22,8 +22,3 @@ export const Image: FC<Image> = ({ img, sx, kind }: Image) => {
     />
   );
 };
-
-Image.defaultProps = {
-  img: `logo-howtospeakmachine.webp`,
-  kind: `responsive`,
-};

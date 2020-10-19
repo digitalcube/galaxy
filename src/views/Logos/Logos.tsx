@@ -87,33 +87,3 @@ export const Logo: FC<Logo> = ({ alt, img }) => {
     />
   );
 };
-
-Logos.defaultProps = {
-  title: `Some of the world's leading businesses, thinkers, and creatives call Shifter home. `,
-  nodes: [
-    {
-      img: `https://www.getshifter.io/static/ffe74e144da991b2e626b7a0a78bd3e2/3fc3b/logo-lixil.png`,
-      alt: `LIXIL`,
-    },
-    {
-      img: `https://www.getshifter.io/static/ffe74e144da991b2e626b7a0a78bd3e2/3fc3b/logo-lixil.png`,
-      alt: `LIXIL`,
-    },
-    {
-      img: `https://www.getshifter.io/static/ffe74e144da991b2e626b7a0a78bd3e2/3fc3b/logo-lixil.png`,
-      alt: `LIXIL`,
-    },
-    {
-      img: `https://www.getshifter.io/static/ffe74e144da991b2e626b7a0a78bd3e2/3fc3b/logo-lixil.png`,
-      alt: `LIXIL`,
-    },
-    {
-      img: `https://www.getshifter.io/static/ffe74e144da991b2e626b7a0a78bd3e2/3fc3b/logo-lixil.png`,
-      alt: `LIXIL`,
-    },
-    {
-      img: `https://www.getshifter.io/static/ffe74e144da991b2e626b7a0a78bd3e2/3fc3b/logo-lixil.png`,
-      alt: `LIXIL`,
-    },
-  ],
-};
