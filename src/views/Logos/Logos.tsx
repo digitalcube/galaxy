@@ -76,6 +76,7 @@ type Logo = {
 };
 
 export const Logo: FC<Logo> = ({ alt, img }) => {
+  if (!img) return null;
   return (
     <Image
       sx={{
