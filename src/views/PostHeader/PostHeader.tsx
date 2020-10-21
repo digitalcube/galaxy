@@ -65,11 +65,3 @@ export const PostHeader: FC<PostHeader> = ({
     </Container>
   );
 };
-
-PostHeader.defaultProps = {
-  title: `Cillum aliqua in occaecat esse`,
-  subtitle:
-    'Mollit sint amet elit mollit sunt oluptate eiusmod culpa aliqua dolor.',
-  author: 'Aute Culpamagna',
-  date: 'January 1, 2049',
-};
