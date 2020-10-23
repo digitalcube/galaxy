@@ -21,7 +21,12 @@ type Quote = {
 
 const Quote = ({ img, quote, author, handle }: Quote) => {
   return (
-    <Content align="center">
+    <Content
+      align="center"
+      sx={{
+        px: '20%',
+      }}
+    >
       <Text>
         <div dangerouslySetInnerHTML={{ __html: quote ? quote : `` }} />
       </Text>
@@ -106,7 +111,7 @@ Testimonials.defaultProps = {
     {
       img: 'user-avatar.png',
       quote:
-        'Cillum magna quis culpa in et ea laborum eiusmod reprehenderit tempor ea labore.. <a href="https://wptavern.com/digitalcube-launches-shifter-serverless-hosting-for-wordpress">Read more.</a>',
+        'Amet sint velit aliquip aute ex enim cupidatat ex Nulla nostrud proident minim do labore ipsum mollit eu voluptate. Cillum magna quis culpa in et ea laborum eiusmod reprehenderit tempor ea labore. <a href="https://wptavern.com/digitalcube-launches-shifter-serverless-hosting-for-wordpress">Read more.</a>',
       author: 'FooBarBaz',
       handle: '@ExampleFooBarBaz',
     },
