@@ -1,5 +1,5 @@
-import React from 'react';
-import Lottie from 'react-lottie';
+import React, { useRef } from 'react';
+import lottie from 'lottie-web';
 import { singleClick, dashboard } from './animations';
 
 type Animation = {
@@ -15,19 +15,23 @@ export const animationData = ({ animation = `singleClick` }: Animation) => {
   return animations[animation];
 };
 
-export const Animation: React.FC<Animation> = ({ animation }) => {
+export const Animation: React.FC<Animation> = ({ animation }: Animation) => {
+  const element = useRef<HTMLDivElement>(null);
+  React.useEffect(() => {
+    lottie.loadAnimation({
+      container: element.current as HTMLDivElement,
+      loop: false,
+      autoplay: true,
+      animationData: animationData({ animation: animation }),
+      rendererSettings: {
+        preserveAspectRatio: `xMidYMid slice`,
+      },
+    });
+  }, []);
+
   return (
-    <Lottie
-      height={`auto`}
-      width={`auto`}
-      options={{
-        loop: false,
-        autoplay: true,
-        animationData: animationData({ animation: animation }),
-        rendererSettings: {
-          preserveAspectRatio: `xMidYMid slice`,
-        },
-      }}
-    />
+    <div>
+      <div ref={element}></div>
+    </div>
   );
 };
