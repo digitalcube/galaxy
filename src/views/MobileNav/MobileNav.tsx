@@ -1,6 +1,7 @@
 import React, { FC, ReactNode } from 'react';
 import { useThemeUI, IconButton } from 'theme-ui';
-import { Times, Bars } from '@styled-icons/fa-solid';
+import { Bars } from '@styled-icons/fa-solid/Bars';
+import { Times } from '@styled-icons/fa-solid/Times';
 import Popup from 'reactjs-popup';
 import { Flex } from 'theme-ui';
 import { Nav } from '../../components/Nav';
