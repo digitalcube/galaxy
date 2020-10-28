@@ -12,7 +12,9 @@ export const PostMeta: FC<PostMeta> = ({ author, date }: PostMeta) => {
   return (
     <Nav
       sx={{
-        my: 1,
+        '& > :not(:first-child)': {
+          ml: 1,
+        },
       }}
       kind="row"
       navItems={[
