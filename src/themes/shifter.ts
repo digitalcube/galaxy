@@ -135,6 +135,7 @@ export const shifter = {
       whiteSpace: 'nowrap',
       '&:hover': {
         color: colors.shifter.purple.primary,
+        cursor: 'pointer',
       },
     },
     primary: {
