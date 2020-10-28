@@ -12,7 +12,7 @@ export const PostMeta: FC<PostMeta> = ({ author, date }: PostMeta) => {
   return (
     <Nav
       sx={{
-        my: 3,
+        my: 1,
       }}
       kind="row"
       navItems={[
