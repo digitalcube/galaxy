@@ -82,7 +82,7 @@ export const Footer: FC<Footer> = ({ nav }: Footer) => {
                 },
                 {
                   label: <Instagram size={`${iconSize}`} />,
-                  href: `https://www.instagram.com/getsfhiter/`,
+                  href: `https://www.instagram.com/getshifter/`,
                 },
                 {
                   label: <Youtube size={`${iconSize}`} />,
