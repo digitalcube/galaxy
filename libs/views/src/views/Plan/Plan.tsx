@@ -1,11 +1,9 @@
 import React, { FC, ReactNode } from 'react';
 import { Card } from '../Card';
-import { Text, Heading, Link, Content, NavLink } from '@galaxy/core';
+import { Text, Heading, Link, Content, NavLinkProps } from '@galaxy/core';
 import { PlanMeta } from '../PlanMeta';
 
-export type Plan = {
-  author?: string;
-  date?: string;
+export type PlanProps = {
   excerpt?: string;
   footer?: ReactNode;
   href?: string;
@@ -16,17 +14,17 @@ export type Plan = {
   sx?: object;
   children?: ReactNode;
   buttonLabel?: string;
-  planMeta?: NavLink[];
+  planMeta?: NavLinkProps[];
   price?: any;
   detailsLabel?: string;
   detailsLink?: string;
 };
 
-export const Plan: FC<Plan> = ({
+export const Plan: FC<PlanProps> = ({
   excerpt,
   footer,
   href,
-  img,
+  img = 'pricing-plan-icon-1.png',
   subtitle,
   title,
   sx,
@@ -36,7 +34,7 @@ export const Plan: FC<Plan> = ({
   buttonLabel,
   detailsLink,
   detailsLabel,
-}: Plan) => {
+}) => {
   return (
     <Card
       sx={{ ...sx }}
@@ -78,14 +76,4 @@ export const Plan: FC<Plan> = ({
       </Content>
     </Card>
   );
-};
-
-Plan.defaultProps = {
-  img: 'pricing-plan-icon-1.png',
-  title: `Free`,
-  href: `#!`,
-  price: {
-    year: `$1`,
-    month: `$1`,
-  },
 };

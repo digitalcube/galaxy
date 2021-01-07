@@ -1,29 +1,20 @@
-import React, { FC, ReactNode } from 'react';
+import React, { FC } from 'react';
 import { AspectRatio as ThemeUIAspectRatio } from 'theme-ui';
 import { Image, Text, Heading, Content } from '@galaxy/core';
 
-export type TeamMember = {
-  align?: `left` | `center` | `right`;
-  author?: string;
-  category?: string;
-  date?: string;
+export type TeamMemberProps = {
   excerpt?: string;
-  footer?: ReactNode;
-  href?: string;
   img?: string;
-  node?: any;
   subtitle?: string;
   title?: string;
-  variant?: string;
-  sx?: object;
 };
 
-export const TeamMember: FC<TeamMember> = ({
+export const TeamMember: FC<TeamMemberProps> = ({
   excerpt,
   img,
   subtitle,
   title,
-}: TeamMember) => {
+}) => {
   return (
     <Content
       sx={{
@@ -51,10 +42,4 @@ export const TeamMember: FC<TeamMember> = ({
       <Text>{excerpt}</Text>
     </Content>
   );
-};
-
-TeamMember.defaultProps = {
-  title: `Magna fugiat`,
-  subtitle: `XXX`,
-  img: `//placehold.it/500`,
 };

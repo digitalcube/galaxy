@@ -1,18 +1,18 @@
-import React from 'react';
-import { Hero, Logos,Benefits,Solutions, Features,Testimonials,Showcase,GetStarted } from '@galaxy/views';
+import React, { FC } from 'react';
+import { Hero, HeroProps, Logos,Benefits,Solutions, Features,Testimonials,TestimonialsProps,Showcase,GetStarted, BenefitsProps, FeaturesProps, GetStartedProps, SolutionsProps, ShowcaseProps } from '@galaxy/views';
 
-type FrontPage = {
-  getStarted?: GetStarted;
-  hero?: Hero;
+export type FrontPageProps = {
+  getStarted?: GetStartedProps;
+  hero?: HeroProps;
   logos?: Logos;
-  benefits?: Benefits;
-  solutions?: Solutions;
-  features?: Features;
-  showcase?: Showcase;
-  testimonials?: Testimonials;
+  benefits?: BenefitsProps;
+  solutions?: SolutionsProps;
+  features?: FeaturesProps;
+  showcase?: ShowcaseProps;
+  testimonials?: TestimonialsProps;
 };
 
-export const FrontPage = ({
+export const FrontPage: FC<FrontPageProps> = ({
   getStarted,
   hero,
   logos,
@@ -21,7 +21,7 @@ export const FrontPage = ({
   features,
   showcase,
   testimonials,
-}: FrontPage) => {
+}) => {
   return (
     <>
       <Hero {...hero} />
@@ -29,20 +29,9 @@ export const FrontPage = ({
       <Benefits {...benefits} />
       <Solutions {...solutions} />
       <Features {...features} />
-      <Testimonials {...testimonials} />
+      {testimonials ? <Testimonials {...testimonials} />: null}
       <Showcase {...showcase} />
       <GetStarted {...getStarted} />
     </>
   );
-};
-
-FrontPage.defaultProps = {
-  getStarted: {
-    title: `Ready to take your site to the next level?`,
-    subtitle: `Shifter is the solution for fast, maintenance-free WordPress websites.`,
-  },
-  hero: {
-    title: `Jamstack solutions for WordPress`,
-    subtitle: `Using Shifter, create or migrate WordPress sites in minutes that are scalable, secure from attacks, and 100% static with no security or caching plugins required.`,
-  },
 };

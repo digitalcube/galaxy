@@ -1,44 +1,22 @@
 /** @jsxRuntime classic */
 /** @jsx jsx */
 import { Styled, jsx } from 'theme-ui';
-import { useTable } from 'react-table';
-import { FC, useMemo } from 'react';
+import { Column, useTable } from 'react-table';
+import { FC } from 'react';
 
-export type Table = {
-  nodes?: any;
+export type TableProps = {
+  nodes: Array<{
+    [key: string]: string;
+  }>;
+  columns: Column<{
+    [key: string]: string;
+  }>[]
 };
 
-export const Table: FC<Table> = ({ nodes }: Table) => {
-  const data = useMemo(() => nodes, []);
-  const columns = useMemo(
-    () => [
-      {
-        Header: '',
-        accessor: 'col1',
-      },
-      {
-        Header: 'Free',
-        accessor: 'col2',
-      },
-      {
-        Header: 'Tier 1',
-        accessor: 'col3',
-      },
-      {
-        Header: 'Tier 2',
-        accessor: 'col4',
-      },
-      {
-        Header: 'Tier 3',
-        accessor: 'col5',
-      },
-    ],
-    []
-  );
-
+export const Table: FC<TableProps> = ({ nodes, columns }) => {
   const { getTableProps, getTableBodyProps, rows, prepareRow } = useTable({
     columns,
-    data,
+    data: nodes,
   });
 
   return (
@@ -68,30 +46,4 @@ export const Table: FC<Table> = ({ nodes }: Table) => {
       </tbody>
     </Styled.table>
   );
-};
-
-Table.defaultProps = {
-  nodes: [
-    {
-      col1: 'Plans',
-      col2: 'Free',
-      col3: 'Tier 1',
-      col4: 'Tier 2',
-      col5: 'Tier 3',
-    },
-    {
-      col1: 'Sites',
-      col2: '1',
-      col3: '1',
-      col4: '1',
-      col5: '1',
-    },
-    {
-      col1: 'Storage',
-      col2: '500 MB',
-      col3: '5 GB',
-      col4: '50 GB',
-      col5: '50 GB',
-    },
-  ],
 };

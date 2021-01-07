@@ -1,9 +1,9 @@
-import React from 'react';
+import React, { FC } from 'react';
 import { Heading, Link, Container, Content, Grid } from '@galaxy/core';
 import { Post } from '../Post';
 import { Posts } from '../Posts';
 
-export type Showcase = {
+export type ShowcaseProps = {
   title?: string;
   subtitle?: string;
   href?: string;
@@ -11,13 +11,13 @@ export type Showcase = {
   nodes?: Post[];
 };
 
-export const Showcase = ({
-  title,
+export const Showcase: FC<ShowcaseProps> = ({
+  title = 'Showcase',
   subtitle,
   buttonLabel,
   href,
   nodes,
-}: Showcase) => {
+}) => {
   return (
     <Container
       as="section"
@@ -45,23 +45,3 @@ export const Showcase = ({
   );
 };
 
-Showcase.defaultProps = {
-  title: `Mollit nisi reprehenderit do officia`,
-  subtitle: `Et ullamco enim Lorem irure consequat commodo officia consequat laboris excepteur culpa.`,
-  buttonLabel: `Laboris labore`,
-  href: `#`,
-  nodes: [
-    {
-      title: `Soracom`,
-      href: `https://example.com`,
-      excerpt: `example.com`,
-      img: `https://www.getshifter.io/static/5b8d04811ce4850fad82e16214795926/39f27/soracom.jpg`,
-    },
-    {
-      title: `Vrije Universiteit Amsterdam`,
-      excerpt: `example.com`,
-      href: `https://example.com`,
-      img: `https://www.getshifter.io/static/1f94269f0d484cd3750314acef23695d/39f27/screenshot-vu.jpg`,
-    },
-  ],
-};

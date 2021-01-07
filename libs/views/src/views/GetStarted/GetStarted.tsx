@@ -1,21 +1,21 @@
-import React from 'react';
+import React, { FC } from 'react';
 import { Content, Shape, Link, Heading, Container, Box } from '@galaxy/core';
 
-export type GetStarted = {
+export type GetStartedProps = {
   title?: string;
   subtitle?: string;
   href?: string;
   linkLabel?: string;
-  variant?: string;
+  variant?: '0' | '1';
 };
 
-export const GetStarted = ({
+export const GetStarted: FC<GetStartedProps> = ({
   title,
   subtitle,
   href,
   linkLabel,
-  variant,
-}: GetStarted) => {
+  variant = '0',
+}) => {
   if (variant === `0`) {
     return (
       <Container
@@ -67,12 +67,4 @@ export const GetStarted = ({
     );
   }
   return null;
-};
-
-GetStarted.defaultProps = {
-  title: `Fugiat ut ullamco aute nulla?`,
-  subtitle: `Qui ut Lorem ex occaecat ea deserunt eserunt in irure ipsum veniam enim quis consequat cillum.`,
-  href: `#!`,
-  linkLabel: `Nisi veniam laboris`,
-  variant: `0`,
 };

@@ -2,13 +2,12 @@ import React, { FC, ReactNode } from 'react';
 import { Posts } from '../Posts';
 import { Heading, Container, Content } from '@galaxy/core';
 
-export type RecentPosts = {
+export type RecentPostsProps = {
   title?: string;
-  children?: ReactNode;
   nodes?: object;
 };
 
-export const RecentPosts: FC<RecentPosts> = ({ title, nodes }: RecentPosts) => {
+export const RecentPosts: FC<RecentPostsProps> = ({ title = 'Recent Posts', nodes }) => {
   if (!nodes) return null;
   return (
     <Container
@@ -43,43 +42,4 @@ export const RecentPosts: FC<RecentPosts> = ({ title, nodes }: RecentPosts) => {
       </Content>
     </Container>
   );
-};
-
-RecentPosts.defaultProps = {
-  title: `Eu in aliqua do ipsum.`,
-  nodes: [
-    {
-      author: `Cillum Sunt`,
-      date: `Jan 1, 2049`,
-      href: `#!`,
-      img: `post-featured-image.png`,
-      title: `Introducing Pickup Philly, an open-source business directory built on the Jamstack`,
-      category: `Events`,
-    },
-    {
-      author: `Cupidatat Proident`,
-      date: `Jan 1, 2049`,
-      href: `#!`,
-      img: `post-featured-image-1.png`,
-      title: `Explaining the Difference Between Shifter Static and Shifter Headless`,
-      category: `Blog`,
-    },
-    {
-      author: `Reprehenderit Officia`,
-      date: `Jan 1, 2049`,
-      href: `#!`,
-      img: `post-featured-image-2.png`,
-      title: `Upgrade your business with a purpose-built form and Shifter Static integration`,
-      category: `Announcement`,
-    },
-    {
-      author: `Labore Proident`,
-      date: `Jan 1, 2049`,
-      href: `#!`,
-      img: `post-featured-image.png`,
-
-      category: `Announcement`,
-      title: `Upgrade your business with a purpose-built form and Shifter Static integration`,
-    },
-  ],
 };

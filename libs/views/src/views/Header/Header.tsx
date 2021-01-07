@@ -1,17 +1,17 @@
 import React, { FC, ReactNode } from 'react';
 import { Flex } from 'theme-ui';
-import { Container, Nav, Brand, Link } from '@galaxy/core';
+import { Container, Nav,  Link, NavLinkProps } from '@galaxy/core';
 import { MobileNav } from '../MobileNav';
 
-export type Header = {
+export type HeaderProps = {
   brand?: ReactNode;
-  href?: String;
-  nav?: any;
+  href?: string;
+  nav: Array<NavLinkProps[]>;
   length?: number;
   sx?: object;
 };
 
-export const Header: FC<Header> = ({ brand, href, nav, sx }: Header) => {
+export const Header: FC<HeaderProps> = ({ brand, href, nav, sx }) => {
   return (
     <Container
       sx={{
@@ -73,75 +73,4 @@ export const Header: FC<Header> = ({ brand, href, nav, sx }: Header) => {
       </Flex>
     </Container>
   );
-};
-
-Header.defaultProps = {
-  brand: <Brand asset="shifter-mark" size="45" />,
-  href: `/`,
-  nav: [
-    [
-      {
-        label: `Qui sint`,
-        href: `#!`,
-      },
-      {
-        label: `Cupidatat`,
-        href: `#!`,
-      },
-      {
-        label: `Excepteur`,
-        href: `#!`,
-      },
-      {
-        label: `Laborum`,
-        href: `#!`,
-      },
-      {
-        label: `Pariatur`,
-        href: `#!`,
-      },
-    ],
-    [
-      {
-        label: `Login`,
-        href: `#!`,
-      },
-      {
-        label: `Sign Up`,
-        href: `#!`,
-        kind: `primary`,
-      },
-    ],
-    [
-      {
-        label: `Qui sint`,
-        href: `#!`,
-      },
-      {
-        label: `Cupidatat`,
-        href: `#!`,
-      },
-      {
-        label: `Excepteur`,
-        href: `#!`,
-      },
-      {
-        label: `Laborum`,
-        href: `#!`,
-      },
-      {
-        label: `Pariatur`,
-        href: `#!`,
-      },
-      {
-        label: `Login`,
-        href: `#!`,
-      },
-      {
-        label: `Sign Up`,
-        href: `#!`,
-        kind: `primary`,
-      },
-    ],
-  ],
 };

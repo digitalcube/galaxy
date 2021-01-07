@@ -4,9 +4,16 @@ import { Layout } from './index';
 
 export default {
   component: Layout,
-  title: `Galaxy/Templates/Layout`,
+  title: `Galaxy/Views/Layout`,
   decorators: [withKnobs],
   excludeStories: /.*Data$/,
 };
 
-export const Default = () => <Layout />;
+export const Default = () => <Layout  header={{nav: [
+  [
+    {
+      label: `Qui sint`,
+      href: `#!`,
+    },
+  ]
+  ]}}/>;

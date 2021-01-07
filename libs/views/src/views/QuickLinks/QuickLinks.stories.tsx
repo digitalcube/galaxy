@@ -1,6 +1,6 @@
 import React from 'react';
 import { withKnobs } from '@storybook/addon-knobs';
-import { QuickLinks } from './QuickLinks';
+import { QuickLinks , QuickLinksProps} from './QuickLinks';
 
 export default {
   component: QuickLinks,
@@ -9,6 +9,32 @@ export default {
   excludeStories: /.*Data$/,
 };
 
+const props:QuickLinksProps = {
+  title: `Esse excepteur`,
+  nav: [
+    {
+      label: `Duis Adipisicing`,
+      href: `#!`,
+      kind: `primary`,
+    },
+    {
+      label: `Consequat`,
+      href: `#!`,
+      kind: `primary`,
+    },
+    {
+      label: `Et Tempor`,
+      href: `#!`,
+      kind: `primary`,
+    },
+    {
+      label: `Cupidatat`,
+      href: `#!`,
+      kind: `primary`,
+    },
+  ],
+}
+
 export const Default = () => {
-  return <QuickLinks />;
+  return <QuickLinks {...props} />;
 };

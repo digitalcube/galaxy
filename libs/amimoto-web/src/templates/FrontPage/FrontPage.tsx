@@ -1,10 +1,12 @@
-import React from 'react';
+import React, { FC } from 'react';
 
-import { Hero, Layout } from '@galaxy/views';
+import { Hero, Layout, HeaderProps } from '@galaxy/views';
 
-export const FrontPage = () => {
+export const FrontPage: FC<{
+  header: HeaderProps
+}> = ({header}) => {
   return (
-    <Layout>
+    <Layout header={header}>
       <Hero />
     </Layout>
   );

@@ -1,12 +1,12 @@
-import React from 'react';
-import { GetStarted,Features as FeaturesComponent } from '@galaxy/views';
+import React, { FC } from 'react';
+import { GetStarted,Features as FeaturesComponent, FeaturesProps as GalaxyFeaturesProps, GetStartedProps } from '@galaxy/views';
 
-type Features = {
-  getStarted?: GetStarted;
-  features?: FeaturesComponent;
+export type FeaturesProps = {
+  getStarted?: GetStartedProps;
+  features?: GalaxyFeaturesProps;
 };
 
-export const Features = ({ getStarted, features }: Features) => {
+export const Features: FC<FeaturesProps> = ({ getStarted, features }) => {
   return (
     <>
       <FeaturesComponent buttonLabel={''} {...features} />

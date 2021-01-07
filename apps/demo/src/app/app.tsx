@@ -15,7 +15,14 @@ import GitHubRibbon from 'react-github-ribbons';
 export function App() {
   return (
     <ShifterThemeProvider>
-      <Header />
+      <Header nav={[
+    [
+      {
+        label: `Qui sint`,
+        href: `#!`,
+      },
+    ]
+    ]} />
       <PageHeader title="Title" subtitle="Sub title" />
       <Animation animation="dashboard"/>
       <Container
@@ -32,7 +39,16 @@ export function App() {
       </Container>
       <Benefits />
       <Features />
-      <Testimonials />
+      <Testimonials {...{
+  title: `Esse reprehenderit incididunt in deserunt enim nostrud tempor proident exercitation duis dolore ullamco proident.`,
+  nodes: [
+    {
+      img: 'user-avatar.png',
+      quote:
+        'Amet sint velit aliquip aute ex enim cupidatat ex Nulla nostrud proident minim do labore ipsum mollit eu voluptate. Cillum magna quis culpa in et ea laborum eiusmod reprehenderit tempor ea labore. <a href="https://wptavern.com/digitalcube-launches-shifter-serverless-hosting-for-wordpress">Read more.</a>',
+      author: 'FooBarBaz',
+      handle: '@ExampleFooBarBaz',
+    }]}} />
       <GitHubRibbon href="https://github.com/digitalcube/galaxy" target="_blank" rel="noopener noreferrer"/>
     </ShifterThemeProvider>
   );

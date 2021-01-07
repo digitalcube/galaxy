@@ -1,14 +1,13 @@
-import React, { ReactNode } from 'react';
+import React, { FC, ReactNode } from 'react';
 import {
   Container,
   Grid,
   Heading,
   Content,
-  Animation,
   Link,
 } from '@galaxy/core';
 
-export type Hero = {
+export type HeroProps = {
   title?: string;
   img?: ReactNode;
   subtitle?: string;
@@ -16,13 +15,13 @@ export type Hero = {
   href?: string;
 };
 
-export const Hero: React.FC<Hero> = ({
+export const Hero: FC<HeroProps> = ({
   title,
   subtitle,
   img,
   href,
   buttonLabel,
-}: Hero) => {
+}) => {
   return (
     <Container
       size="4"
@@ -50,12 +49,4 @@ export const Hero: React.FC<Hero> = ({
       </Grid>
     </Container>
   );
-};
-
-Hero.defaultProps = {
-  img: <Animation animation="dashboard" />,
-  title: `In commodo id minim fugiat ex qui anim cupidatat reprehenderit.`,
-  subtitle: `Laborum elit fugiat esse nisi eu magna est anim nisi officia deserunt eiusmod consequat voluptate eiusmod aliquip labore, id duis duis aliquip eiusmod.`,
-  href: `#!`,
-  buttonLabel: `Dolor aute exercitation`,
 };

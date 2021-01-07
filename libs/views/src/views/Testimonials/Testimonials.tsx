@@ -1,4 +1,4 @@
-import React, { FC } from 'react';
+import React, { FC, useMemo } from 'react';
 import {
   Container,
   Heading,
@@ -9,8 +9,8 @@ import {
   Avatar,
 } from '@galaxy/core';
 
-export type Testimonials = {
-  nodes?: any;
+export type TestimonialsProps = {
+  nodes: Array<Quote>;
   title?: string;
 };
 
@@ -45,15 +45,15 @@ const Quote = ({ img, quote, author, handle }: Quote) => {
   );
 };
 
-export const Testimonials: FC<Testimonials> = ({
+export const Testimonials: FC<TestimonialsProps> = ({
   title,
   nodes,
-}: Testimonials) => {
-  const quotes = nodes.map((node: Quote) => {
+}) => {
+  const quotes = useMemo(() => nodes.map((node: Quote) => {
     return {
       node: <Quote {...node} />,
     };
-  });
+  }), [nodes]);
 
   return (
     <Container
@@ -105,45 +105,4 @@ export const Testimonials: FC<Testimonials> = ({
       />
     </Container>
   );
-};
-
-Testimonials.defaultProps = {
-  title: `Esse reprehenderit incididunt in deserunt enim nostrud tempor proident exercitation duis dolore ullamco proident.`,
-  nodes: [
-    {
-      img: 'user-avatar.png',
-      quote:
-        'Amet sint velit aliquip aute ex enim cupidatat ex Nulla nostrud proident minim do labore ipsum mollit eu voluptate. Cillum magna quis culpa in et ea laborum eiusmod reprehenderit tempor ea labore. <a href="https://wptavern.com/digitalcube-launches-shifter-serverless-hosting-for-wordpress">Read more.</a>',
-      author: 'FooBarBaz',
-      handle: '@ExampleFooBarBaz',
-    },
-    {
-      img: 'user-avatar.png',
-      quote:
-        'Ullamco aute nulla amet commodo magna.. <a href="https://wptavern.com/digitalcube-launches-shifter-serverless-hosting-for-wordpress">Read more.</a>',
-      author: 'FooBarBaz',
-      handle: '@ExampleFooBarBaz',
-    },
-    {
-      img: 'user-avatar.png',
-      quote:
-        'Aute ea eiusmod eu consectetur velit cillum dolore quis voluptate eu eiusmod.. <a href="https://wptavern.com/digitalcube-launches-shifter-serverless-hosting-for-wordpress">Read more.</a>',
-      author: 'FooBarBaz',
-      handle: '@ExampleFooBarBaz',
-    },
-    {
-      img: 'user-avatar.png',
-      quote:
-        'DigitalCube Launches Shifter, Serverless Hosting for WordPress. <a href="https://wptavern.com/digitalcube-launches-shifter-serverless-hosting-for-wordpress">Read more.</a>',
-      author: 'FooBarBaz',
-      handle: '@ExampleFooBarBaz',
-    },
-    {
-      img: 'user-avatar.png',
-      quote:
-        'DigitalCube Launches Shifter, Serverless Hosting for WordPress. <a href="https://wptavern.com/digitalcube-launches-shifter-serverless-hosting-for-wordpress">Read more.</a>',
-      author: 'FooBarBaz',
-      handle: '@ExampleFooBarBaz',
-    },
-  ],
 };

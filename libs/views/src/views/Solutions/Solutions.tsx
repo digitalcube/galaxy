@@ -13,37 +13,29 @@ import {
 } from '@galaxy/core';
 import { Card } from '../Card';
 
-export type Solutions = {
+export type SolutionsProps = {
+  nodes?: SolutionNodes
+}
+
+export type SolutionNodes = Array<SolutionNode>
+export type SolutionNode = BaseItem & {
+  solution?: BaseItem;
+  showcase?: ShowcaseItem;
+}
+type BaseItem = {
   title?: string;
   subtitle?: string;
   buttonLabel?: string;
   href?: string;
-  solution?: Solution;
-  showcase?: Showcase;
-  nodes?: any;
-};
-
-type Solution = {
-  title?: string;
-  subtitle?: string;
-  href?: string;
-  buttonLabel?: string;
-};
-
-type Showcase = {
-  title?: string;
-  subtitle?: string;
+}
+type ShowcaseItem = BaseItem & {
   img?: string;
-  buttonLabel?: string;
-  href?: string;
-};
+}
 
-const Showcase: FC<Showcase> = ({
+const Showcase: FC<ShowcaseItem> = ({
   title,
-  buttonLabel,
-  href,
   img,
-}: Showcase) => {
+}) => {
   return (
     <Card
       variant="primary"
@@ -67,12 +59,12 @@ const Showcase: FC<Showcase> = ({
   );
 };
 
-const Solution: FC<Solution> = ({
+const Solution: FC<SolutionNode> = ({
   title,
   subtitle,
   buttonLabel,
   href,
-}: Solution) => {
+}) => {
   return (
     <Card
       variant="primary"
@@ -115,10 +107,10 @@ const Solution: FC<Solution> = ({
   );
 };
 
-export const Solutions: FC<Solutions> = ({ nodes }: Solutions) => {
+export const Solutions: FC<SolutionsProps> = ({ nodes }) => {
   if (!nodes) return null;
 
-  const solutionsNav = nodes.map((node: Solutions, i: number) => {
+  const solutionsNav = nodes.map((node, i: number) => {
     if (!node) return null;
     const label = node.solution?.title;
 
@@ -129,7 +121,7 @@ export const Solutions: FC<Solutions> = ({ nodes }: Solutions) => {
     );
   });
 
-  const solutions = nodes.map((node: Solutions, i: number) => {
+  const solutions = nodes.map((node, i: number) => {
     const { solution, showcase } = node;
     return (
       <TabPanel key={i}>
@@ -174,107 +166,4 @@ export const Solutions: FC<Solutions> = ({ nodes }: Solutions) => {
       </Tabs>
     </Container>
   );
-};
-
-Solutions.defaultProps = {
-  nodes: [
-    {
-      solution: {
-        title: `Education`,
-        subtitle: `Cupidatat pariatur ea irure ea laborum.`,
-        href: `#!`,
-        buttonLabel: `Veniam qui`,
-      },
-      showcase: {
-        title: `Eiusmod laborum`,
-        buttonLabel: `Culpa amet`,
-        href: `#!`,
-        img: `logo-vu.png`,
-      },
-    },
-    {
-      solution: {
-        title: `Designers`,
-        subtitle: `Lorem commodo amet dolor quis aliquip aliqua esse non et Lorem.`,
-        href: `#!`,
-        buttonLabel: `Veniam qui`,
-      },
-      showcase: {
-        title: `Eiusmod laborum`,
-        buttonLabel: `Culpa amet`,
-        href: `#!`,
-        img: `logo-howtospeakmachine.webp`,
-      },
-    },
-    {
-      solution: {
-        title: `Designers`,
-        subtitle: `Lorem commodo amet dolor quis aliquip aliqua esse non et Lorem.`,
-        href: `#!`,
-        buttonLabel: `Veniam qui`,
-      },
-      showcase: {
-        title: `Eiusmod laborum`,
-        buttonLabel: `Culpa amet`,
-        href: `#!`,
-        img: `logo-howtospeakmachine.webp`,
-      },
-    },
-    {
-      solution: {
-        title: `Designers`,
-        subtitle: `Lorem commodo amet dolor quis aliquip aliqua esse non et Lorem.`,
-        href: `#!`,
-        buttonLabel: `Veniam qui`,
-      },
-      showcase: {
-        title: `Eiusmod laborum`,
-        buttonLabel: `Culpa amet`,
-        href: `#!`,
-        img: `logo-howtospeakmachine.webp`,
-      },
-    },
-    {
-      solution: {
-        title: `Designers`,
-        subtitle: `Lorem commodo amet dolor quis aliquip aliqua esse non et Lorem.`,
-        href: `#!`,
-        buttonLabel: `Veniam qui`,
-      },
-      showcase: {
-        title: `Eiusmod laborum`,
-        buttonLabel: `Culpa amet`,
-        href: `#!`,
-        img: `logo-howtospeakmachine.webp`,
-      },
-    },
-    {
-      solution: {
-        title: `Designers`,
-        subtitle: `Lorem commodo amet dolor quis aliquip aliqua esse non et Lorem.`,
-        href: `#!`,
-        buttonLabel: `Veniam qui`,
-      },
-      showcase: {
-        title: `Eiusmod laborum`,
-        buttonLabel: `Culpa amet`,
-        href: `#!`,
-        img: `logo-howtospeakmachine.webp`,
-      },
-    },
-    {
-      solution: {
-        title: `Designers`,
-        subtitle: `Lorem commodo amet dolor quis aliquip aliqua esse non et Lorem.`,
-        href: `#!`,
-        buttonLabel: `Veniam qui`,
-      },
-      showcase: {
-        title: `Eiusmod laborum`,
-        buttonLabel: `Culpa amet`,
-        href: `#!`,
-        img: `logo-howtospeakmachine.webp`,
-      },
-    },
-  ],
 };

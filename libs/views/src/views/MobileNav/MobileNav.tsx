@@ -4,15 +4,15 @@ import { Bars } from '@styled-icons/fa-solid/Bars';
 import { Times } from '@styled-icons/fa-solid/Times';
 import Popup from 'reactjs-popup';
 import { Flex } from 'theme-ui';
-import { Nav, NavLink, Container, Link, Brand } from '@galaxy/core';
+import { Nav, NavLinkProps, Container, Link} from '@galaxy/core';
 
-type MobileNav = {
-  nodes?: NavLink[];
+export type MobileNavProps = {
+  nodes?: NavLinkProps[];
   brand?: ReactNode;
   sx?: object;
 };
 
-export const MobileNav: FC<MobileNav> = ({ nodes, sx, brand }: MobileNav) => {
+export const MobileNav: FC<MobileNavProps> = ({ nodes, sx, brand }) => {
   const context = useThemeUI();
   const { theme } = context;
   const iconSize = theme?.space ? theme?.space[2] : ``;
@@ -74,39 +74,4 @@ export const MobileNav: FC<MobileNav> = ({ nodes, sx, brand }: MobileNav) => {
       </Popup>
     </Container>
   );
-};
-
-MobileNav.defaultProps = {
-  brand: <Brand asset="shifter-mark" size="45" />,
-  nodes: [
-    {
-      label: `Qui sint`,
-      href: `#!`,
-    },
-    {
-      label: `Cupidatat`,
-      href: `#!`,
-    },
-    {
-      label: `Excepteur`,
-      href: `#!`,
-    },
-    {
-      label: `Laborum`,
-      href: `#!`,
-    },
-    {
-      label: `Pariatur`,
-      href: `#!`,
-    },
-    {
-      label: `Login`,
-      href: `#!`,
-    },
-    {
-      label: `Sign Up`,
-      href: `#!`,
-      kind: `primary`,
-    },
-  ],
 };

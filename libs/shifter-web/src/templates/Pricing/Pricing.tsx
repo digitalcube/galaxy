@@ -1,79 +1,37 @@
-import React from 'react';
-import { Brand } from '@galaxy/core';
-import { PageHeader, GetStarted,Plans,FeatureTable,Benefits } from '@galaxy/views';
+import React, { FC } from 'react';
+import { PageHeader, GetStarted,Plans, PlansProps,FeatureTable,BenefitsProps, GetStartedProps } from '@galaxy/views';
 
-type Pricing = {
+export type PricingProps = {
   title?: string;
   subtitle?: string;
-  getStarted?: GetStarted;
-  plans?: Plans;
+  getStarted?: GetStartedProps;
+  plans?: PlansProps;
+  title2?: string;
+  subtitle2?: string;
+  plans2?: PlansProps;
   featureTable?: FeatureTable;
-  benefits?: Benefits;
+  benefits?: BenefitsProps;
 };
 
-export const Pricing = ({
+export const Pricing: FC<PricingProps> = ({
   title,
+  title2,
   subtitle,
+  subtitle2,
   plans,
+  plans2,
   getStarted,
   featureTable,
-}: Pricing) => {
+}) => {
   return (
     <>
       <PageHeader title={title} subtitle={subtitle} />
-      <Plans {...plans} />
-      <FeatureTable {...featureTable} />
-      <PageHeader title={title} subtitle={subtitle} />
-      <Plans {...plans} />
+      {plans ? <Plans {...plans} />: null}
+      {featureTable ? <FeatureTable {...featureTable} />: null}
+      <PageHeader title={title2} subtitle={subtitle2} />
+      {plans2 ? <Plans {...plans2} />: null}
       <GetStarted {...getStarted} />
     </>
   );
 };
 
-Pricing.defaultProps = {
-  header: {
-    brand: <Brand asset="shifter-mark" size="40" />,
-    nav: [
-      [
-        {
-          label: `Features`,
-          href: `#!`,
-        },
-        {
-          label: `Blog`,
-          href: `#!`,
-        },
-        {
-          label: `Solutions`,
-          href: `#!`,
-        },
-        {
-          label: `Pricing`,
-          href: `#!`,
-        },
-        {
-          label: `Showcase`,
-          href: `#!`,
-        },
-      ],
-      [
-        {
-          label: `Login`,
-          href: `#!`,
-        },
-        {
-          label: `Sign Up`,
-          href: `#!`,
-          kind: `primary`,
-        },
-      ],
-    ],
-  },
-  getStarted: {
-    title: `Ready to take your site to the next level?`,
-    subtitle: `Shifter is the solution for fast, maintenance-free WordPress websites.`,
-  },
-  features: {
-    buttonLabel: null,
-  },
-};

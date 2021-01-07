@@ -1,6 +1,6 @@
 import React from 'react';
 import { withKnobs } from '@storybook/addon-knobs';
-import { Showcase } from './Showcase';
+import { Showcase, ShowcaseProps } from './Showcase';
 
 export default {
   component: Showcase,
@@ -9,4 +9,72 @@ export default {
   excludeStories: /.*Data$/,
 };
 
-export const Default = () => <Showcase />;
+const props: ShowcaseProps = {
+  title: `Velit a non`,
+  subtitle: `Est cupidatat sunt est sint reprehenderit eiusmod exercitation in tempor.`,
+  nodes: [
+    {
+      title: `Soracom`,
+      href: `https://example.com`,
+      excerpt: `example.com`,
+      img: `post-featured-image-1.png`,
+    },
+    {
+      title: `Vrije Universiteit Amsterdam`,
+      excerpt: `example.com`,
+      href: `https://example.com`,
+      img: `post-featured-image-2.png`,
+    },
+    {
+      title: `Soracom`,
+      href: `https://example.com`,
+      excerpt: `example.com`,
+      img: `post-featured-image-1.png`,
+    },
+    {
+      title: `Vrije Universiteit Amsterdam`,
+      excerpt: `example.com`,
+      href: `https://example.com`,
+      img: `post-featured-image-2.png`,
+    },
+    {
+      title: `Soracom`,
+      href: `https://example.com`,
+      excerpt: `example.com`,
+      img: `post-featured-image-1.png`,
+    },
+    {
+      title: `Vrije Universiteit Amsterdam`,
+      excerpt: `example.com`,
+      href: `https://example.com`,
+      img: `post-featured-image-2.png`,
+    },
+    {
+      title: `Soracom`,
+      href: `https://example.com`,
+      excerpt: `example.com`,
+      img: `post-featured-image-1.png`,
+    },
+    {
+      title: `Vrije Universiteit Amsterdam`,
+      excerpt: `example.com`,
+      href: `https://example.com`,
+      img: `post-featured-image-2.png`,
+    },
+    {
+      title: `Soracom`,
+      href: `https://example.com`,
+      excerpt: `example.com`,
+      img: `post-featured-image-1.png`,
+    },
+    {
+      title: `Vrije Universiteit Amsterdam`,
+      excerpt: `example.com`,
+      href: `https://example.com`,
+      img: `post-featured-image-2.png`,
+    },
+  ],
+
+}
+
+export const Default = () => <Showcase {...props} />;

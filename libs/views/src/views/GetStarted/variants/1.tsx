@@ -1,14 +1,14 @@
 import React from 'react';
 import { Box } from 'theme-ui';
 import { Content, Link, Heading, Container } from '@galaxy/core';
-import { GetStarted } from '../GetStarted';
+import { GetStarted, GetStartedProps } from '../GetStarted';
 
 export default function Default({
   title,
   subtitle,
   href,
   linkLabel,
-}: GetStarted) {
+}: GetStartedProps) {
   return (
     <Box
       sx={{

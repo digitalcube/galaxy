@@ -1,6 +1,6 @@
 import React from 'react';
 import { withKnobs } from '@storybook/addon-knobs';
-import { shifter } from '@galaxy/shifter';
+import { galaxy } from '../../themes/galaxy';
 import { Heading, Text, Content } from '../index';
 
 export default {
@@ -10,7 +10,7 @@ export default {
   excludeStories: /.*Data$/,
 };
 
-const headingSizes = Object.keys(shifter.text).map((size: Heading) => {
+const headingSizes = Object.keys(galaxy.text).map((size: Heading) => {
   return (
     <>
       <Heading size={`${size}`}>heading / size: {size}</Heading>

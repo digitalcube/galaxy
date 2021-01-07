@@ -1,7 +1,28 @@
 import React from 'react';
 import { withKnobs } from '@storybook/addon-knobs';
-import { Posts } from './Posts';
+import { Posts, PostsProps } from './Posts';
 
+const props: PostsProps = {
+  nodes: [
+    {
+      title: `Duis Adipisicing`,
+      href: `#!`,
+    },
+    {
+      title: `Consequat`,
+      href: `#!`,
+    },
+    {
+      title: `Et Tempor`,
+      href: `#!`,
+    },
+    {
+      title: `Cupidatat`,
+      href: `#!`,
+    },
+  ],
+
+}
 export default {
   component: Posts,
   title: `Galaxy/Views/Posts`,
@@ -10,5 +31,5 @@ export default {
 };
 
 export const Default = () => {
-  return <Posts />;
+  return <Posts {...props} />;
 };

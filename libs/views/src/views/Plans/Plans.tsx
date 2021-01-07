@@ -1,20 +1,15 @@
 import React, { FC } from 'react';
 import { Container, Grid } from '@galaxy/core';
 import { Plan } from '../Plan';
+import { PlanProps } from '../Plan/Plan';
 
-export type Plans = {
-  nodes?: Plan[];
-  node?: Plan;
+export type PlansProps = {
+  nodes: PlanProps[];
   sx?: object;
 };
 
-export const Plans: FC<Plans> = ({ nodes, sx }: Plans) => {
+export const Plans: FC<PlansProps> = ({ nodes, sx }) => {
   if (!nodes) return null;
-
-  const items = nodes.map((node: Plan, i: number) => {
-    return <Plan key={i} {...node} />;
-  });
-
   return (
     <Container
       size="4"
@@ -24,53 +19,10 @@ export const Plans: FC<Plans> = ({ nodes, sx }: Plans) => {
       }}
     >
       <Grid sx={{ ...sx }} columns={[1, null, null, null, 2, 4]}>
-        {items}
+        {nodes.map((node: PlanProps, i: number) => {
+          return <Plan key={i} {...node} />;
+        })}
       </Grid>
     </Container>
   );
-};
-
-Plans.defaultProps = {
-  nodes: [
-    {
-      img: 'pricing-plan-icon-1.png',
-      title: `Free`,
-      buttonLabel: `hello world`,
-      detailsLabel: `View more`,
-      detailsLink: `#!buttonLink`,
-      href: `//google.com/`,
-      price: {
-        month: `$1`,
-        year: `$2`,
-      },
-      planMeta: [{ label: 'hello world' }],
-    },
-    {
-      img: 'pricing-plan-icon-1.png',
-      href: `#!`,
-      title: `Tier 1`,
-      price: {
-        month: `$1`,
-        year: `$2`,
-      },
-    },
-    {
-      img: 'pricing-plan-icon-1.png',
-      href: `#!`,
-      title: `Tier 2`,
-      price: {
-        month: `$1`,
-        year: `$2`,
-      },
-    },
-    {
-      img: 'pricing-plan-icon-1.png',
-      href: `#!`,
-      title: `Tier 3`,
-      price: {
-        month: `$1`,
-        year: `$2`,
-      },
-    },
-  ],
 };
