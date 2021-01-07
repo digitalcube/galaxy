@@ -1,5 +1,5 @@
 module.exports = {
-  displayName: 'siva',
+  displayName: 'svia',
   preset: '../../jest.preset.js',
   transform: {
     '^.+\\.[tj]sx?$': [
@@ -8,5 +8,5 @@ module.exports = {
     ],
   },
   moduleFileExtensions: ['ts', 'tsx', 'js', 'jsx'],
-  coverageDirectory: '../../coverage/libs/siva',
+  coverageDirectory: '../../coverage/libs/svia',
 };

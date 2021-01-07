@@ -273,58 +273,6 @@
         }
       }
     },
-    "siva": {
-      "root": "libs/siva",
-      "sourceRoot": "libs/siva/src",
-      "projectType": "library",
-      "targets": {
-        "lint": {
-          "executor": "@nrwl/linter:eslint",
-          "options": {
-            "lintFilePatterns": [
-              "libs/siva/**/*.{ts,tsx,js,jsx}"
-            ]
-          }
-        },
-        "build": {
-          "executor": "@nrwl/web:package",
-          "outputs": [
-            "{options.outputPath}"
-          ],
-          "options": {
-            "outputPath": "dist/libs/siva",
-            "tsConfig": "libs/siva/tsconfig.lib.json",
-            "project": "libs/siva/package.json",
-            "entryFile": "libs/siva/src/index.ts",
-            "external": [
-              "react",
-              "react-dom",
-              "react-is",
-              "styled-components"
-            ],
-            "babelConfig": "@nrwl/react/plugins/bundle-babel",
-            "rollupConfig": "@nrwl/react/plugins/bundle-rollup",
-            "assets": [
-              {
-                "glob": "README.md",
-                "input": ".",
-                "output": "."
-              }
-            ]
-          }
-        },
-        "test": {
-          "executor": "@nrwl/jest:jest",
-          "outputs": [
-            "coverage/libs/siva"
-          ],
-          "options": {
-            "jestConfig": "libs/siva/jest.config.js",
-            "passWithNoTests": true
-          }
-        }
-      }
-    },
     "shifter": {
       "root": "libs/shifter",
       "sourceRoot": "libs/shifter/src",
@@ -424,6 +372,58 @@
           ],
           "options": {
             "jestConfig": "libs/amimoto/jest.config.js",
+            "passWithNoTests": true
+          }
+        }
+      }
+    },
+    "svia": {
+      "root": "libs/svia",
+      "sourceRoot": "libs/svia/src",
+      "projectType": "library",
+      "targets": {
+        "lint": {
+          "executor": "@nrwl/linter:eslint",
+          "options": {
+            "lintFilePatterns": [
+              "libs/svia/**/*.{ts,tsx,js,jsx}"
+            ]
+          }
+        },
+        "build": {
+          "executor": "@nrwl/web:package",
+          "outputs": [
+            "{options.outputPath}"
+          ],
+          "options": {
+            "outputPath": "dist/libs/svia",
+            "tsConfig": "libs/svia/tsconfig.lib.json",
+            "project": "libs/svia/package.json",
+            "entryFile": "libs/svia/src/index.ts",
+            "external": [
+              "react",
+              "react-dom",
+              "react-is",
+              "styled-components"
+            ],
+            "babelConfig": "@nrwl/react/plugins/bundle-babel",
+            "rollupConfig": "@nrwl/react/plugins/bundle-rollup",
+            "assets": [
+              {
+                "glob": "README.md",
+                "input": ".",
+                "output": "."
+              }
+            ]
+          }
+        },
+        "test": {
+          "executor": "@nrwl/jest:jest",
+          "outputs": [
+            "coverage/libs/svia"
+          ],
+          "options": {
+            "jestConfig": "libs/svia/jest.config.js",
             "passWithNoTests": true
           }
         }

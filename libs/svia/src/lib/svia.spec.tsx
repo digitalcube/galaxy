@@ -1,11 +1,11 @@
 import React from 'react';
 import { render } from '@testing-library/react';
 
-import Siva from './siva';
+import Svia from './svia';
 
-describe('Siva', () => {
+describe('Svia', () => {
   it('should render successfully', () => {
-    const { baseElement } = render(<Siva />);
+    const { baseElement } = render(<Svia />);
     expect(baseElement).toBeTruthy();
   });
 });

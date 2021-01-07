@@ -3,8 +3,8 @@ module.exports = {
     '<rootDir>/apps/demo',
     '<rootDir>/libs/shifter-web',
     '<rootDir>/libs/core',
-    '<rootDir>/libs/siva',
     '<rootDir>/libs/shifter',
     '<rootDir>/libs/amimoto',
+    '<rootDir>/libs/svia',
   ],
 };
