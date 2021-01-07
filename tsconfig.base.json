@@ -21,8 +21,7 @@
     "baseUrl": ".",
     "paths": {
       "@galaxy/shifter-web": ["libs/shifter-web/src/index.ts"],
-      "@galaxy/core": ["libs/core/src/index.ts"],
-      "@galaxy/shared-storybook": ["libs/shared-storybook/src/index.ts"]
+      "@galaxy/core": ["libs/core/src/index.ts"]
     }
   },
   "exclude": ["node_modules", "tmp"]

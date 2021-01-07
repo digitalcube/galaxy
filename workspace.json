@@ -239,57 +239,6 @@
           }
         }
       }
-    },
-    "shared-storybook": {
-      "root": "libs/shared-storybook",
-      "sourceRoot": "libs/shared-storybook/src",
-      "projectType": "library",
-      "targets": {
-        "lint": {
-          "executor": "@nrwl/linter:eslint",
-          "options": {
-            "lintFilePatterns": ["libs/shared-storybook/**/*.{ts,tsx,js,jsx}"]
-          }
-        },
-        "test": {
-          "executor": "@nrwl/jest:jest",
-          "outputs": ["coverage/libs/shared-storybook"],
-          "options": {
-            "jestConfig": "libs/shared-storybook/jest.config.js",
-            "passWithNoTests": true
-          }
-        },
-        "storybook": {
-          "executor": "@nrwl/storybook:storybook",
-          "options": {
-            "uiFramework": "@storybook/react",
-            "port": 4400,
-            "config": {
-              "configFolder": "libs/shared-storybook/.storybook"
-            }
-          },
-          "configurations": {
-            "ci": {
-              "quiet": true
-            }
-          }
-        },
-        "build-storybook": {
-          "executor": "@nrwl/storybook:build",
-          "options": {
-            "uiFramework": "@storybook/react",
-            "outputPath": "dist/storybook/shared-storybook",
-            "config": {
-              "configFolder": "libs/shared-storybook/.storybook"
-            }
-          },
-          "configurations": {
-            "ci": {
-              "quiet": true
-            }
-          }
-        }
-      }
     }
   },
   "cli": {
