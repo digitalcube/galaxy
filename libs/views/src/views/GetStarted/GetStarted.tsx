@@ -14,7 +14,7 @@ export const GetStarted: FC<GetStartedProps> = ({
   subtitle,
   href,
   linkLabel,
-  variant,
+  variant = '0',
 }) => {
   if (variant === `0`) {
     return (

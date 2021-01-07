@@ -13,28 +13,27 @@ const props: FeaturesProps = {
       title: `Magic Link Logins`,
       excerpt: `You’ll never forget your WordPress password on Shifter because you’ll never have to.`,
       href: `#`,
-      img: `https://www.getshifter.io/static/a5fe464c4339cf677b4496a7c7eb757d/9c44f/icon_feature-MagicLinks.png`,
+      img: `post-featured-image.png`,
     },
     {
       title: `Security Built-in`,
       excerpt: `Don’t spend another minute configuring security Plugins. We have you covered.`,
       href: `#`,
-      img: `https://www.getshifter.io/static/a5fe464c4339cf677b4496a7c7eb757d/9c44f/icon_feature-MagicLinks.png`,
+      img: `post-featured-image.png`,
     },
     {
       title: `Integrated CDN`,
       excerpt: `Deliver fast static content to site visitors anywhere in the world with low latency.`,
       href: `#`,
-      img: `https://www.getshifter.io/static/a5fe464c4339cf677b4496a7c7eb757d/9c44f/icon_feature-MagicLinks.png`,
+      img: `post-featured-image.png`,
     },
     {
       title: `Maintenance-free`,
       excerpt: `Never worry about security vulnerabilities from WordPress Core, themes, and outdated plugins.`,
       href: `#`,
-      img: `https://www.getshifter.io/static/a5fe464c4339cf677b4496a7c7eb757d/9c44f/icon_feature-MagicLinks.png`,
+      img: `post-featured-image.png`,
     },
   ],
-
 }
 export default {
   component: Features,

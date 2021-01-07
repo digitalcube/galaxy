@@ -1,9 +1,9 @@
-import React from 'react';
-import { Hero, Logos,Benefits,Solutions, Features,Testimonials,TestimonialsProps,Showcase,GetStarted, BenefitsProps, FeaturesProps, GetStartedProps, SolutionsProps, ShowcaseProps } from '@galaxy/views';
+import React, { FC } from 'react';
+import { Hero, HeroProps, Logos,Benefits,Solutions, Features,Testimonials,TestimonialsProps,Showcase,GetStarted, BenefitsProps, FeaturesProps, GetStartedProps, SolutionsProps, ShowcaseProps } from '@galaxy/views';
 
-type FrontPage = {
+export type FrontPageProps = {
   getStarted?: GetStartedProps;
-  hero?: Hero;
+  hero?: HeroProps;
   logos?: Logos;
   benefits?: BenefitsProps;
   solutions?: SolutionsProps;
@@ -12,7 +12,7 @@ type FrontPage = {
   testimonials?: TestimonialsProps;
 };
 
-export const FrontPage = ({
+export const FrontPage: FC<FrontPageProps> = ({
   getStarted,
   hero,
   logos,
@@ -21,7 +21,7 @@ export const FrontPage = ({
   features,
   showcase,
   testimonials,
-}: FrontPage) => {
+}) => {
   return (
     <>
       <Hero {...hero} />
@@ -34,15 +34,4 @@ export const FrontPage = ({
       <GetStarted {...getStarted} />
     </>
   );
-};
-
-FrontPage.defaultProps = {
-  getStarted: {
-    title: `Ready to take your site to the next level?`,
-    subtitle: `Shifter is the solution for fast, maintenance-free WordPress websites.`,
-  },
-  hero: {
-    title: `Jamstack solutions for WordPress`,
-    subtitle: `Using Shifter, create or migrate WordPress sites in minutes that are scalable, secure from attacks, and 100% static with no security or caching plugins required.`,
-  },
 };
