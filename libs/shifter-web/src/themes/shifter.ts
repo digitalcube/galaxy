@@ -1,6 +1,5 @@
 // shifter.ts
-
-import { colors } from '../styles/colors';
+import { colors } from '@galaxy/views';
 
 const transitions = {
   exit: {

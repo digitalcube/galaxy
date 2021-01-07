@@ -1,1 +1,1 @@
-export * from './lib/amimoto';
+export * from './themes';
