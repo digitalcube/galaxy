@@ -4,9 +4,18 @@ import { FrontPage } from './FrontPage';
 
 export default {
   component: FrontPage,
-  title: `Galaxy/Templates/FrontPage`,
+  title: `Galaxy/Views/FrontPage`,
   decorators: [withKnobs],
   excludeStories: /.*Data$/,
 };
 
-export const Default = () => <FrontPage />;
+export const Default = () => <FrontPage header={{
+  nav: [
+    [
+      {
+        label: `Qui sint`,
+        href: `#!`,
+      },
+    ]
+    ]
+}} />;

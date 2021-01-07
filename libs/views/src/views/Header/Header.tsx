@@ -1,12 +1,12 @@
 import React, { FC, ReactNode } from 'react';
 import { Flex } from 'theme-ui';
-import { Container, Nav, Brand, Link } from '@galaxy/core';
+import { Container, Nav,  Link, NavLinkProps } from '@galaxy/core';
 import { MobileNav } from '../MobileNav';
 
 export type HeaderProps = {
   brand?: ReactNode;
   href?: String;
-  nav?: any;
+  nav: Array<NavLinkProps[]>;
   length?: number;
   sx?: object;
 };

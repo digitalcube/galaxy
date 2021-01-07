@@ -15,7 +15,14 @@ import GitHubRibbon from 'react-github-ribbons';
 export function App() {
   return (
     <ShifterThemeProvider>
-      <Header />
+      <Header nav={[
+    [
+      {
+        label: `Qui sint`,
+        href: `#!`,
+      },
+    ]
+    ]} />
       <PageHeader title="Title" subtitle="Sub title" />
       <Animation animation="dashboard"/>
       <Container

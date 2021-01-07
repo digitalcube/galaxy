@@ -4,7 +4,7 @@ import { Footer } from '../Footer';
 
 export type Layout = {
   children?: ReactNode;
-  header?: HeaderProps;
+  header: HeaderProps;
   footer?: Footer;
 };
 
