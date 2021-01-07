@@ -1,5 +1,74 @@
 # Galaxy
 
+## Getting started
+
+```bash
+$ git clone git@github.com:digitalcube/galaxy.git
+$ yarn (or npm install)
+```
+
+### Start a demo application
+We can run the demo application for the libraries.
+
+```bash
+$ yarn start
+```
+
+The application code are in `apps/demo`.
+
+### Start a Storybook
+We can run storybook application by the command.
+
+```bash
+$ yarn storybook
+```
+
+The command will build the entire library's story.
+
+## Development
+
+### Add a new React Component files
+
+
+```bash
+$ yarn nx g @nrwl/react:component NEW_COMPONENT_NAME --project=PROJECT_NAME --export
+
+# Eg.) New core component named Tooltip
+$ yarn nx g @nrwl/react:component Tooltip --project=core --export
+
+# Eg.) New view component for shifter-web named Footer
+$ yarn nx g @nrwl/react:component Footer --project=shifter-web --export
+```
+
+### Run unit test and lint
+
+```bash
+# ESlint
+$ yarn libs:lint
+
+# Prettier
+$ yarn libs:format
+
+# Jest
+$ yarn libs:test
+```
+
+### Build projects
+
+```bash
+# Build the entire packages
+$ yarn lib:build
+
+# Build a Storybook
+$ yarn storybook:build
+
+# Build a demo application
+$ yarn build
+```
+
+
+
+## Appendix: Document about Nx
 This project was generated using [Nx](https://nx.dev).
 
 <p align="center"><img src="https://raw.githubusercontent.com/nrwl/nx/master/images/nx-logo.png" width="450"></p>
