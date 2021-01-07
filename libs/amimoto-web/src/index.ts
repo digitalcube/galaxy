@@ -1,1 +1,5 @@
-export * from './lib/amimoto-web';
+export {
+    amimoto,
+    AmimotoThemeProvider,
+} from '@galaxy/amimoto'
+export * from './templates'
