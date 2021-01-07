@@ -26,7 +26,7 @@
     "help": "nx help",
     "storybook": "start-storybook -s ./.storybook/public",
     "storybook:build": "build-storybook --static-dir ./.storybook/public",
-    "libs": "nx run-many --projects \"core,views,shifter-web,svia,shifter,amimoto\"",
+    "libs": "nx run-many --projects \"core,views,shifter-web,svia,shifter,amimoto,amimoto-web\"",
     "libs:lint": "yarn libs --target lint",
     "libs:format": "yarn libs --target format",
     "libs:build": "yarn libs --target build",

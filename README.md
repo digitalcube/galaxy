@@ -128,6 +128,20 @@ And you need to update the `package.json` file like this.
 +    "libs": "nx run-many --projects \"core,shifter-web,LIBRARY_NAME\"",
 ```
 
+## FAQ
+### Where should we add a new component?
+
+- General component -> @galaxy/core
+- General templates / view -> @galaxy/views
+
+- For AMIMOTO Dashboard -> @galaxy/amimoto
+- For AMIMOTO Dashboard and Web -> @galaxy/amimoto
+- For AMIMOTO Web -> @galaxy/amimoto-web
+
+- For Shifter Dashboard -> @galaxy/shifter
+- For Shifter Dashboard and Web -> @galaxy/shifter
+- For Shifter Web -> @galaxy/shifter-web
+
 ## Appendix: Document about Nx
 This project was generated using [Nx](https://nx.dev).
 
