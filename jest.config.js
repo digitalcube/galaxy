@@ -6,5 +6,6 @@ module.exports = {
     '<rootDir>/libs/shifter',
     '<rootDir>/libs/amimoto',
     '<rootDir>/libs/svia',
+    '<rootDir>/libs/views',
   ],
 };
