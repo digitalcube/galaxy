@@ -15,7 +15,7 @@ import {
   NavLink,
   Link,
 } from '@galaxy/core';
-import { Copyright } from '../../views/Copyright';
+import { Copyright } from '../Copyright';
 
 export type Footer = {
   nav?: Nav[];

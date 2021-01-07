@@ -1,7 +1,7 @@
 import React from 'react';
 import { Heading, Link, Container, Content, Grid } from '@galaxy/core';
 import { Post } from '../Post';
-import { Posts } from '../../views/Posts';
+import { Posts } from '../Posts';
 
 export type Showcase = {
   title?: string;

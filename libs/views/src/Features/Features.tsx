@@ -1,6 +1,6 @@
 import React from 'react';
 import { Heading, Link, Shape, Container, Content } from '@galaxy/core';
-import { Posts } from '../../views/Posts';
+import { Posts } from '../Posts';
 
 export type Features = {
   title?: string;
