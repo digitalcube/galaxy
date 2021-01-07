@@ -39,6 +39,12 @@ $ yarn nx g @nrwl/react:component Tooltip --project=core --export
 $ yarn nx g @nrwl/react:component Footer --project=shifter-web --export
 ```
 
+And we can add a story file for the Storybook by the command.
+
+```bash
+% yarn nx g component-story --project=PROJECT_NAME --componentPath=lib/{NEW_COMPONENT_NAME}.tsx
+```
+
 ### Run unit test and lint
 
 ```bash
