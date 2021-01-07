@@ -1,1 +1,1 @@
-export * from './lib/svia';
+export * from './templates/FrontPage/FrontPage';
