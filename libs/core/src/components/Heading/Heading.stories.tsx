@@ -1,6 +1,6 @@
 import React from 'react';
 import { withKnobs } from '@storybook/addon-knobs';
-import { shifter } from '@galaxy/shifter-web';
+import { shifter } from '@galaxy/shifter';
 import { Heading, Text, Content } from '../index';
 
 export default {
