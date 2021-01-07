@@ -1,15 +1,15 @@
 import React from 'react';
 
 import {
+  Features,
   Benefits,
   Card,
-  Features,
   Header,
   PageHeader,
-  ShifterThemeProvider,
   Testimonials,
+  ShifterThemeProvider,
 } from '@galaxy/shifter-web';
-import { Container, Grid, Content, Animation } from '@galaxy/core';
+import { Container, Animation } from '@galaxy/core';
 import GitHubRibbon from 'react-github-ribbons';
 
 export function App() {

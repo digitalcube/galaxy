@@ -1,7 +1,7 @@
 import {
   ShifterThemeProvider,
   shifter,
-} from '../libs/shifter-web/src/themes';
+} from '../libs/shifter/src/themes';
 import {
   amimoto,
 } from '../libs/amimoto/src/themes';
