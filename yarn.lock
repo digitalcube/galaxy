@@ -15298,6 +15298,11 @@ react-focus-lock@^2.1.0:
     use-callback-ref "^1.2.1"
     use-sidecar "^1.0.1"
 
+react-github-ribbons@^0.2.2:
+  version "0.2.2"
+  resolved "https://registry.yarnpkg.com/react-github-ribbons/-/react-github-ribbons-0.2.2.tgz#487858878ee1d21b927280c8a0c85d58a49658da"
+  integrity sha512-mXNMfltGnNiaGjfJyIWCzQtlVmCMLlCb8bS61GqwsXjsEDE0eiGPMEamh6FvJe58ESGfAoU8PhXCmjsd6o4AAw==
+
 react-helmet-async@^1.0.2:
   version "1.0.7"
   resolved "https://registry.yarnpkg.com/react-helmet-async/-/react-helmet-async-1.0.7.tgz#b988fbc3abdc4b704982bb74b9cb4a08fcf062c1"

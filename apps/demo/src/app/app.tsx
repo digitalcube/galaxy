@@ -10,6 +10,7 @@ import {
   Testimonials,
 } from '@galaxy/shifter-web';
 import { Container, Grid, Content, Animation } from '@galaxy/core';
+import GitHubRibbon from 'react-github-ribbons';
 
 export function App() {
   return (
@@ -32,6 +33,7 @@ export function App() {
       <Benefits />
       <Features />
       <Testimonials />
+      <GitHubRibbon href="https://github.com/digitalcube/galaxy" target="_blank" rel="noopener noreferrer"/>
     </ShifterThemeProvider>
   );
 }
