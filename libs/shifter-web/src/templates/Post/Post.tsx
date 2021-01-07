@@ -1,7 +1,6 @@
 import React from 'react';
 
-import { Hero } from '../../views/Hero';
-import { Layout } from '../../views/Layout';
+import { Hero, Layout } from '@galaxy/views';
 
 export const Post = () => {
   return (

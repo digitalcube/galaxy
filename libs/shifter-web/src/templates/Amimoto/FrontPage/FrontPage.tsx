@@ -1,6 +1,6 @@
 import React from 'react';
 
-import { Hero, Layout } from '../../../views/index';
+import { Hero, Layout } from '@galaxy/views';
 
 export const FrontPage = () => {
   return (

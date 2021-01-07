@@ -1,10 +1,6 @@
 import React from 'react';
 import { Brand } from '@galaxy/core';
-import { PageHeader } from '../../../views/PageHeader';
-import { GetStarted } from '../../../views/GetStarted';
-import { Plans } from '../../../views/Plans';
-import { FeatureTable } from '../../../views/FeatureTable';
-import { Benefits } from '../../../views/Benefits';
+import { PageHeader, GetStarted,Plans,FeatureTable,Benefits } from '@galaxy/views';
 
 type Pricing = {
   title?: string;

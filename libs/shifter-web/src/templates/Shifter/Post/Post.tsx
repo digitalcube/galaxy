@@ -1,6 +1,5 @@
 import React from 'react';
-import { PostHeader } from '../../../views/PostHeader';
-import { FeaturedImage } from '../../../views/FeaturedImage';
+import { PostHeader,FeaturedImage } from '@galaxy/views';
 import { Container, Content } from '@galaxy/core';
 
 type Post = {

@@ -7,7 +7,7 @@ import {
   Resources,
   RecentPosts,
   GetStarted,
-} from '@galaxy/shifter-web';
+} from '@galaxy/views';
 
 import { Image } from '@galaxy/core';
 

@@ -29,3 +29,4 @@ export * from './Testimonials';
 export * from './FeatureTable';
 export * from './Team';
 export * from './TeamMember';
+export * from './Posts'

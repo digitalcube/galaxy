@@ -1,7 +1,6 @@
 import React from 'react';
 import { Container } from '@galaxy/core';
-import { Posts } from '../../../views/Posts';
-import { PageHeader } from '../../../views/PageHeader';
+import { PageHeader,Posts } from '@galaxy/views';
 
 type Showcase = {
   title?: string;

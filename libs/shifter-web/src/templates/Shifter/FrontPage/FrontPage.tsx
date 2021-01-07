@@ -1,12 +1,5 @@
 import React from 'react';
-import { Hero } from '../../../views/Hero';
-import { Logos } from '../../../views/Logos';
-import { Benefits } from '../../../views/Benefits';
-import { Solutions } from '../../../views/Solutions';
-import { Features } from '../../../views/Features';
-import { Testimonials } from '../../../views/Testimonials';
-import { Showcase } from '../../../views/Showcase';
-import { GetStarted } from '../../../views/GetStarted';
+import { Hero, Logos,Benefits,Solutions, Features,Testimonials,Showcase,GetStarted } from '@galaxy/views';
 
 type FrontPage = {
   getStarted?: GetStarted;

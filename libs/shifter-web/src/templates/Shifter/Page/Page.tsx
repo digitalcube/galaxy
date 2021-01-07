@@ -1,5 +1,5 @@
 import React from 'react';
-import { PostHeader } from '../../../views/PostHeader';
+import { PostHeader } from '@galaxy/views';
 import { Container, Content } from '@galaxy/core';
 
 type Page = {

@@ -1,6 +1,5 @@
 import React from 'react';
-import { GetStarted } from '../../../views/GetStarted';
-import { Features as FeaturesComponent } from '../../../views/Features';
+import { GetStarted,Features as FeaturesComponent } from '@galaxy/views';
 
 type Features = {
   getStarted?: GetStarted;

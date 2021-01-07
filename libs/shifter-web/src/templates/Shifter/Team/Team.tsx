@@ -1,6 +1,5 @@
 import React from 'react';
-import { Team as TeamComponent } from '../../../views/Team';
-import { PageHeader } from '../../../views/PageHeader';
+import { Team as TeamComponent, PageHeader } from '@galaxy/views';
 
 type Team = {
   nodes?: any;

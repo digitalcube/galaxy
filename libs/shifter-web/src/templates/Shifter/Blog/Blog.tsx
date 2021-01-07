@@ -1,6 +1,6 @@
 import React from 'react';
 import { Container } from '@galaxy/core';
-import { Posts } from '../../../views/Posts';
+import { Posts } from '@galaxy/views';
 
 type Blog = {
   nodes?: any;
