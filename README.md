@@ -25,6 +25,48 @@ $ yarn storybook
 
 The command will build the entire library's story.
 
+## Project directories
+
+### Root
+
+```bash% tree -L 1
+.
+├── README.md
+├── dist             : Builded artifacts (Git ignored / Should publish it to npm or any other registory)
+├── apps             : Demo application directory
+├── libs             : Packages directory
+├── storybook-static : Builded Storybook artifacts (Git ignored / Should deploy to Netlify or AWS Amplify console)
+=== Dev tools or configs ===
+├── babel.config.json : Buld config
+├── jest.config.js    : Test config
+├── jest.preset.js    : Test config
+├── nx.json           : Nx CLI config
+├── tools             : Nx tools
+├── workspace.json    : Nx workspace config
+├── tsconfig.base.json: TypeScript config
+├── node_modules      : node modules
+├── package.json      : package config
+└── yarn.lock         : Lock file of yarn
+
+6 directories, 10 files
+
+```
+
+### Packages
+
+```bash
+libs
+├── core        : [@galaxy/core] General Components and Utility Functions
+├── views       : [@galaxy/views] General View templates
+├── amimoto     : [@galaxy/amimoto] Components / Templates for AMIMOTO (Web and Dashboard)
+├── amimoto-web : [@galaxy/amimoto-web] Templates for AMIMOTO website
+├── shifter     : [@galaxy/shifter] Components / Templates for Shifter (Web and Dashboard)
+├── shifter-web : [@galaxy/shifter-web] Templates for Shifter website
+└── svia        : [@galaxy/svia] for SVIA
+
+7 directories, 0 files
+```
+
 ## Development
 
 ### Add a new React Component files
