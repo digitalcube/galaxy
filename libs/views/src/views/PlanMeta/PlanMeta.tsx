@@ -1,26 +1,25 @@
 import React, { FC } from 'react';
 import { Flex } from 'theme-ui';
 import { Tab, Tabs, TabList, TabPanel } from 'react-tabs';
-import { Nav, NavLink, Box, Link, Heading } from '@galaxy/core';
+import { Nav, NavLinkProps, Box, Link, Heading } from '@galaxy/core';
 
-export type PlanMeta = {
+export type PlanMetaProps = {
   href?: string;
   detailsLabel?: string;
   detailsLink?: string;
   buttonLabel?: string;
-  nodes?: NavLink[];
+  nodes?: NavLinkProps[];
   price?: any;
 };
 
-export const PlanMeta: FC<PlanMeta> = ({
+export const PlanMeta: FC<PlanMetaProps> = ({
   price,
   nodes,
   href,
   detailsLabel,
   buttonLabel,
   detailsLink,
-}: PlanMeta) => {
-  if (!nodes) return null;
+}) => {
   return (
     <Box
       sx={{
@@ -111,29 +110,4 @@ export const PlanMeta: FC<PlanMeta> = ({
       </Link>
     </Box>
   );
-};
-
-PlanMeta.defaultProps = {
-  detailsLabel: `View all details`,
-  href: `https://go.getshifter.io`,
-  detailsLink: `#static`,
-  buttonLabel: `Select Tier 1`,
-  price: {
-    year: `$144`,
-    month: `$16`,
-  },
-  nodes: [
-    {
-      label: `5 HB Anim`,
-    },
-    {
-      label: `50 SX Nisi`,
-    },
-    {
-      label: `HTTPS Culpa`,
-    },
-    {
-      label: `Culpa Eiusmod`,
-    },
-  ],
 };

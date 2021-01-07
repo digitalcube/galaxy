@@ -1,13 +1,13 @@
 import React, { FC, ReactNode } from 'react';
-import { NavLink, Nav, Heading, Container, Content } from '@galaxy/core';
+import { NavLinkProps, Nav, Heading, Container, Content } from '@galaxy/core';
 
-export type QuickLinks = {
+export type QuickLinksProps = {
   title?: string;
   children?: ReactNode;
-  nav?: NavLink[];
+  nav?: NavLinkProps[];
 };
 
-export const QuickLinks: FC<QuickLinks> = ({ title, nav }: QuickLinks) => {
+export const QuickLinks: FC<QuickLinksProps> = ({ title, nav }) => {
   return (
     <Container
       as="section"
@@ -27,30 +27,4 @@ export const QuickLinks: FC<QuickLinks> = ({ title, nav }: QuickLinks) => {
       </Content>
     </Container>
   );
-};
-
-QuickLinks.defaultProps = {
-  title: `Esse excepteur`,
-  nav: [
-    {
-      label: `Duis Adipisicing`,
-      href: `#!`,
-      kind: `primary`,
-    },
-    {
-      label: `Consequat`,
-      href: `#!`,
-      kind: `primary`,
-    },
-    {
-      label: `Et Tempor`,
-      href: `#!`,
-      kind: `primary`,
-    },
-    {
-      label: `Cupidatat`,
-      href: `#!`,
-      kind: `primary`,
-    },
-  ],
 };

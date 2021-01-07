@@ -2,12 +2,12 @@
 /** @jsx jsx */
 import { jsx } from 'theme-ui';
 import React, { ReactNode } from 'react';
-import { NavLink } from '../NavLink';
+import { NavLink, NavLinkProps } from '../NavLink';
 import { Box } from 'theme-ui';
 
 export type NavProps = {
   children?: ReactNode;
-  navItems?: NavLink[];
+  navItems?: NavLinkProps[];
   kind?: string;
   sx?: object;
 };

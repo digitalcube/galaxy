@@ -1,14 +1,14 @@
 import React from 'react';
 import { Brand } from '@galaxy/core';
-import { PageHeader, GetStarted,Plans,FeatureTable,Benefits } from '@galaxy/views';
+import { PageHeader, GetStarted,Plans, PlansProps,FeatureTable,BenefitsProps, GetStartedProps } from '@galaxy/views';
 
 type Pricing = {
   title?: string;
   subtitle?: string;
-  getStarted?: GetStarted;
-  plans?: Plans;
+  getStarted?: GetStartedProps;
+  plans?: PlansProps;
   featureTable?: FeatureTable;
-  benefits?: Benefits;
+  benefits?: BenefitsProps;
 };
 
 export const Pricing = ({
@@ -21,10 +21,10 @@ export const Pricing = ({
   return (
     <>
       <PageHeader title={title} subtitle={subtitle} />
-      <Plans {...plans} />
+      {plans ? <Plans {...plans} />: null}
       <FeatureTable {...featureTable} />
       <PageHeader title={title} subtitle={subtitle} />
-      <Plans {...plans} />
+      {plans ? <Plans {...plans} />: null}
       <GetStarted {...getStarted} />
     </>
   );

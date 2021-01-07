@@ -1,12 +1,12 @@
-import React, { FC } from 'react';
+import React, { FC, memo } from 'react';
 import { Heading, Container, Content } from '@galaxy/core';
 
-export type PageHeader = {
+export type PageHeaderProps = {
   title?: string;
   subtitle?: string;
 };
 
-export const PageHeader: FC<PageHeader> = ({ title, subtitle }: PageHeader) => {
+export const PageHeader: FC<PageHeaderProps> = memo(({ title, subtitle }) => {
   return (
     <Container size="4">
       <Container
@@ -32,9 +32,4 @@ export const PageHeader: FC<PageHeader> = ({ title, subtitle }: PageHeader) => {
       </Container>
     </Container>
   );
-};
-
-PageHeader.defaultProps = {
-  title: `Et culpa minim`,
-  subtitle: `Qui consequat laborum esse tempor consequat labore non duis est nulla ipsum excepteur cupidatat qui.`,
-};
+})

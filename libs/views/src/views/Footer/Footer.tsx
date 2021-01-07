@@ -13,7 +13,7 @@ import {
   Grid,
   Nav,
   NavProps,
-  NavLink,
+  NavLinkProps,
   Link,
 } from '@galaxy/core';
 import { Copyright } from '../Copyright';
@@ -24,7 +24,7 @@ export type Footer = {
 
 type FooterNav = {
   title?: ReactNode;
-  navItems?: NavLink[];
+  navItems?: NavLinkProps[];
 };
 
 export const FooterNav: FC<FooterNav> = ({ title, navItems }: FooterNav) => {

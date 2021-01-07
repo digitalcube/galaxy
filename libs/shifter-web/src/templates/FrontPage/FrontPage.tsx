@@ -1,15 +1,15 @@
 import React from 'react';
-import { Hero, Logos,Benefits,Solutions, Features,Testimonials,Showcase,GetStarted } from '@galaxy/views';
+import { Hero, Logos,Benefits,Solutions, Features,Testimonials,TestimonialsProps,Showcase,GetStarted, BenefitsProps, FeaturesProps, GetStartedProps, SolutionsProps, ShowcaseProps } from '@galaxy/views';
 
 type FrontPage = {
-  getStarted?: GetStarted;
+  getStarted?: GetStartedProps;
   hero?: Hero;
   logos?: Logos;
-  benefits?: Benefits;
-  solutions?: Solutions;
-  features?: Features;
-  showcase?: Showcase;
-  testimonials?: Testimonials;
+  benefits?: BenefitsProps;
+  solutions?: SolutionsProps;
+  features?: FeaturesProps;
+  showcase?: ShowcaseProps;
+  testimonials?: TestimonialsProps;
 };
 
 export const FrontPage = ({
@@ -29,7 +29,7 @@ export const FrontPage = ({
       <Benefits {...benefits} />
       <Solutions {...solutions} />
       <Features {...features} />
-      <Testimonials {...testimonials} />
+      {testimonials ? <Testimonials {...testimonials} />: null}
       <Showcase {...showcase} />
       <GetStarted {...getStarted} />
     </>

@@ -1,10 +1,10 @@
 import React, { ReactNode } from 'react';
-import { Header } from '../Header';
+import { Header, HeaderProps } from '../Header';
 import { Footer } from '../Footer';
 
 export type Layout = {
   children?: ReactNode;
-  header?: Header;
+  header?: HeaderProps;
   footer?: Footer;
 };
 

@@ -1,9 +1,9 @@
 import React from 'react';
-import { GetStarted,Features as FeaturesComponent } from '@galaxy/views';
+import { GetStarted,Features as FeaturesComponent, FeaturesProps, GetStartedProps } from '@galaxy/views';
 
 type Features = {
-  getStarted?: GetStarted;
-  features?: FeaturesComponent;
+  getStarted?: GetStartedProps;
+  features?: FeaturesProps;
 };
 
 export const Features = ({ getStarted, features }: Features) => {

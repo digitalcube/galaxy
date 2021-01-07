@@ -2,13 +2,12 @@ import React, { FC, ReactNode } from 'react';
 import { Posts } from '../Posts';
 import { Heading, Container, Content } from '@galaxy/core';
 
-export type Resources = {
+export type ResourcesProps = {
   title?: string;
-  children?: ReactNode;
   nodes?: object;
 };
 
-export const Resources: FC<Resources> = ({ title, nodes }: Resources) => {
+export const Resources: FC<ResourcesProps> = ({ title, nodes }) => {
   if (!nodes) return null;
   return (
     <Container
@@ -29,26 +28,4 @@ export const Resources: FC<Resources> = ({ title, nodes }: Resources) => {
       </Content>
     </Container>
   );
-};
-
-Resources.defaultProps = {
-  title: `Eu in aliqua do ipsum.`,
-  nodes: [
-    {
-      title: `Duis Adipisicing`,
-      href: `#!`,
-    },
-    {
-      title: `Consequat`,
-      href: `#!`,
-    },
-    {
-      title: `Et Tempor`,
-      href: `#!`,
-    },
-    {
-      title: `Cupidatat`,
-      href: `#!`,
-    },
-  ],
 };

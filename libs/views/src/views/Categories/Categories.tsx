@@ -1,12 +1,12 @@
 import React, { FC } from 'react';
-import { Container, Box, Nav, NavLink, Heading } from '@galaxy/core';
+import { Container, Box, Nav, NavLinkProps, Heading } from '@galaxy/core';
 
-export type Categories = {
-  title?: string;
-  nodes?: NavLink[];
+export type CategoriesProps = {
+  title: string;
+  nodes?: NavLinkProps[];
 };
 
-export const Categories: FC<Categories> = ({ title, nodes }: Categories) => {
+export const Categories: FC<CategoriesProps> = ({ title, nodes }) => {
   return (
     <Container
       sx={{
@@ -52,8 +52,4 @@ export const Categories: FC<Categories> = ({ title, nodes }: Categories) => {
       </Container>
     </Container>
   );
-};
-
-Categories.defaultProps = {
-  title: `Ex exercitation`,
 };

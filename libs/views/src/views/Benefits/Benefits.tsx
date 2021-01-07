@@ -1,15 +1,15 @@
 import React, { ReactNode } from 'react';
-import { Heading, Container, Grid, Content, Animation } from '@galaxy/core';
+import { Heading, Container, Grid, Content } from '@galaxy/core';
 import { Posts } from '../Posts';
 
-export type Benefits = {
+export type BenefitsProps = {
   title?: string;
   subtitle?: ReactNode;
   img?: ReactNode;
   nodes?: any;
 };
 
-export const Benefits = ({ title, subtitle, img, nodes }: Benefits) => {
+export const Benefits = ({ title, subtitle, img, nodes }: BenefitsProps) => {
   return (
     <Container
       as="section"
@@ -47,28 +47,4 @@ export const Benefits = ({ title, subtitle, img, nodes }: Benefits) => {
       </Container>
     </Container>
   );
-};
-
-Benefits.defaultProps = {
-  title: `Id Lorem aliquip`,
-  subtitle: `Commodo culpa deserunt id magna esse. Et dolore elit nulla veniam in anim ut est.`,
-  img: <Animation animation="singleClick" />,
-  nodes: [
-    {
-      title: `Easy installation`,
-      excerpt: `Create a new WordPress site right from the Shifter Dashboard, no uploading required.`,
-    },
-    {
-      title: `Collaborate`,
-      excerpt: `Work with others and share access to your Shifter account using our team features.`,
-    },
-    {
-      title: `Maintenance-free`,
-      excerpt: `Shifter manages WordPress core so you're always up to date and plugins never vulnerable.`,
-    },
-    {
-      title: `No coding required`,
-      excerpt: `Easy for non-developers to get started using WordPress themes or page builders.`,
-    },
-  ],
 };

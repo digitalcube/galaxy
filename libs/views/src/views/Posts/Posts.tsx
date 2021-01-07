@@ -1,8 +1,8 @@
 import React, { FC } from 'react';
-import { Post } from '../Post';
 import { Grid } from '@galaxy/core';
+import { Post } from '../Post';
 
-export type Posts = {
+export type PostsProps = {
   variant?: string;
   nodes?: any;
   columns?: any;
@@ -10,7 +10,7 @@ export type Posts = {
   sx?: object;
 };
 
-export const Posts: FC<Posts> = ({ nodes, columns, variant, sx }: Posts) => {
+export const Posts: FC<PostsProps> = ({ nodes, columns = [2, null, null, null, 4], variant = 'primary', sx }) => {
   if (!nodes) return null;
 
   const items = nodes.map((node: Post, i: number) => {
@@ -22,27 +22,4 @@ export const Posts: FC<Posts> = ({ nodes, columns, variant, sx }: Posts) => {
       {items}
     </Grid>
   );
-};
-
-Posts.defaultProps = {
-  variant: 'primary',
-  columns: [2, null, null, null, 4],
-  nodes: [
-    {
-      title: `Duis Adipisicing`,
-      href: `#!`,
-    },
-    {
-      title: `Consequat`,
-      href: `#!`,
-    },
-    {
-      title: `Et Tempor`,
-      href: `#!`,
-    },
-    {
-      title: `Cupidatat`,
-      href: `#!`,
-    },
-  ],
 };

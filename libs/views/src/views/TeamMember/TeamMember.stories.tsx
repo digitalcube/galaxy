@@ -1,6 +1,6 @@
 import React from 'react';
 import { withKnobs } from '@storybook/addon-knobs';
-import { TeamMember } from './TeamMember';
+import { TeamMember, TeamMemberProps } from './TeamMember';
 
 export default {
   component: TeamMember,
@@ -9,4 +9,10 @@ export default {
   excludeStories: /.*Data$/,
 };
 
-export const Default = () => <TeamMember />;
+const props: TeamMemberProps = {
+  title: `Magna fugiat`,
+  subtitle: `XXX`,
+  img:`post-featured-image.png`
+
+}
+export const Default = () => <TeamMember {...props} />;
