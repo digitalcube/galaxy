@@ -4,6 +4,28 @@ import { Table, TableProps } from './Table';
 
 
 const props: TableProps = {
+  columns:[
+    {
+      Header: '',
+      accessor: 'col1',
+    },
+    {
+      Header: 'Free',
+      accessor: 'col2',
+    },
+    {
+      Header: 'Tier 1',
+      accessor: 'col3',
+    },
+    {
+      Header: 'Tier 2',
+      accessor: 'col4',
+    },
+    {
+      Header: 'Tier 3',
+      accessor: 'col5',
+    },
+  ],
   nodes: [
     {
       col1: 'Plans',
