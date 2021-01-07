@@ -29,7 +29,6 @@ The command will build the entire library's story.
 
 ### Add a new React Component files
 
-
 ```bash
 $ yarn nx g @nrwl/react:component NEW_COMPONENT_NAME --project=PROJECT_NAME --export
 
@@ -66,7 +65,20 @@ $ yarn storybook:build
 $ yarn build
 ```
 
+### Add a new library for publishing
 
+We can setup a new library by using Nx CLI.
+
+```bash
+$ yarn nx g @nrwl/react:library LIBRARY_NAME --publishable --importPath=@galaxy/LIBRARY_NAME
+```
+
+And you need to update the `package.json` file like this.
+
+```json
+-    "libs": "nx run-many --projects \"core,shifter-web\"",
++    "libs": "nx run-many --projects \"core,shifter-web,LIBRARY_NAME\"",
+```
 
 ## Appendix: Document about Nx
 This project was generated using [Nx](https://nx.dev).

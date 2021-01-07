@@ -1,7 +1,6 @@
 module.exports = {
   stories: [
-    '../libs/core/**/*.stories.@(ts|js|tsx|mdx)',
-    '../libs/shifter-web/**/*.stories.@(ts|js|tsx|mdx)',
+    '../libs/**/**/*.stories.@(ts|js|tsx|mdx)',
   ],
   addons: [
     '@storybook/addon-actions',
