@@ -7,5 +7,6 @@ module.exports = {
     '<rootDir>/libs/amimoto',
     '<rootDir>/libs/svia',
     '<rootDir>/libs/views',
+    '<rootDir>/libs/amimoto-web',
   ],
 };
