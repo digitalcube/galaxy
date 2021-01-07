@@ -9,8 +9,7 @@ export type PageProps = {
 
 export const Page: FC<PageProps> = ({ title, subtitle, content }) => {
   return (
-    <>
-      <Container size="4">
+    <Container size="4">
         <PostHeader title={title} subtitle={subtitle} />
         <Container
           size="1"
@@ -29,6 +28,5 @@ export const Page: FC<PageProps> = ({ title, subtitle, content }) => {
           </Content>
         </Container>
       </Container>
-    </>
   );
 };

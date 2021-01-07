@@ -13,8 +13,7 @@ export type PostProps = {
 
 export const Post: FC<PostProps> = ({ title, category, author, date, img, content }) => {
   return (
-    <>
-      <Container size="4">
+    <Container size="4">
         <PostHeader
           title={title}
           category={category}
@@ -39,6 +38,5 @@ export const Post: FC<PostProps> = ({ title, category, author, date, img, conten
           </Content>
         </Container>
       </Container>
-    </>
   );
 };

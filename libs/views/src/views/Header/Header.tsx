@@ -5,7 +5,7 @@ import { MobileNav } from '../MobileNav';
 
 export type HeaderProps = {
   brand?: ReactNode;
-  href?: String;
+  href?: string;
   nav: Array<NavLinkProps[]>;
   length?: number;
   sx?: object;
