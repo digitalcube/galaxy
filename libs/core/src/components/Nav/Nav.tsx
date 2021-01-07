@@ -5,14 +5,14 @@ import React, { ReactNode } from 'react';
 import { NavLink } from '../NavLink';
 import { Box } from 'theme-ui';
 
-export type Nav = {
+export type NavProps = {
   children?: ReactNode;
   navItems?: NavLink[];
   kind?: string;
   sx?: object;
 };
 
-export const Nav: React.FC<Nav> = ({ navItems, kind, sx }: Nav) => {
+export const Nav: React.FC<NavProps> = ({ navItems, kind = 'primary', sx }) => {
   if (!navItems) return null;
   const items = navItems.map((item, i) => {
     const { label, href, kind } = item;
@@ -31,30 +31,4 @@ export const Nav: React.FC<Nav> = ({ navItems, kind, sx }: Nav) => {
       {items}
     </Box>
   );
-};
-
-Nav.defaultProps = {
-  kind: `primary`,
-  navItems: [
-    {
-      label: `Proident`,
-      href: `#!`,
-    },
-    {
-      label: `Labore`,
-      href: `#!`,
-    },
-    {
-      label: `Ipsum`,
-      href: `#!`,
-    },
-    {
-      label: `Eiusmod`,
-      href: `#!`,
-    },
-    {
-      label: `Esse anim`,
-      href: `#!`,
-    },
-  ],
 };

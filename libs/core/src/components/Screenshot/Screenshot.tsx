@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { memo, useMemo } from 'react';
 
 type Screenshot = {
   url: string;
@@ -11,6 +11,9 @@ export const createScreenshotURL = (url: string, size = 300): string => {
   return `${mShotsURL}/${url}/${screenshotSize}`;
 };
 
-export const Screenshot = ({ alt, url }: Screenshot) => (
-  <img className="w-100" alt={alt} src={createScreenshotURL(url)} />
-);
+export const Screenshot = memo(({ alt, url }: Screenshot) => {
+  const src = useMemo(() => createScreenshotURL(url),[url])
+  return (
+    <img className="w-100" alt={alt} src={src} />
+  );
+})

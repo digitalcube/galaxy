@@ -12,13 +12,14 @@ import {
   Content,
   Grid,
   Nav,
+  NavProps,
   NavLink,
   Link,
 } from '@galaxy/core';
 import { Copyright } from '../Copyright';
 
 export type Footer = {
-  nav?: Nav[];
+  nav?: NavProps[];
 };
 
 type FooterNav = {

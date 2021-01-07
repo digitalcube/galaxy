@@ -4,11 +4,11 @@ import { Styled, jsx } from 'theme-ui';
 import { useTable } from 'react-table';
 import { FC, useMemo } from 'react';
 
-export type Table = {
+export type TableProps = {
   nodes?: any;
 };
 
-export const Table: FC<Table> = ({ nodes }: Table) => {
+export const Table: FC<TableProps> = ({ nodes }) => {
   const data = useMemo(() => nodes, []);
   const columns = useMemo(
     () => [
