@@ -1,105 +1,123 @@
-import React from 'react';
+import React, { FC } from 'react';
+import {
+  Features,
+  Benefits,
+  Card,
+  Testimonials,
+} from '@galaxy/shifter-web';
+import { Container, Animation } from '@galaxy/core';
+import {
+  RouteComponentProps,
+} from 'react-router-dom'
+import { Layout } from '../Layout'
 
-import './index.css';
+const PageIndex: FC = () => (
+  <>
+    <Benefits {...{
+      title: `Id Lorem aliquip`,
+      subtitle: `Commodo culpa deserunt id magna esse. Et dolore elit nulla veniam in anim ut est.`,
+      img: <Animation animation="singleClick" />,
+      nodes: [
+        {
+          title: `Easy installation`,
+          excerpt: `Create a new WordPress site right from the Shifter Dashboard, no uploading required.`,
+        },
+        {
+          title: `Collaborate`,
+          excerpt: `Work with others and share access to your Shifter account using our team features.`,
+        },
+        {
+          title: `Maintenance-free`,
+          excerpt: `Shifter manages WordPress core so you're always up to date and plugins never vulnerable.`,
+        },
+        {
+          title: `No coding required`,
+          excerpt: `Easy for non-developers to get started using WordPress themes or page builders.`,
+        },
+      ],
+    }}/>
+    <Features {...{
+      getStarted: {
+        title: `Fugiat ut ullamco aute nulla?`,
+        subtitle: `Qui ut Lorem ex occaecat ea deserunt eserunt in irure ipsum veniam enim quis consequat cillum.`,
+        href: `#!`,
+        linkLabel: `Nisi veniam laboris`,
+        variant: `0`,
+      },
+      features: {
+        title: `Sunt deserunt`,
+        subtitle: `Et cillum non cupidatat non dolore nostrud ad nisi.`,
+        href: `#!`,
+        buttonLabel: `Nostrud nisi`,
+        columns: [1, null, null, null, 2, 4],
+        nodes: [
+          {
+            title: `Magic Link Logins`,
+            excerpt: `You’ll never forget your WordPress password on Shifter because you’ll never have to.`,
+            href: `#`,
+            img: `https://www.getshifter.io/static/b0d62c9540f9db3df4672e8b280c6a55/e085e/icon-API.png`,
+          },
+          {
+            title: `Security Built-in`,
+            excerpt: `Don’t spend another minute configuring security Plugins. We have you covered.`,
+            href: `#`,
+            img: `https://www.getshifter.io/static/b0d62c9540f9db3df4672e8b280c6a55/e085e/icon-API.png`,
+          },
+          {
+            title: `Integrated CDN`,
+            excerpt: `Deliver fast static content to site visitors anywhere in the world with low latency.`,
+            href: `#`,
+            img: `https://www.getshifter.io/static/b0d62c9540f9db3df4672e8b280c6a55/e085e/icon-API.png`,
+          },
+          {
+            title: `Maintenance-free`,
+            excerpt: `Never worry about security vulnerabilities from WordPress Core, themes, and outdated plugins.`,
+            href: `#`,
+            img: `https://www.getshifter.io/static/b0d62c9540f9db3df4672e8b280c6a55/e085e/icon-API.png`,
+          },
+        ],
+      }
+    }}/>
+    <Testimonials {...{
+      title: `Esse reprehenderit incididunt in deserunt enim nostrud tempor proident exercitation duis dolore ullamco proident.`,
+      nodes: [
+      {
+        img: 'user-avatar.png',
+        quote:
+          'Amet sint velit aliquip aute ex enim cupidatat ex Nulla nostrud proident minim do labore ipsum mollit eu voluptate. Cillum magna quis culpa in et ea laborum eiusmod reprehenderit tempor ea labore. <a href="https://wptavern.com/digitalcube-launches-shifter-serverless-hosting-for-wordpress">Read more.</a>',
+        author: 'FooBarBaz',
+        handle: '@ExampleFooBarBaz',
+      }]}}
+    />
+  </>
+)
 
-import { ReactComponent as Logo } from './logo.svg';
-import star from './star.svg';
-
-export const Index = () => {
-  /*
-   * Replace the elements below with your own.
-   *
-   * Note: The corresponding styles are in the ./${fileName}.${style} file.
-   */
+const PageSub: FC<RouteComponentProps> = (props) => {
   return (
-    <div className="app">
-      <header className="flex">
-        <Logo width="75" height="75" />
-        <h1>Welcome to gatsby!</h1>
-      </header>
-      <main>
-        <h2>Resources &amp; Tools</h2>
-        <p>Thank you for using and showing some ♥ for Nx.</p>
-        <div className="flex github-star-container">
-          <a
-            href="https://github.com/nrwl/nx"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            {' '}
-            If you like Nx, please give it a star:
-            <div className="github-star-badge">
-              <img src={star} className="material-icons" alt="" />
-              Star
-            </div>
-          </a>
-        </div>
-        <p>Here are some links to help you get started.</p>
-        <ul className="resources">
-          <li className="col-span-2">
-            <a
-              className="resource flex"
-              href="https://connect.nrwl.io/app/courses/nx-workspaces/intro"
-            >
-              Nx video course
-            </a>
-          </li>
-          <li className="col-span-2">
-            <a
-              className="resource flex"
-              href="https://nx.dev/react/getting-started/what-is-nx"
-            >
-              Nx video tutorial
-            </a>
-          </li>
-          <li className="col-span-2">
-            <a
-              className="resource flex"
-              href="https://nx.dev/react/tutorial/01-create-application"
-            >
-              Interactive tutorial
-            </a>
-          </li>
-          <li className="col-span-2">
-            <a className="resource flex" href="https://connect.nrwl.io/">
-              <img
-                height="36"
-                alt="Nrwl Connect"
-                src="https://connect.nrwl.io/assets/img/CONNECT_ColorIcon.png"
-              />
-              <span className="gutter-left">Nrwl Connect</span>
-            </a>
-          </li>
-        </ul>
-        <h2>Next Steps</h2>
-        <p>Here are some things you can do with Nx.</p>
-        <details open>
-          <summary>Add UI library</summary>
-          <pre>{`# Generate UI lib
-nx g @nrwl/react:lib ui
+    <>
+    <Container
+      as="section"
+      size="4"
+      sx={{
+        py: 7,
+        px: '5%',
+      }}
+    >
+      <Card title="Child page" subtitle="sub title">
+        <pre><code>{JSON.stringify(props,null,2)}</code></pre>
+      </Card>
+    </Container>
+    </>
 
-# Add a component
-nx g @nrwl/react:component xyz --project ui`}</pre>
-        </details>
-        <details>
-          <summary>View dependency graph</summary>
-          <pre>{`nx dep-graph`}</pre>
-        </details>
-        <details>
-          <summary>Run affected commands</summary>
-          <pre>{`# see what's been affected by changes
-nx affected:dep-graph
+  )
+}
 
-# run tests for current changes
-nx affected:test
-
-# run e2e tests for current changes
-nx affected:e2e
-`}</pre>
-        </details>
-      </main>
-    </div>
+export function App() {
+  return (
+    <Layout>
+      <PageIndex />
+    </Layout>
   );
-};
+}
 
-export default Index;
+export default App;

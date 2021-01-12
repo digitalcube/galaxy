@@ -1,11 +1,14 @@
 // galaxy.ts
 import React from 'react';
-import { ThemeProviderProps, ThemeProvider } from 'theme-ui';
+import { GalaxyThemeProvider,GalaxyThemeProviderProps } from '@galaxy/core'
 import { shifter } from './shifter';
 
 export function ShifterThemeProvider<Theme = typeof shifter>(
-  props: Partial<ThemeProviderProps<Theme>>
+  props: GalaxyThemeProviderProps<Theme>
 ): React.ReactElement {
   const theme = props.theme || shifter;
-  return <ThemeProvider theme={theme as any}>{props.children}</ThemeProvider>;
+  return (
+    <GalaxyThemeProvider {...props} theme={theme as any}>
+      {props.children}
+    </GalaxyThemeProvider>);
 }
