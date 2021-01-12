@@ -9,12 +9,11 @@ import { useLinkTag } from '../../lib/link-tag-provider/link-tag-provider';
 export type NavLinkProps = {
   label?: ReactNode;
   href?: string;
-  type?: 'a' | 'react-router';
 };
 
-export const NavLink: FC<NavLinkProps> = ({ href, label, type = 'react-router' }: NavLinkProps) => {
+export const NavLink: FC<NavLinkProps> = ({ href, label}: NavLinkProps) => {
   const {tag} = useLinkTag()
-  if (!href || type === 'a') {
+  if (!href) {
     return (
       <ThemeUINavLink>
         {label}
@@ -36,7 +35,6 @@ export const NavLink: FC<NavLinkProps> = ({ href, label, type = 'react-router' }
       }
     })
   }
-  // return <RRNavLink to={href}>{label}</RRNavLink>
   return (
     <ThemeUINavLink href={href}>
       {label}
