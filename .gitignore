@@ -38,3 +38,6 @@ testem.log
 .DS_Store
 Thumbs.db
 storybook-static/
+/apps/gatsby/node_modules
+/apps/gatsby/public
+/apps/gatsby/.cache
