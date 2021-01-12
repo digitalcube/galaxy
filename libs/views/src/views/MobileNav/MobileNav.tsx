@@ -4,7 +4,7 @@ import { Bars } from '@styled-icons/fa-solid/Bars';
 import { Times } from '@styled-icons/fa-solid/Times';
 import Popup from 'reactjs-popup';
 import { Flex } from 'theme-ui';
-import { Nav, NavLinkProps, Container, Link} from '@galaxy/core';
+import { Nav, NavLinkProps, Container, Link } from '@galaxy/core';
 
 export type MobileNavProps = {
   nodes?: NavLinkProps[];

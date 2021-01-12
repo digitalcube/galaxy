@@ -1,6 +1,6 @@
 // galaxy.ts
 import React from 'react';
-import { GalaxyThemeProvider,GalaxyThemeProviderProps } from '@galaxy/core'
+import { GalaxyThemeProvider, GalaxyThemeProviderProps } from '@galaxy/core';
 import { shifter } from './shifter';
 
 export function ShifterThemeProvider<Theme = typeof shifter>(
@@ -10,5 +10,6 @@ export function ShifterThemeProvider<Theme = typeof shifter>(
   return (
     <GalaxyThemeProvider {...props} theme={theme as any}>
       {props.children}
-    </GalaxyThemeProvider>);
+    </GalaxyThemeProvider>
+  );
 }

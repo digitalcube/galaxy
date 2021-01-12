@@ -15,7 +15,7 @@ export type NavProps = {
 export const Nav: React.FC<NavProps> = ({ navItems, kind = 'primary', sx }) => {
   if (!navItems) return null;
   const items = navItems.map((item, i) => {
-    const { label, href, } = item;
+    const { label, href } = item;
     return <NavLink key={i} href={href} label={label} />;
   });
 

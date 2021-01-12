@@ -12,18 +12,18 @@ type Link = {
 };
 
 export const Link: FC<Link> = ({ href, children, kind }) => {
-  const { tag } = useLinkTag()
+  const { tag } = useLinkTag();
   if (!children || !href) return null;
   if (typeof tag !== 'string') {
     return jsx(tag as any, {
       to: href,
       href,
       children,
-      sx:{
+      sx: {
         color: 'inherit',
         textDecoration: 'none',
-      }
-    })
+      },
+    });
   }
   return (
     <ThemeUILink variant={kind} href={href}>

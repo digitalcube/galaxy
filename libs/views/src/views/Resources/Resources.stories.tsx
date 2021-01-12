@@ -28,7 +28,8 @@ const props: ResourcesProps = {
       title: `Cupidatat`,
       href: `#!`,
     },
-  ],}
+  ],
+};
 
 export const Default = () => {
   return <Resources {...props} />;

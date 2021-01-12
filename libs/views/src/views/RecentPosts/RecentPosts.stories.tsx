@@ -2,7 +2,7 @@ import React from 'react';
 import { withKnobs } from '@storybook/addon-knobs';
 import { RecentPosts, RecentPostsProps } from './RecentPosts';
 
-const props: RecentPostsProps= {
+const props: RecentPostsProps = {
   nodes: [
     {
       author: `Cillum Sunt`,
@@ -38,8 +38,7 @@ const props: RecentPostsProps= {
       title: `Upgrade your business with a purpose-built form and Shifter Static integration`,
     },
   ],
-
-}
+};
 export default {
   component: RecentPosts,
   title: `Galaxy/Views/RecentPosts`,

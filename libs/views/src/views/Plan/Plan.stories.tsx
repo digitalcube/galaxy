@@ -1,6 +1,6 @@
 import React from 'react';
 import { withKnobs } from '@storybook/addon-knobs';
-import { Plan , PlanProps} from './Plan';
+import { Plan, PlanProps } from './Plan';
 
 const props: PlanProps = {
   title: `Free`,
@@ -9,7 +9,7 @@ const props: PlanProps = {
     year: `$1`,
     month: `$1`,
   },
-}
+};
 export default {
   component: Plan,
   title: `Galaxy/Views/Plan`,

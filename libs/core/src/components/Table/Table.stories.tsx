@@ -2,9 +2,8 @@ import React from 'react';
 import { withKnobs } from '@storybook/addon-knobs';
 import { Table, TableProps } from './Table';
 
-
 const props: TableProps = {
-  columns:[
+  columns: [
     {
       Header: '',
       accessor: 'col1',
@@ -49,7 +48,7 @@ const props: TableProps = {
       col5: '50 GB',
     },
   ],
-}
+};
 export default {
   component: Table,
   title: `Galaxy/Components/Table`,

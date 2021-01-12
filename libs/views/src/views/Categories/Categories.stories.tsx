@@ -15,9 +15,15 @@ export const Default = () => {
 };
 
 export const WithItems = () => {
-  const nodes = useMemo(() => new Array(4).fill({
-    label: 'Item',
-    href: '#'
-  }).map((data, i) => ({...data, label: `${data.label} ${i + 1}`})), [])
-  return <Categories title={`Ex exercitation`} nodes={nodes}/>;
+  const nodes = useMemo(
+    () =>
+      new Array(4)
+        .fill({
+          label: 'Item',
+          href: '#',
+        })
+        .map((data, i) => ({ ...data, label: `${data.label} ${i + 1}` })),
+    []
+  );
+  return <Categories title={`Ex exercitation`} nodes={nodes} />;
 };

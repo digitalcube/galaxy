@@ -1,5 +1,5 @@
 import React, { FC } from 'react';
-import { PostHeader,FeaturedImage } from '@galaxy/views';
+import { PostHeader, FeaturedImage } from '@galaxy/views';
 import { Container, Content } from '@galaxy/core';
 
 export type PostProps = {
@@ -11,32 +11,39 @@ export type PostProps = {
   content?: string;
 };
 
-export const Post: FC<PostProps> = ({ title, category, author, date, img, content }) => {
+export const Post: FC<PostProps> = ({
+  title,
+  category,
+  author,
+  date,
+  img,
+  content,
+}) => {
   return (
     <Container size="4">
-        <PostHeader
-          title={title}
-          category={category}
-          author={author}
-          date={date}
-        />
-        <FeaturedImage img={img} />
-        <Container
-          size="1"
+      <PostHeader
+        title={title}
+        category={category}
+        author={author}
+        date={date}
+      />
+      <FeaturedImage img={img} />
+      <Container
+        size="1"
+        sx={{
+          my: 4,
+        }}
+      >
+        <Content
           sx={{
-            my: 4,
+            a: {
+              color: 'primary',
+            },
           }}
         >
-          <Content
-            sx={{
-              a: {
-                color: 'primary',
-              },
-            }}
-          >
-            <div dangerouslySetInnerHTML={{ __html: content ? content : `` }} />
-          </Content>
-        </Container>
+          <div dangerouslySetInnerHTML={{ __html: content ? content : `` }} />
+        </Content>
       </Container>
+    </Container>
   );
 };

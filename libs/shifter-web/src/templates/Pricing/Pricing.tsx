@@ -1,5 +1,13 @@
 import React, { FC } from 'react';
-import { PageHeader, GetStarted,Plans, PlansProps,FeatureTable,BenefitsProps, GetStartedProps } from '@galaxy/views';
+import {
+  PageHeader,
+  GetStarted,
+  Plans,
+  PlansProps,
+  FeatureTable,
+  BenefitsProps,
+  GetStartedProps,
+} from '@galaxy/views';
 
 export type PricingProps = {
   title?: string;
@@ -26,12 +34,11 @@ export const Pricing: FC<PricingProps> = ({
   return (
     <>
       <PageHeader title={title} subtitle={subtitle} />
-      {plans ? <Plans {...plans} />: null}
-      {featureTable ? <FeatureTable {...featureTable} />: null}
+      {plans ? <Plans {...plans} /> : null}
+      {featureTable ? <FeatureTable {...featureTable} /> : null}
       <PageHeader title={title2} subtitle={subtitle2} />
-      {plans2 ? <Plans {...plans2} />: null}
+      {plans2 ? <Plans {...plans2} /> : null}
       <GetStarted {...getStarted} />
     </>
   );
 };
-

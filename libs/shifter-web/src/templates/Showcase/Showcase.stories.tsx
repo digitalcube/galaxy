@@ -74,7 +74,6 @@ const props: ShowcaseProps = {
       img: `post-featured-image-2.png`,
     },
   ],
-
-}
+};
 
 export const Default = () => <Showcase {...props} />;

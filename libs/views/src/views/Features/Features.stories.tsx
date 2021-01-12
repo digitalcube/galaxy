@@ -34,7 +34,7 @@ const props: FeaturesProps = {
       img: `post-featured-image.png`,
     },
   ],
-}
+};
 export default {
   component: Features,
   title: `Galaxy/Views/Features`,

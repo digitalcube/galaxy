@@ -72,7 +72,7 @@ const props: HeaderProps = {
       },
     ],
   ],
-}
+};
 export default {
   component: Header,
   title: `Galaxy/Views/Header`,

@@ -48,7 +48,7 @@ const props: PlansProps = {
       },
     },
   ],
-}
+};
 export default {
   component: Plans,
   title: `Galaxy/Views/Plans`,

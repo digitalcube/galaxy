@@ -9,7 +9,6 @@ export default {
   excludeStories: /.*Data$/,
 };
 
-
 const props: TestimonialsProps = {
   title: `Esse reprehenderit incididunt in deserunt enim nostrud tempor proident exercitation duis dolore ullamco proident.`,
   nodes: [

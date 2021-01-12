@@ -1,6 +1,6 @@
 import React from 'react';
 import { withKnobs } from '@storybook/addon-knobs';
-import { QuickLinks , QuickLinksProps} from './QuickLinks';
+import { QuickLinks, QuickLinksProps } from './QuickLinks';
 
 export default {
   component: QuickLinks,
@@ -9,7 +9,7 @@ export default {
   excludeStories: /.*Data$/,
 };
 
-const props:QuickLinksProps = {
+const props: QuickLinksProps = {
   title: `Esse excepteur`,
   nav: [
     {
@@ -33,7 +33,7 @@ const props:QuickLinksProps = {
       kind: `primary`,
     },
   ],
-}
+};
 
 export const Default = () => {
   return <QuickLinks {...props} />;

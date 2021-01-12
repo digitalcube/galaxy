@@ -8,7 +8,7 @@ export default {
   decorators: [withKnobs],
   excludeStories: /.*Data$/,
 };
-const props: BlogProps =  {
+const props: BlogProps = {
   nodes: [
     {
       title: `Magna fugiat ullamco ad in in est`,

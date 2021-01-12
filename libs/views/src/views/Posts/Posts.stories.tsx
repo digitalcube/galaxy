@@ -21,8 +21,7 @@ const props: PostsProps = {
       href: `#!`,
     },
   ],
-
-}
+};
 export default {
   component: Posts,
   title: `Galaxy/Views/Posts`,

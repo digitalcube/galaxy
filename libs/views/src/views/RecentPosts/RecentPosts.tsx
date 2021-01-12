@@ -7,7 +7,10 @@ export type RecentPostsProps = {
   nodes?: object;
 };
 
-export const RecentPosts: FC<RecentPostsProps> = ({ title = 'Recent Posts', nodes }) => {
+export const RecentPosts: FC<RecentPostsProps> = ({
+  title = 'Recent Posts',
+  nodes,
+}) => {
   if (!nodes) return null;
   return (
     <Container

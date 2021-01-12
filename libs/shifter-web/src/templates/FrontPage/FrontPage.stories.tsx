@@ -1,6 +1,6 @@
 import React from 'react';
 import { withKnobs } from '@storybook/addon-knobs';
-import {Animation} from '@galaxy/core';
+import { Animation } from '@galaxy/core';
 import { FrontPage, FrontPageProps } from './FrontPage';
 
 const props: FrontPageProps = {
@@ -54,7 +54,7 @@ const props: FrontPageProps = {
           img: `logo-vu.png`,
         },
       },
-    ]
+    ],
   },
   testimonials: {
     title: `Esse reprehenderit incididunt in deserunt enim nostrud tempor proident exercitation duis dolore ullamco proident.`,
@@ -66,7 +66,7 @@ const props: FrontPageProps = {
         author: 'FooBarBaz',
         handle: '@ExampleFooBarBaz',
       },
-    ]
+    ],
   },
   showcase: {
     subtitle: `Et ullamco enim Lorem irure consequat commodo officia consequat laboris excepteur culpa.`,
@@ -119,8 +119,8 @@ const props: FrontPageProps = {
         img: `post-featured-image.png`,
       },
     ],
-  }
-}
+  },
+};
 export default {
   component: FrontPage,
   title: `Shifter/Templates/FrontPage`,

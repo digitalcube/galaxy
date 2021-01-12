@@ -1,1 +1,1 @@
-export * from './FrontPage/FrontPage'
+export * from './FrontPage/FrontPage';

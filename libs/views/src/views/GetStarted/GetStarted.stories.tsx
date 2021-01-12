@@ -8,7 +8,7 @@ const props: GetStartedProps = {
   href: `#!`,
   linkLabel: `Nisi veniam laboris`,
   variant: `0`,
-}
+};
 export default {
   component: GetStarted,
   title: `Galaxy/Views/GetStarted`,

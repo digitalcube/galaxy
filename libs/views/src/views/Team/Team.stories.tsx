@@ -41,7 +41,7 @@ const props: TeamProps = {
       img: `post-featured-image.png`,
     },
   ],
-}
+};
 
 export const Default = () => {
   return <Team {...props} />;

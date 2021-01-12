@@ -1,10 +1,5 @@
-import {
-  ShifterThemeProvider,
-  shifter,
-} from '../libs/shifter/src/themes';
-import {
-  amimoto,
-} from '../libs/amimoto/src/themes';
+import { ShifterThemeProvider, shifter } from '../libs/shifter/src/themes';
+import { amimoto } from '../libs/amimoto/src/themes';
 
 export const contexts = [
   {

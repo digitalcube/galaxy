@@ -49,6 +49,6 @@ const props: FeaturesProps = {
         img: `post-featured-image.png`,
       },
     ],
-  }
-}
+  },
+};
 export const Default = () => <Features {...props} />;

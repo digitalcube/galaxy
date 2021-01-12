@@ -14,28 +14,25 @@ import {
 import { Card } from '../Card';
 
 export type SolutionsProps = {
-  nodes?: SolutionNodes
-}
+  nodes?: SolutionNodes;
+};
 
-export type SolutionNodes = Array<SolutionNode>
+export type SolutionNodes = Array<SolutionNode>;
 export type SolutionNode = BaseItem & {
   solution?: BaseItem;
   showcase?: ShowcaseItem;
-}
+};
 type BaseItem = {
   title?: string;
   subtitle?: string;
   buttonLabel?: string;
   href?: string;
-}
+};
 type ShowcaseItem = BaseItem & {
   img?: string;
-}
+};
 
-const Showcase: FC<ShowcaseItem> = ({
-  title,
-  img,
-}) => {
+const Showcase: FC<ShowcaseItem> = ({ title, img }) => {
   return (
     <Card
       variant="primary"
@@ -59,12 +56,7 @@ const Showcase: FC<ShowcaseItem> = ({
   );
 };
 
-const Solution: FC<SolutionNode> = ({
-  title,
-  subtitle,
-  buttonLabel,
-  href,
-}) => {
+const Solution: FC<SolutionNode> = ({ title, subtitle, buttonLabel, href }) => {
   return (
     <Card
       variant="primary"

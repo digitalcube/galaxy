@@ -1,5 +1,5 @@
 // shifter.ts
-import { galaxy } from '@galaxy/core'
+import { galaxy } from '@galaxy/core';
 import { colors } from '@galaxy/views';
 
 const transitions = {

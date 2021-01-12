@@ -25,7 +25,7 @@ const props: NavProps = {
       href: `#!`,
     },
   ],
-}
+};
 export default {
   component: Nav,
   title: `Galaxy/Components/Nav`,
@@ -38,5 +38,5 @@ export const Default = () => {
 };
 
 export const Vertical = () => {
-  return <Nav  {...props} kind="column" />;
+  return <Nav {...props} kind="column" />;
 };

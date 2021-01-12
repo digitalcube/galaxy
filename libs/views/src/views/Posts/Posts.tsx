@@ -10,7 +10,12 @@ export type PostsProps = {
   sx?: object;
 };
 
-export const Posts: FC<PostsProps> = ({ nodes, columns = [2, null, null, null, 4], variant = 'primary', sx }) => {
+export const Posts: FC<PostsProps> = ({
+  nodes,
+  columns = [2, null, null, null, 4],
+  variant = 'primary',
+  sx,
+}) => {
   if (!nodes) return null;
 
   const items = nodes.map((node: Post, i: number) => {

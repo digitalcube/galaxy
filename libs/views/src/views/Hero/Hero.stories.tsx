@@ -1,6 +1,6 @@
 import React from 'react';
 import { withKnobs } from '@storybook/addon-knobs';
-import {Animation} from '@galaxy/core';
+import { Animation } from '@galaxy/core';
 import { Hero } from './index';
 import { HeroProps } from './Hero';
 

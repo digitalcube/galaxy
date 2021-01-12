@@ -32,11 +32,14 @@ const props: BenefitsProps = {
       excerpt: `Easy for non-developers to get started using WordPress themes or page builders.`,
     },
   ],
-}
+};
 
-
-export const Defaults = () => <Benefits {...{
-  title: props.title,
-  nodes: props.nodes,
-}}/>;
+export const Defaults = () => (
+  <Benefits
+    {...{
+      title: props.title,
+      nodes: props.nodes,
+    }}
+  />
+);
 export const Overview = () => <Benefits {...props} />;

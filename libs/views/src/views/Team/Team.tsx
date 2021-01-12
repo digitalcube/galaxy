@@ -8,7 +8,11 @@ export type TeamProps = {
   sx?: object;
 };
 
-export const Team: FC<TeamProps> = ({ nodes, columns = [2, null, null, null, 4], sx }) => {
+export const Team: FC<TeamProps> = ({
+  nodes,
+  columns = [2, null, null, null, 4],
+  sx,
+}) => {
   if (!nodes) return null;
 
   const items = nodes.map((node) => {

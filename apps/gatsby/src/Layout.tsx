@@ -1,12 +1,9 @@
 import React, { FC } from 'react';
-import {
-  Header,
-  ShifterThemeProvider,
-} from '@galaxy/shifter-web';
+import { Header, ShifterThemeProvider } from '@galaxy/shifter-web';
 import GitHubRibbon from 'react-github-ribbons';
-import { Link } from 'gatsby'
+import { Link } from 'gatsby';
 
- export const Layout:FC = ({children}) => {
+export const Layout: FC = ({ children }) => {
   return (
     <ShifterThemeProvider linkType={Link}>
       <Header
@@ -26,14 +23,17 @@ import { Link } from 'gatsby'
               label: `page2-sub`,
               href: `/page2/sub`,
             },
-          ]
-          ]
-        }
+          ],
+        ]}
       />
       {children}
-      <GitHubRibbon href="https://github.com/digitalcube/galaxy" target="_blank" rel="noopener noreferrer"/>
+      <GitHubRibbon
+        href="https://github.com/digitalcube/galaxy"
+        target="_blank"
+        rel="noopener noreferrer"
+      />
     </ShifterThemeProvider>
   );
-}
+};
 
 export default Layout;

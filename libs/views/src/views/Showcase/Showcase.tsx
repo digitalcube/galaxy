@@ -44,4 +44,3 @@ export const Showcase: FC<ShowcaseProps> = ({
     </Container>
   );
 };
-

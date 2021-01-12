@@ -32,4 +32,4 @@ export const PageHeader: FC<PageHeaderProps> = memo(({ title, subtitle }) => {
       </Container>
     </Container>
   );
-})
+});

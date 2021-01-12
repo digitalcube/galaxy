@@ -8,6 +8,7 @@ $ yarn (or npm install)
 ```
 
 ### Start a demo application
+
 We can run the demo application for the libraries.
 
 ```bash
@@ -17,6 +18,7 @@ $ yarn start
 The application code are in `apps/demo`.
 
 ### Start a Storybook
+
 We can run storybook application by the command.
 
 ```bash
@@ -129,6 +131,7 @@ And you need to update the `package.json` file like this.
 ```
 
 ## FAQ
+
 ### Where should we add a new component?
 
 - General component -> @galaxy/core
@@ -143,6 +146,7 @@ And you need to update the `package.json` file like this.
 - For Shifter Web -> @galaxy/shifter-web
 
 ## Appendix: Document about Nx
+
 This project was generated using [Nx](https://nx.dev).
 
 <p align="center"><img src="https://raw.githubusercontent.com/nrwl/nx/master/images/nx-logo.png" width="450"></p>

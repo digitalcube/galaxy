@@ -1,5 +1,21 @@
 import React, { FC } from 'react';
-import { Hero, HeroProps, Logos,Benefits,Solutions, Features,Testimonials,TestimonialsProps,Showcase,GetStarted, BenefitsProps, FeaturesProps, GetStartedProps, SolutionsProps, ShowcaseProps } from '@galaxy/views';
+import {
+  Hero,
+  HeroProps,
+  Logos,
+  Benefits,
+  Solutions,
+  Features,
+  Testimonials,
+  TestimonialsProps,
+  Showcase,
+  GetStarted,
+  BenefitsProps,
+  FeaturesProps,
+  GetStartedProps,
+  SolutionsProps,
+  ShowcaseProps,
+} from '@galaxy/views';
 
 export type FrontPageProps = {
   getStarted?: GetStartedProps;
@@ -29,7 +45,7 @@ export const FrontPage: FC<FrontPageProps> = ({
       <Benefits {...benefits} />
       <Solutions {...solutions} />
       <Features {...features} />
-      {testimonials ? <Testimonials {...testimonials} />: null}
+      {testimonials ? <Testimonials {...testimonials} /> : null}
       <Showcase {...showcase} />
       <GetStarted {...getStarted} />
     </>

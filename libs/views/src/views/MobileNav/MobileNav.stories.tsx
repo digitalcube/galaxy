@@ -1,7 +1,7 @@
 import React from 'react';
 import { withKnobs } from '@storybook/addon-knobs';
-import {Brand} from '@galaxy/core'
-import { MobileNav, MobileNavProps} from './MobileNav';
+import { Brand } from '@galaxy/core';
+import { MobileNav, MobileNavProps } from './MobileNav';
 
 const props: MobileNavProps = {
   brand: <Brand asset="shifter-mark" size="45" />,

@@ -12,7 +12,6 @@ export default {
 const props: TeamMemberProps = {
   title: `Magna fugiat`,
   subtitle: `XXX`,
-  img:`post-featured-image.png`
-
-}
+  img: `post-featured-image.png`,
+};
 export const Default = () => <TeamMember {...props} />;

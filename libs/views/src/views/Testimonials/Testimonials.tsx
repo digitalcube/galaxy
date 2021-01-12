@@ -45,15 +45,16 @@ const Quote = ({ img, quote, author, handle }: Quote) => {
   );
 };
 
-export const Testimonials: FC<TestimonialsProps> = ({
-  title,
-  nodes,
-}) => {
-  const quotes = useMemo(() => nodes.map((node: Quote) => {
-    return {
-      node: <Quote {...node} />,
-    };
-  }), [nodes]);
+export const Testimonials: FC<TestimonialsProps> = ({ title, nodes }) => {
+  const quotes = useMemo(
+    () =>
+      nodes.map((node: Quote) => {
+        return {
+          node: <Quote {...node} />,
+        };
+      }),
+    [nodes]
+  );
 
   return (
     <Container

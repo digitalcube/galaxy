@@ -9,39 +9,42 @@ export default {
   excludeStories: /.*Data$/,
 };
 
-export const Default = () => <Team {...{
-  title: 'Teams',
-  nodes: [
-    {
-      title: `Magna fugiat`,
-      subtitle: `XXX`,
-      img: `post-featured-image.png`,
-    },
-    {
-      title: `Magna fugiat`,
-      subtitle: `XXX`,
-      img: `post-featured-image-1.png`,
-    },
-    {
-      title: `Magna fugiat`,
-      subtitle: `XXX`,
-      img: `post-featured-image-2.png`,
-    },
-    {
-      title: `Magna fugiat`,
-      subtitle: `XXX`,
-      img: `post-featured-image.png`,
-    },
-    {
-      title: `Magna fugiat`,
-      subtitle: `XXX`,
-      img: `post-featured-image-1.png`,
-    },
-    {
-      title: `Magna fugiat`,
-      subtitle: `XXX`,
-      img: `post-featured-image-2.png`,
-    },
-  ],
-}
-} />;
+export const Default = () => (
+  <Team
+    {...{
+      title: 'Teams',
+      nodes: [
+        {
+          title: `Magna fugiat`,
+          subtitle: `XXX`,
+          img: `post-featured-image.png`,
+        },
+        {
+          title: `Magna fugiat`,
+          subtitle: `XXX`,
+          img: `post-featured-image-1.png`,
+        },
+        {
+          title: `Magna fugiat`,
+          subtitle: `XXX`,
+          img: `post-featured-image-2.png`,
+        },
+        {
+          title: `Magna fugiat`,
+          subtitle: `XXX`,
+          img: `post-featured-image.png`,
+        },
+        {
+          title: `Magna fugiat`,
+          subtitle: `XXX`,
+          img: `post-featured-image-1.png`,
+        },
+        {
+          title: `Magna fugiat`,
+          subtitle: `XXX`,
+          img: `post-featured-image-2.png`,
+        },
+      ],
+    }}
+  />
+);

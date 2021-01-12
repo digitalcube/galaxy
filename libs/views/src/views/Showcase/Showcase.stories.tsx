@@ -1,6 +1,6 @@
 import React from 'react';
 import { withKnobs } from '@storybook/addon-knobs';
-import { Showcase,ShowcaseProps } from './Showcase';
+import { Showcase, ShowcaseProps } from './Showcase';
 
 const props: ShowcaseProps = {
   subtitle: `Et ullamco enim Lorem irure consequat commodo officia consequat laboris excepteur culpa.`,
@@ -20,7 +20,7 @@ const props: ShowcaseProps = {
       img: `post-featured-image.png`,
     },
   ],
-}
+};
 export default {
   component: Showcase,
   title: `Galaxy/Views/Showcase`,

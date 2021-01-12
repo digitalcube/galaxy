@@ -43,9 +43,9 @@ const props: PricingProps = {
           year: `$2`,
         },
       },
-    ]
+    ],
   },
-  plans2:{
+  plans2: {
     nodes: [
       {
         img: 'pricing-plan-icon-1.png',
@@ -67,7 +67,7 @@ const props: PricingProps = {
         },
       },
     ],
-  }
-}
+  },
+};
 
 export const Default = () => <Pricing {...props} />;

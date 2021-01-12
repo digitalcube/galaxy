@@ -2,7 +2,7 @@ import React from 'react';
 import { withKnobs } from '@storybook/addon-knobs';
 import { PageHeader, PageHeaderProps } from './PageHeader';
 
-const props: PageHeaderProps={
+const props: PageHeaderProps = {
   title: `Et culpa minim`,
   subtitle: `Qui consequat laborum esse tempor consequat labore non duis est nulla ipsum excepteur cupidatat qui.`,
 };

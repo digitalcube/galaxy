@@ -10,7 +10,7 @@ export type TableProps = {
   }>;
   columns: Column<{
     [key: string]: string;
-  }>[]
+  }>[];
 };
 
 export const Table: FC<TableProps> = ({ nodes, columns }) => {

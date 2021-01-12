@@ -10,7 +10,11 @@ addDecorator((storyFn) => {
     <>
       <link rel="stylesheet" href="https://use.typekit.net/rrt0shs.css" />
       {storyFn()}
-      <GitHubRibbon href="https://github.com/digitalcube/galaxy" target="_blank" rel="noopener noreferrer"/>
+      <GitHubRibbon
+        href="https://github.com/digitalcube/galaxy"
+        target="_blank"
+        rel="noopener noreferrer"
+      />
     </>
   );
 });

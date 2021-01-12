@@ -10,23 +10,23 @@ export type PageProps = {
 export const Page: FC<PageProps> = ({ title, subtitle, content }) => {
   return (
     <Container size="4">
-        <PostHeader title={title} subtitle={subtitle} />
-        <Container
-          size="1"
+      <PostHeader title={title} subtitle={subtitle} />
+      <Container
+        size="1"
+        sx={{
+          my: 4,
+        }}
+      >
+        <Content
           sx={{
-            my: 4,
+            a: {
+              color: 'primary',
+            },
           }}
         >
-          <Content
-            sx={{
-              a: {
-                color: 'primary',
-              },
-            }}
-          >
-            <div dangerouslySetInnerHTML={{ __html: content ? content : `` }} />
-          </Content>
-        </Container>
+          <div dangerouslySetInnerHTML={{ __html: content ? content : `` }} />
+        </Content>
       </Container>
+    </Container>
   );
 };
