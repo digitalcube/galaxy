@@ -8,5 +8,6 @@ module.exports = {
     '<rootDir>/libs/svia',
     '<rootDir>/libs/views',
     '<rootDir>/libs/amimoto-web',
+    '<rootDir>/apps/gatsby',
   ],
 };

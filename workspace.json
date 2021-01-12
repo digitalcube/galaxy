@@ -532,6 +532,80 @@
           }
         }
       }
+    },
+    "gatsby": {
+      "root": "apps/gatsby",
+      "sourceRoot": "apps/gatsby/src",
+      "projectType": "application",
+      "generators": {},
+      "targets": {
+        "build": {
+          "executor": "@nrwl/gatsby:build",
+          "options": {
+            "outputPath": "dist/apps/gatsby",
+            "uglify": true,
+            "color": true,
+            "profile": false
+          },
+          "configurations": {
+            "production": {}
+          }
+        },
+        "serve": {
+          "executor": "@nrwl/gatsby:server",
+          "options": {
+            "buildTarget": "gatsby:build"
+          },
+          "configurations": {
+            "production": {
+              "buildTarget": "gatsby:build:production"
+            }
+          }
+        },
+        "lint": {
+          "executor": "@nrwl/linter:eslint",
+          "options": {
+            "lintFilePatterns": [
+              "apps/gatsby/**/*.{ts,tsx,js,jsx}"
+            ]
+          }
+        },
+        "test": {
+          "executor": "@nrwl/jest:jest",
+          "options": {
+            "jestConfig": "apps/gatsby/jest.config.js",
+            "passWithNoTests": true
+          }
+        }
+      }
+    },
+    "gatsby-e2e": {
+      "root": "apps/gatsby-e2e",
+      "sourceRoot": "apps/gatsby-e2e/src",
+      "projectType": "application",
+      "targets": {
+        "e2e": {
+          "executor": "@nrwl/cypress:cypress",
+          "options": {
+            "cypressConfig": "apps/gatsby-e2e/cypress.json",
+            "tsConfig": "apps/gatsby-e2e/tsconfig.e2e.json",
+            "devServerTarget": "gatsby:serve"
+          },
+          "configurations": {
+            "production": {
+              "devServerTarget": "gatsby:serve:production"
+            }
+          }
+        },
+        "lint": {
+          "executor": "@nrwl/linter:eslint",
+          "options": {
+            "lintFilePatterns": [
+              "apps/gatsby-e2e/**/*.{js,ts}"
+            ]
+          }
+        }
+      }
     }
   },
   "cli": {
@@ -551,6 +625,9 @@
         "style": "styled-components",
         "linter": "eslint"
       }
+    },
+    "@nrwl/gatsby": {
+      "application": {}
     }
   },
   "defaultProject": "demo"

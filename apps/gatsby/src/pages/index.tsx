@@ -1,22 +1,15 @@
 import React, { FC } from 'react';
-
 import {
   Features,
   Benefits,
   Card,
-  Header,
   Testimonials,
-  ShifterThemeProvider,
 } from '@galaxy/shifter-web';
 import { Container, Animation } from '@galaxy/core';
-import GitHubRibbon from 'react-github-ribbons';
 import {
-  BrowserRouter,
-  Route,
-  Switch,
   RouteComponentProps,
-  Link,
 } from 'react-router-dom'
+import { Layout } from '../Layout'
 
 const PageIndex: FC = () => (
   <>
@@ -99,58 +92,11 @@ const PageIndex: FC = () => (
   </>
 )
 
-const PageSub: FC<RouteComponentProps> = (props) => {
-  return (
-    <>
-    <Container
-      as="section"
-      size="4"
-      sx={{
-        py: 7,
-        px: '5%',
-      }}
-    >
-      <Card title="Child page" subtitle="sub title">
-        <pre><code>{JSON.stringify(props,null,2)}</code></pre>
-      </Card>
-    </Container>
-    </>
-
-  )
-}
-
 export function App() {
   return (
-    <ShifterThemeProvider linkType={Link}>
-    <BrowserRouter>
-      <Header
-        href="/"
-        brand={<>React SPA example</>}
-        nav={[
-          [
-            {
-              label: `home`,
-              href: `/`,
-            },
-            {
-              label: `page1`,
-              href: `/page1`,
-            },
-            {
-              label: `page2-sub`,
-              href: `/page2/sub`,
-            },
-          ]
-          ]
-        }
-      />
-      <Switch>
-        <Route path="/:path" component={PageSub} />
-        <Route path="/" exact component={PageIndex} />
-      </Switch>
-    </BrowserRouter>
-      <GitHubRibbon href="https://github.com/digitalcube/galaxy" target="_blank" rel="noopener noreferrer"/>
-    </ShifterThemeProvider>
+    <Layout>
+      <PageIndex />
+    </Layout>
   );
 }
 
