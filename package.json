@@ -36,8 +36,8 @@
     "app:format": "yarn app --target format",
     "app:test": "yarn app --target test",
     "app:build": "yarn app:demo:build && yarn app:gatsby:build",
-    "app:demo:build": "yarn nx run demo:build --baseHref \"demo/\"",
-    "app:gatsby:build": "yarn nx run gatsby:build --baseHref \"gatsby/\""
+    "app:demo:build": "yarn nx run demo:build",
+    "app:gatsby:build": "yarn nx run gatsby:build"
   },
   "private": true,
   "dependencies": {

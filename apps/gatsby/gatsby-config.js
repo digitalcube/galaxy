@@ -1,4 +1,5 @@
 module.exports = {
+  pathPrefix: '/gatsby',
   siteMetadata: {
     title: `gatsby`,
     description: `This is a gatsby application created by Nx.`,
