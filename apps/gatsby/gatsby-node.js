@@ -31,18 +31,24 @@ const target = getBuildTarget()
 
 exports.onPreInit = () => {
   if (process.argv[2] === "build") {
-    fs.rmdirSync(target, { recursive: true })
-    fs.renameSync(
-      path.join(__dirname, "public"),
-      path.join(__dirname, "public_dev")
-    )
+    if (fs.existsSync(target)) fs.rmdirSync(target, { recursive: true })
+    if (fs.existsSync(path.join(__dirname, "public"))) {
+        fs.renameSync(
+            path.join(__dirname, "public"),
+            path.join(__dirname, "public_dev")
+        )
+    }
   }
 }
 
 exports.onPostBuild = () => {
-  fs.renameSync(path.join(__dirname, "public"), target)
-  fs.renameSync(
-    path.join(__dirname, "public_dev"),
-    path.join(__dirname, "public")
-  )
+    if (fs.existsSync(path.join(__dirname, "public"))) {
+        fs.renameSync(path.join(__dirname, "public"), target)
+    }
+    if (fs.existsSync(path.join(__dirname, "public_dev"))) {
+        fs.renameSync(
+            path.join(__dirname, "public_dev"),
+            path.join(__dirname, "public")
+        )
+    }
 }
