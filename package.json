@@ -34,8 +34,10 @@
     "app": "nx run-many --projects \"demo,gatsby\"",
     "app:lint": "yarn app --target lint",
     "app:format": "yarn app --target format",
-    "app:build": "yarn app --target build",
-    "app:test": "yarn app --target test"
+    "app:test": "yarn app --target test",
+    "app:build": "yarn app:demo:build && yarn app:gatsby:build",
+    "app:demo:build": "yarn nx run demo:build --baseHref \"demo/\"",
+    "app:gatsby:build": "yarn nx run gatsby:build --baseHref \"gatsby/\""
   },
   "private": true,
   "dependencies": {

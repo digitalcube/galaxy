@@ -11,12 +11,14 @@ export const contexts = [
         name: 'Shifter',
         props: {
           theme: shifter,
+          linkType: 'a'
         },
       },
       {
         name: 'Amimoto',
         props: {
           theme: amimoto,
+          linkType: 'a',
         },
       },
     ],
