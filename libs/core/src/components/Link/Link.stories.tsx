@@ -1,13 +1,13 @@
 import React from 'react';
-import { withKnobs } from '@storybook/addon-knobs';
+
 import { Link } from './Link';
 import { Heading } from '../Heading';
 
+import { defaultStorybookConfig } from '../../../.storybook/docs';
 export default {
+  ...defaultStorybookConfig,
   component: Link,
   title: `Galaxy/Components/Link`,
-  decorators: [withKnobs],
-  excludeStories: /.*Data$/,
 };
 
 export const linkData = {

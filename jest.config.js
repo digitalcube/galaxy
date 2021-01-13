@@ -5,7 +5,6 @@ module.exports = {
     '<rootDir>/libs/core',
     '<rootDir>/libs/shifter',
     '<rootDir>/libs/amimoto',
-    '<rootDir>/libs/svia',
     '<rootDir>/libs/views',
     '<rootDir>/libs/amimoto-web',
     '<rootDir>/apps/gatsby',

@@ -11,7 +11,7 @@ export const contexts = [
         name: 'Shifter',
         props: {
           theme: shifter,
-          linkType: 'a'
+          linkType: 'a',
         },
       },
       {

@@ -63,10 +63,9 @@ libs
 ├── amimoto     : [@galaxy/amimoto] Components / Templates for AMIMOTO (Web and Dashboard)
 ├── amimoto-web : [@galaxy/amimoto-web] Templates for AMIMOTO website
 ├── shifter     : [@galaxy/shifter] Components / Templates for Shifter (Web and Dashboard)
-├── shifter-web : [@galaxy/shifter-web] Templates for Shifter website
-└── svia        : [@galaxy/svia] for SVIA
+└── shifter-web : [@galaxy/shifter-web] Templates for Shifter website
 
-7 directories, 0 files
+6 directories, 0 files
 ```
 
 ## Development

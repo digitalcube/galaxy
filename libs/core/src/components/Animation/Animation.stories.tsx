@@ -1,12 +1,12 @@
 import React from 'react';
-import { withKnobs } from '@storybook/addon-knobs';
+
 import { Animation } from '../index';
 
+import { defaultStorybookConfig } from '../../../.storybook/docs';
 export default {
+  ...defaultStorybookConfig,
   component: Animation,
   title: `Galaxy/Components/Animation`,
-  decorators: [withKnobs],
-  excludeStories: /.*Data$/,
 };
 
 export const Dashboard = () => {

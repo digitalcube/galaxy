@@ -1,13 +1,13 @@
 import React from 'react';
 import { ThemeProvider } from 'theme-ui';
-import { withKnobs } from '@storybook/addon-knobs';
+
 import { Button, Grid } from '../../index';
 
+import { defaultStorybookConfig } from '../../../.storybook/docs';
 export default {
+  ...defaultStorybookConfig,
   component: Button,
   title: `Galaxy/Components/Button`,
-  decorators: [withKnobs],
-  excludeStories: /.*Data$/,
 };
 
 const schemas = [`galaxy`, `shifter`, `amimoto`];

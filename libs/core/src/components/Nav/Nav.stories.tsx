@@ -1,6 +1,12 @@
 import React from 'react';
-import { withKnobs } from '@storybook/addon-knobs';
+
 import { Nav, NavProps } from '../index';
+import { defaultStorybookConfig } from '../../../.storybook/docs';
+export default {
+  ...defaultStorybookConfig,
+  component: Nav,
+  title: `Galaxy/Components/Nav`,
+};
 
 const props: NavProps = {
   navItems: [
@@ -25,12 +31,6 @@ const props: NavProps = {
       href: `#!`,
     },
   ],
-};
-export default {
-  component: Nav,
-  title: `Galaxy/Components/Nav`,
-  decorators: [withKnobs],
-  excludeStories: /.*Data$/,
 };
 
 export const Default = () => {

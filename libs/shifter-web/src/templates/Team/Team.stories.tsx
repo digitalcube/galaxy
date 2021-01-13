@@ -1,12 +1,10 @@
 import React from 'react';
-import { withKnobs } from '@storybook/addon-knobs';
 import { Team } from './Team';
-
+import { defaultStorybookConfig } from '../../../.storybook/docs';
 export default {
+  ...defaultStorybookConfig,
   component: Team,
   title: `Shifter/Templates/Team`,
-  decorators: [withKnobs],
-  excludeStories: /.*Data$/,
 };
 
 export const Default = () => (

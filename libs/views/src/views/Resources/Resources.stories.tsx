@@ -1,12 +1,12 @@
 import React from 'react';
-import { withKnobs } from '@storybook/addon-knobs';
+
 import { Resources, ResourcesProps } from './Resources';
 
+import { defaultStorybookConfig } from '../../../.storybook/docs';
 export default {
+  ...defaultStorybookConfig,
   component: Resources,
   title: `Galaxy/Views/Resources`,
-  decorators: [withKnobs],
-  excludeStories: /.*Data$/,
 };
 
 const props: ResourcesProps = {

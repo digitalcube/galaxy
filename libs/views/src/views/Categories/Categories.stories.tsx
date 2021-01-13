@@ -1,13 +1,13 @@
 import React, { useMemo } from 'react';
-import { withKnobs } from '@storybook/addon-knobs';
+
 import { Categories } from './Categories';
 import { NavLink } from '@galaxy/core';
 
+import { defaultStorybookConfig } from '../../../.storybook/docs';
 export default {
+  ...defaultStorybookConfig,
   component: Categories,
   title: `Galaxy/Views/Categories`,
-  decorators: [withKnobs],
-  excludeStories: /.*Data$/,
 };
 
 export const Default = () => {

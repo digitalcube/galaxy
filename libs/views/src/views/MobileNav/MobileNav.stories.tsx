@@ -1,7 +1,14 @@
 import React from 'react';
-import { withKnobs } from '@storybook/addon-knobs';
+
 import { Brand } from '@galaxy/core';
 import { MobileNav, MobileNavProps } from './MobileNav';
+
+import { defaultStorybookConfig } from '../../../.storybook/docs';
+export default {
+  ...defaultStorybookConfig,
+  component: MobileNav,
+  title: `Galaxy/Views/MobileNav`,
+};
 
 const props: MobileNavProps = {
   brand: <Brand asset="shifter-mark" size="45" />,
@@ -33,16 +40,8 @@ const props: MobileNavProps = {
     {
       label: `Sign Up`,
       href: `#!`,
-      kind: `primary`,
     },
   ],
-};
-
-export default {
-  component: MobileNav,
-  title: `Galaxy/Views/MobileNav`,
-  decorators: [withKnobs],
-  excludeStories: /.*Data$/,
 };
 
 export const Default = () => {

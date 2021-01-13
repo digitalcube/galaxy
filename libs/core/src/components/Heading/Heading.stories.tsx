@@ -1,13 +1,13 @@
 import React from 'react';
-import { withKnobs } from '@storybook/addon-knobs';
+
 import { galaxy } from '../../themes/galaxy';
 import { Heading, Text, Content } from '../index';
 
+import { defaultStorybookConfig } from '../../../.storybook/docs';
 export default {
+  ...defaultStorybookConfig,
   component: Heading,
   title: `Galaxy/Components/Heading`,
-  decorators: [withKnobs],
-  excludeStories: /.*Data$/,
 };
 
 const headingSizes = Object.keys(galaxy.text).map((size: Heading) => {

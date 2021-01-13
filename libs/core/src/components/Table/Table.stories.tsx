@@ -1,7 +1,13 @@
 import React from 'react';
-import { withKnobs } from '@storybook/addon-knobs';
+
 import { Table, TableProps } from './Table';
 
+import { defaultStorybookConfig } from '../../../.storybook/docs';
+export default {
+  ...defaultStorybookConfig,
+  component: Table,
+  title: `Galaxy/Components/Table`,
+};
 const props: TableProps = {
   columns: [
     {
@@ -48,12 +54,6 @@ const props: TableProps = {
       col5: '50 GB',
     },
   ],
-};
-export default {
-  component: Table,
-  title: `Galaxy/Components/Table`,
-  decorators: [withKnobs],
-  excludeStories: /.*Data$/,
 };
 
 export const Default = () => {

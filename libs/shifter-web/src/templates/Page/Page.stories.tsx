@@ -1,12 +1,11 @@
 import React from 'react';
-import { withKnobs } from '@storybook/addon-knobs';
 import { Page, PageProps } from './Page';
 
+import { defaultStorybookConfig } from '../../../.storybook/docs';
 export default {
+  ...defaultStorybookConfig,
   component: Page,
   title: `Shifter/Templates/Page`,
-  decorators: [withKnobs],
-  excludeStories: /.*Data$/,
 };
 
 const props: PageProps = {

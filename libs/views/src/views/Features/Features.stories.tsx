@@ -1,7 +1,13 @@
 import React from 'react';
-import { withKnobs } from '@storybook/addon-knobs';
+
 import { Features, FeaturesProps } from './Features';
 
+import { defaultStorybookConfig } from '../../../.storybook/docs';
+export default {
+  ...defaultStorybookConfig,
+  component: Features,
+  title: `Galaxy/Views/Features`,
+};
 const props: FeaturesProps = {
   title: `Sunt deserunt`,
   subtitle: `Et cillum non cupidatat non dolore nostrud ad nisi.`,
@@ -34,12 +40,6 @@ const props: FeaturesProps = {
       img: `post-featured-image.png`,
     },
   ],
-};
-export default {
-  component: Features,
-  title: `Galaxy/Views/Features`,
-  decorators: [withKnobs],
-  excludeStories: /.*Data$/,
 };
 
 export const Default = () => {

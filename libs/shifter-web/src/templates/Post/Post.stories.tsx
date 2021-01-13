@@ -1,12 +1,10 @@
 import React from 'react';
-import { withKnobs } from '@storybook/addon-knobs';
 import { Post, PostProps } from './Post';
-
+import { defaultStorybookConfig } from '../../../.storybook/docs';
 export default {
+  ...defaultStorybookConfig,
   component: Post,
   title: `Shifter/Templates/Post`,
-  decorators: [withKnobs],
-  excludeStories: /.*Data$/,
 };
 const props: PostProps = {
   title: `Velit a non Consectetur Sint Offica Sunt Commodo ad Proident`,

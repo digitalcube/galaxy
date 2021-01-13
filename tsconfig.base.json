@@ -24,7 +24,6 @@
       "@galaxy/core": ["libs/core/src/index.ts"],
       "@galaxy/shifter": ["libs/shifter/src/index.ts"],
       "@galaxy/amimoto": ["libs/amimoto/src/index.ts"],
-      "@galaxy/svia": ["libs/svia/src/index.ts"],
       "@galaxy/views": ["libs/views/src/index.ts"],
       "@galaxy/amimoto-web": ["libs/amimoto-web/src/index.ts"]
     }
