@@ -7,8 +7,14 @@ jobs:
     runs-on: ${{ matrix.os }}
     strategy:
       matrix:
-        node: ['10.x', '12.x', '14.x']
-        os: [ubuntu-latest, windows-latest, macOS-latest]
+        node: 
+          - '10.x'
+          - '12.x'
+          - '14.x'
+        os: 
+          - ubuntu-latest
+          #- windows-latest
+          #- macOS-latest
 
     steps:
       - name: Checkout repo
@@ -18,6 +24,11 @@ jobs:
         uses: actions/setup-node@v1
         with:
           node-version: ${{ matrix.node }}
+
+      - uses: actions/cache@v2
+        with:
+          path: '**/node_modules'
+          key: ${{ runner.os }}-modules-${{ hashFiles('**/yarn.lock') }}
 
       - name: Install deps and build (with cache)
         uses: bahmutov/npm-install@v1
@@ -32,4 +43,7 @@ jobs:
         run: yarn libs:build
 
       - name: Build Demo app
-        run: yarn build
+        run: yarn app:build
+
+      - name: Build Storybook
+        run: yarn storybook:build
