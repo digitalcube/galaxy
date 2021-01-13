@@ -9,4 +9,14 @@ export default {
   excludeStories: /.*Data$/,
 };
 
-export const Default = () => <FrontPage />;
+export const Default = () => <FrontPage 
+header={{
+  nav: [
+    [
+      {
+        label: `Qui sint`,
+        href: `#!`,
+      },
+    ],
+  ],
+}} />;
