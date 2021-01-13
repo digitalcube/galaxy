@@ -3,11 +3,11 @@ import React from 'react';
 import { Link } from './Link';
 import { Heading } from '../Heading';
 
+import { defaultStorybookConfig } from '../../../.storybook/docs';
 export default {
+  ...defaultStorybookConfig,
   component: Link,
   title: `Galaxy/Components/Link`,
-
-
 };
 
 export const linkData = {

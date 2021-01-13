@@ -1,7 +1,7 @@
 import React from 'react';
 import { Pricing, PricingProps } from './Pricing';
 
-import { defaultStorybookConfig } from '../../../.storybook/docs'
+import { defaultStorybookConfig } from '../../../.storybook/docs';
 export default {
   ...defaultStorybookConfig,
   component: Pricing,

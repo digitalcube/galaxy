@@ -1,7 +1,7 @@
 import React from 'react';
 import { Page, PageProps } from './Page';
 
-import { defaultStorybookConfig } from '../../../.storybook/docs'
+import { defaultStorybookConfig } from '../../../.storybook/docs';
 export default {
   ...defaultStorybookConfig,
   component: Page,

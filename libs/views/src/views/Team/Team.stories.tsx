@@ -2,13 +2,11 @@ import React from 'react';
 
 import { Team, TeamProps } from './Team';
 
-import { defaultStorybookConfig } from '../../../.storybook/docs'
+import { defaultStorybookConfig } from '../../../.storybook/docs';
 export default {
   ...defaultStorybookConfig,
   component: Team,
   title: `Galaxy/Views/Team`,
-
-
 };
 const props: TeamProps = {
   nodes: [

@@ -6,11 +6,11 @@ import React from 'react';
 
 import { Badge } from './Badge';
 
+import { defaultStorybookConfig } from '../../../.storybook/docs';
 export default {
+  ...defaultStorybookConfig,
   component: Badge,
   title: `Galaxy/Components/Badge`,
-
-
 };
 
 export const Default = () => <Badge>Default</Badge>;

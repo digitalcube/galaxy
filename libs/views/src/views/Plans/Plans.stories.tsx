@@ -2,13 +2,11 @@ import React from 'react';
 
 import { Plans, PlansProps } from './Plans';
 
-import { defaultStorybookConfig } from '../../../.storybook/docs'
+import { defaultStorybookConfig } from '../../../.storybook/docs';
 export default {
   ...defaultStorybookConfig,
   component: Plans,
   title: `Galaxy/Views/Plans`,
-
-
 };
 const props: PlansProps = {
   nodes: [

@@ -1,7 +1,7 @@
 import React from 'react';
 import { Showcase, ShowcaseProps } from './Showcase';
 
-import { defaultStorybookConfig } from '../../../.storybook/docs'
+import { defaultStorybookConfig } from '../../../.storybook/docs';
 export default {
   ...defaultStorybookConfig,
   component: Showcase,

@@ -2,13 +2,11 @@ import React from 'react';
 
 import { GetStarted, GetStartedProps } from './GetStarted';
 
-import { defaultStorybookConfig } from '../../../.storybook/docs'
+import { defaultStorybookConfig } from '../../../.storybook/docs';
 export default {
   ...defaultStorybookConfig,
   component: GetStarted,
   title: `Galaxy/Views/GetStarted`,
-
-
 };
 const props: GetStartedProps = {
   title: `Fugiat ut ullamco aute nulla?`,

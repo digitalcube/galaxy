@@ -6,11 +6,11 @@ import React from 'react';
 
 import { Brand } from './index';
 
+import { defaultStorybookConfig } from '../../../.storybook/docs';
 export default {
+  ...defaultStorybookConfig,
   component: Brand,
   title: `Galaxy/Components/Brand`,
-
-
 };
 
 export const Default = () => <Brand />;

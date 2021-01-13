@@ -1,12 +1,12 @@
-import {baseStorybookConfig} from '../../../.storybook/docs.base'
+import { baseStorybookConfig } from '../../../.storybook/docs.base';
 
 export const defaultStorybookConfig = {
-    ...baseStorybookConfig,
-    parameters: {
-    docs: { 
-        description: { 
-            component: 'npm install -S @galaxy/amimoto-web' 
-        } 
+  ...baseStorybookConfig,
+  parameters: {
+    docs: {
+      description: {
+        component: 'npm install -S @galaxy/amimoto-web',
+      },
     },
-  }
-}
+  },
+};

@@ -2,14 +2,11 @@ import React from 'react';
 
 import { PageHeader, PageHeaderProps } from './PageHeader';
 
-
-import { defaultStorybookConfig } from '../../../.storybook/docs'
+import { defaultStorybookConfig } from '../../../.storybook/docs';
 export default {
   ...defaultStorybookConfig,
   component: PageHeader,
   title: `Galaxy/Views/PageHeader`,
-
-
 };
 
 const props: PageHeaderProps = {

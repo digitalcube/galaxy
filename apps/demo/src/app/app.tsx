@@ -108,22 +108,20 @@ const PageIndex: FC = () => (
 
 const PageSub: FC<RouteComponentProps> = (props) => {
   return (
-    <>
-      <Container
-        as="section"
-        size="4"
-        sx={{
-          py: 7,
-          px: '5%',
-        }}
-      >
-        <Card title="Child page" subtitle="sub title">
-          <pre>
-            <code>{JSON.stringify(props, null, 2)}</code>
-          </pre>
-        </Card>
-      </Container>
-    </>
+    <Container
+      as="section"
+      size="4"
+      sx={{
+        py: 7,
+        px: '5%',
+      }}
+    >
+      <Card title="Child page" subtitle="sub title">
+        <pre>
+          <code>{JSON.stringify(props, null, 2)}</code>
+        </pre>
+      </Card>
+    </Container>
   );
 };
 

@@ -1,6 +1,6 @@
 import React from 'react';
 import { Features, FeaturesProps } from './Features';
-import { defaultStorybookConfig } from '../../../.storybook/docs'
+import { defaultStorybookConfig } from '../../../.storybook/docs';
 export default {
   ...defaultStorybookConfig,
   component: Features,

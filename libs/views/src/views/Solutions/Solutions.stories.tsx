@@ -3,13 +3,11 @@ import React from 'react';
 import { Solutions } from './index';
 import { SolutionsProps } from './Solutions';
 
-import { defaultStorybookConfig } from '../../../.storybook/docs'
+import { defaultStorybookConfig } from '../../../.storybook/docs';
 export default {
   ...defaultStorybookConfig,
   component: Solutions,
   title: `Galaxy/Views/Solutions`,
-
-
 };
 const props: SolutionsProps = {
   nodes: [

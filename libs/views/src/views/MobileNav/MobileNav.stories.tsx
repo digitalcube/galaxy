@@ -3,13 +3,12 @@ import React from 'react';
 import { Brand } from '@galaxy/core';
 import { MobileNav, MobileNavProps } from './MobileNav';
 
-import { defaultStorybookConfig } from '../../../.storybook/docs'
+import { defaultStorybookConfig } from '../../../.storybook/docs';
 export default {
   ...defaultStorybookConfig,
   component: MobileNav,
   title: `Galaxy/Views/MobileNav`,
-}
-
+};
 
 const props: MobileNavProps = {
   brand: <Brand asset="shifter-mark" size="45" />,
@@ -44,7 +43,6 @@ const props: MobileNavProps = {
     },
   ],
 };
-
 
 export const Default = () => {
   return <MobileNav {...props} />;

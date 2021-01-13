@@ -2,13 +2,11 @@ import React from 'react';
 
 import { PlanMeta, PlanMetaProps } from './PlanMeta';
 
-import { defaultStorybookConfig } from '../../../.storybook/docs'
+import { defaultStorybookConfig } from '../../../.storybook/docs';
 export default {
   ...defaultStorybookConfig,
   component: PlanMeta,
   title: `Galaxy/Components/PlanMeta`,
-
-
 };
 
 const props: PlanMetaProps = {

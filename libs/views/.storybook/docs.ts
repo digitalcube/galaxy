@@ -1,12 +1,12 @@
-import {baseStorybookConfig} from '../../../.storybook/docs.base'
+import { baseStorybookConfig } from '../../../.storybook/docs.base';
 
 export const defaultStorybookConfig = {
-    ...baseStorybookConfig,
-    parameters: {
-    docs: { 
-        description: { 
-            component: 'npm install -S @galaxy/views' 
-        } 
+  ...baseStorybookConfig,
+  parameters: {
+    docs: {
+      description: {
+        component: 'npm install -S @galaxy/views',
+      },
     },
-  }
-}
+  },
+};

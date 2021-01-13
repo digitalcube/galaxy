@@ -2,13 +2,11 @@ import React from 'react';
 
 import { FrontPage } from './FrontPage';
 
-import { defaultStorybookConfig } from '../../../.storybook/docs'
+import { defaultStorybookConfig } from '../../../.storybook/docs';
 export default {
   ...defaultStorybookConfig,
   component: FrontPage,
   title: `Galaxy/Views/FrontPage`,
-
-
 };
 
 export const Default = () => (

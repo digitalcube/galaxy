@@ -2,13 +2,11 @@ import React from 'react';
 
 import { RecentPosts, RecentPostsProps } from './RecentPosts';
 
-import { defaultStorybookConfig } from '../../../.storybook/docs'
+import { defaultStorybookConfig } from '../../../.storybook/docs';
 export default {
   ...defaultStorybookConfig,
   component: RecentPosts,
   title: `Galaxy/Views/RecentPosts`,
-
-
 };
 const props: RecentPostsProps = {
   nodes: [

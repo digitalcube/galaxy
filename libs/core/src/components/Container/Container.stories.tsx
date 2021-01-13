@@ -2,11 +2,11 @@ import React from 'react';
 
 import { Container } from './Container';
 
+import { defaultStorybookConfig } from '../../../.storybook/docs';
 export default {
+  ...defaultStorybookConfig,
   component: Container,
   title: `Galaxy/Components/Container`,
-
-
 };
 
 export const Sizes = () => (

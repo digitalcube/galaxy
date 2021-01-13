@@ -3,13 +3,12 @@ import React from 'react';
 import { Animation } from '@galaxy/core';
 import { Hero } from './index';
 import { HeroProps } from './Hero';
-import { defaultStorybookConfig } from '../../../.storybook/docs'
+import { defaultStorybookConfig } from '../../../.storybook/docs';
 export default {
   ...defaultStorybookConfig,
   component: Hero,
   title: `Galaxy/Views/Hero`,
-
-}
+};
 
 const props: HeroProps = {
   img: <Animation animation="dashboard" />,
@@ -18,7 +17,6 @@ const props: HeroProps = {
   href: `#!`,
   buttonLabel: `Dolor aute exercitation`,
 };
-
 
 export const Default = () => {
   return <Hero {...props} />;

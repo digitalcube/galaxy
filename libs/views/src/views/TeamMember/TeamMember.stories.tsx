@@ -2,13 +2,11 @@ import React from 'react';
 
 import { TeamMember, TeamMemberProps } from './TeamMember';
 
-import { defaultStorybookConfig } from '../../../.storybook/docs'
+import { defaultStorybookConfig } from '../../../.storybook/docs';
 export default {
   ...defaultStorybookConfig,
   component: TeamMember,
   title: `Galaxy/Views/Team/TeamMember`,
-
-
 };
 
 const props: TeamMemberProps = {

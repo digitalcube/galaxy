@@ -2,11 +2,11 @@ import React from 'react';
 
 import { Text } from './Text';
 
+import { defaultStorybookConfig } from '../../../.storybook/docs';
 export default {
+  ...defaultStorybookConfig,
   component: Text,
   title: `Galaxy/Components/Text`,
-
-
 };
 
 export const Default = () => (
