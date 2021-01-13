@@ -1,7 +1,15 @@
 import React from 'react';
-import { withKnobs } from '@storybook/addon-knobs';
+
 import { Plan, PlanProps } from './Plan';
 
+import { defaultStorybookConfig } from '../../../.storybook/docs'
+export default {
+  ...defaultStorybookConfig,
+  component: Plan,
+  title: `Galaxy/Views/Plan`,
+
+
+};
 const props: PlanProps = {
   title: `Free`,
   href: `#!`,
@@ -9,12 +17,6 @@ const props: PlanProps = {
     year: `$1`,
     month: `$1`,
   },
-};
-export default {
-  component: Plan,
-  title: `Galaxy/Views/Plan`,
-  decorators: [withKnobs],
-  excludeStories: /.*Data$/,
 };
 
 export const Default = () => <Plan {...props} />;

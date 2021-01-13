@@ -1,12 +1,14 @@
 import React from 'react';
-import { withKnobs } from '@storybook/addon-knobs';
+
 import { Footer } from './index';
 
+import { defaultStorybookConfig } from '../../../.storybook/docs'
 export default {
+  ...defaultStorybookConfig,
   component: Footer,
   title: `Galaxy/Views/Footer`,
-  decorators: [withKnobs],
-  excludeStories: /.*Data$/,
+
+
 };
 
 export const Default = () => {

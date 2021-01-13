@@ -1,7 +1,15 @@
 import React from 'react';
-import { withKnobs } from '@storybook/addon-knobs';
+
 import { Posts, PostsProps } from './Posts';
 
+import { defaultStorybookConfig } from '../../../.storybook/docs'
+export default {
+  ...defaultStorybookConfig,
+  component: Posts,
+  title: `Galaxy/Views/Posts`,
+
+
+};
 const props: PostsProps = {
   nodes: [
     {
@@ -21,12 +29,6 @@ const props: PostsProps = {
       href: `#!`,
     },
   ],
-};
-export default {
-  component: Posts,
-  title: `Galaxy/Views/Posts`,
-  decorators: [withKnobs],
-  excludeStories: /.*Data$/,
 };
 
 export const Default = () => {

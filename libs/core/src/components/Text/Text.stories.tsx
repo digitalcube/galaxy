@@ -1,12 +1,12 @@
 import React from 'react';
-import { withKnobs } from '@storybook/addon-knobs';
+
 import { Text } from './Text';
 
 export default {
   component: Text,
   title: `Galaxy/Components/Text`,
-  decorators: [withKnobs],
-  excludeStories: /.*Data$/,
+
+
 };
 
 export const Default = () => (

@@ -1,12 +1,10 @@
 import React from 'react';
-import { withKnobs } from '@storybook/addon-knobs';
 import { Blog, BlogProps } from './Blog';
-
+import { defaultStorybookConfig } from '../../../.storybook/docs'
 export default {
+  ...defaultStorybookConfig,
   component: Blog,
   title: `Shifter/Templates/Blog`,
-  decorators: [withKnobs],
-  excludeStories: /.*Data$/,
 };
 const props: BlogProps = {
   nodes: [

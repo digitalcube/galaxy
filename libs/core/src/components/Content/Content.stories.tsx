@@ -1,12 +1,12 @@
 import React from 'react';
-import { withKnobs } from '@storybook/addon-knobs';
+
 import { Content } from './Content';
 
 export default {
   component: Content,
   title: `Galaxy/Components/Content`,
-  decorators: [withKnobs],
-  excludeStories: /.*Data$/,
+
+
 };
 
 export const Centered = () => (

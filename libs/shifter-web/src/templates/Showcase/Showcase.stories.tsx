@@ -1,12 +1,11 @@
 import React from 'react';
-import { withKnobs } from '@storybook/addon-knobs';
 import { Showcase, ShowcaseProps } from './Showcase';
 
+import { defaultStorybookConfig } from '../../../.storybook/docs'
 export default {
+  ...defaultStorybookConfig,
   component: Showcase,
   title: `Shifter/Templates/Showcase`,
-  decorators: [withKnobs],
-  excludeStories: /.*Data$/,
 };
 
 const props: ShowcaseProps = {

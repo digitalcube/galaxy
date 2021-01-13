@@ -1,12 +1,11 @@
 import React from 'react';
-import { withKnobs } from '@storybook/addon-knobs';
 import { Pricing, PricingProps } from './Pricing';
 
+import { defaultStorybookConfig } from '../../../.storybook/docs'
 export default {
+  ...defaultStorybookConfig,
   component: Pricing,
   title: `Shifter/Templates/Pricing`,
-  decorators: [withKnobs],
-  excludeStories: /.*Data$/,
 };
 
 const props: PricingProps = {

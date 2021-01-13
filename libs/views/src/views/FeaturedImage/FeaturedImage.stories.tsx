@@ -1,12 +1,14 @@
 import React from 'react';
-import { withKnobs } from '@storybook/addon-knobs';
+
 import { FeaturedImage } from './FeaturedImage';
 
+import { defaultStorybookConfig } from '../../../.storybook/docs'
 export default {
+  ...defaultStorybookConfig,
   component: FeaturedImage,
   title: `Galaxy/Components/FeaturedImage`,
-  decorators: [withKnobs],
-  excludeStories: /.*Data$/,
+
+
 };
 
 export const Default = () => {

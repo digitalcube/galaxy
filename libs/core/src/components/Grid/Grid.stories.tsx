@@ -1,12 +1,12 @@
 import React from 'react';
-import { withKnobs } from '@storybook/addon-knobs';
+
 import { Grid } from '../index';
 
 export default {
   component: Grid,
   title: `Galaxy/Components/Grid`,
-  decorators: [withKnobs],
-  excludeStories: /.*Data$/,
+
+
 };
 
 export const Default = () => (

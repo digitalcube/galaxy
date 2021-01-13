@@ -1,12 +1,14 @@
 import React from 'react';
-import { withKnobs } from '@storybook/addon-knobs';
+
 import { QuickLinks, QuickLinksProps } from './QuickLinks';
 
+import { defaultStorybookConfig } from '../../../.storybook/docs'
 export default {
+  ...defaultStorybookConfig,
   component: QuickLinks,
   title: `Galaxy/Views/QuickLinks`,
-  decorators: [withKnobs],
-  excludeStories: /.*Data$/,
+
+
 };
 
 const props: QuickLinksProps = {
@@ -15,22 +17,22 @@ const props: QuickLinksProps = {
     {
       label: `Duis Adipisicing`,
       href: `#!`,
-      kind: `primary`,
+
     },
     {
       label: `Consequat`,
       href: `#!`,
-      kind: `primary`,
+
     },
     {
       label: `Et Tempor`,
       href: `#!`,
-      kind: `primary`,
+
     },
     {
       label: `Cupidatat`,
       href: `#!`,
-      kind: `primary`,
+
     },
   ],
 };

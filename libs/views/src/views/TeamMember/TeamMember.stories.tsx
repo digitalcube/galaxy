@@ -1,12 +1,14 @@
 import React from 'react';
-import { withKnobs } from '@storybook/addon-knobs';
+
 import { TeamMember, TeamMemberProps } from './TeamMember';
 
+import { defaultStorybookConfig } from '../../../.storybook/docs'
 export default {
+  ...defaultStorybookConfig,
   component: TeamMember,
   title: `Galaxy/Views/Team/TeamMember`,
-  decorators: [withKnobs],
-  excludeStories: /.*Data$/,
+
+
 };
 
 const props: TeamMemberProps = {

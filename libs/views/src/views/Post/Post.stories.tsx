@@ -1,12 +1,14 @@
 import React from 'react';
-import { withKnobs } from '@storybook/addon-knobs';
+
 import { Post } from './Post';
 
+import { defaultStorybookConfig } from '../../../.storybook/docs'
 export default {
+  ...defaultStorybookConfig,
   component: Post,
   title: `Galaxy/Components/Post`,
-  decorators: [withKnobs],
-  excludeStories: /.*Data$/,
+
+
 };
 
 export const Default = () => <Post />;

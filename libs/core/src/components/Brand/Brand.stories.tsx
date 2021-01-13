@@ -3,14 +3,14 @@
 // https://github.com/megumiteam/shifter-dashboard/blob/master/src/types/artifacts.ts
 
 import React from 'react';
-import { withKnobs } from '@storybook/addon-knobs';
+
 import { Brand } from './index';
 
 export default {
   component: Brand,
   title: `Galaxy/Components/Brand`,
-  decorators: [withKnobs],
-  excludeStories: /.*Data$/,
+
+
 };
 
 export const Default = () => <Brand />;

@@ -1,12 +1,14 @@
 import React from 'react';
-import { withKnobs } from '@storybook/addon-knobs';
+
 import { PlanMeta, PlanMetaProps } from './PlanMeta';
 
+import { defaultStorybookConfig } from '../../../.storybook/docs'
 export default {
+  ...defaultStorybookConfig,
   component: PlanMeta,
   title: `Galaxy/Components/PlanMeta`,
-  decorators: [withKnobs],
-  excludeStories: /.*Data$/,
+
+
 };
 
 const props: PlanMetaProps = {

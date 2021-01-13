@@ -1,7 +1,13 @@
 import React from 'react';
-import { withKnobs } from '@storybook/addon-knobs';
 import { Animation } from '@galaxy/core';
 import { FrontPage, FrontPageProps } from './FrontPage';
+import { defaultStorybookConfig } from '../../../.storybook/docs'
+export default {
+  ...defaultStorybookConfig,
+    component: FrontPage,
+    title: `Shifter/Templates/FrontPage`,
+  };
+  
 
 const props: FrontPageProps = {
   getStarted: {
@@ -121,11 +127,4 @@ const props: FrontPageProps = {
     ],
   },
 };
-export default {
-  component: FrontPage,
-  title: `Shifter/Templates/FrontPage`,
-  decorators: [withKnobs],
-  excludeStories: /.*Data$/,
-};
-
 export const Default = () => <FrontPage {...props} />;

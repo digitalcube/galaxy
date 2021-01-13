@@ -1,7 +1,15 @@
 import React from 'react';
-import { withKnobs } from '@storybook/addon-knobs';
+
 import { Plans, PlansProps } from './Plans';
 
+import { defaultStorybookConfig } from '../../../.storybook/docs'
+export default {
+  ...defaultStorybookConfig,
+  component: Plans,
+  title: `Galaxy/Views/Plans`,
+
+
+};
 const props: PlansProps = {
   nodes: [
     {
@@ -48,12 +56,6 @@ const props: PlansProps = {
       },
     },
   ],
-};
-export default {
-  component: Plans,
-  title: `Galaxy/Views/Plans`,
-  decorators: [withKnobs],
-  excludeStories: /.*Data$/,
 };
 
 export const Default = () => {

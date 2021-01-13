@@ -1,12 +1,14 @@
 import React from 'react';
-import { withKnobs } from '@storybook/addon-knobs';
+
 import { Testimonials, TestimonialsProps } from './Testimonials';
 
+import { defaultStorybookConfig } from '../../../.storybook/docs'
 export default {
+  ...defaultStorybookConfig,
   component: Testimonials,
   title: `Galaxy/Views/Testimonials`,
-  decorators: [withKnobs],
-  excludeStories: /.*Data$/,
+
+
 };
 
 const props: TestimonialsProps = {

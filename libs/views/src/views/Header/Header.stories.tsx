@@ -1,8 +1,16 @@
 import React from 'react';
-import { withKnobs } from '@storybook/addon-knobs';
+
 import { Brand } from '@galaxy/core';
 import { Header, HeaderProps } from './index';
 
+import { defaultStorybookConfig } from '../../../.storybook/docs'
+export default {
+  ...defaultStorybookConfig,
+  component: Header,
+  title: `Galaxy/Views/Header`,
+
+
+};
 const props: HeaderProps = {
   brand: <Brand asset="shifter-mark" size="45" />,
   href: `/`,
@@ -37,7 +45,6 @@ const props: HeaderProps = {
       {
         label: `Sign Up`,
         href: `#!`,
-        kind: `primary`,
       },
     ],
     [
@@ -68,16 +75,9 @@ const props: HeaderProps = {
       {
         label: `Sign Up`,
         href: `#!`,
-        kind: `primary`,
       },
     ],
   ],
-};
-export default {
-  component: Header,
-  title: `Galaxy/Views/Header`,
-  decorators: [withKnobs],
-  excludeStories: /.*Data$/,
 };
 
 export const Default = () => {

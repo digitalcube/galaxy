@@ -1,12 +1,10 @@
 import React from 'react';
-import { withKnobs } from '@storybook/addon-knobs';
 import { Features, FeaturesProps } from './Features';
-
+import { defaultStorybookConfig } from '../../../.storybook/docs'
 export default {
+  ...defaultStorybookConfig,
   component: Features,
   title: `Shifter/Templates/Features`,
-  decorators: [withKnobs],
-  excludeStories: /.*Data$/,
 };
 
 const props: FeaturesProps = {

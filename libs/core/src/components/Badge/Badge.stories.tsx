@@ -3,14 +3,14 @@
 // https://github.com/megumiteam/shifter-dashboard/blob/master/src/types/artifacts.ts
 
 import React from 'react';
-import { withKnobs } from '@storybook/addon-knobs';
+
 import { Badge } from './Badge';
 
 export default {
   component: Badge,
   title: `Galaxy/Components/Badge`,
-  decorators: [withKnobs],
-  excludeStories: /.*Data$/,
+
+
 };
 
 export const Default = () => <Badge>Default</Badge>;

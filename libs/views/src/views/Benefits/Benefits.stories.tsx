@@ -1,13 +1,11 @@
 import React from 'react';
 import { Animation } from '@galaxy/core';
-import { withKnobs } from '@storybook/addon-knobs';
 import { Benefits, BenefitsProps } from './index';
-
+import { defaultStorybookConfig } from '../../../.storybook/docs'
 export default {
+  ...defaultStorybookConfig,
   component: Benefits,
   title: `Galaxy/Views/Benefits`,
-  decorators: [withKnobs],
-  excludeStories: /.*Data$/,
 };
 
 const props: BenefitsProps = {
