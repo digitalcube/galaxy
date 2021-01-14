@@ -58,12 +58,12 @@ The command will build the entire library's story.
 
 ```bash
 libs
-├── core        : [@galaxy/core] General Components and Utility Functions
-├── views       : [@galaxy/views] General View templates
-├── amimoto     : [@galaxy/amimoto] Components / Templates for AMIMOTO (Web and Dashboard)
-├── amimoto-web : [@galaxy/amimoto-web] Templates for AMIMOTO website
-├── shifter     : [@galaxy/shifter] Components / Templates for Shifter (Web and Dashboard)
-└── shifter-web : [@galaxy/shifter-web] Templates for Shifter website
+├── core        : [@digitalcube/galaxy-core] General Components and Utility Functions
+├── views       : [@digitalcube/galaxy-views] General View templates
+├── amimoto     : [@digitalcube/galaxy-amimoto] Components / Templates for AMIMOTO (Web and Dashboard)
+├── amimoto-web : [@digitalcube/galaxy-amimoto-web] Templates for AMIMOTO website
+├── shifter     : [@digitalcube/galaxy-shifter] Components / Templates for Shifter (Web and Dashboard)
+└── shifter-web : [@digitalcube/galaxy-shifter-web] Templates for Shifter website
 
 6 directories, 0 files
 ```
@@ -119,7 +119,7 @@ $ yarn build
 We can setup a new library by using Nx CLI.
 
 ```bash
-$ yarn nx g @nrwl/react:library LIBRARY_NAME --publishable --importPath=@galaxy/LIBRARY_NAME
+$ yarn nx g @nrwl/react:library LIBRARY_NAME --publishable --importPath=@digitalcube/galaxy-LIBRARY_NAME
 ```
 
 And you need to update the `package.json` file like this.
@@ -146,22 +146,22 @@ registry=https://registry.npmjs.org
 always-auth=false
 ```
 
-And we have to replace all library name from `@galaxy/NAME` to `@digitalcube/galaxy-NAME`.
+And we have to replace all library name from `@digitalcube/galaxy-NAME` to `@digitalcube/galaxy-NAME`.
 
 ## FAQ
 
 ### Where should we add a new component?
 
-- General component -> @galaxy/core
-- General templates / view -> @galaxy/views
+- General component -> @digitalcube/galaxy-core
+- General templates / view -> @digitalcube/galaxy-views
 
-- For AMIMOTO Dashboard -> @galaxy/amimoto
-- For AMIMOTO Dashboard and Web -> @galaxy/amimoto
-- For AMIMOTO Web -> @galaxy/amimoto-web
+- For AMIMOTO Dashboard -> @digitalcube/galaxy-amimoto
+- For AMIMOTO Dashboard and Web -> @digitalcube/galaxy-amimoto
+- For AMIMOTO Web -> @digitalcube/galaxy-amimoto-web
 
-- For Shifter Dashboard -> @galaxy/shifter
-- For Shifter Dashboard and Web -> @galaxy/shifter
-- For Shifter Web -> @galaxy/shifter-web
+- For Shifter Dashboard -> @digitalcube/galaxy-shifter
+- For Shifter Dashboard and Web -> @digitalcube/galaxy-shifter
+- For Shifter Web -> @digitalcube/galaxy-shifter-web
 
 ## Appendix: Document about Nx
 
@@ -208,7 +208,7 @@ Run `nx g @nrwl/react:lib my-lib` to generate a library.
 
 > You can also use any of the plugins above to generate libraries as well.
 
-Libraries are sharable across libraries and applications. They can be imported from `@galaxy/mylib`.
+Libraries are sharable across libraries and applications. They can be imported from `@digitalcube/galaxy-mylib`.
 
 ## Development server
 

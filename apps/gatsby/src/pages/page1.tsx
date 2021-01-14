@@ -1,6 +1,6 @@
 import React, { FC } from 'react';
-import { Card } from '@galaxy/shifter-web';
-import { Container } from '@galaxy/core';
+import { Card } from '@digitalcube/galaxy-shifter-web';
+import { Container } from '@digitalcube/galaxy-core';
 import { Layout } from '../Layout';
 
 const PageSub: FC = (props) => {

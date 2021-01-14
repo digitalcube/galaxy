@@ -11,7 +11,7 @@ All notable changes to this project will be documented in this file. See [standa
 * amimoto provider ([1215134](https://github.com/digitalcube/galaxy/commit/12151345f2d92c8feaa545da7dbb7f3346c4ca28))
 * basic styles ([eca7244](https://github.com/digitalcube/galaxy/commit/eca7244ad33bba879a5d1aff2e949a66d605e6f9))
 * DashboardAlert can select dismiss ([113ebde](https://github.com/digitalcube/galaxy/commit/113ebde8f84436586c97bd776f994e24bdfb3bef))
-* init @galaxy/views ([5087d7d](https://github.com/digitalcube/galaxy/commit/5087d7d194365b88605436667b27e5f2ed9a6e15))
+* init @digitalcube/galaxy-views ([5087d7d](https://github.com/digitalcube/galaxy/commit/5087d7d194365b88605436667b27e5f2ed9a6e15))
 * init amimoto-web package ([7cc1954](https://github.com/digitalcube/galaxy/commit/7cc1954ef19ab2906168a75f52a030873aed35b8))
 * just copy view components ([071b338](https://github.com/digitalcube/galaxy/commit/071b3382de2176102f4736e84da1ec5ba9c9d1f6))
 * move amimoto component for website ([36557e2](https://github.com/digitalcube/galaxy/commit/36557e235826259e086b7d7a051541c0dbd7a1c6))

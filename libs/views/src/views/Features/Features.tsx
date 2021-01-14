@@ -1,5 +1,5 @@
 import React, { FC } from 'react';
-import { Heading, Link, Shape, Container, Content } from '@galaxy/core';
+import { Heading, Link, Shape, Container, Content } from '@digitalcube/galaxy-core';
 import { Posts, PostsProps } from '../Posts';
 
 export type FeaturesProps = {

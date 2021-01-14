@@ -1,6 +1,6 @@
 import React, { FC, ReactNode } from 'react';
 import { Card } from '../Card';
-import { Text, Heading, Link, Content, NavLinkProps } from '@galaxy/core';
+import { Text, Heading, Link, Content, NavLinkProps } from '@digitalcube/galaxy-core';
 import { PlanMeta } from '../PlanMeta';
 
 export type PlanProps = {

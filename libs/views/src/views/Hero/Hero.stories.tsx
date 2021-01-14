@@ -1,6 +1,6 @@
 import React from 'react';
 
-import { Animation } from '@galaxy/core';
+import { Animation } from '@digitalcube/galaxy-core';
 import { Hero } from './index';
 import { HeroProps } from './Hero';
 import { defaultStorybookConfig } from '../../../.storybook/docs';

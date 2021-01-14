@@ -1,6 +1,6 @@
 import React, { FC } from 'react';
-import { Container } from '@galaxy/core';
-import { Posts, Post } from '@galaxy/views';
+import { Container } from '@digitalcube/galaxy-core';
+import { Posts, Post } from '@digitalcube/galaxy-views';
 
 export type BlogProps = {
   nodes?: Array<Post>;

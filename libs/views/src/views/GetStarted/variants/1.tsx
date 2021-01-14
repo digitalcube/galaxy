@@ -1,6 +1,6 @@
 import React from 'react';
 import { Box } from 'theme-ui';
-import { Content, Link, Heading, Container } from '@galaxy/core';
+import { Content, Link, Heading, Container } from '@digitalcube/galaxy-core';
 import { GetStarted, GetStartedProps } from '../GetStarted';
 
 export default function Default({

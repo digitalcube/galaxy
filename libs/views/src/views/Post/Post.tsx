@@ -1,6 +1,6 @@
 import React, { FC, ReactNode } from 'react';
 import { Card } from '../Card';
-import { Text, Heading, Link, Content } from '@galaxy/core';
+import { Text, Heading, Link, Content } from '@digitalcube/galaxy-core';
 import { PostMeta } from '../PostMeta';
 
 export type Post = {

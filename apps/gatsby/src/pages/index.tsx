@@ -1,6 +1,6 @@
 import React, { FC } from 'react';
-import { Features, Benefits, Card, Testimonials } from '@galaxy/shifter-web';
-import { Container, Animation } from '@galaxy/core';
+import { Features, Benefits, Card, Testimonials } from '@digitalcube/galaxy-shifter-web';
+import { Container, Animation } from '@digitalcube/galaxy-core';
 import { RouteComponentProps } from 'react-router-dom';
 import { Layout } from '../Layout';
 

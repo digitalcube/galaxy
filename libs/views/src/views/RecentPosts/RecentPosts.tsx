@@ -1,6 +1,6 @@
 import React, { FC, ReactNode } from 'react';
 import { Posts } from '../Posts';
-import { Heading, Container, Content } from '@galaxy/core';
+import { Heading, Container, Content } from '@digitalcube/galaxy-core';
 
 export type RecentPostsProps = {
   title?: string;

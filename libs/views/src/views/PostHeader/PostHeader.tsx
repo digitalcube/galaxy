@@ -1,5 +1,5 @@
 import React, { FC } from 'react';
-import { Heading, Content, Container } from '@galaxy/core';
+import { Heading, Content, Container } from '@digitalcube/galaxy-core';
 import { PostMeta } from '../PostMeta';
 
 export type PostHeader = {

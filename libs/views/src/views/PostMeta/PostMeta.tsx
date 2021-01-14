@@ -1,5 +1,5 @@
 import React, { FC } from 'react';
-import { Date, Nav } from '@galaxy/core';
+import { Date, Nav } from '@digitalcube/galaxy-core';
 
 type PostMeta = {
   author?: string;

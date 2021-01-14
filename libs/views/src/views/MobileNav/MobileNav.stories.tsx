@@ -1,6 +1,6 @@
 import React from 'react';
 
-import { Brand } from '@galaxy/core';
+import { Brand } from '@digitalcube/galaxy-core';
 import { MobileNav, MobileNavProps } from './MobileNav';
 
 import { defaultStorybookConfig } from '../../../.storybook/docs';

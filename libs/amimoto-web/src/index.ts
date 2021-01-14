@@ -1,2 +1,2 @@
-export { amimoto, AmimotoThemeProvider } from '@galaxy/amimoto';
+export { amimoto, AmimotoThemeProvider } from '@digitalcube/galaxy-amimoto';
 export * from './templates';

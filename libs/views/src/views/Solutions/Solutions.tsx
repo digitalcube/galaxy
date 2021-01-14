@@ -10,7 +10,7 @@ import {
   Link,
   Text,
   Box,
-} from '@galaxy/core';
+} from '@digitalcube/galaxy-core';
 import { Card } from '../Card';
 
 export type SolutionsProps = {

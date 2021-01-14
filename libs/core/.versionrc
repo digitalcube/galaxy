@@ -1,5 +1,5 @@
 {
   "path": ".",
-  "tag-prefix": "@galaxy/core@v",
-  "releaseCommitMessageFormat": "chore(release): @galaxy/core@{{currentTag}}"
+  "tag-prefix": "@digitalcube/galaxy-core@v",
+  "releaseCommitMessageFormat": "chore(release): @digitalcube/galaxy-core@{{currentTag}}"
 }

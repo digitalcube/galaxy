@@ -1,5 +1,5 @@
 import React, { FC } from 'react';
-import { Container, Grid } from '@galaxy/core';
+import { Container, Grid } from '@digitalcube/galaxy-core';
 import { Plan } from '../Plan';
 import { PlanProps } from '../Plan/Plan';
 

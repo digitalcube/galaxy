@@ -1,5 +1,5 @@
 import React, { ReactNode } from 'react';
-import { Box } from '@galaxy/core';
+import { Box } from '@digitalcube/galaxy-core';
 
 export type CardBody = {
   children?: ReactNode;

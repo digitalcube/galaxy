@@ -1,5 +1,5 @@
 import React from 'react';
-import { Team as TeamComponent, PageHeader } from '@galaxy/views';
+import { Team as TeamComponent, PageHeader } from '@digitalcube/galaxy-views';
 
 type Team = {
   nodes?: any;

@@ -4,7 +4,7 @@ import {
   Features as FeaturesComponent,
   FeaturesProps as GalaxyFeaturesProps,
   GetStartedProps,
-} from '@galaxy/views';
+} from '@digitalcube/galaxy-views';
 
 export type FeaturesProps = {
   getStarted?: GetStartedProps;

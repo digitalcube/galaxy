@@ -1,5 +1,5 @@
 import React, { FC, ReactNode } from 'react';
-import { Container, Grid, Heading, Content, Link } from '@galaxy/core';
+import { Container, Grid, Heading, Content, Link } from '@digitalcube/galaxy-core';
 
 export type HeroProps = {
   title?: string;

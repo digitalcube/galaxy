@@ -7,7 +7,7 @@ import {
   FeatureTable,
   BenefitsProps,
   GetStartedProps,
-} from '@galaxy/views';
+} from '@digitalcube/galaxy-views';
 
 export type PricingProps = {
   title?: string;

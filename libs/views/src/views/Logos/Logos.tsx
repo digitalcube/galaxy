@@ -1,5 +1,5 @@
 import React, { FC } from 'react';
-import { Container, Heading, Content, Image, Slider } from '@galaxy/core';
+import { Container, Heading, Content, Image, Slider } from '@digitalcube/galaxy-core';
 
 export type Logos = {
   nodes?: any;

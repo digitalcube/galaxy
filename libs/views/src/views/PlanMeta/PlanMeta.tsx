@@ -1,7 +1,7 @@
 import React, { FC } from 'react';
 import { Flex } from 'theme-ui';
 import { Tab, Tabs, TabList, TabPanel } from 'react-tabs';
-import { Nav, NavLinkProps, Box, Link, Heading } from '@galaxy/core';
+import { Nav, NavLinkProps, Box, Link, Heading } from '@digitalcube/galaxy-core';
 
 export type PlanMetaProps = {
   href?: string;

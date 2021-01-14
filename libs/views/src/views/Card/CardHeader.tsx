@@ -1,5 +1,5 @@
 import React, { ReactNode, FC } from 'react';
-import { Heading, Text, Content, Box, Link } from '@galaxy/core';
+import { Heading, Text, Content, Box, Link } from '@digitalcube/galaxy-core';
 
 type CardHeader = {
   children?: ReactNode;

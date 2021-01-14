@@ -1,6 +1,6 @@
 import React, { FC } from 'react';
 import { AspectRatio as ThemeUIAspectRatio } from 'theme-ui';
-import { Image, Text, Heading, Content } from '@galaxy/core';
+import { Image, Text, Heading, Content } from '@digitalcube/galaxy-core';
 
 export type TeamMemberProps = {
   excerpt?: string;

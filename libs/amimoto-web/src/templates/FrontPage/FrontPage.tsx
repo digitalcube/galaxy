@@ -1,6 +1,6 @@
 import React, { FC } from 'react';
 
-import { Hero, Layout, HeaderProps } from '@galaxy/views';
+import { Hero, Layout, HeaderProps } from '@digitalcube/galaxy-views';
 
 export const FrontPage: FC<{
   header: HeaderProps;

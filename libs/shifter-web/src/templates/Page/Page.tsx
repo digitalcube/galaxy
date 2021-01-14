@@ -1,6 +1,6 @@
 import React, { FC } from 'react';
-import { PostHeader } from '@galaxy/views';
-import { Container, Content } from '@galaxy/core';
+import { PostHeader } from '@digitalcube/galaxy-views';
+import { Container, Content } from '@digitalcube/galaxy-core';
 export type PageProps = {
   title?: string;
   subtitle?: string;

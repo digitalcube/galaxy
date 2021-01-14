@@ -1,5 +1,5 @@
 import React, { FC } from 'react';
-import { Container, Table } from '@galaxy/core';
+import { Container, Table } from '@digitalcube/galaxy-core';
 
 export type FeatureTable = {
   rows?: any;

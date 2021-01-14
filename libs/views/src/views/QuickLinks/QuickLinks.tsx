@@ -1,5 +1,5 @@
 import React, { FC, ReactNode } from 'react';
-import { NavLinkProps, Nav, Heading, Container, Content } from '@galaxy/core';
+import { NavLinkProps, Nav, Heading, Container, Content } from '@digitalcube/galaxy-core';
 
 export type QuickLinksProps = {
   title?: string;

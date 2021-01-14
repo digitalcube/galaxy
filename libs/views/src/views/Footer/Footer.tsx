@@ -15,7 +15,7 @@ import {
   NavProps,
   NavLinkProps,
   Link,
-} from '@galaxy/core';
+} from '@digitalcube/galaxy-core';
 import { Copyright } from '../Copyright';
 
 export type Footer = {

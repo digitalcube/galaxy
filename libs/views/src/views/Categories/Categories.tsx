@@ -1,5 +1,5 @@
 import React, { FC } from 'react';
-import { Container, Box, Nav, NavLinkProps, Heading } from '@galaxy/core';
+import { Container, Box, Nav, NavLinkProps, Heading } from '@digitalcube/galaxy-core';
 
 export type CategoriesProps = {
   title: string;

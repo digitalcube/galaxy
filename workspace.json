@@ -242,6 +242,15 @@
             "cwd": "libs/shifter",
             "parallels": false
           }
+        },
+        "john": {
+          "builder": "@nrwl/workspace:run-commands",
+          "options": {
+            "command": "echo $(pwd)",
+            "cwd": "libs/shifter",
+            "parallels": false
+          }
+
         }
       }
     },

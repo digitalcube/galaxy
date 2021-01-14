@@ -1,5 +1,5 @@
 import React, { FC } from 'react';
-import { Header, ShifterThemeProvider } from '@galaxy/shifter-web';
+import { Header, ShifterThemeProvider } from '@digitalcube/galaxy-shifter-web';
 import GitHubRibbon from 'react-github-ribbons';
 import { Link } from 'gatsby';
 

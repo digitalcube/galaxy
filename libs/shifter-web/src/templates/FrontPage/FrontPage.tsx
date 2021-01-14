@@ -15,7 +15,7 @@ import {
   GetStartedProps,
   SolutionsProps,
   ShowcaseProps,
-} from '@galaxy/views';
+} from '@digitalcube/galaxy-views';
 
 export type FrontPageProps = {
   getStarted?: GetStartedProps;

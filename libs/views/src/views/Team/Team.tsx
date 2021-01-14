@@ -1,6 +1,6 @@
 import React, { FC } from 'react';
 import { TeamMember, TeamMemberProps } from '../TeamMember';
-import { Grid, Container } from '@galaxy/core';
+import { Grid, Container } from '@digitalcube/galaxy-core';
 
 export type TeamProps = {
   nodes?: TeamMemberProps[];

@@ -5,7 +5,7 @@ export const defaultStorybookConfig = {
   parameters: {
     docs: {
       description: {
-        component: 'npm install -S @galaxy/core',
+        component: 'npm install -S @digitalcube/galaxy-core',
       },
     },
   },

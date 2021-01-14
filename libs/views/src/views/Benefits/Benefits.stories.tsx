@@ -1,5 +1,5 @@
 import React from 'react';
-import { Animation } from '@galaxy/core';
+import { Animation } from '@digitalcube/galaxy-core';
 import { Benefits, BenefitsProps } from './index';
 import { defaultStorybookConfig } from '../../../.storybook/docs';
 export default {

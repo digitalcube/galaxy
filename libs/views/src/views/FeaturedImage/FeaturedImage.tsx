@@ -1,5 +1,5 @@
 import React, { FC } from 'react';
-import { Image } from '@galaxy/core';
+import { Image } from '@digitalcube/galaxy-core';
 
 type FeaturedImage = {
   img?: string;

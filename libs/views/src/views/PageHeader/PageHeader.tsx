@@ -1,5 +1,5 @@
 import React, { FC, memo } from 'react';
-import { Heading, Container, Content } from '@galaxy/core';
+import { Heading, Container, Content } from '@digitalcube/galaxy-core';
 
 export type PageHeaderProps = {
   title?: string;

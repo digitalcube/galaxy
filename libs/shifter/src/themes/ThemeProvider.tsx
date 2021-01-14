@@ -1,6 +1,6 @@
 // galaxy.ts
 import React from 'react';
-import { GalaxyThemeProvider, GalaxyThemeProviderProps } from '@galaxy/core';
+import { GalaxyThemeProvider, GalaxyThemeProviderProps } from '@digitalcube/galaxy-core';
 import { shifter } from './shifter';
 
 export function ShifterThemeProvider<Theme = typeof shifter>(

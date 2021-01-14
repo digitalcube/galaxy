@@ -1,5 +1,5 @@
 import React, { FC } from 'react';
-import { Content, Shape, Link, Heading, Container, Box } from '@galaxy/core';
+import { Content, Shape, Link, Heading, Container, Box } from '@digitalcube/galaxy-core';
 
 export type GetStartedProps = {
   title?: string;

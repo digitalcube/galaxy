@@ -1,6 +1,6 @@
 import React, { FC } from 'react';
-import { Container } from '@galaxy/core';
-import { PageHeader, Post, Posts } from '@galaxy/views';
+import { Container } from '@digitalcube/galaxy-core';
+import { PageHeader, Post, Posts } from '@digitalcube/galaxy-views';
 
 export type ShowcaseProps = {
   title?: string;

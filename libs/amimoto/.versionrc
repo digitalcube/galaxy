@@ -1,5 +1,5 @@
 {
   "path": ".",
-  "tag-prefix": "@galaxy/amimoto@v",
-  "releaseCommitMessageFormat": "chore(release): @galaxy/amimoto@{{currentTag}}"
+  "tag-prefix": "@digitalcube/galaxy-amimoto@v",
+  "releaseCommitMessageFormat": "chore(release): @digitalcube/galaxy-amimoto@{{currentTag}}"
 }

@@ -7,7 +7,7 @@ import {
   Text,
   Link,
   Avatar,
-} from '@galaxy/core';
+} from '@digitalcube/galaxy-core';
 
 export type TestimonialsProps = {
   nodes: Array<Quote>;

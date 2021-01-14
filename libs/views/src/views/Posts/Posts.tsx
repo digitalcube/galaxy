@@ -1,5 +1,5 @@
 import React, { FC } from 'react';
-import { Grid } from '@galaxy/core';
+import { Grid } from '@digitalcube/galaxy-core';
 import { Post } from '../Post';
 
 export type PostsProps = {

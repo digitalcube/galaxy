@@ -1,6 +1,6 @@
 // shifter.ts
-import { galaxy } from '@galaxy/core';
-import { colors } from '@galaxy/views';
+import { galaxy } from '@digitalcube/galaxy-core';
+import { colors } from '@digitalcube/galaxy-views';
 
 const transitions = {
   exit: {

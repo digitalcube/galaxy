@@ -1,6 +1,6 @@
 import React, { FC, ReactNode } from 'react';
 import { Flex } from 'theme-ui';
-import { Container, Nav, Link, NavLinkProps } from '@galaxy/core';
+import { Container, Nav, Link, NavLinkProps } from '@digitalcube/galaxy-core';
 import { MobileNav } from '../MobileNav';
 
 export type HeaderProps = {

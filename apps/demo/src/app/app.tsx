@@ -7,8 +7,8 @@ import {
   Header,
   Testimonials,
   ShifterThemeProvider,
-} from '@galaxy/shifter-web';
-import { Container, Animation } from '@galaxy/core';
+} from '@digitalcube/galaxy-shifter-web';
+import { Container, Animation } from '@digitalcube/galaxy-core';
 import GitHubRibbon from 'react-github-ribbons';
 import {
   BrowserRouter,

@@ -1,6 +1,6 @@
 import React, { FC } from 'react';
 import { useThemeUI } from 'theme-ui';
-import { Container, Brand } from '@galaxy/core';
+import { Container, Brand } from '@digitalcube/galaxy-core';
 
 type Copyright = {};
 

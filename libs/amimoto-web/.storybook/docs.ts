@@ -5,7 +5,7 @@ export const defaultStorybookConfig = {
   parameters: {
     docs: {
       description: {
-        component: 'npm install -S @galaxy/amimoto-web',
+        component: 'npm install -S @digitalcube/galaxy-amimoto-web',
       },
     },
   },

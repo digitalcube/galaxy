@@ -3,7 +3,7 @@
 import { jsx } from 'theme-ui';
 import { FC } from 'react';
 import { AspectRatio as ThemeUIAspectRatio } from 'theme-ui';
-import { Image } from '@galaxy/core';
+import { Image } from '@digitalcube/galaxy-core';
 
 type CardImage = {
   img?: string;

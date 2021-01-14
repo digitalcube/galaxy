@@ -1,5 +1,5 @@
 import React, { FC } from 'react';
-import { Heading, Link, Container, Content, Grid } from '@galaxy/core';
+import { Heading, Link, Container, Content, Grid } from '@digitalcube/galaxy-core';
 import { Post } from '../Post';
 import { Posts } from '../Posts';
 

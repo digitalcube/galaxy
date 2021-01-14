@@ -8,7 +8,7 @@ rm -rf "${ROOT_DIR:?}/dist"
 COMMIT_MESSAGE="$(git log -1 --pretty=format:"%s")"
 DRY_RUN=${DRY_RUN:-"False"}
 
-AFFECTED=$(node node_modules/.bin/nx affected:libs --plain --base=origin/master~1)
+AFFECTED=$(node node_modules/.bin/nx affected:libs --plain --base=origin/demo/publish-github~1)
 if [ "$AFFECTED" != "" ]; then
   cd "$PARENT_DIR"
   echo "Copy Environment Files"
@@ -18,9 +18,9 @@ if [ "$AFFECTED" != "" ]; then
     npm run nx release "$lib"
   done <<<"$AFFECTED " # leave space on end to generate correct output
 
-  # git push origin master
+  # git push origin demo/publish-github
   echo "Push the new tags"
-  git push origin master --tags
+  git push origin demo/publish-github --tags
 
   while IFS= read -r -d $' ' lib; do
     echo "Building $lib"

@@ -1,5 +1,5 @@
 {
   "path": ".",
-  "tag-prefix": "@galaxy/shifter-web@v",
-  "releaseCommitMessageFormat": "chore(release): @galaxy/shifter-web@{{currentTag}}"
+  "tag-prefix": "@digitalcube/galaxy-shifter-web@v",
+  "releaseCommitMessageFormat": "chore(release): @digitalcube/galaxy-shifter-web@{{currentTag}}"
 }

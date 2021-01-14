@@ -1,5 +1,5 @@
 import React, { ReactNode } from 'react';
-import { Heading, Container, Grid, Content } from '@galaxy/core';
+import { Heading, Container, Grid, Content } from '@digitalcube/galaxy-core';
 import { Posts } from '../Posts';
 
 export type BenefitsProps = {

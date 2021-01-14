@@ -1,6 +1,6 @@
 import React from 'react';
 
-import { Brand } from '@galaxy/core';
+import { Brand } from '@digitalcube/galaxy-core';
 import { Header, HeaderProps } from './index';
 
 import { defaultStorybookConfig } from '../../../.storybook/docs';
