@@ -129,6 +129,25 @@ And you need to update the `package.json` file like this.
 +    "libs": "nx run-many --projects \"core,shifter-web,LIBRARY_NAME\"",
 ```
 
+### Release the packages
+
+```bash
+$ ./scripts/publish-libraries.sh
+```
+
+#### Publish to GitHub package registory
+
+If you want to publish it to GitHub package registory, you should add a `.npmrc`
+
+```
+//npm.pkg.github.com/:_authToken=GITHUB_ACCESS_TOKEN
+@digitalcube:registry=https://npm.pkg.github.com
+registry=https://registry.npmjs.org
+always-auth=false
+```
+
+And we have to replace all library name from `@galaxy/NAME` to `@digitalcube/galaxy-NAME`.
+
 ## FAQ
 
 ### Where should we add a new component?
