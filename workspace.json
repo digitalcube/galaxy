@@ -137,34 +137,12 @@
             "passWithNoTests": true
           }
         },
-        "storybook": {
-          "executor": "@nrwl/storybook:storybook",
+        "release": {
+          "builder": "@nrwl/workspace:run-commands",
           "options": {
-            "uiFramework": "@storybook/react",
-            "port": 4400,
-            "config": {
-              "configFolder": "libs/shifter-web/.storybook"
-            }
-          },
-          "configurations": {
-            "ci": {
-              "quiet": true
-            }
-          }
-        },
-        "build-storybook": {
-          "executor": "@nrwl/storybook:build",
-          "options": {
-            "uiFramework": "@storybook/react",
-            "outputPath": "dist/storybook/shifter-web",
-            "config": {
-              "configFolder": "libs/shifter-web/.storybook"
-            }
-          },
-          "configurations": {
-            "ci": {
-              "quiet": true
-            }
+            "command": "npx standard-version",
+            "cwd": "libs/shifter-web",
+            "parallels": false
           }
         }
       }
@@ -208,34 +186,12 @@
             "passWithNoTests": true
           }
         },
-        "storybook": {
-          "executor": "@nrwl/storybook:storybook",
+        "release": {
+          "builder": "@nrwl/workspace:run-commands",
           "options": {
-            "uiFramework": "@storybook/react",
-            "port": 4400,
-            "config": {
-              "configFolder": "libs/core/.storybook"
-            }
-          },
-          "configurations": {
-            "ci": {
-              "quiet": true
-            }
-          }
-        },
-        "build-storybook": {
-          "executor": "@nrwl/storybook:build",
-          "options": {
-            "uiFramework": "@storybook/react",
-            "outputPath": "dist/storybook/core",
-            "config": {
-              "configFolder": "libs/core/.storybook"
-            }
-          },
-          "configurations": {
-            "ci": {
-              "quiet": true
-            }
+            "command": "npx standard-version",
+            "cwd": "libs/core",
+            "parallels": false
           }
         }
       }
@@ -278,6 +234,14 @@
             "jestConfig": "libs/shifter/jest.config.js",
             "passWithNoTests": true
           }
+        },
+        "release": {
+          "builder": "@nrwl/workspace:run-commands",
+          "options": {
+            "command": "npx standard-version",
+            "cwd": "libs/shifter",
+            "parallels": false
+          }
         }
       }
     },
@@ -318,6 +282,14 @@
           "options": {
             "jestConfig": "libs/amimoto/jest.config.js",
             "passWithNoTests": true
+          }
+        },
+        "release": {
+          "builder": "@nrwl/workspace:run-commands",
+          "options": {
+            "command": "npx standard-version",
+            "cwd": "libs/amimoto",
+            "parallels": false
           }
         }
       }
@@ -360,6 +332,14 @@
             "jestConfig": "libs/views/jest.config.js",
             "passWithNoTests": true
           }
+        },
+        "release": {
+          "builder": "@nrwl/workspace:run-commands",
+          "options": {
+            "command": "npx standard-version",
+            "cwd": "libs/views",
+            "parallels": false
+          }
         }
       }
     },
@@ -400,6 +380,14 @@
           "options": {
             "jestConfig": "libs/amimoto-web/jest.config.js",
             "passWithNoTests": true
+          }
+        },
+        "release": {
+          "builder": "@nrwl/workspace:run-commands",
+          "options": {
+            "command": "npx standard-version",
+            "cwd": "libs/amimoto-web",
+            "parallels": false
           }
         }
       }
