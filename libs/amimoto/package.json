@@ -1,4 +1,11 @@
 {
   "name": "@digitalcube/galaxy-amimoto",
-  "version": "0.0.8"
+  "version": "0.0.9",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/digitalcube/galaxy"
+  },
+  "publishConfig": {
+    "registry": "https://npm.pkg.github.com/@digitalcube"
+  }
 }
