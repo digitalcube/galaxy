@@ -1,4 +1,4 @@
-import { baseStorybookConfig } from '../../../.storybook/docs.base';
+import { baseStorybookConfig } from '../../../../.storybook/docs.base';
 
 export const defaultStorybookConfig = {
   ...baseStorybookConfig,
