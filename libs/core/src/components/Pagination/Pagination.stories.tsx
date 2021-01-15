@@ -2,7 +2,7 @@ import React from 'react';
 
 import { Pagination } from './Pagination';
 
-import { defaultStorybookConfig } from '../../../.storybook/docs';
+import { defaultStorybookConfig } from '../../.storybook/docs';
 export default {
   ...defaultStorybookConfig,
   component: Pagination,

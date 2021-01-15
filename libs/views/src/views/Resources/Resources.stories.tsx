@@ -2,7 +2,7 @@ import React from 'react';
 
 import { Resources, ResourcesProps } from './Resources';
 
-import { defaultStorybookConfig } from '../../../.storybook/docs';
+import { defaultStorybookConfig } from '../../.storybook/docs';
 export default {
   ...defaultStorybookConfig,
   component: Resources,

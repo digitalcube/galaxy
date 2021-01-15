@@ -6,7 +6,7 @@ import React from 'react';
 
 import { Brand } from './index';
 
-import { defaultStorybookConfig } from '../../../.storybook/docs';
+import { defaultStorybookConfig } from '../../.storybook/docs';
 export default {
   ...defaultStorybookConfig,
   component: Brand,

@@ -3,7 +3,7 @@ import { ThemeProvider } from 'theme-ui';
 
 import { Button, Grid } from '../../index';
 
-import { defaultStorybookConfig } from '../../../.storybook/docs';
+import { defaultStorybookConfig } from '../../.storybook/docs';
 export default {
   ...defaultStorybookConfig,
   component: Button,

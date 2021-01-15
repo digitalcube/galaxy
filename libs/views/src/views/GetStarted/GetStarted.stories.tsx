@@ -2,7 +2,7 @@ import React from 'react';
 
 import { GetStarted, GetStartedProps } from './GetStarted';
 
-import { defaultStorybookConfig } from '../../../.storybook/docs';
+import { defaultStorybookConfig } from '../../.storybook/docs';
 export default {
   ...defaultStorybookConfig,
   component: GetStarted,

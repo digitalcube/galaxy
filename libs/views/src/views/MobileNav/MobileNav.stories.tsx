@@ -3,7 +3,7 @@ import React from 'react';
 import { Brand } from '@galaxy/core';
 import { MobileNav, MobileNavProps } from './MobileNav';
 
-import { defaultStorybookConfig } from '../../../.storybook/docs';
+import { defaultStorybookConfig } from '../../.storybook/docs';
 export default {
   ...defaultStorybookConfig,
   component: MobileNav,

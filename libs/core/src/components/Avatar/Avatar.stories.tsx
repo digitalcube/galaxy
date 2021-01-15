@@ -2,7 +2,7 @@ import React from 'react';
 
 import { Avatar } from './Avatar';
 
-import { defaultStorybookConfig } from '../../../.storybook/docs';
+import { defaultStorybookConfig } from '../../.storybook/docs';
 export default {
   ...defaultStorybookConfig,
   component: Avatar,

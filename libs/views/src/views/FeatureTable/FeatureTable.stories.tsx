@@ -2,7 +2,7 @@ import React from 'react';
 
 import { FeatureTable } from './FeatureTable';
 
-import { defaultStorybookConfig } from '../../../.storybook/docs';
+import { defaultStorybookConfig } from '../../.storybook/docs';
 export default {
   ...defaultStorybookConfig,
   component: FeatureTable,

@@ -2,7 +2,7 @@ import React from 'react';
 
 import { Posts, PostsProps } from './Posts';
 
-import { defaultStorybookConfig } from '../../../.storybook/docs';
+import { defaultStorybookConfig } from '../../.storybook/docs';
 export default {
   ...defaultStorybookConfig,
   component: Posts,

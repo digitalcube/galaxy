@@ -3,7 +3,7 @@ import React from 'react';
 import { galaxy } from '../../themes/galaxy';
 import { Heading, Text, Content } from '../index';
 
-import { defaultStorybookConfig } from '../../../.storybook/docs';
+import { defaultStorybookConfig } from '../../.storybook/docs';
 export default {
   ...defaultStorybookConfig,
   component: Heading,

@@ -2,7 +2,7 @@ import React from 'react';
 
 import { QuickLinks, QuickLinksProps } from './QuickLinks';
 
-import { defaultStorybookConfig } from '../../../.storybook/docs';
+import { defaultStorybookConfig } from '../../.storybook/docs';
 export default {
   ...defaultStorybookConfig,
   component: QuickLinks,
