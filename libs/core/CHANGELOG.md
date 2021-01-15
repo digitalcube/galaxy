@@ -2,15 +2,15 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
-### [0.0.10](https://github.com/digitalcube/galaxy/compare/@digitalcube/galaxy-core@v0.0.9...@digitalcube/galaxy-core@v0.0.10) (2021-01-15)
+### [0.0.10](https://github.com/digitalcube/galaxy/compare/@galaxy/core@v0.0.9...@galaxy/core@v0.0.10) (2021-01-15)
 
-### [0.0.9](https://github.com/digitalcube/galaxy/compare/@digitalcube/galaxy-core@v0.0.8...@digitalcube/galaxy-core@v0.0.9) (2021-01-15)
+### [0.0.9](https://github.com/digitalcube/galaxy/compare/@galaxy/core@v0.0.8...@galaxy/core@v0.0.9) (2021-01-15)
 
-### [0.0.8](https://github.com/digitalcube/galaxy/compare/@digitalcube/galaxy-core@v0.0.7...@digitalcube/galaxy-core@v0.0.8) (2021-01-15)
+### [0.0.8](https://github.com/digitalcube/galaxy/compare/@galaxy/core@v0.0.7...@galaxy/core@v0.0.8) (2021-01-15)
 
-### [0.0.7](https://github.com/digitalcube/galaxy/compare/@digitalcube/galaxy-core@v0.0.6...@digitalcube/galaxy-core@v0.0.7) (2021-01-15)
+### [0.0.7](https://github.com/digitalcube/galaxy/compare/@galaxy/core@v0.0.6...@galaxy/core@v0.0.7) (2021-01-15)
 
-### [0.0.6](https://github.com/digitalcube/galaxy/compare/@digitalcube/galaxy-core@v0.0.4...@digitalcube/galaxy-core@v0.0.6) (2021-01-15)
+### [0.0.6](https://github.com/digitalcube/galaxy/compare/@galaxy/core@v0.0.4...@galaxy/core@v0.0.6) (2021-01-15)
 
 ### 0.0.4 (2021-01-15)
 

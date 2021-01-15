@@ -2,15 +2,15 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
-### [0.0.10](https://github.com/digitalcube/galaxy/compare/@digitalcube/galaxy-amimoto-web@v0.0.9...@digitalcube/galaxy-amimoto-web@v0.0.10) (2021-01-15)
+### [0.0.10](https://github.com/digitalcube/galaxy/compare/@galaxy/amimoto-web@v0.0.9...@galaxy/amimoto-web@v0.0.10) (2021-01-15)
 
-### [0.0.9](https://github.com/digitalcube/galaxy/compare/@digitalcube/galaxy-amimoto-web@v0.0.8...@digitalcube/galaxy-amimoto-web@v0.0.9) (2021-01-15)
+### [0.0.9](https://github.com/digitalcube/galaxy/compare/@galaxy/amimoto-web@v0.0.8...@galaxy/amimoto-web@v0.0.9) (2021-01-15)
 
-### [0.0.8](https://github.com/digitalcube/galaxy/compare/@digitalcube/galaxy-amimoto-web@v0.0.7...@digitalcube/galaxy-amimoto-web@v0.0.8) (2021-01-15)
+### [0.0.8](https://github.com/digitalcube/galaxy/compare/@galaxy/amimoto-web@v0.0.7...@galaxy/amimoto-web@v0.0.8) (2021-01-15)
 
-### [0.0.7](https://github.com/digitalcube/galaxy/compare/@digitalcube/galaxy-amimoto-web@v0.0.6...@digitalcube/galaxy-amimoto-web@v0.0.7) (2021-01-15)
+### [0.0.7](https://github.com/digitalcube/galaxy/compare/@galaxy/amimoto-web@v0.0.6...@galaxy/amimoto-web@v0.0.7) (2021-01-15)
 
-### [0.0.6](https://github.com/digitalcube/galaxy/compare/@digitalcube/galaxy-amimoto-web@v0.0.5...@digitalcube/galaxy-amimoto-web@v0.0.6) (2021-01-15)
+### [0.0.6](https://github.com/digitalcube/galaxy/compare/@galaxy/amimoto-web@v0.0.5...@galaxy/amimoto-web@v0.0.6) (2021-01-15)
 
 ### 0.0.5 (2021-01-15)
 
