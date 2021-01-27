@@ -1,49 +1,46 @@
 import React from 'react';
-import { ThemeProvider } from 'theme-ui';
+import { withKnobs, text, select } from '@storybook/addon-knobs';
 
-import { Button, Grid } from '../../index';
+import Button from './Button';
 
 import { defaultStorybookConfig } from '../../.storybook/docs';
 export default {
   ...defaultStorybookConfig,
   component: Button,
   title: `Galaxy/Components/Button`,
+  decorators: [withKnobs],
 };
 
-const schemas = [`galaxy`, `shifter`, `amimoto`];
-const modes = [`light`, `dark`];
-const kinds = [`primary`, `ghost`, `success`, 'white', 'danger'];
-
-const options = kinds.map((kind) => {
-  return modes.map((mode) => {
-    return schemas.map((schema, i) => {
-      return (
-        <ThemeProvider key={i} theme={{ colorMode: mode }}>
-          <Button kind={kind}>
-            {schema} / {mode} / {kind}
-          </Button>
-        </ThemeProvider>
-      );
-    });
-  });
-});
-
-export const Default = () => {
-  return <Button>Hello world</Button>;
+const variants = {
+  Primary: 'primary',
+  Secondary: 'secondary',
+  Default: null,
 };
 
-export const Kinds = () => {
+export const Primary = () => {
   return (
-    <>
-      <Button kind="primary">Primary</Button>
-      <Button kind="success">Success</Button>
-      <Button kind="ghost">Ghost</Button>
-      <Button kind="white">White</Button>
-      <Button kind="danger">Danger</Button>
-    </>
+    <Button variant={select('Variant', variants, 'primary')}>
+      {text('Text', 'Button Text')}
+    </Button>
   );
 };
 
-export const All = () => {
-  return <Grid columns={4}>{options}</Grid>;
+export const Secondary = () => {
+  return (
+    <Button variant={select('Variant', variants, 'secondary')}>
+      {text('Text', 'I am a button')}
+    </Button>
+  );
 };
+
+// storiesOf('Button', module)
+//   .add('primary', () => (
+//     <Button variant={select('Variant', variants, 'primary')}>
+//       {text('Text', 'I am a button')}
+//     </Button>
+//   ))
+//   .add('secondary', () => (
+//     <Button variant={select('Variant', variants, 'secondary')}>
+//       {text('Text', 'I am a button too')}
+//     </Button>
+//   ));
