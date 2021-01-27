@@ -1,183 +1,255 @@
-# TSDX React User Guide
+# Galaxy
 
-Congrats! You just saved yourself hours of work by bootstrapping this project with TSDX. Let’s get you oriented with what’s here and how to use it.
-
-> This TSDX setup is meant for developing React components (not apps!) that can be published to NPM. If you’re looking to build an app, you should use `create-react-app`, `razzle`, `nextjs`, `gatsby`, or `react-static`.
-
-> If you’re new to TypeScript and React, checkout [this handy cheatsheet](https://github.com/sw-yx/react-typescript-cheatsheet/)
-
-## Commands
-
-TSDX scaffolds your new library inside `/src`, and also sets up a [Parcel-based](https://parceljs.org) playground for it inside `/example`.
-
-The recommended workflow is to run TSDX in one terminal:
-
-```
-npm start # or yarn start
-```
-
-This builds to `/dist` and runs the project in watch mode so any edits you save inside `src` causes a rebuild to `/dist`.
-
-Then run either example playground or storybook:
-
-### Storybook
-
-Run inside another terminal:
-
-```
-yarn storybook
-```
-
-This loads the stories from `./stories`.
-
-> NOTE: Stories should reference the components as if using the library, similar to the example playground. This means importing from the root project directory. This has been aliased in the tsconfig and the storybook webpack config as a helper.
-
-### Example
-
-Then run the example inside another:
-
-```
-cd example
-npm i # or yarn to install dependencies
-npm start # or yarn start
-```
-
-The default example imports and live reloads whatever is in `/dist`, so if you are seeing an out of date component, make sure TSDX is running in watch mode like we recommend above. **No symlinking required**, [we use Parcel's aliasing](https://github.com/palmerhq/tsdx/pull/88/files).
-
-To do a one-off build, use `npm run build` or `yarn build`.
-
-To run tests, use `npm test` or `yarn test`.
-
-## Configuration
-
-Code quality is [set up for you](https://github.com/palmerhq/tsdx/pull/45/files) with `prettier`, `husky`, and `lint-staged`. Adjust the respective fields in `package.json` accordingly.
-
-### Jest
-
-Jest tests are set up to run with `npm test` or `yarn test`. This runs the test watcher (Jest) in an interactive mode. By default, runs tests related to files changed since the last commit.
-
-#### Setup Files
-
-This is the folder structure we set up for you:
-
-```
-/example
-  index.html
-  index.tsx       # test your component here in a demo app
-  package.json
-  tsconfig.json
-/src
-  index.tsx       # EDIT THIS
-/test
-  blah.test.tsx   # EDIT THIS
-.gitignore
-package.json
-README.md         # EDIT THIS
-tsconfig.json
-```
-
-#### React Testing Library
-
-We do not set up `react-testing-library` for you yet, we welcome contributions and documentation on this.
-
-### Rollup
-
-TSDX uses [Rollup v1.x](https://rollupjs.org) as a bundler and generates multiple rollup configs for various module formats and build settings. See [Optimizations](#optimizations) for details.
-
-### TypeScript
-
-`tsconfig.json` is set up to interpret `dom` and `esnext` types, as well as `react` for `jsx`. Adjust according to your needs.
-
-## Continuous Integration
-
-### Travis
-
-_to be completed_
-
-### Circle
-
-_to be completed_
-
-## Optimizations
-
-Please see the main `tsdx` [optimizations docs](https://github.com/palmerhq/tsdx#optimizations). In particular, know that you can take advantage of development-only optimizations:
-
-```js
-// ./types/index.d.ts
-declare var __DEV__: boolean;
-
-// inside your code...
-if (__DEV__) {
-  console.log('foo');
-}
-```
-
-You can also choose to install and use [invariant](https://github.com/palmerhq/tsdx#invariant) and [warning](https://github.com/palmerhq/tsdx#warning) functions.
-
-## Module Formats
-
-CJS, ESModules, and UMD module formats are supported.
-
-The appropriate paths are configured in `package.json` and `dist/index.js` accordingly. Please report if any issues are found.
-
-## Using the Playground
-
-```
-cd example
-npm i # or yarn to install dependencies
-npm start # or yarn start
-```
-
-The default example imports and live reloads whatever is in `/dist`, so if you are seeing an out of date component, make sure TSDX is running in watch mode like we recommend above. **No symlinking required**!
-
-## Deploying the Playground
-
-The Playground is just a simple [Parcel](https://parceljs.org) app, you can deploy it anywhere you would normally deploy that. Here are some guidelines for **manually** deploying with the Netlify CLI (`npm i -g netlify-cli`):
+## Getting started
 
 ```bash
-cd example # if not already in the example folder
-npm run build # builds to dist
-netlify deploy # deploy the dist folder
+$ git clone git@github.com:digitalcube/galaxy.git
+$ yarn (or npm install)
 ```
 
-Alternatively, if you already have a git repo connected, you can set up continuous deployment with Netlify:
+### Start a demo application
+
+We can run the demo application for the libraries.
 
 ```bash
-netlify init
-# build command: yarn build && cd example && yarn && yarn build
-# directory to deploy: example/dist
-# pick yes for netlify.toml
+$ yarn start
 ```
 
-## Named Exports
+The application code are in `apps/demo`.
 
-Per Palmer Group guidelines, [always use named exports.](https://github.com/palmerhq/typescript#exports) Code split inside your React app instead of your React library.
+### Start a Storybook
 
-## Including Styles
+We can run storybook application by the command.
 
-There are many ways to ship styles, including with CSS-in-JS. TSDX has no opinion on this, configure how you like.
-
-For vanilla CSS, you can include it at the root directory and add it to the `files` section in your `package.json`, so that it can be imported separately by your users and run through their bundler's loader.
-
-## Publishing to NPM
-
-We recommend using https://github.com/sindresorhus/np.
-
-## Usage with Lerna
-
-When creating a new package with TSDX within a project set up with Lerna, you might encounter a `Cannot resolve dependency` error when trying to run the `example` project. To fix that you will need to make changes to the `package.json` file _inside the `example` directory_.
-
-The problem is that due to the nature of how dependencies are installed in Lerna projects, the aliases in the example project's `package.json` might not point to the right place, as those dependencies might have been installed in the root of your Lerna project.
-
-Change the `alias` to point to where those packages are actually installed. This depends on the directory structure of your Lerna project, so the actual path might be different from the diff below.
-
-```diff
-   "alias": {
--    "react": "../node_modules/react",
--    "react-dom": "../node_modules/react-dom"
-+    "react": "../../../node_modules/react",
-+    "react-dom": "../../../node_modules/react-dom"
-   },
+```bash
+$ yarn storybook
 ```
 
-An alternative to fixing this problem would be to remove aliases altogether and define the dependencies referenced as aliases as dev dependencies instead. [However, that might cause other problems.](https://github.com/palmerhq/tsdx/issues/64)
+The command will build the entire library's story.
+
+## Project directories
+
+### Root
+
+```bash% tree -L 1
+.
+├── README.md
+├── dist             : Builded artifacts (Git ignored / Should publish it to npm or any other registory)
+├── apps             : Demo application directory
+├── libs             : Packages directory
+├── storybook-static : Builded Storybook artifacts (Git ignored / Should deploy to Netlify or AWS Amplify console)
+=== Dev tools or configs ===
+├── babel.config.json : Buld config
+├── jest.config.js    : Test config
+├── jest.preset.js    : Test config
+├── nx.json           : Nx CLI config
+├── tools             : Nx tools
+├── workspace.json    : Nx workspace config
+├── tsconfig.base.json: TypeScript config
+├── node_modules      : node modules
+├── package.json      : package config
+└── yarn.lock         : Lock file of yarn
+
+6 directories, 10 files
+
+```
+
+### Packages
+
+```bash
+libs
+├── core        : [@galaxy/core] General Components and Utility Functions
+├── views       : [@galaxy/views] General View templates
+├── amimoto     : [@galaxy/amimoto] Components / Templates for AMIMOTO (Web and Dashboard)
+├── amimoto-web : [@galaxy/amimoto-web] Templates for AMIMOTO website
+├── shifter     : [@galaxy/shifter] Components / Templates for Shifter (Web and Dashboard)
+└── shifter-web : [@galaxy/shifter-web] Templates for Shifter website
+
+6 directories, 0 files
+```
+
+## Development
+
+### Add a new React Component files
+
+```bash
+$ yarn nx g @nrwl/react:component NEW_COMPONENT_NAME --project=PROJECT_NAME --export
+
+# Eg.) New core component named Tooltip
+$ yarn nx g @nrwl/react:component Tooltip --project=core --export
+
+# Eg.) New view component for shifter-web named Footer
+$ yarn nx g @nrwl/react:component Footer --project=shifter-web --export
+```
+
+And we can add a story file for the Storybook by the command.
+
+```bash
+% yarn nx g component-story --project=PROJECT_NAME --componentPath=lib/{NEW_COMPONENT_NAME}.tsx
+```
+
+### Run unit test and lint
+
+```bash
+# ESlint
+$ yarn libs:lint
+
+# Prettier
+$ yarn libs:format
+
+# Jest
+$ yarn libs:test
+```
+
+### Build projects
+
+```bash
+# Build the entire packages
+$ yarn lib:build
+
+# Build a Storybook
+$ yarn storybook:build
+
+# Build a demo application
+$ yarn build
+```
+
+### Add a new library for publishing
+
+We can setup a new library by using Nx CLI.
+
+```bash
+$ yarn nx g @nrwl/react:library LIBRARY_NAME --publishable --importPath=@galaxy/LIBRARY_NAME
+```
+
+And you need to update the `package.json` file like this.
+
+```json
+-    "libs": "nx run-many --projects \"core,shifter-web\"",
++    "libs": "nx run-many --projects \"core,shifter-web,LIBRARY_NAME\"",
+```
+
+### Release the packages
+
+```bash
+$ ./scripts/publish-libraries.sh
+```
+
+#### Publish to GitHub package registory
+
+If you want to publish it to GitHub package registory, you should add a `.npmrc`
+
+```
+//npm.pkg.github.com/:_authToken=GITHUB_ACCESS_TOKEN
+@digitalcube:registry=https://npm.pkg.github.com
+registry=https://registry.npmjs.org
+always-auth=false
+```
+
+And we have to replace all library name from `@galaxy/NAME` to `@digitalcube/galaxy-NAME`.
+
+## FAQ
+
+### Where should we add a new component?
+
+- General component -> @galaxy/core
+- General templates / view -> @galaxy/views
+
+- For AMIMOTO Dashboard -> @galaxy/amimoto
+- For AMIMOTO Dashboard and Web -> @galaxy/amimoto
+- For AMIMOTO Web -> @galaxy/amimoto-web
+
+- For Shifter Dashboard -> @galaxy/shifter
+- For Shifter Dashboard and Web -> @galaxy/shifter
+- For Shifter Web -> @galaxy/shifter-web
+
+## Appendix: Document about Nx
+
+This project was generated using [Nx](https://nx.dev).
+
+<p align="center"><img src="https://raw.githubusercontent.com/nrwl/nx/master/images/nx-logo.png" width="450"></p>
+
+🔎 **Nx is a set of Extensible Dev Tools for Monorepos.**
+
+## Adding capabilities to your workspace
+
+Nx supports many plugins which add capabilities for developing different types of applications and different tools.
+
+These capabilities include generating applications, libraries, etc as well as the devtools to test, and build projects as well.
+
+Below are our core plugins:
+
+- [React](https://reactjs.org)
+  - `npm install --save-dev @nrwl/react`
+- Web (no framework frontends)
+  - `npm install --save-dev @nrwl/web`
+- [Angular](https://angular.io)
+  - `npm install --save-dev @nrwl/angular`
+- [Nest](https://nestjs.com)
+  - `npm install --save-dev @nrwl/nest`
+- [Express](https://expressjs.com)
+  - `npm install --save-dev @nrwl/express`
+- [Node](https://nodejs.org)
+  - `npm install --save-dev @nrwl/node`
+
+There are also many [community plugins](https://nx.dev/nx-community) you could add.
+
+## Generate an application
+
+Run `nx g @nrwl/react:app my-app` to generate an application.
+
+> You can use any of the plugins above to generate applications as well.
+
+When using Nx, you can create multiple applications and libraries in the same workspace.
+
+## Generate a library
+
+Run `nx g @nrwl/react:lib my-lib` to generate a library.
+
+> You can also use any of the plugins above to generate libraries as well.
+
+Libraries are sharable across libraries and applications. They can be imported from `@galaxy/mylib`.
+
+## Development server
+
+Run `nx serve my-app` for a dev server. Navigate to http://localhost:4200/. The app will automatically reload if you change any of the source files.
+
+## Code scaffolding
+
+Run `nx g @nrwl/react:component my-component --project=my-app` to generate a new component.
+
+## Build
+
+Run `nx build my-app` to build the project. The build artifacts will be stored in the `dist/` directory. Use the `--prod` flag for a production build.
+
+## Running unit tests
+
+Run `nx test my-app` to execute the unit tests via [Jest](https://jestjs.io).
+
+Run `nx affected:test` to execute the unit tests affected by a change.
+
+## Running end-to-end tests
+
+Run `ng e2e my-app` to execute the end-to-end tests via [Cypress](https://www.cypress.io).
+
+Run `nx affected:e2e` to execute the end-to-end tests affected by a change.
+
+## Understand your workspace
+
+Run `nx dep-graph` to see a diagram of the dependencies of your projects.
+
+## Further help
+
+Visit the [Nx Documentation](https://nx.dev) to learn more.
+
+## ☁ Nx Cloud
+
+### Computation Memoization in the Cloud
+
+<p align="center"><img src="https://raw.githubusercontent.com/nrwl/nx/master/images/nx-cloud-card.png"></p>
+
+Nx Cloud pairs with Nx in order to enable you to build and test code more rapidly, by up to 10 times. Even teams that are new to Nx can connect to Nx Cloud and start saving time instantly.
+
+Teams using Nx gain the advantage of building full-stack applications with their preferred framework alongside Nx’s advanced code generation and project dependency graph, plus a unified experience for both frontend and backend developers.
+
+Visit [Nx Cloud](https://nx.app/) to learn more.

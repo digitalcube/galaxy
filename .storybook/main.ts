@@ -1,5 +1,5 @@
 module.exports = {
-  stories: ['../**/*.stories.@(ts|js|tsx)'],
+  stories: ['../libs/**/**/*.stories.@(ts|js|tsx|mdx)'],
   addons: [
     '@storybook/addon-actions',
     '@storybook/addon-knobs',
@@ -8,7 +8,11 @@ module.exports = {
     '@storybook/addon-viewport/register',
     '@storybook/addon-contexts/register',
   ],
-  webpackFinal: async config => {
+  babel: async (options) => {
+    options.plugins.push(['@babel/plugin-transform-react-jsx']);
+    return options;
+  },
+  webpackFinal: async (config) => {
     config.module.rules.push({
       test: /\.(ts|tsx)$/,
       use: [

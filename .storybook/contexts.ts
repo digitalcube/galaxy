@@ -1,29 +1,24 @@
-// import { ThemeProvider } from 'styled-components';
-import { ThemeProvider } from 'theme-ui';
-import { galaxy, amimoto, shifter } from '../src/themes';
+import { ShifterThemeProvider, shifter } from '../libs/shifter/src/themes';
+import { amimoto } from '../libs/amimoto/src/themes';
 
 export const contexts = [
   {
     icon: 'switchalt',
     title: 'Schema',
-    components: [ThemeProvider],
+    components: [ShifterThemeProvider],
     params: [
       {
         name: 'Shifter',
         props: {
           theme: shifter,
-        },
-      },
-      {
-        name: 'Galaxy',
-        props: {
-          theme: galaxy,
+          linkType: 'a',
         },
       },
       {
         name: 'Amimoto',
         props: {
           theme: amimoto,
+          linkType: 'a',
         },
       },
     ],
