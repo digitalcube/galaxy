@@ -6,7 +6,7 @@ import { defaultStorybookConfig } from '../../.storybook/docs';
 export default {
   ...defaultStorybookConfig,
   component: Swatch,
-  title: `Galaxy/Foundations/Colors`,
+  title: `Galaxy/Foundation/Color`,
 };
 
 // Todo: Move to utils or find similar package
@@ -40,7 +40,7 @@ export const Swatches = () => {
   return schemas.map((schema) => {
     return (
       <div>
-        <div>{schema}</div>
+        <div className="text-size-9">{schema}</div>
         {schemaColors(schema, colors)}
       </div>
     );
