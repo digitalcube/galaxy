@@ -36,7 +36,7 @@ const schemaColors = (schema, colors) => {
   });
 };
 
-export const Swatches = () => {
+export const Schemas = () => {
   return schemas.map((schema) => {
     return (
       <div>

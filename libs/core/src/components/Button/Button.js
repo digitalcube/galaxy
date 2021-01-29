@@ -1,21 +1,31 @@
-import React from "react";
-import PropTypes from "prop-types";
-import classNames from "classnames";
+import React from 'react';
+import PropTypes from 'prop-types';
+import classNames from 'classnames';
+import { schema } from './galaxy.config.js';
 
-import "./Button.css";
+import './Button.css';
 
-const buttonClasses = variant =>
-  classNames({
-    "bg-shifter-purple-primary hover:bg-shifter-purple-600": !variant || variant === "primary",
-    "text-white font-bold py-2 px-4 rounded": true
-  });
+const variants = schema.components.button.variants;
+const DEFAULT = schema.components.button.DEFAULT;
+const buttonClasses = (variant) => {
+  const classes = {
+    [`${variants.primary}`]: !variant || variant === 'primary',
+    [`${variants.ghost}`]: variant === 'ghost',
+    [`${variants.success}`]: variant === 'success',
+    [`${variants.danger}`]: variant === 'danger',
+    [`${variants.white}`]: variant === 'white',
+    [`${DEFAULT}`]: true,
+  };
+
+  return classNames(classes);
+};
 
 const Button = ({ variant, children }) => (
   <button className={buttonClasses(variant)}>{children}</button>
 );
 
 Button.propTypes = {
-  variant: PropTypes.string
+  variant: PropTypes.string,
 };
 
 export default Button;

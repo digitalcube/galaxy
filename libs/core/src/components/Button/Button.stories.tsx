@@ -1,5 +1,5 @@
 import React from 'react';
-import { withKnobs, text, select } from '@storybook/addon-knobs';
+import { schema } from './galaxy.config.js';
 
 import Button from './Button';
 
@@ -8,18 +8,10 @@ export default {
   ...defaultStorybookConfig,
   component: Button,
   title: `Galaxy/Components/Button`,
-  decorators: [withKnobs],
 };
 
-const variants = {
-  Primary: 'primary',
-  Default: null,
-};
-
-export const Primary = () => {
-  return (
-    <Button variant={select('Variant', variants, 'primary')}>
-      {text('Text', 'Button Text')}
-    </Button>
-  );
+export const Schemas = () => {
+  return Object.entries(schema.components.button.variants).map((variant) => {
+    return <Button variant={`${variant[0]}`}>{`${variant[0]}`}</Button>;
+  });
 };
