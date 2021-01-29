@@ -17,10 +17,13 @@ const getValues = (tokens) => Object.values(tokens).map((token) => token);
 export const Usage = () => {
   const sentence = faker.lorem.sentence();
   return getTokens(fontSize).map((token, key) => {
+    const size = `text-${token}`;
     return (
-      <div key={key} className={`text-${token}`}>
-        <div>{sentence}</div>
-        {token}
+      <div className="p-10 my-5 rounded bg-white">
+        <div>{size}</div>
+        <div key={key} className={`${size}`}>
+          <div>{sentence}</div>
+        </div>
       </div>
     );
   });
