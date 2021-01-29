@@ -3,8 +3,6 @@ import faker from 'faker';
 import { fontFamily } from './tailwind.config.js';
 import { defaultStorybookConfig } from '../../.storybook/docs';
 
-console.log(faker.lorem.lines());
-
 export default {
   ...defaultStorybookConfig,
   title: `Galaxy/Foundation/Font Family`,
