@@ -2,6 +2,8 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+### [0.0.12](https://github.com/digitalcube/galaxy/compare/@galaxy/views@v0.0.11...@galaxy/views@v0.0.12) (2021-01-29)
+
 ### [0.0.11](https://github.com/digitalcube/galaxy/compare/@galaxy/views@v0.0.2...@galaxy/views@v0.0.11) (2021-01-29)
 
 
