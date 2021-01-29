@@ -1,4 +1,5 @@
 import React from 'react';
+import faker from 'faker';
 import { fontSize } from './tailwind.config.js';
 import { defaultStorybookConfig } from '../../.storybook/docs';
 
@@ -14,9 +15,11 @@ const getTokens = (tokens) => Object.keys(tokens).map((token) => token);
 const getValues = (tokens) => Object.values(tokens).map((token) => token);
 
 export const Usage = () => {
+  const sentence = faker.lorem.sentence();
   return getTokens(fontSize).map((token, key) => {
     return (
       <div key={key} className={`text-${token}`}>
+        <div>{sentence}</div>
         {token}
       </div>
     );
