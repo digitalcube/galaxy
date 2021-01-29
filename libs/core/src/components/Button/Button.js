@@ -20,12 +20,14 @@ const buttonClasses = (variant) => {
   return classNames(classes);
 };
 
-const Button = ({ variant, children }) => (
-  <button className={buttonClasses(variant)}>{children}</button>
-);
+const Button = ({ variant, children, as = 'button' }) => {
+  const Tag = `${as}`;
+  return <Tag className={buttonClasses(variant)}>{children}</Tag>;
+};
 
 Button.propTypes = {
   variant: PropTypes.string,
+  as: PropTypes.string,
 };
 
 export default Button;
