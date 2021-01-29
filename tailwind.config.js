@@ -10,6 +10,7 @@ module.exports = {
     ...fontSize,
     ...fontFamily,
     ...fontWeight,
+    ...borderRadius,
   },
   plugins: [require('@tailwindcss/typography')],
 };
