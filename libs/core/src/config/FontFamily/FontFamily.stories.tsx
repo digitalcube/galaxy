@@ -1,11 +1,11 @@
 import React from 'react';
 import faker from 'faker';
-import { fontSize } from './tailwind.config.js';
+import { fontFamily } from './tailwind.config.js';
 import { defaultStorybookConfig } from '../../.storybook/docs';
 
 export default {
   ...defaultStorybookConfig,
-  title: `Galaxy/Foundation/Font Size`,
+  title: `Galaxy/Config/Font Family`,
 };
 
 // todo: move to utils
@@ -15,15 +15,15 @@ const getTokens = (tokens) => Object.keys(tokens).map((token) => token);
 const getValues = (tokens) => Object.values(tokens).map((token) => token);
 
 export const Usage = () => {
-  const sentence = faker.lorem.sentence();
-  return getTokens(fontSize).map((token, key) => {
-    const size = `text-${token}`;
+  return getTokens(fontFamily).map((token, key) => {
     return (
-      <div className="p-10 my-5 rounded bg-white">
-        <div>{size}</div>
-        <div key={key} className={`${size}`}>
-          <div>{sentence}</div>
-        </div>
+      <div
+        key={key}
+        className={`rounded overflow-hidden bg-white p-10 prose font-${token}`}
+      >
+        <h1>{faker.lorem.sentence()}</h1>
+        <p>{faker.lorem.paragraph()}</p>
+        <p>{faker.lorem.paragraph()}</p>
       </div>
     );
   });

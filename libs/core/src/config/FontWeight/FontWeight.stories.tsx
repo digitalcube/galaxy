@@ -4,7 +4,7 @@ import { defaultStorybookConfig } from '../../.storybook/docs';
 
 export default {
   ...defaultStorybookConfig,
-  title: `Galaxy/Foundation/Font Weight`,
+  title: `Galaxy/Config/Font Weight`,
 };
 
 const weights = (fontWeight) => {

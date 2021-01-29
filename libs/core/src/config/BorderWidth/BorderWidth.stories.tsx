@@ -4,13 +4,13 @@ import { defaultStorybookConfig } from '../../.storybook/docs';
 
 export default {
   ...defaultStorybookConfig,
-  title: `Galaxy/Foundation/Border Width`,
+  title: `Galaxy/Config/Border Width`,
 };
 
 const widths = (borderWidth) => {
   return Object.entries(borderWidth).map((width, key) => {
     const token = width[0];
-    const borderWidth = token === `default` ? `border` : `border-${token}`;
+    const borderWidth = token === `DEFAULT` ? `border` : `border-${token}`;
     const value = width[1];
     return (
       <div className={`p-10 my-5 bg-white ${borderWidth}`} key={key}>

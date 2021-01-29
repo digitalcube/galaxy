@@ -4,7 +4,7 @@ import { defaultStorybookConfig } from '../../.storybook/docs';
 
 export default {
   ...defaultStorybookConfig,
-  title: `Galaxy/Foundation/Spacing`,
+  title: `Galaxy/Config/Spacing`,
 };
 
 const spaces = (spacing) => {

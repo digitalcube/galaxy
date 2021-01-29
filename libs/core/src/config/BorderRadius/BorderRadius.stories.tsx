@@ -4,13 +4,13 @@ import { defaultStorybookConfig } from '../../.storybook/docs';
 
 export default {
   ...defaultStorybookConfig,
-  title: `Galaxy/Foundation/BorderRadius`,
+  title: `Galaxy/Config/BorderRadius`,
 };
 
 const weights = (borderRadius) => {
   return Object.entries(borderRadius).map((weight, key) => {
     const token = weight[0];
-    const borderRadius = token === `default` ? `rounded` : `rounded-${token}`;
+    const borderRadius = token === `DEFAULT` ? `rounded` : `rounded-${token}`;
     const value = weight[1];
     return (
       <div className={`p-10 my-5 bg-white ${borderRadius}`} key={key}>

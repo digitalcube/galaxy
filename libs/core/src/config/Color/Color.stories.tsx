@@ -6,7 +6,7 @@ import { defaultStorybookConfig } from '../../.storybook/docs';
 export default {
   ...defaultStorybookConfig,
   component: Swatch,
-  title: `Galaxy/Foundation/Color`,
+  title: `Galaxy/Config/Color`,
 };
 
 // Todo: Move to utils or find similar package
