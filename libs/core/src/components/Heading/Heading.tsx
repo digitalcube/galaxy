@@ -2,7 +2,6 @@
 /** @jsx jsx */
 import { jsx } from 'theme-ui';
 import { ReactNode } from 'react';
-import { Heading as ThemeUIHeading } from 'theme-ui';
 
 export type Heading = {
   children?: ReactNode;
@@ -14,15 +13,5 @@ export type Heading = {
 
 export const Heading = ({ children, as, size, sx }: Heading) => {
   if (!children) return null;
-  return (
-    <ThemeUIHeading
-      variant={size}
-      as={as}
-      sx={{
-        ...sx,
-      }}
-    >
-      {children}
-    </ThemeUIHeading>
-  );
+  return <h1>{children}</h1>;
 };

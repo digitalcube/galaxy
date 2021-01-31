@@ -1,5 +1,7 @@
 import React from 'react';
-import faker from 'faker';
+import { Swatch } from '../../components';
+import { swatches } from '../../lib/utils';
+import { lorem } from 'faker';
 import { fontFamily } from './tailwind.config.js';
 import { defaultStorybookConfig } from '../../.storybook/docs';
 
@@ -8,23 +10,18 @@ export default {
   title: `Galaxy/Config/Font Family`,
 };
 
-// todo: move to utils
-const getTokens = (tokens) => Object.keys(tokens).map((token) => token);
-
-// todo: move to utils
-const getValues = (tokens) => Object.values(tokens).map((token) => token);
-
 export const Usage = () => {
-  return getTokens(fontFamily).map((token, key) => {
+  return swatches({
+    data: fontFamily,
+    token: `font`,
+    className: `rounded overflow-hidden bg-white p-10 mb-5 w-full prose`,
+  }).map((swatch) => {
     return (
-      <div
-        key={key}
-        className={`rounded overflow-hidden bg-white p-10 prose font-${token}`}
-      >
-        <h1>{faker.lorem.sentence()}</h1>
-        <p>{faker.lorem.paragraph()}</p>
-        <p>{faker.lorem.paragraph()}</p>
-      </div>
+      <Swatch {...swatch}>
+        <h1>{lorem.sentence()}</h1>
+        <p>{lorem.paragraph()}</p>
+        <p>{lorem.paragraph()}</p>
+      </Swatch>
     );
   });
 };

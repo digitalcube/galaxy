@@ -11,7 +11,15 @@ export default {
 };
 
 export const Schemas = () => {
-  return Object.entries(schema.components.button.variants).map((variant) => {
-    return <Button variant={`${variant[0]}`}>{`${variant[0]}`}</Button>;
-  });
+  const buttons = Object.entries(schema.components.button.variants).map(
+    (variant) => {
+      return <Button variant={`${variant[0]}`}>{`${variant[0]}`}</Button>;
+    }
+  );
+  return (
+    <div>
+      <h2>Schema</h2>
+      {buttons}
+    </div>
+  );
 };

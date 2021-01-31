@@ -18,6 +18,7 @@ export * from './NavLink';
 export * from './Screenshot';
 export * from './Shape';
 export * from './Slider';
+export * from './Swatch';
 export * from './Table';
 export * from './Text';
 export * from './Date';
