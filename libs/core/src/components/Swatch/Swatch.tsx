@@ -14,10 +14,12 @@ export const Swatch: FC<Swatch> = ({
   children,
 }) => {
   return (
-    <div className={`${tokenClassName} ${className}`}>
+    <div>
       <div>{tokenClassName}</div>
       <div>{value}</div>
-      {children ? children : null}
+      <div className={`${tokenClassName} ${className}`}>
+        {children ? children : null}
+      </div>
     </div>
   );
 };

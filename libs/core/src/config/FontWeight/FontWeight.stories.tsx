@@ -1,5 +1,8 @@
 import React from 'react';
+import { lorem } from 'faker';
 import { fontWeight } from './tailwind.config.js';
+import { swatches } from '../../lib/utils/swatches';
+import { Swatch } from '../../components';
 import { defaultStorybookConfig } from '../../.storybook/docs';
 
 export default {
@@ -7,20 +10,12 @@ export default {
   title: `Galaxy/Config/Font Weight`,
 };
 
-const weights = (fontWeight) => {
-  return Object.entries(fontWeight).map((weight, key) => {
-    const token = weight[0];
-    const fontWeight = `font-${token}`;
-    const value = weight[1];
-    return (
-      <div className={`p-10 my-5 rounded bg-white ${fontWeight}`} key={key}>
-        <div>{fontWeight}</div>
-        <div>{value}</div>
-      </div>
-    );
-  });
-};
-
 export const Usage = () => {
-  return weights(fontWeight);
+  return swatches({
+    data: fontWeight,
+    token: `font`,
+    className: `p-10 my-5 bg-white`,
+  }).map((swatch) => {
+    return <Swatch {...swatch}>{lorem.sentence()}</Swatch>;
+  });
 };
