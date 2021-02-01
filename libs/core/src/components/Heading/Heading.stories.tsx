@@ -1,7 +1,7 @@
 import React from 'react';
-
+// import { lorem } from 'faker';
 import { galaxy } from '../../themes/galaxy';
-import { Heading, Text, Content } from '../index';
+import { Heading } from '../index';
 
 import { defaultStorybookConfig } from '../../.storybook/docs';
 export default {
@@ -12,13 +12,10 @@ export default {
 
 const headingSizes = Object.keys(galaxy.text).map((size: Heading) => {
   return (
-    <>
-      <Heading size={`${size}`}>heading / size: {size}</Heading>
-      <br />
-      <Heading size={`${size}`}>
-        <b>heading / {size}</b>
-      </Heading>
-    </>
+    <div>
+      {/* {lorem.sentence()} */}
+      <Heading fontSize={`${size}`}>heading / {size}</Heading>
+    </div>
   );
 });
 

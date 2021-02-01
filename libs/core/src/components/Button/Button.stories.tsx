@@ -1,7 +1,7 @@
 import React from 'react';
 import { schema } from './galaxy.config.js';
 
-import Button from './Button';
+import { Button } from './Button';
 
 import { defaultStorybookConfig } from '../../.storybook/docs';
 export default {
