@@ -1,0 +1,5 @@
+{
+  "path": ".",
+  "tag-prefix": "@galaxy/shifter-dashboard@v",
+  "releaseCommitMessageFormat": "chore(release): @galaxy/shifter-dashboard@{{currentTag}}"
+}
