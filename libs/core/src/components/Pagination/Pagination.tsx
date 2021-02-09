@@ -51,7 +51,6 @@ export const Pagination: FC<Pagination> = ({
         onPageChange={({ selected }) => {
           const page = selected + 1;
           const path = page === 1 ? `/blog/` : `/blog/${page}/`;
-          path;
         }}
         disableInitialCallback
         breakLabel={'...'}
