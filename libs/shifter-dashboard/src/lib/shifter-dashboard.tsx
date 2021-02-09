@@ -13,6 +13,7 @@ export function ShifterDashboard(props: ShifterDashboardProps) {
   return (
     <StyledShifterDashboard>
       <h1>Welcome to shifter-dashboard!</h1>
+      <p>It's a dummy component</p>
     </StyledShifterDashboard>
   );
 }
