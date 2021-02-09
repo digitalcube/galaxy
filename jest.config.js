@@ -8,5 +8,6 @@ module.exports = {
     '<rootDir>/libs/views',
     '<rootDir>/libs/amimoto-web',
     '<rootDir>/apps/gatsby',
+    '<rootDir>/libs/shifter-dashboard',
   ],
 };
