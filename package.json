@@ -166,10 +166,5 @@
     ".circleci/*.yml": [
       "circleci config validate"
     ]
-  },
-  "husky": {
-    "hooks": {
-      "pre-commit": "lint-staged"
-    }
   }
 }
