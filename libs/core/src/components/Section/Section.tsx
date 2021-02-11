@@ -9,8 +9,8 @@ export type Section = {
   variant?: 'primary';
 };
 
-const variants = schema.components.button.variants;
-const DEFAULT = schema.components.button.DEFAULT;
+const variants = schema.components.section.variants;
+const DEFAULT = schema.components.section.DEFAULT;
 const sectionClasses = ({ variant }: Section) => {
   const classes = {
     [`${variants.primary}`]: !variant || variant === 'primary',
