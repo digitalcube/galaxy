@@ -34,7 +34,7 @@ export const Hero: FC<HeroProps> = ({
           >
             <b>{title}</b>
           </Heading>
-          <Heading size="4">{subtitle}</Heading>
+          <Heading fontSize="4">{subtitle}</Heading>
           <Link kind="primary" href={href}>
             {buttonLabel}
           </Link>

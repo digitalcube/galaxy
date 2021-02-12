@@ -8,7 +8,11 @@ export type Tag = {
 
 export const Tag: FC<Tag> = ({ as, children, className }: Tag) => {
   const As = `${as}`;
-  return <As className={className}>{children}</As>;
+  return (
+    <As className={className}>
+      {children}
+    </As>
+  );
 };
 
 Tag.defaultProps = {

@@ -9,4 +9,4 @@ export default {
   title: `Galaxy/Components/Section`,
 };
 
-export const Default = () => <Section as="div">Section/Default</Section>;
+export const Default = () => <Section>Section/Default</Section>;

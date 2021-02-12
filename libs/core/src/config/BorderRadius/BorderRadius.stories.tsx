@@ -6,10 +6,10 @@ import { swatches } from '.././../lib/utils';
 
 export default {
   ...defaultStorybookConfig,
-  title: `Galaxy/Config/BorderRadius`,
+  title: `Galaxy/Config/Borders/Border Radius`,
 };
 
-export const Usage = () => {
+export const Swatches = () => {
   return swatches({
     data: borderRadius,
     token: `rounded`,

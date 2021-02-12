@@ -20,15 +20,14 @@ export type Heading = {
     | 'figcaption';
   fontSize?: '0' | '1' | '2' | '3' | '4' | '5' | '6' | '7' | '8' | '9';
   className?: string;
-  variant?: 'primary';
+  variant?: 'light' | 'dark';
 };
 
-const variants = schema.components.heading.variants;
-const DEFAULT = schema.components.heading.DEFAULT;
 const headingClasses = ({ variant }: Heading) => {
+  // const variants = schema.components.heading.variants;
+  const DEFAULT = schema.components.heading.DEFAULT;
   const classes = {
-    [`${variants.primary}`]: !variant || variant === 'primary',
-    [`${DEFAULT}`]: true,
+    [`${DEFAULT}`]: !variant === true,
   };
 
   return classNames(classes);
@@ -36,10 +35,10 @@ const headingClasses = ({ variant }: Heading) => {
 
 export const Heading = ({
   children,
-  as = `div`,
+  as,
   className,
+  fontSize,
   variant,
-  fontSize = `4`,
 }: Heading) => {
   if (!children) return null;
   const Tag = `${as}`;
@@ -49,4 +48,9 @@ export const Heading = ({
       {children}
     </Tag>
   );
+};
+
+Heading.defaultProps = {
+  fontSize: '4',
+  as: 'div',
 };

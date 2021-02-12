@@ -10,9 +10,9 @@ export type Button = {
   variant?: 'primary' | 'danger' | 'white' | 'success' | 'ghost';
 };
 
-const variants = schema.components.button.variants;
-const DEFAULT = schema.components.button.DEFAULT;
 const buttonClasses = ({ variant }: Button) => {
+  const variants = schema.components.button.variants;
+  const DEFAULT = schema.components.button.DEFAULT;
   const classes = {
     [`${variants.primary}`]: !variant || variant === 'primary',
     [`${variants.ghost}`]: variant === 'ghost',

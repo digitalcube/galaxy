@@ -32,7 +32,7 @@ module.exports = {
     'galaxy-gray-800': 'rgba(35, 35, 35, 1)',
     'galaxy-gray-900': 'rgba(20, 20, 20, 1)',
     'shifter-gray-100': 'rgba(248, 245, 245, 1)',
-    'shifter-gray-200': 'rgba(235, 231, 232, 1)',
+    'shifter-gray-200': 'rgba(209, 207, 208, 1)',
     'shifter-gray-300': 'rgba(189, 182, 184, 1)',
     'shifter-gray-400': 'rgba(158, 150, 153, 1)',
     'shifter-gray-500': 'rgba(127, 118, 121, 1)',
