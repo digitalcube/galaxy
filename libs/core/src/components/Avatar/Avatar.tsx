@@ -5,11 +5,11 @@ import { schema } from './galaxy.config.js';
 
 export const Avatar: FC<Avatar> = ({ name, variant, img }: Avatar) => {
   return (
-    <Section as="figure" className={`relative inline`}>
+    <Section as="figure" className={`inline`}>
       {img ? (
         <Image variant={variant} name={name} img={`${img}`} />
       ) : (
-        <Initials name={name} variant={variant} />
+        <Name name={name} variant={variant} />
       )}
     </Section>
   );
@@ -33,25 +33,24 @@ const avatarVariants = ({ variant }: Avatar) => {
   return classNames(classes);
 };
 
-// Initials
+// Name
 
-const Initials: FC<Avatar> = ({ name, variant }: Initials) => {
+const Name: FC<Avatar> = ({ name, variant }: Name) => {
   return (
-    <Section as="figcaption" className={`${initialsVariants({ variant })}`}>
+    <Section as="figcaption" className={`${nameVariants({ variant })}`}>
       {initials({ name })}
     </Section>
   );
 };
 
-type Initials = {
+type Name = {
   name: string;
   variant?: 'light' | 'dark' | string;
-  className?: string;
 };
 
-const initialsVariants = ({ variant }: Initials) => {
-  const DEFAULT = schema.components.avatar.DEFAULT;
-  const variants = schema.components.avatar.variants;
+const nameVariants = ({ variant }: Name) => {
+  const DEFAULT = schema.components.avatar.components.name.DEFAULT;
+  const variants = schema.components.avatar.components.name.variants;
   const classes = {
     [`${DEFAULT}`]: true,
     [`${variants.light}`]: !variant || variant === 'light',
@@ -63,7 +62,7 @@ const initialsVariants = ({ variant }: Initials) => {
 
 // Image
 
-const Image: FC<Avatar> = ({ name, img, variant }: Initials) => {
+const Image: FC<Avatar> = ({ name, img, variant }: Name) => {
   return (
     <img
       src={`${img}`}
@@ -79,7 +78,7 @@ type Image = {
   img?: string;
 };
 
-const imageVariants = ({ variant }: Initials) => {
+const imageVariants = ({ variant }: Name) => {
   const DEFAULT = schema.components.avatar.components.image.DEFAULT;
   const variants = schema.components.avatar.components.image.variants;
   const classes = {

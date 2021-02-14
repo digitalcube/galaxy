@@ -10,17 +10,17 @@ module.exports = {
         },
         components: {
           name: {
-            DEFAULT: 'hidden group-hover:table-cell align-middle text-size-8',
+            DEFAULT: 'relative inline group-hover:table-cell rounded-full w-6 h-6 align-middle text-size-2 p-1',
             variants: {
-              light: 'text-shifter-purple-700',
-              dark: 'text-shifter-gray-200',
+              light: 'text-shifter-purple-700 bg-shifter-purple-200',
+              dark: 'text-shifter-gray-200 bg-shifter-purple-600',
             },
           },
           image: {
-            DEFAULT: 'relative inline object-cover w-6 h-6 border rounded-full',
+            DEFAULT: 'relative inline object-cover w-6 h-6 rounded-full',
             variants: {
-              light: 'border-white',
-              dark: 'border-shifter-purple-200',
+              light: '',
+              dark: '',
             },
           },
         },
