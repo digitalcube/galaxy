@@ -16,5 +16,10 @@ module.exports = {
     ...borderRadius,
     ...ringWidth,
   },
+  variants: {
+    extend: {
+      display: ['group-hover'],
+    }
+  },
   plugins: [require('@tailwindcss/typography')],
 };

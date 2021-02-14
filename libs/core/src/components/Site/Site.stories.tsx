@@ -1,5 +1,6 @@
 import React from 'react';
-import { Heading, Site } from '@galaxy/core';
+import { company, internet } from 'faker';
+import { Site, Section } from '@galaxy/core';
 import { schema } from './galaxy.config';
 
 import { defaultStorybookConfig } from '../../.storybook/docs';
@@ -10,12 +11,16 @@ export default {
 };
 
 export const Schemas = () => {
-  return Object.entries(schema.components.card.variants).map((variant) => {
+  return Object.entries(schema.components.site.variants).map((variant) => {
     return (
-      <Site variant={variant[0]}>
-        😀 😎 👍 💯
-        <Heading>Footer</Heading>
-      </Site>
+      <Section className="mb-4">
+        <Site
+          name={`${company.companyName()}`}
+          url={`${internet.url()}`}
+          team={`${company.companyName()}`}
+          variant={variant[0]}
+        />
+      </Section>
     );
   });
 };

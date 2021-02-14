@@ -8,8 +8,9 @@ export type Section = {
 };
 
 export const Section: FC<Section> = ({ children, as, className }: Section) => {
+  const classes = className ?? undefined;
   return (
-    <Tag as={as} className={`${className}`}>
+    <Tag as={as} className={classes}>
       {children}
     </Tag>
   );

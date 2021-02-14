@@ -12,7 +12,7 @@ module.exports = {
             DEFAULT: 'font-regular',
             variants: {
               light: 'text-shifter-purple-700',
-              dark: 'text-shifter-shifter-200',
+              dark: 'text-shifter-gray-200',
             },
           },
         },

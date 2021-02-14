@@ -1,6 +1,6 @@
 import React from 'react';
-
-import { Avatar } from './Avatar';
+import { Avatar } from '@galaxy/core';
+import { name, internet } from 'faker';
 
 import { defaultStorybookConfig } from '../../.storybook/docs';
 export default {
@@ -10,15 +10,5 @@ export default {
 };
 
 export const Default = () => {
-  return <Avatar />;
-};
-
-export const Sizes = () => {
-  return (
-    <>
-      <Avatar size="0" />
-      <Avatar size="1" />
-      <Avatar size="2" />
-    </>
-  );
+  return <Avatar img={`https://images.pexels.com/photos/2589653/pexels-photo-2589653.jpeg?auto=compress&cs=tinysrgb&h=650&w=940}`} name={`${name.findName()}`} />;
 };
