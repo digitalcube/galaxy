@@ -3,7 +3,7 @@ module.exports = {
     components: {
       site: {
         DEFAULT:
-          'ring rounded ring-shifter-gray-200 flex overflow-hidden shadow',
+          'ring rounded ring-shifter-gray-200 flex overflow-hidden shadow hover:shadow-lg transition-shadow',
         variants: {
           light: 'bg-white',
           dark: 'bg-shifter-purple-800 text-shifter-purple-200',
