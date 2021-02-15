@@ -2,7 +2,8 @@ module.exports = {
   schema: {
     components: {
       site: {
-        DEFAULT: 'ring rounded ring-shifter-gray-200 flex',
+        DEFAULT:
+          'ring rounded ring-shifter-gray-200 flex overflow-hidden shadow',
         variants: {
           light: 'bg-white',
           dark: 'bg-shifter-purple-800 text-shifter-purple-200',

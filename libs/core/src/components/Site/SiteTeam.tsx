@@ -4,12 +4,13 @@ import { Heading } from '@galaxy/core';
 import { schema } from './galaxy.config.js';
 
 export const SiteTeam: FC<SiteTeam> = ({ team, variant }: SiteTeam) => {
+  if (!team) return null;
   return <Heading className={siteTeamVariants({ variant })}>{team}</Heading>;
 };
 
 export type SiteTeam = {
   variant?: 'light' | 'dark' | string;
-  team: string;
+  team?: string;
 };
 
 const siteTeamVariants = ({ variant }: SiteTeam) => {
