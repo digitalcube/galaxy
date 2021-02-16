@@ -8,13 +8,13 @@ export const SiteMembers: FC<SiteMembers> = ({ variant }: SiteMembers) => {
     <div className={`${siteMembersVariants({ variant })}`}>
       <Avatar
         variant={variant}
-        img="https://images.pexels.com/photos/2589653/pexels-photo-2589653.jpeg?auto=compress&cs=tinysrgb&h=650&w=940"
+        img="http://placeimg.com/640/480/business"
         name="Hello World"
       />
       <Avatar variant={variant} name="Hello World" />
       <Avatar
         variant={variant}
-        img="https://images.pexels.com/photos/2589653/pexels-photo-2589653.jpeg?auto=compress&cs=tinysrgb&h=650&w=940"
+        img="http://placeimg.com/640/480/business"
         name="Hello World"
       />
     </div>

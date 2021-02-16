@@ -1,6 +1,5 @@
 import React, { FC } from 'react';
 import { Site, Section } from '@galaxy/core';
-import faker from 'faker';
 
 export const Sites: FC<Sites> = ({ sites }) => {
   const allSites = sites.map((site) => {

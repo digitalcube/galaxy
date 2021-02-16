@@ -1,7 +1,7 @@
 import React, { FC } from 'react';
 
 export const SitePreview: FC<SitePreview> = ({ img }: SitePreview) => {
-  return <img alt="" src={img} />;
+  return <img width="150" height="auto" alt="" src={img} />;
 };
 
 export type SitePreview = {

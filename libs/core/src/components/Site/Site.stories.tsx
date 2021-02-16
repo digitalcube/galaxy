@@ -19,7 +19,7 @@ export const Schemas = () => {
           url={`${internet.url()}`}
           team={`${company.companyName()}`}
           variant={variant[0]}
-          img={`https://s0.wp.com/mshots/v1/https://www.getshifter.io/?w=160`}
+          img={`https://picsum.photos/167/111.webp`}
           state="running"
         />
       </Section>
