@@ -8,6 +8,7 @@ import {
   SiteName,
   SitePreview,
   SiteUrl,
+  SiteProgress,
   Button,
 } from '@galaxy/core';
 import { DotsHorizontal } from 'heroicons-react';
@@ -20,19 +21,18 @@ export const Site: FC<Site> = ({
   variant,
   img,
   state,
+  progress,
 }: Site) => {
   return (
     <Section className={siteVariants({ variant })}>
-      <SitePreview img={`${img}`} />
+      <SitePreview img={img} />
       <Section as="div" className="flex-grow">
-        <div className="bg-shifter-gray-200">
-          <div className="w-9/12 h-2 bg-gradient-to-r from-shifter-purple-primary to-shifter-magenta-primary"></div>
-        </div>
+        <SiteProgress progress={progress} variant={variant} />
         <Section className="p-4 space-y-4">
           <Section className="flex" as="div">
             <SiteName variant={variant} name={name} />
             <Section as="span" className="space-x-2 flex items-center">
-              <SiteState state={`${state}`} />
+              <SiteState state={state} />
               <Button variant="ghost">Manage site</Button>
               <Button variant="ghost">
                 <DotsHorizontal />
@@ -57,6 +57,7 @@ export type Site = {
   url: string;
   variant?: 'light' | 'dark' | string;
   state: 'running' | 'stopped' | string;
+  progress: number;
 };
 
 Site.defaultProps = {

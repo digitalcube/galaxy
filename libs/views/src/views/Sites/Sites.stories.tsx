@@ -11,13 +11,15 @@ export default {
 const siteSchema = {
   name: '{{company.companyName}}',
   url: '{{internet.url}}',
-  state: 'WordPress Running',
+  state: 'state',
   team: '{{company.companyName}}',
   img: '{{image.image}}',
+  progress: 'progress',
 };
 
 const sites = fakerGenerator(siteSchema, 1, 20);
 
 export const Home = () => {
+  console.log(sites);
   return <Sites sites={sites} />;
 };

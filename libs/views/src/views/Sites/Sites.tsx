@@ -10,6 +10,7 @@ export const Sites: FC<Sites> = ({ sites }) => {
         state={`${site.state}`}
         img={site.img}
         team={site.team}
+        progress={site.progress}
       />
     );
   });

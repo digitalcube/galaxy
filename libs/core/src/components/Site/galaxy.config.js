@@ -33,8 +33,24 @@ module.exports = {
           state: {
             DEFAULT: 'font-strong text-size-2 px-3 rounded',
             variants: {
-              light: 'bg-status-success-light text-status-success-dark',
+              light: {
+                state: {
+                  running: 'bg-status-success-light text-status-success-dark',
+                  stopped: 'bg-shifter-gray-100 text-shifter-gray-800',
+                  generating:
+                    'bg-gradient-to-r from-shifter-purple-200 text-shifter-gray-800',
+                  starting: 'bg-status-success-light text-status-success-dark',
+                },
+              },
               dark: 'text-shifter-gray-200',
+            },
+          },
+          progress: {
+            DEFAULT:
+              'h-1 bg-gradient-to-r from-shifter-purple-primary to-shifter-magenta-primary',
+            variants: {
+              light: '',
+              dark: '',
             },
           },
           members: {

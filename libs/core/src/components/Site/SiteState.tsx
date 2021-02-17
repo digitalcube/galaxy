@@ -4,7 +4,9 @@ import { Heading } from '@galaxy/core';
 import { schema } from './galaxy.config.js';
 
 export const SiteState: FC<SiteState> = ({ state, variant }: SiteState) => {
-  return <Heading className={siteStateVariants({ variant })}>{state}</Heading>;
+  return (
+    <Heading className={siteStateVariants({ variant, state })}>{state}</Heading>
+  );
 };
 
 export type SiteState = {
@@ -12,13 +14,15 @@ export type SiteState = {
   state: 'running' | 'stopped' | string;
 };
 
-const siteStateVariants = ({ variant }: SiteState) => {
+const siteStateVariants = ({ variant, state }: SiteState) => {
   const DEFAULT = schema.components.site.components.state.DEFAULT;
   const variants = schema.components.site.components.state.variants;
   const classes = {
     [`${DEFAULT}`]: true,
-    [`${variants.light}`]: !variant || variant === 'light',
-    [`${variants.dark}`]: variant === 'dark',
+    [`${variants.light.state.running}`]: !state || state === 'running',
+    [`${variants.light.state.stopped}`]: state === 'stopped',
+    [`${variants.light.state.generating}`]: state === 'generating',
+    [`${variants.light.state.starting}`]: state === 'starting',
   };
 
   return classNames(classes);
