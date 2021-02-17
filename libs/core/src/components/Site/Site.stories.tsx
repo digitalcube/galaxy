@@ -19,7 +19,7 @@ export const Schemas = () => {
           url={`${internet.url()}`}
           team={`${company.companyName()}`}
           variant={variant[0]}
-          img={`https://picsum.photos/167/111.webp`}
+          img={`https://images.unsplash.com/photo-1472099645785-5658abf4ff4e?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=facearea&facepad=2&w=256&h=256&q=80`}
           state="running"
           progress={fakerProgress()}
         />

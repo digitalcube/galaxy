@@ -19,6 +19,8 @@ module.exports = {
   variants: {
     extend: {
       display: ['group-hover'],
+      borderWidth: ['hover', 'focus'],
+      borderColor: ['active'],
     },
   },
   plugins: [

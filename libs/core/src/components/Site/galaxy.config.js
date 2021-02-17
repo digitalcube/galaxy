@@ -43,6 +43,13 @@ module.exports = {
                 },
               },
               dark: 'text-shifter-gray-200',
+              state: {
+                running: 'bg-status-success-light text-status-success-dark',
+                stopped: 'bg-shifter-gray-100 text-shifter-gray-800',
+                generating:
+                  'bg-gradient-to-r from-shifter-purple-200 text-shifter-gray-800',
+                starting: 'bg-status-success-light text-status-success-dark',
+              },
             },
           },
           progress: {
