@@ -20,6 +20,5 @@ const siteSchema = {
 const sites = fakerGenerator(siteSchema, 1, 20);
 
 export const Home = () => {
-  console.log(sites);
   return <Sites sites={sites} />;
 };
