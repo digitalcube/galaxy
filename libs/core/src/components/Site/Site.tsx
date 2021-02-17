@@ -57,7 +57,7 @@ export type Site = {
   url: string;
   variant?: 'light' | 'dark' | string;
   state: 'running' | 'stopped' | string;
-  progress: number;
+  progress: 1 | 2 | 3 | 4 | 5 | null;
 };
 
 Site.defaultProps = {

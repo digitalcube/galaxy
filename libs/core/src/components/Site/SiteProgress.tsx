@@ -1,23 +1,28 @@
 import React, { FC } from 'react';
 import classNames from 'classnames';
-import { Section, fakerProgress } from '@galaxy/core';
+import { Section, progressClass } from '@galaxy/core';
 import { schema } from './galaxy.config.js';
 
 export const SiteProgress: FC<SiteProgress> = ({
   variant,
   progress,
 }: SiteProgress) => {
+  if (!progress || progress === 0) return null;
   return (
     <Section as="div" className="bg-shifter-gray-200">
-      <Section as="div" className={`${fakerProgress()} ${siteProgressVariants({ variant })}`}>
-      </Section>
+      <Section
+        as="div"
+        className={`${progressClass({ progress })} ${siteProgressVariants({
+          variant,
+        })}`}
+      ></Section>
     </Section>
   );
 };
 
 export type SiteProgress = {
   variant?: 'light' | 'dark' | string;
-  progress?: number;
+  progress?: 0 | 1 | 2 | 3 | 4 | 5 | null;
 };
 
 const siteProgressVariants = ({ variant }: SiteProgress) => {

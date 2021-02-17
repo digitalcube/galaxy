@@ -6,10 +6,14 @@ export const fakerGenerator = (schema = {}, min = 1, max) => {
   max = max || min;
   return Array.from({ length: faker.random.number({ min, max }) }).map(() =>
     Object.keys(schema).reduce((entity, key) => {
-      console.log(key);
-      // Site state
+      
       if (key === 'state') {
         entity[key] = fakerArray(state);
+        return entity;
+      }
+
+      if (key === 'progress') {
+        entity[key] = fakerProgress();
         return entity;
       }
 
@@ -24,7 +28,7 @@ export const fakerArray = (array = []) => {
   return array[random];
 };
 
-export const fakerProgress = (min = 1, max = 10) => {
+export const fakerProgress = (min = 0, max = 5) => {
   max = max || min;
-  return `w-${faker.random.number({ min, max })}/10`;
+  return faker.random.number({ min, max });
 };

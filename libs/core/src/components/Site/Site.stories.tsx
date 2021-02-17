@@ -1,6 +1,6 @@
 import React from 'react';
 import { company, internet } from 'faker';
-import { Site, Section } from '@galaxy/core';
+import { Site, Section, fakerProgress } from '@galaxy/core';
 import { schema } from './galaxy.config';
 
 import { defaultStorybookConfig } from '../../.storybook/docs';
@@ -21,6 +21,7 @@ export const Schemas = () => {
           variant={variant[0]}
           img={`https://picsum.photos/167/111.webp`}
           state="running"
+          progress={fakerProgress()}
         />
       </Section>
     );
