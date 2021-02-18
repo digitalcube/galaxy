@@ -1,6 +1,6 @@
 import React, { FC } from 'react';
 import { Select } from '@galaxy/core';
 
-export const SitesSelect = () => {
+export const SitesSort = () => {
   return <Select />;
 };

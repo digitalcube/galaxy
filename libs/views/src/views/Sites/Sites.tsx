@@ -1,6 +1,6 @@
 import React, { FC } from 'react';
 import { Site, Section } from '@galaxy/core';
-import { SitesSelect } from '@galaxy/views';
+import { SitesSort, SitesCreate } from '@galaxy/views';
 
 export const Sites: FC<Sites> = ({ sites }) => {
   const allSites = sites.map((site) => {
@@ -18,7 +18,10 @@ export const Sites: FC<Sites> = ({ sites }) => {
 
   return (
     <Section className="space-y-10">
-      <SitesSelect />
+      <Section as="header" className="flex flex-row space-x-6 justify-between">
+        <SitesSort />
+        <SitesCreate />
+      </Section>
       <Section className="space-y-4">{allSites}</Section>
     </Section>
   );

@@ -4,11 +4,12 @@ import { schema } from './galaxy.config.js';
 
 export type Button = {
   children?: ReactNode;
+  className?: string;
   as?: 'button' | 'a' | 'div' | 'span';
   variant?: 'primary' | 'danger' | 'white' | 'success' | 'ghost';
 };
 
-const buttonClasses = ({ variant }: Button) => {
+const buttonClasses = ({ variant, className }: Button) => {
   const variants = schema.components.button.variants;
   const DEFAULT = schema.components.button.DEFAULT;
   const classes = {
@@ -26,8 +27,13 @@ const buttonClasses = ({ variant }: Button) => {
 export const Button: FC<Button> = ({
   variant,
   children,
+  className,
   as = 'button',
 }: Button) => {
   const Tag = `${as}`;
-  return <Tag className={buttonClasses({ variant })}>{children}</Tag>;
+  return (
+    <Tag className={`${className} ${buttonClasses({ variant })}`}>
+      {children}
+    </Tag>
+  );
 };
