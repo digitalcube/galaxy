@@ -4,9 +4,9 @@ import { defaultStorybookConfig } from '../../.storybook/docs';
 export default {
   ...defaultStorybookConfig,
   component: Header,
-  title: `Galaxy/Views/Header`,
+  title: `Galaxy/Views/Dashboard/Header`,
 };
 
-export const Home = () => {
+export const Dashboard = () => {
   return <Header />;
 };
