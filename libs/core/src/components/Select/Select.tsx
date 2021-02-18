@@ -2,15 +2,14 @@ import React, { ReactNode, FC } from 'react';
 import classNames from 'classnames';
 import { schema } from './galaxy.config.js';
 
-export type Button = {
+export type Select = {
   children?: ReactNode;
-  as?: 'button' | 'a' | 'div' | 'span';
   variant?: 'primary' | 'danger' | 'white' | 'success' | 'ghost';
 };
 
-const buttonClasses = ({ variant }: Button) => {
-  const variants = schema.components.button.variants;
-  const DEFAULT = schema.components.button.DEFAULT;
+const selectClasses = ({ variant }: Select) => {
+  const variants = schema.components.select.variants;
+  const DEFAULT = schema.components.select.DEFAULT;
   const classes = {
     [`${variants.primary}`]: !variant || variant === 'primary',
     [`${variants.ghost}`]: variant === 'ghost',
@@ -23,11 +22,9 @@ const buttonClasses = ({ variant }: Button) => {
   return classNames(classes);
 };
 
-export const Button: FC<Button> = ({
+export const Select: FC<Select> = ({
   variant,
   children,
-  as = 'button',
-}: Button) => {
-  const Tag = `${as}`;
-  return <Tag className={buttonClasses({ variant })}>{children}</Tag>;
+}: Select) => {
+  return <select className={selectClasses({ variant })}>{children}</select>;
 };

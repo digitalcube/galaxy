@@ -5,7 +5,7 @@ import { defaultStorybookConfig } from '../../.storybook/docs';
 export default {
   ...defaultStorybookConfig,
   component: Sites,
-  title: `Galaxy/Views/Sites`,
+  title: `Galaxy/Dashboard/Views/Sites`,
 };
 
 const siteSchema = {
@@ -19,6 +19,6 @@ const siteSchema = {
 
 const sites = fakerGenerator(siteSchema, 1, 20);
 
-export const Home = () => {
+export const Default = () => {
   return <Sites sites={sites} />;
 };

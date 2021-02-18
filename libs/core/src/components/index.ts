@@ -26,3 +26,4 @@ export * from './Swatch';
 export * from './Table';
 export * from './Text';
 export * from './Input';
+export * from './Select';

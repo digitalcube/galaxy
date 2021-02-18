@@ -15,7 +15,12 @@ export const Sites: FC<Sites> = ({ sites }) => {
     );
   });
 
-  return <Section className="space-y-4">{allSites}</Section>;
+  return (
+    <Section className="space-y-10">
+      <Section>Hello world</Section>
+      <Section className="space-y-4">{allSites}</Section>
+    </Section>
+  );
 };
 
 export type Sites = {

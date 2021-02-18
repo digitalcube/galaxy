@@ -55,14 +55,14 @@ export const Navbar: FC<Navbar> = ({ items }: Navbar) => {
           />
         </svg>
       </button>
-      <div
+      <nav
         className={
           'flex-col lg:flex-row flex-grow' +
           (navbarOpen ? 'md:flex' : 'hidden')
         }
       >
         <Items items={items} />
-      </div>
+      </nav>
     </>
   );
 };
