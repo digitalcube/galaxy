@@ -10,5 +10,10 @@ export default {
 };
 
 export const Default = () => {
-  return <Navbar>Hello world</Navbar>;
+  const items = [
+    { title: 'Sites', url: 'sites' },
+    { title: 'Teams', url: 'teams' },
+    { title: 'Guides', url: 'guides' },
+  ];
+  return <Navbar items={items}>Hello world</Navbar>;
 };
