@@ -15,7 +15,7 @@ export * from './Image';
 export * from './Image/Fallback';
 export * from './Link';
 export * from './Nav';
-export * from './Navbar';
+export * from './Menu';
 export * from './NavLink';
 export * from './Screenshot';
 export * from './Section';

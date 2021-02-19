@@ -1,5 +1,5 @@
 import React, { FC } from 'react';
-import { Section, Navbar, Input, Avatar } from '@galaxy/core';
+import { Section, Menu, Input, Avatar } from '@galaxy/core';
 
 export const Header: FC<Header> = ({ items, avatar }) => {
   return (
@@ -15,7 +15,7 @@ export const Header: FC<Header> = ({ items, avatar }) => {
         <Input variant="ghost" />
       </div>
       <div className="hidden md:flex flex-row items-center space-x-6">
-        <Navbar items={items} />
+        <Menu items={items} />
         <Avatar size={9} img={`${avatar?.img}`} name={`${avatar?.name}`} />
       </div>
     </Section>

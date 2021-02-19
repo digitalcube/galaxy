@@ -1,19 +1,19 @@
 import React, { ReactNode, FC } from 'react';
 import { Button, Input, Avatar } from '@galaxy/core';
 
-export type Navbar = {
+export type Menu = {
   items: any;
 };
 
-export const Items = ({ items }: Navbar) => {
+export const Items = ({ items }: Menu) => {
   if (!items) return null;
   return items.map((item) => {
     return <Button variant="ghost">{item.title}</Button>;
   });
 };
 
-export const Navbar: FC<Navbar> = ({ items }: Navbar) => {
-  const [navbarOpen, setNavbarOpen] = React.useState(false);
+export const Menu: FC<Menu> = ({ items }: Menu) => {
+  const [navbarOpen, setMenuOpen] = React.useState(false);
 
   return (
     <>
@@ -21,7 +21,7 @@ export const Navbar: FC<Navbar> = ({ items }: Navbar) => {
         className="inline-block md:hidden text-shifter-purple-primary inline-flex items-center justify-center p-2 rounded-md hover:text-shifter-purple-700 focus:outline-none focus:ring-2 focus:ring-inset focus:ring-white"
         aria-expanded="false"
         type="button"
-        onClick={() => setNavbarOpen(!navbarOpen)}
+        onClick={() => setMenuOpen(!navbarOpen)}
       >
         <span className="sr-only">Open main menu</span>
         <svg

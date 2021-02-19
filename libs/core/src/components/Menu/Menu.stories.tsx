@@ -1,12 +1,11 @@
 import React from 'react';
-
-import { Navbar } from '../index';
+import { Menu } from '@galaxy/core';
 
 import { defaultStorybookConfig } from '../../.storybook/docs';
 export default {
   ...defaultStorybookConfig,
-  component: Navbar,
-  title: `Galaxy/Components/Navbar`,
+  component: Menu,
+  title: `Galaxy/Components/Menu`,
 };
 
 export const Default = () => {
@@ -15,5 +14,5 @@ export const Default = () => {
     { title: 'Teams', url: 'teams' },
     { title: 'Guides', url: 'guides' },
   ];
-  return <Navbar items={items}>Hello world</Navbar>;
+  return <Menu items={items}>Hello world</Menu>;
 };

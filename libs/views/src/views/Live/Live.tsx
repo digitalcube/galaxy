@@ -1,5 +1,5 @@
 import React, { FC, ReactNode } from 'react';
-import { Section, Button, Heading, Navbar, SiteState } from '@galaxy/core';
+import { Section, Button, Heading, Menu, SiteState } from '@galaxy/core';
 
 export const Panel: FC<Panel> = ({ children, className }) => {
   return (
@@ -53,7 +53,7 @@ export const Live: FC<Live> = () => {
           </Section>
         </Panel>
         <Panel>
-          <Navbar items={items} />
+          <Menu items={items} />
         </Panel>
       </Section>
       <Panel className="flex-1 md:border-l">Site Overview</Panel>
