@@ -16,7 +16,7 @@ export const Header: FC<Header> = ({ items, avatar }) => {
       </div>
       <div className="hidden md:flex flex-row items-center space-x-6">
         <Navbar items={items} />
-        <Avatar img={`${avatar?.img}`} name={`${avatar?.name}`} />
+        <Avatar size={9} img={`${avatar?.img}`} name={`${avatar?.name}`} />
       </div>
     </Section>
   );

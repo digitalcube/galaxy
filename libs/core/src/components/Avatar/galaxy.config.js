@@ -18,7 +18,7 @@ module.exports = {
             },
           },
           image: {
-            DEFAULT: 'relative w-6 h-6 inline object-cover rounded-full',
+            DEFAULT: 'relative inline object-cover rounded-full',
             variants: {
               light: '',
               dark: '',

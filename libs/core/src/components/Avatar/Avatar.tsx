@@ -3,11 +3,11 @@ import classNames from 'classnames';
 import { initials, Section } from '@galaxy/core';
 import { schema } from './galaxy.config.js';
 
-export const Avatar: FC<Avatar> = ({ name, variant, img }: Avatar) => {
+export const Avatar: FC<Avatar> = ({ name, variant, img, size }: Avatar) => {
   return (
     <Section as="figure" className={`inline`}>
       {img ? (
-        <Image variant={variant} name={name} img={`${img}`} />
+        <Image size={size} variant={variant} name={name} img={`${img}`} />
       ) : (
         <Name name={name} variant={variant} />
       )}
@@ -19,6 +19,7 @@ export type Avatar = {
   img?: string;
   name: string;
   variant?: 'light' | 'dark' | string;
+  size?: number;
 };
 
 const avatarVariants = ({ variant }: Avatar) => {
@@ -62,12 +63,12 @@ const nameVariants = ({ variant }: Name) => {
 
 // Image
 
-const Image: FC<Avatar> = ({ name, img, variant }: Name) => {
+const Image: FC<Avatar> = ({ name, img, variant, size }: Image) => {
   return (
     <img
       src={`${img}`}
       alt={name}
-      className={`${imageVariants({ variant })}`}
+      className={`w-${size} h-${size} ${imageVariants({ variant })}`}
     />
   );
 };
@@ -76,7 +77,12 @@ type Image = {
   name: string;
   variant?: 'light' | 'dark' | string;
   img?: string;
+  size?: string;
 };
+
+Image.defaultProps = {
+  size: 6
+}
 
 const imageVariants = ({ variant }: Name) => {
   const DEFAULT = schema.components.avatar.components.image.DEFAULT;
