@@ -53,7 +53,7 @@ export const Live: FC<Live> = () => {
           </Section>
         </Panel>
         <Panel>
-          <Menu items={items} />
+          <Menu alignment="vertical" items={items} />
         </Panel>
       </Section>
       <Panel className="flex-1 md:border-l">Site Overview</Panel>
