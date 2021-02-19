@@ -81,8 +81,8 @@ type Image = {
 };
 
 Image.defaultProps = {
-  size: 6
-}
+  size: 6,
+};
 
 const imageVariants = ({ variant }: Name) => {
   const DEFAULT = schema.components.avatar.components.image.DEFAULT;

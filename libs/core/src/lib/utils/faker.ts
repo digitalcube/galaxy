@@ -1,5 +1,12 @@
 import faker from 'faker';
 
+const preview = [
+  'https://s0.wp.com/mshots/v1/https://tailwindcss.com?w=160',
+  'https://s0.wp.com/mshots/v1/https://jamstack.org.com?w=160',
+  'https://s0.wp.com/mshots/v1/https://www.serverless.com?w=160',
+  'https://s0.wp.com/mshots/v1/https://www.wordpress.org?w=160',
+];
+
 const state = ['running', 'stopped', 'generating', 'starting'];
 
 export const fakerGenerator = (schema = {}, min = 1, max) => {
@@ -13,6 +20,11 @@ export const fakerGenerator = (schema = {}, min = 1, max) => {
 
       if (key === 'progress') {
         entity[key] = fakerProgress();
+        return entity;
+      }
+
+      if (key === 'img') {
+        entity[key] = fakerArray(preview);
         return entity;
       }
 
