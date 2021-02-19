@@ -8,6 +8,7 @@ const preview = [
   'https://s0.wp.com/mshots/v1/https://www.getshifter.io?w=160',
   'https://s0.wp.com/mshots/v1/https://www.amimoto-ami.com?w=160',
   'https://s0.wp.com/mshots/v1/https://www.algolia.com?w=160',
+  'https://s0.wp.com/mshots/v1/https://stripe.com?w=160',
 ];
 
 const state = ['running', 'stopped', 'generating', 'starting'];

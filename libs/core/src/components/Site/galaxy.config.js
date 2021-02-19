@@ -31,7 +31,7 @@ module.exports = {
             },
           },
           state: {
-            DEFAULT: 'font-strong text-size-2 px-3 rounded',
+            DEFAULT: 'inline-block font-strong text-size-2 px-3 rounded',
             variants: {
               light: {
                 state: {
