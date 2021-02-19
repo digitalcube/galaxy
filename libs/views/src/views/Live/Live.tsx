@@ -1,5 +1,6 @@
 import React, { FC, ReactNode } from 'react';
-import { Section, Button, Heading, Menu, SiteState } from '@galaxy/core';
+import { Section, Button, Heading, Menu, SiteState, Card } from '@galaxy/core';
+import { Overview } from '@galaxy/views';
 
 export const Panel: FC<Panel> = ({ children, className }) => {
   return (
@@ -14,7 +15,7 @@ export type Panel = {
   className?: string;
 };
 
-export const Live: FC<Live> = () => {
+export const Live: FC<Live> = ({ overview }) => {
   const items = [
     { title: 'Sites', url: 'sites' },
     { title: 'Teams', url: 'teams' },
@@ -56,11 +57,13 @@ export const Live: FC<Live> = () => {
           <Menu alignment="vertical" items={items} />
         </Panel>
       </Section>
-      <Panel className="flex-1 md:border-l">Site Overview</Panel>
+      <Panel className="flex-1 md:border-l">
+        <Overview {...overview} />
+      </Panel>
     </Section>
   );
 };
 
 export type Live = {
-  // tk
+  overview?: Overview;
 };

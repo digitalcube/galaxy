@@ -5,6 +5,7 @@ import { schema } from './galaxy.config.js';
 
 export type Card = {
   children?: ReactNode;
+  className?: string;
   variant?: 'light' | 'dark';
 };
 
@@ -31,11 +32,11 @@ const headingClassNames = ({ variant }: Card) => {
   return classNames(classes);
 };
 
-export const Card: FC<Card> = ({ children, variant }: Card) => {
+export const Card: FC<Card> = ({ children, variant, className }: Card) => {
   return (
-    <Section className={cardClassNames({ variant })}>
-      <Heading className={headingClassNames({ variant })}>Header</Heading>
-      {children ? <Section className="py-6">{children}</Section> : null }
+    <Section className={`${className} ${cardClassNames({ variant })}`}>
+      {/* <Heading className={headingClassNames({ variant })}>Header</Heading> */}
+      {children ? children : null}
     </Section>
   );
 };
