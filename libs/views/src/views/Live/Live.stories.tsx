@@ -6,7 +6,7 @@ import { company, internet, random } from 'faker';
 export default {
   ...defaultStorybookConfig,
   component: Live,
-  title: `Galaxy/Dashboard/Views/Live`,
+  title: `Galaxy/Dashboard/Pages/Live`,
 };
 const overview = {
   name: company.companyName(),
