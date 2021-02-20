@@ -3,7 +3,7 @@ module.exports = {
     components: {
       site: {
         DEFAULT:
-          'ring rounded ring-shifter-gray-200 flex overflow-hidden shadow hover:shadow-lg transition-shadow',
+          'bg-transparent ring rounded ring-shifter-gray-200 flex overflow-hidden shadow hover:shadow-lg transition-shadow',
         variants: {
           light: '',
           dark: 'bg-shifter-purple-800 text-shifter-purple-200',
@@ -16,8 +16,8 @@ module.exports = {
               dark: 'text-shifter-gray-200',
             },
           },
-          url: {
-            DEFAULT: 'font-regular text-size-3 flex-initial',
+          artifact: {
+            DEFAULT: 'font-regular text-size-3',
             variants: {
               light: 'text-shifter-purple-primary',
               dark: 'text-shifter-gray-200',

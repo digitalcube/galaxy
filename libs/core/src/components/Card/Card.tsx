@@ -14,18 +14,8 @@ const cardClassNames = ({ variant }: Card) => {
   const DEFAULT = schema.components.card.DEFAULT;
 
   const classes = {
-    [`${variants.light}`]: !variant || variant === 'light',
-    [`${variants.dark}`]: variant === 'dark',
     [`${DEFAULT}`]: true,
-  };
-
-  return classNames(classes);
-};
-
-const headingClassNames = ({ variant }: Card) => {
-  const variants = schema.components.card.components.heading.variants;
-  const classes = {
-    [`${variants.light}`]: !variant || variant === 'light',
+    [`${variants.light}`]: variant === 'light',
     [`${variants.dark}`]: variant === 'dark',
   };
 
@@ -35,12 +25,7 @@ const headingClassNames = ({ variant }: Card) => {
 export const Card: FC<Card> = ({ children, variant, className }: Card) => {
   return (
     <Section className={`${className} ${cardClassNames({ variant })}`}>
-      {/* <Heading className={headingClassNames({ variant })}>Header</Heading> */}
       {children ? children : null}
     </Section>
   );
-};
-
-Card.defaultProps = {
-  variant: 'light',
 };
