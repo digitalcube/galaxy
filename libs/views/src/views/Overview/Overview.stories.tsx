@@ -8,7 +8,7 @@ import { defaultStorybookConfig } from '../../.storybook/docs';
 export default {
   ...defaultStorybookConfig,
   component: Overview,
-  title: `Galaxy/Dashboard/Views/Overview`,
+  title: `Shifter/Dashboard/Views/Overview`,
 };
 
 export const Schemas = () => {

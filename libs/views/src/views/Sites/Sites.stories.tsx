@@ -5,7 +5,7 @@ import { defaultStorybookConfig } from '../../.storybook/docs';
 export default {
   ...defaultStorybookConfig,
   component: Sites,
-  title: `Galaxy/Dashboard/Views/Sites`,
+  title: `Shifter/Dashboard/Views/Sites`,
 };
 
 const siteSchema = {
