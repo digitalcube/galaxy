@@ -6,7 +6,7 @@ import { company, internet, random } from 'faker';
 export default {
   ...defaultStorybookConfig,
   component: Live,
-  title: `Shifter/Dashboard/Pages/Sites/Site/Live`,
+  title: `Shifter/Dashboard/Pages/Sites/Site/Live/Overview/State`,
 };
 const overview = {
   name: company.companyName(),
@@ -18,6 +18,6 @@ const overview = {
   progress: fakerProgress(),
 };
 
-export const Default = () => {
+export const Zero = () => {
   return <Live overview={overview} {...fakerSite} />;
 };

@@ -1,8 +1,9 @@
 import React, { FC } from 'react';
 import { Section, Button, Heading, Menu, Panel } from '@galaxy/core';
-import { SiteState, Overview } from '@galaxy/views';
+import { SiteState } from '@galaxy/views';
+import { Overview } from '@galaxy/views';
 
-export const Live: FC<Live> = ({ overview, items }) => {
+export const Home: FC<Home> = ({ overview, items }) => {
   return (
     <Section className="md:flex min-h-screen border-t border-shifter-gray-200">
       <Section className="flex-none w-full md:max-w-xs">
@@ -46,6 +47,6 @@ export const Live: FC<Live> = ({ overview, items }) => {
   );
 };
 
-export type Live = {
+export type Home = {
   overview?: Overview;
 };

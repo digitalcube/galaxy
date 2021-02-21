@@ -1,9 +1,8 @@
 import React, { FC } from 'react';
 import { Section, Button, Heading, Menu, Panel } from '@galaxy/core';
 import { SiteState } from '@galaxy/views';
-import { Overview } from '@galaxy/views';
 
-export const Domains: FC<Domains> = ({ overview, items }) => {
+export const Domains: FC<Domains> = ({ items }) => {
   return (
     <Section className="md:flex min-h-screen border-t border-shifter-gray-200">
       <Section className="flex-none w-full md:max-w-xs">
@@ -49,13 +48,11 @@ export const Domains: FC<Domains> = ({ overview, items }) => {
           </Heading>
           <Button variant="primary">Add a new domain</Button>
         </Section>
-        <Overview {...overview} />
       </Panel>
     </Section>
   );
 };
 
 export type Domains = {
-  overview?: Overview;
   items?: any;
 };
