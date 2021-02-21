@@ -1,7 +1,7 @@
 import React, { FC } from 'react';
 import { Sites, Header } from '@galaxy/views';
 
-export const Home: FC<Home> = ({ sites, header }) => {
+export const SitesPage: FC<SitesPage> = ({ sites, header }) => {
   return (
     <>
       <Header {...header} />
@@ -10,7 +10,7 @@ export const Home: FC<Home> = ({ sites, header }) => {
   );
 };
 
-export type Home = {
+export type SitesPage = {
   sites?: Sites;
   header?: Header;
 };

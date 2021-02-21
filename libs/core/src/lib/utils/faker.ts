@@ -59,7 +59,7 @@ export const siteSchema = {
 
 export const fakerSites = fakerGenerator(siteSchema, 1, 20);
 
-const items = {
+const dashboardHeaderMenuItems = {
   items: [
     { title: 'Sites', url: 'sites' },
     { title: 'Teams', url: 'teams' },
@@ -76,6 +76,21 @@ const avatar = {
 };
 
 export const fakerHeader = {
-  ...items,
+  ...dashboardHeaderMenuItems,
   ...avatar,
+};
+
+const dashboardSiteMenuItems = {
+  items: [
+    { title: 'Home', url: 'home' },
+    { title: 'Live', url: 'live' },
+    { title: 'Staging', url: 'staging' },
+    { title: 'Dev', url: 'dev' },
+    { title: 'Team', url: 'team' },
+    { title: 'Settings', url: 'settings' },
+  ],
+};
+
+export const fakerSite = {
+  ...dashboardSiteMenuItems,
 };

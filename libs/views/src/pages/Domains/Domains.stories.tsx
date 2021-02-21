@@ -1,12 +1,12 @@
 import React from 'react';
-import { Live } from '@galaxy/views';
-import { fakerProgress } from '@galaxy/core';
+import { Domains } from '@galaxy/views';
+import { fakerProgress, fakerSite } from '@galaxy/core';
 import { defaultStorybookConfig } from '../../.storybook/docs';
 import { company, internet, random } from 'faker';
 export default {
   ...defaultStorybookConfig,
-  component: Live,
-  title: `Galaxy/Dashboard/Pages/Live`,
+  component: Domains,
+  title: `Shifter/Dashboard/Pages/Sites/Site/Domains`,
 };
 const overview = {
   name: company.companyName(),
@@ -18,6 +18,6 @@ const overview = {
   progress: fakerProgress(),
 };
 
-export const Default = () => {
-  return <Live overview={overview} />;
+export const ZeroState = () => {
+  return <Domains overview={overview} {...fakerSite} />;
 };

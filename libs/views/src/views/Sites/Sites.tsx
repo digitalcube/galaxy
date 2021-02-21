@@ -1,6 +1,6 @@
 import React, { FC } from 'react';
-import { Site, Section } from '@galaxy/core';
-import { SitesSort, SitesCreate } from '@galaxy/views';
+import { Section } from '@galaxy/core';
+import { SitesSort, SitesCreate, Site } from '@galaxy/views';
 
 export const Sites: FC<Sites> = ({ sites }) => {
   const allSites = sites.map((site) => {

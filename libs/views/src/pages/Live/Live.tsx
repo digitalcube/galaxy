@@ -1,26 +1,9 @@
-import React, { FC, ReactNode } from 'react';
-import { Section, Button, Heading, Menu, SiteState, Card } from '@galaxy/core';
+import React, { FC } from 'react';
+import { Section, Button, Heading, Menu, Panel } from '@galaxy/core';
+import { SiteState } from '@galaxy/views';
 import { Overview } from '@galaxy/views';
 
-export const Panel: FC<Panel> = ({ children, className }) => {
-  return (
-    <Section className={`${className} py-6 px-8 border-shifter-gray-200`}>
-      {children}
-    </Section>
-  );
-};
-
-export type Panel = {
-  children?: ReactNode;
-  className?: string;
-};
-
-export const Live: FC<Live> = ({ overview }) => {
-  const items = [
-    { title: 'Sites', url: 'sites' },
-    { title: 'Teams', url: 'teams' },
-    { title: 'Guides', url: 'guides' },
-  ];
+export const Live: FC<Live> = ({ overview, items }) => {
   return (
     <Section className="md:flex min-h-screen border-t border-shifter-gray-200">
       <Section className="flex-none w-full md:max-w-xs">

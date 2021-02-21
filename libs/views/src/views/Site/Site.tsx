@@ -1,7 +1,6 @@
 import React, { FC } from 'react';
 import classNames from 'classnames';
 import {
-  Section,
   SiteState,
   SiteMembers,
   SiteTeam,
@@ -9,8 +8,8 @@ import {
   SitePreview,
   SiteUrl,
   SiteProgress,
-  Button,
-} from '@galaxy/core';
+} from '@galaxy/views';
+import { Button, Section } from '@galaxy/core';
 import { DotsHorizontal } from 'heroicons-react';
 import { schema } from './galaxy.config.js';
 

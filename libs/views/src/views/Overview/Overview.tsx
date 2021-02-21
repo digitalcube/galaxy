@@ -1,11 +1,12 @@
 import React, { FC } from 'react';
 import classNames from 'classnames';
+import { Section, Card } from '@galaxy/core';
 import {
-  Section,
   SitePreview,
-  Card,
-} from '@galaxy/core';
-import { ArtifactId, CloudFrontUrl, LastPublishDate } from '@galaxy/views';
+  ArtifactId,
+  CloudFrontUrl,
+  LastPublishDate,
+} from '@galaxy/views';
 import { schema } from './galaxy.config.js';
 
 export const Overview: FC<Overview> = ({

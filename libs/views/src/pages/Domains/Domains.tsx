@@ -1,26 +1,9 @@
-import React, { FC, ReactNode } from 'react';
-import { Section, Button, Heading, Menu, SiteState } from '@galaxy/core';
+import React, { FC } from 'react';
+import { Section, Button, Heading, Menu, Panel } from '@galaxy/core';
+import { SiteState } from '@galaxy/views';
 import { Overview } from '@galaxy/views';
 
-export const Panel: FC<Panel> = ({ children, className }) => {
-  return (
-    <Section className={`${className} py-6 px-8 border-shifter-gray-200`}>
-      {children}
-    </Section>
-  );
-};
-
-export type Panel = {
-  children?: ReactNode;
-  className?: string;
-};
-
-export const Domains: FC<Domains> = ({ overview }) => {
-  const items = [
-    { title: 'Sites', url: 'sites' },
-    { title: 'Teams', url: 'teams' },
-    { title: 'Guides', url: 'guides' },
-  ];
+export const Domains: FC<Domains> = ({ overview, items }) => {
   return (
     <Section className="md:flex min-h-screen border-t border-shifter-gray-200">
       <Section className="flex-none w-full md:max-w-xs">
@@ -47,7 +30,9 @@ export const Domains: FC<Domains> = ({ overview }) => {
             </Button>
           </Section>
           <Section className="space-y-2">
-            <Heading fontWeight="strong" fontSize="6">Stable Value Investments, Inc.</Heading>
+            <Heading fontWeight="strong" fontSize="6">
+              Stable Value Investments, Inc.
+            </Heading>
             <Section>
               <SiteState state="starting" />
             </Section>
@@ -59,7 +44,9 @@ export const Domains: FC<Domains> = ({ overview }) => {
       </Section>
       <Panel className="flex-1 md:border-l">
         <Section className="mb-6 flex justify-between">
-          <Heading variant="primary" fontWeight="strong" fontSize="7">Domains</Heading>
+          <Heading variant="primary" fontWeight="strong" fontSize="7">
+            Domains
+          </Heading>
           <Button variant="primary">Add a new domain</Button>
         </Section>
         <Overview {...overview} />
@@ -70,4 +57,5 @@ export const Domains: FC<Domains> = ({ overview }) => {
 
 export type Domains = {
   overview?: Overview;
+  items?: any;
 };
