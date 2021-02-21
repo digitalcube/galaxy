@@ -1,6 +1,6 @@
 import React, { FC } from 'react';
 import { Section, Button, Heading, Menu, Panel } from '@galaxy/core';
-import { SiteState, Overview } from '@galaxy/views';
+import { SiteState, SiteOverview } from '@galaxy/views';
 
 export const Live: FC<Live> = ({ overview, items }) => {
   return (
@@ -40,12 +40,12 @@ export const Live: FC<Live> = ({ overview, items }) => {
         </Panel>
       </Section>
       <Panel className="flex-1 md:border-l">
-        <Overview {...overview} />
+        <SiteOverview {...overview} />
       </Panel>
     </Section>
   );
 };
 
 export type Live = {
-  overview?: Overview;
+  overview?: SiteOverview;
 };

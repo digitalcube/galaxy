@@ -1,21 +1,21 @@
 import React from 'react';
 import { company, internet } from 'faker';
 import { Section, fakerProgress } from '@galaxy/core';
-import { Overview } from '@galaxy/views';
+import { SiteOverview } from '@galaxy/views';
 import { schema } from './galaxy.config';
 
 import { defaultStorybookConfig } from '../../.storybook/docs';
 export default {
   ...defaultStorybookConfig,
-  component: Overview,
-  title: `Shifter/Dashboard/Views/Overview`,
+  component: SiteOverview,
+  title: `Shifter/Dashboard/Views/SiteOverview`,
 };
 
 export const Schemas = () => {
   return Object.entries(schema.components.overview.variants).map((variant) => {
     return (
       <Section className="mb-4">
-        <Overview
+        <SiteOverview
           name={`${company.companyName()}`}
           url={`${internet.url()}`}
           team={`${company.companyName()}`}

@@ -1,6 +1,6 @@
 import React, { FC } from 'react';
 import { Section, Button, Heading, Menu, Panel } from '@galaxy/core';
-import { SiteState } from '@galaxy/views';
+import { SiteState, Site } from '@galaxy/views';
 
 export const Domains: FC<Domains> = ({ name, items, title, actions }) => {
   return (
@@ -56,4 +56,5 @@ export type Domains = {
   items?: any;
   title?: Panel;
   actions?: Panel;
+  name: Site;
 };

@@ -110,6 +110,13 @@ const dashboardSiteDomainsActions = {
   actions: [{ component: AddDomain({ label: 'Add a new domain' }) }],
 };
 
+// Page: Home
+export const fakerHome = {
+  title: 'Overview',
+  ...fakerSite,
+  ...dashboardSiteDomainsActions,
+  ...dashboardSiteMenuItems,
+};
 
 // Page: Domains
 export const fakerDomains = {

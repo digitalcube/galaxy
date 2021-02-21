@@ -9,13 +9,13 @@ import {
 } from '@galaxy/views';
 import { schema } from './galaxy.config.js';
 
-export const Overview: FC<Overview> = ({
+export const SiteOverview: FC<SiteOverview> = ({
   artifact,
   cloudfront,
   variant,
   img,
   date,
-}: Overview) => {
+}: SiteOverview) => {
   return (
     <Card className={`flex ${overviewVariants({ variant })}`}>
       <SitePreview img={img} />
@@ -32,9 +32,9 @@ export const Overview: FC<Overview> = ({
   );
 };
 
-export type Overview = {
-  img?: string;
+export type SiteOverview = {
   name: string;
+  img?: string;
   team?: string;
   artifact: string;
   cloudfront: string;
@@ -44,11 +44,11 @@ export type Overview = {
   date: string;
 };
 
-Overview.defaultProps = {
+SiteOverview.defaultProps = {
   variant: 'light',
 };
 
-const overviewVariants = ({ variant }: Overview) => {
+const overviewVariants = ({ variant }: SiteOverview) => {
   const variants = schema.components.overview.variants;
   const DEFAULT = schema.components.overview.DEFAULT;
 

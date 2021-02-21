@@ -1,9 +1,19 @@
 import React, { FC } from 'react';
 import { Section, Button, Heading, Menu, Panel } from '@galaxy/core';
-import { SiteState } from '@galaxy/views';
-import { Overview } from '@galaxy/views';
+import { SiteState, Site, SiteOverview, SiteProgress } from '@galaxy/views';
 
-export const Home: FC<Home> = ({ overview, items }) => {
+export const Home: FC<Home> = ({
+  items,
+  name,
+  cloudfront,
+  img,
+  state,
+  progress,
+  artifact,
+  date,
+  team,
+  variant,
+}) => {
   return (
     <Section className="md:flex min-h-screen border-t border-shifter-gray-200">
       <Section className="flex-none w-full md:max-w-xs">
@@ -30,7 +40,7 @@ export const Home: FC<Home> = ({ overview, items }) => {
             </Button>
           </Section>
           <Section className="space-y-2">
-            <Heading fontSize="6">Stable Value Investments, Inc.</Heading>
+            <Heading fontSize="6">{name}</Heading>
             <Section>
               <SiteState state="starting" />
             </Section>
@@ -41,12 +51,32 @@ export const Home: FC<Home> = ({ overview, items }) => {
         </Panel>
       </Section>
       <Panel className="flex-1 md:border-l">
-        <Overview {...overview} />
+        <SiteOverview
+          cloudfront={`${cloudfront}`}
+          state={`${state}`}
+          img={`${img}`}
+          artifact={`${artifact}`}
+          date={`${date}`}
+          items={items}
+          name={`${name}`}
+          progress={progress}
+          team={team}
+          variant={variant}
+        />
       </Panel>
     </Section>
   );
 };
 
 export type Home = {
-  overview?: Overview;
+  artifact: Site;
+  cloudfront: Site;
+  date: Site;
+  img: Site;
+  items: Site;
+  name: Site;
+  progress: SiteProgress;
+  state: SiteState;
+  team?: Site;
+  variant?: Site;
 };

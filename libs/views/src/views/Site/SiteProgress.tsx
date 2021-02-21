@@ -7,7 +7,7 @@ export const SiteProgress: FC<SiteProgress> = ({
   variant,
   progress,
 }: SiteProgress) => {
-  if (!progress || progress === 0) return null;
+  if (!progress) return null;
   return (
     <Section as="div" className="bg-shifter-gray-200">
       <Section
@@ -23,6 +23,10 @@ export const SiteProgress: FC<SiteProgress> = ({
 export type SiteProgress = {
   variant?: 'light' | 'dark' | string;
   progress?: 0 | 1 | 2 | 3 | 4 | 5 | null;
+};
+
+SiteProgress.defaultProps = {
+  progress: null,
 };
 
 const siteProgressVariants = ({ variant }: SiteProgress) => {
