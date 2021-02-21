@@ -1,3 +1,4 @@
+// TODO: Research refactoring this to React.createFactor() https://reactjs.org/docs/react-api.html#createfactory
 import React, { FC, ReactNode } from 'react';
 
 export type Tag = {

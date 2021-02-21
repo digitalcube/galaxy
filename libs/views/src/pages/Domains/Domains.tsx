@@ -2,7 +2,7 @@ import React, { FC } from 'react';
 import { Section, Button, Heading, Menu, Panel } from '@galaxy/core';
 import { SiteState } from '@galaxy/views';
 
-export const Domains: FC<Domains> = ({ items }) => {
+export const Domains: FC<Domains> = ({ items, title, actions }) => {
   return (
     <Section className="md:flex min-h-screen border-t border-shifter-gray-200">
       <Section className="flex-none w-full md:max-w-xs">
@@ -41,13 +41,12 @@ export const Domains: FC<Domains> = ({ items }) => {
           <Menu alignment="vertical" items={items} />
         </Panel>
       </Section>
-      <Panel className="flex-1 md:border-l">
-        <Section className="mb-6 flex justify-between">
-          <Heading variant="primary" fontWeight="strong" fontSize="7">
-            Domains
-          </Heading>
-          <Button variant="primary">Add a new domain</Button>
-        </Section>
+      <Panel
+        className="flex-1 md:border-l mb-6"
+        title={title}
+        actions={actions}
+      >
+        tk
       </Panel>
     </Section>
   );
@@ -55,4 +54,6 @@ export const Domains: FC<Domains> = ({ items }) => {
 
 export type Domains = {
   items?: any;
+  title?: Panel;
+  actions?: Panel;
 };

@@ -91,6 +91,13 @@ const dashboardSiteMenuItems = {
   ],
 };
 
+const dashboardSiteDomains = {
+  addDomain: {
+    label: 'Add a new domain',
+  },
+};
+
 export const fakerSite = {
   ...dashboardSiteMenuItems,
+  ...dashboardSiteDomains,
 };

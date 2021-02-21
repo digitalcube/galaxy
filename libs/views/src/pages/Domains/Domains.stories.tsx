@@ -1,6 +1,7 @@
 import React from 'react';
 import { Domains } from '@galaxy/views';
 import { fakerProgress, fakerSite } from '@galaxy/core';
+import { AddDomain } from '@galaxy/views';
 import { defaultStorybookConfig } from '../../.storybook/docs';
 import { company, internet, random } from 'faker';
 export default {
@@ -18,6 +19,11 @@ const overview = {
   progress: fakerProgress(),
 };
 
+const main = {
+  title: 'Domains',
+  actions: [{ component: <AddDomain {...fakerSite.addDomain} /> }],
+};
+
 export const Zero = () => {
-  return <Domains overview={overview} {...fakerSite} />;
+  return <Domains overview={overview} {...fakerSite} {...main} />;
 };
