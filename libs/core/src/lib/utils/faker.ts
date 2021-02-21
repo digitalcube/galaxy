@@ -64,6 +64,7 @@ export const siteSchema = {
   state: 'state',
   team: '{{company.companyName}}',
   url: '{{internet.url}}',
+  date: '{{date.recent}}',
 };
 
 export const fakerSites = fakerGenerator({

@@ -1,15 +1,18 @@
 import moment from 'moment';
 import 'moment-duration-format';
 
+// TODO: Fix circular dep or move to new lib for galaxy/utils
+import { PublishedDate } from '@galaxy/views';
+
 type PublishedDate = {
-  date?: string;
+  date?: PublishedDate;
 };
 
 export const publishedDate = ({ date }: PublishedDate) => {
   const d = moment(date).calendar(null, {
-    sameDay: `[Today]`,
+    sameDay: `[today]`,
     lastWeek: `MMMM DD`,
-    lastDay: `[Yesterday]`,
+    lastDay: `[testerday]`,
     sameElse: `DD MMMM YYYY`,
   });
   return d;

@@ -2,10 +2,10 @@ import React from 'react';
 import { publishedDate } from '../../lib/utils';
 
 type Date = {
-  children?: string;
+  date: string;
 };
 
-export const Date: React.FC<Date> = ({ children = `` }: Date) => {
-  if (!children) return null;
-  return <time>{publishedDate({ date: children })}</time>;
+export const Date: React.FC<Date> = ({ date }: Date) => {
+  if (!date) return null;
+  return <time>{publishedDate({ date: date })}</time>;
 };

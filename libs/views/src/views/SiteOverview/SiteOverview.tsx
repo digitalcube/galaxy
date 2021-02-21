@@ -5,7 +5,7 @@ import {
   SitePreview,
   ArtifactId,
   CloudFrontUrl,
-  LastPublishDate,
+  PublishDate,
 } from '@galaxy/views';
 import { schema } from './galaxy.config.js';
 
@@ -21,7 +21,7 @@ export const SiteOverview: FC<SiteOverview> = ({
       <SitePreview img={img} />
       <Section as="div" className="px-8">
         <Section className="space-y-4">
-          <LastPublishDate date={date} />
+          <PublishDate date={date} />
           <Section className="flex space-x-4" as="div">
             <ArtifactId artifact={`${artifact}`} />
             <CloudFrontUrl cloudfront={`${cloudfront}`} />
