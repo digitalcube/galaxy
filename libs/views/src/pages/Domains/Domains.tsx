@@ -2,7 +2,7 @@ import React, { FC } from 'react';
 import { Section, Button, Heading, Menu, Panel } from '@galaxy/core';
 import { SiteState } from '@galaxy/views';
 
-export const Domains: FC<Domains> = ({ items, title, actions }) => {
+export const Domains: FC<Domains> = ({ name, items, title, actions }) => {
   return (
     <Section className="md:flex min-h-screen border-t border-shifter-gray-200">
       <Section className="flex-none w-full md:max-w-xs">
@@ -30,7 +30,7 @@ export const Domains: FC<Domains> = ({ items, title, actions }) => {
           </Section>
           <Section className="space-y-2">
             <Heading fontWeight="strong" fontSize="6">
-              Stable Value Investments, Inc.
+              {name}
             </Heading>
             <Section>
               <SiteState state="starting" />

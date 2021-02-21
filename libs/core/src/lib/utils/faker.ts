@@ -1,4 +1,5 @@
 import faker from 'faker';
+import { AddDomain } from '@galaxy/views';
 
 const preview = [
   'https://s0.wp.com/mshots/v1/https://tailwindcss.com?w=160',
@@ -13,7 +14,13 @@ const preview = [
 
 const state = ['running', 'stopped', 'generating', 'starting'];
 
-export const fakerGenerator = (schema = {}, min = 1, max) => {
+export type FakerGenerator = {
+  schema: any;
+  min?: number;
+  max?: number;
+};
+
+export const fakerGenerator = ({ schema, min = 1, max }: FakerGenerator) => {
   max = max || min;
   return Array.from({ length: faker.random.number({ min, max }) }).map(() =>
     Object.keys(schema).reduce((entity, key) => {
@@ -49,15 +56,23 @@ export const fakerProgress = (min = 0, max = 5) => {
 };
 
 export const siteSchema = {
+  artifact: '{{random.uuid}}',
+  cloudfront: '{{internet.url}}',
+  img: '{{image.image}}',
   name: '{{company.companyName}}',
-  url: '{{internet.url}}',
+  progress: 'progress',
   state: 'state',
   team: '{{company.companyName}}',
-  img: '{{image.image}}',
-  progress: 'progress',
+  url: '{{internet.url}}',
 };
 
-export const fakerSites = fakerGenerator(siteSchema, 1, 20);
+export const fakerSites = fakerGenerator({
+  schema: siteSchema,
+  min: 1,
+  max: 20,
+});
+
+export const fakerSite = fakerGenerator({ schema: siteSchema })[0];
 
 const dashboardHeaderMenuItems = {
   items: [
@@ -91,13 +106,15 @@ const dashboardSiteMenuItems = {
   ],
 };
 
-const dashboardSiteDomains = {
-  addDomain: {
-    label: 'Add a new domain',
-  },
+const dashboardSiteDomainsActions = {
+  actions: [{ component: AddDomain({ label: 'Add a new domain' }) }],
 };
 
-export const fakerSite = {
+
+// Page: Domains
+export const fakerDomains = {
+  title: 'Domains',
+  ...fakerSite,
+  ...dashboardSiteDomainsActions,
   ...dashboardSiteMenuItems,
-  ...dashboardSiteDomains,
 };
