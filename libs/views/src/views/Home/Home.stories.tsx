@@ -5,7 +5,7 @@ import { defaultStorybookConfig } from '../../.storybook/docs';
 export default {
   ...defaultStorybookConfig,
   component: Home,
-  title: `Galaxy/Dashboard/Views/Home`,
+  title: `Galaxy/Dashboard/Pages/Home`,
 };
 
 export const Default = () => {

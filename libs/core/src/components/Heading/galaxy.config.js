@@ -3,7 +3,13 @@ module.exports = {
     components: {
       heading: {
         DEFAULT: '',
-        variants: {},
+        variants: {
+          primary: 'text-shifter-purple-600',
+          danger: '',
+          white: '',
+          ghost: '',
+          success: '',
+        },
       },
     },
   },
