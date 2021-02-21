@@ -5,7 +5,6 @@ const baseStorybookConfig = {
   excludeStories: /.*Data$/,
 };
 
-
 export const defaultStorybookConfig = {
   ...baseStorybookConfig,
   parameters: {

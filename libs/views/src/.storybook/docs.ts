@@ -9,6 +9,7 @@ const baseStorybookConfig = {
 export const defaultStorybookConfig = {
   ...baseStorybookConfig,
   parameters: {
+    layout: 'fullscreen',
     docs: {
       description: {
         component: 'npm install -S @galaxy/views',
