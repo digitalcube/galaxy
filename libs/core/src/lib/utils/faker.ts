@@ -90,12 +90,32 @@ export const artifactSchema = {
 };
 
 export const fakerArtifacts = fakerGenerator({
-  schema: siteSchema,
+  schema: artifactSchema,
   min: 0,
   max: 10,
 });
 
 export const fakerArtifact = fakerGenerator({ schema: artifactSchema })[0];
+
+export const siteDomainSchema = {
+  artifact: '{{random.uuid}}',
+  cloudfront: '{{internet.url}}',
+  img: '{{image.image}}',
+  name: '{{company.companyName}}',
+  progress: 'progress',
+  state: 'artifactState',
+  team: '{{company.companyName}}',
+  url: '{{internet.url}}',
+  date: '{{date.past}}',
+};
+
+export const fakerSiteDomains = fakerGenerator({
+  schema: siteDomainSchema,
+  min: 0,
+  max: 10,
+});
+
+export const fakerSiteDomain = fakerGenerator({ schema: siteDomainSchema })[0];
 
 const dashboardHeaderMenuItems = {
   items: [

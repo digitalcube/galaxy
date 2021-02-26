@@ -10,7 +10,7 @@ import {
 } from '@galaxy/core';
 import { SiteState, Site, Dashboard } from '@galaxy/views';
 
-export const Domains: FC<Domains> = ({ name, items, title, actions }) => {
+export const DomainsPage: FC<DomainsPage> = ({ name, items, title, actions }) => {
   return (
     <Dashboard {...fakerHeader}>
       <Section className="md:flex min-h-screen border-t border-shifter-gray-200">
@@ -70,7 +70,7 @@ export const Domains: FC<Domains> = ({ name, items, title, actions }) => {
   );
 };
 
-export type Domains = {
+export type DomainsPage = {
   items?: any;
   title?: Panel;
   actions?: Panel;
