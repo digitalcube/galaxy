@@ -119,8 +119,16 @@ export const fakerHome = {
   ...dashboardSiteMenuItems,
 };
 
-// Page: Domains
+// Page: Live/Domains
 export const fakerDomains = {
+  title: 'Domains',
+  ...fakerSite,
+  ...dashboardSiteDomainsActions,
+  ...dashboardSiteMenuItems,
+};
+
+// Page: Live/Overview
+export const fakerOverview = {
   title: 'Domains',
   ...fakerSite,
   ...dashboardSiteDomainsActions,

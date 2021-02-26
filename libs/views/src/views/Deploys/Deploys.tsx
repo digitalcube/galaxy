@@ -2,7 +2,6 @@ import React, { FC } from 'react';
 import classNames from 'classnames';
 import { Section, Card } from '@galaxy/core';
 import {
-  SitePreview,
   ArtifactId,
   CloudFrontUrl,
   PublishDate,
@@ -10,18 +9,17 @@ import {
 } from '@galaxy/views';
 import { schema } from './galaxy.config.js';
 
-export const SiteOverview: FC<SiteOverview> = ({
+export const Deploys: FC<Deploys> = ({
   artifact,
   cloudfront,
   variant,
   img,
   date,
   team,
-}: SiteOverview) => {
+}: Deploys) => {
   return (
-    <Card className={`${overviewVariants({ variant })} pb-0 px-0`}>
+    <Card className={`${deploysVariants({ variant })} pb-0 px-0`}>
       <div className="flex px-3 py-6">
-        <SitePreview img={img} />
         <Section as="div" className="px-8">
           <Section className="space-y-4">
             <CloudFrontUrl cloudfront={`${cloudfront}`} />
@@ -37,7 +35,7 @@ export const SiteOverview: FC<SiteOverview> = ({
   );
 };
 
-export type SiteOverview = {
+export type Deploys = {
   name: string;
   img?: string;
   team?: string;
@@ -49,13 +47,13 @@ export type SiteOverview = {
   date: string;
 };
 
-SiteOverview.defaultProps = {
+Deploys.defaultProps = {
   variant: 'light',
 };
 
-const overviewVariants = ({ variant }: SiteOverview) => {
-  const variants = schema.components.overview.variants;
-  const DEFAULT = schema.components.overview.DEFAULT;
+const deploysVariants = ({ variant }: Deploys) => {
+  const variants = schema.components.deploys.variants;
+  const DEFAULT = schema.components.deploys.DEFAULT;
 
   const classes = {
     [`${variants.light}`]: !variant || variant === 'light',

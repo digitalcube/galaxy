@@ -10,9 +10,9 @@ type PublishedDate = {
 
 export const publishedDate = ({ date }: PublishedDate) => {
   const d = moment(date).calendar(null, {
-    sameDay: `[today]`,
+    sameDay: `[Today]`,
     lastWeek: `MMMM DD`,
-    lastDay: `[yesterday]`,
+    lastDay: `[Yesterday]`,
     sameElse: `DD MMMM YYYY`,
   });
   return d;

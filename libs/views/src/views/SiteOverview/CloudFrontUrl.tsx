@@ -6,7 +6,7 @@ export const CloudFrontUrl: FC<CloudFrontUrl> = ({
 }: CloudFrontUrl) => {
   return (
     <Section className="space-y-2">
-      <Heading className="font-strong">CloudFront</Heading>
+      <Heading className="sr-only">CloudFront</Heading>
       <Heading>{cloudfront}</Heading>
     </Section>
   );

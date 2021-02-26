@@ -2,7 +2,6 @@ import React, { FC } from 'react';
 import classNames from 'classnames';
 import { Section, Card } from '@galaxy/core';
 import {
-  SitePreview,
   ArtifactId,
   CloudFrontUrl,
   PublishDate,
@@ -10,18 +9,17 @@ import {
 } from '@galaxy/views';
 import { schema } from './galaxy.config.js';
 
-export const SiteOverview: FC<SiteOverview> = ({
+export const WpControls: FC<WpControls> = ({
   artifact,
   cloudfront,
   variant,
   img,
   date,
   team,
-}: SiteOverview) => {
+}: WpControls) => {
   return (
-    <Card className={`${overviewVariants({ variant })} pb-0 px-0`}>
+    <Card className={`${wpControlsVariants({ variant })} pb-0 px-0`}>
       <div className="flex px-3 py-6">
-        <SitePreview img={img} />
         <Section as="div" className="px-8">
           <Section className="space-y-4">
             <CloudFrontUrl cloudfront={`${cloudfront}`} />
@@ -37,7 +35,7 @@ export const SiteOverview: FC<SiteOverview> = ({
   );
 };
 
-export type SiteOverview = {
+export type WpControls = {
   name: string;
   img?: string;
   team?: string;
@@ -49,13 +47,13 @@ export type SiteOverview = {
   date: string;
 };
 
-SiteOverview.defaultProps = {
+WpControls.defaultProps = {
   variant: 'light',
 };
 
-const overviewVariants = ({ variant }: SiteOverview) => {
-  const variants = schema.components.overview.variants;
-  const DEFAULT = schema.components.overview.DEFAULT;
+const wpControlsVariants = ({ variant }: WpControls) => {
+  const variants = schema.components.wpControls.variants;
+  const DEFAULT = schema.components.wpControls.DEFAULT;
 
   const classes = {
     [`${variants.light}`]: !variant || variant === 'light',

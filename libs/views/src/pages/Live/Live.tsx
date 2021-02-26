@@ -3,7 +3,6 @@ import { Section, Button, Heading, Menu, Panel } from '@galaxy/core';
 import { SiteState, SiteOverview, Site } from '@galaxy/views';
 
 export const Live: FC<Live> = ({
-  overview,
   items,
   name,
   artifact,
@@ -11,6 +10,7 @@ export const Live: FC<Live> = ({
   variant,
   img,
   date,
+  team,
 }) => {
   return (
     <Section className="md:flex min-h-screen border-t border-shifter-gray-200">
@@ -55,6 +55,7 @@ export const Live: FC<Live> = ({
           variant={variant}
           img={img}
           date={date}
+          team={team}
         />
       </Panel>
     </Section>
@@ -62,6 +63,5 @@ export const Live: FC<Live> = ({
 };
 
 export type Live = {
-  overview?: SiteOverview;
   name?: Site;
 };

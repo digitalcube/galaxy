@@ -1,6 +1,6 @@
 import React from 'react';
 import { Live } from '@galaxy/views';
-import { fakerSite } from '@galaxy/core';
+import { fakerOverview } from '@galaxy/core';
 import { defaultStorybookConfig } from '../../.storybook/docs';
 export default {
   ...defaultStorybookConfig,
@@ -9,5 +9,5 @@ export default {
 };
 
 export const Zero = () => {
-  return <Live {...fakerSite} />;
+  return <Live {...fakerOverview} />;
 };

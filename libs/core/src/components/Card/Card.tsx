@@ -1,6 +1,6 @@
 import React, { ReactNode, FC } from 'react';
 import classNames from 'classnames';
-import { Section, Heading } from '@galaxy/core';
+import { Section } from '@galaxy/core';
 import { schema } from './galaxy.config.js';
 
 export type Card = {
@@ -24,7 +24,7 @@ const cardClassNames = ({ variant }: Card) => {
 
 export const Card: FC<Card> = ({ children, variant, className }: Card) => {
   return (
-    <Section className={`${className} ${cardClassNames({ variant })}`}>
+    <Section className={`${cardClassNames({ variant })} ${className}`}>
       {children ? children : null}
     </Section>
   );

@@ -1,6 +1,12 @@
 import React, { FC } from 'react';
 import { Section, Button, Heading, Menu, Panel } from '@galaxy/core';
-import { SiteState, Site, SiteOverview, SiteProgress } from '@galaxy/views';
+import {
+  SiteState,
+  Site,
+  SiteOverview,
+  SiteProgress,
+  Deploys,
+} from '@galaxy/views';
 
 export const Home: FC<Home> = ({
   items,
@@ -52,6 +58,18 @@ export const Home: FC<Home> = ({
       </Section>
       <Panel className="flex-1 md:border-l">
         <SiteOverview
+          cloudfront={`${cloudfront}`}
+          state={`${state}`}
+          img={`${img}`}
+          artifact={`${artifact}`}
+          date={`${date}`}
+          items={items}
+          name={`${name}`}
+          progress={progress}
+          team={team}
+          variant={variant}
+        />
+        <Deploys
           cloudfront={`${cloudfront}`}
           state={`${state}`}
           img={`${img}`}
