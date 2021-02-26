@@ -8,9 +8,9 @@ import {
   fakerHeader,
   Card,
 } from '@galaxy/core';
-import { SiteState, Site, Dashboard } from '@galaxy/views';
+import { SiteState, Site, Dashboard, Domains } from '@galaxy/views';
 
-export const DomainsPage: FC<DomainsPage> = ({ name, items, title, actions }) => {
+export const DomainsPage: FC<DomainsPage> = ({ name, items, title, actions, domains }) => {
   return (
     <Dashboard {...fakerHeader}>
       <Section className="md:flex min-h-screen border-t border-shifter-gray-200">
@@ -57,12 +57,7 @@ export const DomainsPage: FC<DomainsPage> = ({ name, items, title, actions }) =>
         >
           <Section className="space-y-4">
             <Card className="px-3 py-6">Steps to connect your domain</Card>
-            <Card className="px-3 py-6">
-              <Heading>Foo</Heading>
-            </Card>
-            <Card className="px-3 py-6">
-              <Heading>Foo</Heading>
-            </Card>
+            <Domains domains={domains} />
           </Section>
         </Panel>
       </Section>
@@ -75,4 +70,5 @@ export type DomainsPage = {
   title?: Panel;
   actions?: Panel;
   name: Site;
+  domains: Domains;
 };

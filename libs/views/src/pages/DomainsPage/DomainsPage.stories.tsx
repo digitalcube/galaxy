@@ -1,8 +1,7 @@
 import React from 'react';
 import { DomainsPage } from '@galaxy/views';
-import { fakerProgress, fakerDomains } from '@galaxy/core';
+import { fakerSiteDomains, fakerDomains } from '@galaxy/core';
 import { defaultStorybookConfig } from '../../.storybook/docs';
-import { company, internet, random } from 'faker';
 
 export default {
   ...defaultStorybookConfig,
@@ -11,5 +10,5 @@ export default {
 };
 
 export const Zero = () => {
-  return <DomainsPage {...fakerDomains} />;
+  return <DomainsPage {...fakerDomains} domains={fakerSiteDomains} />;
 };
