@@ -27,3 +27,4 @@ export * from './Text';
 export * from './Input';
 export * from './Select';
 export * from './Panel';
+export * from './SecurityBuiltIn';

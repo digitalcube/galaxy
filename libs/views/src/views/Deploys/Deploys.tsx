@@ -14,7 +14,7 @@ export const Deploys: FC<Deploys> = ({ variant, state, title }: Deploys) => {
         </Heading>
         <AutoPublish />
       </Section>
-      <Artifacts sites={fakerSites} />
+      <Artifacts artifacts={fakerSites} />
     </Card>
   );
 };
