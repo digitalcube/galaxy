@@ -1,7 +1,7 @@
 import React, { FC } from 'react';
 import { Button } from '@galaxy/core';
 
-export const SitesCreate: FC<SitesCreate> = ({ title }: SitesCreate) => {
+export const WpAdmin: FC<WpAdmin> = ({ title }: WpAdmin) => {
   return (
     <Button variant="primary" className="relative text-left">
       <span className="absolute inset-y-0 left-0 flex items-center pl-4 pointer-events-none">
@@ -26,10 +26,10 @@ export const SitesCreate: FC<SitesCreate> = ({ title }: SitesCreate) => {
   );
 };
 
-type SitesCreate = {
+type WpAdmin = {
   title?: string;
 };
 
-SitesCreate.defaultProps = {
-  title: 'Create a new site',
+WpAdmin.defaultProps = {
+  title: 'WordPress Admin',
 };
