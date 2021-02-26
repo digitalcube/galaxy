@@ -149,6 +149,14 @@ export const fakerDomains = {
   ...dashboardSiteMenuItems,
 };
 
+// Page: Live/DeploySettings
+export const fakerDeploySettings = {
+  title: 'Deploy Settings',
+  ...fakerSite,
+  ...dashboardSiteDomainsActions,
+  ...dashboardSiteMenuItems,
+};
+
 // Page: Live/Overview
 export const fakerOverview = {
   title: 'Domains',
