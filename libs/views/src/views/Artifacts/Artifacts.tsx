@@ -3,8 +3,8 @@ import { Section, Heading, SecurityBuiltIn } from '@galaxy/core';
 import { Artifact } from '@galaxy/views';
 
 export const Artifacts: FC<Artifacts> = ({ artifacts, title, description }) => {
-  const allArtifacts = artifacts.map((site) => {
-    const { name, url, state, img, progress, date } = site;
+  const allArtifacts = artifacts.map((artifact) => {
+    const { name, url, state, img, progress, date } = artifact;
     return (
       <Artifact
         name={`${name}`}
@@ -17,8 +17,8 @@ export const Artifacts: FC<Artifacts> = ({ artifacts, title, description }) => {
     );
   });
 
-  return (
-    <Section className="space-y-10">
+  const ZeroArtifacts = () => {
+    return (
       <Section as="div" className="flex flex-col items-center space-y-6">
         <SecurityBuiltIn />
         <Section as="div" className="text-center">
@@ -30,7 +30,16 @@ export const Artifacts: FC<Artifacts> = ({ artifacts, title, description }) => {
           </Heading>
         </Section>
       </Section>
-      <Section className="space-y-4">{allArtifacts}</Section>
+    );
+  };
+
+  const ArtifactList = () => {
+    return <Section className="space-y-4">{allArtifacts}</Section>;
+  };
+
+  return (
+    <Section className="space-y-10">
+      {artifacts.length > 0 ? <ArtifactList /> : <ZeroArtifacts />}
     </Section>
   );
 };

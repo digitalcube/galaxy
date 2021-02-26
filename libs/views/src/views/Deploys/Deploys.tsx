@@ -1,6 +1,6 @@
 import React, { FC } from 'react';
 import classNames from 'classnames';
-import { Card, fakerSites, Heading, Section } from '@galaxy/core';
+import { Card, fakerArtifacts, Heading, Section } from '@galaxy/core';
 import { Artifacts, WpControls, AutoPublish } from '@galaxy/views';
 import { schema } from './galaxy.config.js';
 
@@ -14,7 +14,7 @@ export const Deploys: FC<Deploys> = ({ variant, state, title }: Deploys) => {
         </Heading>
         <AutoPublish />
       </Section>
-      <Artifacts artifacts={fakerSites} />
+      <Artifacts artifacts={fakerArtifacts} />
     </Card>
   );
 };

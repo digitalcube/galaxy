@@ -89,7 +89,7 @@ export const artifactSchema = {
 
 export const fakerArtifacts = fakerGenerator({
   schema: siteSchema,
-  min: 1,
+  min: 0,
   max: 10,
 });
 
