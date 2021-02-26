@@ -12,7 +12,7 @@ export const publishedDate = ({ date }: PublishedDate) => {
   const d = moment(date).calendar(null, {
     sameDay: `[today]`,
     lastWeek: `MMMM DD`,
-    lastDay: `[testerday]`,
+    lastDay: `[yesterday]`,
     sameElse: `DD MMMM YYYY`,
   });
   return d;

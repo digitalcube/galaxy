@@ -1,8 +1,17 @@
 import React, { FC } from 'react';
 import { Section, Button, Heading, Menu, Panel } from '@galaxy/core';
-import { SiteState, SiteOverview } from '@galaxy/views';
+import { SiteState, SiteOverview, Site } from '@galaxy/views';
 
-export const Live: FC<Live> = ({ overview, items }) => {
+export const Live: FC<Live> = ({
+  overview,
+  items,
+  name,
+  artifact,
+  cloudfront,
+  variant,
+  img,
+  date,
+}) => {
   return (
     <Section className="md:flex min-h-screen border-t border-shifter-gray-200">
       <Section className="flex-none w-full md:max-w-xs">
@@ -29,7 +38,7 @@ export const Live: FC<Live> = ({ overview, items }) => {
             </Button>
           </Section>
           <Section className="space-y-2">
-            <Heading fontSize="6">Stable Value Investments, Inc.</Heading>
+            <Heading fontSize="6">{name}</Heading>
             <Section>
               <SiteState state="starting" />
             </Section>
@@ -40,7 +49,13 @@ export const Live: FC<Live> = ({ overview, items }) => {
         </Panel>
       </Section>
       <Panel className="flex-1 md:border-l">
-        <SiteOverview {...overview} />
+        <SiteOverview
+          artifact={artifact}
+          cloudfront={cloudfront}
+          variant={variant}
+          img={img}
+          date={date}
+        />
       </Panel>
     </Section>
   );
@@ -48,4 +63,5 @@ export const Live: FC<Live> = ({ overview, items }) => {
 
 export type Live = {
   overview?: SiteOverview;
+  name?: Site;
 };
