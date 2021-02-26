@@ -2,8 +2,7 @@ module.exports = {
   schema: {
     components: {
       deploys: {
-        DEFAULT:
-          '',
+        DEFAULT: 'px-3 py-6',
         variants: {
           light: '',
           dark: '',

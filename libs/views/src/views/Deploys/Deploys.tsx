@@ -5,7 +5,7 @@ import {
   ArtifactId,
   CloudFrontUrl,
   PublishDate,
-  Team,
+  WpControls,
 } from '@galaxy/views';
 import { schema } from './galaxy.config.js';
 
@@ -13,32 +13,17 @@ export const Deploys: FC<Deploys> = ({
   artifact,
   cloudfront,
   variant,
-  img,
   date,
-  team,
 }: Deploys) => {
   return (
-    <Card className={`${deploysVariants({ variant })} pb-0 px-0`}>
-      <div className="flex px-3 py-6">
-        <Section as="div" className="px-8">
-          <Section className="space-y-4">
-            <CloudFrontUrl cloudfront={`${cloudfront}`} />
-            <Section className="flex space-x-4" as="div">
-              <PublishDate date={date} />
-              <ArtifactId artifact={`${artifact}`} />
-            </Section>
-          </Section>
-        </Section>
-      </div>
-      <Team team={`${team}`} />
+    <Card className={`${deploysVariants({ variant })} space-y-4`}>
+      <WpControls />
     </Card>
   );
 };
 
 export type Deploys = {
   name: string;
-  img?: string;
-  team?: string;
   artifact: string;
   cloudfront: string;
   variant?: 'light' | 'dark' | string;
