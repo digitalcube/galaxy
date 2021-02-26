@@ -7,7 +7,7 @@ export type Button = {
   className?: string;
   label?: string;
   as?: 'button' | 'a' | 'div' | 'span';
-  variant?: 'primary' | 'danger' | 'white' | 'success' | 'ghost';
+  variant?: 'primary' | 'danger' | 'white' | 'success' | 'ghost' | 'link';
 };
 
 const buttonClasses = ({ variant }: Button) => {
@@ -19,6 +19,7 @@ const buttonClasses = ({ variant }: Button) => {
     [`${variants.success}`]: variant === 'success',
     [`${variants.danger}`]: variant === 'danger',
     [`${variants.white}`]: variant === 'white',
+    [`${variants.link}`]: variant === 'link',
     [`${DEFAULT}`]: true,
   };
 

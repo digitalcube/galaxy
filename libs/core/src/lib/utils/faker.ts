@@ -75,6 +75,26 @@ export const fakerSites = fakerGenerator({
 
 export const fakerSite = fakerGenerator({ schema: siteSchema })[0];
 
+export const artifactSchema = {
+  artifact: '{{random.uuid}}',
+  cloudfront: '{{internet.url}}',
+  img: '{{image.image}}',
+  name: '{{company.companyName}}',
+  progress: 'progress',
+  state: 'state',
+  team: '{{company.companyName}}',
+  url: '{{internet.url}}',
+  date: '{{date.past}}',
+};
+
+export const fakerArtifacts = fakerGenerator({
+  schema: siteSchema,
+  min: 1,
+  max: 10,
+});
+
+export const fakerArtifact = fakerGenerator({ schema: artifactSchema })[0];
+
 const dashboardHeaderMenuItems = {
   items: [
     { title: 'Sites', url: 'sites' },

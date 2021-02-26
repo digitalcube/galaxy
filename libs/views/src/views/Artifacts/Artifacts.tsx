@@ -1,17 +1,18 @@
 import React, { FC } from 'react';
 import { Section } from '@galaxy/core';
-import { Site } from '@galaxy/views';
+import { Artifact } from '@galaxy/views';
 
 export const Artifacts: FC<Artifacts> = ({ sites }) => {
   const allArtifacts = sites.map((site) => {
+    const { name, url, state, img, progress, date } = site;
     return (
-      <Site
-        name={`${site.name}`}
-        url={`${site.url}`}
-        state={`${site.state}`}
-        img={site.img}
-        team={site.team}
-        progress={site.progress}
+      <Artifact
+        name={`${name}`}
+        url={`${url}`}
+        state={`${state}`}
+        img={img}
+        progress={progress}
+        date={date}
       />
     );
   });

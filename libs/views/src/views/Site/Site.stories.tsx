@@ -8,7 +8,7 @@ import { defaultStorybookConfig } from '../../.storybook/docs';
 export default {
   ...defaultStorybookConfig,
   component: Site,
-  title: `Galaxy/Components/Site`,
+  title: `Shifter/Dashboard/Patterns/Site`,
 };
 
 export const Schemas = () => {
