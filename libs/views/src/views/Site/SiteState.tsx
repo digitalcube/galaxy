@@ -3,15 +3,24 @@ import classNames from 'classnames';
 import { Heading } from '@galaxy/core';
 import { schema } from './galaxy.config.js';
 
-export const SiteState: FC<SiteState> = ({ state, variant }: SiteState) => {
+export const SiteState: FC<SiteState> = ({
+  state,
+  variant,
+  className,
+}: SiteState) => {
   return (
-    <Heading className={siteStateVariants({ variant, state })}>{state}</Heading>
+    <Heading
+      className={`${siteStateVariants({ variant, state })} ${className}`}
+    >
+      {state}
+    </Heading>
   );
 };
 
 export type SiteState = {
   variant?: 'light' | 'dark' | string;
   state: 'running' | 'stopped' | string;
+  className?: string;
 };
 
 const siteStateVariants = ({ variant, state }: SiteState) => {

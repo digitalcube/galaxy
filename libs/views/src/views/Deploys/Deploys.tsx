@@ -1,7 +1,7 @@
 import React, { FC } from 'react';
 import classNames from 'classnames';
 import { Card, fakerSites, Heading, Section } from '@galaxy/core';
-import { Sites, WpControls } from '@galaxy/views';
+import { Artifacts, WpControls } from '@galaxy/views';
 import { schema } from './galaxy.config.js';
 
 export const Deploys: FC<Deploys> = ({
@@ -9,11 +9,12 @@ export const Deploys: FC<Deploys> = ({
   cloudfront,
   variant,
   date,
+  state,
 }: Deploys) => {
   return (
     <Card className={`${deploysVariants({ variant })} space-y-4`}>
+      <WpControls state={state} />
       <Section className="flex flex-row space-x-6 justify-between">
-        {/* <WpControls /> */}
         <Heading fontSize="5" fontWeight="strong">
           Deploys
         </Heading>
@@ -21,7 +22,7 @@ export const Deploys: FC<Deploys> = ({
           Automatically publish deploys to live site on
         </Heading>
       </Section>
-      <Sites sites={fakerSites} />
+      <Artifacts sites={fakerSites} />
     </Card>
   );
 };
