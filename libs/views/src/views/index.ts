@@ -9,3 +9,4 @@ export * from './Site';
 export * from './SiteOverview';
 export * from './Sites';
 export * from './WpControls';
+export * from './SubDirectory';

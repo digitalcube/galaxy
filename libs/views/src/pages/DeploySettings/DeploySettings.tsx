@@ -6,10 +6,8 @@ import {
   Menu,
   Panel,
   fakerHeader,
-  Card,
-  Input,
 } from '@galaxy/core';
-import { SiteState, Site, Dashboard } from '@galaxy/views';
+import { SiteState, Site, Dashboard, SubDirectory } from '@galaxy/views';
 
 export const DeploySettings: FC<DeploySettings> = ({
   name,
@@ -61,26 +59,7 @@ export const DeploySettings: FC<DeploySettings> = ({
           title={`${title}`}
           actions={actions}
         >
-          <Section className="space-y-4">
-            <Card className="px-3 py-6 space-y-8">
-              <Section className="space-y-4">
-                <Heading fontSize="6" fontWeight="strong">
-                  Publish deploys to a subdirectory
-                </Heading>
-                <Heading fontSize="3">
-                  You can publish Shifter artifacts to a subdirectory of a site
-                  you already own (for example, yoursite.com/blog)
-                </Heading>
-              </Section>
-              <Section className="space-y-4">
-                <Heading fontSize="4" fontWeight="strong">
-                  Enter the subdirectory where you would like to publish deploys
-                </Heading>
-                <Input />
-              </Section>
-              <Button label={`Publish to this subdirectory`} />
-            </Card>
-          </Section>
+          <SubDirectory />
         </Panel>
       </Section>
     </Dashboard>
