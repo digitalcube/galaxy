@@ -3,9 +3,12 @@ import { Button } from '@galaxy/core';
 
 export const BuildDeploy: FC<BuildDeploy> = ({ title }: BuildDeploy) => {
   return (
-    <Button variant="primary" className="flex flex-row space-x-2 items-center">
+    <Button
+      variant="outline-primary"
+      className="flex flex-row space-x-2 items-center"
+    >
       <svg
-        className="h-4 w-4 text-white"
+        className="h-4 w-4"
         xmlns="http://www.w3.org/2000/svg"
         fill="none"
         viewBox="0 0 24 24"

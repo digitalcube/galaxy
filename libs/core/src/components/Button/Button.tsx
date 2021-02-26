@@ -7,7 +7,14 @@ export type Button = {
   className?: string;
   label?: string;
   as?: 'button' | 'a' | 'div' | 'span';
-  variant?: 'primary' | 'danger' | 'white' | 'success' | 'ghost' | 'link';
+  variant?:
+    | 'primary'
+    | 'danger'
+    | 'white'
+    | 'success'
+    | 'ghost'
+    | 'link'
+    | 'outline-primary';
 };
 
 const buttonClasses = ({ variant }: Button) => {
@@ -20,6 +27,7 @@ const buttonClasses = ({ variant }: Button) => {
     [`${variants.danger}`]: variant === 'danger',
     [`${variants.white}`]: variant === 'white',
     [`${variants.link}`]: variant === 'link',
+    [`${variants.outline.primary}`]: variant === 'outline-primary',
     [`${DEFAULT}`]: true,
   };
 
@@ -35,7 +43,11 @@ export const Button: FC<Button> = ({
 }: Button) => {
   const Tag = `${as}`;
   return (
-    <Tag className={`${className} ${buttonClasses({ variant })}`}>
+    <Tag
+      className={`${className} ${buttonClasses({
+        variant,
+      })}`}
+    >
       {label}
       {children}
     </Tag>
