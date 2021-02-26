@@ -15,7 +15,7 @@ export const Items = ({ items }: Menu) => {
 
 export const Menu: FC<Menu> = ({ items, alignment }: Menu) => {
   return (
-    <nav className={`flex ${alignment === 'vertical' ? 'flex-col' : 'flex-row'}`}>
+    <nav className={`flex ${alignment === 'vertical' ? 'flex-col items-start' : 'flex-row items-center'}`}>
       <Items items={items} />
     </nav>
   );
