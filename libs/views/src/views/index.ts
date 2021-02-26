@@ -5,3 +5,4 @@ export * from './Deploys';
 export * from './Site';
 export * from './AddDomain';
 export * from './WpControls';
+export * from './Dashboard';

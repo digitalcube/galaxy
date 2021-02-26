@@ -70,7 +70,7 @@ export const siteSchema = {
 export const fakerSites = fakerGenerator({
   schema: siteSchema,
   min: 1,
-  max: 20,
+  max: 10,
 });
 
 export const fakerSite = fakerGenerator({ schema: siteSchema })[0];

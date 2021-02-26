@@ -3,7 +3,7 @@ import { Section, Menu, Input, Avatar } from '@galaxy/core';
 
 export const Header: FC<Header> = ({ items, avatar }) => {
   return (
-    <Section as="header" className="py-6 flex flex-row items-center space-x-6">
+    <Section as="header" className="py-6 flex flex-row items-center space-x-6 px-8">
       <a className="align-center" href="/">
         <img
           className="h-8 w-auto"
@@ -16,7 +16,7 @@ export const Header: FC<Header> = ({ items, avatar }) => {
       </div>
       <div className="hidden md:flex flex-row items-center space-x-6">
         <Menu items={items} />
-        <Avatar size={9} img={`${avatar?.img}`} name={`${avatar?.name}`} />
+        <Avatar size={9} {...avatar} />
       </div>
     </Section>
   );
