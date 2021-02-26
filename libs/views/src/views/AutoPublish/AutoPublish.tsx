@@ -1,13 +1,17 @@
 import React, { FC } from 'react';
-import { Section, Heading } from '@galaxy/core';
+import { Section, Heading, Toggle } from '@galaxy/core';
 
 export const AutoPublish: FC = ({ state }) => {
   return (
-    <Section>
+    <Section className="flex flex-row space-x-2">
       <Heading fontSize="3">
-        Automatically publish deploys to live site{' '}
-        {state === false ? 'off' : 'on'}.
+        Auto-publish is
+        <span className="text-status-success-default">
+          {' '}
+          {state === false ? 'off' : 'on'}
+        </span>
       </Heading>
+      <Toggle state={state} />
     </Section>
   );
 };

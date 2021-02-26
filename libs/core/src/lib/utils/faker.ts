@@ -12,7 +12,8 @@ const preview = [
   'https://s0.wp.com/mshots/v1/https://stripe.com?w=160',
 ];
 
-const state = ['running', 'stopped', 'generating', 'starting'];
+const siteState = ['running', 'stopped', 'generating', 'starting'];
+// const artifactState = ['published', 'scheduled', 'ready'];
 
 export type FakerGenerator = {
   schema: any;
@@ -25,7 +26,8 @@ export const fakerGenerator = ({ schema, min = 1, max }: FakerGenerator) => {
   return Array.from({ length: faker.random.number({ min, max }) }).map(() =>
     Object.keys(schema).reduce((entity, key) => {
       if (key === 'state') {
-        entity[key] = fakerArray(state);
+        console.log(entity[key]);
+        entity[key] = fakerArray(siteState);
         return entity;
       }
 
@@ -81,7 +83,7 @@ export const artifactSchema = {
   img: '{{image.image}}',
   name: '{{company.companyName}}',
   progress: 'progress',
-  state: 'state',
+  state: 'artifactState',
   team: '{{company.companyName}}',
   url: '{{internet.url}}',
   date: '{{date.past}}',

@@ -1,14 +1,14 @@
 import React from 'react';
 
-import { Shape } from '../index';
+import { Toggle } from './Toggle';
 
 import { defaultStorybookConfig } from '../../.storybook/docs';
 export default {
   ...defaultStorybookConfig,
-  component: Shape,
-  title: `Galaxy/Components/Shape`,
+  component: Toggle,
+  title: `Galaxy/Components/Toggle`,
 };
 
-export const Default = () => {
-  return <Shape />;
+export const On = () => {
+  return <Toggle />;
 };
