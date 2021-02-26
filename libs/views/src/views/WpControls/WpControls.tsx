@@ -1,19 +1,21 @@
 import React, { FC } from 'react';
-import { SiteState, WpAdmin } from '@galaxy/views';
+import { SiteState, WpAdmin, BuildDeploy } from '@galaxy/views';
 import { Section } from '@galaxy/core';
+import { Play, Refresh } from 'heroicons-react';
 
 export const WpControls: FC = ({ state }) => {
   return (
-    <Section className="flex flex-row space-x-6 justify-between border-b pb-6 border-shifter-gray-200">
-      <Section className="flex items-center space-x-6">
-        <div className="border-r border-shifter-gray-200">
-          <SiteState state={state} />
+    <Section className="flex flex-row items-center justify-between border-b pb-6 border-shifter-gray-200">
+      <Section className="flex flex-row items-center space-x-4 divide-x">
+        <SiteState state={state} />
+        <div className="flex flex-row items-center space-x-4 pl-4">
+          <Play size={16} />
+          <Refresh size={16} />
         </div>
-        <WpAdmin />
       </Section>
       <Section className="flex items-center space-x-6">
         <WpAdmin />
-        <WpAdmin />
+        <BuildDeploy />
       </Section>
     </Section>
   );

@@ -5,7 +5,8 @@ export const AutoPublish: FC = ({ state }) => {
   return (
     <Section>
       <Heading fontSize="3">
-        Automatically publish deploys to live site {state}
+        Automatically publish deploys to live site{' '}
+        {state === false ? 'off' : 'on'}.
       </Heading>
     </Section>
   );
@@ -16,5 +17,5 @@ export type AutoPublish = {
 };
 
 AutoPublish.defaultProps = {
-  state: false,
+  state: true,
 };

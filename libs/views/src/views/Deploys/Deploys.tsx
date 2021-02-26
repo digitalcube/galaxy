@@ -1,26 +1,18 @@
 import React, { FC } from 'react';
 import classNames from 'classnames';
 import { Card, fakerSites, Heading, Section } from '@galaxy/core';
-import { Artifacts, WpControls } from '@galaxy/views';
+import { Artifacts, WpControls, AutoPublish } from '@galaxy/views';
 import { schema } from './galaxy.config.js';
 
-export const Deploys: FC<Deploys> = ({
-  artifact,
-  cloudfront,
-  variant,
-  date,
-  state,
-}: Deploys) => {
+export const Deploys: FC<Deploys> = ({ variant, state, title }: Deploys) => {
   return (
-    <Card className={`${deploysVariants({ variant })} space-y-4`}>
+    <Card className={`${deploysVariants({ variant })} space-y-6`}>
       <WpControls state={state} />
       <Section className="flex flex-row space-x-6 justify-between">
         <Heading fontSize="5" fontWeight="strong">
-          Deploys
+          {title}
         </Heading>
-        <Heading fontSize="3">
-          Automatically publish deploys to live site on
-        </Heading>
+        <AutoPublish />
       </Section>
       <Artifacts sites={fakerSites} />
     </Card>
@@ -28,17 +20,14 @@ export const Deploys: FC<Deploys> = ({
 };
 
 export type Deploys = {
-  name: string;
-  artifact: string;
-  cloudfront: string;
   variant?: 'light' | 'dark' | string;
-  state: 'running' | 'stopped' | string;
-  progress: 0 | 1 | 2 | 3 | 4 | 5 | null;
-  date: string;
+  state: AutoPublish;
+  title: string;
 };
 
 Deploys.defaultProps = {
   variant: 'light',
+  title: 'Deploys',
 };
 
 const deploysVariants = ({ variant }: Deploys) => {
