@@ -163,6 +163,13 @@ const dashboardContainer = {
   },
 };
 
+
+const dashboardWpControls = {
+  wpControls: {
+    state: 'running',
+  },
+};
+
 const dashboardSiteDomainsActions = {
   actions: [{ component: AddDomain({ label: 'Add a new domain' }) }],
 };
@@ -214,4 +221,5 @@ export const fakerDev = {
   ...dashboardSiteDomainsActions,
   ...dashboardSiteMenuItems,
   ...dashboardContainer,
+  ...dashboardWpControls,
 };

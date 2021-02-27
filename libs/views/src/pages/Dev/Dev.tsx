@@ -15,6 +15,7 @@ import {
   Dashboard,
   Container,
   WpVersion,
+  WpControls,
 } from '@galaxy/views';
 
 export const Dev: FC<Dev> = ({
@@ -29,6 +30,7 @@ export const Dev: FC<Dev> = ({
   team,
   variant,
   container,
+  wpControls,
 }) => {
   return (
     <Dashboard {...fakerHeader}>
@@ -68,6 +70,7 @@ export const Dev: FC<Dev> = ({
           </Panel>
         </Section>
         <Panel className="flex-1 md:border-l">
+          <WpControls {...wpControls} />
           <Container {...container} />
         </Panel>
       </Section>
@@ -87,4 +90,6 @@ export type Dev = {
   team?: Site;
   variant?: Site;
   wpVersion: WpVersion;
+  container: Container;
+  wpControls: WpControls;
 };
