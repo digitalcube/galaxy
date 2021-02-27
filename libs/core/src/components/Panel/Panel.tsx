@@ -26,7 +26,9 @@ const PanelHeader: FC<Panel> = ({ title, actions }) => {
 
 export const Panel: FC<Panel> = ({ children, className, title, actions }) => {
   return (
-    <Section className={`${className} py-6 px-8 border-shifter-gray-200`}>
+    <Section
+      className={`py-6 px-8 border-shifter-gray-200 flex flex-grow flex-col border-l ${className}`}
+    >
       <PanelHeader title={title} actions={actions} />
       <Section className="space-y-10">{children ? children : null}</Section>
     </Section>

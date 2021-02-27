@@ -11,3 +11,4 @@ export * from './WpControls';
 export * from './SubDirectory';
 export * from './Domains';
 export * from './Domain';
+export * from './Container';

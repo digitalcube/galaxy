@@ -2,7 +2,7 @@ module.exports = {
   schema: {
     components: {
       card: {
-        DEFAULT: 'border rounded border-shifter-gray-200',
+        DEFAULT: 'ring rounded ring-shifter-gray-200',
         variants: {
           light: '',
           dark: 'text-shifter-purple-200',

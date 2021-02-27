@@ -12,8 +12,9 @@ import {
   SiteState,
   Site,
   SiteProgress,
-  Deploys,
   Dashboard,
+  Container,
+  WpVersion,
 } from '@galaxy/views';
 
 export const Dev: FC<Dev> = ({
@@ -27,6 +28,7 @@ export const Dev: FC<Dev> = ({
   date,
   team,
   variant,
+  container,
 }) => {
   return (
     <Dashboard {...fakerHeader}>
@@ -65,7 +67,9 @@ export const Dev: FC<Dev> = ({
             <Menu alignment="vertical" items={items} />
           </Panel>
         </Section>
-        <Panel className="flex-1 md:border-l">foo</Panel>
+        <Panel className="flex-1 md:border-l">
+          <Container {...container} />
+        </Panel>
       </Section>
     </Dashboard>
   );
@@ -82,4 +86,5 @@ export type Dev = {
   state: SiteState;
   team?: Site;
   variant?: Site;
+  wpVersion: WpVersion;
 };

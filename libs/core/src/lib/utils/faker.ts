@@ -149,6 +149,20 @@ const dashboardSiteMenuItems = {
   ],
 };
 
+const dashboardContainer = {
+  container: {
+    title: 'Container Info',
+    wpVersion: {
+      title: 'WordPress version',
+      version: '5.6',
+    },
+    phpVersion: {
+      title: 'PHP Version',
+      version: '8.0',
+    },
+  },
+};
+
 const dashboardSiteDomainsActions = {
   actions: [{ component: AddDomain({ label: 'Add a new domain' }) }],
 };
@@ -199,4 +213,5 @@ export const fakerDev = {
   ...fakerSite,
   ...dashboardSiteDomainsActions,
   ...dashboardSiteMenuItems,
+  ...dashboardContainer,
 };
