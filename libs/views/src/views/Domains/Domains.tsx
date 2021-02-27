@@ -1,12 +1,12 @@
 import React, { FC } from 'react';
 import { Section, Heading } from '@galaxy/core';
-import { Site, AddDomain } from '@galaxy/views';
+import { Domain, AddDomain } from '@galaxy/views';
 
 export const Domains: FC<Domains> = ({ domains, title }) => {
   const allDomains = domains.map((domain) => {
     const { name, url, state, img, team, progress } = domain;
     return (
-      <Site
+      <Domain
         name={`${name}`}
         url={`${url}`}
         state={`${state}`}

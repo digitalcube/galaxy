@@ -112,7 +112,7 @@ export const siteDomainSchema = {
 export const fakerSiteDomains = fakerGenerator({
   schema: siteDomainSchema,
   min: 0,
-  max: 10,
+  max: 5,
 });
 
 export const fakerSiteDomain = fakerGenerator({ schema: siteDomainSchema })[0];

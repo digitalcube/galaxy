@@ -1,4 +1,3 @@
-export * from './AddDomain';
 export * from './Artifact';
 export * from './Artifacts';
 export * from './AutoPublish';
@@ -11,3 +10,4 @@ export * from './Sites';
 export * from './WpControls';
 export * from './SubDirectory';
 export * from './Domains';
+export * from './Domain';
