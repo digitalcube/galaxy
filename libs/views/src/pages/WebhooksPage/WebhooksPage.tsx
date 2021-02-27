@@ -14,13 +14,9 @@ import {
   SiteProgress,
   Dashboard,
   Container,
-  MediaCdn,
 } from '@galaxy/views';
 
-export const WebhooksPage: FC<WebhooksPage> = ({
-  items,
-  name,
-}) => {
+export const WebhooksPage: FC<WebhooksPage> = ({ items, name }) => {
   return (
     <Dashboard {...fakerHeader}>
       <Section className="md:flex min-h-screen border-t border-shifter-gray-200">
@@ -58,9 +54,7 @@ export const WebhooksPage: FC<WebhooksPage> = ({
             <Menu alignment="vertical" items={items} />
           </Panel>
         </Section>
-        <Panel className="flex-1 md:border-l">
-          Webhooks
-        </Panel>
+        <Panel className="flex-1 md:border-l">Webhooks</Panel>
       </Section>
     </Dashboard>
   );
@@ -77,6 +71,5 @@ export type WebhooksPage = {
   state: SiteState;
   team?: Site;
   variant?: Site;
-  wpVersion: WpVersion;
   container: Container;
 };
