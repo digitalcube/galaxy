@@ -223,3 +223,13 @@ export const fakerDev = {
   ...dashboardContainer,
   ...dashboardWpControls,
 };
+
+// Page: Dev/MediaCDN
+export const fakerMediaCdn = {
+  title: 'Media CDN',
+  ...fakerSite,
+  ...dashboardSiteDomainsActions,
+  ...dashboardSiteMenuItems,
+  ...dashboardContainer,
+  ...dashboardWpControls,
+};

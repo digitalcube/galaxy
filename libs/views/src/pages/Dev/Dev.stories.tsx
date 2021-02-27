@@ -9,6 +9,5 @@ export default {
 };
 
 export const Zero = () => {
-  console.log(fakerDev);
   return <Dev {...fakerDev} />;
 };

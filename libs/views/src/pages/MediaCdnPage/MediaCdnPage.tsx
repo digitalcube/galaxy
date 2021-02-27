@@ -18,7 +18,7 @@ import {
   WpControls,
 } from '@galaxy/views';
 
-export const Dev: FC<Dev> = ({
+export const MediaCdnPage: FC<MediaCdnPage> = ({
   items,
   name,
   container,
@@ -70,7 +70,7 @@ export const Dev: FC<Dev> = ({
   );
 };
 
-export type Dev = {
+export type MediaCdnPage = {
   artifact: Site;
   cloudfront: Site;
   date: Site;

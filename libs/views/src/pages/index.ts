@@ -5,3 +5,4 @@ export * from './DomainsPage';
 export * from './DeploySettings';
 export * from './Staging';
 export * from './Dev';
+export * from './MediaCdnPage';
