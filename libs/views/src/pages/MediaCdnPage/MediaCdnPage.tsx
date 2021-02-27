@@ -14,15 +14,12 @@ import {
   SiteProgress,
   Dashboard,
   Container,
-  WpVersion,
-  WpControls,
+  MediaCdn,
 } from '@galaxy/views';
 
 export const MediaCdnPage: FC<MediaCdnPage> = ({
   items,
   name,
-  container,
-  wpControls,
 }) => {
   return (
     <Dashboard {...fakerHeader}>
@@ -62,8 +59,7 @@ export const MediaCdnPage: FC<MediaCdnPage> = ({
           </Panel>
         </Section>
         <Panel className="flex-1 md:border-l">
-          <WpControls {...wpControls} />
-          <Container {...container} />
+          <MediaCdn />
         </Panel>
       </Section>
     </Dashboard>
@@ -83,5 +79,4 @@ export type MediaCdnPage = {
   variant?: Site;
   wpVersion: WpVersion;
   container: Container;
-  wpControls: WpControls;
 };

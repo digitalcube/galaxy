@@ -1,7 +1,7 @@
 module.exports = {
   schema: {
     components: {
-      container: {
+      mediaCdn: {
         DEFAULT:
           '',
         variants: {
