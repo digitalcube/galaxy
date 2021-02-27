@@ -184,3 +184,19 @@ export const fakerOverview = {
   ...dashboardSiteDomainsActions,
   ...dashboardSiteMenuItems,
 };
+
+// Page: Staging
+export const fakerStaging = {
+  title: 'Staging',
+  ...fakerSite,
+  ...dashboardSiteDomainsActions,
+  ...dashboardSiteMenuItems,
+};
+
+// Page: Dev
+export const fakerDev = {
+  title: 'Development',
+  ...fakerSite,
+  ...dashboardSiteDomainsActions,
+  ...dashboardSiteMenuItems,
+};

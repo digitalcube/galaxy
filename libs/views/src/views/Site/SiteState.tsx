@@ -19,7 +19,7 @@ export const SiteState: FC<SiteState> = ({
 
 export type SiteState = {
   variant?: 'light' | 'dark' | string;
-  state: 'running' | 'stopped' | string;
+  state: 'running' | 'stopped' | string | boolean;
   className?: string;
 };
 
