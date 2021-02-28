@@ -14,7 +14,6 @@ export const Schemas = () => {
     return (
       <Card variant={variant[0]}>
         😀 😎 👍 💯
-        <Heading>Footer</Heading>
       </Card>
     );
   });

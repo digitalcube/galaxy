@@ -1,12 +1,23 @@
 import React, { ReactNode, FC } from 'react';
 import classNames from 'classnames';
-import { Section } from '@galaxy/core';
+import { Section, CardHeader, CardFooter } from '@galaxy/core';
 import { schema } from './galaxy.config.js';
 
-export type Card = {
-  children?: ReactNode;
-  className?: string;
-  variant?: 'light' | 'dark';
+export const Card: FC<Card> = ({
+  children,
+  variant,
+  className,
+  title,
+  footer,
+  description,
+}: Card) => {
+  return (
+    <Section className={`${cardClassNames({ variant })} ${className}`}>
+      {title ? <CardHeader title={title} description={description} /> : null}
+      {children ? children : null}
+      <CardFooter footer={footer} />
+    </Section>
+  );
 };
 
 const cardClassNames = ({ variant }: Card) => {
@@ -22,10 +33,11 @@ const cardClassNames = ({ variant }: Card) => {
   return classNames(classes);
 };
 
-export const Card: FC<Card> = ({ children, variant, className }: Card) => {
-  return (
-    <Section className={`${cardClassNames({ variant })} ${className}`}>
-      {children ? children : null}
-    </Section>
-  );
+export type Card = {
+  children?: ReactNode;
+  className?: string;
+  variant?: 'light' | 'dark';
+  footer?: ReactNode;
+  title?: string;
+  description?: string;
 };
