@@ -1,5 +1,5 @@
 import React, { FC } from 'react';
-import { Section, Heading, SecurityBuiltIn } from '@galaxy/core';
+import { Section, Heading, Integration } from '@galaxy/core';
 import { Webhook } from '@galaxy/views';
 
 export const Webhooks: FC<Webhooks> = ({ webhooks, title, description }) => {
@@ -20,7 +20,7 @@ export const Webhooks: FC<Webhooks> = ({ webhooks, title, description }) => {
   const ZeroWebhooks = () => {
     return (
       <Section as="div" className="flex flex-col items-center space-y-6">
-        <SecurityBuiltIn />
+        <Integration />
         <Section as="div" className="text-center">
           <Heading fontSize="4" fontWeight="strong" variant="primary">
             {title}
@@ -52,6 +52,6 @@ export type Webhooks = {
 
 Webhooks.defaultProps = {
   webhooks: {},
-  title: "You haven't created any webhooks for this site yet.",
-  description: 'Go to the WordPress admin to get started.',
+  title: "You haven't created any webhooks for this site yet",
+  description: 'Click the Add a new webhook button to get started',
 };

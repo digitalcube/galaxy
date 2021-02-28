@@ -27,3 +27,4 @@ export * from './Text';
 export * from './Toggle';
 export * from './WordPress';
 export * from './Php';
+export * from './Integration';
