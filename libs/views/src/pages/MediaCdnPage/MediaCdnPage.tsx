@@ -1,12 +1,5 @@
 import React, { FC } from 'react';
-import {
-  Section,
-  Button,
-  Heading,
-  Menu,
-  Panel,
-  fakerHeader,
-} from '@galaxy/core';
+import { Section, Panel, fakerHeader } from '@galaxy/core';
 
 import {
   SiteState,
@@ -15,19 +8,18 @@ import {
   Dashboard,
   Container,
   MediaCdn,
+  Aside,
+  Main,
 } from '@galaxy/views';
 
-export const MediaCdnPage: FC<MediaCdnPage> = ({
-  items,
-  name,
-}) => {
+export const MediaCdnPage: FC<MediaCdnPage> = ({ items, name, mediaCdn }) => {
   return (
     <Dashboard {...fakerHeader}>
       <Section className="md:flex min-h-screen border-t border-shifter-gray-200">
         <Aside items={items} name={name} />
-        <Panel className="flex-1 md:border-l">
-          <MediaCdn />
-        </Panel>
+        <Main>
+          <MediaCdn {...mediaCdn} />
+        </Main>
       </Section>
     </Dashboard>
   );

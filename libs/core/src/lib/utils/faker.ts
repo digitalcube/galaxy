@@ -126,7 +126,9 @@ export const siteWebhookSchema = {
   progress: 'progress',
   state: 'state',
   team: '{{company.companyName}}',
-  url: '{{internet.url}}' + '/services/T00000000/B00000000/XXXXXXXXXXXXXXXXXXXXXXXX',
+  url:
+    '{{internet.url}}' +
+    '/services/T00000000/B00000000/XXXXXXXXXXXXXXXXXXXXXXXX',
   date: '{{date.past}}',
 };
 
@@ -192,6 +194,13 @@ const dashboardWpControls = {
   },
 };
 
+const dashboardMediaCdn = {
+  mediaCdn: {
+    title: 'Media CDN is',
+    state: true,
+  },
+};
+
 const dashboardSiteDomainsActions = {
   actions: [{ component: AddDomain({ title: 'Add a new domain' }) }],
 };
@@ -253,4 +262,5 @@ export const fakerMediaCdn = {
   ...dashboardSiteMenuItems,
   ...dashboardContainer,
   ...dashboardWpControls,
+  ...dashboardMediaCdn,
 };
