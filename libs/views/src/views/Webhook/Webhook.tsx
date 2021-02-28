@@ -8,11 +8,9 @@ import { schema } from './galaxy.config.js';
 export const Webhook: FC<Webhook> = ({
   title,
   url,
-  team,
   variant,
-  img,
   state,
-  progress,
+  event,
 }: Webhook) => {
   return (
     <Section className={`${webhookVariants({ variant })}`}>
@@ -20,7 +18,7 @@ export const Webhook: FC<Webhook> = ({
         <Heading fontSize="4" variant="primary" fontWeight="strong">
           {title}
         </Heading>
-        <Heading>{title}</Heading>
+        <Heading>{event}</Heading>
         <Heading>{url}</Heading>
       </Section>
       <Section as="span" className="space-x-2 flex items-center">
@@ -34,13 +32,11 @@ export const Webhook: FC<Webhook> = ({
 };
 
 export type Webhook = {
-  img?: string;
   title: string;
-  team?: string;
   url: string;
   variant?: 'light' | 'dark' | string;
+  event: string;
   state: 'running' | 'stopped' | string;
-  progress: 0 | 1 | 2 | 3 | 4 | 5 | null;
 };
 
 Webhook.defaultProps = {

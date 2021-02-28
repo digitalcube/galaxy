@@ -5,7 +5,7 @@ export const SubDirectory: FC<SubDirectory> = ({ title, description }) => {
   return (
     <Section className="space-y-4">
       <Card
-        className="px-3 py-6 space-y-8"
+        className="space-y-8"
         title={title}
         description={description}
       >
@@ -18,11 +18,11 @@ export const SubDirectory: FC<SubDirectory> = ({ title, description }) => {
         <Button label={`Publish to this subdirectory`} />
       </Card>
       <Card
-        className="px-3 py-6 space-y-8"
+        className="space-y-8"
         title={title}
         description={description}
       >
-        <Card className="py-6 space-y-8">
+        <Card className="space-y-8">
           <Section className="space-y-4">
             <Section className="px-3 pb-4 flex flex-row justify-between border-b border-shifter-gray-200">
               <Heading fontSize="4" fontWeight="strong">

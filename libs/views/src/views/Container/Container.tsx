@@ -11,15 +11,12 @@ export const Container: FC<Container> = ({
   phpVersion,
 }: Container) => {
   return (
-    <Card>
+    <Card title={title}>
       <div
         className={`flex flex-col px-3 py-6 space-y-6 ${containerVariants({
           variant,
         })}`}
       >
-        <Heading variant="primary" fontWeight="strong" fontSize="6">
-          {title}
-        </Heading>
         <Section className="space-y-4">
           <WpVersion {...wpVersion} />
           <PhpVersion {...phpVersion} />

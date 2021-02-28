@@ -12,9 +12,11 @@ export const Card: FC<Card> = ({
   description,
 }: Card) => {
   return (
-    <Section className={`${cardClassNames({ variant })} ${className}`}>
+    <Section
+      className={`pt-6 ${cardClassNames({ variant })} ${className}`}
+    >
       {title ? <CardHeader title={title} description={description} /> : null}
-      {children ? children : null}
+      {children ? <Section className="space-y-6 px-3 pb-4">{children}</Section> : null}
       <CardFooter footer={footer} />
     </Section>
   );

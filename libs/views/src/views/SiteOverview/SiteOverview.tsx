@@ -9,7 +9,6 @@ import {
   Team,
 } from '@galaxy/views';
 import { schema } from './galaxy.config.js';
-import { setUncaughtExceptionCaptureCallback } from 'process';
 
 export const SiteOverview: FC<SiteOverview> = ({
   artifact,
@@ -20,8 +19,11 @@ export const SiteOverview: FC<SiteOverview> = ({
   team,
 }: SiteOverview) => {
   return (
-    <Card className={`${overviewVariants({ variant })} pb-0 px-0`} footer={<Team team={`${team}`} />}>
-      <Section className="flex px-3 py-6">
+    <Card
+      className={`${overviewVariants({ variant })}`}
+      footer={<Team team={`${team}`} />}
+    >
+      <Section className="flex">
         <SitePreview img={img} />
         <Section as="div" className="px-8">
           <Section className="space-y-4">

@@ -121,12 +121,12 @@ export const siteWebhookSchema = {
   artifact: '{{random.uuid}}',
   cloudfront: '{{internet.url}}',
   img: '{{image.image}}',
-  title: 'Slack Notification',
+  title: '{{company.companyName}} Notification',
   event: 'Artifact Created POST',
   progress: 'progress',
   state: 'state',
   team: '{{company.companyName}}',
-  url: '{{internet.url}}',
+  url: '{{internet.url}}' + '/services/T00000000/B00000000/XXXXXXXXXXXXXXXXXXXXXXXX',
   date: '{{date.past}}',
 };
 

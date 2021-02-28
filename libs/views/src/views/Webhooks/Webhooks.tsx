@@ -4,15 +4,13 @@ import { Webhook } from '@galaxy/views';
 
 export const Webhooks: FC<Webhooks> = ({ webhooks, title, description }) => {
   const allWebhooks = webhooks.map((webhook) => {
-    const { title, url, state, img, progress, date } = webhook;
+    const { title, url, state, img, progress, date, event } = webhook;
     return (
       <Webhook
         title={`${title}`}
         url={`${url}`}
         state={`${state}`}
-        img={img}
-        progress={progress}
-        date={date}
+        event={`${event}`}
       />
     );
   });
