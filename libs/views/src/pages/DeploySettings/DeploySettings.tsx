@@ -6,6 +6,7 @@ import {
   Menu,
   Panel,
   fakerHeader,
+  fakerSiteControls,
 } from '@galaxy/core';
 import { SiteState, Site, Dashboard, SubDirectory, Main } from '@galaxy/views';
 
@@ -14,6 +15,7 @@ export const DeploySettings: FC<DeploySettings> = ({
   items,
   title,
   actions,
+  subDirectory,
 }) => {
   return (
     <Dashboard {...fakerHeader}>
@@ -55,7 +57,7 @@ export const DeploySettings: FC<DeploySettings> = ({
           </Panel>
         </Section>
         <Main actions={actions} title={title}>
-          <SubDirectory />
+          <SubDirectory {...subDirectory} />
         </Main>
       </Section>
     </Dashboard>
@@ -67,4 +69,5 @@ export type DeploySettings = {
   title?: Panel;
   actions?: Panel;
   name: Site;
+  subDirectory?: SubDirectory;
 };

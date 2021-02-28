@@ -1,5 +1,5 @@
 import faker from 'faker';
-import { AddDomain } from '@galaxy/views';
+import { AddDomain, SubDirectoryPath } from '@galaxy/views';
 
 const preview = [
   'https://s0.wp.com/mshots/v1/https://tailwindcss.com?w=160',
@@ -117,6 +117,29 @@ export const fakerSiteDomains = fakerGenerator({
 
 export const fakerSiteDomain = fakerGenerator({ schema: siteDomainSchema })[0];
 
+export const siteControlSchema = {
+  artifact: '{{random.uuid}}',
+  cloudfront: '{{internet.url}}',
+  img: '{{image.image}}',
+  name: '{{company.companyName}}',
+  progress: 'progress',
+  state: 'state',
+  team: '{{company.companyName}}',
+  url: '{{internet.url}}',
+  date: '{{date.past}}',
+  children: `foo`,
+};
+
+export const fakerSiteControls = fakerGenerator({
+  schema: siteControlSchema,
+  min: 0,
+  max: 5,
+});
+
+export const fakerSiteControl = fakerGenerator({
+  schema: siteControlSchema,
+})[0];
+
 export const siteWebhookSchema = {
   artifact: '{{random.uuid}}',
   cloudfront: '{{internet.url}}',
@@ -201,6 +224,12 @@ const dashboardMediaCdn = {
   },
 };
 
+const dashboardSiteControlSubDirectory = {
+  subDirectory: {
+    controls: fakerSiteControls,
+  },
+};
+
 const dashboardSiteDomainsActions = {
   actions: [{ component: AddDomain({ title: 'Add a new domain' }) }],
 };
@@ -226,6 +255,7 @@ export const fakerDeploySettings = {
   title: 'Deploy Settings',
   ...fakerSite,
   ...dashboardSiteMenuItems,
+  ...dashboardSiteControlSubDirectory,
 };
 
 // Page: Live/Overview

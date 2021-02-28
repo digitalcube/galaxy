@@ -1,14 +1,8 @@
 import React, { FC } from 'react';
-import {
-  Section,
-  Main,
-  fakerHeader,
-} from '@galaxy/core';
-import { SiteOverview, Site, Dashboard, Aside } from '@galaxy/views';
+import { Section, fakerHeader } from '@galaxy/core';
+import { SiteOverview, Site, Dashboard, Aside, Main } from '@galaxy/views';
 
-export const Live: FC<Live> = ({
-  name,
-}) => {
+export const Live: FC<Live> = ({ name }) => {
   return (
     <Dashboard {...fakerHeader}>
       <Section className="md:flex min-h-screen border-t border-shifter-gray-200">
