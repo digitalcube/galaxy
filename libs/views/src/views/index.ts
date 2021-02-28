@@ -16,3 +16,4 @@ export * from './WpControls';
 export * from './Control';
 export * from './Webhooks';
 export * from './Webhook';
+export * from './Aside';
