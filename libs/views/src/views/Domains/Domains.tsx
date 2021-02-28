@@ -1,8 +1,8 @@
 import React, { FC } from 'react';
-import { Section, Heading } from '@galaxy/core';
-import { Domain, AddDomain } from '@galaxy/views';
+import { Section } from '@galaxy/core';
+import { Domain } from '@galaxy/views';
 
-export const Domains: FC<Domains> = ({ domains, title }) => {
+export const Domains: FC<Domains> = ({ domains }) => {
   const allDomains = domains.map((domain) => {
     const { name, url, state, img, team, progress } = domain;
     return (
@@ -19,12 +19,6 @@ export const Domains: FC<Domains> = ({ domains, title }) => {
 
   return (
     <Section className="space-y-10">
-      <Section className="flex flex-row items-center justify-between ">
-        <Heading fontSize="6" fontWeight="strong">
-          {title}
-        </Heading>
-        <AddDomain />
-      </Section>
       <Section className="space-y-4">{allDomains}</Section>
     </Section>
   );

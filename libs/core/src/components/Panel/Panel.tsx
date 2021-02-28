@@ -3,6 +3,7 @@ import { Section, Heading, Button } from '@galaxy/core';
 
 const PanelActions: FC<Panel> = ({ actions }) => {
   if (!actions) return null;
+  console.log(actions);
   return (
     <Section>
       {actions.map((action) => {

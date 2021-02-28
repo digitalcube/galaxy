@@ -193,7 +193,7 @@ const dashboardWpControls = {
 };
 
 const dashboardSiteDomainsActions = {
-  actions: [{ component: AddDomain({ label: 'Add a new domain' }) }],
+  actions: [{ component: AddDomain({ title: 'Add a new domain' }) }],
 };
 
 // Page: Home
@@ -216,7 +216,6 @@ export const fakerDomains = {
 export const fakerDeploySettings = {
   title: 'Deploy Settings',
   ...fakerSite,
-  ...dashboardSiteDomainsActions,
   ...dashboardSiteMenuItems,
 };
 

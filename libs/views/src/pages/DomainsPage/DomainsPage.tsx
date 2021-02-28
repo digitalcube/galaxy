@@ -19,7 +19,7 @@ export const DomainsPage: FC<DomainsPage> = ({
           actions={actions}
         >
           <Section className="space-y-4">
-            <Card className="px-3 py-6">Steps to connect your domain</Card>
+            <Card>Steps to connect your domain</Card>
             <Domains domains={domains} />
           </Section>
         </Panel>
