@@ -13,3 +13,6 @@ export * from './SiteOverview';
 export * from './Sites';
 export * from './SubDirectory';
 export * from './WpControls';
+export * from './Control';
+export * from './Webhooks';
+export * from './Webhook';

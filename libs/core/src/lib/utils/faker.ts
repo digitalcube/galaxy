@@ -103,7 +103,7 @@ export const siteDomainSchema = {
   img: '{{image.image}}',
   name: '{{company.companyName}}',
   progress: 'progress',
-  state: 'artifactState',
+  state: 'state',
   team: '{{company.companyName}}',
   url: '{{internet.url}}',
   date: '{{date.past}}',
@@ -116,6 +116,29 @@ export const fakerSiteDomains = fakerGenerator({
 });
 
 export const fakerSiteDomain = fakerGenerator({ schema: siteDomainSchema })[0];
+
+export const siteWebhookSchema = {
+  artifact: '{{random.uuid}}',
+  cloudfront: '{{internet.url}}',
+  img: '{{image.image}}',
+  title: 'Slack Notification',
+  event: 'Artifact Created POST',
+  progress: 'progress',
+  state: 'state',
+  team: '{{company.companyName}}',
+  url: '{{internet.url}}',
+  date: '{{date.past}}',
+};
+
+export const fakerSiteWebhooks = fakerGenerator({
+  schema: siteWebhookSchema,
+  min: 0,
+  max: 5,
+});
+
+export const fakerSiteWebhook = fakerGenerator({
+  schema: siteWebhookSchema,
+})[0];
 
 const dashboardHeaderMenuItems = {
   items: [
@@ -162,7 +185,6 @@ const dashboardContainer = {
     },
   },
 };
-
 
 const dashboardWpControls = {
   wpControls: {

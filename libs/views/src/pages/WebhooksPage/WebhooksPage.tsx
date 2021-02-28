@@ -6,6 +6,7 @@ import {
   Menu,
   Panel,
   fakerHeader,
+  fakerSiteWebhooks,
 } from '@galaxy/core';
 
 import {
@@ -14,6 +15,7 @@ import {
   SiteProgress,
   Dashboard,
   Container,
+  Webhooks,
 } from '@galaxy/views';
 
 export const WebhooksPage: FC<WebhooksPage> = ({ items, name }) => {
@@ -54,7 +56,9 @@ export const WebhooksPage: FC<WebhooksPage> = ({ items, name }) => {
             <Menu alignment="vertical" items={items} />
           </Panel>
         </Section>
-        <Panel className="flex-1 md:border-l">Webhooks</Panel>
+        <Panel className="flex-1 md:border-l">
+          <Webhooks webhooks={fakerSiteWebhooks} />
+        </Panel>
       </Section>
     </Dashboard>
   );
