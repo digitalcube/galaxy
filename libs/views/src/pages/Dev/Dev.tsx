@@ -17,22 +17,18 @@ import {
   WpVersion,
   WpControls,
   Aside,
+  Main,
 } from '@galaxy/views';
 
-export const Dev: FC<Dev> = ({
-  items,
-  name,
-  container,
-  wpControls,
-}) => {
+export const Dev: FC<Dev> = ({ items, name, container, wpControls }) => {
   return (
     <Dashboard {...fakerHeader}>
       <Section className="md:flex min-h-screen border-t border-shifter-gray-200">
         <Aside items={items} name={name} />
-        <Panel className="flex-1 md:border-l">
+        <Main>
           <WpControls {...wpControls} />
           <Container {...container} />
-        </Panel>
+        </Main>
       </Section>
     </Dashboard>
   );

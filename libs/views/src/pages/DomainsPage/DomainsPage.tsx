@@ -1,6 +1,6 @@
 import React, { FC } from 'react';
 import { Section, Panel, fakerHeader, Card } from '@galaxy/core';
-import { Aside, Site, Dashboard, Domains } from '@galaxy/views';
+import { Aside, Site, Dashboard, Domains, Main } from '@galaxy/views';
 
 export const DomainsPage: FC<DomainsPage> = ({
   name,
@@ -13,16 +13,10 @@ export const DomainsPage: FC<DomainsPage> = ({
     <Dashboard {...fakerHeader}>
       <Section className="md:flex min-h-screen border-t border-shifter-gray-200">
         <Aside items={items} name={name} />
-        <Panel
-          className="flex-1 md:border-l mb-6"
-          title={`${title}`}
-          actions={actions}
-        >
-          <Section className="space-y-4">
-            <Card>Steps to connect your domain</Card>
-            <Domains domains={domains} />
-          </Section>
-        </Panel>
+        <Main actions={actions} title={title}>
+          <Card>Steps to connect your domain</Card>
+          <Domains domains={domains} />
+        </Main>
       </Section>
     </Dashboard>
   );

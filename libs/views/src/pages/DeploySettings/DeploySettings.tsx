@@ -7,7 +7,7 @@ import {
   Panel,
   fakerHeader,
 } from '@galaxy/core';
-import { SiteState, Site, Dashboard, SubDirectory } from '@galaxy/views';
+import { SiteState, Site, Dashboard, SubDirectory, Main } from '@galaxy/views';
 
 export const DeploySettings: FC<DeploySettings> = ({
   name,
@@ -54,13 +54,9 @@ export const DeploySettings: FC<DeploySettings> = ({
             <Menu alignment="vertical" items={items} />
           </Panel>
         </Section>
-        <Panel
-          className="flex-1 md:border-l mb-6"
-          title={`${title}`}
-          actions={actions}
-        >
+        <Main actions={actions} title={title}>
           <SubDirectory />
-        </Panel>
+        </Main>
       </Section>
     </Dashboard>
   );

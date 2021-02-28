@@ -1,9 +1,5 @@
 import React, { FC } from 'react';
-import {
-  Section,
-  Panel,
-  fakerHeader,
-} from '@galaxy/core';
+import { Section, Panel, fakerHeader } from '@galaxy/core';
 
 import {
   SiteState,
@@ -13,6 +9,7 @@ import {
   Deploys,
   Dashboard,
   Aside,
+  Main,
 } from '@galaxy/views';
 
 export const Home: FC<Home> = ({
@@ -31,7 +28,7 @@ export const Home: FC<Home> = ({
     <Dashboard {...fakerHeader}>
       <Section className="md:flex min-h-screen border-t border-shifter-gray-200">
         <Aside items={items} name={name} />
-        <Panel className="flex-1 md:border-l">
+        <Main>
           <SiteOverview
             cloudfront={`${cloudfront}`}
             state={`${state}`}
@@ -56,7 +53,7 @@ export const Home: FC<Home> = ({
             team={team}
             variant={variant}
           />
-        </Panel>
+        </Main>
       </Section>
     </Dashboard>
   );

@@ -3,7 +3,6 @@ import { Section, Heading, Button } from '@galaxy/core';
 
 const PanelActions: FC<Panel> = ({ actions }) => {
   if (!actions) return null;
-  console.log(actions);
   return (
     <Section>
       {actions.map((action) => {
@@ -14,12 +13,20 @@ const PanelActions: FC<Panel> = ({ actions }) => {
   );
 };
 
+const PanelTitle: FC<Panel> = ({ title }) => {
+  if (!title) return null;
+  return (
+    <Heading variant="primary" fontWeight="strong" fontSize="7">
+      {title}
+    </Heading>
+  );
+};
+
 const PanelHeader: FC<Panel> = ({ title, actions }) => {
+  if (!title || !actions) return null;
   return (
     <Section className="mb-6 flex justify-between">
-      <Heading variant="primary" fontWeight="strong" fontSize="7">
-        {title}
-      </Heading>
+      <PanelTitle title={title} />
       <PanelActions actions={actions} />
     </Section>
   );
