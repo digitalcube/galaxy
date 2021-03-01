@@ -10,24 +10,31 @@ export const ControlSettings: FC<Control> = ({ children }: Control) => {
   );
 };
 
-export const Control: FC<Control> = ({ title, state, children }: Control) => {
-  console.log(children);
+export const Control: FC<Control> = ({
+  title,
+  description,
+  state,
+  children,
+}: Control) => {
   return (
     <Card>
       <Section className="flex flex-row items-center justify-between space-x-2">
-        <Heading fontSize="3">
-          {title}
-          <span
-            className={
-              state === false
-                ? 'text-status-danger-default'
-                : 'text-status-success-default'
-            }
-          >
-            {' '}
-            {state === false ? 'off' : 'on'}
-          </span>
-        </Heading>
+        <Section className="flex flex-col space-y-4">
+          <Heading fontSize="4">
+            {title}
+            <span
+              className={
+                state === false
+                  ? 'text-status-danger-default'
+                  : 'text-status-success-default'
+              }
+            >
+              {' '}
+              {state === false ? 'off' : 'on'}
+            </span>
+          </Heading>
+          <Heading fontSize="3">{description}</Heading>
+        </Section>
         <Toggle state={state} />
       </Section>
       {state ? <ControlSettings children={children} /> : null}
@@ -38,9 +45,6 @@ export const Control: FC<Control> = ({ title, state, children }: Control) => {
 export type Control = {
   children?: ReactNode;
   title: string;
+  description: string;
   state: boolean;
 };
-
-// export type ControlSettings = {
-//   settings?: any;
-// };

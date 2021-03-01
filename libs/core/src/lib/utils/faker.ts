@@ -139,12 +139,14 @@ export const fakerSiteDomain = fakerGenerator({ schema: siteDomainSchema })[0];
 
 export const siteControlSchema = {
   title: 'Subdirectory deploy is',
+  description:
+    'when a new deploy is generated, a downloadable WordPress backup will also be created.',
   state: true,
 };
 
 export const fakerSiteControls = fakerGenerator({
   schema: siteControlSchema,
-  min: 0,
+  min: 1,
   max: 5,
 });
 

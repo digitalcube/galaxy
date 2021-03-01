@@ -1,11 +1,12 @@
-import React, { FC, ReactNode, createElement, Children } from 'react';
+import React, { FC } from 'react';
 import { Section } from '@galaxy/core';
 import { Control } from '@galaxy/views';
 
 export const Controls: FC<Controls> = ({ controls }) => {
   if (!controls) return null;
   const allControls = controls.map((control) => {
-    return <Control {...control} />;
+    const { title, description } = control;
+    return <Control title={title} description={description} />;
   });
 
   return (

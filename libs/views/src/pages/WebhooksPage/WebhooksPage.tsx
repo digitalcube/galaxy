@@ -1,10 +1,5 @@
 import React, { FC } from 'react';
-import {
-  Section,
-  Panel,
-  fakerHeader,
-  fakerSiteWebhooks,
-} from '@galaxy/core';
+import { Section, fakerHeader, fakerSiteWebhooks } from '@galaxy/core';
 
 import {
   SiteState,
@@ -14,6 +9,7 @@ import {
   Container,
   Webhooks,
   Aside,
+  Main,
 } from '@galaxy/views';
 
 export const WebhooksPage: FC<WebhooksPage> = ({ items, name }) => {
@@ -21,9 +17,9 @@ export const WebhooksPage: FC<WebhooksPage> = ({ items, name }) => {
     <Dashboard {...fakerHeader}>
       <Section className="md:flex min-h-screen border-t border-shifter-gray-200">
         <Aside items={items} name={name} />
-        <Panel className="flex-1 md:border-l">
+        <Main>
           <Webhooks webhooks={fakerSiteWebhooks} />
-        </Panel>
+        </Main>
       </Section>
     </Dashboard>
   );
