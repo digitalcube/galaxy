@@ -5,7 +5,7 @@ import { defaultStorybookConfig } from '../../.storybook/docs';
 export default {
   ...defaultStorybookConfig,
   component: SettingsPage,
-  title: `Shifter/Dashboard/Pages/Sites/Site/SettingsPage/State`,
+  title: `Shifter/Dashboard/Pages/Sites/Site/Settings/State`,
 };
 
 export const Zero = () => {

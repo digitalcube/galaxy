@@ -3,10 +3,11 @@ import { Section, Heading, SecurityBuiltIn } from '@galaxy/core';
 import { Artifact } from '@galaxy/views';
 
 export const Artifacts: FC<Artifacts> = ({ artifacts, title, description }) => {
-  const allArtifacts = artifacts.map((artifact) => {
+  const allArtifacts = artifacts.map((artifact, i) => {
     const { name, url, state, img, progress, date } = artifact;
     return (
       <Artifact
+        key={i}
         name={`${name}`}
         url={`${url}`}
         state={`${state}`}

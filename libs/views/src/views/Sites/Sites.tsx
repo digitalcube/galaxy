@@ -3,9 +3,10 @@ import { Section } from '@galaxy/core';
 import { Site, SitesControls } from '@galaxy/views';
 
 export const Sites: FC<Sites> = ({ sites }) => {
-  const allSites = sites.map((site) => {
+  const allSites = sites.map((site, i) => {
     return (
       <Site
+        key={i}
         name={`${site.name}`}
         url={`${site.url}`}
         state={`${site.state}`}
