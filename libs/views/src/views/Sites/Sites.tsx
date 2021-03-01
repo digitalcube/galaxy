@@ -18,7 +18,7 @@ export const Sites: FC<Sites> = ({ sites }) => {
   });
 
   return (
-    <Section className="space-y-10">
+    <Section className="space-y-10 px-8">
       <SitesControls />
       <Section className="space-y-4">{allSites}</Section>
     </Section>
