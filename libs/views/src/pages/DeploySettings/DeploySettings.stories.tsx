@@ -10,6 +10,5 @@ export default {
 };
 
 export const Zero = () => {
-  console.log(fakerDeploySettings);
   return <DeploySettings {...fakerDeploySettings} />;
 };

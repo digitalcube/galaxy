@@ -1,18 +1,17 @@
-import React, { FC, ReactNode } from 'react';
-import { Section, Heading, Toggle, Card } from '@galaxy/core';
+import React, { FC, ReactNode, createElement } from 'react';
+import { Section, Heading, Toggle, Card, Button } from '@galaxy/core';
 
-export const ControlSettings: FC<ControlSettings> = ({
-  children,
-}: ControlSettings) => {
+export const ControlSettings: FC<Control> = ({ children }: Control) => {
   if (!children) return null;
   return (
     <Section className="py-6 border-t border-shifter-gray-200 space-y-4">
-      {children}
+      {children ? children : null}
     </Section>
   );
 };
 
 export const Control: FC<Control> = ({ title, state, children }: Control) => {
+  console.log(children);
   return (
     <Card>
       <Section className="flex flex-row items-center justify-between space-x-2">
@@ -31,17 +30,17 @@ export const Control: FC<Control> = ({ title, state, children }: Control) => {
         </Heading>
         <Toggle state={state} />
       </Section>
-      <ControlSettings children={children} />
+      {state ? <ControlSettings children={children} /> : null}
     </Card>
   );
 };
 
 export type Control = {
-  children?: ControlSettings;
+  children?: ReactNode;
   title: string;
   state: boolean;
 };
 
-export type ControlSettings = {
-  children?: ReactNode;
-};
+// export type ControlSettings = {
+//   settings?: any;
+// };

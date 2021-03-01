@@ -6,7 +6,6 @@ import {
   Menu,
   Panel,
   fakerHeader,
-  fakerSiteControls,
 } from '@galaxy/core';
 import { SiteState, Site, Dashboard, SubDirectory, Main } from '@galaxy/views';
 

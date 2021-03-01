@@ -1,15 +1,11 @@
-import React, { FC, ReactNode } from 'react';
+import React, { FC, ReactNode, createElement, Children } from 'react';
 import { Section } from '@galaxy/core';
 import { Control } from '@galaxy/views';
 
 export const Controls: FC<Controls> = ({ controls }) => {
+  if (!controls) return null;
   const allControls = controls.map((control) => {
-    const { title, state, children } = control;
-    return (
-      <Control title={title} state={state}>
-        {children ? children : null}
-      </Control>
-    );
+    return <Control {...control} />;
   });
 
   return (
@@ -21,11 +17,5 @@ export const Controls: FC<Controls> = ({ controls }) => {
 
 export type Controls = {
   controls?: any;
-  children?: ReactNode;
   title?: string;
-};
-
-Controls.defaultProps = {
-  controls: {},
-  title: 'Controls',
 };

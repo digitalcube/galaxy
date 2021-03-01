@@ -1,5 +1,5 @@
 import faker from 'faker';
-import { AddDomain, SubDirectoryPath } from '@galaxy/views';
+import { AddDomain } from '@galaxy/views';
 
 const preview = [
   'https://s0.wp.com/mshots/v1/https://tailwindcss.com?w=160',
@@ -14,6 +14,7 @@ const preview = [
 
 const siteState = ['running', 'stopped', 'generating', 'starting'];
 // const artifactState = ['published', 'scheduled', 'ready'];
+const subDirectoryState = [true, false];
 
 export type FakerGenerator = {
   schema: any;
@@ -26,7 +27,6 @@ export const fakerGenerator = ({ schema, min = 1, max }: FakerGenerator) => {
   return Array.from({ length: faker.random.number({ min, max }) }).map(() =>
     Object.keys(schema).reduce((entity, key) => {
       if (key === 'state') {
-        console.log(entity[key]);
         entity[key] = fakerArray(siteState);
         return entity;
       }
@@ -38,6 +38,11 @@ export const fakerGenerator = ({ schema, min = 1, max }: FakerGenerator) => {
 
       if (key === 'img') {
         entity[key] = fakerArray(preview);
+        return entity;
+      }
+
+      if (key === 'controls') {
+        entity[key] = [{ children: AddDomain({ title: 'Add a new domain' }) }];
         return entity;
       }
 
@@ -57,6 +62,20 @@ export const fakerProgress = (min = 0, max = 5) => {
   return faker.random.number({ min, max });
 };
 
+const dashboardSiteControlSubDirectory = {
+  subDirectory: {
+    title: 'Subdirectory',
+    state: true,
+    controls: [
+      {
+        title: 'Subdirectory deploy is',
+        state: fakerArray(subDirectoryState),
+        children: ['Display controls if setting is enabled.'],
+      },
+    ],
+  },
+};
+
 export const siteSchema = {
   artifact: '{{random.uuid}}',
   cloudfront: '{{internet.url}}',
@@ -67,6 +86,7 @@ export const siteSchema = {
   team: '{{company.companyName}}',
   url: '{{internet.url}}',
   date: '{{date.recent}}',
+  controls: { ...dashboardSiteControlSubDirectory },
 };
 
 export const fakerSites = fakerGenerator({
@@ -118,16 +138,8 @@ export const fakerSiteDomains = fakerGenerator({
 export const fakerSiteDomain = fakerGenerator({ schema: siteDomainSchema })[0];
 
 export const siteControlSchema = {
-  artifact: '{{random.uuid}}',
-  cloudfront: '{{internet.url}}',
-  img: '{{image.image}}',
-  name: '{{company.companyName}}',
-  progress: 'progress',
-  state: 'state',
-  team: '{{company.companyName}}',
-  url: '{{internet.url}}',
-  date: '{{date.past}}',
-  children: `foo`,
+  title: 'Subdirectory deploy is',
+  state: true,
 };
 
 export const fakerSiteControls = fakerGenerator({
@@ -221,12 +233,6 @@ const dashboardMediaCdn = {
   mediaCdn: {
     title: 'Media CDN is',
     state: true,
-  },
-};
-
-const dashboardSiteControlSubDirectory = {
-  subDirectory: {
-    controls: fakerSiteControls,
   },
 };
 
