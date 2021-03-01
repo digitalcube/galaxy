@@ -7,3 +7,4 @@ export * from './Staging';
 export * from './Dev';
 export * from './MediaCdnPage';
 export * from './WebhooksPage';
+export * from './Settings';

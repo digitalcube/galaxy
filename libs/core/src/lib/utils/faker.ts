@@ -300,3 +300,11 @@ export const fakerMediaCdn = {
   ...dashboardWpControls,
   ...dashboardMediaCdn,
 };
+
+// Page: Settings
+export const fakerSettings = {
+  title: 'Settings',
+  ...fakerSite,
+  ...dashboardSiteDomainsActions,
+  ...dashboardSiteMenuItems,
+};
