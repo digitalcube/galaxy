@@ -49,7 +49,7 @@ type Name = {
   variant?: 'light' | 'dark' | string;
 };
 
-const nameVariants = ({ variant }: Name) => {
+const nameVariants = ({ variant }: Pick<Name, 'variant'>) => {
   const DEFAULT = schema.components.avatar.components.name.DEFAULT;
   const variants = schema.components.avatar.components.name.variants;
   const classes = {
@@ -63,7 +63,7 @@ const nameVariants = ({ variant }: Name) => {
 
 // Image
 
-const Image: FC<Avatar> = ({ name, img, variant, size }: Image) => {
+const Image: FC<Avatar> = ({ name, img, variant, size }) => {
   return (
     <img
       src={`${img}`}
@@ -73,18 +73,13 @@ const Image: FC<Avatar> = ({ name, img, variant, size }: Image) => {
   );
 };
 
-type Image = {
-  name: string;
-  variant?: 'light' | 'dark' | string;
-  img?: string;
-  size?: string;
-};
+type Image = Avatar
 
 Image.defaultProps = {
   size: 6,
 };
 
-const imageVariants = ({ variant }: Name) => {
+const imageVariants = ({ variant }: Pick<Name, 'variant'>) => {
   const DEFAULT = schema.components.avatar.components.image.DEFAULT;
   const variants = schema.components.avatar.components.image.variants;
   const classes = {
