@@ -2,6 +2,17 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+### [0.0.12](https://github.com/digitalcube/galaxy/compare/@galaxy/amimoto-web@v0.0.11...@galaxy/amimoto-web@v0.0.12) (2021-01-29)
+
+### [0.0.11](https://github.com/digitalcube/galaxy/compare/@galaxy/amimoto-web@v0.0.2...@galaxy/amimoto-web@v0.0.11) (2021-01-29)
+
+
+### Bug Fixes
+
+* move storybook conf file inside the src dir ([2b12211](https://github.com/digitalcube/galaxy/commit/2b12211363d60659624b75e02816fa8cbce7875f))
+* move storybook config to fix build lib error ([3d6f134](https://github.com/digitalcube/galaxy/commit/3d6f1342a2e72394fd96fcf89aff0363af0ac71f))
+* storybook path ([8d1141b](https://github.com/digitalcube/galaxy/commit/8d1141bbc2055a14a1379b05150e74e1b29d62ec))
+
 ### [0.0.10](https://github.com/digitalcube/galaxy/compare/@galaxy/amimoto-web@v0.0.9...@galaxy/amimoto-web@v0.0.10) (2021-01-15)
 
 ### [0.0.9](https://github.com/digitalcube/galaxy/compare/@galaxy/amimoto-web@v0.0.8...@galaxy/amimoto-web@v0.0.9) (2021-01-15)

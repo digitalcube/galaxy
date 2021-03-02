@@ -29,8 +29,8 @@ if [ "$AFFECTED" != "" ]; then
     wait
     if [ "$DRY_RUN" == "False" ]; then
       echo "Publishing $lib"
-      #npm publish "$ROOT_DIR/dist/libs/$lib"
-      npm publish "$ROOT_DIR/dist/libs/${lib/-//}" # --access=public
+      npm publish "$ROOT_DIR/dist/libs/$lib" --access=public
+      #npm publish "$ROOT_DIR/dist/libs/${lib/-//}" # --access=public
     else
       echo "Dry Run, not publishing $lib"
     fi
