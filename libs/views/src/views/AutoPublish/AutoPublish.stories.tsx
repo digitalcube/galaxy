@@ -8,11 +8,11 @@ import { defaultStorybookConfig } from '../../.storybook/docs';
 export default {
   ...defaultStorybookConfig,
   component: WpControls,
-  title: `Shifter/Dashboard/Patterns/WpControls`,
+  title: `Shifter/Dashboard/Patterns/AutoPublish`,
 };
 
 export const Schemas = () => {
-  return Object.entries(schema.components.wpControls.variants).map((variant) => {
+  return Object.entries(schema.components.autoPublish.variants).map((variant) => {
     return (
       <Section className="mb-4">
         <WpControls

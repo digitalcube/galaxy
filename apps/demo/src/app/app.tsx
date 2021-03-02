@@ -1,7 +1,6 @@
 import React, { FC } from 'react';
 
 import {
-  Features,
   Benefits,
   Card,
   Header,
@@ -43,50 +42,6 @@ const PageIndex: FC = () => (
             excerpt: `Easy for non-developers to get started using WordPress themes or page builders.`,
           },
         ],
-      }}
-    />
-    <Features
-      {...{
-        getStarted: {
-          title: `Fugiat ut ullamco aute nulla?`,
-          subtitle: `Qui ut Lorem ex occaecat ea deserunt eserunt in irure ipsum veniam enim quis consequat cillum.`,
-          href: `#!`,
-          linkLabel: `Nisi veniam laboris`,
-          variant: `0`,
-        },
-        features: {
-          title: `Sunt deserunt`,
-          subtitle: `Et cillum non cupidatat non dolore nostrud ad nisi.`,
-          href: `#!`,
-          buttonLabel: `Nostrud nisi`,
-          columns: [1, null, null, null, 2, 4],
-          nodes: [
-            {
-              title: `Magic Link Logins`,
-              excerpt: `You’ll never forget your WordPress password on Shifter because you’ll never have to.`,
-              href: `#`,
-              img: `https://www.getshifter.io/static/b0d62c9540f9db3df4672e8b280c6a55/e085e/icon-API.png`,
-            },
-            {
-              title: `Security Built-in`,
-              excerpt: `Don’t spend another minute configuring security Plugins. We have you covered.`,
-              href: `#`,
-              img: `https://www.getshifter.io/static/b0d62c9540f9db3df4672e8b280c6a55/e085e/icon-API.png`,
-            },
-            {
-              title: `Integrated CDN`,
-              excerpt: `Deliver fast static content to site visitors anywhere in the world with low latency.`,
-              href: `#`,
-              img: `https://www.getshifter.io/static/b0d62c9540f9db3df4672e8b280c6a55/e085e/icon-API.png`,
-            },
-            {
-              title: `Maintenance-free`,
-              excerpt: `Never worry about security vulnerabilities from WordPress Core, themes, and outdated plugins.`,
-              href: `#`,
-              img: `https://www.getshifter.io/static/b0d62c9540f9db3df4672e8b280c6a55/e085e/icon-API.png`,
-            },
-          ],
-        },
       }}
     />
     <Testimonials

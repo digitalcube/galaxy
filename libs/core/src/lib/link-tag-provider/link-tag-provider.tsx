@@ -1,5 +1,4 @@
 import React, { createContext, FC, PropsWithChildren, useContext } from 'react';
-import { NavLink as ThemeUINavLink, Link as ThemeUILink } from 'theme-ui';
 import { Link as RRLink } from 'react-router-dom';
 import { Link as GatsbyLink } from 'gatsby';
 
@@ -7,8 +6,6 @@ export type LinkTagType =
   | 'a'
   | typeof GatsbyLink
   | typeof RRLink
-  | typeof ThemeUINavLink
-  | typeof ThemeUILink;
 const LinkTagContext = createContext<{
   tag: LinkTagType;
 }>({

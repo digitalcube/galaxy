@@ -1,5 +1,5 @@
-import React, { FC, ReactNode, createElement } from 'react';
-import { Section, Heading, Toggle, Card, Button } from '@galaxy/core';
+import React, { FC, ReactNode } from 'react';
+import { Section, Heading, Toggle, Card } from '@galaxy/core';
 
 export const ControlSettings: FC<Control> = ({ children }: Control) => {
   if (!children) return null;
