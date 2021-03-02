@@ -43,7 +43,7 @@ export const fakerGenerator = ({ schema, min = 1, max }: FakerGenerator) => {
       }
 
       if (key === 'controls') {
-        entity[key] = [{ children: AddDomain({ title: 'Add a new domain' }) }];
+        entity[key] = [{ children: null}];//AddDomain({ title: 'Add a new domain' }) 
         return entity;
       }
 
