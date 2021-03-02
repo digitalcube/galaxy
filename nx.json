@@ -60,6 +60,9 @@
     "gatsby-e2e": {
       "tags": [],
       "implicitDependencies": ["gatsby"]
+    },
+    "shifter-dashboard": {
+      "tags": []
     }
   }
 }

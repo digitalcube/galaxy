@@ -159,8 +159,8 @@ And we have to replace all library name from `@galaxy/NAME` to `@digitalcube/gal
 - For AMIMOTO Dashboard and Web -> @galaxy/amimoto
 - For AMIMOTO Web -> @galaxy/amimoto-web
 
-- For Shifter Dashboard -> @galaxy/shifter
 - For Shifter Dashboard and Web -> @galaxy/shifter
+- For Shifter Dashboard -> @galaxy/shifter-dashboard
 - For Shifter Web -> @galaxy/shifter-web
 
 ## Appendix: Document about Nx

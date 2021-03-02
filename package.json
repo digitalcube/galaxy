@@ -3,6 +3,9 @@
   "version": "0.0.1",
   "license": "MIT",
   "scripts": {
+    "postinstall": "husky install",
+    "prepublishOnly": "pinst --disable",
+    "postpublish": "pinst --enable",
     "nx": "nx",
     "start": "nx serve",
     "build": "nx build",
@@ -26,7 +29,7 @@
     "help": "nx help",
     "storybook": "start-storybook -s ./.storybook/public",
     "storybook:build": "build-storybook --static-dir ./.storybook/public",
-    "libs": "nx run-many --projects \"core,views,shifter-web,shifter,amimoto,amimoto-web\"",
+    "libs": "nx run-many --projects \"core,views,shifter-web,shifter,shifter-dashboard,amimoto,amimoto-web\"",
     "libs:lint": "yarn libs --target lint",
     "libs:format": "yarn libs --target format",
     "libs:build": "yarn libs --target build",
@@ -147,10 +150,11 @@
     "eslint-plugin-jsx-a11y": "6.4.1",
     "eslint-plugin-react": "7.21.5",
     "eslint-plugin-react-hooks": "4.2.0",
-    "husky": "^4.3.0",
+    "husky": "^5.0.9",
     "jest": "26.2.2",
-    "lint-staged": "^10.3.0",
     "postcss-import": "^14.0.0",
+    "lint-staged": "^10.5.4",
+    "pinst": "^2.1.4",
     "prettier": "2.1.2",
     "react": "^16.13.1",
     "react-docgen-typescript-loader": "^3.7.2",
@@ -166,5 +170,13 @@
     "tslint": "~6.1.0",
     "typescript": "~4.0.3",
     "url-loader": "^3.0.0"
+  },
+  "lint-staged": {
+    "*.{js,jsx,ts,tsx}": [
+      "./node_modules/.bin/eslint --fix"
+    ],
+    ".circleci/*.yml": [
+      "circleci config validate"
+    ]
   }
 }
