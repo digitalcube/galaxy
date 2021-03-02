@@ -1,0 +1,2 @@
+
+jest.mock('lottie-web')

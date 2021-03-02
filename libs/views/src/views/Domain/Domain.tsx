@@ -1,8 +1,8 @@
 import React, { FC } from 'react';
 import classNames from 'classnames';
-import { DomainState } from '@galaxy/views';
 import { Button, Section, Heading } from '@galaxy/core';
 import { DotsHorizontal } from 'heroicons-react';
+import { DomainState } from './DomainState';
 import { schema } from './galaxy.config.js';
 
 export const Domain: FC<Domain> = ({
@@ -15,7 +15,7 @@ export const Domain: FC<Domain> = ({
   progress,
 }: Domain) => {
   return (
-    <Section className={`${domainVariants({ variant })}`}>
+    <Section className={`${getDomainSectionClassName({ variant })}`}>
       <Heading>{url}</Heading>
       <Section as="span" className="space-x-2 flex items-center">
         <DomainState state={state} />
@@ -41,7 +41,11 @@ Domain.defaultProps = {
   variant: 'light',
 };
 
-const domainVariants = ({ variant }: Domain) => {
+/**
+ * Get the domain section class name
+ * @param param0 
+ */
+export const getDomainSectionClassName = ({ variant }: Pick<Domain, 'variant'>) => {
   const variants = schema.components.domain.variants;
   const DEFAULT = schema.components.domain.DEFAULT;
 
