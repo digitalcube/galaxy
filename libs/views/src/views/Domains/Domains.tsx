@@ -1,35 +1,23 @@
 import React, { FC } from 'react';
 import { Section } from '@galaxy/core';
-import { Domain } from '@galaxy/views';
+import { Domain } from '../Domain';
 
-export const Domains: FC<Domains> = ({ domains }) => {
-  const allDomains = domains.map((domain) => {
-    const { name, url, state, img, team, progress } = domain;
-    return (
-      <Domain
-        name={`${name}`}
-        url={`${url}`}
-        state={`${state}`}
-        img={img}
-        team={team}
-        progress={progress}
-      />
-    );
-  });
-
-  return (
+export const Domains: FC<Domains> = ({ domains }) => (
     <Section className="space-y-10">
-      <Section className="space-y-4">{allDomains}</Section>
+      <Section className="space-y-4">
+        {domains ? domains.map((domain) => (
+          <Domain {...domain} />
+        )) : null}
+      </Section>
     </Section>
-  );
-};
+);
 
 export type Domains = {
-  domains?: any;
+  domains?: Domain[];
   title?: string;
 };
 
 Domains.defaultProps = {
-  domains: {},
+  domains: [],
   title: 'Domains',
 };
