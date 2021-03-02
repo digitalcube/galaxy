@@ -5,7 +5,7 @@ import { defaultStorybookConfig } from '../../.storybook/docs';
 export default {
   ...defaultStorybookConfig,
   component: WordPress,
-  title: `Galaxy/Components/WordPress`,
+  title: `Galaxy/Icons/WordPress`,
 };
 
 export const Default = () => <WordPress />;

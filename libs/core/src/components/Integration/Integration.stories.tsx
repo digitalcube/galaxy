@@ -5,7 +5,7 @@ import { defaultStorybookConfig } from '../../.storybook/docs';
 export default {
   ...defaultStorybookConfig,
   component: Integration,
-  title: `Galaxy/Components/Integration`,
+  title: `Galaxy/Icons/Integration`,
 };
 
 export const Default = () => <Integration />;

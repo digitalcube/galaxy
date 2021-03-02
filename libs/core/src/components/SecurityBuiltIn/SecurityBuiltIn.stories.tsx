@@ -5,7 +5,7 @@ import { defaultStorybookConfig } from '../../.storybook/docs';
 export default {
   ...defaultStorybookConfig,
   component: SecurityBuiltIn,
-  title: `Galaxy/Components/SecurityBuiltIn`,
+  title: `Galaxy/Icons/SecurityBuiltIn`,
 };
 
 export const Default = () => <SecurityBuiltIn />;

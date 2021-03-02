@@ -5,7 +5,7 @@ import { defaultStorybookConfig } from '../../.storybook/docs';
 export default {
   ...defaultStorybookConfig,
   component: Php,
-  title: `Galaxy/Components/Php`,
+  title: `Galaxy/Icons/Php`,
 };
 
 export const Default = () => <Php />;
