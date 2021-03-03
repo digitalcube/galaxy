@@ -10,5 +10,12 @@ export default {
 };
 
 export const Default = () => {
-  return <Image img="./post-featured-image.png" alt="Image" />;
+  return (
+    <Image
+      img="./post-featured-image.png"
+      alt="Image Alt"
+      caption="Image Caption"
+      imgDefault="//placehold.it/1000"
+    />
+  );
 };

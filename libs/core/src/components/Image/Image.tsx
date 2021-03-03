@@ -1,25 +1,31 @@
-/** @jsxRuntime classic */
-/** @jsx jsx */
-import { jsx } from 'theme-ui';
-import { FC } from 'react';
-import { Image as ThemeUIImage } from 'theme-ui';
+import React, { FC } from 'react';
 
 type Image = {
   img?: string;
   alt?: string;
-  sx?: object;
-  kind?: string;
+  variant?: string;
+  imgDefault?: string;
+  className?: string;
+  caption?: string;
 };
 
-export const Image: FC<Image> = ({ img, sx, kind }: Image) => {
-  if (!img) return null;
+const Caption: FC<Image> = ({ caption }: Image) => {
+  if (!caption) return null;
+  return <figcaption>{caption}</figcaption>;
+};
+
+export const Image: FC<Image> = ({
+  img,
+  imgDefault,
+  alt,
+  className,
+  caption,
+}: Image) => {
+  img = img === '' ? imgDefault : img;
   return (
-    <ThemeUIImage
-      variant={kind}
-      src={img}
-      sx={{
-        ...sx,
-      }}
-    />
+    <figure>
+      <img className={className} src={img} alt={alt} />
+      <Caption caption={caption} />
+    </figure>
   );
 };

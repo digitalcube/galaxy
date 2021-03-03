@@ -8,7 +8,6 @@ export * from './Card';
 export * from './Date';
 export * from './Heading';
 export * from './Image';
-export * from './Image/Fallback';
 export * from './Input';
 export * from './Menu';
 export * from './Panel';
