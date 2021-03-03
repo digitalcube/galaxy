@@ -2,17 +2,13 @@ import React, { FC } from 'react';
 import classNames from 'classnames';
 import { Button, Section, Heading } from '@galaxy/core';
 import { DotsHorizontal } from 'heroicons-react';
-import { DomainState } from './DomainState';
+import { DomainState } from '@galaxy/views';
 import { schema } from './galaxy.config.js';
 
 export const Domain: FC<Domain> = ({
-  name,
   url,
-  team,
   variant,
-  img,
   state,
-  progress,
 }: Domain) => {
   return (
     <Section className={`${getDomainSectionClassName({ variant })}`}>
