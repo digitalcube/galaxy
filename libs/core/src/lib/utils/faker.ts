@@ -1,5 +1,6 @@
 import faker from 'faker';
-import { AddDomain } from '@galaxy/views';
+// resolve circular depencency between view and core
+// import { AddDomain } from '@galaxy/views';
 
 const preview = [
   'https://s0.wp.com/mshots/v1/https://tailwindcss.com?w=160',
@@ -43,7 +44,7 @@ export const fakerGenerator = ({ schema, min = 1, max }: FakerGenerator) => {
       }
 
       if (key === 'controls') {
-        entity[key] = [{ children: AddDomain({ title: 'Add a new domain' }) }];
+        entity[key] = [{ children: null}];//AddDomain({ title: 'Add a new domain' }) 
         return entity;
       }
 
@@ -136,7 +137,7 @@ export const fakerSiteDomains = fakerGenerator({
   schema: siteDomainSchema,
   min: 0,
   max: 5,
-});
+}) as any;
 
 export const fakerSiteDomain = fakerGenerator({ schema: siteDomainSchema })[0];
 
@@ -242,7 +243,9 @@ const dashboardMediaCdn = {
 };
 
 const dashboardSiteDomainsActions = {
-  actions: [{ component: AddDomain({ title: 'Add a new domain' }) }],
+  actions: [{ 
+    component: null,//AddDomain({ title: 'Add a new domain'})
+  }],
 };
 
 // Page: Home

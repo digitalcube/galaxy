@@ -1,0 +1,11 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`views/Domain getDomainSectionClassName Given "" as variant, should match snapshot 1`] = `"bg-white ring rounded ring-shifter-gray-200 flex overflow-hidden shadow hover:shadow-lg transition-shadow flex justify-between items-center p-4"`;
+
+exports[`views/Domain getDomainSectionClassName Given "dark" as variant, should match snapshot 1`] = `"bg-shifter-purple-800 text-shifter-purple-200 ring rounded ring-shifter-gray-200 flex overflow-hidden shadow hover:shadow-lg transition-shadow flex justify-between items-center p-4"`;
+
+exports[`views/Domain getDomainSectionClassName Given "dummy" as variant, should match snapshot 1`] = `"ring rounded ring-shifter-gray-200 flex overflow-hidden shadow hover:shadow-lg transition-shadow flex justify-between items-center p-4"`;
+
+exports[`views/Domain getDomainSectionClassName Given "light" as variant, should match snapshot 1`] = `"bg-white ring rounded ring-shifter-gray-200 flex overflow-hidden shadow hover:shadow-lg transition-shadow flex justify-between items-center p-4"`;
+
+exports[`views/Domain getDomainSectionClassName Given undefined as variant, should match snapshot 1`] = `"bg-white ring rounded ring-shifter-gray-200 flex overflow-hidden shadow hover:shadow-lg transition-shadow flex justify-between items-center p-4"`;
