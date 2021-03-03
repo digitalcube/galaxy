@@ -22,18 +22,6 @@ export type Avatar = {
   size?: number;
 };
 
-const avatarVariants = ({ variant }: Avatar) => {
-  const DEFAULT = schema.components.avatar.DEFAULT;
-  const variants = schema.components.avatar.variants;
-  const classes = {
-    [`${DEFAULT}`]: true,
-    [`${variants.light}`]: !variant || variant === 'light',
-    [`${variants.dark}`]: variant === 'dark',
-  };
-
-  return classNames(classes);
-};
-
 // Name
 
 const Name: FC<Avatar> = ({ name, variant }: Name) => {

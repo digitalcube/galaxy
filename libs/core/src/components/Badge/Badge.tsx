@@ -1,5 +1,5 @@
 import React, { FC, ReactNode } from 'react';
-import { Heading, getVariants } from '@galaxy/core';
+import { Heading } from '@galaxy/core';
 
 export const Badge: FC<Badge> = ({ children, className, variant }: Badge) => {
   if (!children) return null;
