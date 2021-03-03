@@ -1,7 +1,7 @@
 import React from 'react';
 import { getVariants } from '@galaxy/core';
 import { DomainState } from '@galaxy/views';
-import { schema } from './galaxy.config.js';
+import { schema } from './galaxy.config';
 
 import { defaultStorybookConfig } from '../../.storybook/docs';
 export default {
