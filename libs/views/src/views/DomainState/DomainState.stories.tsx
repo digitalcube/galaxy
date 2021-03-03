@@ -11,12 +11,9 @@ export default {
 };
 
 export const Variants = ({
-  states = schema.components.domainState.variants.light.states,
+  states = schema.components.domainState.variants.light,
 }) => {
-  return getVariants({ variants: states }).map((v, i) => {
-    const { variant } = v;
-    return (
-      <DomainState title={variant} state={variant} key={i} />
-    );
+  return getVariants({ variants: states }).map((state, i) => {
+    return <DomainState title={state.state} {...state} key={i} />;
   });
 };

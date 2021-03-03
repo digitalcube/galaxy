@@ -8,6 +8,7 @@ export const DomainState: FC<DomainState> = ({
   title,
   variants,
 }: DomainState) => {
+  console.log(state);
   return (
     <Badge
       className={`${className} ${cssClasses({
@@ -30,5 +31,5 @@ export type DomainState = {
 
 DomainState.defaultProps = {
   variant: 'light',
-  variants: schema.components.domainState.variants.light.states,
+  variants: schema.components.domainState.variants.light,
 };
