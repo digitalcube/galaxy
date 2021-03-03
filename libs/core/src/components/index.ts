@@ -19,7 +19,6 @@ export * from './Select';
 export * from './Slider';
 export * from './Swatch';
 export * from './Table';
-export * from './Text';
 export * from './Toggle';
 export * from './WordPress';
 export * from './Php';
