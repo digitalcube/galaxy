@@ -18,7 +18,7 @@ export const Domain: FC<Domain> = ({
     <Section className={`${domainVariants({ variant })}`}>
       <Heading>{url}</Heading>
       <Section as="span" className="space-x-2 flex items-center">
-        <DomainState state={state} />
+        <DomainState title={state} state={state} variant={variant} />
         <Button variant="ghost">
           <DotsHorizontal />
         </Button>

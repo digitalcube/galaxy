@@ -3,3 +3,4 @@ export * from './swatches';
 export * from './names';
 export * from './faker';
 export * from './progress';
+export * from './variants';

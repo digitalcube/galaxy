@@ -20,3 +20,4 @@ export * from './Webhook';
 export * from './Webhooks';
 export * from './WpControls';
 export * from './SiteSettings';
+export * from './DomainState';

@@ -1,12 +1,17 @@
 import React, { FC, ReactNode } from 'react';
-import { Badge as ThemeUIBadge } from 'theme-ui';
+import { Heading, getVariants } from '@galaxy/core';
 
-type Badge = {
-  children?: ReactNode;
-  kind?: string;
+export const Badge: FC<Badge> = ({ children, className, variant }: Badge) => {
+  if (!children) return null;
+  return (
+    <Heading fontSize="4" fontWeight="strong" className={`${className}`}>
+      {children}
+    </Heading>
+  );
 };
 
-export const Badge: FC<Badge> = ({ children, kind = 'primary' }: Badge) => {
-  if (!children) return null;
-  return <ThemeUIBadge variant={kind}>{children}</ThemeUIBadge>;
+export type Badge = {
+  className?: string;
+  children?: ReactNode;
+  variant?: Heading;
 };

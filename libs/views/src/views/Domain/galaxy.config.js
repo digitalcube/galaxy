@@ -21,11 +21,10 @@ module.exports = {
             variants: {
               light: {
                 state: {
-                  running: 'bg-status-success-light text-status-success-dark',
-                  stopped: 'bg-shifter-gray-100 text-shifter-gray-800',
-                  generating:
+                  verified: 'bg-status-success-light text-status-success-dark',
+                  pending:
                     'bg-gradient-to-r from-shifter-purple-200 text-shifter-gray-800',
-                  starting: 'bg-status-success-light text-status-success-dark',
+                  failed: 'bg-status-danger-light text-status-danger-dark',
                 },
               },
               dark: 'text-shifter-gray-200',

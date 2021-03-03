@@ -1,10 +1,6 @@
-// src/components/Deploy.stories.js
-// https://github.com/megumiteam/shifter-dashboard/blob/master/src/components/v3/artifacts/Item.tsx
-// https://github.com/megumiteam/shifter-dashboard/blob/master/src/types/artifacts.ts
-
 import React from 'react';
-
-import { Badge } from './Badge';
+import { schema } from './galaxy.config.js';
+import { Badge, getVariants } from '@galaxy/core';
 
 import { defaultStorybookConfig } from '../../.storybook/docs';
 export default {
@@ -13,13 +9,13 @@ export default {
   title: `Galaxy/Components/Badge`,
 };
 
-export const Default = () => <Badge>Default</Badge>;
-
-export const Kinds = () => (
-  <>
-    <Badge kind="primary">Primary</Badge>
-    <Badge kind="success">Success</Badge>
-    <Badge kind="warning">Warning</Badge>
-    <Badge kind="danger">Danger</Badge>
-  </>
-);
+export const Variants = ({ variants = schema.components.badge.variants }) => {
+  return getVariants({ variants: variants }).map((v, i) => {
+    const { variant, className } = v;
+    return (
+      <Badge variant={variant} className={`${className}`} key={i}>
+        {variant}
+      </Badge>
+    );
+  });
+};

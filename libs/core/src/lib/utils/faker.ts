@@ -14,6 +14,7 @@ const preview = [
 
 const siteState = ['running', 'stopped', 'generating', 'starting'];
 // const artifactState = ['published', 'scheduled', 'ready'];
+const domainState = ['pending', 'verified', 'failed', 'attached'];
 const subDirectoryState = [true, false];
 
 export type FakerGenerator = {
@@ -61,6 +62,8 @@ export const fakerProgress = (min = 0, max = 5) => {
   max = max || min;
   return faker.random.number({ min, max });
 };
+
+export const fakerDomainState = fakerArray(domainState);
 
 const dashboardSiteControlSubDirectory = {
   subDirectory: {
