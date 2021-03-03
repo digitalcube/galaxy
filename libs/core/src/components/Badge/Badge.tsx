@@ -4,7 +4,12 @@ import { Heading } from '@galaxy/core';
 export const Badge: FC<Badge> = ({ children, className, variant }: Badge) => {
   if (!children) return null;
   return (
-    <Heading fontSize="4" fontWeight="strong" className={`${className}`}>
+    <Heading
+      variant={variant}
+      fontSize="4"
+      fontWeight="strong"
+      className={`${className}`}
+    >
       {children}
     </Heading>
   );
