@@ -1,4 +1,5 @@
 import React, { FC } from 'react';
+import { Section } from '@galaxy/core';
 
 type Image = {
   img?: string;
@@ -11,7 +12,7 @@ type Image = {
 
 const Caption: FC<Image> = ({ caption }: Image) => {
   if (!caption) return null;
-  return <figcaption>{caption}</figcaption>;
+  return <Section as="figcaption">{caption}</Section>;
 };
 
 export const Image: FC<Image> = ({
@@ -23,9 +24,9 @@ export const Image: FC<Image> = ({
 }: Image) => {
   img = img === '' ? imgDefault : img;
   return (
-    <figure>
+    <Section as="figure">
       <img className={className} src={img} alt={alt} />
       <Caption caption={caption} />
-    </figure>
+    </Section>
   );
 };

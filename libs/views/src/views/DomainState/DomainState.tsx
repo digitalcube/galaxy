@@ -1,5 +1,5 @@
 import React, { FC } from 'react';
-import { Badge, cssClasses } from '@galaxy/core';
+import { Badge, css } from '@galaxy/core';
 import { schema } from './galaxy.config';
 
 export const DomainState: FC<DomainState> = ({
@@ -8,10 +8,9 @@ export const DomainState: FC<DomainState> = ({
   title,
   variants,
 }: DomainState) => {
-  console.log(state);
   return (
     <Badge
-      className={`${className} ${cssClasses({
+      className={`${className} ${css({
         variant: state,
         variants: variants,
       })}}`}

@@ -29,9 +29,5 @@ export const Animation: React.FC<Animation> = ({ animation }: Animation) => {
     });
   }, []);
 
-  return (
-    <div>
-      <div ref={element}></div>
-    </div>
-  );
+  return <div ref={element}></div>;
 };
