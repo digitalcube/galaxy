@@ -1,11 +1,11 @@
 import React, { FC } from 'react';
 import { Image, css } from '@galaxy/core';
-import { schema } from './galaxy.config.js';
+import { avatar } from './galaxy.config';
 
 export const Avatar: FC<Avatar> = ({ img, size, name, imgDefault }: Avatar) => {
   const classNames = css({
     variant: 'light',
-    variants: schema.components.avatar,
+    variants: avatar,
   });
 
   return (

@@ -1,6 +1,6 @@
 // galaxy.ts
-import React from 'react';
-import { ThemeProviderProps, ThemeProvider } from 'theme-ui';
+import React, { useEffect } from 'react';
+import { ThemeProviderProps } from 'theme-ui';
 import {
   LinkTagType,
   LinkTagProvider,
@@ -18,10 +18,59 @@ export function GalaxyThemeProvider<Theme = typeof galaxy>(
 ): React.ReactElement {
   const theme = props.theme || galaxy;
   return (
-    <ThemeProvider theme={theme as any}>
+    <ThemeProvider initialTheme={galaxy}>
       <LinkTagProvider linkType={props.linkType}>
         {props.children}
       </LinkTagProvider>
     </ThemeProvider>
   );
 }
+
+/// ###
+const getInitialTheme = () => {
+  if (typeof window !== 'undefined' && window.localStorage) {
+    console.log(window.localStorage);
+    const storedPrefs = window.localStorage.getItem('color-theme');
+    if (typeof storedPrefs === 'string') {
+      return storedPrefs;
+    }
+
+    const userMedia = window.matchMedia('(prefers-color-scheme: dark)');
+    if (userMedia.matches) {
+      return 'dark';
+    }
+  }
+
+  return 'dark';
+};
+
+export const ThemeContext = React.createContext();
+
+export const ThemeProvider = ({ initialTheme, children }) => {
+  const [theme, setTheme] = React.useState(getInitialTheme);
+
+  const rawSetTheme = (theme) => {
+    // const root = window.document.documentElement;
+    // const isDark = theme === 'dark';
+
+    // root.classList.remove(isDark ? 'light' : 'dark');
+    // root.classList.add(theme);
+    console.log(theme);
+
+    localStorage.setItem('color-theme', theme);
+  };
+
+  if (initialTheme) {
+    rawSetTheme(initialTheme);
+  }
+
+  useEffect(() => {
+    rawSetTheme(theme);
+  }, [theme]);
+
+  return (
+    <ThemeContext.Provider value={{ theme, setTheme }}>
+      {children}
+    </ThemeContext.Provider>
+  );
+};
