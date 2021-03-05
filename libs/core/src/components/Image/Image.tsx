@@ -1,15 +1,6 @@
 import React, { FC } from 'react';
 import { Section } from '@galaxy/core';
 
-type Image = {
-  img?: string;
-  alt?: string;
-  variant?: string;
-  imgDefault?: string;
-  className?: string;
-  caption?: string;
-};
-
 const Caption: FC<Image> = ({ caption }: Image) => {
   if (!caption) return null;
   return <Section as="figcaption">{caption}</Section>;
@@ -29,4 +20,12 @@ export const Image: FC<Image> = ({
       <Caption caption={caption} />
     </Section>
   );
+};
+
+export type Image = {
+  img?: string;
+  alt?: string;
+  imgDefault?: string;
+  className?: string;
+  caption?: string;
 };

@@ -44,7 +44,7 @@ export const fakerGenerator = ({ schema, min = 1, max }: FakerGenerator) => {
       }
 
       if (key === 'controls') {
-        entity[key] = [{ children: null}];//AddDomain({ title: 'Add a new domain' }) 
+        entity[key] = [{ children: null }]; //AddDomain({ title: 'Add a new domain' })
         return entity;
       }
 
@@ -193,6 +193,7 @@ const dashboardHeaderMenuItems = {
 
 const avatar = {
   avatar: {
+    size: 9,
     name: faker.name.findName(),
     img:
       'https://images.unsplash.com/photo-1472099645785-5658abf4ff4e?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=facearea&facepad=2&w=256&h=256&q=80',
@@ -243,9 +244,11 @@ const dashboardMediaCdn = {
 };
 
 const dashboardSiteDomainsActions = {
-  actions: [{ 
-    component: null,//AddDomain({ title: 'Add a new domain'})
-  }],
+  actions: [
+    {
+      component: null, //AddDomain({ title: 'Add a new domain'})
+    },
+  ],
 };
 
 // Page: Home

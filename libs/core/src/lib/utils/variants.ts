@@ -4,6 +4,12 @@ export const getVariants = ({ variants }: VariantTypes) => {
       return { state: variant[0], className: variant[1] };
     });
   }
+
+  if (variants.variants) {
+    return Object.entries(variants.variants).map((variant) => {
+      return { variant: variant[0], className: variant[1] };
+    });
+  }
 };
 
 export const getVariant = ({ variant }: VariantTypes) => {

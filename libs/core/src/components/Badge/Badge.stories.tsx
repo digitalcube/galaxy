@@ -1,5 +1,5 @@
 import React from 'react';
-import { schema } from './galaxy.config.js';
+import { badge } from './galaxy.config';
 import { Badge, getVariants } from '@galaxy/core';
 
 import { defaultStorybookConfig } from '../../.storybook/docs';
@@ -9,9 +9,12 @@ export default {
   title: `Galaxy/Components/Badge`,
 };
 
-export const Variants = ({ variants = schema.components.badge.variants }) => {
+export const Variants = ({ variants = badge }) => {
+  if (!variants) return null;
+  console.log(variants);
   return getVariants({ variants: variants }).map((v, i) => {
     const { variant, className } = v;
+    // return 'foo';
     return (
       <Badge variant={variant} className={`${className}`} key={i}>
         {variant}

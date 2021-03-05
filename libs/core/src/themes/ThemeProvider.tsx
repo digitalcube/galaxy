@@ -29,7 +29,6 @@ export function GalaxyThemeProvider<Theme = typeof galaxy>(
 /// ###
 const getInitialTheme = () => {
   if (typeof window !== 'undefined' && window.localStorage) {
-    console.log(window.localStorage);
     const storedPrefs = window.localStorage.getItem('color-theme');
     if (typeof storedPrefs === 'string') {
       return storedPrefs;
@@ -67,6 +66,8 @@ export const ThemeProvider = ({ initialTheme, children }) => {
   useEffect(() => {
     rawSetTheme(theme);
   }, [theme]);
+
+  console.log(theme);
 
   return (
     <ThemeContext.Provider value={{ theme, setTheme }}>

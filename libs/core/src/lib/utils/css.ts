@@ -2,7 +2,7 @@ import classNames from 'classnames';
 
 export const css = ({ variant, variants }: VariantTypes) => {
 
-  const DEFAULT = variants.DEFAULT;
+  const DEFAULT = variants?.DEFAULT;
   const states = variants?.states ?? false;
 
   const classes = {
