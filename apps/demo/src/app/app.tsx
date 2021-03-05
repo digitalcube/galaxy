@@ -5,9 +5,8 @@ import {
   Card,
   Header,
   Testimonials,
-  ShifterThemeProvider,
 } from '@galaxy/shifter-web';
-import { Container, Animation } from '@galaxy/core';
+import { Animation, ThemeProvider } from '@galaxy/core';
 import GitHubRibbon from 'react-github-ribbons';
 import {
   BrowserRouter,
@@ -63,26 +62,17 @@ const PageIndex: FC = () => (
 
 const PageSub: FC<RouteComponentProps> = (props) => {
   return (
-    <Container
-      as="section"
-      size="4"
-      sx={{
-        py: 7,
-        px: '5%',
-      }}
-    >
       <Card title="Child page" subtitle="sub title">
         <pre>
           <code>{JSON.stringify(props, null, 2)}</code>
         </pre>
       </Card>
-    </Container>
   );
 };
 
 export function App() {
   return (
-    <ShifterThemeProvider linkType={Link}>
+    <ThemeProvider linkType={Link}>
       <BrowserRouter>
         <Header
           href="/"
@@ -114,7 +104,7 @@ export function App() {
         target="_blank"
         rel="noopener noreferrer"
       />
-    </ShifterThemeProvider>
+    </ThemeProvider>
   );
 }
 

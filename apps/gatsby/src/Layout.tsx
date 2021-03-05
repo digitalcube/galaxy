@@ -1,11 +1,12 @@
 import React, { FC } from 'react';
-import { Header, ShifterThemeProvider } from '@galaxy/shifter-web';
+import { Header } from '@galaxy/shifter-web';
+import { ThemeProvider } from '@galaxy/core';
 import GitHubRibbon from 'react-github-ribbons';
 import { Link } from 'gatsby';
 
 export const Layout: FC = ({ children }) => {
   return (
-    <ShifterThemeProvider linkType={Link}>
+    <ThemeProvider linkType={Link}>
       <Header
         href="/"
         brand={<>Gatsby example</>}
@@ -32,7 +33,7 @@ export const Layout: FC = ({ children }) => {
         target="_blank"
         rel="noopener noreferrer"
       />
-    </ShifterThemeProvider>
+    </ThemeProvider>
   );
 };
 

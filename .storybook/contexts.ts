@@ -1,11 +1,12 @@
-import { ShifterThemeProvider, shifter } from '../libs/shifter/src/themes';
+import { shifter } from '../libs/shifter/src/themes';
 import { amimoto } from '../libs/amimoto/src/themes';
+import { ThemeProvider } from '../libs/core/src/themes';
 
 export const contexts = [
   {
     icon: 'switchalt',
     title: 'Schema',
-    components: [ShifterThemeProvider],
+    components: [ThemeProvider],
     params: [
       {
         name: 'Shifter',
