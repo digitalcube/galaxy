@@ -1,23 +1,33 @@
-import React from 'react';
+import React, { FC } from 'react';
+import { useState } from 'react';
+import { Switch } from '@headlessui/react';
 
 export const Toggle: FC<Toggle> = ({ state }: Toggle) => {
+  const [enabled, setEnabled] = useState(state);
+  const size = 10;
+
+  const toggleCss = `${
+    enabled ? `translate-x-${size / 2}` : 'translate-x-1'
+  } inline-block w-${size / 2 - 1} h-${
+    size / 2 - 1
+  } transform bg-white rounded-full transition`;
+
+  const toggleBezelCss = `${
+    enabled ? 'bg-shifter-gray-600' : 'bg-shifter-gray-200'
+  } relative inline-flex h-${size / 2 + 1} rounded-full w-${size} items-center`;
+
   return (
-    <span
-      className={`border rounded-full flex items-center cursor-pointer w-12 ${
-        state
-          ? `border-status-success-dark bg-status-success-default justify-end`
-          : `border-shifter-gray-400 bg-shifter-gray-300 justify-start`
-      }`}
-    >
-      <span className="rounded-full border w-6 h-6 shadow-inner bg-white shadow"></span>
-    </span>
+    <Switch checked={enabled} onChange={setEnabled} className={toggleBezelCss}>
+      <span className="sr-only">Enable notifications</span>
+      <span className={toggleCss} />
+    </Switch>
   );
 };
 
 export type Toggle = {
-  state?: boolean;
+  state?: boolean; // TODO: Inherit types from @headlessui/react
 };
 
 Toggle.defaultProps = {
-  state: false,
+  state: true,
 };

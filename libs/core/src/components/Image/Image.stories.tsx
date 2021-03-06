@@ -1,5 +1,4 @@
 import React from 'react';
-
 import { Image } from './Image';
 
 import { defaultStorybookConfig } from '../../.storybook/docs';
