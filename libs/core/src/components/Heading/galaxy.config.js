@@ -1,16 +1,10 @@
-module.exports = {
-  schema: {
-    components: {
-      heading: {
-        DEFAULT: '',
-        variants: {
-          primary: 'text-shifter-purple-600',
-          danger: '',
-          white: '',
-          ghost: '',
-          success: '',
-        },
-      },
-    },
+export const heading = {
+  DEFAULT: '',
+  variants: {
+    primary: 'text-shifter-purple-600 font-strong',
+    danger: '',
+    white: '',
+    ghost: '',
+    success: '',
   },
 };

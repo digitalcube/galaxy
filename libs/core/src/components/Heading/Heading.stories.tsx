@@ -1,5 +1,5 @@
 import React from 'react';
-import { galaxy } from '../../themes/galaxy';
+import { heading } from './galaxy.config';
 import { Heading } from '../index';
 
 import { defaultStorybookConfig } from '../../.storybook/docs';
@@ -9,14 +9,12 @@ export default {
   title: `Galaxy/Components/Heading`,
 };
 
-const headingSizes = Object.keys(galaxy.text).map((size: Heading) => {
+export const Example = () => {
   return (
     <div>
-      <Heading fontSize={`${size}`}>heading / {size}</Heading>
+      <Heading fontSize="8" variant="primary" variants={heading}>
+        heading
+      </Heading>
     </div>
   );
-});
-
-export const Sizes = () => {
-  return headingSizes;
 };

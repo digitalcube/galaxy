@@ -1,7 +1,6 @@
 import React, { ReactNode } from 'react';
-import classNames from 'classnames';
-import { schema } from './galaxy.config.js';
-
+import { css } from '@galaxy/core';
+import { heading } from './galaxy.config';
 import './Heading.css';
 
 export type Heading = {
@@ -21,21 +20,8 @@ export type Heading = {
   fontSize?: '0' | '1' | '2' | '3' | '4' | '5' | '6' | '7' | '8' | '9';
   fontWeight?: 'regular' | 'strong';
   className?: string;
-  variant?: 'primary' | 'danger' | 'white' | 'success';
-};
-
-const headingClasses = ({ variant }: Heading) => {
-  const variants = schema.components.heading.variants;
-  const DEFAULT = schema.components.heading.DEFAULT;
-  const classes = {
-    [`${DEFAULT}`]: true,
-    [`${variants.primary}`]: variant === 'primary',
-    [`${variants.success}`]: variant === 'success',
-    [`${variants.danger}`]: variant === 'danger',
-    [`${variants.white}`]: variant === 'white',
-  };
-
-  return classNames(classes);
+  variant?: typeof heading.variants;
+  variants?: typeof heading;
 };
 
 export const Heading = ({
@@ -45,17 +31,18 @@ export const Heading = ({
   fontSize,
   variant,
   fontWeight,
+  variants,
 }: Heading) => {
   if (!children) return null;
+  const classNames = css({
+    variant: variant,
+    variants: variants,
+  });
   const Tag = `${as}`;
   const size = `text-size-${fontSize}`;
   const weight = `font-${fontWeight}`;
   return (
-    <Tag
-      className={`${size} ${weight} ${headingClasses({
-        variant,
-      })} ${className}`}
-    >
+    <Tag className={`${size} ${weight} ${classNames} ${className}`}>
       {children}
     </Tag>
   );
