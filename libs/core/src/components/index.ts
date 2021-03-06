@@ -22,4 +22,5 @@ export * from './Table';
 export * from './Toggle';
 export * from './WordPress';
 export * from './Php';
+export * from './Tag';
 export * from './Integration';

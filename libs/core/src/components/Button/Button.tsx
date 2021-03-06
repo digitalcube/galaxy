@@ -1,5 +1,5 @@
 import React, { ReactNode, FC } from 'react';
-import { css } from '@galaxy/core';
+import { css, Tag } from '@galaxy/core';
 import { button } from './galaxy.config';
 
 export const Button: FC<Button> = ({
@@ -15,7 +15,6 @@ export const Button: FC<Button> = ({
     variants: variants,
   });
 
-  const Tag = `${as}`;
   return (
     <Tag className={`${className} ${classNames}`}>
       {label}
