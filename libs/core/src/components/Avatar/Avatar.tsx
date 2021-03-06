@@ -31,6 +31,7 @@ export type Avatar = {
   name?: string;
   variant?: typeof avatar.variants;
   variants?: typeof avatar;
+  size?: number;
 };
 
 Avatar.defaultProps = {
