@@ -2,6 +2,24 @@ import React, { ReactNode, FC } from 'react';
 import { buttonMenu } from './galaxy.config';
 import { Menu, Transition } from '@headlessui/react';
 
+export const ButtonMenuItem: FC<ButtonMenu> = ({
+  label,
+  active,
+}: ButtonMenu) => {
+  return (
+    <Menu.Item>
+      <a
+        href="#account-settings"
+        className={`${
+          active ? 'bg-white text-shifter-gray-800' : 'text-shifter-gray-400'
+        } flex justify-between w-full px-4 py-2 text-sm leading-5 text-left`}
+      >
+        {label}
+      </a>
+    </Menu.Item>
+  );
+};
+
 export const ButtonMenu: FC<ButtonMenu> = ({
   variant,
   children,
@@ -10,14 +28,12 @@ export const ButtonMenu: FC<ButtonMenu> = ({
   variants,
 }: ButtonMenu) => {
   return (
-    <div className="flex items-center justify-center p-12">
+    <div className="flex items-center justify-center">
       <div className="relative inline-block text-left">
         <Menu>
           {({ open }) => (
             <>
-              <Menu.Button className={`${className}`}>
-                {children}
-              </Menu.Button>
+              <Menu.Button className={`${className}`}>{children}</Menu.Button>
 
               <Transition
                 show={open}
@@ -30,83 +46,12 @@ export const ButtonMenu: FC<ButtonMenu> = ({
               >
                 <Menu.Items
                   static
-                  className="absolute right-0 w-56 mt-2 origin-top-right bg-white border border-gray-200 divide-y divide-gray-100 rounded-md shadow-lg outline-none"
+                  className="absolute rounded right-0 w-56 mt-2 origin-top-right bg-white rounded-md shadow-lg outline-none overflow-hidden border-2 border-shifter-gray-300"
                 >
-                  <div className="px-4 py-3">
-                    <p className="text-sm leading-5">Signed in as</p>
-                    <p className="text-sm font-medium leading-5 text-gray-900 truncate">
-                      tom@example.com
-                    </p>
-                  </div>
-
-                  <div className="py-1">
-                    <Menu.Item>
-                      {({ active }) => (
-                        <a
-                          href="#account-settings"
-                          className={`${
-                            active
-                              ? 'bg-gray-100 text-gray-900'
-                              : 'text-gray-700'
-                          } flex justify-between w-full px-4 py-2 text-sm leading-5 text-left`}
-                        >
-                          Account settings
-                        </a>
-                      )}
-                    </Menu.Item>
-                    <Menu.Item>
-                      {({ active }) => (
-                        <a
-                          href="#support"
-                          className={`${
-                            active
-                              ? 'bg-gray-100 text-gray-900'
-                              : 'text-gray-700'
-                          } flex justify-between w-full px-4 py-2 text-sm leading-5 text-left`}
-                        >
-                          Support
-                        </a>
-                      )}
-                    </Menu.Item>
-                    <Menu.Item
-                      as="span"
-                      disabled
-                      className="flex justify-between w-full px-4 py-2 text-sm leading-5 text-left text-gray-700 cursor-not-allowed opacity-50"
-                    >
-                      New feature (soon)
-                    </Menu.Item>
-                    <Menu.Item>
-                      {({ active }) => (
-                        <a
-                          href="#license"
-                          className={`${
-                            active
-                              ? 'bg-gray-100 text-gray-900'
-                              : 'text-gray-700'
-                          } flex justify-between w-full px-4 py-2 text-sm leading-5 text-left`}
-                        >
-                          License
-                        </a>
-                      )}
-                    </Menu.Item>
-                  </div>
-
-                  <div className="py-1">
-                    <Menu.Item>
-                      {({ active }) => (
-                        <a
-                          href="#sign-out"
-                          className={`${
-                            active
-                              ? 'bg-gray-100 text-gray-900'
-                              : 'text-gray-700'
-                          } flex justify-between w-full px-4 py-2 text-sm leading-5 text-left`}
-                        >
-                          Sign out
-                        </a>
-                      )}
-                    </Menu.Item>
-                  </div>
+                  <ButtonMenuItem label={`Account settings`} active={true} />
+                  <ButtonMenuItem label={`New feature (soon)`} active={false} />
+                  <ButtonMenuItem label={`Support`} active={true} />
+                  <ButtonMenuItem label={`Sign Out`} active={true} />
                 </Menu.Items>
               </Transition>
             </>
@@ -118,11 +63,13 @@ export const ButtonMenu: FC<ButtonMenu> = ({
 };
 
 export type ButtonMenu = {
+  label?: string;
   children?: ReactNode;
   items?: any; // TODO: Update type to use @galaxy/core Menu[]
   className?: string;
   variants?: typeof buttonMenu;
   variant?: typeof buttonMenu.variants;
+  active?: boolean;
 };
 
 ButtonMenu.defaultProps = {
