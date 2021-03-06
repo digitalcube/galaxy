@@ -1,6 +1,6 @@
 import React, { FC } from 'react';
 import { Badge, css } from '@galaxy/core';
-import { schema } from './galaxy.config';
+import { domainState } from './galaxy.config';
 
 export const DomainState: FC<DomainState> = ({
   state,
@@ -30,5 +30,5 @@ export type DomainState = {
 
 DomainState.defaultProps = {
   variant: 'light',
-  variants: schema.components.domainState.variants.light,
+  variants: domainState,
 };

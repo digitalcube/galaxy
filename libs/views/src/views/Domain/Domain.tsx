@@ -3,17 +3,13 @@ import { Section, Heading } from '@galaxy/core';
 import { DomainState, DomainOptions } from '@galaxy/views';
 // import { schema } from './galaxy.config.js';
 
-export const Domain: FC<Domain> = ({
-  url,
-  variant,
-  state,
-}: Domain) => {
+export const Domain: FC<Domain> = ({ url, variant, state }: Domain) => {
   return (
-    <Section className={`${({ variant })}`}>
+    <Section className="flex flex-row justify-between items-center">
       <Heading>{url}</Heading>
       <Section as="span" className="space-x-2 flex items-center">
-        {/* <DomainState title={state} state={state} variant={variant} /> */}
-       {/* <DomainOptions /> */}
+        <DomainState title={state} />
+        <DomainOptions />
       </Section>
     </Section>
   );
