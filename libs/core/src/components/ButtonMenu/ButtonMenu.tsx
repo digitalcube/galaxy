@@ -28,7 +28,7 @@ export const ButtonMenu: FC<ButtonMenu> = ({
   variants,
 }: ButtonMenu) => {
   return (
-    <div className="flex items-center justify-center">
+    <div className="inline-flex items-center justify-center">
       <div className="relative inline-block text-left">
         <Menu>
           {({ open }) => (
