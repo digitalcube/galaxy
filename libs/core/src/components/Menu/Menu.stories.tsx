@@ -1,5 +1,5 @@
 import React from 'react';
-import { Menu } from '@galaxy/core';
+import { Menu, fakerHeader } from '@galaxy/core';
 
 import { defaultStorybookConfig } from '../../.storybook/docs';
 export default {
@@ -9,10 +9,9 @@ export default {
 };
 
 export const Default = () => {
-  const items = [
-    { title: 'Sites', url: 'sites' },
-    { title: 'Teams', url: 'teams' },
-    { title: 'Guides', url: 'guides' },
-  ];
-  return <Menu items={items}>Hello world</Menu>;
+  return <Menu {...fakerHeader} />;
+};
+
+export const Vertical = () => {
+  return <Menu alignment="vertical" {...fakerHeader} />;
 };

@@ -9,20 +9,13 @@ export type Menu = {
 export const Items = ({ items }: Menu) => {
   if (!items) return null;
   return items.map((item) => {
-    const { title } = item;
-    return <Button variant="ghost">{title}</Button>;
+    return <Button variant="ghost">{item.title}</Button>;
   });
 };
 
 export const Menu: FC<Menu> = ({ items, alignment }: Menu) => {
   return (
-    <nav
-      className={`flex ${
-        alignment === 'vertical'
-          ? 'flex-col items-start'
-          : 'flex-row items-center'
-      }`}
-    >
+    <nav className={`flex ${alignment === 'vertical' ? 'flex-col items-start' : 'flex-row items-center'}`}>
       <Items items={items} />
     </nav>
   );
