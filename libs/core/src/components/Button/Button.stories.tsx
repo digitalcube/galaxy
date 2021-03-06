@@ -1,6 +1,5 @@
 import React from 'react';
-import { schema } from './galaxy.config.js';
-
+import { button } from './galaxy.config';
 import { Button } from './Button';
 
 import { defaultStorybookConfig } from '../../.storybook/docs';
@@ -11,9 +10,9 @@ export default {
 };
 
 export const Schemas = () => {
-  const buttons = Object.entries(schema.components.button.variants).map(
+  const buttons = Object.entries(button.variants).map(
     (variant) => {
-      return <Button variant={`${variant[0]}`}>{`${variant[0]}`}</Button>;
+      return <Button variants={button} variant={`${variant[0]}`}>{`${variant[0]}`}</Button>;
     }
   );
   return (

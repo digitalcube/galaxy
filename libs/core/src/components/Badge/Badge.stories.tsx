@@ -11,10 +11,8 @@ export default {
 
 export const Variants = ({ variants = badge }) => {
   if (!variants) return null;
-  console.log(variants);
   return getVariants({ variants: variants }).map((v, i) => {
     const { variant, className } = v;
-    // return 'foo';
     return (
       <Badge variant={variant} className={`${className}`} key={i}>
         {variant}
