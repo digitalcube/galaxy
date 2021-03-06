@@ -1,8 +1,7 @@
 import React, { FC } from 'react';
 import classNames from 'classnames';
-import { WebhookState } from '@galaxy/views';
-import { Button, Section, Heading } from '@galaxy/core';
-import { DotsHorizontal } from 'heroicons-react';
+import { WebhookState, WebhookOptions } from '@galaxy/views';
+import { Section, Heading } from '@galaxy/core';
 import { schema } from './galaxy.config.js';
 
 export const Webhook: FC<Webhook> = ({
@@ -23,9 +22,7 @@ export const Webhook: FC<Webhook> = ({
       </Section>
       <Section as="span" className="space-x-2 flex items-center">
         <WebhookState state={state} />
-        <Button variant="ghost">
-          <DotsHorizontal />
-        </Button>
+        <WebhookOptions />
       </Section>
     </Section>
   );

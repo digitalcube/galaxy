@@ -1,19 +1,12 @@
 import React, { FC } from 'react';
-import { Button, ButtonMenu } from '@galaxy/core';
-import { DotsHorizontal } from 'heroicons-react';
+import { OptionsMenu } from '@galaxy/views';
 
 export const ArtifactOptions: FC<ArtifactOptions> = ({
   state,
   variant,
   className,
 }: ArtifactOptions) => {
-  return (
-    <ButtonMenu>
-      <Button>
-        <DotsHorizontal />
-      </Button>
-    </ButtonMenu>
-  );
+  return <OptionsMenu />;
 };
 
 export type ArtifactOptions = {

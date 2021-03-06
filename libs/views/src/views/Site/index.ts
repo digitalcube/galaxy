@@ -6,3 +6,4 @@ export * from './SiteName';
 export * from './SitePreview';
 export * from './SiteUrl';
 export * from './SiteProgress';
+export * from './SiteOptions';

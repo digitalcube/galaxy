@@ -8,8 +8,7 @@ import {
   ArtifactProgress,
   ArtifactOptions,
 } from '@galaxy/views';
-import { Button, Section } from '@galaxy/core';
-import { DotsHorizontal } from 'heroicons-react';
+import { Section } from '@galaxy/core';
 import { schema } from './galaxy.config.js';
 
 export const Artifact: FC<Artifact> = ({

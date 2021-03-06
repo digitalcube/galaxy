@@ -21,3 +21,4 @@ export * from './Webhooks';
 export * from './WpControls';
 export * from './SiteSettings';
 export * from './DomainState';
+export * from './OptionsMenu';

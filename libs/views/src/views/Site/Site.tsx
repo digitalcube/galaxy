@@ -8,9 +8,9 @@ import {
   SitePreview,
   SiteUrl,
   SiteProgress,
+  SiteOptions,
 } from '@galaxy/views';
 import { Button, Section } from '@galaxy/core';
-import { DotsHorizontal } from 'heroicons-react';
 import { schema } from './galaxy.config.js';
 
 export const Site: FC<Site> = ({
@@ -33,9 +33,7 @@ export const Site: FC<Site> = ({
             <Section as="span" className="space-x-2 flex items-center">
               <SiteState state={state} />
               <Button variant="ghost">Manage site</Button>
-              <Button variant="ghost">
-                <DotsHorizontal />
-              </Button>
+              <SiteOptions />
             </Section>
           </Section>
           <Section className="flex space-x-4" as="div">
