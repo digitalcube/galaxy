@@ -19,7 +19,7 @@ export const Select: FC<Select> = ({ variant, label, items }: Select) => {
               <Listbox.Label className="sr-only">{label}</Listbox.Label>
               <div className="relative">
                 <span className="inline-block w-full rounded">
-                  <Listbox.Button className="cursor-default relative w-full rounded border border-shifter-purple-primary bg-white pl-3 pr-10 py-2 text-left focus:outline-none focus:shadow-outline-blue focus:border-shifter-purple-primry transition ease-in-out duration-150 sm:text-sm sm:leading-5">
+                  <Listbox.Button className="cursor-pointer relative w-full rounded border border-shifter-purple-primary bg-white pl-3 pr-10 py-2 text-left focus:outline-none focus:shadow-outline-blue focus:border-shifter-purple-primry transition ease-in-out duration-150 sm:text-sm sm:leading-5">
                     <span className="block truncate">{selectedPerson}</span>
                     <span className="absolute inset-y-0 right-0 flex items-center pr-2 pointer-events-none">
                       <svg
@@ -58,7 +58,7 @@ export const Select: FC<Select> = ({ variant, label, items }: Select) => {
                               active
                                 ? 'text-white bg-shifter-purple-primary'
                                 : 'text-gray-900'
-                            } cursor-default select-none relative py-2 pl-8 pr-4`}
+                            } cursor-pointer select-none relative py-2 pl-8 pr-4`}
                           >
                             <span
                               className={`${

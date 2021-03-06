@@ -1,12 +1,12 @@
 import React, { FC } from 'react';
-import { Sites, Header } from '@galaxy/views';
+import { Sites, Header, Dashboard } from '@galaxy/views';
+import { fakerHeader } from '@galaxy/core';
 
 export const SitesPage: FC<SitesPage> = ({ sites, header }) => {
   return (
-    <>
-      <Header {...header} />
+    <Dashboard {...fakerHeader}>
       <Sites sites={sites} />
-    </>
+    </Dashboard>
   );
 };
 

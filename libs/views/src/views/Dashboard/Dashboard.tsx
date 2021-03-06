@@ -1,5 +1,6 @@
 import React, { FC, ReactNode } from 'react';
 import { Header } from '@galaxy/views';
+import { Section } from '@galaxy/core';
 
 export const Dashboard: FC<Dashboard> = ({
   children,
@@ -7,10 +8,10 @@ export const Dashboard: FC<Dashboard> = ({
   avatar,
 }: Dashboard) => {
   return (
-    <>
+    <Section className="bg-white">
       <Header items={items} avatar={avatar} />
       {children ? children : null}
-    </>
+    </Section>
   );
 };
 

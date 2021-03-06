@@ -7,7 +7,7 @@ export const Button: FC<Button> = ({
   children,
   className,
   label,
-  as = 'button',
+  as,
   variants,
 }: Button) => {
   const classNames = css({
@@ -16,7 +16,7 @@ export const Button: FC<Button> = ({
   });
 
   return (
-    <Tag className={`${className} ${classNames}`}>
+    <Tag as={as} className={`${className} ${classNames}`}>
       {label}
       {children}
     </Tag>
@@ -34,4 +34,5 @@ export type Button = {
 
 Button.defaultProps = {
   variants: button,
+  as: 'button',
 };
