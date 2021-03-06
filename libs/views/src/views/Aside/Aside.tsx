@@ -6,7 +6,7 @@ import { SiteState, Site } from '@galaxy/views';
 export const Aside: FC<Aside> = ({ items, name }) => {
   return (
     <Section className="flex-none w-full md:max-w-xs">
-      <Panel className="flex flex-col border-b space-y-4">
+      <Panel className="flex flex-col border-b space-y-4 border-shifter-gray-200">
         <Section>
           <Button className="relative pl-10" variant="ghost">
             <span className="absolute inset-y-0 pl-2 left-0 flex items-center text-shifter-purple-primary">

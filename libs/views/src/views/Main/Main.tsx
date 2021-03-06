@@ -4,7 +4,7 @@ import { Section, Panel } from '@galaxy/core';
 export const Main: FC<Main> = ({ title, actions, children }) => {
   return (
     <Panel
-      className="flex-1 md:border-l mb-6"
+      className="flex-1 md:border-l mb-6 border-shifter-gray-200"
       title={`${title}`}
       actions={actions}
     >
