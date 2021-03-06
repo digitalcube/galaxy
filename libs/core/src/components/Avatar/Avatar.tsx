@@ -1,5 +1,5 @@
 import React, { FC } from 'react';
-import { Image, css } from '@galaxy/core';
+import { Image, css, ButtonMenu } from '@galaxy/core';
 import { avatar } from './galaxy.config';
 
 export const Avatar: FC<Avatar> = ({
@@ -9,11 +9,24 @@ export const Avatar: FC<Avatar> = ({
   imgDefault,
   variant,
   variants,
+  menuItems,
 }: Avatar) => {
   const classNames = css({
     variant: variant,
     variants: variants,
   });
+
+  if (menuItems)
+    return (
+      <ButtonMenu items={menuItems}>
+        <Image
+          alt={name}
+          className={`${classNames} ${size ? `h-${size}` : ''}`}
+          img={img}
+          imgDefault={imgDefault}
+        />
+      </ButtonMenu>
+    );
 
   return (
     <Image
@@ -32,6 +45,7 @@ export type Avatar = {
   variant?: typeof avatar.variants;
   variants?: typeof avatar;
   size?: number;
+  menuItems?: ButtonMenu[];
 };
 
 Avatar.defaultProps = {
