@@ -6,6 +6,7 @@ import {
   ArtifactName,
   ArtifactPreview,
   ArtifactProgress,
+  ArtifactOptions,
 } from '@galaxy/views';
 import { Button, Section } from '@galaxy/core';
 import { DotsHorizontal } from 'heroicons-react';
@@ -32,9 +33,7 @@ export const Artifact: FC<Artifact> = ({
             </Section>
             <Section as="span" className="space-x-2 flex items-center">
               <ArtifactState state={state} />
-              <Button variant="ghost">
-                <DotsHorizontal />
-              </Button>
+              <ArtifactOptions />
             </Section>
           </Section>
           <Section as="div">

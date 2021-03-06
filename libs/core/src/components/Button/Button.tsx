@@ -32,3 +32,7 @@ export type Button = {
   variants?: typeof button;
   variant?: typeof button.variants;
 };
+
+Button.defaultProps = {
+  variants: button,
+};
