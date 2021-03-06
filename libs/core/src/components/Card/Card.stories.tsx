@@ -1,6 +1,6 @@
 import React from 'react';
-import { Heading, Card } from '@galaxy/core';
-import { schema } from './galaxy.config';
+import { Card } from '@galaxy/core';
+import { card } from './galaxy.config';
 
 import { defaultStorybookConfig } from '../../.storybook/docs';
 export default {
@@ -10,9 +10,9 @@ export default {
 };
 
 export const Schemas = () => {
-  return Object.entries(schema.components.card.variants).map((variant) => {
+  return Object.entries(card.variants).map((variant) => {
     return (
-      <Card variant={variant[0]}>
+      <Card variant={variant[0]} variants={card}>
         😀 😎 👍 💯
       </Card>
     );

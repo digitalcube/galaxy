@@ -30,7 +30,6 @@ export type Avatar = {
   imgDefault?: string;
   name?: string;
   variant?: typeof avatar.variants;
-  size?: number;
   variants?: typeof avatar;
 };
 
