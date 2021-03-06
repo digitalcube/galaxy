@@ -4,6 +4,7 @@ export * from './Badge';
 export * from './Brand';
 export * from './Browser';
 export * from './Button';
+export * from './ButtonMenu';
 export * from './Card';
 export * from './Date';
 export * from './Heading';

@@ -2,15 +2,6 @@ import React, { ReactNode, FC } from 'react';
 import { css } from '@galaxy/core';
 import { button } from './galaxy.config';
 
-export type Button = {
-  children?: ReactNode;
-  className?: string;
-  label?: string;
-  as?: 'button' | 'a' | 'div' | 'span';
-  variants?: typeof button;
-  variant?: typeof button.variants;
-};
-
 export const Button: FC<Button> = ({
   variant,
   children,
@@ -31,4 +22,13 @@ export const Button: FC<Button> = ({
       {children}
     </Tag>
   );
+};
+
+export type Button = {
+  children?: ReactNode;
+  className?: string;
+  label?: string;
+  as?: 'button' | 'a' | 'div' | 'span';
+  variants?: typeof button;
+  variant?: typeof button.variants;
 };
