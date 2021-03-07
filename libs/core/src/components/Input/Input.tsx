@@ -50,7 +50,7 @@ export const Input: FC<Input> = ({
         name="q"
         className={inputClasses({ variant })}
         placeholder="Search..."
-        autocomplete="off"
+        autoComplete="off"
       />
     </div>
   );

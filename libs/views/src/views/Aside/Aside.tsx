@@ -18,8 +18,8 @@ export const Aside: FC<Aside> = ({ items, name }) => {
                 className="h-4 w-4"
               >
                 <path
-                  stroke-linecap="round"
-                  stroke-linejoin="round"
+                  strokeLinecap="round"
+                  strokeLinejoin="round"
                   strokeWidth="2"
                   d="M10 19l-7-7m0 0l7-7m-7 7h18"
                 />

@@ -54,7 +54,6 @@ export const ThemeProvider = ({ initialTheme, children }) => {
 
     // root.classList.remove(isDark ? 'light' : 'dark');
     // root.classList.add(theme);
-    console.log(theme);
 
     localStorage.setItem('color-theme', theme);
   };
@@ -66,8 +65,6 @@ export const ThemeProvider = ({ initialTheme, children }) => {
   useEffect(() => {
     rawSetTheme(theme);
   }, [theme]);
-
-  console.log(theme);
 
   return (
     <ThemeContext.Provider value={{ theme, setTheme }}>
