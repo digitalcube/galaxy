@@ -1,6 +1,7 @@
 import React, { FC } from 'react';
 import { Section, Panel, fakerHeader, Card } from '@galaxy/core';
 import { Aside, Site, Dashboard, Domains, Main } from '@galaxy/views';
+import { AddDomain } from '../../views';
 
 export const DomainsPage: FC<DomainsPage> = ({
   name,
@@ -25,7 +26,11 @@ export const DomainsPage: FC<DomainsPage> = ({
 export type DomainsPage = {
   items?: any;
   title?: Panel;
-  actions?: Panel;
+  actions?: Main;
   name: Site;
   domains: Domains;
+};
+
+DomainsPage.defaultProps = {
+  actions?: <AddDomain />,
 };

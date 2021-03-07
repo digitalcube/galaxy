@@ -15,6 +15,6 @@ export const Main: FC<Main> = ({ title, actions, children }) => {
 
 export type Main = {
   title?: string;
-  actions?: any;
+  actions?: Panel;
   children: ReactNode;
 };

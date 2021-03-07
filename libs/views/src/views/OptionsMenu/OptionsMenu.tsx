@@ -9,9 +9,7 @@ export const OptionsMenu: FC<OptionsMenu> = ({
 }: OptionsMenu) => {
   return (
     <ButtonMenu>
-      <Button variant="ghost">
-        <DotsHorizontal />
-      </Button>
+      <DotsHorizontal />
     </ButtonMenu>
   );
 };

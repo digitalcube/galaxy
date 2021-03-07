@@ -245,11 +245,7 @@ const dashboardMediaCdn = {
 };
 
 const dashboardSiteDomainsActions = {
-  actions: [
-    {
-      component: null, // AddDomain({ title: 'Add a new domain'})
-    },
-  ],
+  actions: null,
 };
 
 // Page: Home
