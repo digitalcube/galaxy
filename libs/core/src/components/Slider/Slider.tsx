@@ -1,6 +1,4 @@
-/** @jsxRuntime classic */
-/** @jsx jsx */
-import { jsx } from 'theme-ui';
+import React from 'react';
 import { FC } from 'react';
 import styled from 'styled-components';
 import SwiperCore, { Autoplay } from 'swiper';
@@ -37,9 +35,6 @@ export const Slider: FC<Slider> = ({
   SwiperCore.use([Autoplay]);
   return (
     <StyledSwiper
-      sx={{
-        ...sx,
-      }}
       spaceBetween={40}
       slidesPerView={slidesPerView}
       loop={true}

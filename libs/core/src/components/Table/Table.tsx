@@ -1,6 +1,4 @@
-/** @jsxRuntime classic */
-/** @jsx jsx */
-import { Styled, jsx } from 'theme-ui';
+import React from 'react';
 import { Column, useTable } from 'react-table';
 import { FC } from 'react';
 
@@ -20,30 +18,24 @@ export const Table: FC<TableProps> = ({ nodes, columns }) => {
   });
 
   return (
-    <Styled.table {...getTableProps()}>
+    <table {...getTableProps()}>
       <tbody {...getTableBodyProps()}>
         {rows.map((row) => {
           prepareRow(row);
           return (
-            <Styled.tr {...row.getRowProps()}>
+            <tr {...row.getRowProps()}>
               {row.cells.map((cell, i) => {
                 if (i === 0) {
                   return (
-                    <Styled.th {...cell.getCellProps()}>
-                      {cell.render('Cell')}
-                    </Styled.th>
+                    <th {...cell.getCellProps()}>{cell.render('Cell')}</th>
                   );
                 }
-                return (
-                  <Styled.td {...cell.getCellProps()}>
-                    {cell.render('Cell')}
-                  </Styled.td>
-                );
+                return <td {...cell.getCellProps()}>{cell.render('Cell')}</td>;
               })}
-            </Styled.tr>
+            </tr>
           );
         })}
       </tbody>
-    </Styled.table>
+    </table>
   );
 };
