@@ -2,7 +2,7 @@ import React from 'react';
 import { company, internet } from 'faker';
 import { Section, fakerProgress } from '@galaxy/core';
 import { Deploys } from '@galaxy/views';
-import { schema } from './galaxy.config';
+import { deploys } from './galaxy.config';
 
 import { defaultStorybookConfig } from '../../.storybook/docs';
 export default {
@@ -12,7 +12,7 @@ export default {
 };
 
 export const Schemas = () => {
-  return Object.entries(schema.components.deploys.variants).map((variant) => {
+  return Object.entries(deploys.variants).map((variant) => {
     return (
       <Section className="mb-4">
         <Deploys
