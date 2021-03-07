@@ -1,13 +1,13 @@
 import classNames from 'classnames';
 
 export const css = ({ variant, variants }: VariantTypes) => {
-
   const DEFAULT = variants?.DEFAULT;
+  variants = variants?.variants ?? false;
   const states = variants?.states ?? false;
 
   const classes = {
     [DEFAULT]: true,
-    [variants?.variants[variant]]: true,
+    [variants[variant]]: variants ?? true,
     [states[variant]]: states ?? true,
   };
 
@@ -17,15 +17,10 @@ export const css = ({ variant, variants }: VariantTypes) => {
 export type VariantTypes = {
   variants?: any;
   variant?: any;
+  debug?: boolean;
 };
 
-// // const DEFAULT = schema.components.domainState.variants.light.DEFAULT;
-// const classes = {
-//   // [`${DEFAULT}`]: true,
-//   [`${variants?.pending}`]: variant === 'pending',
-//   [`${variants?.verified}`]: variant === 'verified',
-//   [`${variants?.attached}`]: variant === 'attached',
-//   [`${variants?.failed}`]: variant === 'failed',
-// };
-
-// return classNames(classes);
+css.defaultProps = {
+  debug: false,
+  variant: 'active',
+};

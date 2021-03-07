@@ -1,6 +1,5 @@
 import React from 'react';
-
-import { Toggle } from './Toggle';
+import { Toggle } from '@galaxy/core';
 
 import { defaultStorybookConfig } from '../../.storybook/docs';
 export default {
@@ -9,6 +8,6 @@ export default {
   title: `Galaxy/Components/Toggle`,
 };
 
-export const On = () => {
-  return <Toggle />;
+export const Active = () => {
+  return <Toggle state={'active'} />;
 };
