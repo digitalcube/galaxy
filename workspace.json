@@ -135,8 +135,7 @@
             "external": [
               "react",
               "react-dom",
-              "react-is",
-              "styled-components"
+              "react-is"
             ],
             "babelConfig": "@nrwl/react/plugins/bundle-babel",
             "rollupConfig": "@nrwl/react/plugins/bundle-rollup",
@@ -195,8 +194,7 @@
             "external": [
               "react",
               "react-dom",
-              "react-is",
-              "styled-components"
+              "react-is"
             ],
             "babelConfig": "@nrwl/react/plugins/bundle-babel",
             "rollupConfig": "@nrwl/react/plugins/bundle-rollup",
@@ -255,8 +253,7 @@
             "external": [
               "react",
               "react-dom",
-              "react-is",
-              "styled-components"
+              "react-is"
             ],
             "babelConfig": "@nrwl/react/plugins/bundle-babel",
             "rollupConfig": "@nrwl/react/plugins/bundle-rollup",
@@ -315,8 +312,7 @@
             "external": [
               "react",
               "react-dom",
-              "react-is",
-              "styled-components"
+              "react-is"
             ],
             "babelConfig": "@nrwl/react/plugins/bundle-babel",
             "rollupConfig": "@nrwl/react/plugins/bundle-rollup",
@@ -435,8 +431,7 @@
             "external": [
               "react",
               "react-dom",
-              "react-is",
-              "styled-components"
+              "react-is"
             ],
             "babelConfig": "@nrwl/react/plugins/bundle-babel",
             "rollupConfig": "@nrwl/react/plugins/bundle-rollup",
@@ -569,8 +564,7 @@
             "external": [
               "react",
               "react-dom",
-              "react-is",
-              "styled-components"
+              "react-is"
             ],
             "babelConfig": "@nrwl/react/plugins/bundle-babel",
             "rollupConfig": "@nrwl/react/plugins/bundle-rollup",
@@ -601,18 +595,9 @@
   },
   "generators": {
     "@nrwl/react": {
-      "application": {
-        "style": "styled-components",
-        "linter": "eslint",
-        "babel": true
-      },
-      "component": {
-        "style": "styled-components"
-      },
-      "library": {
-        "style": "styled-components",
-        "linter": "eslint"
-      }
+      "application": {},
+      "component": {},
+      "library": {}
     },
     "@nrwl/gatsby": {
       "application": {}
