@@ -13,7 +13,6 @@ export const Image: FC<Image> = ({
   className,
   caption,
 }: Image) => {
-  console.log(img)
   img = img === undefined ? imgDefault : img;
   return (
     <Section as="figure">

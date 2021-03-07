@@ -29,11 +29,11 @@ export const ButtonMenu: FC<ButtonMenu> = ({
 }: ButtonMenu) => {
   return (
     <div className="inline-flex items-center justify-center">
-      <div className="relative inline-block text-left">
+      <div className="relative inline-block text-left z-10">
         <Menu>
           {({ open }) => (
             <>
-              <Menu.Button className={`${className}`}>{children}</Menu.Button>
+              <Menu.Button className={`z-10 ${className}`}>{children}</Menu.Button>
 
               <Transition
                 show={open}

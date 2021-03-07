@@ -4,9 +4,9 @@ import { Control } from '@galaxy/views';
 
 export const Controls: FC<Controls> = ({ controls }) => {
   if (!controls) return null;
-  const allControls = controls.map((control) => {
+  const allControls = controls.map((control, i) => {
     const { title, description } = control;
-    return <Control title={title} description={description} />;
+    return <Control key={i} title={title} description={description} />;
   });
 
   return (

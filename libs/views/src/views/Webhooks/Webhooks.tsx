@@ -3,10 +3,11 @@ import { Section, Heading, Integration } from '@galaxy/core';
 import { Webhook } from '@galaxy/views';
 
 export const Webhooks: FC<Webhooks> = ({ webhooks, title, description }) => {
-  const allWebhooks = webhooks.map((webhook) => {
+  const allWebhooks = webhooks.map((webhook, i) => {
     const { title, url, state, img, progress, date, event } = webhook;
     return (
       <Webhook
+        key={i}
         title={`${title}`}
         url={`${url}`}
         state={`${state}`}

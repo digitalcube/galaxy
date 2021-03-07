@@ -9,9 +9,7 @@ export const WebhookOptions: FC<WebhookOptions> = ({
 }: WebhookOptions) => {
   return (
     <ButtonMenu>
-      <Button variant="ghost">
-        <DotsHorizontal />
-      </Button>
+      <DotsHorizontal />
     </ButtonMenu>
   );
 };
