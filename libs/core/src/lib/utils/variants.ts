@@ -21,4 +21,5 @@ export const getVariant = ({ variant }: VariantTypes) => {
 export type VariantTypes = {
   variants?: any;
   variant?: any;
+  debug?: boolean;
 };

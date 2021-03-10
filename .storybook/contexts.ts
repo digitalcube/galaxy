@@ -1,24 +1,20 @@
-import { shifter } from '../libs/shifter/src/themes';
-import { amimoto } from '../libs/amimoto/src/themes';
-import { ThemeProvider } from '../libs/core/src/themes';
+import { GalaxyThemeProvider } from '../libs/core/src/themes';
 
 export const contexts = [
   {
     icon: 'switchalt',
     title: 'Schema',
-    components: [ThemeProvider],
+    components: [GalaxyThemeProvider],
     params: [
       {
         name: 'Shifter',
         props: {
-          theme: shifter,
           linkType: 'a',
         },
       },
       {
         name: 'Amimoto',
         props: {
-          theme: amimoto,
           linkType: 'a',
         },
       },

@@ -1,17 +1,17 @@
 // galaxy.ts
-import React, { useEffect } from 'react';
+import React, { FC, PropsWithChildren, useEffect } from 'react';
 import {
   LinkTagType,
   LinkTagProvider,
 } from '../lib/link-tag-provider/link-tag-provider';
-import { galaxy } from './galaxy';
+import '../styles/style.css'
 
 /// ###
-const getInitialTheme = () => {
+const getInitialTheme = (): 'dark' | 'light' => {
   if (typeof window !== 'undefined' && window.localStorage) {
     const storedPrefs = window.localStorage.getItem('color-theme');
     if (typeof storedPrefs === 'string') {
-      return storedPrefs;
+      return storedPrefs === 'dark' ? 'dark' : 'light'
     }
 
     const userMedia = window.matchMedia('(prefers-color-scheme: dark)');
@@ -23,20 +23,29 @@ const getInitialTheme = () => {
   return 'dark';
 };
 
-export const ThemeContext = React.createContext();
+const rawSetTheme = (theme: string) => {
+  // const root = window.document.documentElement;
+  // const isDark = theme === 'dark';
 
-export const ThemeProvider = ({ initialTheme, children }) => {
+  // root.classList.remove(isDark ? 'light' : 'dark');
+  // root.classList.add(theme);
+
+  localStorage.setItem('color-theme', theme);
+};
+
+export const ThemeContext = React.createContext<{
+  theme: 'dark' | 'light';
+  setTheme?: any;
+}>({
+  theme: 'light',
+});
+
+export const GalaxyThemeProvider: FC<PropsWithChildren<{
+  internalLinkTag?: LinkTagType
+  initialTheme?: 'dark' | 'light'
+}>> = ({ initialTheme, children, internalLinkTag = 'a' }) => {
   const [theme, setTheme] = React.useState(getInitialTheme);
 
-  const rawSetTheme = (theme) => {
-    // const root = window.document.documentElement;
-    // const isDark = theme === 'dark';
-
-    // root.classList.remove(isDark ? 'light' : 'dark');
-    // root.classList.add(theme);
-
-    localStorage.setItem('color-theme', theme);
-  };
 
   if (initialTheme) {
     rawSetTheme(initialTheme);
@@ -48,7 +57,9 @@ export const ThemeProvider = ({ initialTheme, children }) => {
 
   return (
     <ThemeContext.Provider value={{ theme, setTheme }}>
-      {children}
+      <LinkTagProvider linkType={internalLinkTag}>
+        {children}
+      </LinkTagProvider>
     </ThemeContext.Provider>
   );
 };

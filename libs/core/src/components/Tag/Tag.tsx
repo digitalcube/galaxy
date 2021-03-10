@@ -1,4 +1,5 @@
 import React, { FC, ReactNode } from 'react';
+import { LinkTagType } from '../../lib/link-tag-provider/link-tag-provider';
 
 export const Tag: FC<Tag> = ({ as, children, className }: Tag) => {
   const As = `${as}`;
@@ -11,7 +12,7 @@ export const Tag: FC<Tag> = ({ as, children, className }: Tag) => {
 
 export type Tag = {
   children?: ReactNode;
-  as?: string;
+  as?: string | LinkTagType;
   className?: string;
 };
 

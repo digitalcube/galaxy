@@ -1,21 +1,27 @@
 import React, { ReactNode, FC } from 'react';
 import { buttonMenu } from './galaxy.config';
 import { Menu, Transition } from '@headlessui/react';
+import Link from '../../lib/link/link';
 
-export const ButtonMenuItem: FC<ButtonMenu> = ({
+export type ButtonMenuItem = {
+  label?: string;
+  active?: boolean;
+  to?: string;
+}
+export const ButtonMenuItem: FC<ButtonMenuItem> = ({
   label,
   active,
-}: ButtonMenu) => {
+}) => {
   return (
     <Menu.Item>
-      <a
+      <Link
         href="#account-settings"
         className={`${
           active ? 'bg-white text-shifter-gray-800' : 'text-shifter-gray-400'
         } flex justify-between w-full px-4 py-2 text-sm leading-5 text-left`}
       >
         {label}
-      </a>
+      </Link>
     </Menu.Item>
   );
 };

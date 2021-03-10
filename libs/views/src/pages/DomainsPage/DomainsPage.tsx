@@ -1,4 +1,4 @@
-import React, { FC } from 'react';
+import React, { FC, ReactNode } from 'react';
 import { Section, Panel, fakerHeader, Card } from '@galaxy/core';
 import { Aside, Site, Dashboard, Domains, Main } from '@galaxy/views';
 import { AddDomain } from '../../views';
@@ -26,11 +26,11 @@ export const DomainsPage: FC<DomainsPage> = ({
 export type DomainsPage = {
   items?: any;
   title?: Panel;
-  actions?: Main;
+  actions?: ReactNode;
   name: Site;
   domains: Domains;
 };
 
 DomainsPage.defaultProps = {
-  actions?: <AddDomain />,
+  actions: <AddDomain />,
 };

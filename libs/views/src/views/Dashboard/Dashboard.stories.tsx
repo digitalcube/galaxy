@@ -9,5 +9,5 @@ export default {
 };
 
 export const Zero = () => {
-  return <Dashboard {...fakerHeader} />;
+  return <Dashboard header={fakerHeader} />;
 };

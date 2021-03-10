@@ -1,1 +1,1 @@
-export * from './themes';
+export const dummy = 'silence is golden'

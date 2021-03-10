@@ -1,4 +1,5 @@
 import classNames from 'classnames';
+import { VariantTypes } from './variants';
 
 export const css = ({ variant, variants }: VariantTypes) => {
   const DEFAULT = variants?.DEFAULT;
@@ -12,12 +13,6 @@ export const css = ({ variant, variants }: VariantTypes) => {
   };
 
   return classNames(classes);
-};
-
-export type VariantTypes = {
-  variants?: any;
-  variant?: any;
-  debug?: boolean;
 };
 
 css.defaultProps = {

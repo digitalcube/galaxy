@@ -1,39 +1,41 @@
 import React, { FC } from 'react';
-import { Header } from '@galaxy/shifter-web';
-import { ThemeProvider } from '@galaxy/core';
+import { GalaxyThemeProvider, Panel, Link } from '@galaxy/core';
 import GitHubRibbon from 'react-github-ribbons';
-import { Link } from 'gatsby';
+import { Link as GatsbyLink } from 'gatsby';
+import {
+  Dashboard
+} from '@galaxy/views'
 
 export const Layout: FC = ({ children }) => {
   return (
-    <ThemeProvider linkType={Link}>
-      <Header
-        href="/"
-        brand={<>Gatsby example</>}
-        nav={[
-          [
-            {
-              label: `home`,
-              href: `/`,
-            },
-            {
-              label: `page1`,
-              href: `/page1`,
-            },
-            {
-              label: `page2-sub`,
-              href: `/page2/sub`,
-            },
-          ],
-        ]}
-      />
-      {children}
-      <GitHubRibbon
-        href="https://github.com/digitalcube/galaxy"
-        target="_blank"
-        rel="noopener noreferrer"
-      />
-    </ThemeProvider>
+    <GalaxyThemeProvider internalLinkTag={GatsbyLink}>
+      <Dashboard header={{
+        items: [{
+          title: 'Home',
+          href: '/'
+        }, {
+          title: 'Page1',
+          href: '/page1'
+        }, {
+          title: 'Page2',
+          href: '/page2'
+        }]
+      }}>
+        {children}
+            <Panel title="Link example" actions={<div />}>
+              <ul>
+                <li><Link href="/page1">Page1 (Internal)</Link></li>
+                <li><Link href="http://google.com">Google (external)</Link></li>
+              </ul>
+              
+            </Panel>
+        <GitHubRibbon
+          href="https://github.com/digitalcube/galaxy"
+          target="_blank"
+          rel="noopener noreferrer"
+        />
+      </Dashboard>
+    </GalaxyThemeProvider>
   );
 };
 

@@ -4,19 +4,17 @@ import { Section } from '@galaxy/core';
 
 export const Dashboard: FC<Dashboard> = ({
   children,
-  items,
-  avatar,
+  header
 }: Dashboard) => {
   return (
     <Section className="bg-white">
-      <Header items={items} avatar={avatar} />
+      <Header {...header} />
       {children ? children : null}
     </Section>
   );
 };
 
 export type Dashboard = {
-  avatar: Header;
-  items: Header;
+  header?: Header;
   children: ReactNode;
 };

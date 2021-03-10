@@ -1,110 +1,68 @@
 import React, { FC } from 'react';
-
-import {
-  Benefits,
-  Card,
-  Header,
-  Testimonials,
-} from '@galaxy/shifter-web';
-import { Animation, ThemeProvider } from '@galaxy/core';
+import { GalaxyThemeProvider, Link, Panel } from '@galaxy/core';
 import GitHubRibbon from 'react-github-ribbons';
 import {
   BrowserRouter,
   Route,
   Switch,
   RouteComponentProps,
-  Link,
+  Link as ReactRouterLink,
 } from 'react-router-dom';
+import {
+  Dashboard
+} from '@galaxy/views'
 
 const PageIndex: FC = () => (
-  <>
-    <Benefits
-      {...{
-        title: `Id Lorem aliquip`,
-        subtitle: `Commodo culpa deserunt id magna esse. Et dolore elit nulla veniam in anim ut est.`,
-        img: <Animation animation="singleClick" />,
-        nodes: [
-          {
-            title: `Easy installation`,
-            excerpt: `Create a new WordPress site right from the Shifter Dashboard, no uploading required.`,
-          },
-          {
-            title: `Collaborate`,
-            excerpt: `Work with others and share access to your Shifter account using our team features.`,
-          },
-          {
-            title: `Maintenance-free`,
-            excerpt: `Shifter manages WordPress core so you're always up to date and plugins never vulnerable.`,
-          },
-          {
-            title: `No coding required`,
-            excerpt: `Easy for non-developers to get started using WordPress themes or page builders.`,
-          },
-        ],
-      }}
-    />
-    <Testimonials
-      {...{
-        title: `Esse reprehenderit incididunt in deserunt enim nostrud tempor proident exercitation duis dolore ullamco proident.`,
-        nodes: [
-          {
-            img: 'user-avatar.png',
-            quote:
-              'Amet sint velit aliquip aute ex enim cupidatat ex Nulla nostrud proident minim do labore ipsum mollit eu voluptate. Cillum magna quis culpa in et ea laborum eiusmod reprehenderit tempor ea labore. <a href="https://wptavern.com/digitalcube-launches-shifter-serverless-hosting-for-wordpress">Read more.</a>',
-            author: 'FooBarBaz',
-            handle: '@ExampleFooBarBaz',
-          },
-        ],
-      }}
-    />
-  </>
+  <div>
+      <h1>Index</h1>
+    </div>
 );
 
 const PageSub: FC<RouteComponentProps> = (props) => {
   return (
-      <Card title="Child page" subtitle="sub title">
+      <div>
         <pre>
           <code>{JSON.stringify(props, null, 2)}</code>
         </pre>
-      </Card>
+      </div>
   );
 };
 
 export function App() {
   return (
-    <ThemeProvider linkType={Link}>
+    <GalaxyThemeProvider internalLinkTag={ReactRouterLink}>
       <BrowserRouter>
-        <Header
-          href="/"
-          brand={<>React SPA example</>}
-          nav={[
-            [
-              {
-                label: `home`,
-                href: `/`,
-              },
-              {
-                label: `page1`,
-                href: `/page1`,
-              },
-              {
-                label: `page2-sub`,
-                href: `/page2/sub`,
-              },
-            ],
-          ]}
-        />
-        <Switch>
-          <Route path="/:path" component={PageSub} />
-          <Route path="/" exact component={PageIndex} />
-        </Switch>
+        <Dashboard header={{
+          items: [{
+            title: 'Home',
+            href: '/'
+          }, {
+            title: 'Page1',
+            href: '/page1'
+          }, {
+            title: 'Page2',
+            href: '/page2'
+          }]
+        }}>
+            <Switch>
+              <Route path="/:path" component={PageSub} />
+              <Route path="/" exact component={PageIndex} />
+            </Switch>
+            <Panel title="Link example" actions={<div />}>
+              <ul>
+                <li><Link href="/page1">Page1 (Internal)</Link></li>
+                <li><Link href="http://google.com">Google (external)</Link></li>
+              </ul>
+              
+            </Panel>
+          <GitHubRibbon
+            href="https://github.com/digitalcube/galaxy"
+            target="_blank"
+            rel="noopener noreferrer"
+          />
+        </Dashboard>
       </BrowserRouter>
-      <GitHubRibbon
-        href="https://github.com/digitalcube/galaxy"
-        target="_blank"
-        rel="noopener noreferrer"
-      />
-    </ThemeProvider>
+    </GalaxyThemeProvider>
   );
 }
 
