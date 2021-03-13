@@ -3,7 +3,6 @@ import { useState } from 'react';
 import { Switch } from '@headlessui/react';
 import { css } from '@galaxy/core';
 import { toggle } from './galaxy.config';
-import { button } from '../Button/galaxy.config';
 
 export const Toggle: FC<Toggle> = ({ state, variants }: Toggle) => {
   const [enabled, setEnabled] = useState(state);

@@ -1,7 +1,9 @@
 import React, { ReactNode, FC } from 'react';
 import { css, Tag } from '@galaxy/core';
-import { button } from './galaxy.config';
+import { buttonTheme } from './Button.galaxy';
 import Link from '../../lib/link/link';
+
+const { button } = buttonTheme;
 
 export const Button: FC<Button> = ({
   variant,
@@ -27,7 +29,7 @@ export const Button: FC<Button> = ({
         {label}
         {children}
       </Link>
-    )
+    );
   }
 
   return (

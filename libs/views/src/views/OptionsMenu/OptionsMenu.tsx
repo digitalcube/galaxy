@@ -1,21 +1,28 @@
 import React, { FC } from 'react';
-import { Button, ButtonMenu } from '@galaxy/core';
+import { ButtonMenu, Button, theme, css } from '@galaxy/core';
 import { DotsHorizontal } from 'heroicons-react';
 
+const { button } = theme;
+
 export const OptionsMenu: FC<OptionsMenu> = ({
-  state,
   variant,
   className,
 }: OptionsMenu) => {
+  const buttonMenuVariants = css({ variants: 'button', variant: variant });
+
   return (
-    <ButtonMenu>
+    <ButtonMenu className={`${buttonMenuVariants} ${className}`}>
       <DotsHorizontal />
     </ButtonMenu>
   );
 };
 
 export type OptionsMenu = {
-  variant?: 'light' | 'dark' | string;
-  state: 'running' | 'stopped' | string;
+  variant?: typeof button.variants;
+  variants?: typeof button;
   className?: string;
+};
+
+OptionsMenu.defaultProps = {
+  variant: 'ghost',
 };

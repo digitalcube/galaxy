@@ -1,3 +1,9 @@
+// TODO: Move this
+import { buttonTheme } from './Button/Button.galaxy';
+export const theme = {
+  ...buttonTheme
+};
+
 export * from './Animation';
 export * from './Avatar';
 export * from './Badge';

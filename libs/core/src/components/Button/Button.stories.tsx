@@ -1,8 +1,10 @@
 import React from 'react';
-import { button } from './galaxy.config';
+import { buttonTheme } from '@galaxy/core';
 import { Button } from './Button';
 
 import { defaultStorybookConfig } from '../../.storybook/docs';
+
+const { button } = buttonTheme;
 export default {
   ...defaultStorybookConfig,
   component: Button,
