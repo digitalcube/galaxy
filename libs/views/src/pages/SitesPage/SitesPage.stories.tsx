@@ -9,5 +9,5 @@ export default {
 };
 
 export const Zero = () => {
-  return <SitesPage sites={fakerSites} header={fakerHeader} />;
+  return <SitesPage />;
 };
