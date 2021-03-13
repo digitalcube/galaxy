@@ -28,16 +28,16 @@ export const Site: FC<Site> = ({
       <Section as="div" className="flex-grow">
         <SiteProgress progress={progress} variant={variant} />
         <Section className="p-4 space-y-4">
-          <Section className="flex" as="div">
+          <Section className="flex relative align-center" as="div">
             <SiteName variant={variant} name={name} />
             <Section
               as="span"
-              className="space-x-2 pr-8 flex items-center relative"
+              className="space-x-2 pr-10 flex items-center relative"
             >
               <SiteState state={state} />
               <Button variant="ghost">Manage site</Button>
-              <SiteOptions />
             </Section>
+            <SiteOptions />
           </Section>
           <Section className="flex space-x-4" as="div">
             <SiteUrl variant={variant} url={`${url}`} />
