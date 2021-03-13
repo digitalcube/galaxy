@@ -27,17 +27,14 @@ export const Site: FC<Site> = ({
       <SitePreview img={img} />
       <Section as="div" className="flex-grow">
         <SiteProgress progress={progress} variant={variant} />
-        <Section className="p-4 space-y-4">
-          <Section className="flex relative align-center" as="div">
+        <Section className="p-4 space-y-4 relative">
+          <Section className="flex">
             <SiteName variant={variant} name={name} />
-            <Section
-              as="span"
-              className="space-x-2 pr-10 flex items-center relative"
-            >
+            <Section className="flex items-center space-x-2">
               <SiteState state={state} />
               <Button variant="ghost">Manage site</Button>
+              <SiteOptions />
             </Section>
-            <SiteOptions />
           </Section>
           <Section className="flex space-x-4" as="div">
             <SiteUrl variant={variant} url={`${url}`} />

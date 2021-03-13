@@ -36,9 +36,9 @@ export const ButtonMenu: FC<ButtonMenu> = ({
         {({ open }) => (
           <>
             <Menu.Button className={`${className}`}>{children}</Menu.Button>
-
             <Transition
               show={open}
+              className="absolute right-0"
               enter="transition ease-out duration-100"
               enterFrom="transform opacity-0 scale-95"
               enterTo="transform opacity-100 scale-100"
@@ -47,8 +47,8 @@ export const ButtonMenu: FC<ButtonMenu> = ({
               leaveTo="transform opacity-0 scale-95"
             >
               <Menu.Items
-                static
-                className="absolute rounded right-0 w-56 mt-2 origin-top-right bg-white rounded-md shadow-lg outline-none overflow-hidden border-2 border-shifter-gray-300"
+                
+                className="rounded w-56 mt-2 origin-top-right bg-white rounded-md shadow-lg outline-none overflow-hidden border-2 border-shifter-gray-300"
               >
                 <ButtonMenuItem label={`Account settings`} active={true} />
                 <ButtonMenuItem label={`New feature (soon)`} active={false} />

@@ -11,7 +11,6 @@ export const Avatar: FC<Avatar> = ({
   variants,
   menu,
 }: Avatar) => {
-  console.log(name);
 
   const classNames = css({
     variant: variant,
