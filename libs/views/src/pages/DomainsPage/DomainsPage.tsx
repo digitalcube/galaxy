@@ -11,7 +11,7 @@ export const DomainsPage: FC<DomainsPage> = ({
   domains,
 }) => {
   return (
-    <Dashboard {...fakerHeader}>
+    <Dashboard header={fakerHeader}>
       <Section className="md:flex min-h-screen border-t border-shifter-gray-200">
         <Aside items={items} name={name} />
         <Main actions={actions} title={title}>

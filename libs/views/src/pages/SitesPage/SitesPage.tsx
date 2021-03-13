@@ -4,7 +4,7 @@ import { fakerHeader } from '@galaxy/core';
 
 export const SitesPage: FC<SitesPage> = ({ sites, header }) => {
   return (
-    <Dashboard {...fakerHeader}>
+    <Dashboard header={fakerHeader}>
       <Sites sites={sites} />
     </Dashboard>
   );

@@ -22,7 +22,7 @@ import {
 
 export const Dev: FC<Dev> = ({ items, name, container, wpControls }) => {
   return (
-    <Dashboard {...fakerHeader}>
+    <Dashboard header={fakerHeader}>
       <Section className="md:flex min-h-screen border-t border-shifter-gray-200">
         <Aside items={items} name={name} />
         <Main>

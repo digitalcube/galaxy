@@ -20,7 +20,7 @@ export const SettingsPage: FC<SettingsPage> = ({
   variant,
 }) => {
   return (
-    <Dashboard {...fakerHeader}>
+    <Dashboard header={fakerHeader}>
       <Section className="md:flex min-h-screen border-t border-shifter-gray-200">
         <Aside items={items} name={name} />
         <Main>foo</Main>

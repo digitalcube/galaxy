@@ -9,8 +9,10 @@ export const Avatar: FC<Avatar> = ({
   imgDefault,
   variant,
   variants,
-  menuItems,
+  menu,
 }: Avatar) => {
+  console.log(name);
+
   const classNames = css({
     variant: variant,
     variants: variants,
@@ -18,9 +20,9 @@ export const Avatar: FC<Avatar> = ({
 
   img = !img ? `https://ui-avatars.com/api/?name=${name}` : img;
 
-  if (menuItems)
+  if (menu) {
     return (
-      <ButtonMenu items={menuItems}>
+      <ButtonMenu {...menu}>
         <Image
           alt={name}
           className={`${classNames} ${size ? `h-${size}` : ''}`}
@@ -29,6 +31,7 @@ export const Avatar: FC<Avatar> = ({
         />
       </ButtonMenu>
     );
+  }
 
   return (
     <Image
@@ -47,7 +50,7 @@ export type Avatar = {
   variant?: typeof avatar.variants;
   variants?: typeof avatar;
   size?: number;
-  menuItems?: ButtonMenu[];
+  menu?: boolean | ButtonMenu;
 };
 
 Avatar.defaultProps = {

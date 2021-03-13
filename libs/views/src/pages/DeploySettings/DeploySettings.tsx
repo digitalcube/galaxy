@@ -17,7 +17,7 @@ export const DeploySettings: FC<DeploySettings> = ({
   subDirectory,
 }) => {
   return (
-    <Dashboard {...fakerHeader}>
+    <Dashboard header={fakerHeader}>
       <Section className="md:flex min-h-screen border-t border-shifter-gray-200">
         <Section className="flex-none w-full md:max-w-xs">
           <Panel className="flex flex-col border-b space-y-4">
