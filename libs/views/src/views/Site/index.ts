@@ -4,6 +4,6 @@ export * from './SiteMembers';
 export * from './SiteTeam';
 export * from './SiteName';
 export * from './SitePreview';
-export * from './SiteUrl';
+export * from './SiteUrl/SiteUrl';
 export * from './SiteProgress';
 export * from './SiteOptions';

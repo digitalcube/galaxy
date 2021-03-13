@@ -22,6 +22,7 @@ export const Heading = ({
   const weight = `font-${fontWeight}`;
   return (
     <Tag
+      as={as}
       className={`${size} ${weight} ${classNames} ${className}`}
       children={text}
     />

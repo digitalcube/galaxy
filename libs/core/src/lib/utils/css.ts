@@ -3,14 +3,16 @@ import { VariantTypes } from './variants';
 
 export const css = ({ variant, variants }: VariantTypes) => {
   const DEFAULT = variants?.DEFAULT;
-  variants = variants?.variants ?? false;
-  const states = variants?.states ?? false;
+  variants = variants?.variants !== undefined ? variants.variants : false;
+  const states = variants?.states !== undefined ? variants.states : false;
 
   const classes = {
     [DEFAULT]: true,
-    [variants[variant]]: variants ?? true,
-    [states[variant]]: states ?? true,
+    [variants[variant]]: variants,
+    [states[variant]]: states,
   };
+
+  console.log(classes);
 
   return classNames(classes);
 };
