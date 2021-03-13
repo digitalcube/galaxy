@@ -13,14 +13,10 @@ export const CardHeader: FC<Card> = ({ title, description }: Card) => {
 
 export const CardDescription: FC<Card> = ({ description }: Card) => {
   if (!description) return null;
-  return <Heading fontSize="3">{description}</Heading>;
+  return <Heading fontSize="3" text={description} />;
 };
 
 export const CardTitle: FC<Card> = ({ title }: Card) => {
   if (!title) return null;
-  return (
-    <Heading fontSize="6" fontWeight="strong">
-      {title}
-    </Heading>
-  );
+  return <Heading fontSize="6" fontWeight="strong" text={title} />;
 };

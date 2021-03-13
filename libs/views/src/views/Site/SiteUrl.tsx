@@ -4,7 +4,7 @@ import { Heading } from '@galaxy/core';
 import { schema } from './galaxy.config.js';
 
 export const SiteUrl: FC<SiteUrl> = ({ url, variant }: SiteUrl) => {
-  return <Heading className={siteUrlVariants({ variant })}>{url}</Heading>;
+  return <Heading className={siteUrlVariants({ variant })} text={url} />;
 };
 
 export type SiteUrl = {

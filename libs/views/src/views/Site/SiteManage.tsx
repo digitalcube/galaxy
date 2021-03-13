@@ -4,7 +4,7 @@ import { Heading } from '@galaxy/core';
 import { schema } from './galaxy.config.js';
 
 export const SiteState: FC<SiteState> = ({ state, variant }: SiteState) => {
-  return <Heading className={siteStateVariants({ variant })}>{state}</Heading>;
+  return <Heading className={siteStateVariants({ variant })} text={state} />;
 };
 
 export type SiteState = {

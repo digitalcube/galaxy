@@ -17,23 +17,21 @@ export const Control: FC<Control> = ({
   children,
 }: Control) => {
   return (
+    // <span
+    //   className={
+    //     state === false
+    //       ? 'text-status-danger-default'
+    //       : 'text-status-success-default'
+    //   }
+    // >
+    //   {' '}
+    //   {state === false ? 'off' : 'on'}
+    // </span>
     <Card>
       <Section className="flex flex-row items-center justify-between space-x-2">
         <Section className="flex flex-col space-y-4">
-          <Heading fontSize="4">
-            {title}
-            <span
-              className={
-                state === false
-                  ? 'text-status-danger-default'
-                  : 'text-status-success-default'
-              }
-            >
-              {' '}
-              {state === false ? 'off' : 'on'}
-            </span>
-          </Heading>
-          <Heading fontSize="3">{description}</Heading>
+          <Heading fontSize="4" text={`${title}`} />
+          <Heading fontSize="3" text={description} />
         </Section>
         <Toggle state={state} />
       </Section>

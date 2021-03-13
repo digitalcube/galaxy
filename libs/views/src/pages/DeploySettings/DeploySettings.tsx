@@ -43,9 +43,7 @@ export const DeploySettings: FC<DeploySettings> = ({
               </Button>
             </Section>
             <Section className="space-y-2">
-              <Heading fontWeight="strong" fontSize="6">
-                {name}
-              </Heading>
+              <Heading fontWeight="strong" fontSize="6" text={name} />
               <Section>
                 <SiteState state="starting" />
               </Section>

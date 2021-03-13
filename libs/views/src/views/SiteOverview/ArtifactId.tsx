@@ -4,8 +4,8 @@ import { Heading, Section } from '@galaxy/core';
 export const ArtifactId: FC<ArtifactId> = ({ artifact }: ArtifactId) => {
   return (
     <Section className="space-y-2">
-      <Heading className="font-strong">Artifact ID</Heading>
-      <Heading>{artifact}</Heading>
+      <Heading className="font-strong" text="Artifact ID" />
+      <Heading text={artifact} />
     </Section>
   );
 };

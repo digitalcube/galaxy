@@ -21,12 +21,13 @@ export const Webhooks: FC<Webhooks> = ({ webhooks, title, description }) => {
       <Section as="div" className="flex flex-col items-center space-y-6">
         <Integration />
         <Section as="div" className="text-center">
-          <Heading fontSize="4" fontWeight="strong" variant="primary">
-            {title}
-          </Heading>
-          <Heading fontSize="3" variant="primary">
-            {description}
-          </Heading>
+          <Heading
+            fontSize="4"
+            fontWeight="strong"
+            variant="primary"
+            text={title}
+          />
+          <Heading fontSize="3" variant="primary" text={description} />
         </Section>
       </Section>
     );

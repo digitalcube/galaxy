@@ -4,7 +4,7 @@ import { Section, Card } from '@galaxy/core';
 import {
   SitePreview,
   ArtifactId,
-  CloudFrontUrl,
+  CdnUrl,
   PublishDate,
   Team,
 } from '@galaxy/views';
@@ -27,7 +27,7 @@ export const SiteOverview: FC<SiteOverview> = ({
         <SitePreview img={img} />
         <Section as="div" className="px-8">
           <Section className="space-y-4">
-            <CloudFrontUrl cloudfront={`${cloudfront}`} />
+            <CdnUrl url={`${cloudfront}`} />
             <Section className="flex space-x-4" as="div">
               <PublishDate date={date} />
               <ArtifactId artifact={`${artifact}`} />

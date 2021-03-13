@@ -9,14 +9,13 @@ export const Badge: FC<Badge> = ({ children, className, variant }: Badge) => {
       fontSize="4"
       fontWeight="strong"
       className={`${className}`}
-    >
-      {children}
-    </Heading>
+      text={children}
+    />
   );
 };
 
 export type Badge = {
   className?: string;
-  children?: ReactNode;
-  variant?: Heading;
+  children?: string;
+  variant?: Heading['variant'];
 };

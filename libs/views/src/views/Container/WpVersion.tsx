@@ -6,9 +6,7 @@ export const WpVersion: FC<WpVersion> = ({ title, version }: WpVersion) => {
   return (
     <Section className="space-x-2 flex flex-row items-center">
       <WordPress />
-      <Heading variant="primary">
-        {title} {version}
-      </Heading>
+      <Heading variant="primary" text={`${title} ${version}`} />
     </Section>
   );
 };

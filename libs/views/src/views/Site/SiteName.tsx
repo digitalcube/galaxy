@@ -4,7 +4,7 @@ import { Heading } from '@galaxy/core';
 import { schema } from './galaxy.config.js';
 
 export const SiteName: FC<SiteName> = ({ name, variant }: SiteName) => {
-  return <Heading className={siteNameVariants({ variant })}>{name}</Heading>;
+  return <Heading className={siteNameVariants({ variant })} text={name} />;
 };
 
 export type SiteName = {

@@ -5,7 +5,7 @@ import { schema } from './galaxy.config.js';
 
 export const SiteTeam: FC<SiteTeam> = ({ team, variant }: SiteTeam) => {
   if (!team) return null;
-  return <Heading className={siteTeamVariants({ variant })}>{team}</Heading>;
+  return <Heading className={siteTeamVariants({ variant })} text={team} />;
 };
 
 export type SiteTeam = {

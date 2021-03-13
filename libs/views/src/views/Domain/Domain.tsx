@@ -6,7 +6,7 @@ import { DomainState, DomainOptions } from '@galaxy/views';
 export const Domain: FC<Domain> = ({ url, variant, state }: Domain) => {
   return (
     <Section className="flex flex-row justify-between items-center">
-      <Heading>{url}</Heading>
+      <Heading text={url} />
       <Section as="span" className="space-x-2 flex items-center">
         <DomainState title={state} />
         <DomainOptions />

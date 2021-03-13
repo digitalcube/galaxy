@@ -7,7 +7,7 @@ export const Team: FC<Team> = ({ team }: Team) => {
   return (
     <Section className="flex items-center space-x-2">
       <UserGroup size={16} />
-      <Heading>{team}</Heading>
+      <Heading text={team} />
     </Section>
   );
 };

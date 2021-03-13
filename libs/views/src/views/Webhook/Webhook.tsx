@@ -14,11 +14,14 @@ export const Webhook: FC<Webhook> = ({
   return (
     <Section className={`${webhookVariants({ variant })}`}>
       <Section as="span" className="space-y-2 flex flex-col">
-        <Heading fontSize="4" variant="primary" fontWeight="strong">
-          {title}
-        </Heading>
-        <Heading>{event}</Heading>
-        <Heading>{url}</Heading>
+        <Heading
+          fontSize="4"
+          variant="primary"
+          fontWeight="strong"
+          text={title}
+        />
+        <Heading text={event} />
+        <Heading text={url} />
       </Section>
       <Section as="span" className="space-x-2 flex items-center">
         <WebhookState state={state} />

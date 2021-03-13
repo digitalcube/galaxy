@@ -10,9 +10,7 @@ export const Deploys: FC<Deploys> = ({ variant, state, title }: Deploys) => {
     <Card className={`space-y-6`}>
       <WpControls state={state} />
       <Section className="flex flex-row space-x-6 justify-between">
-        <Heading fontSize="5" fontWeight="strong">
-          {title}
-        </Heading>
+        <Heading fontSize="5" fontWeight="strong" text={title} />
         <AutoPublish />
       </Section>
       <Artifacts artifacts={fakerArtifacts} />

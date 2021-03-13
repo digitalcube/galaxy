@@ -4,7 +4,7 @@ import { Heading } from '@galaxy/core';
 import { schema } from './galaxy.config.js';
 
 export const Webhook: FC<Webhook> = ({ url, variant }: Webhook) => {
-  return <Heading className={webhookUrlVariants({ variant })}>{url}</Heading>;
+  return <Heading className={webhookUrlVariants({ variant })} text={url} />;
 };
 
 export type Webhook = {

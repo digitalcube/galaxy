@@ -11,10 +11,10 @@ export default {
 
 export const Example = () => {
   return (
-    <div>
-      <Heading fontSize="8" variant="primary" variants={heading}>
-        heading
-      </Heading>
-    </div>
+    <Heading
+      fontSize="8"
+      variant="primary"
+      variants={heading}
+    />
   );
 };

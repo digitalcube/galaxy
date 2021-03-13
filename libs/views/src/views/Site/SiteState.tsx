@@ -11,9 +11,8 @@ export const SiteState: FC<SiteState> = ({
   return (
     <Heading
       className={`${siteStateVariants({ variant, state })} ${className}`}
-    >
-      {state}
-    </Heading>
+      text={`${state}`}
+    />
   );
 };
 

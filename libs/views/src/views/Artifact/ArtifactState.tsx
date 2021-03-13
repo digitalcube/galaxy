@@ -11,9 +11,8 @@ export const ArtifactState: FC<ArtifactState> = ({
   return (
     <Heading
       className={`${artifactStateVariants({ variant, state })} ${className}`}
-    >
-      {state}
-    </Heading>
+      text={state}
+    />
   );
 };
 

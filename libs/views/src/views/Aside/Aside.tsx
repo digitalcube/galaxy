@@ -29,7 +29,7 @@ export const Aside: FC<Aside> = ({ items, name }) => {
           </Button>
         </Section>
         <Section className="space-y-2">
-          <Heading fontSize="6">{name}</Heading>
+          <Heading fontSize="6" text={name} />
           <Section>
             <SiteState state="starting" />
           </Section>
@@ -43,6 +43,6 @@ export const Aside: FC<Aside> = ({ items, name }) => {
 };
 
 export type Aside = {
-  name: Site;
+  name: Site['name'];
   items: Site;
 };

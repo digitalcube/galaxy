@@ -1,10 +1,35 @@
 import React, { ReactNode } from 'react';
 import { css } from '@galaxy/core';
 import { heading } from './galaxy.config';
+import { Tag } from '@galaxy/core';
 import './Heading.css';
 
+export const Heading = ({
+  text,
+  as,
+  className,
+  fontSize,
+  variant,
+  fontWeight,
+  variants,
+}: Heading) => {
+  if (!text) return null;
+  const classNames = css({
+    variant: variant,
+    variants: variants,
+  });
+  const size = `text-size-${fontSize}`;
+  const weight = `font-${fontWeight}`;
+  return (
+    <Tag
+      className={`${size} ${weight} ${classNames} ${className}`}
+      children={text}
+    />
+  );
+};
+
 export type Heading = {
-  children?: ReactNode;
+  text?: string;
   as?:
     | 'h1'
     | 'h2'
@@ -24,32 +49,9 @@ export type Heading = {
   variants?: typeof heading;
 };
 
-export const Heading = ({
-  children,
-  as,
-  className,
-  fontSize,
-  variant,
-  fontWeight,
-  variants,
-}: Heading) => {
-  if (!children) return null;
-  const classNames = css({
-    variant: variant,
-    variants: variants,
-  });
-  const Tag = `${as}`;
-  const size = `text-size-${fontSize}`;
-  const weight = `font-${fontWeight}`;
-  return (
-    <Tag className={`${size} ${weight} ${classNames} ${className}`}>
-      {children}
-    </Tag>
-  );
-};
-
 Heading.defaultProps = {
   fontSize: '4',
   as: 'div',
   className: '',
+  text: 'Hello World.',
 };

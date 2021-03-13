@@ -11,9 +11,8 @@ export const WebhookState: FC<WebhookState> = ({
   return (
     <Heading
       className={`${webhookStateVariants({ variant, state })} ${className}`}
-    >
-      {state}
-    </Heading>
+      text={state}
+    />
   );
 };
 
