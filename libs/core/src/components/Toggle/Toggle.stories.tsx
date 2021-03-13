@@ -9,5 +9,5 @@ export default {
 };
 
 export const Active = () => {
-  return <Toggle state={'active'} />;
+  return <Toggle />;
 };

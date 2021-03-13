@@ -2,7 +2,9 @@ import React, { FC } from 'react';
 import { useState } from 'react';
 import { Switch } from '@headlessui/react';
 import { css } from '@galaxy/core';
-import { toggle } from './galaxy.config';
+import { toggleTheme } from './Toggle.galaxy';
+
+const { toggle } = toggleTheme;
 
 export const Toggle: FC<Toggle> = ({ state, variants }: Toggle) => {
   const [enabled, setEnabled] = useState(state);
@@ -14,13 +16,14 @@ export const Toggle: FC<Toggle> = ({ state, variants }: Toggle) => {
 
   const toggleBezelCssScale = `h-${size / 2} w-${size}`;
 
-  const toggleBezelCss = css({
-    variant: enabled ? state : null,
-    variants: variants.bezel,
-  });
+  const toggleBezelCss =
+    css({
+      variant: enabled ? 'active' : null,
+      variants: variants.bezel,
+    });
 
   const toggleSwitchCss = css({
-    variant: enabled ? state : null,
+    variant: enabled ? 'active' : null,
     variants: variants.switch,
   });
 
@@ -37,12 +40,13 @@ export const Toggle: FC<Toggle> = ({ state, variants }: Toggle) => {
 };
 
 export type Toggle = {
-  state?: any;
-  variant?: any;
+  state?: boolean;
+  variant?: string;
   variants?: any;
 };
 
 Toggle.defaultProps = {
-  state: 'active',
+  state: true,
+  variant: 'active',
   variants: toggle,
 };

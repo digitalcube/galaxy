@@ -1,7 +1,9 @@
 // TODO: Move this
 import { buttonTheme } from './Button/Button.galaxy';
+import { toggleTheme } from './Toggle/Toggle.galaxy';
 export const theme = {
-  ...buttonTheme
+  ...buttonTheme,
+  ...toggleTheme,
 };
 
 export * from './Animation';
