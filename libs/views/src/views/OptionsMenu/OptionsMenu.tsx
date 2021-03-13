@@ -1,5 +1,5 @@
 import React, { FC } from 'react';
-import { ButtonMenu, Button, theme, css } from '@galaxy/core';
+import { ButtonMenu, theme, css } from '@galaxy/core';
 import { DotsHorizontal } from 'heroicons-react';
 
 const { button } = theme;

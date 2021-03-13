@@ -6,7 +6,7 @@ export const Header: FC<Header> = ({ items, avatar }) => {
   return (
     <Section
       as="header"
-      className="py-6 flex flex-row items-center space-x-6 px-8"
+      className="py-6 flex flex-row items-center space-x-6 px-8 relative z-10"
     >
       <a className="align-center" href="/">
         <Image

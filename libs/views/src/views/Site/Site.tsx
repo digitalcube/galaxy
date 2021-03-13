@@ -30,7 +30,10 @@ export const Site: FC<Site> = ({
         <Section className="p-4 space-y-4">
           <Section className="flex" as="div">
             <SiteName variant={variant} name={name} />
-            <Section as="span" className="space-x-2 flex items-center">
+            <Section
+              as="span"
+              className="space-x-2 pr-8 flex items-center relative"
+            >
               <SiteState state={state} />
               <Button variant="ghost">Manage site</Button>
               <SiteOptions />

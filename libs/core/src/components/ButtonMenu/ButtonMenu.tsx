@@ -7,11 +7,8 @@ export type ButtonMenuItem = {
   label?: string;
   active?: boolean;
   to?: string;
-}
-export const ButtonMenuItem: FC<ButtonMenuItem> = ({
-  label,
-  active,
-}) => {
+};
+export const ButtonMenuItem: FC<ButtonMenuItem> = ({ label, active }) => {
   return (
     <Menu.Item>
       <Link
@@ -34,36 +31,35 @@ export const ButtonMenu: FC<ButtonMenu> = ({
   variants,
 }: ButtonMenu) => {
   return (
-    <div className="inline-flex items-center justify-center">
-      <div className="relative inline-block text-left z-10">
-        <Menu>
-          {({ open }) => (
-            <>
-              <Menu.Button className={`z-10 ${className}`}>{children}</Menu.Button>
+    <div className="relative text-left">
+      <Menu>
+        {({ open }) => (
+          <>
+            <Menu.Button className={`${className}`}>{children}</Menu.Button>
 
-              <Transition
-                show={open}
-                enter="transition ease-out duration-100"
-                enterFrom="transform opacity-0 scale-95"
-                enterTo="transform opacity-100 scale-100"
-                leave="transition ease-in duration-75"
-                leaveFrom="transform opacity-100 scale-100"
-                leaveTo="transform opacity-0 scale-95"
+            <Transition
+              show={open}
+              enter="transition ease-out duration-100"
+              enterFrom="transform opacity-0 scale-95"
+              enterTo="transform opacity-100 scale-100"
+              leave="transition ease-in duration-75"
+              leaveFrom="transform opacity-100 scale-100"
+              leaveTo="transform opacity-0 scale-95"
+            >
+              <Menu.Items
+                static
+                className="absolute rounded right-0 w-56 mt-2 origin-top-right bg-white rounded-md shadow-lg outline-none overflow-hidden border-2 border-shifter-gray-300"
               >
-                <Menu.Items
-                  static
-                  className="absolute rounded right-0 w-56 mt-2 origin-top-right bg-white rounded-md shadow-lg outline-none overflow-hidden border-2 border-shifter-gray-300"
-                >
-                  <ButtonMenuItem label={`Account settings`} active={true} />
-                  <ButtonMenuItem label={`New feature (soon)`} active={false} />
-                  <ButtonMenuItem label={`Support`} active={true} />
-                  <ButtonMenuItem label={`Sign Out`} active={true} />
-                </Menu.Items>
-              </Transition>
-            </>
-          )}
-        </Menu>
-      </div>
+                <ButtonMenuItem label={`Account settings`} active={true} />
+                <ButtonMenuItem label={`New feature (soon)`} active={false} />
+                <ButtonMenuItem label={`Support`} active={true} />
+                <ButtonMenuItem label={`Feedback`} active={true} />
+                <ButtonMenuItem label={`Sign Out`} active={true} />
+              </Menu.Items>
+            </Transition>
+          </>
+        )}
+      </Menu>
     </div>
   );
 };

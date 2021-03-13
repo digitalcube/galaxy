@@ -6,7 +6,11 @@ export const SiteOptions: FC<SiteOptions> = ({
   variant,
   className,
 }: SiteOptions) => {
-  return <OptionsMenu />;
+  return (
+    <div className="absolute right-0">
+      <OptionsMenu />
+    </div>
+  );
 };
 
 export type SiteOptions = {
