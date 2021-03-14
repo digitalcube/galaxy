@@ -12,5 +12,5 @@ export default {
 };
 
 export const Example = () => {
-  return <Button variant="primary" state="active" label="foo" />;
+  return <Button />;
 };

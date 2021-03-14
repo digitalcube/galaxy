@@ -14,10 +14,8 @@ export const Button: FC<Button> = ({
   href,
 }: Button) => {
   const classNames = css({
-    variant: 'primary',
+    variant: variant,
     variants: variants,
-    state: 'active',
-    states: variants?.states,
   });
 
   /**
@@ -46,13 +44,15 @@ export type Button = {
   className?: string;
   label?: string;
   as?: 'button' | 'div' | 'span' | 'a';
-  variants?: typeof button;
-  variant?: typeof button.variants;
+  variants?: any;
+  variant?: any;
   href?: string;
   type?: string;
 };
 
 Button.defaultProps = {
   variants: button,
+  variant: 'outlinePrimary',
   as: 'button',
+  label: 'Hello World.',
 };
