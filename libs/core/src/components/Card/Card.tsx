@@ -14,7 +14,7 @@ export const Card: FC<Card> = ({
   return (
     <Section
       className={`pt-6 ${css({
-        variant: variant,
+        variant: `${variant}`,
         variants: variants,
       })} ${className}`}
     >

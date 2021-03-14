@@ -17,7 +17,7 @@ export const Heading = ({
   variants,
 }: Heading) => {
   const classNames = css({
-    variant: variant,
+    variant: `${variant}`,
     variants: variants,
   });
 
@@ -50,8 +50,8 @@ export type Heading = {
   fontSize?: '0' | '1' | '2' | '3' | '4' | '5' | '6' | '7' | '8' | '9';
   fontWeight?: 'regular' | 'strong';
   className?: string;
-  variant?: any;
-  variants?: any;
+  variant?: typeof heading;
+  variants?: typeof heading;
 };
 
 Heading.defaultProps = {

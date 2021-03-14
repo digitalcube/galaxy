@@ -18,11 +18,11 @@ export const Toggle: FC<Toggle> = ({ state, variants }: Toggle) => {
   const toggleBezelCssScale = `h-${size / 2} w-${size}`;
 
   const toggleBezelCss = css({
-    variants: variants.bezel,
+    variants: variants?.bezel,
   });
 
   const toggleSwitchCss = css({
-    variants: variants.switch,
+    variants: variants?.switch,
   });
 
   return (
@@ -39,8 +39,8 @@ export const Toggle: FC<Toggle> = ({ state, variants }: Toggle) => {
 
 export type Toggle = {
   state?: boolean;
-  variant?: string;
-  variants?: any;
+  variant?: typeof toggle;
+  variants?: typeof toggle;
 };
 
 Toggle.defaultProps = {
