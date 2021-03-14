@@ -1,5 +1,4 @@
 import React from 'react';
-import { heading } from './galaxy.config';
 import { Heading } from '../index';
 
 import { defaultStorybookConfig } from '../../.storybook/docs';
@@ -10,11 +9,5 @@ export default {
 };
 
 export const Example = () => {
-  return (
-    <Heading
-      fontSize="8"
-      variant="primary"
-      variants={heading}
-    />
-  );
+  return <Heading />;
 };

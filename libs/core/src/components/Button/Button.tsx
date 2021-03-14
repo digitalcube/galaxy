@@ -52,7 +52,7 @@ export type Button = {
 
 Button.defaultProps = {
   variants: button,
-  // variant: 'outlinePrimary',
+  variant: 'primary',
   as: 'button',
   label: 'Hello World.',
 };

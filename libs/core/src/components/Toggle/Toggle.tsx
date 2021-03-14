@@ -45,6 +45,5 @@ export type Toggle = {
 
 Toggle.defaultProps = {
   state: true,
-  variant: 'active',
   variants: toggle,
 };

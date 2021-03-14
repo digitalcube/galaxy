@@ -1,8 +1,11 @@
 import React, { ReactNode } from 'react';
 import { css } from '@galaxy/core';
-import { heading } from './galaxy.config';
 import { Tag } from '@galaxy/core';
+import { headingTheme } from './Heading.galaxy';
 import './Heading.css';
+
+const { heading } = headingTheme;
+console.log(heading);
 
 export const Heading = ({
   text,
@@ -13,13 +16,14 @@ export const Heading = ({
   fontWeight,
   variants,
 }: Heading) => {
-  if (!text) return null;
   const classNames = css({
     variant: variant,
     variants: variants,
   });
+
   const size = `text-size-${fontSize}`;
   const weight = `font-${fontWeight}`;
+
   return (
     <Tag
       as={as}
@@ -46,13 +50,14 @@ export type Heading = {
   fontSize?: '0' | '1' | '2' | '3' | '4' | '5' | '6' | '7' | '8' | '9';
   fontWeight?: 'regular' | 'strong';
   className?: string;
-  variant?: typeof heading.variants;
-  variants?: typeof heading;
+  variant?: any;
+  variants?: any;
 };
 
 Heading.defaultProps = {
   fontSize: '4',
   as: 'div',
-  className: '',
+  variant: 'primary',
+  variants: heading,
   text: 'Hello World.',
 };

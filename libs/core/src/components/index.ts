@@ -1,9 +1,12 @@
-// TODO: Move this
+// TODO: move & refactor this
 import { buttonTheme } from './Button/Button.galaxy';
 import { toggleTheme } from './Toggle/Toggle.galaxy';
+import { headingTheme } from './Heading/Heading.galaxy';
+
 export const theme = {
   ...buttonTheme,
   ...toggleTheme,
+  ...headingTheme,
 };
 
 export * from './Animation';

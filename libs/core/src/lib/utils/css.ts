@@ -3,13 +3,15 @@ import classNames from 'classnames';
 export const css = ({ variant, variants }: Css) => {
   if (!variants) return null;
 
+  console.log(variants);
+
   const DEFAULT = variants?.DEFAULT ? variants.DEFAULT : false;
   variants = variant ? variants[`${variant}`] : false;
   variant = variant ? variant : false;
 
   const classes = {
-    [DEFAULT]: DEFAULT,
-    [variants]: variants,
+    [Array.isArray(DEFAULT) ? DEFAULT.join(' ') : DEFAULT]: DEFAULT,
+    [Array.isArray(variants) ? variants.join(' ') : variants]: variants,
   };
 
   console.log(`variants: ` + variants);
