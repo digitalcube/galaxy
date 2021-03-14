@@ -1,23 +1,24 @@
 import classNames from 'classnames';
-import { VariantTypes } from './variants';
 
-export const css = ({ variant, variants }: VariantTypes) => {
+export const css = ({ variant, variants, state }: Theme) => {
+  const { types, states } = variants;
+  console.log(variant, variants, types, state, states);
   const DEFAULT = variants?.DEFAULT;
   // variants = variants?.variants !== undefined ? variants.variants : false;
-  const states = variants?.states !== undefined ? variants.states : false;
+  // const states = variants?.states !== undefined ? variants.states : false;
 
   const classes = {
     [DEFAULT]: true,
-    // [variants[variant]]: variants,
+    [types[variant]]: types,
     [states[variant]]: states,
   };
-
-  console.log(variants);
 
   return classNames(classes);
 };
 
-css.defaultProps = {
-  debug: false,
-  variant: 'active',
+type Theme = {
+  variant: string;
+  variants: any;
+  state: string;
+  states: any;
 };

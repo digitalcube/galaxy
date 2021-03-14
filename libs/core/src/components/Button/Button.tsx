@@ -2,7 +2,6 @@ import React, { ReactNode, FC } from 'react';
 import { css, Tag } from '@galaxy/core';
 import { buttonTheme } from './Button.galaxy';
 import Link from '../../lib/link/link';
-
 const { button } = buttonTheme;
 
 export const Button: FC<Button> = ({
@@ -15,8 +14,10 @@ export const Button: FC<Button> = ({
   href,
 }: Button) => {
   const classNames = css({
-    variant: variant,
+    variant: 'primary',
     variants: variants,
+    state: 'active',
+    states: variants?.states,
   });
 
   /**
