@@ -1,22 +1,16 @@
 import React from 'react';
-import { badge } from './galaxy.config';
+import { defaultStorybookConfig } from '../../.storybook/docs';
+import { badgeTheme } from './Badge.galaxy';
 import { Badge, getVariants } from '@galaxy/core';
 
-import { defaultStorybookConfig } from '../../.storybook/docs';
+const { badge } = badgeTheme;
+
 export default {
   ...defaultStorybookConfig,
   component: Badge,
   title: `Galaxy/Components/Badge`,
 };
 
-export const Variants = ({ variants = badge }) => {
-  if (!variants) return null;
-  return getVariants({ variants: variants }).map((v, i) => {
-    const { variant, className } = v;
-    return (
-      <Badge variant={variant} className={`${className}`} key={i}>
-        {variant}
-      </Badge>
-    );
-  });
+export const Example = () => {
+  return <Badge />;
 };

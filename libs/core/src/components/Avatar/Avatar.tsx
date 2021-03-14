@@ -1,6 +1,7 @@
 import React, { FC } from 'react';
 import { Image, css, ButtonMenu } from '@galaxy/core';
-import { avatar } from './galaxy.config';
+import { avatarTheme } from './Avatar.galaxy';
+const { avatar } = avatarTheme;
 
 export const Avatar: FC<Avatar> = ({
   img,
@@ -11,9 +12,8 @@ export const Avatar: FC<Avatar> = ({
   variants,
   menu,
 }: Avatar) => {
-
   const classNames = css({
-    variant: variant,
+    variant: `${variant}`,
     variants: variants,
   });
 
@@ -46,7 +46,7 @@ export type Avatar = {
   img?: string;
   imgDefault?: string;
   name?: string;
-  variant?: typeof avatar.variants;
+  variant?: typeof avatar;
   variants?: typeof avatar;
   size?: number;
   menu?: boolean | ButtonMenu;

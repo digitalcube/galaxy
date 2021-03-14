@@ -1,21 +1,36 @@
 import React, { FC, ReactNode } from 'react';
-import { Heading } from '@galaxy/core';
+import { Heading, css } from '@galaxy/core';
+import { badgeTheme } from './Badge.galaxy';
+const { badge } = badgeTheme;
 
-export const Badge: FC<Badge> = ({ children, className, variant }: Badge) => {
-  if (!children) return null;
+export const Badge: FC<Badge> = ({ label, className, variant }: Badge) => {
+  if (!label) return null;
+
+  const badgeCss = css({
+    variant: `${variant}`,
+    variants: badge,
+  });
+
   return (
     <Heading
-      variant={variant}
+      variant={`${variant}`}
       fontSize="4"
       fontWeight="strong"
-      className={`${className}`}
-      text={children}
+      className={`${badgeCss} ${className}`}
+      text={label}
     />
   );
 };
 
 export type Badge = {
   className?: string;
-  children?: string;
-  variant?: Heading['variant'];
+  label?: string;
+  variant?: string;
+  variants?: typeof badge;
+};
+
+Badge.defaultProps = {
+  variants: badge,
+  variant: 'primary',
+  label: 'Hello World.',
 };

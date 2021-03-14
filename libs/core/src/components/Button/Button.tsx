@@ -1,7 +1,7 @@
 import React, { ReactNode, FC } from 'react';
 import { css, Tag } from '@galaxy/core';
-import { buttonTheme } from './Button.galaxy';
 import Link from '../../lib/link/link';
+import { buttonTheme } from './Button.galaxy';
 const { button } = buttonTheme;
 
 export const Button: FC<Button> = ({
