@@ -10,18 +10,18 @@ export const Toggle: FC<Toggle> = ({ state, variants }: Toggle) => {
   const size = 12;
 
   const toggleSwitchScale = `${
-    enabled ? `translate-x-${size / 2 + 1}` : 'translate-x-1'
+    enabled
+      ? `translate-x-${size / 2 + 1} hover:translate-x-${size / 2}`
+      : 'translate-x-1 hover:translate-x-2'
   } w-${size / 2 - 2} h-${size / 2 - 2}`;
 
   const toggleBezelCssScale = `h-${size / 2} w-${size}`;
 
   const toggleBezelCss = css({
-    variant: enabled ? 'active' : null,
     variants: variants.bezel,
   });
 
   const toggleSwitchCss = css({
-    variant: enabled ? 'active' : null,
     variants: variants.switch,
   });
 

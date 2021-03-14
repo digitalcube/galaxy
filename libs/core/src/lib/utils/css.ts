@@ -6,8 +6,6 @@ export const css = ({ variant, variants }: Css) => {
   const DEFAULT = variants?.DEFAULT;
   variants = variants[variant];
 
-  console.log(variants);
-
   const classes = {
     [DEFAULT ? DEFAULT : '']: true,
     [variants]: variants ? true : false,
@@ -17,6 +15,6 @@ export const css = ({ variant, variants }: Css) => {
 };
 
 type Css = {
-  variant: string;
+  variant?: string;
   variants: any;
 };
