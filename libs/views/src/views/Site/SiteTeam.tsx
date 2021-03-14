@@ -9,7 +9,7 @@ export const SiteTeam: FC<SiteTeam> = ({ team, variant }: SiteTeam) => {
 };
 
 export type SiteTeam = {
-  variant?: 'light' | 'dark' | string;
+  variant?: string;
   team?: string;
 };
 

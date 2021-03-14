@@ -52,7 +52,7 @@ export type Site = {
   name: string;
   team?: string;
   url: string;
-  variant?: 'light' | 'dark' | string;
+  variant?: string;
   state: 'running' | 'stopped' | string;
   progress: 0 | 1 | 2 | 3 | 4 | 5 | null;
 };

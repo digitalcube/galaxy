@@ -34,7 +34,7 @@ export const Webhook: FC<Webhook> = ({
 export type Webhook = {
   title: string;
   url: string;
-  variant?: 'light' | 'dark' | string;
+  variant?: string;
   event: string;
   state: 'running' | 'stopped' | string;
 };

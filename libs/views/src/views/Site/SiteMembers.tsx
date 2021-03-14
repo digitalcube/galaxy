@@ -12,5 +12,5 @@ export const SiteMembers: FC<SiteMembers> = ({ variant }: SiteMembers) => {
 };
 
 export type SiteMembers = {
-  variant?: 'light' | 'dark' | string;
+  variant?: string;
 };

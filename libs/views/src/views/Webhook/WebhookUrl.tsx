@@ -8,7 +8,7 @@ export const Webhook: FC<Webhook> = ({ url, variant }: Webhook) => {
 };
 
 export type Webhook = {
-  variant?: 'light' | 'dark' | string;
+  variant?: string;
   url: string;
 };
 

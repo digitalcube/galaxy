@@ -17,7 +17,7 @@ export const ArtifactState: FC<ArtifactState> = ({
 };
 
 export type ArtifactState = {
-  variant?: 'light' | 'dark' | string;
+  variant?: string;
   state: 'running' | 'stopped' | string;
   className?: string;
 };

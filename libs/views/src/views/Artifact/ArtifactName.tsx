@@ -17,7 +17,7 @@ export const ArtifactName: FC<ArtifactName> = ({
 };
 
 export type ArtifactName = {
-  variant?: 'light' | 'dark' | string;
+  variant?: string;
   name: string;
 };
 

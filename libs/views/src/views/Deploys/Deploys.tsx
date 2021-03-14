@@ -19,7 +19,7 @@ export const Deploys: FC<Deploys> = ({ variant, state, title }: Deploys) => {
 };
 
 export type Deploys = {
-  variant?: 'light' | 'dark' | string;
+  variant?: string;
   state: AutoPublish;
   title: string;
 };

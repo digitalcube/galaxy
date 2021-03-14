@@ -21,7 +21,7 @@ export const ArtifactProgress: FC<ArtifactProgress> = ({
 };
 
 export type ArtifactProgress = {
-  variant?: 'light' | 'dark' | string;
+  variant?: string;
   progress?: 0 | 1 | 2 | 3 | 4 | 5 | null;
 };
 

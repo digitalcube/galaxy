@@ -15,7 +15,7 @@ export const WebhookOptions: FC<WebhookOptions> = ({
 };
 
 export type WebhookOptions = {
-  variant?: 'light' | 'dark' | string;
+  variant?: string;
   state: 'running' | 'stopped' | string;
   className?: string;
 };

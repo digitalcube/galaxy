@@ -27,7 +27,7 @@ export const Container: FC<Container> = ({
 };
 
 export type Container = {
-  variant?: 'light' | 'dark' | string;
+  variant?: string;
   title?: string;
   wpVersion: WpVersion;
   phpVersion: PhpVersion;

@@ -10,7 +10,7 @@ export const ArtifactOptions: FC<ArtifactOptions> = ({
 };
 
 export type ArtifactOptions = {
-  variant?: 'light' | 'dark' | string;
+  variant?: string;
   state: 'running' | 'stopped' | string;
   className?: string;
 };

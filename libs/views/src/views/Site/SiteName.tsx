@@ -8,7 +8,7 @@ export const SiteName: FC<SiteName> = ({ name, variant }: SiteName) => {
 };
 
 export type SiteName = {
-  variant?: 'light' | 'dark' | string;
+  variant?: string;
   name: string;
 };
 

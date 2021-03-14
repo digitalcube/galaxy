@@ -8,7 +8,7 @@ export const SiteState: FC<SiteState> = ({ state, variant }: SiteState) => {
 };
 
 export type SiteState = {
-  variant?: 'light' | 'dark' | string;
+  variant?: string;
   state: 'running' | 'stopped' | string;
 };
 

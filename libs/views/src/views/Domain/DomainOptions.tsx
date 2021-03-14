@@ -10,7 +10,7 @@ export const DomainOptions: FC<DomainOptions> = ({
 };
 
 export type DomainOptions = {
-  variant?: 'light' | 'dark' | string;
+  variant?: string;
   state: 'running' | 'stopped' | string;
   className?: string;
 };

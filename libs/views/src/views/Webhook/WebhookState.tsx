@@ -17,7 +17,7 @@ export const WebhookState: FC<WebhookState> = ({
 };
 
 export type WebhookState = {
-  variant?: 'light' | 'dark' | string;
+  variant?: string;
   state: 'running' | 'stopped' | string;
   className?: string;
 };
