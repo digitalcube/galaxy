@@ -1,5 +1,4 @@
-import React, { FC } from 'react';
-import { useState } from 'react';
+import React, { FC, useState } from 'react';
 import { Switch } from '@headlessui/react';
 import { css } from '@galaxy/core';
 import { toggleTheme } from './Toggle.galaxy';
@@ -16,11 +15,10 @@ export const Toggle: FC<Toggle> = ({ state, variants }: Toggle) => {
 
   const toggleBezelCssScale = `h-${size / 2} w-${size}`;
 
-  const toggleBezelCss =
-    css({
-      variant: enabled ? 'active' : null,
-      variants: variants.bezel,
-    });
+  const toggleBezelCss = css({
+    variant: enabled ? 'active' : null,
+    variants: variants.bezel,
+  });
 
   const toggleSwitchCss = css({
     variant: enabled ? 'active' : null,

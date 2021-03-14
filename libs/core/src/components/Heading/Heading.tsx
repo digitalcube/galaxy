@@ -30,7 +30,7 @@ export const Heading = ({
 };
 
 export type Heading = {
-  text?: string;
+  text?: string | ReactNode;
   as?:
     | 'h1'
     | 'h2'

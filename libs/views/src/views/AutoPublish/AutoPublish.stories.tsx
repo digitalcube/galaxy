@@ -1,30 +1,12 @@
 import React from 'react';
-import { company, internet } from 'faker';
-import { Section, fakerProgress } from '@galaxy/core';
-import { WpControls } from '@galaxy/views';
-import { schema } from './galaxy.config';
-
+import { AutoPublish } from '@galaxy/views';
 import { defaultStorybookConfig } from '../../.storybook/docs';
 export default {
   ...defaultStorybookConfig,
-  component: WpControls,
+  component: AutoPublish,
   title: `Shifter/Dashboard/Patterns/AutoPublish`,
 };
 
-export const Schemas = () => {
-  return Object.entries(schema.components.autoPublish.variants).map((variant) => {
-    return (
-      <Section className="mb-4">
-        <WpControls
-          name={`${company.companyName()}`}
-          url={`${internet.url()}`}
-          team={`${company.companyName()}`}
-          variant={variant[0]}
-          img={`https://images.unsplash.com/photo-1472099645785-5658abf4ff4e?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=facearea&facepad=2&w=256&h=256&q=80`}
-          state="running"
-          progress={fakerProgress()}
-        />
-      </Section>
-    );
-  });
+export const Example = () => {
+  return <AutoPublish />;
 };
