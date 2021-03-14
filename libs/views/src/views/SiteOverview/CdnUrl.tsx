@@ -11,8 +11,8 @@ export const CdnUrl: FC<CdnUrl> = ({ url, name }: CdnUrl) => {
 };
 
 export type CdnUrl = {
-  url: string;
-  name: string;
+  url?: string;
+  name?: string;
 };
 
 CdnUrl.defaultProps = {

@@ -1,6 +1,7 @@
 import React, { ReactNode, FC } from 'react';
-import { Section, CardHeader, CardFooter, css } from '@galaxy/core';
-import { card } from './galaxy.config';
+import { Section, CardHeader, CardFooter, CardMain, css } from '@galaxy/core';
+import { cardTheme } from './Card.galaxy';
+const { card } = cardTheme;
 
 export const Card: FC<Card> = ({
   children,
@@ -11,17 +12,16 @@ export const Card: FC<Card> = ({
   description,
   variants,
 }: Card) => {
+  const main = children;
+  const cardCss = css({
+    variant: `${variant}`,
+    variants: variants,
+  });
+
   return (
-    <Section
-      className={`pt-6 ${css({
-        variant: `${variant}`,
-        variants: variants,
-      })} ${className}`}
-    >
+    <Section className={`${cardCss} ${className}`}>
       {title ? <CardHeader title={title} description={description} /> : null}
-      {children ? (
-        <Section className="space-y-6 px-3 pb-4">{children}</Section>
-      ) : null}
+      {main ? <CardMain main={main} /> : null}
       <CardFooter footer={footer} />
     </Section>
   );
@@ -31,8 +31,13 @@ export type Card = {
   children?: ReactNode;
   className?: string;
   footer?: ReactNode;
+  main?: ReactNode;
   title?: string;
   description?: string;
-  variant?: typeof card.variants;
+  variant?: string;
   variants?: typeof card;
+};
+
+Card.defaultProps = {
+  variants: card,
 };
