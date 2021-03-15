@@ -1,16 +1,11 @@
 import React, { FC } from 'react';
-import classNames from 'classnames';
-import { Section, Button } from '@galaxy/core';
-import { schema } from './galaxy.config.js';
+import { Button, Heading } from '@galaxy/core';
 import { PencilAlt } from 'heroicons-react';
 
-export const ArtifactName: FC<ArtifactName> = ({
-  name,
-  variant,
-}: ArtifactName) => {
+export const ArtifactName: FC<ArtifactName> = ({ name }: ArtifactName) => {
   return (
     <Button variant="link" className="flex flex-row space-x-2 items-center">
-      <span>{name}</span>
+      <Heading fontWeight="regular" text={name} />
       <PencilAlt size={16} />
     </Button>
   );
@@ -19,16 +14,4 @@ export const ArtifactName: FC<ArtifactName> = ({
 export type ArtifactName = {
   variant?: string;
   name: string;
-};
-
-const artifactNameVariants = ({ variant }: ArtifactName) => {
-  const DEFAULT = schema.components.artifact.components.name.DEFAULT;
-  const variants = schema.components.artifact.components.name.variants;
-  const classes = {
-    [`${DEFAULT}`]: true,
-    [`${variants.light}`]: !variant || variant === 'light',
-    [`${variants.dark}`]: variant === 'dark',
-  };
-
-  return classNames(classes);
 };

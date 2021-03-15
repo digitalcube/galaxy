@@ -1,5 +1,4 @@
 import React, { FC } from 'react';
-import classNames from 'classnames';
 import {
   ArtifactState,
   ArtifactCreationDate,
@@ -8,20 +7,22 @@ import {
   ArtifactProgress,
   ArtifactOptions,
 } from '@galaxy/views';
-import { Section } from '@galaxy/core';
-import { schema } from './galaxy.config.js';
+import { Section, Card, css } from '@galaxy/core';
+import { artifactTheme } from './Artifact.galaxy';
+const { artifact } = artifactTheme;
 
 export const Artifact: FC<Artifact> = ({
   name,
-  url,
   variant,
   img,
   state,
   progress,
   date,
+  variants,
 }: Artifact) => {
+  const artifactCss = css({ variants: variants });
   return (
-    <Section className={artifactVariants({ variant })}>
+    <Card variant="primary" className={`${artifactCss}`}>
       <ArtifactPreview img={img} />
       <Section as="div" className="flex-grow">
         <ArtifactProgress progress={progress} variant={variant} />
@@ -40,33 +41,20 @@ export const Artifact: FC<Artifact> = ({
           </Section>
         </Section>
       </Section>
-    </Section>
+    </Card>
   );
 };
 
 export type Artifact = {
   img?: string;
-  name: string;
-  url: string;
+  name?: string;
   variant?: string;
-  state: 'running' | 'stopped' | string;
-  progress: 0 | 1 | 2 | 3 | 4 | 5 | null;
-  date: ArtifactCreationDate;
+  state?: 'running' | 'stopped' | string;
+  progress?: 0 | 1 | 2 | 3 | 4 | 5 | null;
+  date?: ArtifactCreationDate;
+  variants?: typeof artifact;
 };
 
 Artifact.defaultProps = {
-  variant: 'light',
-};
-
-const artifactVariants = ({ variant }: Artifact) => {
-  const variants = schema.components.artifact.variants;
-  const DEFAULT = schema.components.artifact.DEFAULT;
-
-  const classes = {
-    [`${variants.light}`]: !variant || variant === 'light',
-    [`${variants.dark}`]: variant === 'dark',
-    [`${DEFAULT}`]: true,
-  };
-
-  return classNames(classes);
+  variants: artifact,
 };
