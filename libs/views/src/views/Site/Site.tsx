@@ -12,7 +12,6 @@ import {
 import { Button, Section, Card, css } from '@galaxy/core';
 import { siteTheme } from './Site.galaxy';
 const { site } = siteTheme;
-// import { schema } from './galaxy.config.js';
 
 export const Site: FC<Site> = ({
   name,
@@ -27,8 +26,8 @@ export const Site: FC<Site> = ({
   return (
     <Card variant="primary" className={`${siteCss}`}>
       <SitePreview img={img} />
-      <Section className="flex flex-grow">
-        <SiteProgress progress={progress} variant={variant} />
+      <Section className="flex flex-grow flex-row">
+        <SiteProgress progress={progress} />
         <Section className="flex p-4 space-y-4 relative flex-col flex-grow">
           <Section className="flex justify-between">
             <SiteName name={name} />

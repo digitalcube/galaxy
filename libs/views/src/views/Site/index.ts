@@ -5,5 +5,5 @@ export * from './SiteName';
 export * from './SitePreview';
 export * from './SiteUrl/SiteUrl';
 export * from './SiteTeam/SiteTeam';
-export * from './SiteProgress';
+export * from './SiteProgress/SiteProgress';
 export * from './SiteOptions';
