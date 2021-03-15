@@ -18,4 +18,5 @@ export type WpVersion = {
 
 WpVersion.defaultProps = {
   title: 'WordPress version',
+  version: '5.x',
 };

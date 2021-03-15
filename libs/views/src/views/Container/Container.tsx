@@ -1,22 +1,19 @@
 import React, { FC } from 'react';
-import classNames from 'classnames';
-import { Card, Heading, Section } from '@galaxy/core';
+import { Card, Section, css } from '@galaxy/core';
 import { WpVersion, PhpVersion } from '@galaxy/views';
-import { schema } from './galaxy.config.js';
+import { containerTheme } from './Container.galaxy';
+const { container } = containerTheme;
 
 export const Container: FC<Container> = ({
-  variant,
+  variants,
   title,
   wpVersion,
   phpVersion,
 }: Container) => {
+  const containerCss = css({ variants: variants });
   return (
     <Card title={title}>
-      <div
-        className={`flex flex-col px-3 py-6 space-y-6 ${containerVariants({
-          variant,
-        })}`}
-      >
+      <div className={`${containerCss}`}>
         <Section className="space-y-4">
           <WpVersion {...wpVersion} />
           <PhpVersion {...phpVersion} />
@@ -27,26 +24,13 @@ export const Container: FC<Container> = ({
 };
 
 export type Container = {
-  variant?: string;
   title?: string;
   wpVersion: WpVersion;
   phpVersion: PhpVersion;
+  variants: typeof container;
 };
 
 Container.defaultProps = {
-  variant: 'light',
   title: 'Container Info',
-};
-
-const containerVariants = ({ variant }: Container) => {
-  const variants = schema.components.container.variants;
-  const DEFAULT = schema.components.container.DEFAULT;
-
-  const classes = {
-    [`${variants.light}`]: !variant || variant === 'light',
-    [`${variants.dark}`]: variant === 'dark',
-    [`${DEFAULT}`]: true,
-  };
-
-  return classNames(classes);
+  variants: container,
 };

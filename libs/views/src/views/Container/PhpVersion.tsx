@@ -18,4 +18,5 @@ export type PhpVersion = {
 
 PhpVersion.defaultProps = {
   title: 'PHP version',
+  version: '8.x',
 };
