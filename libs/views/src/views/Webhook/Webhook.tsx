@@ -34,11 +34,11 @@ export const Webhook: FC<Webhook> = ({
 };
 
 export type Webhook = {
-  title: string;
-  url: string;
-  event: string;
-  variants: typeof webhook;
-  state: 'running' | 'stopped' | string;
+  title?: string;
+  url?: string;
+  event?: string;
+  variants?: typeof webhook;
+  state?: 'running' | 'stopped' | string;
 };
 
 Webhook.defaultProps = {

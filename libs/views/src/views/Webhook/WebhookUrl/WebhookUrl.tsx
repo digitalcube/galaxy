@@ -47,12 +47,12 @@ export const WebhookUrl: FC<WebhookUrl> = ({
 };
 
 export type WebhookUrl = {
-  state: 'pending' | 'verified' | 'failed' | 'attached' | string;
-  title: string;
+  state?: 'pending' | 'verified' | 'failed' | 'attached' | string;
+  title?: string;
   className?: string;
   variant?: string;
   variants?: any;
-  url: string;
+  url?: string;
 };
 
 WebhookUrl.defaultProps = {

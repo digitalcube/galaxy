@@ -1,16 +1,17 @@
 import React, { FC } from 'react';
-import classNames from 'classnames';
-import { Card, fakerArtifacts, Heading, Section } from '@galaxy/core';
+import { Card, fakerArtifacts, Heading, Section, css } from '@galaxy/core';
 import { WpControls, AutoPublish, Artifacts } from '@galaxy/views';
-import { css } from '@galaxy/core';
-import { deploys } from './galaxy.config';
+import { deploysTheme } from './Deploys.galaxy';
+const { deploys } = deploysTheme;
 
-export const Deploys: FC<Deploys> = ({ variant, state, title }: Deploys) => {
+export const Deploys: FC<Deploys> = ({ variants, state, title }: Deploys) => {
+  const deploysCss = css({ variants: variants });
+
   return (
     <Card className={`space-y-6`}>
-      <WpControls state={state} />
+      <WpControls state={`${state}`} />
       <Section className="flex flex-row space-x-6 justify-between">
-        <Heading fontSize="5" fontWeight="strong" text={title} />
+        <Heading fontSize={5} fontWeight="strong" text={title} />
         <AutoPublish />
       </Section>
       <Artifacts artifacts={fakerArtifacts} />
@@ -19,12 +20,12 @@ export const Deploys: FC<Deploys> = ({ variant, state, title }: Deploys) => {
 };
 
 export type Deploys = {
-  variant?: string;
-  state: AutoPublish;
+  variants?: typeof deploys;
+  state: string;
   title: string;
 };
 
 Deploys.defaultProps = {
-  variant: 'light',
+  variants: deploys,
   title: 'Deploys',
 };

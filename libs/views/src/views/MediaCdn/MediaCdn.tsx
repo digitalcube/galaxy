@@ -6,11 +6,11 @@ export const MediaCdn: FC<MediaCdn> = ({ title, state }: MediaCdn) => {
 };
 
 export type MediaCdn = {
-  title: string;
-  state: boolean;
+  title?: string;
+  state?: boolean;
 };
 
 MediaCdn.defaultProps = {
-  title: 'Media CDN is',
+  title: 'Media CDN',
   state: false,
 };

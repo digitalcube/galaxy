@@ -42,7 +42,11 @@ export const Control: FC<Control> = ({
 
 export type Control = {
   children?: ReactNode;
-  title: string;
-  description: string;
-  state: boolean;
+  title?: string;
+  description?: string;
+  state?: boolean;
+};
+
+Control.defaultProps = {
+  state: false,
 };
