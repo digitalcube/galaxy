@@ -3,8 +3,8 @@ import { Button } from '@galaxy/core';
 
 export const SitesCreate: FC<SitesCreate> = ({ title }: SitesCreate) => {
   return (
-    <Button variant="primary" className="relative text-left">
-      <span className="absolute inset-y-0 left-0 flex items-center pl-4 pointer-events-none">
+    <Button variant="primary" className="relative text-left" label={title}>
+      <span className="pl-4 pointer-events-none">
         <svg
           className="h-4 w-4 text-white"
           xmlns="http://www.w3.org/2000/svg"
@@ -21,7 +21,6 @@ export const SitesCreate: FC<SitesCreate> = ({ title }: SitesCreate) => {
           />
         </svg>
       </span>
-      <span className="flex items-center pl-6">{title}</span>
     </Button>
   );
 };
