@@ -9,7 +9,6 @@ export const badgeTheme = {
       'bg-shifter-gray-100',
       'text-shifter-gray-800',
     ],
-    primary: ['bg-shifter-gray-100', 'text-shifter-gray-800'],
     success: ['bg-status-success-light', 'text-status-success-dark'],
     active: [
       'bg-gradient-to-r',

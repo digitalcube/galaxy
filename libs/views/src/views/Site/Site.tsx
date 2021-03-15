@@ -1,5 +1,4 @@
 import React, { FC } from 'react';
-import classNames from 'classnames';
 import {
   SiteState,
   SiteMembers,
@@ -10,8 +9,10 @@ import {
   SiteProgress,
   SiteOptions,
 } from '@galaxy/views';
-import { Button, Section } from '@galaxy/core';
-import { schema } from './galaxy.config.js';
+import { Button, Section, Card, css } from '@galaxy/core';
+import { siteTheme } from './Site.galaxy';
+const { site } = siteTheme;
+// import { schema } from './galaxy.config.js';
 
 export const Site: FC<Site> = ({
   name,
@@ -22,28 +23,29 @@ export const Site: FC<Site> = ({
   state,
   progress,
 }: Site) => {
+  const siteCss = css({ variants: site });
   return (
-    <Section className={siteVariants({ variant })}>
+    <Card variant="primary" className={`${siteCss}`}>
       <SitePreview img={img} />
-      <Section as="div" className="flex-grow">
+      <Section className="flex flex-grow">
         <SiteProgress progress={progress} variant={variant} />
-        <Section className="p-4 space-y-4 relative">
-          <Section className="flex">
-            <SiteName variant={variant} name={name} />
+        <Section className="flex p-4 space-y-4 relative flex-col flex-grow">
+          <Section className="flex justify-between">
+            <SiteName name={name} />
             <Section className="flex items-center space-x-2">
               <SiteState state={state} />
               <Button variant="ghost">Manage site</Button>
               <SiteOptions />
             </Section>
           </Section>
-          <Section className="flex space-x-4" as="div">
+          <Section className="flex space-x-4 items-center" as="div">
             <SiteUrl variant={variant} url={`${url}`} />
             <SiteMembers variant={variant} />
             <SiteTeam variant={variant} team={`${team}`} />
           </Section>
         </Section>
       </Section>
-    </Section>
+    </Card>
   );
 };
 
@@ -58,18 +60,11 @@ export type Site = {
 };
 
 Site.defaultProps = {
-  variant: 'light',
-};
-
-const siteVariants = ({ variant }: Site) => {
-  const variants = schema.components.site.variants;
-  const DEFAULT = schema.components.site.DEFAULT;
-
-  const classes = {
-    [`${variants.light}`]: !variant || variant === 'light',
-    [`${variants.dark}`]: variant === 'dark',
-    [`${DEFAULT}`]: true,
-  };
-
-  return classNames(classes);
+  name: 'name',
+  url: 'url',
+  team: 'team',
+  variant: 'primary',
+  img: `https://images.unsplash.com/photo-1472099645785-5658abf4ff4e?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=facearea&facepad=2&w=256&h=256&q=80`,
+  state: 'running',
+  progress: 1,
 };

@@ -1,6 +1,10 @@
 export const siteUrlTheme = {
   siteUrl: {
-    DEFAULT:
-      'font-regular text-size-3 flex-initial text-shifter-purple-primary',
+    DEFAULt: [
+      'font-strong',
+      'text-size-6',
+      'flex-auto',
+      'text-shifter-purple-700',
+    ],
   },
 };

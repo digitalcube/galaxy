@@ -10,7 +10,7 @@ module.exports = {
         },
         components: {
           name: {
-            DEFAULT: 'font-strong text-size-6 flex-auto',
+            DEFAULT: 'font-strong text-size-6 flex-auto text-shifter-purple-700',
             variants: {
               light: 'text-shifter-purple-700',
               dark: 'text-shifter-gray-200',

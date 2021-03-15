@@ -5,6 +5,7 @@ const { card } = cardTheme;
 
 export const Card: FC<Card> = ({
   children,
+  main,
   variant,
   className,
   title,
@@ -12,7 +13,6 @@ export const Card: FC<Card> = ({
   description,
   variants,
 }: Card) => {
-  const main = children;
   const cardCss = css({
     variant: `${variant}`,
     variants: variants,
@@ -22,6 +22,7 @@ export const Card: FC<Card> = ({
     <Section className={`${cardCss} ${className}`}>
       {title ? <CardHeader title={title} description={description} /> : null}
       {main ? <CardMain main={main} /> : null}
+      {children}
       <CardFooter footer={footer} />
     </Section>
   );

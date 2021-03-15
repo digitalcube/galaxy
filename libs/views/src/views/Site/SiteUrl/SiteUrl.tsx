@@ -5,16 +5,21 @@ import { siteUrlTheme } from './SiteUrl.galaxy';
 const { siteUrl } = siteUrlTheme;
 
 const siteUrlCss = css({
-  variant: 'variant',
   variants: siteUrl,
 });
 
 export const SiteUrl: FC<SiteUrl> = ({ url, variant }: SiteUrl) => {
-  return <Heading className={siteUrlCss} text={url} />;
+  return (
+    <Heading className={`${siteUrlCss}`} text={url} variant={`${variant}`} />
+  );
 };
 
 export type SiteUrl = {
   url: string;
   variant: string;
   variants: typeof siteUrl;
+};
+
+SiteUrl.defaultProps = {
+  variant: 'primary',
 };

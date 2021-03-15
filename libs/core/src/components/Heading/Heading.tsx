@@ -5,7 +5,6 @@ import { headingTheme } from './Heading.galaxy';
 import './Heading.css';
 
 const { heading } = headingTheme;
-console.log(heading);
 
 export const Heading = ({
   text,
@@ -21,8 +20,8 @@ export const Heading = ({
     variants: variants,
   });
 
-  const size = `text-size-${fontSize}`;
-  const weight = `font-${fontWeight}`;
+  const size = fontSize ? `text-size-${fontSize}` : '';
+  const weight = fontWeight ? `font-${fontWeight}` : '';
 
   return (
     <Tag
@@ -47,7 +46,7 @@ export type Heading = {
     | 'span'
     | 'caption'
     | 'figcaption';
-  fontSize?: '0' | '1' | '2' | '3' | '4' | '5' | '6' | '7' | '8' | '9';
+  fontSize?: 0 | 1 | 2 | 3 | 4 | 5 | 6 | 7 | 8 | 9;
   fontWeight?: 'regular' | 'strong';
   className?: string;
   variant?: string;
@@ -55,7 +54,8 @@ export type Heading = {
 };
 
 Heading.defaultProps = {
-  fontSize: '4',
+  fontSize: 4,
+  fontWeight: 'regular',
   as: 'div',
   variant: 'primary',
   variants: heading,

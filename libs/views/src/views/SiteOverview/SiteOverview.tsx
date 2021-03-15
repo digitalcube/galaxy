@@ -11,7 +11,6 @@ import {
 export const SiteOverview: FC<SiteOverview> = ({
   artifact,
   cloudfront,
-  variant,
   img,
   date,
   team,

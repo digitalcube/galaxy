@@ -11,3 +11,7 @@ export default {
 export const Example = () => {
   return <Card>😀 😎 👍 💯</Card>;
 };
+
+export const Primary = () => {
+  return <Card variant="primary">😀 😎 👍 💯</Card>;
+};
