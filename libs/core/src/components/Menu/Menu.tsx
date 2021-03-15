@@ -4,7 +4,7 @@ import { Button } from '@galaxy/core';
 export type MenuItem = {
   title: string;
   href?: string;
-}
+};
 export type Menu = {
   items?: MenuItem[];
   alignment?: 'vertical' | 'horizontal';
@@ -16,13 +16,9 @@ export const Items = ({ items }: Menu) => {
     <>
       {items.map((item, i) => {
         const { title, href } = item;
-        return (
-          <Button key={i} variant="ghost" href={href}>
-            {title}
-          </Button>
-        );
+        return <Button key={i} variant="ghost" href={href} label={title} />;
       })}
-  </>
+    </>
   );
 };
 
