@@ -3,11 +3,11 @@ import { SiteState, WpAdmin, BuildDeploy } from '@galaxy/views';
 import { Section } from '@galaxy/core';
 import { Play, Refresh } from 'heroicons-react';
 
-export const WpControls: FC = ({ state }) => {
+export const WpControls: FC<WpControls> = ({ state }: WpControls) => {
   return (
     <Section className="flex flex-row items-center justify-between border-b pb-6 border-shifter-gray-200">
       <Section className="flex flex-row items-center space-x-4 divide-x">
-        <SiteState state={state} />
+        <SiteState state={`${state}`} />
         <div className="flex flex-row items-center space-x-4 pl-4">
           <Play size={16} />
           <Refresh size={16} />
@@ -22,5 +22,9 @@ export const WpControls: FC = ({ state }) => {
 };
 
 export type WpControls = {
-  state: SiteState;
+  state: string;
+};
+
+WpControls.defaultProps = {
+  state: 'stopped',
 };

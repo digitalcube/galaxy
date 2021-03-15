@@ -1,7 +1,8 @@
 import React, { ReactNode, FC } from 'react';
-import { buttonMenu } from './galaxy.config';
 import { Menu, Transition } from '@headlessui/react';
 import Link from '../../lib/link/link';
+import { buttonMenuTheme } from './ButtonMenu.galaxy';
+const { buttonMenu } = buttonMenuTheme;
 
 export type ButtonMenuItem = {
   label?: string;
@@ -46,10 +47,7 @@ export const ButtonMenu: FC<ButtonMenu> = ({
               leaveFrom="transform opacity-100 scale-100"
               leaveTo="transform opacity-0 scale-95"
             >
-              <Menu.Items
-                
-                className="rounded w-56 mt-2 origin-top-right bg-white rounded-md shadow-lg outline-none overflow-hidden border-2 border-shifter-gray-300"
-              >
+              <Menu.Items className="rounded w-56 mt-2 origin-top-right bg-white rounded-md shadow-lg outline-none overflow-hidden border-2 border-shifter-gray-300">
                 <ButtonMenuItem label={`Account settings`} active={true} />
                 <ButtonMenuItem label={`New feature (soon)`} active={false} />
                 <ButtonMenuItem label={`Support`} active={true} />
@@ -70,11 +68,12 @@ export type ButtonMenu = {
   items?: any; // TODO: Update type to use @galaxy/core Menu[]
   className?: string;
   variants?: typeof buttonMenu;
-  variant?: typeof buttonMenu.variants;
+  variant?: string;
   active?: boolean;
 };
 
 ButtonMenu.defaultProps = {
+  variants: buttonMenu,
   children: (
     <>
       <span>Options</span>

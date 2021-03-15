@@ -1,6 +1,7 @@
 import React, { FC, useState } from 'react';
 import { Listbox, Transition } from '@headlessui/react';
-import { select } from './galaxy.config';
+import { selectTheme } from './Select.galaxy';
+const { select } = selectTheme;
 
 export const Select: FC<Select> = ({ variant, label, items }: Select) => {
   const [selectedPerson, setSelectedPerson] = useState(items[0]);
@@ -105,7 +106,7 @@ export const Select: FC<Select> = ({ variant, label, items }: Select) => {
 };
 
 export type Select = {
-  variant?: typeof select.variants;
+  variant?: string;
   variants?: typeof select;
   label?: string;
   items?: any;
@@ -114,4 +115,5 @@ export type Select = {
 Select.defaultProps = {
   label: 'Assigned to',
   items: ['Name: A-Z', 'Name: Z-A', 'Domain: A-Z', 'Domain: Z-A'],
+  variant: 'primary',
 };

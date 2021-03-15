@@ -1,5 +1,4 @@
 import React from 'react';
-import { buttonMenu } from './galaxy.config';
 import { ButtonMenu } from './ButtonMenu';
 
 import { defaultStorybookConfig } from '../../.storybook/docs';

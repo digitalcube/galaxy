@@ -11,10 +11,11 @@ export const AutoPublish: FC<AutoPublish> = ({ text, state }: AutoPublish) => {
 };
 
 export type AutoPublish = {
-  state: boolean;
-  text: string;
+  state?: boolean;
+  text?: string;
 };
 
 AutoPublish.defaultProps = {
   text: 'Auto-publish',
+  state: true,
 };
