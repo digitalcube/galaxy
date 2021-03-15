@@ -1,4 +1,4 @@
 export * from './Card';
 export * from './CardHeader';
 export * from './CardFooter';
-export * from './CardMain';
+export * from './CardMain/CardMain';

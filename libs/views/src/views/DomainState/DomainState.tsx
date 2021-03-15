@@ -1,27 +1,46 @@
 import React, { FC } from 'react';
 import { Badge, css } from '@galaxy/core';
-import { domainState } from './galaxy.config';
+// import { domainState } from './galaxy.config';
+import { domainStateTheme } from './DomainState.galaxy';
+const { domainState } = domainStateTheme;
 
 export const DomainState: FC<DomainState> = ({
   state,
   className,
   title,
   variants,
+  variant,
 }: DomainState) => {
+  if (state === 'pending') {
+    variant = 'warning';
+  }
+
+  if (state === 'verified') {
+    variant = 'verified';
+  }
+
+  if (state === 'failed') {
+    variant = 'danger';
+  }
+
+  title = title ? title : state;
+
+  const domainStateCss = css({
+    variant: variant,
+    variants: variants,
+  });
+
   return (
     <Badge
-      className={`${className} ${css({
-        variant: state,
-        variants: variants,
-      })}}`}
-    >
-      {title}
-    </Badge>
+      className={`${domainStateCss} ${className}`}
+      variant={`${variant}`}
+      label={title}
+    />
   );
 };
 
 export type DomainState = {
-  state: 'pending' | 'verified' | 'failed' | string;
+  state: 'pending' | 'verified' | 'failed' | 'attached' | string;
   title: string;
   className?: string;
   variant?: string;
@@ -29,6 +48,6 @@ export type DomainState = {
 };
 
 DomainState.defaultProps = {
-  variant: 'light',
   variants: domainState,
+  state: 'pending',
 };

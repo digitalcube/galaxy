@@ -10,10 +10,6 @@ export default {
   title: `Shifter/Dashboard/Patterns/Domain State`,
 };
 
-export const Variants = ({
-  states = domainState
-}) => {
-  return getVariants({ variants: states }).map((state, i) => {
-    return <DomainState title={state.state} {...state} key={i} />;
-  });
+export const Example = () => {
+  return <DomainState />;
 };

@@ -13,9 +13,15 @@ const preview = [
   'https://s0.wp.com/mshots/v1/https://stripe.com?w=160',
 ];
 
-const siteState = ['running', 'stopped', 'generating', 'starting'];
-// const artifactState = ['published', 'scheduled', 'ready'];
 const domainState = ['pending', 'verified', 'failed', 'attached'];
+const siteState = [
+  'running',
+  'stopped',
+  'generating',
+  'starting',
+  ...domainState,
+];
+// const artifactState = ['published', 'scheduled', 'ready'];
 const subDirectoryState = [true, false];
 
 export type FakerGenerator = {
@@ -102,7 +108,8 @@ export const fakerSites = fakerGenerator({
 export const fakerSite = fakerGenerator({ schema: siteSchema })[0];
 
 export const siteTeamMemberSchema = {
-  img: 'https://images.unsplash.com/photo-1472099645785-5658abf4ff4e?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=facearea&facepad=2&w=256&h=256&q=80',
+  img:
+    'https://images.unsplash.com/photo-1472099645785-5658abf4ff4e?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=facearea&facepad=2&w=256&h=256&q=80',
   name: '{{name.findName}}',
 };
 
@@ -112,7 +119,9 @@ export const fakerSiteTeamMembers = fakerGenerator({
   max: 5,
 });
 
-export const fakerSiteMember = fakerGenerator({ schema: siteTeamMemberSchema })[0];
+export const fakerSiteMember = fakerGenerator({
+  schema: siteTeamMemberSchema,
+})[0];
 
 export const artifactSchema = {
   artifact: '{{random.uuid}}',

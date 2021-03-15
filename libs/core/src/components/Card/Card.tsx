@@ -5,12 +5,13 @@ const { card } = cardTheme;
 
 export const Card: FC<Card> = ({
   children,
-  main,
-  variant,
   className,
-  title,
-  footer,
   description,
+  footer,
+  main,
+  mainClassName,
+  title,
+  variant,
   variants,
 }: Card) => {
   const cardCss = css({
@@ -21,7 +22,7 @@ export const Card: FC<Card> = ({
   return (
     <Section className={`${cardCss} ${className}`}>
       {title ? <CardHeader title={title} description={description} /> : null}
-      {main ? <CardMain main={main} /> : null}
+      {main ? <CardMain className={`${mainClassName}`} main={main} /> : null}
       {children}
       <CardFooter footer={footer} />
     </Section>
@@ -33,6 +34,7 @@ export type Card = {
   className?: string;
   footer?: ReactNode;
   main?: ReactNode;
+  mainClassName?: string;
   title?: string;
   description?: string;
   variant?: string;
