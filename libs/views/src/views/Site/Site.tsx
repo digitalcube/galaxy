@@ -8,8 +8,9 @@ import {
   SiteUrl,
   SiteProgress,
   SiteOptions,
+  SiteManage,
 } from '@galaxy/views';
-import { Button, Section, Card, css, fakerSiteTeamMembers } from '@galaxy/core';
+import { Section, Card, css } from '@galaxy/core';
 import { siteTheme } from './Site.galaxy';
 const { site } = siteTheme;
 
@@ -34,7 +35,7 @@ export const Site: FC<Site> = ({
             <SiteName name={name} />
             <Section className="flex items-center space-x-2">
               <SiteState state={state} />
-              <Button variant="ghost">Manage site</Button>
+              <SiteManage />
               <SiteOptions />
             </Section>
           </Section>

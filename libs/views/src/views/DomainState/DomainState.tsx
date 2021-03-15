@@ -11,6 +11,14 @@ export const DomainState: FC<DomainState> = ({
   variants,
   variant,
 }: DomainState) => {
+  if (state === 'running') {
+    variant = 'success';
+  }
+
+  if (state === 'generating') {
+    variant = 'active';
+  }
+
   if (state === 'pending') {
     variant = 'warning';
   }

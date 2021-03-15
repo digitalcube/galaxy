@@ -16,6 +16,18 @@ export const SiteState: FC<SiteState> = ({
     variant = 'active';
   }
 
+  if (state === 'pending') {
+    variant = 'warning';
+  }
+
+  if (state === 'verified') {
+    variant = 'verified';
+  }
+
+  if (state === 'failed') {
+    variant = 'danger';
+  }
+
   const siteStateCss = css({ variant: variant, variants: siteState });
 
   return (
