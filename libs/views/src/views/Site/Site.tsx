@@ -1,7 +1,7 @@
 import React, { FC } from 'react';
 import {
   SiteState,
-  SiteMembers,
+  SiteTeamMembers,
   SiteTeam,
   SiteName,
   SitePreview,
@@ -9,7 +9,7 @@ import {
   SiteProgress,
   SiteOptions,
 } from '@galaxy/views';
-import { Button, Section, Card, css } from '@galaxy/core';
+import { Button, Section, Card, css, fakerSiteTeamMembers } from '@galaxy/core';
 import { siteTheme } from './Site.galaxy';
 const { site } = siteTheme;
 
@@ -21,6 +21,7 @@ export const Site: FC<Site> = ({
   img,
   state,
   progress,
+  teamMembers,
 }: Site) => {
   const siteCss = css({ variants: site });
   return (
@@ -38,9 +39,9 @@ export const Site: FC<Site> = ({
             </Section>
           </Section>
           <Section className="flex space-x-4 items-center" as="div">
-            <SiteUrl variant={variant} url={`${url}`} />
-            <SiteMembers variant={variant} />
-            <SiteTeam variant={variant} team={`${team}`} />
+            <SiteUrl url={`${url}`} />
+            <SiteTeamMembers members={teamMembers} />
+            <SiteTeam team={`${team}`} />
           </Section>
         </Section>
       </Section>
@@ -56,6 +57,7 @@ export type Site = {
   variant?: string;
   state: 'running' | 'stopped' | string;
   progress: 0 | 1 | 2 | 3 | 4 | 5 | null;
+  teamMembers: SiteTeamMembers;
 };
 
 Site.defaultProps = {
@@ -64,6 +66,5 @@ Site.defaultProps = {
   team: 'team',
   variant: 'primary',
   img: `https://images.unsplash.com/photo-1472099645785-5658abf4ff4e?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=facearea&facepad=2&w=256&h=256&q=80`,
-  state: 'running',
   progress: 1,
 };

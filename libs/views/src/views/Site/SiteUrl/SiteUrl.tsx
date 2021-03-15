@@ -4,11 +4,11 @@ import { siteUrlTheme } from './SiteUrl.galaxy';
 
 const { siteUrl } = siteUrlTheme;
 
-const siteUrlCss = css({
-  variants: siteUrl,
-});
+export const SiteUrl: FC<SiteUrl> = ({ url, variant, variants }: SiteUrl) => {
+  const siteUrlCss = css({
+    variants: variants,
+  });
 
-export const SiteUrl: FC<SiteUrl> = ({ url, variant }: SiteUrl) => {
   return (
     <Heading className={`${siteUrlCss}`} text={url} variant={`${variant}`} />
   );
@@ -16,10 +16,11 @@ export const SiteUrl: FC<SiteUrl> = ({ url, variant }: SiteUrl) => {
 
 export type SiteUrl = {
   url: string;
-  variant: string;
-  variants: typeof siteUrl;
+  variant?: string;
+  variants?: typeof siteUrl;
 };
 
 SiteUrl.defaultProps = {
   variant: 'primary',
+  variants: siteUrl,
 };

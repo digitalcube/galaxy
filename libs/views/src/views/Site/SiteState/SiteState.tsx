@@ -28,12 +28,14 @@ export const SiteState: FC<SiteState> = ({
 };
 
 export type SiteState = {
-  state: string;
-  variant: string;
+  state?: string;
+  variant?: string;
+  variants?: typeof siteState;
   className?: string;
 };
 
 SiteState.defaultProps = {
   state: 'stopped',
   variant: 'primary',
+  variants: siteState,
 };

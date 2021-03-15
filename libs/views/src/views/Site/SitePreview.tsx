@@ -1,7 +1,8 @@
 import React, { FC } from 'react';
+import { Image } from '@galaxy/core';
 
 export const SitePreview: FC<SitePreview> = ({ img }: SitePreview) => {
-  return <img width="150" height="auto" alt="" src={img} />;
+  return <Image className="w-40" alt="" img={img} />;
 };
 
 export type SitePreview = {

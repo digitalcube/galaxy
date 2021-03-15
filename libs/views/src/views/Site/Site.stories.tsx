@@ -1,8 +1,6 @@
 import React from 'react';
-import { company, internet } from 'faker';
-import { Section, fakerProgress } from '@galaxy/core';
+import { fakerSite } from '@galaxy/core';
 import { Site } from '@galaxy/views';
-import { schema } from './galaxy.config';
 
 import { defaultStorybookConfig } from '../../.storybook/docs';
 export default {
@@ -12,5 +10,5 @@ export default {
 };
 
 export const Example = () => {
-  return <Site />;
+  return <Site {...fakerSite} />;
 };

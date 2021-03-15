@@ -1,6 +1,6 @@
 export * from './Site';
 export * from './SiteState/SiteState';
-export * from './SiteMembers';
+export * from './SiteTeamMembers/SiteTeamMembers';
 export * from './SiteName';
 export * from './SitePreview';
 export * from './SiteUrl/SiteUrl';
