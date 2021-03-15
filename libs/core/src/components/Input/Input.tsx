@@ -1,34 +1,11 @@
-import React, { ReactNode, FC } from 'react';
-import classNames from 'classnames';
-import { schema } from './galaxy.config.js';
+import React, { FC } from 'react';
+import { css } from '@galaxy/core';
+import { inputTheme } from './Input.galaxy';
+const { input } = inputTheme;
 
-export type Input = {
-  children?: ReactNode;
-  as?: 'input';
-  variant?: 'primary' | 'danger' | 'white' | 'success' | 'ghost';
-};
-
-const inputClasses = ({ variant }: Input) => {
-  const variants = schema.components.input.variants;
-  const DEFAULT = schema.components.input.DEFAULT;
-  const classes = {
-    [`${variants.primary}`]: !variant || variant === 'primary',
-    [`${variants.ghost}`]: variant === 'ghost',
-    [`${variants.success}`]: variant === 'success',
-    [`${variants.danger}`]: variant === 'danger',
-    [`${variants.white}`]: variant === 'white',
-    [`${DEFAULT}`]: true,
-  };
-
-  return classNames(classes);
-};
-
-export const Input: FC<Input> = ({
-  variant,
-  children,
-  as = 'input',
-}: Input) => {
+export const Input: FC<Input> = ({ variants, variant, as }: Input) => {
   const Tag = `${as}`;
+  const inputCss = css({ variants: variants, variant: variant });
   return (
     <div className="transition relative">
       <span className="absolute inset-y-0 left-0 flex items-center pl-2 text-shifter-purple-primary">
@@ -48,10 +25,22 @@ export const Input: FC<Input> = ({
       <Tag
         type="search"
         name="q"
-        className={inputClasses({ variant })}
+        className={`${inputCss}`}
         placeholder="Search..."
         autoComplete="off"
       />
     </div>
   );
+};
+
+export type Input = {
+  variants?: typeof input;
+  as?: 'input';
+  variant?: 'primary' | 'danger' | 'white' | 'success' | 'ghost';
+};
+
+Input.defaultProps = {
+  variants: input,
+  as: 'input',
+  variant: 'primary',
 };
