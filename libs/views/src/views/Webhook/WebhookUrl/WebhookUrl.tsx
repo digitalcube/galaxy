@@ -1,15 +1,15 @@
 import React, { FC } from 'react';
 import { Badge, css } from '@galaxy/core';
-import { domainStateTheme } from './DomainState.galaxy';
-const { domainState } = domainStateTheme;
+import { webhookUrlTheme } from './WebhookUrl.galaxy';
+const { webhookUrl } = webhookUrlTheme;
 
-export const DomainState: FC<DomainState> = ({
+export const WebhookUrl: FC<WebhookUrl> = ({
   state,
   className,
   title,
   variants,
   variant,
-}: DomainState) => {
+}: WebhookUrl) => {
   if (state === 'running') {
     variant = 'success';
   }
@@ -32,29 +32,31 @@ export const DomainState: FC<DomainState> = ({
 
   title = title ? title : state;
 
-  const domainStateCss = css({
+  const webhookUrlCss = css({
     variant: variant,
     variants: variants,
   });
 
   return (
     <Badge
-      className={`${domainStateCss} ${className}`}
+      className={`${webhookUrlCss} ${className}`}
       variant={`${variant}`}
       label={title}
     />
   );
 };
 
-export type DomainState = {
+export type WebhookUrl = {
   state: 'pending' | 'verified' | 'failed' | 'attached' | string;
   title: string;
   className?: string;
   variant?: string;
   variants?: any;
+  url: string;
 };
 
-DomainState.defaultProps = {
-  variants: domainState,
+WebhookUrl.defaultProps = {
+  variants: webhookUrl,
   state: 'pending',
+  url: 'https://foo.bar.baz/',
 };

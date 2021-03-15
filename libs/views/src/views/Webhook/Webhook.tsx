@@ -1,15 +1,12 @@
 import React, { FC } from 'react';
-import classNames from 'classnames';
 import { WebhookState, WebhookOptions } from '@galaxy/views';
 import { Section, Heading, css } from '@galaxy/core';
-import { schema } from './galaxy.config.js';
 import { webhookTheme } from './Webhook.galaxy';
 const { webhook } = webhookTheme;
 
 export const Webhook: FC<Webhook> = ({
   title,
   url,
-  variant,
   state,
   event,
   variants,
@@ -39,7 +36,6 @@ export const Webhook: FC<Webhook> = ({
 export type Webhook = {
   title: string;
   url: string;
-  variant?: string;
   event: string;
   variants: typeof webhook;
   state: 'running' | 'stopped' | string;
