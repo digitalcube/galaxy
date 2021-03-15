@@ -1,8 +1,10 @@
 import React, { FC } from 'react';
 import classNames from 'classnames';
 import { WebhookState, WebhookOptions } from '@galaxy/views';
-import { Section, Heading } from '@galaxy/core';
+import { Section, Heading, css } from '@galaxy/core';
 import { schema } from './galaxy.config.js';
+import { webhookTheme } from './Webhook.galaxy';
+const { webhook } = webhookTheme;
 
 export const Webhook: FC<Webhook> = ({
   title,
@@ -10,12 +12,15 @@ export const Webhook: FC<Webhook> = ({
   variant,
   state,
   event,
+  variants,
 }: Webhook) => {
+  const webhookCss = css({ variants: variants });
+
   return (
-    <Section className={`${webhookVariants({ variant })}`}>
+    <Section className={`${webhookCss}`}>
       <Section as="span" className="space-y-2 flex flex-col">
         <Heading
-          fontSize="4"
+          fontSize={4}
           variant="primary"
           fontWeight="strong"
           text={title}
@@ -36,22 +41,10 @@ export type Webhook = {
   url: string;
   variant?: string;
   event: string;
+  variants: typeof webhook;
   state: 'running' | 'stopped' | string;
 };
 
 Webhook.defaultProps = {
-  variant: 'light',
-};
-
-const webhookVariants = ({ variant }: Webhook) => {
-  const variants = schema.components.webhook.variants;
-  const DEFAULT = schema.components.webhook.DEFAULT;
-
-  const classes = {
-    [`${variants.light}`]: !variant || variant === 'light',
-    [`${variants.dark}`]: variant === 'dark',
-    [`${DEFAULT}`]: true,
-  };
-
-  return classNames(classes);
+  variants: webhook
 };
