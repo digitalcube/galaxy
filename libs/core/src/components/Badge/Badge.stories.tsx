@@ -1,7 +1,7 @@
 import React from 'react';
 import { defaultStorybookConfig } from '../../.storybook/docs';
 import { badgeTheme } from './Badge.galaxy';
-import { Badge, getVariants } from '@galaxy/core';
+import { Badge } from '@galaxy/core';
 
 const { badge } = badgeTheme;
 
