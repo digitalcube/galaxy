@@ -4,7 +4,7 @@ import { Button } from '@galaxy/core';
 export const BuildDeploy: FC<BuildDeploy> = ({ title }: BuildDeploy) => {
   return (
     <Button
-      variant="outline-primary"
+      variant="outlinePrimary"
       className="flex flex-row space-x-2 items-center"
     >
       <svg
