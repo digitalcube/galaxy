@@ -1,14 +1,14 @@
 import React from 'react';
 
-import { Input } from './Input';
+import { Search } from './Search';
 
 import { defaultStorybookConfig } from '../../.storybook/docs';
 export default {
   ...defaultStorybookConfig,
-  component: Input,
-  title: `Galaxy/Components/Input`,
+  component: Search,
+  title: `Galaxy/Components/Search`,
 };
 
 export const Example = () => {
-  return <Input />;
+  return <Search />;
 };

@@ -1,10 +1,10 @@
 import React, { FC } from 'react';
-import { Section, Button, Input } from '@galaxy/core';
+import { Section, Button, Field } from '@galaxy/core';
 
 export const SubDirectoryPath: FC<SubDirectoryPath> = ({ label }) => {
   return (
     <Section className="space-y-4">
-      <Input />
+      <Field />
       <Button label={label} />
     </Section>
   );

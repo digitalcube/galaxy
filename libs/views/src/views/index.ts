@@ -6,6 +6,7 @@ export * from './Control';
 export * from './Controls';
 export * from './Artifacts';
 export * from './Dashboard';
+export * from './Search';
 export * from './Deploys';
 export * from './Domain';
 export * from './Domains';

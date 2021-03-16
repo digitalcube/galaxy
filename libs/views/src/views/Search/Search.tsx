@@ -1,9 +1,13 @@
 import React, { FC } from 'react';
 import { css } from '@galaxy/core';
-import { inputTheme } from './Input.galaxy';
+import { inputTheme } from './Search.galaxy';
 const { input } = inputTheme;
 
-export const Input: FC<Input> = ({ variants, variant, as }: Input) => {
+export const Search: FC<SearchProps> = ({
+  variants,
+  variant,
+  as,
+}: SearchProps) => {
   const Tag = `${as}`;
   const inputCss = css({ variants: variants, variant: variant });
   return (
@@ -33,13 +37,13 @@ export const Input: FC<Input> = ({ variants, variant, as }: Input) => {
   );
 };
 
-export type Input = {
+export type SearchProps = {
   variants?: typeof input;
   as?: 'input';
   variant?: 'primary' | 'danger' | 'white' | 'success' | 'ghost';
 };
 
-Input.defaultProps = {
+Search.defaultProps = {
   variants: input,
   as: 'input',
   variant: 'primary',

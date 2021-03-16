@@ -17,6 +17,9 @@ export const Form: FC<FormProps> = ({
 
   return (
     <Formik
+      initialValues={{
+        query: '',
+      }}
       onSubmit={async (values) => {
         await new Promise((r) => setTimeout(r, 500));
         alert(JSON.stringify(values, null, 2));

@@ -1,6 +1,6 @@
 import React, { FC } from 'react';
-import { Section, Menu, Input, Image, MenuItem } from '@galaxy/core';
-import { Avatar } from '@galaxy/core';
+import { Section, Menu, Image, MenuItem, Avatar } from '@galaxy/core';
+import { Search } from '@galaxy/views';
 
 export const Header: FC<Header> = ({ items, avatar }) => {
   return (
@@ -15,7 +15,7 @@ export const Header: FC<Header> = ({ items, avatar }) => {
         />
       </a>
       <div className="flex-grow">
-        <Input variant="ghost" />
+        <Search variant="ghost" />
       </div>
       <div className="hidden md:flex flex-row items-center space-x-6">
         <Menu items={items} />
