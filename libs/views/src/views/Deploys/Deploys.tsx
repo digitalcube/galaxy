@@ -8,14 +8,14 @@ export const Deploys: FC<Deploys> = ({ variants, state, title }: Deploys) => {
   const deploysCss = css({ variants: variants });
 
   return (
-    <Card className={`space-y-6`}>
+    <Section className="space-y-6">
       <WpControls state={`${state}`} />
       <Section className="flex flex-row space-x-6 justify-between">
         <Heading fontSize={5} fontWeight="strong" text={title} />
         <AutoPublish />
       </Section>
       <Artifacts artifacts={fakerArtifacts} />
-    </Card>
+    </Section>
   );
 };
 

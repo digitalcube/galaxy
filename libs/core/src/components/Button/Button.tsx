@@ -54,5 +54,5 @@ Button.defaultProps = {
   variants: button,
   variant: 'primary',
   as: 'button',
-  label: 'Hello World.',
+  label: '',
 };
