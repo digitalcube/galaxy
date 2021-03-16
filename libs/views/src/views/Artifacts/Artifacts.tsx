@@ -24,12 +24,12 @@ export const Artifacts: FC<Artifacts> = ({ artifacts, title, description }) => {
         <SecurityBuiltIn />
         <Section as="div" className="text-center">
           <Heading
-            fontSize="4"
+            fontSize={4}
             fontWeight="strong"
             variant="primary"
             text={title}
           />
-          <Heading fontSize="3" variant="primary" text={description} />
+          <Heading fontSize={3} variant="primary" text={description} />
         </Section>
       </Section>
     );

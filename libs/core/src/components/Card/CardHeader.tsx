@@ -13,7 +13,7 @@ export const CardHeader: FC<Card> = ({ title, description }: Card) => {
 
 export const CardDescription: FC<Card> = ({ description }: Card) => {
   if (!description) return null;
-  return <Heading fontSize="3" text={description} />;
+  return <Heading fontSize={3} text={description} />;
 };
 
 export const CardTitle: FC<Card> = ({ title }: Card) => {

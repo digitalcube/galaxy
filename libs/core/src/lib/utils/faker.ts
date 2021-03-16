@@ -49,11 +49,6 @@ export const fakerGenerator = ({ schema, min = 1, max }: FakerGenerator) => {
         return entity;
       }
 
-      if (key === 'controls') {
-        entity[key] = [{ children: null }]; //AddDomain({ title: 'Add a new domain' })
-        return entity;
-      }
-
       entity[key] = faker.fake(schema[key]);
       return entity;
     }, {})
@@ -76,13 +71,6 @@ const dashboardSiteControlSubDirectory = {
   subDirectory: {
     title: 'Subdirectory',
     state: true,
-    controls: [
-      {
-        title: 'Subdirectory deploy is',
-        state: fakerArray(subDirectoryState),
-        children: ['Display controls if setting is enabled.'],
-      },
-    ],
   },
 };
 
@@ -96,7 +84,6 @@ export const siteSchema = {
   team: '{{company.companyName}}',
   url: '{{internet.url}}',
   date: '{{date.recent}}',
-  controls: { ...dashboardSiteControlSubDirectory },
 };
 
 export const fakerSites = fakerGenerator({

@@ -7,8 +7,12 @@ export default {
   title: `Shifter/Dashboard/Patterns/Control`,
 };
 
-export const On = ({ title = 'This setting is', state = true }) => {
-  return <Control title={title} state={state} />;
+export const On = ({
+  title = 'Automatically publish new deploys',
+  description = 'When a new deploy is generated, it will be automatically published as the live site.',
+  state = true,
+}) => {
+  return <Control title={title} description={description} state={state} />;
 };
 
 export const Off = ({ title = 'This setting is', state = false }) => {

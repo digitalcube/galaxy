@@ -57,7 +57,6 @@ Heading.defaultProps = {
   fontSize: 4,
   fontWeight: 'regular',
   as: 'div',
-  variant: 'primary',
   variants: heading,
   text: 'Hello World.',
 };

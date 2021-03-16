@@ -14,7 +14,7 @@ export const Badge: FC<Badge> = ({ label, className, variant }: Badge) => {
   return (
     <Heading
       variant={`${variant}`}
-      fontSize="4"
+      fontSize={4}
       fontWeight="strong"
       className={`${badgeCss} ${className}`}
       text={label}

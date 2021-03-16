@@ -1,6 +1,5 @@
 import React from 'react';
-import { Controls } from '@galaxy/views';
-import { fakerSiteControls } from '@galaxy/core';
+import { Controls, Control } from '@galaxy/views';
 import { defaultStorybookConfig } from '../../.storybook/docs';
 export default {
   ...defaultStorybookConfig,
@@ -9,5 +8,10 @@ export default {
 };
 
 export const Default = () => {
-  return <Controls controls={fakerSiteControls} />;
+  return (
+    <Controls>
+        <Control title={'foo'} description={'bar'} />
+        <Control title={'foo'} description={'bar'} />
+    </Controls>
+  );
 };

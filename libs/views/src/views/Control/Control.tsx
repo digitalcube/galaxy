@@ -1,12 +1,10 @@
 import React, { FC, ReactNode } from 'react';
 import { Section, Heading, Toggle, Card } from '@galaxy/core';
 
-export const ControlSettings: FC<Control> = ({ children }: Control) => {
+export const ControlOptions: FC<Control> = ({ children }: Control) => {
   if (!children) return null;
   return (
-    <Section className="py-6 border-t border-shifter-gray-200 space-y-4">
-      {children ? children : null}
-    </Section>
+    <Section className="py-6 space-y-4">{children ? children : null}</Section>
   );
 };
 
@@ -17,26 +15,20 @@ export const Control: FC<Control> = ({
   children,
 }: Control) => {
   return (
-    // <span
-    //   className={
-    //     state === false
-    //       ? 'text-status-danger-default'
-    //       : 'text-status-success-default'
-    //   }
-    // >
-    //   {' '}
-    //   {state === false ? 'off' : 'on'}
-    // </span>
-    <Card>
-      <Section className="flex flex-row items-center justify-between space-x-2">
-        <Section className="flex flex-col space-y-4">
-          <Heading fontSize="4" text={`${title}`} />
-          <Heading fontSize="3" text={description} />
-        </Section>
-        <Toggle state={state} />
-      </Section>
-      {state ? <ControlSettings children={children} /> : null}
-    </Card>
+    <Card
+      main={
+        <>
+          <Section className="flex justify-between space-x-2">
+            <Section className="flex flex-col w-4/6 space-y-4 text-body">
+              <Heading fontSize={4} fontWeight="strong" text={`${title}`} />
+              <Heading fontSize={3} text={`${description}`} />
+            </Section>
+            <Toggle state={state} />
+          </Section>
+          {state ? <ControlOptions children={children} /> : null}
+        </>
+      }
+    ></Card>
   );
 };
 
@@ -48,5 +40,7 @@ export type Control = {
 };
 
 Control.defaultProps = {
-  state: false,
+  state: true,
+  title: 'Control title',
+  description: 'Control description',
 };
