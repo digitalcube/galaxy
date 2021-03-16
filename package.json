@@ -56,6 +56,7 @@
     "core-js": "^3.6.5",
     "document-register-element": "1.13.1",
     "faker": "^5.2.0",
+    "formik": "^2.2.6",
     "gatsby": "2.27.4",
     "gatsby-image": "2.6.0",
     "gatsby-plugin-manifest": "2.6.1",

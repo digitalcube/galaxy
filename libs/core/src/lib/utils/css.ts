@@ -3,7 +3,7 @@ import classNames from 'classnames';
 export const css = ({ variant, variants }: Css) => {
   if (!variants) return null;
 
-  console.log(variants);
+  // console.log(variants);
 
   const DEFAULT = variants?.DEFAULT ? variants.DEFAULT : false;
   variants = variant ? variants[`${variant}`] : false;
@@ -14,10 +14,10 @@ export const css = ({ variant, variants }: Css) => {
     [Array.isArray(variants) ? variants.join(' ') : variants]: variants,
   };
 
-  console.log(`variants: ` + variants);
-  console.log(`variant: ` + variant);
-  console.log(`DEFAULT: ` + DEFAULT);
-  console.log(`classNames: ` + classNames(classes));
+  // console.log(`variants: ` + variants);
+  // console.log(`variant: ` + variant);
+  // console.log(`DEFAULT: ` + DEFAULT);
+  // console.log(`classNames: ` + classNames(classes));
 
   return classNames(classes);
 };

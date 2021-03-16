@@ -1,14 +1,13 @@
 import React from 'react';
-import { Button } from './Button';
+import { Form } from '@galaxy/core';
 
 import { defaultStorybookConfig } from '../../.storybook/docs';
-
 export default {
   ...defaultStorybookConfig,
-  component: Button,
-  title: `Galaxy/Components/Button`,
+  component: Form,
+  title: `Galaxy/Components/Form`,
 };
 
 export const Example = () => {
-  return <Button />;
+  return <Form>😀 😎 👍 💯</Form>;
 };
