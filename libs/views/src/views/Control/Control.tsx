@@ -22,8 +22,8 @@ export const Control: FC<Control> = ({
         <>
           <Section className="flex justify-between space-x-2">
             <Section className="flex flex-col w-4/6 space-y-4 text-body">
-              <Heading fontSize={4} fontWeight="strong" text={`${title}`} />
-              <Heading fontSize={3} text={`${description}`} />
+              {title ? <Heading fontSize={4} fontWeight="strong" text={`${title}`} /> : null}
+              {description ? <Heading fontSize={3} text={`${description}`} /> : null}
             </Section>
             <Toggle state={state} />
           </Section>
@@ -39,11 +39,8 @@ export type Control = {
   title?: string;
   description?: string;
   state?: boolean;
-  className?: string;
 };
 
 Control.defaultProps = {
   state: true,
-  title: 'Control title',
-  description: 'Control description',
 };

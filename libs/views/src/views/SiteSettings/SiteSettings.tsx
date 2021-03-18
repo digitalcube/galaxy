@@ -27,18 +27,18 @@ export const SiteSettings: FC<SiteSettingsProps> = ({
       <Card title="Site Notification Settings">
         <Controls>
           <Control
-            description="Receive notifications for this site"
+            description="Receive notifications for this site Yes"
             state={true}
-          />
-          <Control
-            description="When a new deploy is generated, a downloadable WordPress backup will also be created."
-            state={true}
-          />
-          <Control
-            title="Prevent this site from being deleted"
-            description="When a new deploy is generated, a downloadable WordPress backup will also be created."
-            state={true}
-          />
+          >
+            <Control
+              description="When a new deploy is generated, a downloadable WordPress backup will also be created."
+              state={true}
+            />
+            <Control
+              description="Notify me about domain changes"
+              state={true}
+            />
+          </Control>
         </Controls>
       </Card>
     </>

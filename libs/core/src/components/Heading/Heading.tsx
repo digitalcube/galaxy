@@ -15,6 +15,7 @@ export const Heading = ({
   fontWeight,
   variants,
 }: Heading) => {
+  if (!text) return null;
   const classNames = css({
     variant: `${variant}`,
     variants: variants,
