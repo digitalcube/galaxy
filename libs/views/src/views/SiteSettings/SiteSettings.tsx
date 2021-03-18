@@ -6,7 +6,12 @@ export const SiteSettings: FC<SiteSettingsProps> = ({
 }: SiteSettingsProps) => {
   return (
     <Controls>
-      <Control children={<Control />} />
+      <Control
+        title="Automatically publish new deploys"
+        description="when a new deploy is generated, it will be automatically published as the live site."
+        state={false}
+        children={<Control />}
+      />
       <Control
         children={
           <>

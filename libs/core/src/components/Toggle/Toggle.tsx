@@ -17,6 +17,8 @@ export const Toggle: FC<Toggle> = ({ state, variants }: Toggle) => {
 
   const toggleBezelCssScale = `h-${size / 2} w-${size}`;
 
+  const toggleBezelCssBackground = enabled ? 'bg-status-success-default' : '';
+
   const toggleBezelCss = css({
     variants: variants?.bezel,
   });
@@ -29,7 +31,7 @@ export const Toggle: FC<Toggle> = ({ state, variants }: Toggle) => {
     <Switch
       checked={enabled}
       onChange={setEnabled}
-      className={`${toggleBezelCss} ${toggleBezelCssScale}`}
+      className={`${toggleBezelCss} ${toggleBezelCssScale} ${toggleBezelCssBackground}`}
     >
       <span className="sr-only">Enable notifications</span>
       <span className={`${toggleSwitchCss} ${toggleSwitchScale}`} />

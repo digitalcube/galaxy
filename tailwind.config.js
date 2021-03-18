@@ -21,6 +21,7 @@ module.exports = {
       display: ['group-hover'],
       borderWidth: ['hover', 'focus'],
       borderColor: ['active'],
+      backgroundColor: ['active'],
     },
   },
   plugins: [
