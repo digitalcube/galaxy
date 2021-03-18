@@ -27,13 +27,10 @@ export const SiteSettings: FC<SiteSettingsProps> = ({
       <Card title="Site Notification Settings">
         <Controls>
           <Control
-            className="rounded-none"
-            title="Automatically publish new deploys"
-            description="When a new deploy is generated, it will be automatically published as the live site."
+            description="Receive notifications for this site"
             state={true}
           />
           <Control
-            title="Create a WordPress backup when a new deploy is built"
             description="When a new deploy is generated, a downloadable WordPress backup will also be created."
             state={true}
           />

@@ -9,7 +9,7 @@ const PanelActions: FC<Panel> = ({ actions }) => {
 const PanelTitle: FC<Panel> = ({ title }) => {
   if (!title) return null;
   return (
-    <Heading variant="primary" fontWeight="strong" fontSize="7" text={title} />
+    <Heading fontWeight="strong" fontSize={7} text={title} />
   );
 };
 
