@@ -13,9 +13,11 @@ export const Control: FC<Control> = ({
   description,
   state,
   children,
+  className,
 }: Control) => {
   return (
     <Card
+      className={`${className}`}
       main={
         <>
           <Section className="flex justify-between space-x-2">
@@ -37,6 +39,7 @@ export type Control = {
   title?: string;
   description?: string;
   state?: boolean;
+  className?: string;
 };
 
 Control.defaultProps = {

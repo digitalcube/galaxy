@@ -14,7 +14,6 @@ const PanelTitle: FC<Panel> = ({ title }) => {
 };
 
 const PanelHeader: FC<Panel> = ({ title, actions }) => {
-  if (!title || !actions) return null;
   return (
     <Section className="mb-6 flex justify-between">
       <PanelTitle title={title} />

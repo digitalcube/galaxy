@@ -29,7 +29,7 @@ export const Aside: FC<Aside> = ({ items, name }) => {
           </Button>
         </Section>
         <Section className="space-y-2">
-          <Heading fontSize="6" text={name} />
+          <Heading fontSize={6} text={name} />
           <Section>
             <SiteState state="starting" />
           </Section>
