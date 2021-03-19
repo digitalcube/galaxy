@@ -24,7 +24,7 @@ export const Avatar: FC<Avatar> = ({
       <ButtonMenu {...menu}>
         <Image
           alt={name}
-          className={`${classNames} ${size ? `h-${size}` : ''}`}
+          className={`${classNames} ${size ? `h-${size} w-${size}` : ''}`}
           img={img}
           imgDefault={imgDefault}
         />
@@ -35,7 +35,7 @@ export const Avatar: FC<Avatar> = ({
   return (
     <Image
       alt={name}
-      className={`${classNames} ${size ? `h-${size}` : ''}`}
+      className={`${classNames} ${size ? `h-${size} w-${size}` : ''}`}
       img={img}
       imgDefault={imgDefault}
     />

@@ -226,9 +226,9 @@ export const fakerSiteWebhook = fakerGenerator({
 
 const dashboardHeaderMenuItems = {
   items: [
-    { title: 'Sites', url: 'sites' },
-    { title: 'Teams', url: 'teams' },
-    { title: 'Guides', url: 'guides' },
+    { title: 'Sites', href: 'sites' },
+    { title: 'Teams', href: 'teams' },
+    { title: 'Guides', href: 'guides' },
   ],
 };
 
