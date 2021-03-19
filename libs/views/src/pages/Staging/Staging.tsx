@@ -1,18 +1,16 @@
 import React, { FC } from 'react';
-import {
-  Section,
-  fakerHeader,
-} from '@galaxy/core';
+import { Section, fakerHeader } from '@galaxy/core';
 
 import {
   SiteState,
   Site,
   SiteProgress,
-  Deploys,
   Dashboard,
   Aside,
   Main,
 } from '@galaxy/views';
+
+import { Deploys } from '@galaxy/shifter-dashboard';
 
 export const Staging: FC<Staging> = ({
   items,

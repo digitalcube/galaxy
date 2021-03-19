@@ -1,6 +1,13 @@
 import React, { FC } from 'react';
-import { fakerArtifacts, Heading, Section, css, fakerDomainState } from '@galaxy/core';
-import { WpControls, AutoPublish, Artifacts } from '@galaxy/views';
+import {
+  fakerArtifacts,
+  Heading,
+  Section,
+  css,
+  fakerDomainState,
+} from '@galaxy/core';
+import { WpControls, AutoPublish } from '@galaxy/views';
+import { Artifacts } from '@galaxy/shifter-dashboard';
 import { deploysTheme } from './Deploys.galaxy';
 const { deploys } = deploysTheme;
 

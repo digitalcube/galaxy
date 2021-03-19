@@ -1,9 +1,7 @@
 import React from 'react';
-import { company, internet } from 'faker';
-import { Section, fakerProgress } from '@galaxy/core';
-import { Deploys } from '@galaxy/views';
+import { Deploys } from '@galaxy/shifter-dashboard';
 
-import { defaultStorybookConfig } from '../../.storybook/docs';
+import { defaultStorybookConfig } from '../../../.storybook/docs';
 export default {
   ...defaultStorybookConfig,
   component: Deploys,

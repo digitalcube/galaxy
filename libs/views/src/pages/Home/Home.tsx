@@ -6,11 +6,12 @@ import {
   Site,
   SiteOverview,
   SiteProgress,
-  Deploys,
   Dashboard,
   Aside,
   Main,
 } from '@galaxy/views';
+
+import { Deploys } from '@galaxy/shifter-dashboard';
 
 export const Home: FC<Home> = ({
   items,
