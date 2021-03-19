@@ -1,6 +1,5 @@
 import React, { FC } from 'react';
 import {
-  SiteState,
   SiteTeamMembers,
   SiteTeam,
   SiteName,
@@ -10,6 +9,7 @@ import {
   SiteOptions,
   SiteManage,
 } from '@galaxy/views';
+import { SiteState } from '@galaxy/shifter-dashboard';
 import { Section, Card, css } from '@galaxy/core';
 import { siteTheme } from './Site.galaxy';
 const { site } = siteTheme;

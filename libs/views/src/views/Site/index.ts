@@ -1,5 +1,4 @@
 export * from './Site';
-export * from './SiteState/SiteState';
 export * from './SiteTeamMembers/SiteTeamMembers';
 export * from './SiteName';
 export * from './SitePreview';

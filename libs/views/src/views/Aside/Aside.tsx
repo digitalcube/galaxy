@@ -1,7 +1,8 @@
 import React, { FC } from 'react';
 import { Section, Panel, Button, Heading, Menu } from '@galaxy/core';
 
-import { SiteState, Site } from '@galaxy/views';
+import { Site } from '@galaxy/views';
+import { SiteState } from '@galaxy/shifter-dashboard';
 
 export const Aside: FC<Aside> = ({ items, name }) => {
   return (
