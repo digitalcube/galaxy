@@ -1,6 +1,6 @@
 import React, { FC } from 'react';
 import { Section, Heading, SecurityBuiltIn } from '@galaxy/core';
-import { Artifact } from '@galaxy/views';
+import { Artifact } from '@galaxy/shifter-dashboard';
 
 export const Artifacts: FC<Artifacts> = ({ artifacts, title, description }) => {
   const allArtifacts = artifacts.map((artifact, i) => {

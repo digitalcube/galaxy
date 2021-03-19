@@ -1,7 +1,7 @@
 import React from 'react';
-import { DomainState } from '@galaxy/views';
+import { DomainState } from '@galaxy/shifter-dashboard';
 
-import { defaultStorybookConfig } from '../../.storybook/docs';
+import { defaultStorybookConfig } from '../../../.storybook/docs';
 export default {
   ...defaultStorybookConfig,
   component: DomainState,

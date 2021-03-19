@@ -1,6 +1,6 @@
 import React, { FC } from 'react';
 import { Section } from '@galaxy/core';
-import { Domain } from '../Domain';
+import { Domain } from '@galaxy/shifter-dashboard';
 
 export const Domains: FC<Domains> = ({ domains }) => (
   <Section className="space-y-10">

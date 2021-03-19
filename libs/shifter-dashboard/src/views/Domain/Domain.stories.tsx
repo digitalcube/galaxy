@@ -1,7 +1,7 @@
 import React from 'react';
-import { Domain } from '@galaxy/views';
+import { Domain } from '@galaxy/shifter-dashboard';
 
-import { defaultStorybookConfig } from '../../.storybook/docs';
+import { defaultStorybookConfig } from '../../../.storybook/docs';
 
 export default {
   ...defaultStorybookConfig,
