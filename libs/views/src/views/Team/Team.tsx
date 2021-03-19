@@ -13,7 +13,7 @@ export const Team: FC<Team> = ({ name, team, teamMembers }: Team) => {
       mainClassName="flex flex-grow flex-row justify-between space-x-4"
       main={
         <>
-          <TeamName name={name} />
+          <TeamName name={name} className="flex-grow" />
           <TeamMembers members={teamMembers} />
           <TeamManage />
         </>
