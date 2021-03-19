@@ -1,5 +1,5 @@
 import React from 'react';
-import { ArtifactPreview } from '@galaxy/views';
+import { ArtifactPreview } from '@galaxy/shifter-dashboard';
 import { defaultStorybookConfig } from '../../../../.storybook/docs';
 export default {
   ...defaultStorybookConfig,

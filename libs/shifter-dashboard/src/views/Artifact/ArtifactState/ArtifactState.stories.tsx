@@ -1,5 +1,5 @@
 import React from 'react';
-import { ArtifactState } from '@galaxy/views';
+import { ArtifactState } from '@galaxy/shifter-dashboard';
 import { defaultStorybookConfig } from '../../../../.storybook/docs';
 export default {
   ...defaultStorybookConfig,

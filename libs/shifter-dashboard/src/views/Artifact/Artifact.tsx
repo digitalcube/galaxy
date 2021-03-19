@@ -6,7 +6,7 @@ import {
   ArtifactPreview,
   ArtifactProgress,
   ArtifactOptions,
-} from '@galaxy/views';
+} from '@galaxy/shifter-dashboard';
 import { Section, Card, css } from '@galaxy/core';
 import { artifactTheme } from './Artifact.galaxy';
 const { artifact } = artifactTheme;

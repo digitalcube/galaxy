@@ -1,4 +1,3 @@
-export * from './Artifact';
 export * from './Aside';
 export * from './AutoPublish';
 export * from './Container';
