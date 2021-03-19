@@ -53,7 +53,7 @@ export const DeploySettings: FC<DeploySettings> = ({
             <Menu alignment="vertical" items={items} />
           </Panel>
         </Section>
-        <Main actions={actions} title={title}>
+        <Main actions={actions} title={`${title}`}>
           <SubDirectory {...subDirectory} />
         </Main>
       </Section>

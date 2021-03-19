@@ -11,7 +11,7 @@ export const SettingsPage: FC<SettingsPage> = ({
   return (
     <Dashboard header={fakerHeader}>
       <Section className="md:flex min-h-screen border-t border-shifter-gray-200">
-        <Aside items={items} name={name} />
+        <Aside items={items} name={`${name}`} />
         <Main title="Site Settings">
           <SiteSettings />
         </Main>

@@ -27,7 +27,7 @@ export const Home: FC<Home> = ({
   return (
     <Dashboard header={fakerHeader}>
       <Section className="md:flex min-h-screen border-t border-shifter-gray-200">
-        <Aside items={items} name={name} />
+        <Aside items={items} name={`${name}`} />
         <Main>
           <SiteOverview
             cloudfront={`${cloudfront}`}

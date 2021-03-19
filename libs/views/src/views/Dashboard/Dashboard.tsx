@@ -7,7 +7,7 @@ export const Dashboard: FC<Dashboard> = ({
   header
 }: Dashboard) => {
   return (
-    <Section className="bg-white h-screen">
+    <Section className="bg-white min-h-screen">
       <Header {...header} />
       {children ? children : null}
     </Section>

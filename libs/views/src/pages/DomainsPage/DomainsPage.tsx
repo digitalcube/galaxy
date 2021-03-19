@@ -13,8 +13,8 @@ export const DomainsPage: FC<DomainsPage> = ({
   return (
     <Dashboard header={fakerHeader}>
       <Section className="md:flex min-h-screen border-t border-shifter-gray-200">
-        <Aside items={items} name={name} />
-        <Main actions={actions} title={title}>
+        <Aside items={items} name={`${name}`} />
+        <Main actions={actions} title={`${title}`}>
           <Card>Steps to connect your domain</Card>
           <Domains domains={domains} />
         </Main>
