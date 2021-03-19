@@ -1,8 +1,8 @@
 import React from 'react';
 import { fakerSite } from '@galaxy/core';
-import { Site } from '@galaxy/views';
+import { Site } from '@galaxy/shifter-dashboard';
 
-import { defaultStorybookConfig } from '../../.storybook/docs';
+import { defaultStorybookConfig } from '../../../.storybook/docs';
 export default {
   ...defaultStorybookConfig,
   component: Site,

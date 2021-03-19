@@ -1,5 +1,5 @@
 import React, { FC } from 'react';
-import { WebhookState, WebhookOptions } from '@galaxy/views';
+import { WebhookState, WebhookOptions } from '@galaxy/shifter-dashboard';
 import { Section, Heading, css } from '@galaxy/core';
 import { webhookTheme } from './Webhook.galaxy';
 const { webhook } = webhookTheme;

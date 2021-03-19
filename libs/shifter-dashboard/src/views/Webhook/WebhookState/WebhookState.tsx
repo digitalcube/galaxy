@@ -1,6 +1,5 @@
 import React, { FC } from 'react';
 import { Badge, css } from '@galaxy/core';
-// import { webhookState } from './galaxy.config';
 import { webhookStateTheme } from './WebhookState.galaxy';
 const { webhookState } = webhookStateTheme;
 

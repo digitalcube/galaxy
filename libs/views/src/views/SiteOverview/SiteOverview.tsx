@@ -1,12 +1,13 @@
 import React, { FC } from 'react';
 import { Section, Card } from '@galaxy/core';
 import {
-  SitePreview,
   ArtifactId,
   CdnUrl,
   PublishDate,
   SiteOverviewTeam,
 } from '@galaxy/views';
+
+import { SitePreview } from '@galaxy/shifter-dashboard';
 
 export const SiteOverview: FC<SiteOverview> = ({
   artifact,

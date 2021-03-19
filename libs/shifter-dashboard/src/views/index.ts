@@ -6,3 +6,6 @@ export * from './Artifacts';
 export * from './Deploys';
 export * from './WpControls';
 export * from './SiteState';
+export * from './Webhook';
+export * from './Webhooks';
+export * from './Site';

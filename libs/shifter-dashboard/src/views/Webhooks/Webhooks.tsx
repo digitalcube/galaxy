@@ -1,6 +1,6 @@
 import React, { FC } from 'react';
 import { Section, Heading, Integration } from '@galaxy/core';
-import { Webhook } from '@galaxy/views';
+import { Webhook } from '@galaxy/shifter-dashboard';
 
 export const Webhooks: FC<Webhooks> = ({ webhooks, title, description }) => {
   const allWebhooks = webhooks.map((webhook, i) => {

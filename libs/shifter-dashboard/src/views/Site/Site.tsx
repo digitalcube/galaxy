@@ -8,7 +8,7 @@ import {
   SiteProgress,
   SiteOptions,
   SiteManage,
-} from '@galaxy/views';
+} from '@galaxy/shifter-dashboard';
 import { SiteState } from '@galaxy/shifter-dashboard';
 import { Section, Card, css } from '@galaxy/core';
 import { siteTheme } from './Site.galaxy';
