@@ -5,7 +5,7 @@ import {
   ArtifactId,
   CdnUrl,
   PublishDate,
-  Team,
+  SiteTeam,
 } from '@galaxy/views';
 
 export const SiteOverview: FC<SiteOverview> = ({
@@ -16,7 +16,7 @@ export const SiteOverview: FC<SiteOverview> = ({
   team,
 }: SiteOverview) => {
   return (
-    <Card footer={<Team team={`${team}`} />}>
+    <Card footer={<SiteTeam team={`${team}`} />}>
       <Section className="flex">
         <SitePreview img={img} />
         <Section as="div" className="px-8">

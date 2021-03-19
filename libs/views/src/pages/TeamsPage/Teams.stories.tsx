@@ -1,12 +1,12 @@
 import React from 'react';
-import { SitesPage } from '@galaxy/views';
+import { Teams } from '@galaxy/views';
 import { defaultStorybookConfig } from '../../.storybook/docs';
 export default {
   ...defaultStorybookConfig,
-  component: SitesPage,
-  title: `Shifter/Dashboard/Pages/Sites/State`,
+  component: Teams,
+  title: `Shifter/Dashboard/Pages/Teams/State`,
 };
 
 export const Zero = () => {
-  return <SitesPage />;
+  return <Teams />;
 };
