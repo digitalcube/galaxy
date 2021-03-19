@@ -1,5 +1,5 @@
 import React, { FC } from 'react';
-import { Card, fakerArtifacts, Heading, Section, css } from '@galaxy/core';
+import { fakerArtifacts, Heading, Section, css, fakerDomainState } from '@galaxy/core';
 import { WpControls, AutoPublish, Artifacts } from '@galaxy/views';
 import { deploysTheme } from './Deploys.galaxy';
 const { deploys } = deploysTheme;
@@ -8,7 +8,7 @@ export const Deploys: FC<Deploys> = ({ variants, state, title }: Deploys) => {
   const deploysCss = css({ variants: variants });
 
   return (
-    <Section className="space-y-6">
+    <Section className={`${deploysCss}`}>
       <WpControls state={`${state}`} />
       <Section className="flex flex-row space-x-6 justify-between">
         <Heading fontSize={5} fontWeight="strong" text={title} />
@@ -28,4 +28,5 @@ export type Deploys = {
 Deploys.defaultProps = {
   variants: deploys,
   title: 'Deploys',
+  state: fakerDomainState,
 };

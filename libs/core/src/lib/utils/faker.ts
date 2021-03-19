@@ -108,7 +108,7 @@ export const teamSchema = {
 
 export const fakerTeams = fakerGenerator({
   schema: teamSchema,
-  min: 1,
+  min: 0,
   max: 10,
 });
 
