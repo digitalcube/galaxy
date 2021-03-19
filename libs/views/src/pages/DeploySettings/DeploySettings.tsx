@@ -7,8 +7,8 @@ import {
   Panel,
   fakerHeader,
 } from '@galaxy/core';
-import { Site, Dashboard, SubDirectory, Main } from '@galaxy/views';
-import { SiteState } from '@galaxy/shifter-dashboard';
+import { Dashboard, Main } from '@galaxy/views';
+import { SiteState, SubDirectory, Site } from '@galaxy/shifter-dashboard';
 
 export const DeploySettings: FC<DeploySettings> = ({
   name,

@@ -1,6 +1,6 @@
 import React from 'react';
-import { AutoPublish } from '@galaxy/views';
-import { defaultStorybookConfig } from '../../.storybook/docs';
+import { AutoPublish } from '@galaxy/shifter-dashboard';
+import { defaultStorybookConfig } from '../../../.storybook/docs';
 export default {
   ...defaultStorybookConfig,
   component: AutoPublish,

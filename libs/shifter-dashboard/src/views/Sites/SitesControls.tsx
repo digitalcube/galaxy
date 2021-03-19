@@ -1,5 +1,5 @@
 import React, { FC } from 'react';
-import { SitesSort, SitesCreate } from '@galaxy/views';
+import { SitesSort, SitesCreate } from '@galaxy/shifter-dashboard';
 import { Section } from '@galaxy/core';
 
 export const SitesControls: FC = () => {

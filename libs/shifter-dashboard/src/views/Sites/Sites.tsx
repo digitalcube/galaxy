@@ -1,7 +1,6 @@
 import React, { FC } from 'react';
 import { Section } from '@galaxy/core';
-import { SitesControls } from '@galaxy/views';
-import { Site } from '@galaxy/shifter-dashboard';
+import { Site, SitesControls } from '@galaxy/shifter-dashboard';
 
 export const Sites: FC<Sites> = ({ sites }) => {
   if (!sites) return null;

@@ -1,6 +1,7 @@
 import React, { FC } from 'react';
-import { Teams, Header, Dashboard } from '@galaxy/views';
+import { Header, Dashboard } from '@galaxy/views';
 import { fakerHeader, fakerTeams } from '@galaxy/core';
+import { Teams } from '@galaxy/shifter-dashboard';
 
 export const TeamsPage: FC<TeamsPage> = ({ teams, header }) => {
   return (

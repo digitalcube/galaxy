@@ -1,16 +1,15 @@
 import React, { FC } from 'react';
-import { Section, Panel, fakerHeader } from '@galaxy/core';
+import { Section, fakerHeader } from '@galaxy/core';
+
+import { Aside, Main, Dashboard } from '@galaxy/views';
 
 import {
   SiteState,
   Site,
   SiteProgress,
-  Dashboard,
   Container,
   MediaCdn,
-  Aside,
-  Main,
-} from '@galaxy/views';
+} from '@galaxy/shifter-dashboard';
 
 export const MediaCdnPage: FC<MediaCdnPage> = ({ items, name, mediaCdn }) => {
   return (

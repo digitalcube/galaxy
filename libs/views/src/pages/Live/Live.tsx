@@ -1,6 +1,7 @@
 import React, { FC } from 'react';
 import { Section, fakerHeader } from '@galaxy/core';
-import { SiteOverview, Site, Dashboard, Aside, Main } from '@galaxy/views';
+import { Dashboard, Aside, Main } from '@galaxy/views';
+import { SiteOverview, Site } from '@galaxy/shifter-dashboard';
 
 export const Live: FC<Live> = ({
   name,

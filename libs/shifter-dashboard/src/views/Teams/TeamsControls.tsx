@@ -1,5 +1,5 @@
 import React, { FC } from 'react';
-import { TeamsSort, TeamsCreate } from '@galaxy/views';
+import { TeamsSort, TeamsCreate } from '@galaxy/shifter-dashboard';
 import { Section } from '@galaxy/core';
 
 export const TeamsControls: FC = () => {

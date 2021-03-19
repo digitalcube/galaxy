@@ -1,17 +1,15 @@
 import React, { FC } from 'react';
-import { Section, Panel, fakerHeader } from '@galaxy/core';
+import { Section, fakerHeader } from '@galaxy/core';
+
+import { Dashboard, Aside, Main } from '@galaxy/views';
 
 import {
+  Deploys,
   SiteState,
   Site,
   SiteOverview,
   SiteProgress,
-  Dashboard,
-  Aside,
-  Main,
-} from '@galaxy/views';
-
-import { Deploys } from '@galaxy/shifter-dashboard';
+} from '@galaxy/shifter-dashboard';
 
 export const Home: FC<Home> = ({
   items,

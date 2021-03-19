@@ -1,6 +1,6 @@
 import React, { FC } from 'react';
 import { Section, fakerTeams } from '@galaxy/core';
-import { Team, TeamsControls } from '@galaxy/views';
+import { Team, TeamsControls } from '@galaxy/shifter-dashboard';
 
 export const Teams: FC<Teams> = ({ teams }) => {
   console.log(teams);

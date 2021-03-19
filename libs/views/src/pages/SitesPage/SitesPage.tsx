@@ -1,5 +1,6 @@
 import React, { FC } from 'react';
-import { Sites, Header, Dashboard } from '@galaxy/views';
+import { Header, Dashboard } from '@galaxy/views';
+import { Sites } from '@galaxy/shifter-dashboard';
 import { fakerHeader, fakerSites } from '@galaxy/core';
 
 export const SitesPage: FC<SitesPage> = ({ sites, header }) => {

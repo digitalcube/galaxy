@@ -1,7 +1,7 @@
 import React, { FC, ReactNode } from 'react';
 import { Section, Panel, fakerHeader, Card } from '@galaxy/core';
-import { Aside, Site, Dashboard, Domains, Main } from '@galaxy/views';
-import { AddDomain } from '../../views';
+import { Aside, Dashboard, Main } from '@galaxy/views';
+import { AddDomain, Site, Domains } from '@galaxy/shifter-dashboard';
 
 export const DomainsPage: FC<DomainsPage> = ({
   name,

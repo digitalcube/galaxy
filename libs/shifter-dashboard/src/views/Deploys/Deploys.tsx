@@ -6,8 +6,7 @@ import {
   css,
   fakerDomainState,
 } from '@galaxy/core';
-import { AutoPublish } from '@galaxy/views';
-import { Artifacts, WpControls } from '@galaxy/shifter-dashboard';
+import { Artifacts, WpControls, AutoPublish } from '@galaxy/shifter-dashboard';
 import { deploysTheme } from './Deploys.galaxy';
 const { deploys } = deploysTheme;
 

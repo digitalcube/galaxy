@@ -1,7 +1,7 @@
 import React from 'react';
-import { MediaCdn } from '@galaxy/views';
+import { MediaCdn } from '@galaxy/shifter-dashboard';
 
-import { defaultStorybookConfig } from '../../.storybook/docs';
+import { defaultStorybookConfig } from '../../../.storybook/docs';
 export default {
   ...defaultStorybookConfig,
   component: MediaCdn,

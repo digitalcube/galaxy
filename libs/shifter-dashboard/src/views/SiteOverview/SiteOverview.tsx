@@ -5,7 +5,7 @@ import {
   CdnUrl,
   PublishDate,
   SiteOverviewTeam,
-} from '@galaxy/views';
+} from '@galaxy/shifter-dashboard';
 
 import { SitePreview } from '@galaxy/shifter-dashboard';
 

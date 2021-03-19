@@ -1,6 +1,6 @@
 import React, { FC } from 'react';
 import { Card, Section, css } from '@galaxy/core';
-import { WpVersion, PhpVersion } from '@galaxy/views';
+import { WpVersion, PhpVersion } from '@galaxy/shifter-dashboard';
 import { containerTheme } from './Container.galaxy';
 const { container } = containerTheme;
 

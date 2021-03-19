@@ -1,6 +1,6 @@
 import React from 'react';
-import { Container } from '@galaxy/views';
-import { defaultStorybookConfig } from '../../.storybook/docs';
+import { Container } from '@galaxy/shifter-dashboard';
+import { defaultStorybookConfig } from '../../../.storybook/docs';
 export default {
   ...defaultStorybookConfig,
   component: Container,

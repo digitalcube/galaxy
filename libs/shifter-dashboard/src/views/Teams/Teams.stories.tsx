@@ -1,7 +1,7 @@
 import React from 'react';
-import { Teams } from '@galaxy/views';
+import { Teams } from '@galaxy/shifter-dashboard';
 import { fakerTeams } from '@galaxy/core';
-import { defaultStorybookConfig } from '../../.storybook/docs';
+import { defaultStorybookConfig } from '../../../.storybook/docs';
 export default {
   ...defaultStorybookConfig,
   component: Teams,

@@ -1,7 +1,7 @@
 import React from 'react';
-import { SiteOverview } from '@galaxy/views';
+import { SiteOverview } from '@galaxy/shifter-dashboard';
 
-import { defaultStorybookConfig } from '../../.storybook/docs';
+import { defaultStorybookConfig } from '../../../.storybook/docs';
 export default {
   ...defaultStorybookConfig,
   component: SiteOverview,
