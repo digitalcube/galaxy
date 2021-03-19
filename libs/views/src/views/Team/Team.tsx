@@ -1,6 +1,6 @@
 import React, { FC } from 'react';
 import { TeamMembers, TeamName, TeamManage } from '@galaxy/views';
-import { Section, Card, css } from '@galaxy/core';
+import { Card, css } from '@galaxy/core';
 import { teamTheme } from './Team.galaxy';
 const { team } = teamTheme;
 

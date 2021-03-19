@@ -24,3 +24,4 @@ export * from './SiteSettings';
 export * from './DomainState';
 export * from './OptionsMenu';
 export * from './Team';
+export * from './Teams';

@@ -1,21 +1,21 @@
 import React, { FC } from 'react';
-import { Sites, Header, Dashboard } from '@galaxy/views';
-import { fakerHeader, fakerSites } from '@galaxy/core';
+import { Teams, Header, Dashboard } from '@galaxy/views';
+import { fakerHeader, fakerTeams } from '@galaxy/core';
 
-export const TeamsPage: FC<TeamsPage> = ({ sites, header }) => {
+export const TeamsPage: FC<TeamsPage> = ({ teams, header }) => {
   return (
     <Dashboard header={header}>
-      <Sites sites={sites} />
+      <Teams teams={teams} />
     </Dashboard>
   );
 };
 
 export type TeamsPage = {
-  sites?: Sites[];
+  teams?: Teams[];
   header?: Header;
 };
 
 TeamsPage.defaultProps = {
   header: fakerHeader,
-  sites: fakerSites,
+  teams: fakerTeams,
 };
