@@ -1,7 +1,7 @@
 import React from 'react';
-import { WpControls } from '@galaxy/views';
+import { WpControls } from '@galaxy/shifter-dashboard';
 
-import { defaultStorybookConfig } from '../../.storybook/docs';
+import { defaultStorybookConfig } from '../../../.storybook/docs';
 export default {
   ...defaultStorybookConfig,
   component: WpControls,

@@ -15,7 +15,6 @@ export * from './Sites';
 export * from './SubDirectory';
 export * from './Webhook';
 export * from './Webhooks';
-export * from './WpControls';
 export * from './SiteSettings';
 export * from './OptionsMenu';
 export * from './Team';

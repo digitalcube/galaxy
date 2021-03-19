@@ -1,5 +1,5 @@
 import React, { FC } from 'react';
-import { SiteState, WpAdmin, BuildDeploy } from '@galaxy/views';
+import { SiteState, WpAdmin, BuildDeploy } from '@galaxy/shifter-dashboard';
 import { Section } from '@galaxy/core';
 import { Play, Refresh } from 'heroicons-react';
 

@@ -1,24 +1,17 @@
 import React, { FC } from 'react';
-import {
-  Section,
-  Button,
-  Heading,
-  Menu,
-  Panel,
-  fakerHeader,
-} from '@galaxy/core';
+import { Section, fakerHeader } from '@galaxy/core';
 
 import {
-  SiteState,
   Site,
   SiteProgress,
   Dashboard,
   Container,
   WpVersion,
-  WpControls,
   Aside,
   Main,
 } from '@galaxy/views';
+
+import { SiteState, WpControls } from '@galaxy/shifter-dashboard';
 
 export const Dev: FC<Dev> = ({ items, name, container, wpControls }) => {
   return (
