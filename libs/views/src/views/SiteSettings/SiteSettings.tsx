@@ -1,6 +1,6 @@
 import React, { FC, ReactChild } from 'react';
 import { Controls, Control } from '@galaxy/views';
-import { Card } from '@galaxy/core';
+import { Card, Button } from '@galaxy/core';
 
 export const SiteSettings: FC<SiteSettingsProps> = ({
   children,
@@ -27,7 +27,7 @@ export const SiteSettings: FC<SiteSettingsProps> = ({
       <Card title="Site Notification Settings">
         <Controls>
           <Control
-            description="Receive notifications for this site Yes"
+            description="Receive notifications for this site"
             state={true}
           >
             <Control
@@ -41,6 +41,12 @@ export const SiteSettings: FC<SiteSettingsProps> = ({
           </Control>
         </Controls>
       </Card>
+      <Card
+        title="Delete site"
+        description="Deleting this site will also delete all site artifacts and data. This cannot be undone. Be sure to back up your site before deleting."
+        main={<Button variant="outlinePrimary" label="Delete site" />}
+        mainClassName="flex items-end flex-col"
+      />
     </>
   );
 };
