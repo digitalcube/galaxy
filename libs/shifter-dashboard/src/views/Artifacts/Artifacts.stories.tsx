@@ -8,6 +8,6 @@ export default {
   title: `Shifter/Dashboard/Patterns/Artifacts`,
 };
 
-export const Default = () => {
+export const List = () => {
   return <Artifacts artifacts={fakerArtifacts} />;
 };

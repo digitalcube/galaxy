@@ -4,7 +4,7 @@ import { defaultStorybookConfig } from '../../../../.storybook/docs';
 export default {
   ...defaultStorybookConfig,
   component: ArtifactPreview,
-  title: `Shifter/Dashboard/Patterns/Artifact/Preview`,
+  title: `Shifter/Dashboard/Patterns/Artifacts/Artifact/Preview`,
 };
 
 export const Example = () => {

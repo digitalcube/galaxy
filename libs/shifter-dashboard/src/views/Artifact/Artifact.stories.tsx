@@ -6,7 +6,7 @@ import { defaultStorybookConfig } from '../../../.storybook/docs';
 export default {
   ...defaultStorybookConfig,
   component: Artifact,
-  title: `Shifter/Dashboard/Patterns/Artifact`,
+  title: `Shifter/Dashboard/Patterns/Artifacts/Artifact`,
 };
 
 export const Example = () => {
