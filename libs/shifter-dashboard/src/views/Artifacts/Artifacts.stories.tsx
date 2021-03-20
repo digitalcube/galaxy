@@ -5,7 +5,7 @@ import { defaultStorybookConfig } from '../../../.storybook/docs';
 export default {
   ...defaultStorybookConfig,
   component: Artifacts,
-  title: `Shifter/Dashboard/Patterns/Artifacts`,
+  title: `Shifter/Dashboard/Patterns/Deploys/Artifacts`,
 };
 
 export const List = () => {

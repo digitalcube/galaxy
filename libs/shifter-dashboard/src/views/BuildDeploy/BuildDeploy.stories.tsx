@@ -1,13 +1,13 @@
 import React from 'react';
-import { WpControls } from '@galaxy/shifter-dashboard';
+import { BuildDeploy } from '@galaxy/shifter-dashboard';
 
 import { defaultStorybookConfig } from '../../../.storybook/docs';
 export default {
   ...defaultStorybookConfig,
-  component: WpControls,
-  title: `Shifter/Dashboard/Patterns/Deploys/WpControls`,
+  component: BuildDeploy,
+  title: `Shifter/Dashboard/Patterns/Deploys/BuildDeploy`,
 };
 
 export const Schemas = () => {
-  return <WpControls />;
+  return <BuildDeploy />;
 };

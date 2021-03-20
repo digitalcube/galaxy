@@ -19,3 +19,5 @@ export * from './SubDirectory';
 export * from './SiteSettings';
 export * from './Team';
 export * from './Teams';
+export * from './BuildDeploy';
+export * from './WpAdmin';
