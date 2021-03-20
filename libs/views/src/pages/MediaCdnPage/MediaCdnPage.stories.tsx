@@ -8,6 +8,6 @@ export default {
   title: `Shifter/Dashboard/Pages/Sites/Site/Dev`,
 };
 
-export const MediaCdn = () => {
+export const MediaCDN = () => {
   return <MediaCdnPage {...fakerMediaCdn} />;
 };
