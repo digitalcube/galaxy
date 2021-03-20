@@ -1,14 +1,14 @@
 import React from 'react';
-import { DeploySettings } from '@galaxy/views';
+import { DeploySettings as DeploySettingsPage } from '@galaxy/views';
 import { fakerDeploySettings } from '@galaxy/core';
 import { defaultStorybookConfig } from '../../.storybook/docs';
 
 export default {
   ...defaultStorybookConfig,
-  component: DeploySettings,
-  title: `Shifter/Dashboard/Pages/Sites/Site/Live/DeploySettings/State`,
+  component: DeploySettingsPage,
+  title: `Shifter/Dashboard/Pages/Sites/Site/Live`,
 };
 
-export const Zero = () => {
-  return <DeploySettings {...fakerDeploySettings} />;
+export const Subdirectory = () => {
+  return <DeploySettingsPage {...fakerDeploySettings} />;
 };

@@ -1,13 +1,13 @@
 import React from 'react';
-import { Staging } from '@galaxy/views';
+import { Staging as StagingPage } from '@galaxy/views';
 import { fakerStaging } from '@galaxy/core';
 import { defaultStorybookConfig } from '../../.storybook/docs';
 export default {
   ...defaultStorybookConfig,
-  component: Staging,
-  title: `Shifter/Dashboard/Pages/Sites/Site/Staging/State`,
+  component: StagingPage,
+  title: `Shifter/Dashboard/Pages/Sites/Site`,
 };
 
-export const Zero = () => {
-  return <Staging {...fakerStaging} />;
+export const Staging = () => {
+  return <StagingPage {...fakerStaging} />;
 };

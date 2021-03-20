@@ -5,9 +5,9 @@ import { defaultStorybookConfig } from '../../.storybook/docs';
 export default {
   ...defaultStorybookConfig,
   component: MediaCdnPage,
-  title: `Shifter/Dashboard/Pages/Sites/Site/Dev/Media CDN/State`,
+  title: `Shifter/Dashboard/Pages/Sites/Site/Dev`,
 };
 
-export const Zero = () => {
+export const MediaCdn = () => {
   return <MediaCdnPage {...fakerMediaCdn} />;
 };

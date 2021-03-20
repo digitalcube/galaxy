@@ -6,9 +6,9 @@ import { defaultStorybookConfig } from '../../.storybook/docs';
 export default {
   ...defaultStorybookConfig,
   component: DomainsPage,
-  title: `Shifter/Dashboard/Pages/Sites/Site/Live/Domains/State`,
+  title: `Shifter/Dashboard/Pages/Sites/Site/Live`,
 };
 
-export const Zero = () => {
+export const Domains = () => {
   return <DomainsPage {...fakerDomains} domains={fakerSiteDomains} />;
 };

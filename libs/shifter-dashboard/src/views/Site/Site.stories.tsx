@@ -6,7 +6,7 @@ import { defaultStorybookConfig } from '../../../.storybook/docs';
 export default {
   ...defaultStorybookConfig,
   component: Site,
-  title: `Shifter/Dashboard/Patterns/Site`,
+  title: `Shifter/Dashboard/Patterns/Sites/Site`,
 };
 
 export const Example = () => {

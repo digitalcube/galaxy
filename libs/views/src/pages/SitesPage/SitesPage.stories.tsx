@@ -4,9 +4,9 @@ import { defaultStorybookConfig } from '../../.storybook/docs';
 export default {
   ...defaultStorybookConfig,
   component: SitesPage,
-  title: `Shifter/Dashboard/Pages/Sites/State`,
+  title: `Shifter/Dashboard/Pages`,
 };
 
-export const Zero = () => {
+export const Sites = () => {
   return <SitesPage />;
 };

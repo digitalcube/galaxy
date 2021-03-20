@@ -1,13 +1,13 @@
 import React from 'react';
-import { Home } from '@galaxy/views';
+import { Home as HomePage } from '@galaxy/views';
 import { fakerHome } from '@galaxy/core';
 import { defaultStorybookConfig } from '../../.storybook/docs';
 export default {
   ...defaultStorybookConfig,
-  component: Home,
-  title: `Shifter/Dashboard/Pages/Sites/Site/Home/State`,
+  component: HomePage,
+  title: `Shifter/Dashboard/Pages/Sites/Site`,
 };
 
-export const Zero = () => {
-  return <Home {...fakerHome} />;
+export const Home = () => {
+  return <HomePage {...fakerHome} />;
 };
