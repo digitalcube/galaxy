@@ -17,6 +17,7 @@ export const SiteOverview: FC<SiteOverview> = ({
   team,
 }: SiteOverview) => {
   return (
+    // TODO: Update this to the new Card format
     <Card footer={<SiteOverviewTeam team={`${team}`} />}>
       <Section className="flex">
         <SitePreview img={img} />

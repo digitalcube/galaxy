@@ -4,7 +4,7 @@ import { Card, Section, Heading } from '@galaxy/core';
 export const CardHeader: FC<Card> = ({ title, description }: Card) => {
   if (!title) return null;
   return (
-    <Section className="space-y-4 px-3 py-6 w-4/6">
+    <Section className="space-y-4 px-3 py-4 w-4/6">
       <CardTitle title={title} />
       <CardDescription description={description} />
     </Section>

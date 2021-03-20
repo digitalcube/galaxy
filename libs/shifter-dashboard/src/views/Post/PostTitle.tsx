@@ -1,13 +1,13 @@
 import React, { FC } from 'react';
 import { Heading } from '@galaxy/core';
 
-export const PostTitle: FC<PostTitle> = ({ name, className }: PostTitle) => {
+export const PostTitle: FC<PostTitle> = ({ title, className }: PostTitle) => {
   return (
-    <Heading fontWeight="strong" variant="primary" fontSize={6} text={name}  className={`${className}`} />
+    <Heading fontWeight="strong" variant="primary" fontSize={6} text={title}  className={`${className}`} />
   );
 };
 
 export type PostTitle = {
-  name: string;
+  title: string;
   className: string;
 };

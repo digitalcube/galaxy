@@ -22,7 +22,7 @@ const siteState = [
   ...domainState,
 ];
 // const artifactState = ['published', 'scheduled', 'ready'];
-const subDirectoryState = [true, false];
+// const subDirectoryState = [true, false];
 
 export type FakerGenerator = {
   schema: any;
@@ -113,6 +113,38 @@ export const fakerTeams = fakerGenerator({
 });
 
 export const fakerTeam = fakerGenerator({ schema: teamSchema })[0];
+
+export const postSchema = {
+  img: '{{image.image}}',
+  title: '{{company.companyName}}',
+  description: '{{company.companyName}}',
+  url: '{{internet.url}}',
+  date: '{{date.recent}}',
+};
+
+export const fakerPosts = fakerGenerator({
+  schema: postSchema,
+  min: 0,
+  max: 10,
+});
+
+export const fakerPost = fakerGenerator({ schema: postSchema })[0];
+
+export const guideSchema = {
+  img: '{{image.image}}',
+  title: '{{company.catchPhrase}}',
+  description: 'This article a step-by-step guide for {{lorem.words}}',
+  url: '{{internet.url}}',
+  date: '{{date.recent}}',
+};
+
+export const fakerGuides = fakerGenerator({
+  schema: guideSchema,
+  min: 0,
+  max: 10,
+});
+
+export const fakerGuide = fakerGenerator({ schema: guideSchema })[0];
 
 export const siteTeamMemberSchema = {
   img:

@@ -10,7 +10,7 @@ export const Team: FC<Team> = ({ name, team, teamMembers }: Team) => {
     <Card
       variant="primary"
       className={`${teamCss}`}
-      mainClassName="flex flex-grow flex-row justify-between space-x-4"
+      mainClassName="flex flex-grow flex-row justify-between space-x-4 items-center"
       main={
         <>
           <TeamName name={name} className="flex-grow" />

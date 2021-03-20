@@ -1,5 +1,5 @@
 export const postTheme = {
   post: {
-    DEFAULT: ['flex-row'],
+    DEFAULT: ['flex-col'],
   },
 };

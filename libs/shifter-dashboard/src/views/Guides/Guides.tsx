@@ -1,37 +1,34 @@
 import React, { FC } from 'react';
-import { Section, fakerTeams } from '@galaxy/core';
-import { Team, TeamsControls } from '@galaxy/shifter-dashboard';
+import { Section, fakerGuides } from '@galaxy/core';
+import { Post } from '@galaxy/shifter-dashboard';
 
-export const Teams: FC<Teams> = ({ teams }) => {
-  console.log(teams);
-  if (!teams) return null;
-  const allTeams = teams.map((site, i) => {
-    const { name, url, state, img, team, progress } = site;
+export const Guides: FC<Guides> = ({ guides }) => {
+  console.log(guides);
+  if (!guides) return null;
+  const allGuides = guides.map((guide, i) => {
+    const { title, url, img, description } = guide;
     return (
-      <Team
+      <Post
         key={i}
-        name={`${name}`}
+        description={`${description}`}
+        title={`${title}`}
         url={`${url}`}
-        state={`${state}`}
         img={img}
-        team={team}
-        progress={progress}
       />
     );
   });
 
   return (
     <Section className="space-y-10 px-8">
-      <TeamsControls />
-      <Section className="space-y-4">{allTeams}</Section>
+      <Section className="space-y-4">{allGuides}</Section>
     </Section>
   );
 };
 
-export type Teams = {
-  teams?: Team[];
+export type Guides = {
+  guides?: Post[];
 };
 
-Teams.defaultProps = {
-  teams: fakerTeams
+Guides.defaultProps = {
+  guides: fakerGuides
 }

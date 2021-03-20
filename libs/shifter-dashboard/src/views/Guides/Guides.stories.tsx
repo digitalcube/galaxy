@@ -1,13 +1,13 @@
 import React from 'react';
-import { Teams } from '@galaxy/shifter-dashboard';
-import { fakerTeams } from '@galaxy/core';
+import { Guides } from '@galaxy/shifter-dashboard';
+import { fakerGuides } from '@galaxy/core';
 import { defaultStorybookConfig } from '../../../.storybook/docs';
 export default {
   ...defaultStorybookConfig,
-  component: Teams,
-  title: `Shifter/Dashboard/Patterns/Teams`,
+  component: Guides,
+  title: `Shifter/Dashboard/Patterns/Guides`,
 };
 
 export const Default = () => {
-  return <Teams teams={fakerTeams} />;
+  return <Guides teams={fakerGuides} />;
 };

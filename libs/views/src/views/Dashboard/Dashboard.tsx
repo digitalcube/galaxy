@@ -18,6 +18,6 @@ export const Dashboard: FC<Dashboard> = ({
 
 export type Dashboard = {
   header?: Header;
-  children: ReactNode;
-  main: ReactNode;
+  children?: ReactNode;
+  main?: ReactNode;
 };
