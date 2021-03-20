@@ -5,7 +5,7 @@ import { defaultStorybookConfig } from '../../../.storybook/docs';
 export default {
   ...defaultStorybookConfig,
   component: DomainState,
-  title: `Shifter/Dashboard/Patterns/Domain State`,
+  title: `Shifter/Dashboard/Patterns/Domains/Domain/State`,
 };
 
 export const Example = () => {
