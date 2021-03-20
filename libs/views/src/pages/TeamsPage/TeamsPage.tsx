@@ -4,11 +4,7 @@ import { fakerHeader, fakerTeams } from '@galaxy/core';
 import { Teams } from '@galaxy/shifter-dashboard';
 
 export const TeamsPage: FC<TeamsPage> = ({ teams, header }) => {
-  return (
-    <Dashboard header={header} main={<Teams teams={teams} />}>
-      <Teams teams={teams} />
-    </Dashboard>
-  );
+  return <Dashboard header={header} main={<Teams teams={teams} />} />;
 };
 
 export type TeamsPage = {

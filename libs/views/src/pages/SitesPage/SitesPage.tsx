@@ -4,11 +4,7 @@ import { Sites } from '@galaxy/shifter-dashboard';
 import { fakerHeader, fakerSites } from '@galaxy/core';
 
 export const SitesPage: FC<SitesPage> = ({ sites, header }) => {
-  return (
-    <Dashboard header={header}>
-      <Sites sites={sites} />
-    </Dashboard>
-  );
+  return <Dashboard header={header} main={<Sites sites={sites} />} />;
 };
 
 export type SitesPage = {
