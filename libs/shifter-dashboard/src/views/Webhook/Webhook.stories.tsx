@@ -5,7 +5,7 @@ import { defaultStorybookConfig } from '../../../.storybook/docs';
 export default {
   ...defaultStorybookConfig,
   component: Webhook,
-  title: `Shifter/Dashboard/Patterns/Webhook`,
+  title: `Shifter/Dashboard/Patterns/Webhooks/Webhook`,
 };
 
 export const Schemas = () => {
