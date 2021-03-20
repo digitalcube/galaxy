@@ -4,7 +4,7 @@ import { defaultStorybookConfig } from '../../.storybook/docs';
 export default {
   ...defaultStorybookConfig,
   component: Control,
-  title: `Shifter/Dashboard/Patterns/Control`,
+  title: `Shifter/Dashboard/Patterns/Controls/Control`,
 };
 
 export const On = ({
