@@ -9,5 +9,5 @@ export default {
 };
 
 export const Default = () => {
-  return <Artifacts sites={fakerArtifacts} />;
+  return <Artifacts artifacts={fakerArtifacts} />;
 };
