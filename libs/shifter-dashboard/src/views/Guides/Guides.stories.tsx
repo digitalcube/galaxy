@@ -1,6 +1,5 @@
 import React from 'react';
 import { Guides } from '@galaxy/shifter-dashboard';
-import { fakerGuides } from '@galaxy/core';
 import { defaultStorybookConfig } from '../../../.storybook/docs';
 export default {
   ...defaultStorybookConfig,
@@ -9,5 +8,5 @@ export default {
 };
 
 export const Default = () => {
-  return <Guides guides={fakerGuides} />;
+  return <Guides />;
 };

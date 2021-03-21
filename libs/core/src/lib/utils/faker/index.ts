@@ -131,8 +131,9 @@ export const fakerPosts = fakerGenerator({
 export const fakerPost = fakerGenerator({ schema: postSchema })[0];
 
 export const guideSchema = {
+  '@type': 'TechArticle',
   img: '{{image.image}}',
-  title: '{{company.catchPhrase}}',
+  name: '{{company.catchPhrase}}',
   description: 'This article a step-by-step guide for {{lorem.words}}',
   url: '{{internet.url}}',
   date: '{{date.recent}}',
