@@ -1,21 +1,12 @@
 import React, { FC } from 'react';
 import { Section, fakerGuides } from '@galaxy/core';
-import { Post } from '@galaxy/shifter-dashboard';
+import { Guide } from '@galaxy/shifter-dashboard';
 
 export const Guides: FC<Guides> = ({ guides }) => {
   console.log(guides);
   if (!guides) return null;
   const allGuides = guides.map((guide, i) => {
-    const { title, url, img, description } = guide;
-    return (
-      <Post
-        key={i}
-        description={`${description}`}
-        title={`${title}`}
-        url={`${url}`}
-        img={img}
-      />
-    );
+    return <Guide key={i} {...guide} />;
   });
 
   return (
@@ -26,9 +17,9 @@ export const Guides: FC<Guides> = ({ guides }) => {
 };
 
 export type Guides = {
-  guides?: Post[];
+  guides?: Guide[];
 };
 
 Guides.defaultProps = {
-  guides: fakerGuides
-}
+  guides: fakerGuides,
+};

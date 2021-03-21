@@ -1,6 +1,6 @@
 import faker from 'faker';
-// resolve circular depencency between view and core
-// import { AddDomain } from '@galaxy/views';
+
+// export * from './fakerGuides'
 
 const preview = [
   'https://s0.wp.com/mshots/v1/https://tailwindcss.com?w=160',

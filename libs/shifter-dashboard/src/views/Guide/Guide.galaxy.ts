@@ -1,5 +1,5 @@
-export const postTheme = {
-  post: {
+export const guideTheme = {
+  guide: {
     DEFAULT: ['ring', 'rounded', 'ring-shifter-gray-200'],
     primary: [
       'ring',
