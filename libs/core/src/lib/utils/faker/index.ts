@@ -1,7 +1,5 @@
 import faker from 'faker';
 
-// export * from './fakerGuides'
-
 const preview = [
   'https://s0.wp.com/mshots/v1/https://tailwindcss.com?w=160',
   'https://s0.wp.com/mshots/v1/https://jamstack.org?w=160',
@@ -21,6 +19,7 @@ const siteState = [
   'starting',
   ...domainState,
 ];
+
 // const artifactState = ['published', 'scheduled', 'ready'];
 // const subDirectoryState = [true, false];
 
