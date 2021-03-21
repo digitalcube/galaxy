@@ -21,6 +21,6 @@ export * from './Team';
 export * from './Teams';
 export * from './BuildDeploy';
 export * from './WpAdmin';
-export * from './Post';
 export * from './Posts';
 export * from './Guides';
+export * from './Post';

@@ -6,18 +6,7 @@ export const Posts: FC<Posts> = ({ posts }) => {
   console.log(posts);
   if (!posts) return null;
   const allPosts = posts.map((site, i) => {
-    const { title, url, img } = site;
-    return (
-      <Post
-        key={i}
-        name={`${name}`}
-        url={`${url}`}
-        state={`${state}`}
-        img={img}
-        team={team}
-        progress={progress}
-      />
-    );
+    return <Post key={i} {...site} />;
   });
 
   return (

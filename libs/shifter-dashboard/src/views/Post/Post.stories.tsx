@@ -1,12 +1,12 @@
 import React from 'react';
-import { fakerPost } from '@galaxy/core';
 import { Post } from '@galaxy/shifter-dashboard';
+import { fakerPost } from '@galaxy/core';
 
 import { defaultStorybookConfig } from '../../../.storybook/docs';
 export default {
   ...defaultStorybookConfig,
   component: Post,
-  title: `Shifter/Dashboard/Patterns/Posts/Post`,
+  title: `Galaxy/Components/Post`,
 };
 
 export const Example = () => {
