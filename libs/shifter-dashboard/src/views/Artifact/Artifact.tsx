@@ -49,8 +49,6 @@ export const Artifact: FC<Artifact> = ({
 
 export type Artifact = {
   schema?: ArchiveComponent;
-  img?: string;
-  name?: string;
   variant?: string;
   state?: 'running' | 'stopped' | string;
   progress?: 0 | 1 | 2 | 3 | 4 | 5 | null;
@@ -61,7 +59,7 @@ export type Artifact = {
 Artifact.defaultProps = {
   variants: artifact,
   schema: {
-    '@type': 'TechArticle',
+    '@type': 'ArchiveComponent',
     ...fakerArtifact,
   },
 };
