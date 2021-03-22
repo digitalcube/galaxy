@@ -177,7 +177,8 @@ export const fakerSiteMember = fakerGenerator({
 export const artifactSchema = {
   artifact: '{{random.uuid}}',
   cloudfront: '{{internet.url}}',
-  img: '{{image.image}}',
+  image: '{{image.image}}',
+  thumbnailUrl: '{{image.image}}',
   name: '{{company.companyName}}',
   progress: 'progress',
   state: 'artifactState',

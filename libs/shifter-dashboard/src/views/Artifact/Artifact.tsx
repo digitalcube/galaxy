@@ -7,11 +7,13 @@ import {
   ArtifactProgress,
   ArtifactOptions,
 } from '@galaxy/shifter-dashboard';
-import { Section, Card, css } from '@galaxy/core';
+import { ArchiveComponent } from 'schema-dts';
+import { Section, Card, fakerArtifact, css } from '@galaxy/core';
 import { artifactTheme } from './Artifact.galaxy';
 const { artifact } = artifactTheme;
 
 export const Artifact: FC<Artifact> = ({
+  schema,
   name,
   variant,
   img,
@@ -23,13 +25,13 @@ export const Artifact: FC<Artifact> = ({
   const artifactCss = css({ variants: variants });
   return (
     <Card variant="primary" className={`${artifactCss}`}>
-      <ArtifactPreview img={img} />
+      <ArtifactPreview img={`${schema?.thumbnailUrl}`} />
       <Section as="div" className="flex-grow">
         <ArtifactProgress progress={progress} variant={variant} />
         <Section className="p-4 space-y-4">
           <Section className="flex" as="div">
             <Section className="flex-auto">
-              <ArtifactName variant={variant} name={name} />
+              <ArtifactName variant={variant} name={`${schema?.name}`} />
             </Section>
             <Section as="span" className="space-x-2 flex items-center">
               <ArtifactState state={state} />
@@ -46,6 +48,7 @@ export const Artifact: FC<Artifact> = ({
 };
 
 export type Artifact = {
+  schema?: ArchiveComponent;
   img?: string;
   name?: string;
   variant?: string;
@@ -57,4 +60,8 @@ export type Artifact = {
 
 Artifact.defaultProps = {
   variants: artifact,
+  schema: {
+    '@type': 'TechArticle',
+    ...fakerArtifact,
+  },
 };

@@ -4,7 +4,7 @@ import { defaultStorybookConfig } from '../../../../.storybook/docs';
 export default {
   ...defaultStorybookConfig,
   component: ArtifactProgress,
-  title: `Shifter/Dashboard/Patterns/Artifacs/Artifact/Progress`,
+  title: `Shifter/Dashboard/Patterns/Deploys/Artifacts/Artifact/Progress`,
 };
 
 export const Example = () => {

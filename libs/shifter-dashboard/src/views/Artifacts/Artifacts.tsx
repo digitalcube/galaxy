@@ -3,19 +3,8 @@ import { Section, Heading, SecurityBuiltIn } from '@galaxy/core';
 import { Artifact } from '@galaxy/shifter-dashboard';
 
 export const Artifacts: FC<Artifacts> = ({ artifacts, title, description }) => {
-  const allArtifacts = artifacts.map((artifact, i) => {
-    const { name, url, state, img, progress, date } = artifact;
-    return (
-      <Artifact
-        key={i}
-        name={`${name}`}
-        url={`${url}`}
-        state={`${state}`}
-        img={img}
-        progress={progress}
-        date={date}
-      />
-    );
+  const allArtifacts = artifacts?.map((artifact, i) => {
+    return <Artifact key={i} {...artifact} />;
   });
 
   const ZeroArtifacts = () => {
@@ -41,19 +30,18 @@ export const Artifacts: FC<Artifacts> = ({ artifacts, title, description }) => {
 
   return (
     <Section className="space-y-10">
-      {artifacts.length > 0 ? <ArtifactList /> : <ZeroArtifacts />}
+      {artifacts ? <ArtifactList /> : <ZeroArtifacts />}
     </Section>
   );
 };
 
 export type Artifacts = {
-  artifacts?: any;
+  artifacts?: Artifact[];
   title?: string;
   description?: string;
 };
 
 Artifacts.defaultProps = {
-  artifacts: {},
   title: "You haven't created any artifacts for this site yet.",
   description: 'Go to the WordPress admin to get started.',
 };

@@ -3,7 +3,6 @@ import { Section, fakerGuides } from '@galaxy/core';
 import { Guide } from '@galaxy/shifter-dashboard';
 
 export const Guides: FC<Guides> = ({ guides }) => {
-  console.log(guides);
   if (!guides) return null;
   const allGuides = guides.map((guide, i) => {
     return <Guide key={i} {...guide} />;
