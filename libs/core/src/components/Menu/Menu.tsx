@@ -23,7 +23,7 @@ export const Items: FC<MenuItemsProp> = ({ items,alignment, level = 0 }) => {
         if (items) {
           return (
             <>
-              <Button key={i} variant="ghost" label={title} />
+              <Button key={i} variant="ghost" label={title} href={href} />
               <Menu items={items} alignment={alignment} level={level + 3} />
             </>
           )

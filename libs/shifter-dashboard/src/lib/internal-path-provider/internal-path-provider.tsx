@@ -1,4 +1,4 @@
-import React, { createContext, FC, useContext } from 'react';
+import React, { createContext, FC, PropsWithChildren, useContext } from 'react';
 
 export type InternalLinkBase = {
   sites: string;
@@ -6,7 +6,7 @@ export type InternalLinkBase = {
   accounts: string;
 }
 
-export type InternalLinkBaseProviderProps = Partial<InternalLinkBase>
+export type InternalLinkBaseProviderProps = PropsWithChildren<Partial<InternalLinkBase>>
 
 const InternalLinkBaseContext = createContext<InternalLinkBase>({
   sites: 'sites',

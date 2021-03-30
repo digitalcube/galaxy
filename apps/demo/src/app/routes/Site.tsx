@@ -20,6 +20,9 @@ import {
 import {
   PageOverview
 } from '../pages/sites/Overview'
+import {
+  PageLiveOverview
+} from '../pages/sites/live/Overview'
 
 const PageSub: FC<RouteComponentProps> = (props) => {
     return (
@@ -71,10 +74,10 @@ export const RouteSite: FC = () => {
           <Main>
               <Switch>
                 <Redirect from={`/${sites}/:siteId/home`} to={`/${sites}/:siteId/`} />
-                <Route path={`/${sites}/:siteId/:path`} component={PageSub} />
-                <Route path={`/${sites}/:siteId/live`} component={PageSub} />
+                <Route path={`/${sites}/:siteId/live`} component={PageLiveOverview} />
                 <Route path={`/${sites}/:siteId/live/domain`} component={PageSub} />
                 <Route path={`/${sites}/:siteId/live/analytics`} component={PageSub} />
+                <Route path={`/${sites}/:siteId/:path`} component={PageSub} />
                 <Route path={`/${sites}/:siteId/`} exact component={PageOverview} />
               </Switch>
           </Main>
