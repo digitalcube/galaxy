@@ -39,7 +39,17 @@ export const RouteSite: FC = () => {
   }>()
   const siteMenus: MenuItems = [
       { title: 'Home', href: '' },
-      { title: 'Live', href: 'live' },
+      { title: 'Live', href: 'live', items: [{
+          title: 'Overview',
+          href: 'live'
+      },{
+        title: 'Domain',
+        href: 'live/domain'
+      },{
+        title: 'Analytics',
+        href: 'live/analytics'
+      }]
+      },
       { title: 'Staging', href: 'staging' },
       { title: 'Dev', href: 'dev' },
       { title: 'Team', href: 'team' },
@@ -48,7 +58,11 @@ export const RouteSite: FC = () => {
   const menus = useMemo(() => {
     return siteMenus.map(menu => ({
       ...menu,
-      href: `/${[sites, siteId, menu.href].join('/')}`
+      href: `/${[sites, siteId, menu.href].join('/')}`,
+      items: menu.items ? menu.items.map(m => ({
+        ...m,
+        href: `/${[sites, siteId, m.href].join('/')}`
+      })): undefined
     }))
   }, [siteId, siteMenus, sites])
     return (
@@ -58,6 +72,9 @@ export const RouteSite: FC = () => {
               <Switch>
                 <Redirect from={`/${sites}/:siteId/home`} to={`/${sites}/:siteId/`} />
                 <Route path={`/${sites}/:siteId/:path`} component={PageSub} />
+                <Route path={`/${sites}/:siteId/live`} component={PageSub} />
+                <Route path={`/${sites}/:siteId/live/domain`} component={PageSub} />
+                <Route path={`/${sites}/:siteId/live/analytics`} component={PageSub} />
                 <Route path={`/${sites}/:siteId/`} exact component={PageOverview} />
               </Switch>
           </Main>
