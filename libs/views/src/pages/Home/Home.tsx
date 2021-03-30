@@ -1,9 +1,10 @@
 import React, { FC } from 'react';
-import { Section, fakerHeader } from '@galaxy/core';
+import { Section, fakerHeader, MenuItems } from '@galaxy/core';
 
-import { Dashboard, Aside, Main } from '@galaxy/views';
+import { Dashboard, Main } from '@galaxy/views';
 
 import {
+  Aside,
   Deploys,
   SiteState,
   Site,
@@ -63,7 +64,7 @@ export type Home = {
   cloudfront: Site;
   date: Site;
   img: Site;
-  items: Site;
+  items: MenuItems;
   name: Site;
   progress: SiteProgress;
   state: SiteState;

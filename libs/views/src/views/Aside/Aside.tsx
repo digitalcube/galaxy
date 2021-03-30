@@ -1,10 +1,7 @@
-import React, { FC } from 'react';
-import { Section, Panel, Button, Heading, Menu } from '@galaxy/core';
+import React, { FC, ReactNode } from 'react';
+import { Section, Panel, Button, Heading, Menu, MenuItems } from '@galaxy/core';
 
-import { Site } from '@galaxy/views';
-import { SiteState } from '@galaxy/shifter-dashboard';
-
-export const Aside: FC<Aside> = ({ items, name }) => {
+export const Aside: FC<AsideProps> = ({ items, name, subHeading }) => {
   return (
     <Section className="flex-none w-full md:max-w-xs">
       <Panel className="flex flex-col border-b space-y-4 border-shifter-gray-200">
@@ -32,7 +29,7 @@ export const Aside: FC<Aside> = ({ items, name }) => {
         <Section className="space-y-2">
           <Heading fontSize={6} text={name} />
           <Section>
-            <SiteState state="starting" />
+            {subHeading}
           </Section>
         </Section>
       </Panel>
@@ -43,7 +40,8 @@ export const Aside: FC<Aside> = ({ items, name }) => {
   );
 };
 
-export type Aside = {
-  name: Site['name'];
-  items: Site;
+export type AsideProps = {
+  name: string;
+  items: MenuItems;
+  subHeading?: ReactNode
 };

@@ -1,6 +1,5 @@
 import React, { FC } from 'react';
-import { GalaxyThemeProvider, Link, Panel } from '@galaxy/core';
-import GitHubRibbon from 'react-github-ribbons';
+import { GalaxyThemeProvider, Link, MenuItems, Panel } from '@galaxy/core';
 import {
   BrowserRouter,
   Route,
@@ -9,60 +8,38 @@ import {
   Link as ReactRouterLink,
 } from 'react-router-dom';
 import {
-  Dashboard
+  Dashboard, Aside, Main
 } from '@galaxy/views'
-
-const PageIndex: FC = () => (
-  <div>
-      <h1>Index</h1>
-    </div>
-);
-
-const PageSub: FC<RouteComponentProps> = (props) => {
-  return (
-      <div>
-        <pre>
-          <code>{JSON.stringify(props, null, 2)}</code>
-        </pre>
-      </div>
-  );
-};
+import { ShifterDashboardThemeProvider, useInternalLinkBase } from '@galaxy/shifter-dashboard'
+import { PageSites } from './pages/Sites'
+import { RouteSite } from './routes/Site';
 
 export function App() {
+  const {
+    sites
+  } = useInternalLinkBase()
   return (
-    <GalaxyThemeProvider internalLinkTag={ReactRouterLink}>
+    <ShifterDashboardThemeProvider internalLinkTag={ReactRouterLink}>
       <BrowserRouter>
         <Dashboard header={{
           items: [{
             title: 'Home',
             href: '/'
           }, {
-            title: 'Page1',
-            href: '/page1'
+            title: 'Sites',
+            href: `/${sites}`
           }, {
             title: 'Page2',
             href: '/page2'
           }]
         }}>
-            <Switch>
-              <Route path="/:path" component={PageSub} />
-              <Route path="/" exact component={PageIndex} />
-            </Switch>
-            <Panel title="Link example" actions={<div />}>
-              <ul>
-                <li><Link href="/page1">Page1 (Internal)</Link></li>
-                <li><Link href="http://google.com">Google (external)</Link></li>
-              </ul>
-              
-            </Panel>
-          <GitHubRibbon
-            href="https://github.com/digitalcube/galaxy"
-            target="_blank"
-            rel="noopener noreferrer"
-          />
+          <Switch>
+            <Route path={`/${sites}`} component={RouteSite} />
+            <Route path="/" exact component={PageSites} />
+          </Switch>
         </Dashboard>
       </BrowserRouter>
-    </GalaxyThemeProvider>
+    </ShifterDashboardThemeProvider>
   );
 }
 

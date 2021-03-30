@@ -1,9 +1,15 @@
-import React, { FC } from 'react';
+import React, { FC, useMemo } from 'react';
 import { Button } from '@galaxy/core';
+import { useInternalLinkBase } from '../../lib/internal-path-provider/internal-path-provider';
 
-export const SitesCreate: FC<SitesCreate> = ({ title }: SitesCreate) => {
+export const SitesCreate: FC<SitesCreateProps> = ({ title, href }) => {
+  const { sites } =useInternalLinkBase()
+  const target = useMemo(() => {
+    if (href) return href;
+    return `${sites}/create`
+  }, [href, sites])
   return (
-    <Button variant="primary" className="relative text-left" label={title}>
+    <Button variant="primary" className="relative text-left" label={title} href={target}>
       <span className="pl-4 pointer-events-none">
         <svg
           className="h-4 w-4 text-white"
@@ -22,11 +28,12 @@ export const SitesCreate: FC<SitesCreate> = ({ title }: SitesCreate) => {
         </svg>
       </span>
     </Button>
-  );
-};
+  )
+}
 
-type SitesCreate = {
+export type SitesCreateProps = {
   title?: string;
+  href?: string;
 };
 
 SitesCreate.defaultProps = {

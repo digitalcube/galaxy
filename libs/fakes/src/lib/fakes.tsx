@@ -1,3 +1,4 @@
+/* eslint-disable @typescript-eslint/ban-ts-comment */
 import faker from 'faker';
 // resolve circular depencency between view and core
 // import { AddDomain } from '@galaxy/views';
@@ -35,20 +36,24 @@ export const fakerGenerator = ({ schema, min = 1, max }: FakerGenerator) => {
   return Array.from({ length: faker.random.number({ min, max }) }).map(() =>
     Object.keys(schema).reduce((entity, key) => {
       if (key === 'state') {
+        // @ts-expect-error
         entity[key] = fakerArray(siteState);
         return entity;
       }
 
       if (key === 'progress') {
+        // @ts-expect-error
         entity[key] = fakerProgress();
         return entity;
       }
 
       if (key === 'img') {
+        // @ts-expect-error
         entity[key] = fakerArray(preview);
         return entity;
       }
 
+      // @ts-expect-error
       entity[key] = faker.fake(schema[key]);
       return entity;
     }, {})
@@ -65,6 +70,7 @@ export const fakerProgress = (min = 0, max = 5) => {
   return faker.random.number({ min, max });
 };
 
+// @ts-expect-error
 export const fakerDomainState = fakerArray(domainState);
 
 const dashboardSiteControlSubDirectory = {
@@ -84,6 +90,7 @@ export const siteSchema = {
   team: '{{company.companyName}}',
   url: '{{internet.url}}',
   date: '{{date.recent}}',
+  siteId: '{{random.uuid}}',
 };
 
 export const fakerSites = fakerGenerator({

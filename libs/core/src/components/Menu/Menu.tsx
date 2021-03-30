@@ -5,8 +5,9 @@ export type MenuItem = {
   title: string;
   href?: string;
 };
+export type MenuItems = MenuItem[]
 export type Menu = {
-  items?: MenuItem[];
+  items?: MenuItems;
   alignment?: 'vertical' | 'horizontal';
 };
 
