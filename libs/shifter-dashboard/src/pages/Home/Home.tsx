@@ -2,7 +2,6 @@ import React, { FC } from 'react';
 import { Section, fakerHeader, MenuItems } from '@galaxy/core';
 
 import { Dashboard, Main } from '@galaxy/views';
-
 import {
   Aside,
   Deploys,
@@ -12,6 +11,9 @@ import {
   SiteProgress,
 } from '@galaxy/shifter-dashboard';
 
+/**
+ * @deprecated
+ */
 export const Home: FC<Home> = ({
   items,
   name,

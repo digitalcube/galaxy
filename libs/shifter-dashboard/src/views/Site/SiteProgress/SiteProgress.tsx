@@ -16,9 +16,9 @@ export const SiteProgress: FC<SiteProgress> = ({ progress }: SiteProgress) => {
     </Section>
   );
 };
-
+export type ProgressValue = 0 | 1 | 2 | 3 | 4 | 5 | null
 export type SiteProgress = {
-  progress?: 0 | 1 | 2 | 3 | 4 | 5 | null;
+  progress?: ProgressValue;
 };
 
 SiteProgress.defaultProps = {

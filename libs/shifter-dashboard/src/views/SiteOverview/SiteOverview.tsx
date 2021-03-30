@@ -5,13 +5,12 @@ import {
   CdnUrl,
   PublishDate,
   SiteOverviewTeam,
+  SitePreview,ProgressValue,
 } from '@galaxy/shifter-dashboard';
-
-import { SitePreview } from '@galaxy/shifter-dashboard';
 
 export const SiteOverview: FC<SiteOverview> = ({
   artifact,
-  cloudfront,
+  publishedSiteURL,
   img,
   date,
   team,
@@ -23,7 +22,7 @@ export const SiteOverview: FC<SiteOverview> = ({
         <SitePreview img={img} />
         <Section as="div" className="px-8">
           <Section className="space-y-4">
-            <CdnUrl url={`${cloudfront}`} />
+            <CdnUrl url={`${publishedSiteURL}`} />
             <Section className="flex space-x-4" as="div">
               <PublishDate date={date} />
               <ArtifactId artifact={`${artifact}`} />
@@ -40,9 +39,7 @@ export type SiteOverview = {
   img?: string;
   team?: string;
   artifact: string;
-  cloudfront: string;
-  variant?: string;
-  state: 'running' | 'stopped' | string;
-  progress: 0 | 1 | 2 | 3 | 4 | 5 | null;
+  publishedSiteURL: string;
+  progress: ProgressValue;
   date: string;
 };

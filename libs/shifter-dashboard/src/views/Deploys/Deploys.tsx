@@ -28,7 +28,7 @@ export const Deploys: FC<Deploys> = ({ variants, state, title }: Deploys) => {
 export type Deploys = {
   variants?: typeof deploys;
   state: string;
-  title: string;
+  title?: string;
 };
 
 Deploys.defaultProps = {
