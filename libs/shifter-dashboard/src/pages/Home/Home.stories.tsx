@@ -1,7 +1,7 @@
 import React from 'react';
-import { Home as HomePage } from '@galaxy/views';
+import { Home as HomePage } from './Home';
 import { fakerHome } from '@galaxy/core';
-import { defaultStorybookConfig } from '../../.storybook/docs';
+import { defaultStorybookConfig } from '../../../.storybook/docs';
 export default {
   ...defaultStorybookConfig,
   component: HomePage,

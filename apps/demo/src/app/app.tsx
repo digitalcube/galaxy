@@ -6,6 +6,7 @@ import {
   Switch,
   RouteComponentProps,
   Link as ReactRouterLink,
+  Redirect,
 } from 'react-router-dom';
 import {
   Dashboard, Aside, Main
@@ -34,6 +35,7 @@ export function App() {
           }]
         }}>
           <Switch>
+            <Redirect from={`/${sites}`} exact to="/" />
             <Route path={`/${sites}`} component={RouteSite} />
             <Route path="/" exact component={PageSites} />
           </Switch>

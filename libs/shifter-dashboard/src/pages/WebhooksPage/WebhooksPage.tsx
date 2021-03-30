@@ -1,14 +1,15 @@
 import React, { FC } from 'react';
 import { Section, fakerHeader, fakerSiteWebhooks } from '@galaxy/core';
 
-import { Dashboard, Container, Aside, Main } from '@galaxy/views';
+import { Dashboard,  Aside, Main } from '@galaxy/views';
 
 import {
   SiteState,
   Site,
   SiteProgress,
   Webhooks,
-} from '@galaxy/shifter-dashboard';
+  Container
+} from '../../views';
 
 export const WebhooksPage: FC<WebhooksPage> = ({ items, name }) => {
   return (

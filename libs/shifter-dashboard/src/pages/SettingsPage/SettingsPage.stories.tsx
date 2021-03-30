@@ -1,7 +1,7 @@
 import React from 'react';
-import { SettingsPage } from '@galaxy/views';
+import { SettingsPage } from './SettingsPage';
 import { fakerSettings } from '@galaxy/core';
-import { defaultStorybookConfig } from '../../.storybook/docs';
+import { defaultStorybookConfig } from '../../../.storybook/docs';
 export default {
   ...defaultStorybookConfig,
   component: SettingsPage,

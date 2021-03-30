@@ -1,7 +1,7 @@
 import React from 'react';
-import { MediaCdnPage } from '@galaxy/views';
+import { MediaCdnPage } from './MediaCdnPage';
 import { fakerMediaCdn } from '@galaxy/core';
-import { defaultStorybookConfig } from '../../.storybook/docs';
+import { defaultStorybookConfig } from '../../../.storybook/docs';
 export default {
   ...defaultStorybookConfig,
   component: MediaCdnPage,

@@ -1,7 +1,7 @@
 import React from 'react';
-import { WebhooksPage } from '@galaxy/views';
+import { WebhooksPage } from './WebhooksPage';
 import { fakerMediaCdn } from '@galaxy/core';
-import { defaultStorybookConfig } from '../../.storybook/docs';
+import { defaultStorybookConfig } from '../../../.storybook/docs';
 export default {
   ...defaultStorybookConfig,
   component: WebhooksPage,

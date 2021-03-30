@@ -1,6 +1,6 @@
 import React from 'react';
-import { SitesPage } from '@galaxy/views';
-import { defaultStorybookConfig } from '../../.storybook/docs';
+import { SitesPage } from './SitesPage';
+import { defaultStorybookConfig } from '../../../.storybook/docs';
 export default {
   ...defaultStorybookConfig,
   component: SitesPage,

@@ -11,7 +11,6 @@ import {
 import {
   Section,
 } from '@galaxy/core'
-import { PageSites } from '../pages/Sites';
 import { 
   Aside, 
   useInternalLinkBase
@@ -43,8 +42,7 @@ export const RouteSite: FC = () => {
           <Aside items={siteMenus} name={`{name}`} />
           <Main>
               <Switch>
-                <Route path="/:path" component={PageSub} />
-                <Route path="/" exact component={PageSites} />
+                <Route path={`/${sites}/:path`} component={PageSub} />
               </Switch>
           </Main>
         </Section>
