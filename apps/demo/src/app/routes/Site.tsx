@@ -35,7 +35,7 @@ const PageSub: FC<RouteComponentProps> = (props) => {
   };
 export const RouteSite: FC = () => {
   const {
-    sites
+    sites,admin,
   } = useInternalLinkBase()
   const {siteId} = useParams<{
     siteId?: string;
@@ -61,10 +61,10 @@ export const RouteSite: FC = () => {
   const menus = useMemo(() => {
     return siteMenus.map(menu => ({
       ...menu,
-      href: `/${[sites, siteId, menu.href].join('/')}`,
+      href: `/${[admin, sites, siteId, menu.href].join('/')}`,
       items: menu.items ? menu.items.map(m => ({
         ...m,
-        href: `/${[sites, siteId, m.href].join('/')}`
+        href: `/${[admin, sites, siteId, m.href].join('/')}`
       })): undefined
     }))
   }, [siteId, siteMenus, sites])
@@ -73,12 +73,12 @@ export const RouteSite: FC = () => {
           <Aside items={menus} name={`{name}`} />
           <Main>
               <Switch>
-                <Redirect from={`/${sites}/:siteId/home`} to={`/${sites}/:siteId/`} />
-                <Route path={`/${sites}/:siteId/live`} component={PageLiveOverview} />
-                <Route path={`/${sites}/:siteId/live/domain`} component={PageSub} />
-                <Route path={`/${sites}/:siteId/live/analytics`} component={PageSub} />
-                <Route path={`/${sites}/:siteId/:path`} component={PageSub} />
-                <Route path={`/${sites}/:siteId/`} exact component={PageOverview} />
+                <Redirect from={`/${admin}/${sites}/:siteId/home`} to={`/${admin}/${sites}/:siteId/`} />
+                <Route path={`/${admin}/${sites}/:siteId/live`} component={PageLiveOverview} />
+                <Route path={`/${admin}/${sites}/:siteId/live/domain`} component={PageSub} />
+                <Route path={`/${admin}/${sites}/:siteId/live/analytics`} component={PageSub} />
+                <Route path={`/${admin}/${sites}/:siteId/:path`} component={PageSub} />
+                <Route path={`/${admin}/${sites}/:siteId/`} exact component={PageOverview} />
               </Switch>
           </Main>
         </Section>

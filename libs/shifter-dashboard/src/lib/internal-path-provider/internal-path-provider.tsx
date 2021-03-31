@@ -4,6 +4,7 @@ export type InternalLinkBase = {
   sites: string;
   teams: string;
   accounts: string;
+  admin: string;
 }
 
 export type InternalLinkBaseProviderProps = PropsWithChildren<Partial<InternalLinkBase>>
@@ -11,16 +12,17 @@ export type InternalLinkBaseProviderProps = PropsWithChildren<Partial<InternalLi
 const InternalLinkBaseContext = createContext<InternalLinkBase>({
   sites: 'sites',
   teams: 'teams',
-  accounts: 'accoubts'
+  accounts: 'accounts',
+  admin: 'admin',
 })
 
 export const useInternalLinkBase = () => useContext(InternalLinkBaseContext)
 
 export const InternalLinkBaseProvider: FC<InternalLinkBaseProviderProps> = ({
-  sites = 'sites', teams = 'teams', accounts = 'accounts', children
+  sites = 'sites', teams = 'teams', accounts = 'accounts', children, admin = 'admin'
 }) => {
   return (
-    <InternalLinkBaseContext.Provider value={{sites,teams,accounts}}>
+    <InternalLinkBaseContext.Provider value={{sites,teams,accounts,admin}}>
       {children}
     </InternalLinkBaseContext.Provider>
   )

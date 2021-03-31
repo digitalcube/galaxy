@@ -4,7 +4,6 @@ import {
   BrowserRouter,
   Route,
   Switch,
-  RouteComponentProps,
   Link as ReactRouterLink,
   Redirect,
 } from 'react-router-dom';
@@ -17,7 +16,7 @@ import { RouteSite } from './routes/Site';
 
 export function App() {
   const {
-    sites
+    sites, admin,
   } = useInternalLinkBase()
   return (
     <ShifterDashboardThemeProvider internalLinkTag={ReactRouterLink}>
@@ -25,19 +24,20 @@ export function App() {
         <Dashboard header={{
           items: [{
             title: 'Home',
-            href: '/'
+            href: `/${admin}`
           }, {
             title: 'Sites',
-            href: `/${sites}`
+            href: `/${admin}/${sites}`
           }, {
             title: 'Page2',
             href: '/page2'
           }]
         }}>
           <Switch>
-            <Redirect from={`/${sites}`} exact to="/" />
-            <Route path={`/${sites}/:siteId`} component={RouteSite} />
-            <Route path="/" exact component={PageSites} />
+            <Redirect from={`/`} exact to={`/${admin}`}  />
+            <Redirect from={`/${admin}/${sites}`} exact to={`/${admin}`}  />
+            <Route path={`/${admin}/${sites}/:siteId`} component={RouteSite} />
+            <Route path={`/${admin}`} exact component={PageSites} />
           </Switch>
         </Dashboard>
       </BrowserRouter>
