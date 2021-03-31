@@ -1,5 +1,4 @@
-import React, { FC } from 'react';
-import { GalaxyThemeProvider, Link, MenuItems, Panel } from '@galaxy/core';
+import React from 'react';
 import {
   BrowserRouter,
   Route,
@@ -7,16 +6,14 @@ import {
   Link as ReactRouterLink,
   Redirect,
 } from 'react-router-dom';
-import {
-  Dashboard, Aside, Main
-} from '@galaxy/views'
+import { Dashboard } from '@galaxy/views'
 import { ShifterDashboardThemeProvider, useInternalLinkBase } from '@galaxy/shifter-dashboard'
 import { PageSites } from './pages/sites/Sites'
 import { RouteSite } from './routes/Site';
 
 export function App() {
   const {
-    sites, admin,
+    sites, admin, teams,
   } = useInternalLinkBase()
   return (
     <ShifterDashboardThemeProvider internalLinkTag={ReactRouterLink}>
@@ -29,8 +26,11 @@ export function App() {
             title: 'Sites',
             href: `/${admin}/${sites}`
           }, {
-            title: 'Page2',
-            href: '/page2'
+            title: 'Teams',
+            href: `/${admin}/${teams}`
+          }, {
+            title: 'Guides',
+            href: `/${admin}/guides`
           }]
         }}>
           <Switch>
