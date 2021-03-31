@@ -8,7 +8,7 @@ import { Main } from '@galaxy/views';
 const sites = fakerSites as Site[]
 export const PageSites: FC = () => {
     return (
-        <Main>
+        <Main title="Sites">
         <Sites sites={sites} />
         </Main>
     )

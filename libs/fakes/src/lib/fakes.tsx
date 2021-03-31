@@ -147,7 +147,7 @@ export const guideSchema = {
 
 export const fakerGuides = fakerGenerator({
   schema: guideSchema,
-  min: 0,
+  min: 1,
   max: 10,
 });
 

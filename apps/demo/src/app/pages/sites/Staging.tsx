@@ -20,7 +20,7 @@ export const PageStaging: FC = () => {
         state,
       } = useDummyProps()
   return (
-    <Main>
+    <Main title="Staging">
       <Deploys artifacts={artifacts} state={state} />
     </Main>
   );

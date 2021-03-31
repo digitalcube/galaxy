@@ -22,8 +22,3 @@ export const Guides: FC<Guides> = ({ guides }) => {
 export type Guides = {
   guides?: PostProps[];
 };
-/*
-Guides.defaultProps = {
-  guides: fakerGuides
-}
-*/

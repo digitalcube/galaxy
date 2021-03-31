@@ -16,7 +16,7 @@ export const PageCDN: FC = () => {
         state,
       } = useDummyProps()
   return (
-    <Main>
+    <Main title="CDN">
         <MediaCdn state={state} />
     </Main>
   );

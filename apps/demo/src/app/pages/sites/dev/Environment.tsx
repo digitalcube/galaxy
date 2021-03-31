@@ -19,7 +19,7 @@ export const PageDevEnvironment: FC = () => {
         state,
       } = useDummyProps()
   return (
-    <Main>
+    <Main title="Environment Informations">
         <Section>
             <WpControls state={state} />
         </Section>

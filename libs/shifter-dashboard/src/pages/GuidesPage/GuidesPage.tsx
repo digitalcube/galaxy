@@ -1,12 +1,15 @@
 import React, { FC } from 'react';
 import { Header, Dashboard } from '@galaxy/views';
-import { Teams, Team } from '@galaxy/shifter-dashboard';
+import { Guides } from '../../views';
 
-export const GuidesPage: FC<GuidesPage> = ({ teams, header }) => {
-  return <Dashboard header={header} main={<Teams teams={teams} />} />;
+export const GuidesPage: FC<GuidesPage> = ({ guides, header }) => {
+  return (
+  <Dashboard header={header}>
+    <Guides guides={guides} />
+  </Dashboard>
+  );
 };
 
-export type GuidesPage = {
-  teams?: Team[];
+export type GuidesPage = Guides & {
   header?: Header;
 };

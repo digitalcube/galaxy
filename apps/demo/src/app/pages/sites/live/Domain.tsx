@@ -4,11 +4,10 @@ import { Main } from '@galaxy/views';
 import { AddDomain, Domain, Domains } from '@galaxy/shifter-dashboard';
 
 export const PageDomain: FC<PageDomainProps> = ({
-  title,
   domains,
 }) => {
   return (
-    <Main actions={<AddDomain />} title={`${title}`}>
+    <Main actions={<AddDomain />} title="Domain">
         <Card>Steps to connect your domain</Card>
         <Domains domains={domains} />
       </Main>
@@ -16,7 +15,5 @@ export const PageDomain: FC<PageDomainProps> = ({
 };
 
 export type PageDomainProps = {
-  title?: Panel;
-  actions?: ReactNode;
   domains: Domain[];
 };

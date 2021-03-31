@@ -10,6 +10,7 @@ import { Dashboard } from '@galaxy/views'
 import { ShifterDashboardThemeProvider, useInternalLinkBase } from '@galaxy/shifter-dashboard'
 import { PageSites } from './pages/sites/Sites'
 import { RouteSite } from './routes/Site';
+import { PageGuides } from './pages/Guides';
 
 export function App() {
   const {
@@ -37,6 +38,7 @@ export function App() {
             <Redirect from={`/`} exact to={`/${admin}`}  />
             <Redirect from={`/${admin}/${sites}`} exact to={`/${admin}`}  />
             <Route path={`/${admin}/${sites}/:siteId`} component={RouteSite} />
+            <Route path={`/${admin}/guides`} component={PageGuides} />
             <Route path={`/${admin}`} exact component={PageSites} />
           </Switch>
         </Dashboard>

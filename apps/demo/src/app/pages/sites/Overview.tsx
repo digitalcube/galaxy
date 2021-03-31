@@ -25,7 +25,7 @@ export const PageOverview: FC = () => {
         team,
       } = usePageOverview()
   return (
-      <Main>
+      <Main title="Overview">
         <SiteOverview
             publishedSiteURL={publishedSiteURL}
             img={img}

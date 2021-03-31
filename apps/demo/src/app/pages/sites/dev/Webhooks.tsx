@@ -19,7 +19,7 @@ export const PageWebhooks: FC = () => {
         webhooks
       } = useDummyProps()
   return (
-    <Main actions={<AddWebhook />}>
+    <Main actions={<AddWebhook />} title="Webhooks">
         <Webhooks webhooks={webhooks} />
         <hr />
         <p><i>[Example] If webhook does not registered, should show the following view</i></p>

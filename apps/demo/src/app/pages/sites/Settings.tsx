@@ -6,7 +6,7 @@ import {
 } from '@galaxy/shifter-dashboard';
 export const PageSiteSetting: FC = () => {
   return (
-    <Main>
+    <Main title="Settings">
         <SiteSettings />
     </Main>
   );
