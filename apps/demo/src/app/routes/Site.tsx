@@ -35,22 +35,60 @@ export const RouteSite: FC = () => {
     siteId?: string;
   }>()
   const siteMenus: MenuItems = [
-      { title: 'Home', href: '' },
-      { title: 'Live', href: 'live', items: [{
-          title: 'Overview',
-          href: 'live'
+      {
+        title: 'Home',
+        href: '' 
       },{
-        title: 'Domain',
-        href: 'live/domain'
-      },{
-        title: 'Analytics',
-        href: 'live/analytics'
-      }]
+        title: 'Live',
+        href: 'live',
+        items: [{
+            title: 'Overview',
+            href: 'live'
+        },{
+          title: 'Domain',
+          href: 'live/domains'
+        },{
+          title: 'Analytics',
+          href: 'live/analytics'
+        }]
       },
-      { title: 'Staging', href: 'staging' },
-      { title: 'Dev', href: 'dev' },
-      { title: 'Team', href: 'team' },
-      { title: 'Settings', href: 'settings' },
+      {
+        title: 'Staging',
+        href: 'staging' 
+      },{
+        title: 'Dev',
+        href: 'dev',
+        items: [{
+          title: 'Environment',
+          href: 'dev',
+        }, {
+          title: 'Media CDN',
+          href: 'dev/cdn'
+        }, {
+          title: 'Webhooks',
+          href: 'dev/webhooks'
+        }, {
+          title: 'Access Logs',
+          href: 'dev/access-logs'
+        }, {
+          title: 'Basic Auth',
+          href: 'dev/basic-auth'
+        }, {
+          title: 'Emergency Actions',
+          href: 'dev/emergency-actions'
+        }, {
+          title: 'Errors',
+          href: 'dev/errors'
+        }]
+      },
+      {
+        title: 'Team',
+        href: 'team'
+      },
+      {
+        title: 'Settings',
+        href: 'settings'
+      },
   ]
   const menus = useMemo(() => {
     return siteMenus.map(menu => ({
@@ -67,10 +105,18 @@ export const RouteSite: FC = () => {
           <Aside items={menus} name={`{name}`} />
               <Switch>
                 <Redirect from={`/${admin}/${sites}/:siteId/home`} to={`/${admin}/${sites}/:siteId/`} />
-                <Route path={`/${admin}/${sites}/:siteId/live/domain`} component={PageDomain} />
+                <Route path={`/${admin}/${sites}/:siteId/live/domains`} component={PageDomain} />
                 <Route path={`/${admin}/${sites}/:siteId/live/analytics`} component={PageSub} />
                 <Route path={`/${admin}/${sites}/:siteId/live`} component={PageLiveOverview} />
-                <Route path={`/${admin}/${sites}/:siteId/:path`} component={PageSub} />
+                <Route path={`/${admin}/${sites}/:siteId/dev/`} component={PageSub} />
+                <Route path={`/${admin}/${sites}/:siteId/dev/cdn`} component={PageSub} />
+                <Route path={`/${admin}/${sites}/:siteId/dev/webhooks`} component={PageSub} />
+                <Route path={`/${admin}/${sites}/:siteId/dev/access-logs`} component={PageSub} />
+                <Route path={`/${admin}/${sites}/:siteId/dev/basic-auth`} component={PageSub} />
+                <Route path={`/${admin}/${sites}/:siteId/dev/emergency-actions`} component={PageSub} />
+                <Route path={`/${admin}/${sites}/:siteId/dev/errors`} component={PageSub} />
+                <Route path={`/${admin}/${sites}/:siteId/team`} component={PageSub} />
+                <Route path={`/${admin}/${sites}/:siteId/settings`} component={PageSub} />
                 <Route path={`/${admin}/${sites}/:siteId/`} exact component={PageOverview} />
               </Switch>
         </Section>
