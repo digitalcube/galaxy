@@ -1,9 +1,9 @@
 import React, { FC } from 'react';
-import { Section, fakerPosts } from '@galaxy/core';
+import { Section } from '@galaxy/core';
 import { Post } from '@galaxy/shifter-dashboard';
+import { PostProps } from '../Post/Post';
 
 export const Posts: FC<Posts> = ({ posts }) => {
-  console.log(posts);
   if (!posts) return null;
   const allPosts = posts.map((site, i) => {
     return <Post key={i} {...site} />;
@@ -17,9 +17,11 @@ export const Posts: FC<Posts> = ({ posts }) => {
 };
 
 export type Posts = {
-  posts?: Post[];
+  posts?: PostProps[];
 };
 
+/*
 Posts.defaultProps = {
   posts: fakerPosts,
 };
+*/

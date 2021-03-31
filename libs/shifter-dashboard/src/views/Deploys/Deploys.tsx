@@ -6,8 +6,10 @@ import {
   css,
   fakerDomainState,
 } from '@galaxy/core';
-import { Artifacts, WpControls, AutoPublish } from '@galaxy/shifter-dashboard';
+import { Artifacts } from '../../views/Artifacts/Artifacts';
 import { deploysTheme } from './Deploys.galaxy';
+import { WpControls } from '../WpControls';
+import { AutoPublish } from '../AutoPublish';
 const { deploys } = deploysTheme;
 
 export const Deploys: FC<Deploys> = ({ variants, state, title }: Deploys) => {

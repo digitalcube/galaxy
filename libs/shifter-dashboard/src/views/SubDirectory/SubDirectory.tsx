@@ -5,11 +5,10 @@ import { Controls } from '@galaxy/views';
 export const SubDirectory: FC<SubDirectory> = ({
   title,
   description,
-  controls,
 }) => {
   return (
     <Card className="space-y-8" title={title} description={description}>
-      <Controls controls={controls} />
+      <Controls />
     </Card>
   );
 };
@@ -18,7 +17,6 @@ export type SubDirectory = {
   title?: string;
   description?: string;
   label?: string;
-  controls?: any;
 };
 
 SubDirectory.defaultProps = {

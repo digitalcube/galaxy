@@ -5,10 +5,8 @@ import { Dashboard, Main } from '@galaxy/views';
 import {
   Aside,
   Deploys,
-  SiteState,
-  Site,
   SiteOverview,
-  SiteProgress,
+  ProgressValue,
 } from '@galaxy/shifter-dashboard';
 
 /**
@@ -24,7 +22,6 @@ export const Home: FC<Home> = ({
   artifact,
   date,
   team,
-  variant,
 }) => {
   return (
     <Dashboard header={fakerHeader}>
@@ -32,28 +29,16 @@ export const Home: FC<Home> = ({
         <Aside items={items} name={`${name}`} />
         <Main>
           <SiteOverview
-            cloudfront={`${cloudfront}`}
-            state={`${state}`}
-            img={`${img}`}
-            artifact={`${artifact}`}
-            date={`${date}`}
-            items={items}
-            name={`${name}`}
+            publishedSiteURL={cloudfront}
+            img={img}
+            artifact={artifact}
+            date={date}
+            name={name}
             progress={progress}
             team={team}
-            variant={variant}
           />
           <Deploys
-            cloudfront={`${cloudfront}`}
             state={`${state}`}
-            img={`${img}`}
-            artifact={`${artifact}`}
-            date={`${date}`}
-            items={items}
-            name={`${name}`}
-            progress={progress}
-            team={team}
-            variant={variant}
           />
         </Main>
       </Section>
@@ -62,14 +47,13 @@ export const Home: FC<Home> = ({
 };
 
 export type Home = {
-  artifact: Site;
-  cloudfront: Site;
-  date: Site;
-  img: Site;
+  artifact: string;
+  cloudfront: string;
+  date: string;
+  img: string;
   items: MenuItems;
-  name: Site;
-  progress: SiteProgress;
-  state: SiteState;
-  team?: Site;
-  variant?: Site;
+  name: string;
+  progress: ProgressValue;
+  state: string;
+  team?: string;
 };

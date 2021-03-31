@@ -10,7 +10,7 @@ import {
 } from '@galaxy/shifter-dashboard';
 
 const usePageOverview = () => {
-    return fakerHome as any as PageOverviewProps
+    return fakerHome as any as PageLiveOverviewProps
 }
 
 export const PageLiveOverview: FC = () => {

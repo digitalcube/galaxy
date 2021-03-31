@@ -1,5 +1,5 @@
 import React, { FC } from 'react';
-import { Avatar, fakerTeamMembers, Section, css } from '@galaxy/core';
+import { Avatar, AvatarProps, Section, css } from '@galaxy/core';
 import { teamTeamMembersTheme } from './TeamMembers.galaxy';
 const { teamTeamMembers } = teamTeamMembersTheme;
 
@@ -8,24 +8,16 @@ export const TeamMembers: FC<TeamMembers> = ({
   classNames,
 }: TeamMembers) => {
   const teamTeamMembersCss = css({ variants: teamTeamMembers });
-
-  const allTeamMembers = members.map((member, i) => {
-    const { name, img } = member;
-    return <Avatar key={i} img={`${img}`} name={`${name}`} />;
-  });
-
   return (
     <Section className={`${teamTeamMembersCss} ${classNames}`}>
-      {allTeamMembers}
+      {members.map((member, i) => {
+        return <Avatar key={i} {...member} />;
+      })}
     </Section>
   );
 };
 
 export type TeamMembers = {
-  members?: any;
+  members: AvatarProps[];
   classNames?: string;
-};
-
-TeamMembers.defaultProps = {
-  members: fakerTeamMembers,
 };

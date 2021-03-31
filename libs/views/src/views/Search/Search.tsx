@@ -6,9 +6,7 @@ const { input } = inputTheme;
 export const Search: FC<SearchProps> = ({
   variants,
   variant,
-  as,
 }: SearchProps) => {
-  const Tag = `${as}`;
   const inputCss = css({ variants: variants, variant: variant });
   return (
     <div className="transition relative">
@@ -26,7 +24,7 @@ export const Search: FC<SearchProps> = ({
           />
         </svg>
       </span>
-      <Tag
+      <input
         type="search"
         name="q"
         className={`${inputCss}`}
@@ -39,12 +37,12 @@ export const Search: FC<SearchProps> = ({
 
 export type SearchProps = {
   variants?: typeof input;
-  as?: 'input';
+  //as?: 'input';
   variant?: 'primary' | 'danger' | 'white' | 'success' | 'ghost';
 };
 
 Search.defaultProps = {
   variants: input,
-  as: 'input',
+  //as: 'input',
   variant: 'primary',
 };

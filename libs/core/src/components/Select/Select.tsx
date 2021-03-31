@@ -3,9 +3,9 @@ import { Listbox, Transition } from '@headlessui/react';
 import { selectTheme } from './Select.galaxy';
 const { select } = selectTheme;
 
-export const Select: FC<Select> = ({ variant, label, items }: Select) => {
-  const [selectedPerson, setSelectedPerson] = useState(items[0]);
-
+export const Select: FC<Select> = ({ label, items }: Select) => {
+  const [selectedPerson, setSelectedPerson] = useState(items ? items[0] : '');
+  if (!items) return null;
   return (
     <div className="flex items-center justify-center">
       <div className="w-full max-w-xs mx-auto">
@@ -109,7 +109,7 @@ export type Select = {
   variant?: string;
   variants?: typeof select;
   label?: string;
-  items?: any;
+  items?: string[];
 };
 
 Select.defaultProps = {

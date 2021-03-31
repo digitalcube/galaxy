@@ -1,18 +1,12 @@
 import React, { FC } from 'react';
 import { Header, Dashboard } from '@galaxy/views';
-import { fakerHeader, fakerTeams } from '@galaxy/core';
-import { Teams } from '@galaxy/shifter-dashboard';
+import { Team, Teams } from '@galaxy/shifter-dashboard';
 
 export const TeamsPage: FC<TeamsPage> = ({ teams, header }) => {
   return <Dashboard header={header} main={<Teams teams={teams} />} />;
 };
 
 export type TeamsPage = {
-  teams?: Teams[];
+  teams?: Team[];
   header?: Header;
-};
-
-TeamsPage.defaultProps = {
-  header: fakerHeader,
-  teams: fakerTeams,
 };

@@ -41,7 +41,7 @@ export const Site: FC<Site> = ({
           </Section>
           <Section className="flex space-x-4 items-center" as="div">
             <SiteUrl url={`${url}`} />
-            {teamMembers ? <SiteTeamMembers members={teamMembers} />: null}
+            {teamMembers ? <SiteTeamMembers {...teamMembers} />: null}
             <SiteTeam team={`${team}`} />
           </Section>
         </Section>

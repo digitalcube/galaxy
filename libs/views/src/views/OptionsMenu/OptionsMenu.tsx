@@ -1,11 +1,8 @@
 import React, { FC } from 'react';
-import { ButtonMenu, theme, css, buttonTheme } from '@galaxy/core';
+import { ButtonMenu, css, buttonTheme } from '@galaxy/core';
 import { DotsHorizontal } from 'heroicons-react';
 
-const { button } = theme;
-
 export const OptionsMenu: FC<OptionsMenu> = ({
-  variant,
   className,
 }: OptionsMenu) => {
   const buttonMenuVariants = css({
@@ -21,11 +18,5 @@ export const OptionsMenu: FC<OptionsMenu> = ({
 };
 
 export type OptionsMenu = {
-  variant?: typeof button.variants;
-  variants?: typeof button;
   className?: string;
-};
-
-OptionsMenu.defaultProps = {
-  variant: 'ghost',
 };

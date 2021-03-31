@@ -1,20 +1,21 @@
 import React, { FC } from 'react';
-import { Section, fakerHeader } from '@galaxy/core';
+import { Section, fakerHeader, MenuItems } from '@galaxy/core';
 import { Dashboard, Aside, Main } from '@galaxy/views';
 import { SiteOverview, Site } from '@galaxy/shifter-dashboard';
+import { ProgressValue } from '../../views';
 
 /**
  * @deprecated
  */
 export const Live: FC<Live> = ({
   name,
-  items,
+  publishedSiteURL,
   artifact,
-  cloudfront,
-  variant,
   img,
   date,
   team,
+  items,
+  progress,
 }) => {
   return (
     <Dashboard header={fakerHeader}>
@@ -22,10 +23,12 @@ export const Live: FC<Live> = ({
         <Aside items={items} name={`${name}`} />
         <Main>
           <SiteOverview
+            name={name}
             artifact={artifact}
-            publishedSiteURL={cloudfront}
+            publishedSiteURL={publishedSiteURL}
             img={img}
             date={date}
+            progress={progress}
             team={team}
           />
         </Main>
@@ -35,5 +38,12 @@ export const Live: FC<Live> = ({
 };
 
 export type Live = {
-  name?: Site;
+  name: string;
+  img?: string;
+  team?: string;
+  artifact: string;
+  publishedSiteURL: string;
+  progress: ProgressValue;
+  date: string;
+  items: MenuItems;
 };

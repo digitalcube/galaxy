@@ -6,7 +6,7 @@ import { toggleTheme } from './Toggle.galaxy';
 const { toggle } = toggleTheme;
 
 export const Toggle: FC<Toggle> = ({ state, variants }: Toggle) => {
-  const [enabled, setEnabled] = useState(state);
+  const [enabled, setEnabled] = useState(state || false);
   const size = 12;
 
   const toggleSwitchScale = `${

@@ -1,7 +1,7 @@
 import React, { FC, ReactNode } from 'react';
 import { Panel, Card } from '@galaxy/core';
 import { Main } from '@galaxy/views';
-import { AddDomain, Site, Domains } from '@galaxy/shifter-dashboard';
+import { AddDomain, Domain, Domains } from '@galaxy/shifter-dashboard';
 
 export const PageDomain: FC<PageDomainProps> = ({
   title,
@@ -18,5 +18,5 @@ export const PageDomain: FC<PageDomainProps> = ({
 export type PageDomainProps = {
   title?: Panel;
   actions?: ReactNode;
-  domains: Domains;
+  domains: Domain[];
 };

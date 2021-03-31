@@ -1,34 +1,29 @@
 import React, { FC } from 'react';
-import { Section, fakerGuides } from '@galaxy/core';
+import { Section } from '@galaxy/core';
 import { Post } from '@galaxy/shifter-dashboard';
+import { PostProps } from '../Post';
 
 export const Guides: FC<Guides> = ({ guides }) => {
-  console.log(guides);
   if (!guides) return null;
-  const allGuides = guides.map((guide, i) => {
-    const { title, url, img, description } = guide;
+  return (
+    <Section className="space-y-10 px-8">
+      <Section className="space-y-4">{guides.map((guide, i) => {
     return (
       <Post
         key={i}
-        description={`${description}`}
-        title={`${title}`}
-        url={`${url}`}
-        img={img}
+        {...guide}
       />
     );
-  });
-
-  return (
-    <Section className="space-y-10 px-8">
-      <Section className="space-y-4">{allGuides}</Section>
+  })}</Section>
     </Section>
   );
 };
 
 export type Guides = {
-  guides?: Post[];
+  guides?: PostProps[];
 };
-
+/*
 Guides.defaultProps = {
   guides: fakerGuides
 }
+*/

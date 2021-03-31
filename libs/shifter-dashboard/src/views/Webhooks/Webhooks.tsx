@@ -45,13 +45,13 @@ export const Webhooks: FC<Webhooks> = ({ webhooks, title, description }) => {
 };
 
 export type Webhooks = {
-  webhooks?: any;
+  webhooks: any[];
   title?: string;
   description?: string;
 };
 
 Webhooks.defaultProps = {
-  webhooks: {},
+  webhooks: [],
   title: "You haven't created any webhooks for this site yet",
   description: 'Click the Add a new webhook button to get started',
 };

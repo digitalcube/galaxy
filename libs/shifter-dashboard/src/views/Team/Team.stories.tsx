@@ -10,5 +10,5 @@ export default {
 };
 
 export const Example = () => {
-  return <Team {...fakerTeam} />;
+  return <Team {...fakerTeam as any} />;
 };

@@ -3,15 +3,15 @@ import { Image, css, ButtonMenu } from '@galaxy/core';
 import { avatarTheme } from './Avatar.galaxy';
 const { avatar } = avatarTheme;
 
-export const Avatar: FC<Avatar> = ({
+export const Avatar: FC<AvatarProps> = ({
   img,
-  size,
+  size = 8,
   name,
   imgDefault,
   variant,
-  variants,
+  variants = avatar,
   menu,
-}: Avatar) => {
+}) => {
   const classNames = css({
     variant: `${variant}`,
     variants: variants,
@@ -42,7 +42,7 @@ export const Avatar: FC<Avatar> = ({
   );
 };
 
-export type Avatar = {
+export type AvatarProps = {
   img?: string;
   imgDefault?: string;
   name?: string;
@@ -50,9 +50,4 @@ export type Avatar = {
   variants?: typeof avatar;
   size?: number;
   menu?: boolean | ButtonMenu;
-};
-
-Avatar.defaultProps = {
-  variants: avatar,
-  size: 8,
 };

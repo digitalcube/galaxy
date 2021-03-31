@@ -1,4 +1,4 @@
-import React, { FC } from 'react';
+import React, { FC, ReactNode } from 'react';
 import { Section } from '@galaxy/core';
 
 export const Controls: FC<Controls> = ({ children }) => {
@@ -12,5 +12,5 @@ export const Controls: FC<Controls> = ({ children }) => {
 };
 
 export type Controls = {
-  children?: any;
+  children?: ReactNode;
 };

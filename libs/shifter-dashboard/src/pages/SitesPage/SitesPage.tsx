@@ -1,18 +1,12 @@
 import React, { FC } from 'react';
 import { Header, Dashboard } from '@galaxy/views';
-import { Sites } from '@galaxy/shifter-dashboard';
-import { fakerHeader, fakerSites } from '@galaxy/core';
+import { Sites, Site } from '@galaxy/shifter-dashboard';
 
 export const SitesPage: FC<SitesPage> = ({ sites, header }) => {
   return <Dashboard header={header} main={<Sites sites={sites} />} />;
 };
 
 export type SitesPage = {
-  sites?: Sites[];
+  sites: Site[];
   header?: Header;
-};
-
-SitesPage.defaultProps = {
-  header: fakerHeader,
-  sites: fakerSites,
 };

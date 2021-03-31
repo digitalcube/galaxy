@@ -1,5 +1,5 @@
 import React, { FC } from 'react';
-import { Section, Menu, Image, MenuItem, Avatar } from '@galaxy/core';
+import { Section, Menu, Image, MenuItem, Avatar, AvatarProps } from '@galaxy/core';
 import { Search } from '@galaxy/views';
 
 export const Header: FC<Header> = ({ items, avatar }) => {
@@ -27,5 +27,5 @@ export const Header: FC<Header> = ({ items, avatar }) => {
 
 export type Header = {
   items?: MenuItem[];
-  avatar?: Avatar;
+  avatar?: AvatarProps;
 };

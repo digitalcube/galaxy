@@ -1,29 +1,21 @@
 import React, { FC } from 'react';
-import { Section as Section, fakerTeams } from '@galaxy/core';
+import { Section } from '@galaxy/core';
 import { Team, TeamsControls } from '@galaxy/shifter-dashboard';
 
 export const Teams: FC<Teams> = ({ teams }) => {
-  console.log(teams);
   if (!teams) return null;
-  const allTeams = teams.map((site, i) => {
-    const { name, url, state, img, team, progress } = site;
-    return (
-      <Team
-        key={i}
-        name={`${name}`}
-        url={`${url}`}
-        state={`${state}`}
-        img={img}
-        team={team}
-        progress={progress}
-      />
-    );
-  });
-
   return (
     <Section className="space-y-10 px-8">
       <TeamsControls />
-      <Section className="space-y-4">{allTeams}</Section>
+      <Section className="space-y-4">
+        {teams.map((team, i) => (
+            <Team
+              key={i}
+              {...team}
+            />
+          )
+        )}
+      </Section>
     </Section>
   );
 };
@@ -31,7 +23,3 @@ export const Teams: FC<Teams> = ({ teams }) => {
 export type Teams = {
   teams?: Team[];
 };
-
-Teams.defaultProps = {
-  teams: fakerTeams
-}

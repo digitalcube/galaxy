@@ -1,45 +1,26 @@
 import React, { FC } from 'react';
-import { Section, fakerHeader } from '@galaxy/core';
+import { Section, fakerHeader, MenuItems } from '@galaxy/core';
 
 import {
-  SiteState,
-  Site,
-  SiteProgress,
   Dashboard,
   Aside,
   Main,
 } from '@galaxy/views';
 
-import { Deploys } from '@galaxy/shifter-dashboard';
+import { Deploys } from '../../views/Deploys/Deploys';
 
 export const Staging: FC<Staging> = ({
   items,
   name,
-  cloudfront,
-  img,
   state,
-  progress,
-  artifact,
-  date,
-  team,
-  variant,
 }) => {
   return (
     <Dashboard header={fakerHeader}>
       <Section className="md:flex min-h-screen border-t border-shifter-gray-200">
-        <Aside items={items} name={`${name}`} />
+        <Aside items={items} name={name} />
         <Main>
           <Deploys
-            cloudfront={`${cloudfront}`}
-            state={`${state}`}
-            img={`${img}`}
-            artifact={`${artifact}`}
-            date={`${date}`}
-            items={items}
-            name={`${name}`}
-            progress={progress}
-            team={team}
-            variant={variant}
+            state={state}
           />
         </Main>
       </Section>
@@ -48,14 +29,7 @@ export const Staging: FC<Staging> = ({
 };
 
 export type Staging = {
-  artifact: Site;
-  cloudfront: Site;
-  date: Site;
-  img: Site;
-  items: Site;
-  name: Site;
-  progress: SiteProgress;
-  state: SiteState;
-  team?: Site;
-  variant?: Site;
+  items: MenuItems;
+  name: string;
+  state: string;
 };
