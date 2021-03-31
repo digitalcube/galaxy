@@ -27,7 +27,7 @@ export type Container = {
   title?: string;
   wpVersion: WpVersion;
   phpVersion: PhpVersion;
-  variants: typeof container;
+  variants?: typeof container;
 };
 
 Container.defaultProps = {

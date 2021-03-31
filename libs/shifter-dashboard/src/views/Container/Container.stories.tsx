@@ -8,5 +8,12 @@ export default {
 };
 
 export const Example = () => {
-  return <Container />;
+  return <Container {...{
+    wpVersion: {
+      version: '5.x',
+    },
+    phpVersion: {
+      version: '8.x',
+    }    
+  }}/>;
 };
