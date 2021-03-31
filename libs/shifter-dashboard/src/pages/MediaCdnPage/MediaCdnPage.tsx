@@ -5,6 +5,9 @@ import {
   MediaCdn,
 } from '@galaxy/shifter-dashboard';
 
+/**
+ * @deprecated
+ */
 export const MediaCdnPage: FC<MediaCdnPage> = ({ items, name, mediaCdn }) => {
   return (
     <Dashboard header={fakerHeader}>

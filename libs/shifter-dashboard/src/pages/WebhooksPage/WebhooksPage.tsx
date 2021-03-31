@@ -7,6 +7,9 @@ import {
   Webhooks,
 } from '../../views';
 
+/**
+ * @deprecated
+ */
 export const WebhooksPage: FC<WebhooksPage> = ({ items, name }) => {
   return (
     <Dashboard header={fakerHeader}>

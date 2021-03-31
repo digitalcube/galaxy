@@ -1,6 +1,6 @@
 import React from 'react';
 import { WebhooksPage } from './WebhooksPage';
-import { fakerMediaCdn } from '@galaxy/core';
+import { fakerMediaCdn, fakerSiteWebhooks } from '@galaxy/faker';
 import { defaultStorybookConfig } from '../../../.storybook/docs';
 export default {
   ...defaultStorybookConfig,
@@ -9,5 +9,5 @@ export default {
 };
 
 export const Webhooks = () => {
-  return <WebhooksPage {...fakerMediaCdn} />;
+  return <WebhooksPage {...fakerSiteWebhooks as any} />;
 };
