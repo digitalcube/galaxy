@@ -1,4 +1,4 @@
-import React, { ReactNode } from 'react';
+import React, { FC, PropsWithChildren, ReactNode } from 'react';
 import { css } from '@galaxy/core';
 import { Tag } from '@galaxy/core';
 import { headingTheme } from './Heading.galaxy';
@@ -6,15 +6,16 @@ import './Heading.css';
 
 const { heading } = headingTheme;
 
-export const Heading = ({
+export const Heading:FC<HeadingProps> = ({
   text,
+  children,
   as,
   className,
   fontSize,
   variant,
   fontWeight,
   variants,
-}: Heading) => {
+}) => {
   if (!text) return null;
   const classNames = css({
     variant: `${variant}`,
@@ -28,12 +29,14 @@ export const Heading = ({
     <Tag
       as={as}
       className={`${size} ${weight} ${classNames} ${className}`}
-      children={text}
-    />
+    >
+      {text}
+      {children}
+    </Tag>
   );
 };
 
-export type Heading = {
+export type HeadingProps = PropsWithChildren<{
   text?: string | ReactNode;
   as?:
     | 'h1'
@@ -52,12 +55,11 @@ export type Heading = {
   className?: string;
   variant?: string;
   variants?: typeof heading;
-};
+}>;
 
 Heading.defaultProps = {
   fontSize: 4,
   fontWeight: 'regular',
   as: 'div',
   variants: heading,
-  text: 'Hello World.',
 };

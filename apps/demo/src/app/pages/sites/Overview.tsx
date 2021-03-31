@@ -1,6 +1,6 @@
 import React, { FC } from 'react';
 import { MenuItems } from '@galaxy/core';
-import {fakerHome} from '@galaxy/faker'
+import {fakerArtifacts, fakerHome} from '@galaxy/faker'
 import { Main } from '@galaxy/views';
 
 import {
@@ -37,6 +37,7 @@ export const PageOverview: FC = () => {
           />
           <Deploys
             state={state}
+            artifacts={fakerArtifacts}
           />
     </Main>
   );

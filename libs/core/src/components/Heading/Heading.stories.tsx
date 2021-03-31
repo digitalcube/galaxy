@@ -8,6 +8,16 @@ export default {
   title: `Galaxy/Components/Heading`,
 };
 
-export const Example = () => {
+export const Default = () => {
   return <Heading />;
+};
+
+export const WithText = () => {
+  return <Heading text="Hello world" />;
+};
+export const WithChildren = () => {
+  return <Heading>Hello world</Heading>;
+};
+export const WithTextAndChildren = () => {
+  return <Heading text="Hello world" >Goodbye</Heading>;
 };

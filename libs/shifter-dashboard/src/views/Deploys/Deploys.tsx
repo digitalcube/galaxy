@@ -1,18 +1,17 @@
 import React, { FC } from 'react';
 import {
-  fakerArtifacts,
   Heading,
   Section,
   css,
-  fakerDomainState,
 } from '@galaxy/core';
 import { Artifacts } from '../../views/Artifacts/Artifacts';
 import { deploysTheme } from './Deploys.galaxy';
 import { WpControls } from '../WpControls';
 import { AutoPublish } from '../AutoPublish';
+import { ArtifactProps } from '../Artifact';
 const { deploys } = deploysTheme;
 
-export const Deploys: FC<Deploys> = ({ variants, state, title }: Deploys) => {
+export const Deploys: FC<Deploys> = ({ variants, state, title = 'Deploys', artifacts }) => {
   const deploysCss = css({ variants: variants });
 
   return (
@@ -22,7 +21,7 @@ export const Deploys: FC<Deploys> = ({ variants, state, title }: Deploys) => {
         <Heading fontSize={5} fontWeight="strong" text={title} />
         <AutoPublish />
       </Section>
-      <Artifacts artifacts={fakerArtifacts} />
+      <Artifacts artifacts={artifacts} />
     </Section>
   );
 };
@@ -31,10 +30,5 @@ export type Deploys = {
   variants?: typeof deploys;
   state: string;
   title?: string;
-};
-
-Deploys.defaultProps = {
-  variants: deploys,
-  title: 'Deploys',
-  state: fakerDomainState,
+  artifacts?: ArtifactProps[];
 };

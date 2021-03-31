@@ -17,6 +17,7 @@ import {
 import { PageOverview } from '../pages/sites/Overview'
 import { PageLiveOverview } from '../pages/sites/live/Overview'
 import { PageDomain } from '../pages/sites/live/Domain'
+import { PageStaging } from '../pages/sites/Staging';
 
 const PageSub: FC<RouteComponentProps> = (props) => {
     return (
@@ -108,6 +109,7 @@ export const RouteSite: FC = () => {
                 <Route path={`/${admin}/${sites}/:siteId/live/domains`} component={PageDomain} />
                 <Route path={`/${admin}/${sites}/:siteId/live/analytics`} component={PageSub} />
                 <Route path={`/${admin}/${sites}/:siteId/live`} component={PageLiveOverview} />
+                <Route path={`/${admin}/${sites}/:siteId/staging`} component={PageStaging} />
                 <Route path={`/${admin}/${sites}/:siteId/dev/`} component={PageSub} />
                 <Route path={`/${admin}/${sites}/:siteId/dev/cdn`} component={PageSub} />
                 <Route path={`/${admin}/${sites}/:siteId/dev/webhooks`} component={PageSub} />
