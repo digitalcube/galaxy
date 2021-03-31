@@ -3,6 +3,9 @@ import { Section, fakerHeader } from '@galaxy/core';
 import { Dashboard, Aside, Main } from '@galaxy/views';
 import { SiteOverview, Site } from '@galaxy/shifter-dashboard';
 
+/**
+ * @deprecated
+ */
 export const Live: FC<Live> = ({
   name,
   items,
@@ -20,8 +23,7 @@ export const Live: FC<Live> = ({
         <Main>
           <SiteOverview
             artifact={artifact}
-            cloudfront={cloudfront}
-            variant={variant}
+            publishedSiteURL={cloudfront}
             img={img}
             date={date}
             team={team}

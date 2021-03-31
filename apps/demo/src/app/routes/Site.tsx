@@ -8,21 +8,15 @@ import {
   useParams,
 } from 'react-router-dom';
 import {
-  Main
-} from '@galaxy/views'
-import {
   Section,
 } from '@galaxy/core'
 import { 
   Aside, 
   useInternalLinkBase
 } from '@galaxy/shifter-dashboard';
-import {
-  PageOverview
-} from '../pages/sites/Overview'
-import {
-  PageLiveOverview
-} from '../pages/sites/live/Overview'
+import { PageOverview } from '../pages/sites/Overview'
+import { PageLiveOverview } from '../pages/sites/live/Overview'
+import { PageDomain } from '../pages/sites/live/Domain'
 
 const PageSub: FC<RouteComponentProps> = (props) => {
     return (
@@ -71,16 +65,14 @@ export const RouteSite: FC = () => {
     return (
         <Section className="md:flex min-h-screen border-t border-shifter-gray-200">
           <Aside items={menus} name={`{name}`} />
-          <Main>
               <Switch>
                 <Redirect from={`/${admin}/${sites}/:siteId/home`} to={`/${admin}/${sites}/:siteId/`} />
-                <Route path={`/${admin}/${sites}/:siteId/live`} component={PageLiveOverview} />
-                <Route path={`/${admin}/${sites}/:siteId/live/domain`} component={PageSub} />
+                <Route path={`/${admin}/${sites}/:siteId/live/domain`} component={PageDomain} />
                 <Route path={`/${admin}/${sites}/:siteId/live/analytics`} component={PageSub} />
+                <Route path={`/${admin}/${sites}/:siteId/live`} component={PageLiveOverview} />
                 <Route path={`/${admin}/${sites}/:siteId/:path`} component={PageSub} />
                 <Route path={`/${admin}/${sites}/:siteId/`} exact component={PageOverview} />
               </Switch>
-          </Main>
         </Section>
     )
 }

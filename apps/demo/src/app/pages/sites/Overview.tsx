@@ -1,6 +1,7 @@
 import React, { FC } from 'react';
 import { MenuItems } from '@galaxy/core';
 import {fakerHome} from '@galaxy/faker'
+import { Main } from '@galaxy/views';
 
 import {
   Deploys,
@@ -24,7 +25,7 @@ export const PageOverview: FC = () => {
         team,
       } = usePageOverview()
   return (
-      <>
+      <Main>
         <SiteOverview
             publishedSiteURL={publishedSiteURL}
             img={img}
@@ -37,7 +38,7 @@ export const PageOverview: FC = () => {
           <Deploys
             state={state}
           />
-    </>
+    </Main>
   );
 };
 

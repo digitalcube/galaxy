@@ -1,8 +1,11 @@
 import React, { FC, ReactNode } from 'react';
 import { Section, Panel, fakerHeader, Card } from '@galaxy/core';
 import { Aside, Dashboard, Main } from '@galaxy/views';
-import { AddDomain, Site, Domains } from '@galaxy/shifter-dashboard';
+import { AddDomain, Site, Domains, Domain } from '@galaxy/shifter-dashboard';
 
+/**
+ * @deprecated
+ */
 export const DomainsPage: FC<DomainsPage> = ({
   name,
   items,
@@ -28,7 +31,7 @@ export type DomainsPage = {
   title?: Panel;
   actions?: ReactNode;
   name: Site;
-  domains: Domains;
+  domains: Domain[];
 };
 
 DomainsPage.defaultProps = {

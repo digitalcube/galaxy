@@ -2,7 +2,7 @@ import React, { FC } from 'react';
 import { Section } from '@galaxy/core';
 import { Domain } from '@galaxy/shifter-dashboard';
 
-export const Domains: FC<Domains> = ({ domains }) => (
+export const Domains: FC<DomainsProps> = ({ domains }) => (
   <Section className="space-y-10">
     <Section className="space-y-4">
       {domains
@@ -12,7 +12,7 @@ export const Domains: FC<Domains> = ({ domains }) => (
   </Section>
 );
 
-export type Domains = {
+export type DomainsProps = {
   domains?: Domain[];
   title?: string;
 };
