@@ -1,11 +1,16 @@
-import React, { FC, ReactNode } from 'react';
-import { Panel, Card } from '@galaxy/core';
+import React, { FC } from 'react';
+import { Card } from '@galaxy/core';
 import { Main } from '@galaxy/views';
 import { AddDomain, Domain, Domains } from '@galaxy/shifter-dashboard';
+import { fakerSiteDomains } from '@galaxy/faker';
 
-export const PageDomain: FC<PageDomainProps> = ({
-  domains,
-}) => {
+const useDummyProps = (): PageDomainProps => {
+  return {
+    domains: fakerSiteDomains
+  }
+}
+export const PageDomain: FC = () => {
+  const {domains} = useDummyProps()
   return (
     <Main actions={<AddDomain />} title="Domain">
         <Card>Steps to connect your domain</Card>
