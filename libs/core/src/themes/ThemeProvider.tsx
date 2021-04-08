@@ -39,13 +39,12 @@ export const ThemeContext = React.createContext<{
 }>({
   theme: 'light',
 });
-
-export const GalaxyThemeProvider: FC<PropsWithChildren<{
+export type GalaxyThemeProviderProps = PropsWithChildren<{
   internalLinkTag?: LinkTagType
   initialTheme?: 'dark' | 'light'
-}>> = ({ initialTheme, children, internalLinkTag = 'a' }) => {
+}>
+export const GalaxyThemeProvider: FC<GalaxyThemeProviderProps> = ({ initialTheme, children, internalLinkTag = 'a' }) => {
   const [theme, setTheme] = React.useState(getInitialTheme);
-
 
   if (initialTheme) {
     rawSetTheme(initialTheme);

@@ -39,6 +39,7 @@ export type Control = {
   title?: string;
   description?: string;
   state?: boolean;
+  className?: string;
 };
 
 Control.defaultProps = {

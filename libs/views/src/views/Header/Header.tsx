@@ -1,5 +1,5 @@
 import React, { FC } from 'react';
-import { Section, Menu, Image, MenuItem, Avatar } from '@galaxy/core';
+import { Section, Menu, Image, MenuItem, Avatar, AvatarProps, Link } from '@galaxy/core';
 import { Search } from '@galaxy/views';
 
 export const Header: FC<Header> = ({ items, avatar }) => {
@@ -8,12 +8,12 @@ export const Header: FC<Header> = ({ items, avatar }) => {
       as="header"
       className="py-6 flex flex-row items-center space-x-6 px-8 relative z-10"
     >
-      <a className="align-center" href="/">
+      <Link className="align-center" href="/">
         <Image
           className="h-8 w-auto"
           img="https://cdn.getshifter.co/caa65008efb706a8bfc6f7e4045d6a018420c3df/uploads/2020/11/shifter-logomark-e1606786281592.png"
         />
-      </a>
+      </Link>
       <div className="flex-grow">
         <Search variant="ghost" />
       </div>
@@ -27,5 +27,5 @@ export const Header: FC<Header> = ({ items, avatar }) => {
 
 export type Header = {
   items?: MenuItem[];
-  avatar?: Avatar;
+  avatar?: AvatarProps;
 };

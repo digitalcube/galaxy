@@ -4,34 +4,46 @@ import { Button } from '@galaxy/core';
 export type MenuItem = {
   title: string;
   href?: string;
+  items?: MenuItems;
 };
-export type Menu = {
-  items?: MenuItem[];
+export type MenuItems = MenuItem[]
+export type MenuProps = {
+  items?: MenuItems;
   alignment?: 'vertical' | 'horizontal';
+  level?: number;
 };
+export type MenuItemsProp = MenuProps
 
-export const Items = ({ items }: Menu) => {
+export const Items: FC<MenuItemsProp> = ({ items,alignment, level = 0 }) => {
   if (!items) return null;
   return (
     <>
       {items.map((item, i) => {
-        const { title, href } = item;
-        return <Button key={i} variant="ghost" href={href} label={title} />;
+        const { title, href, items } = item;
+        if (items) {
+          return (
+            <>
+              <Button key={i} variant="ghost" label={title} href={href} />
+              <Menu items={items} alignment={alignment} level={level + 3} />
+            </>
+          )
+        }
+        return <Button key={i} variant="ghost" href={href} label={title} className={`ml-${level}`}/>;
       })}
     </>
   );
 };
 
-export const Menu: FC<Menu> = ({ items, alignment }: Menu) => {
+export const Menu: FC<MenuProps> = (props) => {
   return (
     <nav
       className={`flex ${
-        alignment === 'vertical'
+        props.alignment === 'vertical'
           ? 'flex-col items-start'
           : 'flex-row items-center'
       }`}
     >
-      <Items items={items} />
+      <Items {...props} />
     </nav>
   );
 };

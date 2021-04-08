@@ -3,7 +3,7 @@ export type ProgressClassTypes = {
 };
 
 export const progressClass = ({ progress }: ProgressClassTypes) => {
-  if (!progress || progress === 0) return '';
+  if (!progress) return '';
   return `w-${progress}/5`;
 };
 

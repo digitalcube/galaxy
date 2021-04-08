@@ -1,13 +1,11 @@
-import React, { FC, ReactNode } from 'react';
+import { createElement, FC, ReactNode } from 'react';
 import { LinkTagType } from '../../lib/link-tag-provider/link-tag-provider';
 
 export const Tag: FC<Tag> = ({ as, children, className }: Tag) => {
-  const As = `${as}`;
-  return (
-    <As className={className}>
-      {children}
-    </As>
-  );
+  return createElement(as as any, {
+    className,
+    children
+  })
 };
 
 export type Tag = {

@@ -1,68 +1,49 @@
-import React, { FC } from 'react';
-import { GalaxyThemeProvider, Link, Panel } from '@galaxy/core';
-import GitHubRibbon from 'react-github-ribbons';
+import React from 'react';
 import {
   BrowserRouter,
   Route,
   Switch,
-  RouteComponentProps,
   Link as ReactRouterLink,
+  Redirect,
 } from 'react-router-dom';
-import {
-  Dashboard
-} from '@galaxy/views'
-
-const PageIndex: FC = () => (
-  <div>
-      <h1>Index</h1>
-    </div>
-);
-
-const PageSub: FC<RouteComponentProps> = (props) => {
-  return (
-      <div>
-        <pre>
-          <code>{JSON.stringify(props, null, 2)}</code>
-        </pre>
-      </div>
-  );
-};
+import { Dashboard } from '@galaxy/views'
+import { ShifterDashboardThemeProvider, useInternalLinkBase } from '@galaxy/shifter-dashboard'
+import { PageSites } from './pages/sites/Sites'
+import { RouteSite } from './routes/Site';
+import { PageGuides } from './pages/Guides';
 
 export function App() {
+  const {
+    sites, admin, teams,
+  } = useInternalLinkBase()
   return (
-    <GalaxyThemeProvider internalLinkTag={ReactRouterLink}>
+    <ShifterDashboardThemeProvider internalLinkTag={ReactRouterLink}>
       <BrowserRouter>
         <Dashboard header={{
           items: [{
             title: 'Home',
-            href: '/'
+            href: `/${admin}`
           }, {
-            title: 'Page1',
-            href: '/page1'
+            title: 'Sites',
+            href: `/${admin}/${sites}`
           }, {
-            title: 'Page2',
-            href: '/page2'
+            title: 'Teams',
+            href: `/${admin}/${teams}`
+          }, {
+            title: 'Guides',
+            href: `/${admin}/guides`
           }]
         }}>
-            <Switch>
-              <Route path="/:path" component={PageSub} />
-              <Route path="/" exact component={PageIndex} />
-            </Switch>
-            <Panel title="Link example" actions={<div />}>
-              <ul>
-                <li><Link href="/page1">Page1 (Internal)</Link></li>
-                <li><Link href="http://google.com">Google (external)</Link></li>
-              </ul>
-              
-            </Panel>
-          <GitHubRibbon
-            href="https://github.com/digitalcube/galaxy"
-            target="_blank"
-            rel="noopener noreferrer"
-          />
+          <Switch>
+            <Redirect from={`/`} exact to={`/${admin}`}  />
+            <Redirect from={`/${admin}/${sites}`} exact to={`/${admin}`}  />
+            <Route path={`/${admin}/${sites}/:siteId`} component={RouteSite} />
+            <Route path={`/${admin}/guides`} component={PageGuides} />
+            <Route path={`/${admin}`} exact component={PageSites} />
+          </Switch>
         </Dashboard>
       </BrowserRouter>
-    </GalaxyThemeProvider>
+    </ShifterDashboardThemeProvider>
   );
 }
 

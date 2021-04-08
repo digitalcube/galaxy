@@ -1,11 +1,15 @@
-import React, { FC, useState } from 'react';
+import React, { FC, useCallback, useState } from 'react';
 import { Listbox, Transition } from '@headlessui/react';
 import { selectTheme } from './Select.galaxy';
 const { select } = selectTheme;
 
-export const Select: FC<Select> = ({ variant, label, items }: Select) => {
-  const [selectedPerson, setSelectedPerson] = useState(items[0]);
-
+export const Select: FC<Select> = ({ label, options, handleSelect }: Select) => {
+  const [selectedPerson, setOption] = useState(options ? options[0] : '');
+  const handleChange = useCallback((option) => {
+    setOption(option)
+    handleSelect(option)
+  }, [])
+  if (!options) return null;
   return (
     <div className="flex items-center justify-center">
       <div className="w-full max-w-xs mx-auto">
@@ -13,7 +17,7 @@ export const Select: FC<Select> = ({ variant, label, items }: Select) => {
           as="div"
           className="space-y-1"
           value={selectedPerson}
-          onChange={setSelectedPerson}
+          onChange={handleChange}
         >
           {({ open }) => (
             <>
@@ -51,8 +55,8 @@ export const Select: FC<Select> = ({ variant, label, items }: Select) => {
                     static
                     className="max-h-60 rounded-md py-1 text-base leading-6 shadow-xs overflow-auto focus:outline-none sm:text-sm sm:leading-5"
                   >
-                    {items.map((item) => (
-                      <Listbox.Option key={item} value={item}>
+                    {options.map((option) => (
+                      <Listbox.Option key={option} value={option}>
                         {({ selected, active }) => (
                           <div
                             className={`${
@@ -66,7 +70,7 @@ export const Select: FC<Select> = ({ variant, label, items }: Select) => {
                                 selected ? 'font-semibold' : 'font-normal'
                               } block truncate`}
                             >
-                              {item}
+                              {option}
                             </span>
                             {selected && (
                               <span
@@ -109,11 +113,12 @@ export type Select = {
   variant?: string;
   variants?: typeof select;
   label?: string;
-  items?: any;
+  options?: string[];
+  handleSelect: (option: string) => void;
 };
 
 Select.defaultProps = {
   label: 'Assigned to',
-  items: ['Name: A-Z', 'Name: Z-A', 'Domain: A-Z', 'Domain: Z-A'],
+  options: ['Name: A-Z', 'Name: Z-A', 'Domain: A-Z', 'Domain: Z-A'],
   variant: 'primary',
 };

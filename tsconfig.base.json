@@ -26,7 +26,8 @@
       "@galaxy/amimoto": ["libs/amimoto/src/index.ts"],
       "@galaxy/views": ["libs/views/src/index.ts"],
       "@galaxy/amimoto-web": ["libs/amimoto-web/src/index.ts"],
-      "@galaxy/shifter-dashboard": ["libs/shifter-dashboard/src/index.ts"]
+      "@galaxy/shifter-dashboard": ["libs/shifter-dashboard/src/index.ts"],
+      "@galaxy/faker": ["libs/fakes/src/index.ts"]
     }
   },
   "exclude": ["node_modules", "tmp"]

@@ -38,7 +38,7 @@ export type Webhook = {
   url?: string;
   event?: string;
   variants?: typeof webhook;
-  state?: 'running' | 'stopped' | string;
+  state?: 'running' | 'stopped' | 'failed' | string;
 };
 
 Webhook.defaultProps = {

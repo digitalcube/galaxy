@@ -11,7 +11,7 @@ import { Section, Card, css } from '@galaxy/core';
 import { artifactTheme } from './Artifact.galaxy';
 const { artifact } = artifactTheme;
 
-export const Artifact: FC<Artifact> = ({
+export const Artifact: FC<ArtifactProps> = ({
   name,
   variant,
   img,
@@ -19,7 +19,7 @@ export const Artifact: FC<Artifact> = ({
   progress,
   date,
   variants,
-}: Artifact) => {
+}) => {
   const artifactCss = css({ variants: variants });
   return (
     <Card variant="primary" className={`${artifactCss}`}>
@@ -45,13 +45,13 @@ export const Artifact: FC<Artifact> = ({
   );
 };
 
-export type Artifact = {
+export type ArtifactProps = {
   img?: string;
   name?: string;
   variant?: string;
   state?: 'running' | 'stopped' | string;
   progress?: 0 | 1 | 2 | 3 | 4 | 5 | null;
-  date?: ArtifactCreationDate;
+  date?: string;
   variants?: typeof artifact;
 };
 

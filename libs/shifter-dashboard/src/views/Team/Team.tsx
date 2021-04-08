@@ -14,7 +14,7 @@ export const Team: FC<Team> = ({ name, team, teamMembers }: Team) => {
       main={
         <>
           <TeamName name={name} className="flex-grow" />
-          <TeamMembers members={teamMembers} />
+          <TeamMembers {...teamMembers} />
           <TeamManage />
         </>
       }
@@ -23,23 +23,12 @@ export const Team: FC<Team> = ({ name, team, teamMembers }: Team) => {
 };
 
 export type Team = {
-  img?: string;
   name: string;
   team?: string;
-  url: string;
-  variant?: string;
-  state: 'running' | 'stopped' | string;
-  progress: 0 | 1 | 2 | 3 | 4 | 5 | null;
   teamMembers: TeamMembers;
-  variants: typeof team;
 };
 
 Team.defaultProps = {
   name: 'name',
-  url: 'url',
   team: 'team',
-  variant: 'primary',
-  img: `https://images.unsplash.com/photo-1472099645785-5658abf4ff4e?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=facearea&facepad=2&w=256&h=256&q=80`,
-  progress: 1,
-  variants: team,
 };

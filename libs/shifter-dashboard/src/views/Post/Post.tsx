@@ -6,7 +6,7 @@ import { PostMain } from './PostMain';
 import { postTheme } from './Post.galaxy';
 const { post } = postTheme;
 
-export const Post: FC<Post> = ({
+export const Post: FC<PostProps> = ({
   children,
   className,
   description,
@@ -16,8 +16,8 @@ export const Post: FC<Post> = ({
   title,
   variant,
   variants,
-  url,
-}: Post) => {
+  //url,
+}) => {
   const postCss = css({
     variant: `${variant}`,
     variants: variants,
@@ -33,7 +33,7 @@ export const Post: FC<Post> = ({
   );
 };
 
-export type Post = {
+export type PostProps = {
   children?: ReactNode;
   className?: string;
   footer?: ReactNode;
@@ -43,7 +43,7 @@ export type Post = {
   description?: string;
   variant?: string;
   variants?: typeof post;
-  url?: string;
+  //url?: string;
 };
 
 Post.defaultProps = {

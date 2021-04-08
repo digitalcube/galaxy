@@ -13,5 +13,5 @@ export const ArtifactName: FC<ArtifactName> = ({ name }: ArtifactName) => {
 
 export type ArtifactName = {
   variant?: string;
-  name: string;
+  name?: string;
 };

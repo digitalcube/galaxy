@@ -4,14 +4,10 @@ import { Webhook } from '@galaxy/shifter-dashboard';
 
 export const Webhooks: FC<Webhooks> = ({ webhooks, title, description }) => {
   const allWebhooks = webhooks.map((webhook, i) => {
-    const { title, url, state, img, progress, date, event } = webhook;
     return (
       <Webhook
         key={i}
-        title={`${title}`}
-        url={`${url}`}
-        state={`${state}`}
-        event={`${event}`}
+        {...webhook}
       />
     );
   });
@@ -45,13 +41,13 @@ export const Webhooks: FC<Webhooks> = ({ webhooks, title, description }) => {
 };
 
 export type Webhooks = {
-  webhooks?: any;
+  webhooks: Webhook[];
   title?: string;
   description?: string;
 };
 
 Webhooks.defaultProps = {
-  webhooks: {},
+  webhooks: [],
   title: "You haven't created any webhooks for this site yet",
   description: 'Click the Add a new webhook button to get started',
 };

@@ -5,6 +5,7 @@ export const ArtifactCreationDate: FC<ArtifactCreationDate> = ({
   date,
   label,
 }: ArtifactCreationDate) => {
+  if (!date) return null;
   return (
     <Section className="space-y-2">
       {label ? <Heading className="sr-only" text={label} /> : null}
@@ -14,7 +15,7 @@ export const ArtifactCreationDate: FC<ArtifactCreationDate> = ({
 };
 
 export type ArtifactCreationDate = {
-  date: string;
+  date?: string;
   label?: string;
 };
 

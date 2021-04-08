@@ -63,6 +63,9 @@
     },
     "shifter-dashboard": {
       "tags": []
+    },
+    "fakes": {
+      "tags": []
     }
   }
 }

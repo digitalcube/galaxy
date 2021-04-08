@@ -18,11 +18,11 @@ export const Site: FC<Site> = ({
   name,
   url,
   team,
-  variant,
   img,
   state,
   progress,
   teamMembers,
+  siteId,
 }: Site) => {
   const siteCss = css({ variants: site });
   return (
@@ -35,13 +35,13 @@ export const Site: FC<Site> = ({
             <SiteName name={name} />
             <Section className="flex items-center space-x-2">
               <SiteState state={state} />
-              <SiteManage />
+              <SiteManage siteId={siteId} />
               <SiteOptions />
             </Section>
           </Section>
           <Section className="flex space-x-4 items-center" as="div">
             <SiteUrl url={`${url}`} />
-            <SiteTeamMembers members={teamMembers} />
+            {teamMembers ? <SiteTeamMembers {...teamMembers} />: null}
             <SiteTeam team={`${team}`} />
           </Section>
         </Section>
@@ -55,19 +55,8 @@ export type Site = {
   name: string;
   team?: string;
   url: string;
-  variant?: string;
   state: 'running' | 'stopped' | string;
   progress: 0 | 1 | 2 | 3 | 4 | 5 | null;
-  teamMembers: SiteTeamMembers;
-  variants: typeof site;
-};
-
-Site.defaultProps = {
-  name: 'name',
-  url: 'url',
-  team: 'team',
-  variant: 'primary',
-  img: `https://images.unsplash.com/photo-1472099645785-5658abf4ff4e?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=facearea&facepad=2&w=256&h=256&q=80`,
-  progress: 1,
-  variants: site,
+  teamMembers?: SiteTeamMembers;
+  siteId: string;
 };

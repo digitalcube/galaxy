@@ -1,10 +1,10 @@
-import { GalaxyThemeProvider } from '../libs/core/src/themes';
+import { ShifterDashboardThemeProvider } from '../libs/shifter-dashboard/src/lib/theme-provider/theme-provider';
 
 export const contexts = [
   {
     icon: 'switchalt',
     title: 'Schema',
-    components: [GalaxyThemeProvider],
+    components: [ShifterDashboardThemeProvider],
     params: [
       {
         name: 'Shifter',

@@ -30,7 +30,7 @@ export const WebhookState: FC<WebhookState> = ({
     variant = 'danger';
   }
 
-  title = title ? title : state;
+  title = title ? title : state || '';
 
   const webhookStateCss = css({
     variant: variant,
@@ -47,8 +47,8 @@ export const WebhookState: FC<WebhookState> = ({
 };
 
 export type WebhookState = {
-  state: 'running' | 'stopped' | 'failed' | string;
-  title: string;
+  state?: 'running' | 'stopped' | 'failed' | string;
+  title?: string;
   className?: string;
   variant?: string;
   variants?: any;
