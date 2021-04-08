@@ -1,6 +1,6 @@
 import React from 'react';
 import { DeploySettings as DeploySettingsPage } from './DeploySettings';
-import { fakerDeploySettings } from '@galaxy/core';
+import { fakerDeploySettings } from '@galaxy/faker';
 import { defaultStorybookConfig } from '../../../.storybook/docs';
 
 export default {

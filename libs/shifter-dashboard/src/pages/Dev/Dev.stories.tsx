@@ -1,6 +1,6 @@
 import React from 'react';
 import { Dev as DevPage } from './Dev';
-import { fakerDev } from '@galaxy/core';
+import { fakerDev } from '@galaxy/faker';
 import { defaultStorybookConfig } from '../../../.storybook/docs';
 export default {
   ...defaultStorybookConfig,

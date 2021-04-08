@@ -1,6 +1,6 @@
 import React from 'react';
 import { Dashboard } from '@galaxy/views';
-import { fakerHeader } from '@galaxy/core';
+import { fakerHeader } from '@galaxy/faker';
 import { defaultStorybookConfig } from '../../.storybook/docs';
 export default {
   ...defaultStorybookConfig,

@@ -1,6 +1,6 @@
 import React from 'react';
 import { Post } from '@galaxy/shifter-dashboard';
-import { fakerPost } from '@galaxy/core';
+import { fakerPost } from '@galaxy/faker';
 
 import { defaultStorybookConfig } from '../../../.storybook/docs';
 export default {

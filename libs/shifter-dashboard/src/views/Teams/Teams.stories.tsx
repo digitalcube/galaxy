@@ -1,6 +1,6 @@
 import React from 'react';
 import { Teams } from '@galaxy/shifter-dashboard';
-import { fakerTeams } from '@galaxy/core';
+import { fakerTeams } from '@galaxy/faker';
 import { defaultStorybookConfig } from '../../../.storybook/docs';
 export default {
   ...defaultStorybookConfig,

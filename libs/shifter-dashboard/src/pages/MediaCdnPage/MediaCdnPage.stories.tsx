@@ -1,6 +1,6 @@
 import React from 'react';
 import { MediaCdnPage } from './MediaCdnPage';
-import { fakerMediaCdn } from '@galaxy/core';
+import { fakerMediaCdn } from '@galaxy/faker';
 import { defaultStorybookConfig } from '../../../.storybook/docs';
 export default {
   ...defaultStorybookConfig,

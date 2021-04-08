@@ -1,6 +1,6 @@
 import React from 'react';
 import { DomainsPage } from './DomainsPage';
-import { fakerSiteDomains, fakerDomains } from '@galaxy/core';
+import { fakerSiteDomains, fakerDomains } from '@galaxy/faker';
 import { defaultStorybookConfig } from '../../../.storybook/docs';
 
 export default {

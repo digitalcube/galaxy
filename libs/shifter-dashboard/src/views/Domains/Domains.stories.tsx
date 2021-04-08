@@ -1,6 +1,6 @@
 import React from 'react';
 import { Domains } from '@galaxy/shifter-dashboard';
-import { fakerSiteDomains } from '@galaxy/core';
+import { fakerSiteDomains } from '@galaxy/faker';
 import { defaultStorybookConfig } from '../../../.storybook/docs';
 export default {
   ...defaultStorybookConfig,

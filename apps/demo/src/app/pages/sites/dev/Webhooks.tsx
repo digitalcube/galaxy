@@ -6,7 +6,7 @@ import {
     Webhook,
     Webhooks
 } from '@galaxy/shifter-dashboard';
-import { fakerSiteWebhooks } from '@galaxy/core';
+import { fakerSiteWebhooks } from '@galaxy/faker';
 
 const useDummyProps = () => {
     return {

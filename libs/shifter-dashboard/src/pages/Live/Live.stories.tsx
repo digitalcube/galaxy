@@ -1,6 +1,6 @@
 import React from 'react';
 import { Live } from './Live';
-import { fakerOverview } from '@galaxy/core';
+import { fakerOverview } from '@galaxy/faker';
 import { defaultStorybookConfig } from '../../../.storybook/docs';
 export default {
   ...defaultStorybookConfig,

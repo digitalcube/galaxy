@@ -1,5 +1,5 @@
 import React from 'react';
-import { fakerSite } from '@galaxy/core';
+import { fakerSite } from '@galaxy/faker';
 import { Site } from '@galaxy/shifter-dashboard';
 
 import { defaultStorybookConfig } from '../../../.storybook/docs';

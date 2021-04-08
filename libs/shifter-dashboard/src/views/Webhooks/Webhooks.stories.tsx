@@ -1,6 +1,6 @@
 import React from 'react';
 import { Webhooks } from '@galaxy/shifter-dashboard';
-import { fakerSiteWebhooks } from '@galaxy/core';
+import { fakerSiteWebhooks } from '@galaxy/faker';
 import { defaultStorybookConfig } from '../../../.storybook/docs';
 export default {
   ...defaultStorybookConfig,

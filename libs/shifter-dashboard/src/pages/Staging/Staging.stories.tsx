@@ -1,6 +1,6 @@
 import React from 'react';
 import { Staging as StagingPage } from './Staging';
-import { fakerStaging } from '@galaxy/core';
+import { fakerStaging } from '@galaxy/faker';
 import { defaultStorybookConfig } from '../../../.storybook/docs';
 export default {
   ...defaultStorybookConfig,
