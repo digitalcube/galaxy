@@ -39,7 +39,7 @@ export const Sites: FC<Sites> = ({ sites }) => {
     })
   }, [sites, orderCondition])
   return (
-    <Section className="space-y-10 px-8">
+    <Section className="space-y-10">
       <SitesControls handleSelect={handleChangeOrder} />
       <Section className="space-y-4">
         {sortedSites ? sortedSites.map((site, i) => (
