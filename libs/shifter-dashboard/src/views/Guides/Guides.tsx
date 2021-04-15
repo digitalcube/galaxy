@@ -6,7 +6,7 @@ import { PostProps } from '../Post';
 export const Guides: FC<Guides> = ({ guides }) => {
   if (!guides) return null;
   return (
-    <Section className="space-y-10 px-8">
+    <Section className="space-y-10">
       <Section className="space-y-4">{guides.map((guide, i) => {
     return (
       <Post

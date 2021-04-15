@@ -10,9 +10,9 @@ export const TeamMembers: FC<TeamMembers> = ({
   const teamTeamMembersCss = css({ variants: teamTeamMembers });
   return (
     <Section className={`${teamTeamMembersCss} ${classNames}`}>
-      {members.map((member, i) => {
+      {/* {members.map((member, i) => {
         return <Avatar key={i} {...member} />;
-      })}
+      })} */}
     </Section>
   );
 };
