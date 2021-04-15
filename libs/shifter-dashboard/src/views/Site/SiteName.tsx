@@ -1,12 +1,18 @@
 import React, { FC } from 'react';
-import { Heading } from '@galaxy/core';
+import { Heading, Link } from '@galaxy/core';
+import { useInternalLinkBase } from '../../lib/internal-path-provider/internal-path-provider';
 
-export const SiteName: FC<SiteName> = ({ name }: SiteName) => {
+export const SiteName: FC<SiteName> = ({ label, siteId, name }: SiteName) => {
+  const { sites, admin } = useInternalLinkBase();
   return (
-    <Heading fontWeight="strong" variant="primary" fontSize={6} text={name} />
+    <Link href={`/${admin}/${sites}/${siteId}`}>
+      <Heading fontWeight="strong" variant="primary" fontSize={6} text={name} />
+    </Link>
   );
 };
 
 export type SiteName = {
   name: string;
+  label?: string;
+  siteId: string;
 };

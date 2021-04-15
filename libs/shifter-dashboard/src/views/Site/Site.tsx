@@ -32,7 +32,7 @@ export const Site: FC<Site> = ({
         <SiteProgress progress={progress} />
         <Section className="flex p-4 space-y-4 relative flex-col flex-grow">
           <Section className="flex justify-between">
-            <SiteName name={name} />
+            <SiteName name={name} siteId={siteId} />
             <Section className="flex items-center space-x-2">
               <SiteState state={state} />
               <SiteManage siteId={siteId} />
