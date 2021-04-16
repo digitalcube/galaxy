@@ -2,7 +2,7 @@ import React, { FC } from 'react';
 import { Heading, Link } from '@galaxy/core';
 import { useInternalLinkBase } from '../../lib/internal-path-provider/internal-path-provider';
 
-export const SiteName: FC<SiteName> = ({ label, siteId, name }: SiteName) => {
+export const SiteName: FC<SiteName> = ({ siteId, name }: SiteName) => {
   const { sites, admin } = useInternalLinkBase();
   return (
     <Link href={`/${admin}/${sites}/${siteId}`}>

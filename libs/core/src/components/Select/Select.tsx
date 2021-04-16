@@ -1,6 +1,6 @@
 import React, { FC, useCallback, useState } from 'react';
 import { Listbox, Transition } from '@headlessui/react';
-import { stripHtml } from "string-strip-html";
+import { stripHtml } from 'string-strip-html';
 import { selectTheme } from './Select.galaxy';
 const { select } = selectTheme;
 
@@ -30,7 +30,9 @@ export const Select: FC<Select> = ({
               <div className="relative">
                 <span className="inline-block w-full rounded">
                   <Listbox.Button className="cursor-pointer relative w-full rounded border border-shifter-purple-primary bg-white pl-3 pr-10 py-2 text-left focus:outline-none focus:shadow-outline-blue focus:border-shifter-purple-primary transition ease-in-out duration-150 sm:text-sm sm:leading-5">
-                    <span className="block truncate">{stripHtml(selectedOption).result}</span>
+                    <span className="block truncate">
+                      {stripHtml(selectedOption).result}
+                    </span>
                     <span className="absolute inset-y-0 right-0 flex items-center pr-2 pointer-events-none">
                       <svg
                         className="h-5 w-5 text-gray-400"
@@ -122,7 +124,12 @@ export type Select = {
 };
 
 Select.defaultProps = {
-  label: 'Assigned to',
-  options: ['<b>Name:</b> A-Z', '<b>Name:</b> Z-A', '<b>Domain:</b> A-Z', '<b>Domain:</b> Z-A'],
+  label: 'Sort by',
+  options: [
+    '<b>Name:</b> A-Z',
+    '<b>Name:</b> Z-A',
+    '<b>Domain:</b> A-Z',
+    '<b>Domain:</b> Z-A',
+  ],
   variant: 'primary',
 };
