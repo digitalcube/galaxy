@@ -27,7 +27,7 @@ export const Site: FC<Site> = ({
   const siteCss = css({ variants: site });
   return (
     <Card variant="primary" className={`${siteCss}`}>
-      <SitePreview img={img} />
+      <SitePreview img={img} siteId={siteId} />
       <Section className="flex flex-grow flex-row">
         <SiteProgress progress={progress} />
         <Section className="flex p-4 space-y-4 relative flex-col flex-grow">
