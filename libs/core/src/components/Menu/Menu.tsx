@@ -1,4 +1,4 @@
-import React, { FC } from 'react';
+import React, { FC, Fragment } from 'react';
 import { Button } from '@galaxy/core';
 
 export type MenuItem = {
@@ -22,10 +22,10 @@ export const Items: FC<MenuItemsProp> = ({ items,alignment, level = 0 }) => {
         const { title, href, items } = item;
         if (items) {
           return (
-            <>
+            <Fragment key={i}>
               <Button key={i} variant="ghost" label={title} href={href} />
               <Menu items={items} alignment={alignment} level={level + 3} />
-            </>
+            </Fragment>
           )
         }
         return <Button key={i} variant="ghost" href={href} label={title} className={`ml-${level}`}/>;
