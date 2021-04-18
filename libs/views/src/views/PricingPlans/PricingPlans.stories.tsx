@@ -1,14 +1,14 @@
 import React from 'react';
 
-import { Pricing } from './Pricing';
+import { PricingPlans } from './PricingPlans';
 
 import { defaultStorybookConfig } from '../../.storybook/docs';
 export default {
   ...defaultStorybookConfig,
-  component: Pricing,
-  title: `Galaxy/Components/Pricing`,
+  component: PricingPlans,
+  title: `Galaxy/Components/PricingPlans`,
 };
 
 export const Example = () => {
-  return <Pricing />;
+  return <PricingPlans />;
 };

@@ -6,4 +6,5 @@ export * from './Search';
 export * from './Header';
 export * from './Main';
 export * from './OptionsMenu';
-export * from './Pricing';
+export * from './PricingPlans';
+export * from './PricingTable';

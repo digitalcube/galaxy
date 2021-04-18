@@ -7,11 +7,11 @@ import {
   FreeTierIcon,
   Section,
 } from '@galaxy/core';
-import { pricingTheme } from './Pricing.galaxy';
-const { pricing } = pricingTheme;
+import { pricingTableTheme } from './PricingTable.galaxy';
+const { pricingTable } = pricingTableTheme;
 
-export const Pricing: FC<PricingProps> = ({ variants }: PricingProps) => {
-  const pricingCss = css({ variants: variants });
+export const PricingTable: FC<PricingTableProps> = ({ variants }: PricingTableProps) => {
+  const pricingTableCss = css({ variants: variants });
 
   const tiers = [
     {
@@ -145,10 +145,10 @@ export const Pricing: FC<PricingProps> = ({ variants }: PricingProps) => {
   );
 };
 
-export type PricingProps = {
-  variants?: typeof pricing;
+export type PricingTableProps = {
+  variants?: typeof pricingTable;
 };
 
-Pricing.defaultProps = {
-  variants: pricing,
+PricingTable.defaultProps = {
+  variants: pricingTable,
 };

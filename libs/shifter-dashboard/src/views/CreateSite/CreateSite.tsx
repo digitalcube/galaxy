@@ -1,6 +1,6 @@
 import React, { FC } from 'react';
 import { Overlay, Heading, Section, Input, Button, Link } from '@galaxy/core';
-import { Header, Pricing } from '@galaxy/views';
+import { Header, PricingPlans } from '@galaxy/views';
 import { Team } from '@galaxy/shifter-dashboard';
 import { Form, Formik, FormikProps } from 'formik';
 import { XIcon } from '@heroicons/react/solid';
@@ -114,7 +114,7 @@ export const Step_02: FC<CreateSite> = () => {
         >
           {(props: FormikProps<any>) => (
             <Form>
-              <Pricing />
+              <PricingPlans />
             </Form>
           )}
         </Formik>
