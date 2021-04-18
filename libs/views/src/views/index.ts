@@ -8,3 +8,4 @@ export * from './Main';
 export * from './OptionsMenu';
 export * from './PricingPlans';
 export * from './PricingTable';
+export * from './Checkout';

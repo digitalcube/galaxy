@@ -1,6 +1,6 @@
 import React, { FC } from 'react';
 import { Overlay, Heading, Section, Input, Button, Link } from '@galaxy/core';
-import { Header, PricingPlans } from '@galaxy/views';
+import { Header, PricingPlans, PricingTable, Checkout } from '@galaxy/views';
 import { Team } from '@galaxy/shifter-dashboard';
 import { Form, Formik, FormikProps } from 'formik';
 import { XIcon } from '@heroicons/react/solid';
@@ -20,7 +20,7 @@ export const Step_01: FC<CreateSite> = () => {
           text="Site Information"
           fontWeight="strong"
           fontSize={7}
-          className="text-shifter-purple-700"
+          variant="primary"
         />
       </Section>
       <Section>
@@ -72,7 +72,11 @@ export const Step_01: FC<CreateSite> = () => {
                     <Input />
                   </div>
                 </div>
-                  <Button className="inline-flex" href="/create/2/" label="Confirm" />
+                <Button
+                  className="inline-flex"
+                  href="/create/2/"
+                  label="Confirm"
+                />
               </div>
             </Form>
           )}
@@ -95,35 +99,45 @@ export const Step_02: FC<CreateSite> = () => {
         <Heading
           text="Select a plan"
           fontWeight="strong"
+          variant="primary"
           fontSize={7}
-          className="text-shifter-purple-700"
+        />
+      </Section>
+      <Section className="space-y-16">
+        <PricingPlans />
+        <Button label="Compare plans" variant="ghost" className="flex mx-auto" />
+        <PricingTable />
+      </Section>
+    </>
+  );
+};
+
+export const Step_03: FC<CreateSite> = () => {
+  return (
+    <>
+      <Section className="space-y-6 mb-16 w-full">
+        <Heading
+          text="Step 3 of 3"
+          fontWeight="strong"
+          fontSize={3}
+          className="text-shifter-gray-600"
+        />
+        <Heading
+          text="Checkout"
+          fontWeight="strong"
+          fontSize={7}
+          variant="primary"
         />
       </Section>
       <Section>
-        <Formik
-          initialValues={{
-            siteName: '',
-            teamName: '',
-          }}
-          onSubmit={(values, actions) => {
-            setTimeout(() => {
-              alert(JSON.stringify(values, null, 2));
-              actions.setSubmitting(false);
-            }, 1000);
-          }}
-        >
-          {(props: FormikProps<any>) => (
-            <Form>
-              <PricingPlans />
-            </Form>
-          )}
-        </Formik>
+        <Checkout />
       </Section>
     </>
   );
 };
 
 export const Steps: FC<CreateSite> = () => {
+  if (window.location.pathname === `/create/3/`) return <Step_03 />;
   if (window.location.pathname === `/create/2/`) return <Step_02 />;
   return <Step_01 />;
 };
@@ -139,7 +153,7 @@ export const CreateSite: FC<CreateSite> = ({ teams }) => {
           </Link>
         }
       />
-      <Section className="w-full max-w-screen-md mx-auto mt-20">
+      <Section className="w-full max-w-screen-lg mx-auto py-20">
         <Steps />
       </Section>
     </Overlay>

@@ -1,6 +1,6 @@
 export const buttonTheme = {
   button: {
-    DEFAULT: 'font-strong focus:ring-shifter-magenta-primary rounded',
+    DEFAULT: 'inline-block font-strong focus:ring-shifter-magenta-primary rounded',
     primary: [
       'bg-shifter-purple-primary',
       'disabled:bg-shifter-gray-200',
