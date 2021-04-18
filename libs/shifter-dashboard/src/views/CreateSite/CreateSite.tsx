@@ -1,5 +1,5 @@
 import React, { FC } from 'react';
-import { Overlay, Heading, Section, Input } from '@galaxy/core';
+import { Overlay, Heading, Section, Input, Button } from '@galaxy/core';
 import { Team } from '@galaxy/shifter-dashboard';
 import { Field, Form, Formik, FormikProps } from 'formik';
 
@@ -28,9 +28,8 @@ export const CreateSite: FC<CreateSite> = ({ teams }) => {
         <Section>
           <Formik
             initialValues={{
-              email: '',
-              color: 'red',
-              firstName: '',
+              siteName: '',
+              teamName: '',
             }}
             onSubmit={(values, actions) => {
               setTimeout(() => {
@@ -41,65 +40,41 @@ export const CreateSite: FC<CreateSite> = ({ teams }) => {
           >
             {(props: FormikProps<any>) => (
               <Form>
-                {/* <Section className="space-y-8">
-                  <Section className="flex">
-                    <Section className="flex flex-col space-y-2">
+                <div className="space-y-8">
+                  <div className="flex">
+                    <div className="space-y-3 w-1/3">
                       <Heading
                         as="label"
-                        htmlFor="siteTeam"
+                        htmlFor="siteName"
                         text="Team"
                         fontSize={4}
+                        variant="primary"
                         fontWeight="strong"
                       />
-                      <Field
-                        name="siteTeam"
-                        as="select"
-                        className="rounded border border-shifter-purple-primary bg-white pl-3 pr-10 py-2 text-left focus:outline-none"
-                      >
-                        <option value="red">Default Team</option>
-                        <option value="red">Another Team</option>
-                      </Field>
-                    </Section>
-                    <Field
-                      name="siteName"
-                      placeholder="Site Name"
-                      component={Input}
-                    />
-                  </Section>
-                  <button type="submit">Submit</button>
-                </Section> */}
-                <div className="flex">
-                  <div className="space-y-3 w-1/3">
-                    <Heading
-                      as="label"
-                      htmlFor="siteName"
-                      text="Team"
-                      fontSize={4}
-                      variant="primary"
-                      fontWeight="strong"
-                    />
-                    <div className="ring-2 ring-shifter-purple-primary focus:outline-none focus:border-shifter-purple-primary rounded-l p-3 w-full">
-                      <select
-                        id="siteTeam"
-                        name="siteTeam"
-                        className="border-transparent bg-transparent text-shifter-purple-700 rounded w-full"
-                      >
-                        <option>Default Team</option>
-                        <option>Another Team</option>
-                      </select>
+                      <div className="ring-2 ring-shifter-purple-primary focus:outline-none focus:border-shifter-purple-primary rounded-l p-3 w-full">
+                        <select
+                          id="siteTeam"
+                          name="siteTeam"
+                          className="border-transparent bg-transparent text-shifter-purple-700 rounded w-full"
+                        >
+                          <option>Default Team</option>
+                          <option>Another Team</option>
+                        </select>
+                      </div>
+                    </div>
+                    <div className="space-y-3 flex-grow">
+                      <Heading
+                        as="label"
+                        htmlFor="siteName"
+                        text="Site Name"
+                        fontSize={4}
+                        variant="primary"
+                        fontWeight="strong"
+                      />
+                      <Input />
                     </div>
                   </div>
-                  <div className="space-y-3 flex-grow">
-                    <Heading
-                      as="label"
-                      htmlFor="siteName"
-                      text="Site Name"
-                      fontSize={4}
-                      variant="primary"
-                      fontWeight="strong"
-                    />
-                    <Input />
-                  </div>
+                  <Button label="Confirm" />
                 </div>
               </Form>
             )}

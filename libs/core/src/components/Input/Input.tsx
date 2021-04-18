@@ -3,6 +3,10 @@ import { css, Tag } from '@galaxy/core';
 import { inputTheme } from './Input.galaxy';
 const { input } = inputTheme;
 
+// const Input = ({ field, form, ...props }) => {
+//   return <input {...field} {...props} />;
+// };
+
 export const Input: FC<Input> = ({
   variant,
   children,
