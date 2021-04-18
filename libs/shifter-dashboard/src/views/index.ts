@@ -25,3 +25,4 @@ export * from './Posts';
 export * from './Guides';
 export * from './Post';
 export * from './WpDashboard';
+export * from './CreateSite';

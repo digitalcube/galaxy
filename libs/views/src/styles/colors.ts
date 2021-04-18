@@ -45,6 +45,7 @@ export const colors = {
     },
     purple: {
       primary: `#77266F`,
+      p900: `#431441`,
       p800: `#331729`,
       p700: `#3C1533`,
       p600: `#571B52`,

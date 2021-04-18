@@ -6,40 +6,50 @@ import {
   Link as ReactRouterLink,
   Redirect,
 } from 'react-router-dom';
-import { Dashboard } from '@galaxy/views'
-import { ShifterDashboardThemeProvider, useInternalLinkBase } from '@galaxy/shifter-dashboard'
-import { PageSites } from './pages/sites/Sites'
+import { Dashboard } from '@galaxy/views';
+import {
+  ShifterDashboardThemeProvider,
+  useInternalLinkBase,
+} from '@galaxy/shifter-dashboard';
+import { PageSites } from './pages/sites/Sites';
 import { RouteSite } from './routes/Site';
 import { PageGuides } from './pages/Guides';
+import { PageCreate } from './pages/Create';
 
 export function App() {
-  const {
-    sites, admin, teams,
-  } = useInternalLinkBase()
+  const { sites, admin, teams } = useInternalLinkBase();
   return (
     <ShifterDashboardThemeProvider internalLinkTag={ReactRouterLink}>
       <BrowserRouter>
-        <Dashboard header={{
-          items: [{
-            title: 'Home',
-            href: `/${admin}`
-          }, {
-            title: 'Sites',
-            href: `/${admin}/${sites}`
-          }, {
-            title: 'Teams',
-            href: `/${admin}/${teams}`
-          }, {
-            title: 'Guides',
-            href: `/${admin}/guides`
-          }]
-        }}>
+        <Dashboard
+          header={{
+            items: [
+              {
+                title: 'Home',
+                href: `/${admin}`,
+              },
+              {
+                title: 'Sites',
+                href: `/${admin}/${sites}`,
+              },
+              {
+                title: 'Teams',
+                href: `/${admin}/${teams}`,
+              },
+              {
+                title: 'Guides',
+                href: `/${admin}/guides`,
+              },
+            ],
+          }}
+        >
           <Switch>
-            <Redirect from={`/`} exact to={`/${admin}`}  />
-            <Redirect from={`/${admin}/${sites}`} exact to={`/${admin}`}  />
-            <Route path={`/${admin}/${sites}/:siteId`} component={RouteSite} />
-            <Route path={`/${admin}/guides`} component={PageGuides} />
-            <Route path={`/${admin}`} exact component={PageSites} />
+            <Redirect from={`/`} exact to={`/${admin}/`} />
+            <Redirect from={`/${admin}/${sites}/`} exact to={`/${admin}/`} />
+            <Route path={`/${admin}/${sites}/:siteId/`} component={RouteSite} />
+            <Route path={`/${admin}/guides/`} component={PageGuides} />
+            <Route path={`/create/`} component={PageCreate} />
+            <Route path={`/${admin}/`} exact component={PageSites} />
           </Switch>
         </Dashboard>
       </BrowserRouter>

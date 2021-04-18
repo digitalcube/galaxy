@@ -12,8 +12,10 @@ export type Tag = {
   children?: ReactNode;
   as?: string | LinkTagType;
   className?: string;
+  htmlFor?: string;
 };
 
 Tag.defaultProps = {
   as: 'section',
+  htmlFor: '',
 };

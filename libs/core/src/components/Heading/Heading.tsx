@@ -6,7 +6,7 @@ import './Heading.css';
 
 const { heading } = headingTheme;
 
-export const Heading:FC<HeadingProps> = ({
+export const Heading: FC<HeadingProps> = ({
   text,
   children,
   as,
@@ -15,6 +15,7 @@ export const Heading:FC<HeadingProps> = ({
   variant,
   fontWeight,
   variants,
+  htmlFor,
 }) => {
   if (!text) return null;
   const classNames = css({
@@ -28,6 +29,7 @@ export const Heading:FC<HeadingProps> = ({
   return (
     <Tag
       as={as}
+      htmlFor={htmlFor}
       className={`${size} ${weight} ${classNames} ${className}`}
     >
       {text}
@@ -49,12 +51,14 @@ export type HeadingProps = PropsWithChildren<{
     | 'div'
     | 'span'
     | 'caption'
+    | 'label'
     | 'figcaption';
   fontSize?: 0 | 1 | 2 | 3 | 4 | 5 | 6 | 7 | 8 | 9;
   fontWeight?: 'regular' | 'strong';
   className?: string;
   variant?: string;
   variants?: typeof heading;
+  htmlFor?: string;
 }>;
 
 Heading.defaultProps = {
@@ -63,4 +67,5 @@ Heading.defaultProps = {
   as: 'div',
   variants: heading,
   className: '',
+  htmlFor: '',
 };

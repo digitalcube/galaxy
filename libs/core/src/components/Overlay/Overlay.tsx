@@ -14,7 +14,7 @@ export const Overlay: FC<Overlay> = ({
   return (
     <Transition show={open} as={Fragment}>
       <div
-        className={`flex flex-col items-center justify-center h-screen bg-cover bg-no-repeat absolute top-0 left-0 w-full z-10 ${className}`}
+        className={`flex flex-col h-screen bg-cover bg-no-repeat absolute top-0 left-0 w-full z-10 ${className}`}
         style={{
           backgroundImage: img ? `url('${img}')` : '',
         }}
