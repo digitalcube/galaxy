@@ -34,6 +34,7 @@ export * from './SecurityBuiltIn';
 export * from './Select';
 export * from './Slider';
 export * from './Swatch';
+export * from './FreeTierIcon';
 export * from './Table';
 export * from './Tag';
 export * from './Toggle';

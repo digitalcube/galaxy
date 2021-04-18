@@ -49,6 +49,7 @@ export function App() {
             <Route path={`/${admin}/${sites}/:siteId/`} component={RouteSite} />
             <Route path={`/${admin}/guides/`} component={PageGuides} />
             <Route path={`/create/`} component={PageCreate} />
+            <Route path={`/create/2/`} component={PageCreate} />
             <Route path={`/${admin}/`} exact component={PageSites} />
           </Switch>
         </Dashboard>

@@ -49,6 +49,7 @@ export type HeadingProps = PropsWithChildren<{
     | 'h6'
     | 'p'
     | 'div'
+    | 'li'
     | 'span'
     | 'caption'
     | 'label'
