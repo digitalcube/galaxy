@@ -1,16 +1,23 @@
 import React, { FC } from 'react';
-import { Overlay, Heading, Section, Input, Button } from '@galaxy/core';
+import { Overlay, Heading, Section, Input, Button, Link } from '@galaxy/core';
+import { Header } from '@galaxy/views';
 import { Team } from '@galaxy/shifter-dashboard';
-import { Field, Form, Formik, FormikProps } from 'formik';
-
-// const Input = ({ field, form, ...props }) => {
-//   return <input {...field} {...props} />;
-// };
+import { Form, Formik, FormikProps } from 'formik';
+import { XIcon } from '@heroicons/react/solid';
+import { useInternalLinkBase } from '../../lib/internal-path-provider/internal-path-provider';
 
 export const CreateSite: FC<CreateSite> = ({ teams }) => {
+  const { admin } = useInternalLinkBase();
   return (
     <Overlay className="flex justify-start bg-white">
-      <Section className="w-full max-w-screen-md mx-auto">
+      <Header
+        aside={
+          <Link href={`/${admin}/`}>
+            <XIcon className="h-6 w-6 text-shifter-purple-primary" />
+          </Link>
+        }
+      />
+      <Section className="w-full max-w-screen-md mx-auto mt-20">
         <Section className="space-y-6 mb-20 w-full">
           <Heading
             text="Step 1 of 3"

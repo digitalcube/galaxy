@@ -1,6 +1,6 @@
 import React, { FC, ReactNode } from 'react';
-import { Header } from '@galaxy/views';
-import { Section } from '@galaxy/core';
+import { Header, Search } from '@galaxy/views';
+import { Section, Menu, Avatar } from '@galaxy/core';
 
 export const Dashboard: FC<Dashboard> = ({
   children,
@@ -9,7 +9,16 @@ export const Dashboard: FC<Dashboard> = ({
 }: Dashboard) => {
   return (
     <Section className="bg-white min-h-screen">
-      <Header {...header} />
+      <Header
+        {...header}
+        main={<Search variant="ghost" />}
+        aside={
+          <>
+            <Menu items={header?.items} />
+            <Avatar {...header?.avatar} />
+          </>
+        }
+      />
       {children ? children : null}
       {main ? main : null}
     </Section>
