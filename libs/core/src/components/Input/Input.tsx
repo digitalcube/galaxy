@@ -1,6 +1,5 @@
 import React, { ReactNode, FC } from 'react';
 import { css, Tag } from '@galaxy/core';
-import Link from '../../lib/link/link';
 import { inputTheme } from './Input.galaxy';
 const { input } = inputTheme;
 
@@ -18,24 +17,21 @@ export const Input: FC<Input> = ({
     variants: variants,
   });
 
-  /**
-   * If the link target is internal,
-   * should use the Link component to handle the SPA routing
-   */
-  if (href || as === 'a') {
-    return (
-      <Link className={`${className} ${classNames}`} href={href}>
-        {label}
-        {children}
-      </Link>
-    );
-  }
+  // return (
+  //   <Tag as={as} className={`${className} ${classNames}`}>
+  //     {label}
+  //     {children}
+  //   </Tag>
+  // );
 
   return (
-    <Tag as={as} className={`${className} ${classNames}`}>
-      {label}
-      {children}
-    </Tag>
+    <input
+      type="text"
+      name="siteName"
+      id="siteName"
+      className="ring-2 ring-shifter-purple-primary focus:outline-none focus:border-shifter-purple-primary block w-full p-3 rounded-r"
+      placeholder="Site Name"
+    />
   );
 };
 

@@ -1,11 +1,11 @@
 import React, { FC } from 'react';
-import { Overlay, Heading, Section } from '@galaxy/core';
+import { Overlay, Heading, Section, Input } from '@galaxy/core';
 import { Team } from '@galaxy/shifter-dashboard';
 import { Field, Form, Formik, FormikProps } from 'formik';
 
-const Input = ({ field, form, ...props }) => {
-  return <input {...field} {...props} />;
-};
+// const Input = ({ field, form, ...props }) => {
+//   return <input {...field} {...props} />;
+// };
 
 export const CreateSite: FC<CreateSite> = ({ teams }) => {
   return (
@@ -98,13 +98,7 @@ export const CreateSite: FC<CreateSite> = ({ teams }) => {
                       variant="primary"
                       fontWeight="strong"
                     />
-                    <input
-                      type="text"
-                      name="siteName"
-                      id="siteName"
-                      className="ring-2 ring-shifter-purple-primary focus:outline-none focus:border-shifter-purple-primary block w-full p-3 rounded-r"
-                      placeholder="Site Name"
-                    />
+                    <Input />
                   </div>
                 </div>
               </Form>

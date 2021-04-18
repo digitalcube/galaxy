@@ -40,3 +40,4 @@ export * from './Toggle';
 export * from './WordPress';
 export * from './Spinner';
 export * from './Overlay';
+export * from './Input';
