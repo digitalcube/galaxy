@@ -23,6 +23,7 @@ export const PageOverview: FC = () => {
         artifact,
         date,
         team,
+        siteId
       } = usePageOverview()
   return (
       <Main title="Overview">
@@ -34,10 +35,12 @@ export const PageOverview: FC = () => {
             name={name}
             progress={progress}
             team={team}
+            siteId={`${siteId}`}
           />
           <Deploys
             state={state}
             artifacts={fakerArtifacts}
+            siteId={`${siteId}`}
           />
     </Main>
   );
@@ -53,4 +56,5 @@ export type PageOverviewProps = {
   progress: ProgressValue;
   state: string;
   team?: string;
+  siteId?: string;
 };

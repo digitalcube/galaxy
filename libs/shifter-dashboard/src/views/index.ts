@@ -24,3 +24,4 @@ export * from './WpAdmin';
 export * from './Posts';
 export * from './Guides';
 export * from './Post';
+export * from './WpDashboard';

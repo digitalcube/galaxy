@@ -1,5 +1,5 @@
 export const headingTheme = {
   heading: {
-    primary: ['text-shifter-purple-600'],
+    primary: ['text-shifter-purple-700'],
   },
 };

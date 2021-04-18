@@ -14,12 +14,13 @@ export const SiteOverview: FC<SiteOverview> = ({
   img,
   date,
   team,
+  siteId,
 }: SiteOverview) => {
   return (
     // TODO: Update this to the new Card format
     <Card footer={<SiteOverviewTeam team={`${team}`} />}>
       <Section className="flex">
-        <SitePreview img={img} />
+        <SitePreview img={img} siteId={siteId} />
         <Section as="div" className="px-8">
           <Section className="space-y-4">
             <CdnUrl url={`${publishedSiteURL}`} />
@@ -42,4 +43,5 @@ export type SiteOverview = {
   publishedSiteURL: string;
   progress: ProgressValue;
   date: string;
+  siteId: string;
 };

@@ -22,26 +22,32 @@ export const Artifact: FC<ArtifactProps> = ({
 }) => {
   const artifactCss = css({ variants: variants });
   return (
-    <Card variant="primary" className={`${artifactCss}`}>
-      <ArtifactPreview img={img} />
-      <Section as="div" className="flex-grow">
-        <ArtifactProgress progress={progress} variant={variant} />
-        <Section className="p-4 space-y-4">
-          <Section className="flex" as="div">
-            <Section className="flex-auto">
-              <ArtifactName variant={variant} name={name} />
-            </Section>
-            <Section as="span" className="space-x-2 flex items-center">
-              <ArtifactState state={state} />
-              <ArtifactOptions />
+    <Card
+      variant="primary"
+      mainClassName={`${artifactCss}`}
+      main={
+        <>
+          <ArtifactPreview img={img} />
+          <Section as="div" className="flex-grow">
+            <ArtifactProgress progress={progress} variant={variant} />
+            <Section className="p-4 space-y-4">
+              <Section className="flex" as="div">
+                <Section className="flex-auto">
+                  <ArtifactName variant={variant} name={name} />
+                </Section>
+                <Section as="span" className="space-x-2 flex items-center">
+                  <ArtifactState state={state} />
+                  <ArtifactOptions />
+                </Section>
+              </Section>
+              <Section as="div">
+                <ArtifactCreationDate date={date} />
+              </Section>
             </Section>
           </Section>
-          <Section as="div">
-            <ArtifactCreationDate date={date} />
-          </Section>
-        </Section>
-      </Section>
-    </Card>
+        </>
+      }
+    />
   );
 };
 

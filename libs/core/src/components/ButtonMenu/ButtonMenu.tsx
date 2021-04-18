@@ -15,7 +15,7 @@ export const ButtonMenuItem: FC<ButtonMenuItem> = ({ label, active }) => {
       <Link
         href="#account-settings"
         className={`${
-          active ? 'bg-white text-shifter-gray-800' : 'text-shifter-gray-400'
+          active ? 'bg-white text-shifter-purple-700' : 'text-shifter-gray-700'
         } flex justify-between w-full px-4 py-2 text-sm leading-5 text-left`}
       >
         {label}
@@ -39,7 +39,7 @@ export const ButtonMenu: FC<ButtonMenu> = ({
             <Menu.Button className={`${className}`}>{children}</Menu.Button>
             <Transition
               show={open}
-              className="absolute right-0"
+              className="absolute right-0 z-10"
               enter="transition ease-out duration-100"
               enterFrom="transform opacity-0 scale-95"
               enterTo="transform opacity-100 scale-100"

@@ -43,4 +43,5 @@ export type Card = {
 
 Card.defaultProps = {
   variants: card,
+  className: '',
 };

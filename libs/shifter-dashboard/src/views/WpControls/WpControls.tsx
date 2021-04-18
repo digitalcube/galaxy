@@ -3,7 +3,7 @@ import { SiteState, WpAdmin, BuildDeploy } from '@galaxy/shifter-dashboard';
 import { Section } from '@galaxy/core';
 import { Play, Refresh } from 'heroicons-react';
 
-export const WpControls: FC<WpControls> = ({ state }: WpControls) => {
+export const WpControls: FC<WpControls> = ({ state, siteId }: WpControls) => {
   return (
     <Section className="flex flex-row items-center justify-between border-b pb-6 border-shifter-gray-200">
       <Section className="flex flex-row items-center space-x-4 divide-x">
@@ -14,7 +14,7 @@ export const WpControls: FC<WpControls> = ({ state }: WpControls) => {
         </div>
       </Section>
       <Section className="flex items-center space-x-6">
-        <WpAdmin />
+        <WpAdmin siteId={`${siteId}`}/>
         <BuildDeploy />
       </Section>
     </Section>
@@ -23,6 +23,7 @@ export const WpControls: FC<WpControls> = ({ state }: WpControls) => {
 
 export type WpControls = {
   state: string;
+  siteId: string;
 };
 
 WpControls.defaultProps = {

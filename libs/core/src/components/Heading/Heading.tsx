@@ -62,4 +62,5 @@ Heading.defaultProps = {
   fontWeight: 'regular',
   as: 'div',
   variants: heading,
+  className: '',
 };

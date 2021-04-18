@@ -27,6 +27,7 @@ import { PageSiteBasicAuth } from '../pages/sites/dev/BasicAuth';
 import { PageSiteEmergencyAction } from '../pages/sites/dev/EmergencyAction';
 import { PageSiteErrors } from '../pages/sites/dev/Errors';
 import { PageSiteTeams } from '../pages/sites/Teams';
+import { PageSiteWpAdmin } from '../pages/sites/WpAdmin';
 
 export const RouteSite: FC = () => {
   const {
@@ -119,6 +120,7 @@ export const RouteSite: FC = () => {
                 <Route path={`/${admin}/${sites}/:siteId/dev/`} component={PageDevEnvironment} />
                 <Route path={`/${admin}/${sites}/:siteId/team`} component={PageSiteTeams} />
                 <Route path={`/${admin}/${sites}/:siteId/settings`} component={PageSiteSetting} />
+                <Route path={`/${admin}/${sites}/:siteId/wp-admin`} exact component={PageSiteWpAdmin} />
                 <Route path={`/${admin}/${sites}/:siteId/`} exact component={PageOverview} />
               </Switch>
         </Section>

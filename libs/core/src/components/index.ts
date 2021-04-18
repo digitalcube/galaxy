@@ -38,3 +38,5 @@ export * from './Table';
 export * from './Tag';
 export * from './Toggle';
 export * from './WordPress';
+export * from './Spinner';
+export * from './Overlay';

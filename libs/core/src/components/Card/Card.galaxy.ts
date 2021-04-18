@@ -6,7 +6,7 @@ export const cardTheme = {
       'rounded',
       'ring-shifter-gray-200',
       'flex',
-      'overflow-hidden',
+      // 'overflow-hidden',
       'shadow',
       'hover:shadow-lg',
       'transition-shadow',
