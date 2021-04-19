@@ -104,7 +104,7 @@ export const RouteSite: FC = () => {
   }, [siteId, siteMenus, sites])
     return (
         <Section className="md:flex min-h-screen border-t border-shifter-gray-200">
-          <Aside items={menus} name={`{name}`} />
+          <Aside items={menus} name="Site Name" />
               <Switch>
                 <Redirect from={`/${admin}/${sites}/:siteId/home`} to={`/${admin}/${sites}/:siteId/`} />
                 <Route path={`/${admin}/${sites}/:siteId/live/domains`} component={PageDomain} />

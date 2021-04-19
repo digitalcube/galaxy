@@ -169,7 +169,7 @@ const ZeroTeams = () => {
         text="You haven't created any teams yet"
       />
       <Section className="space-y-4 text-center">
-        <Button label="Create a new team" href="/create/" />
+        <Button label="Create a new team" href="/create/team/" />
         <Heading fontSize={3} text="or" />
         <Link href="/admin/guides/">
           <Heading

@@ -2,12 +2,19 @@ import React, { FC, ReactNode } from 'react';
 import { Overlay, Spinner, Heading, Section } from '@galaxy/core';
 
 export const WpDashboard: FC<WpDashboard> = ({ title, img }: WpDashboard) => {
-  document.body.classList.add('overflow-y-hidden');
   return (
     <Overlay img={img}>
-      <Section as="div" className="space-y-4 flex flex-col h-screen items-center justify-center">
+      <Section
+        as="div"
+        className="space-y-4 flex flex-col h-screen items-center justify-center"
+      >
         <Spinner />
-        <Heading text={title} fontSize={3} fontWeight="strong" variant="primary" />
+        <Heading
+          text={title}
+          fontSize={3}
+          fontWeight="strong"
+          variant="primary"
+        />
       </Section>
     </Overlay>
   );

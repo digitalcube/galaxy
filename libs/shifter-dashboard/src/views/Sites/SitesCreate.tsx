@@ -9,7 +9,7 @@ export const SitesCreate: FC<SitesCreateProps> = ({ title, href }) => {
     return `${sites}/create`
   }, [href, sites])
   return (
-    <Button variant="primary" className="relative text-left" label={title} href={'/create/'}>
+    <Button variant="primary" className="relative text-left" label={title} href={'/create/site/'}>
       <span className="pl-4 pointer-events-none">
         <svg
           className="h-4 w-4 text-white"

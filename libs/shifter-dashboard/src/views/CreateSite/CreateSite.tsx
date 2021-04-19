@@ -12,7 +12,7 @@ import { Form, Formik, FormikProps } from 'formik';
 import { XIcon } from '@heroicons/react/solid';
 import { useInternalLinkBase } from '../../lib/internal-path-provider/internal-path-provider';
 
-export const Step_01: FC<CreateSite> = () => {
+const Step_01: FC<CreateSite> = () => {
   return (
     <>
       <Section className="space-y-6 mb-16 w-full">
@@ -75,12 +75,12 @@ export const Step_01: FC<CreateSite> = () => {
                       variant="primary"
                       fontWeight="strong"
                     />
-                    <Input />
+                    <Input placeholder="Site Name" />
                   </div>
                 </div>
                 <Button
                   className="inline-flex"
-                  href="/create/2/"
+                  href="/create/site/2/"
                   label="Confirm"
                 />
               </div>
@@ -92,7 +92,7 @@ export const Step_01: FC<CreateSite> = () => {
   );
 };
 
-export const Step_02: FC<CreateSite> = () => {
+const Step_02: FC<CreateSite> = () => {
   return (
     <>
       <Section className="space-y-6 mb-16 w-full">
@@ -122,7 +122,7 @@ export const Step_02: FC<CreateSite> = () => {
   );
 };
 
-export const Step_03: FC<CreateSite> = () => {
+const Step_03: FC<CreateSite> = () => {
   return (
     <>
       <Section className="space-y-6 mb-16 w-full">
@@ -146,7 +146,7 @@ export const Step_03: FC<CreateSite> = () => {
   );
 };
 
-export const Step_04: FC<CreateSite> = () => {
+const Step_04: FC<CreateSite> = () => {
   return (
     <Section>
       <ThankYou />
@@ -154,10 +154,10 @@ export const Step_04: FC<CreateSite> = () => {
   );
 };
 
-export const Steps: FC<CreateSite> = () => {
-  if (window.location.pathname === `/create/4/`) return <Step_04 />;
-  if (window.location.pathname === `/create/3/`) return <Step_03 />;
-  if (window.location.pathname === `/create/2/`) return <Step_02 />;
+const Steps: FC<CreateSite> = () => {
+  if (window.location.pathname === `/create/site/4/`) return <Step_04 />;
+  if (window.location.pathname === `/create/site/3/`) return <Step_03 />;
+  if (window.location.pathname === `/create/site/2/`) return <Step_02 />;
   return <Step_01 />;
 };
 

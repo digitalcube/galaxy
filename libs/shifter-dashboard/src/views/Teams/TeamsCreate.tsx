@@ -3,7 +3,7 @@ import { Button } from '@galaxy/core';
 
 export const TeamsCreate: FC<TeamsCreate> = ({ title }: TeamsCreate) => {
   return (
-    <Button variant="primary" className="relative text-left" label={title}>
+    <Button variant="primary" className="relative text-left" label={title} href="/create/team/">
       <span className="pl-4 pointer-events-none">
         <svg
           className="h-4 w-4 text-white"

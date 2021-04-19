@@ -6,7 +6,7 @@ export const Aside: FC<AsideProps> = ({ items, name, subHeading }) => {
     <Section className="flex-none w-full md:max-w-xs">
       <Panel className="flex flex-col border-b space-y-4 border-shifter-gray-200">
         <Section>
-          <Button className="relative pl-10" variant="ghost">
+          <Button className="relative pl-10" variant="ghost" href="/admin/">
             <span className="absolute inset-y-0 pl-2 left-0 flex items-center text-shifter-purple-primary">
               <svg
                 xmlns="http://www.w3.org/2000/svg"
@@ -26,8 +26,8 @@ export const Aside: FC<AsideProps> = ({ items, name, subHeading }) => {
             All Sites
           </Button>
         </Section>
-        <Section className="space-y-2">
-          <Heading fontSize={6} text={name} />
+        <Section className="space-y-4">
+          <Heading fontSize={6} text={name} fontWeight="strong" />
           <Section>
             {subHeading}
           </Section>

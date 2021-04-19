@@ -14,7 +14,8 @@ import {
 import { PageSites } from './pages/sites/Sites';
 import { RouteSite } from './routes/Site';
 import { PageGuides } from './pages/Guides';
-import { PageCreate } from './pages/Create';
+import { PageCreateSite } from './pages/CreateSite';
+import { PageCreateTeam } from './pages/CreateTeam';
 import { PageTeams } from './pages/Teams';
 
 export function App() {
@@ -46,12 +47,13 @@ export function App() {
         >
           <Switch>
             <Redirect from={`/`} exact to={`/${admin}/`} />
+            <Redirect from={`/create/`} exact to={`/create/site/`} />
             <Redirect from={`/${admin}/${sites}/`} exact to={`/${admin}/`} />
             <Route path={`/${admin}/${sites}/:siteId/`} component={RouteSite} />
             <Route path={`/${admin}/guides/`} component={PageGuides} />
             <Route path={`/${admin}/teams/`} component={PageTeams} />
-            <Route path={`/create/`} component={PageCreate} />
-            <Route path={`/create/2/`} component={PageCreate} />
+            <Route path={`/create/site/`} component={PageCreateSite} />
+            <Route path={`/create/team/`} component={PageCreateTeam} />
             <Route path={`/${admin}/`} exact component={PageSites} />
           </Switch>
         </Dashboard>

@@ -13,6 +13,7 @@ export const Input: FC<Input> = ({
   className,
   label,
   as,
+  placeholder,
   variants,
   href,
 }: Input) => {
@@ -33,8 +34,9 @@ export const Input: FC<Input> = ({
       type="text"
       name="siteName"
       id="siteName"
-      className="ring-2 ring-shifter-purple-primary focus:outline-none focus:border-shifter-purple-primary block w-full p-3 rounded-r"
-      placeholder="Site Name"
+      className="ring-2 ring-shifter-purple-primary focus:outline-none focus:border-shifter-purple-primary block w-full p-3 rounded"
+      placeholder={placeholder}
+      autoComplete="off"
     />
   );
 };
@@ -48,6 +50,7 @@ export type Input = {
   variant?: any;
   href?: string;
   type?: string;
+  placeholder?: string;
 };
 
 Input.defaultProps = {
@@ -55,4 +58,5 @@ Input.defaultProps = {
   variant: 'primary',
   as: 'input',
   label: '',
+  placeholder: '',
 };
