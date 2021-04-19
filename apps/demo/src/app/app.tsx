@@ -15,6 +15,7 @@ import { PageSites } from './pages/sites/Sites';
 import { RouteSite } from './routes/Site';
 import { PageGuides } from './pages/Guides';
 import { PageCreate } from './pages/Create';
+import { PageTeams } from './pages/Teams';
 
 export function App() {
   const { sites, admin, teams } = useInternalLinkBase();
@@ -48,6 +49,7 @@ export function App() {
             <Redirect from={`/${admin}/${sites}/`} exact to={`/${admin}/`} />
             <Route path={`/${admin}/${sites}/:siteId/`} component={RouteSite} />
             <Route path={`/${admin}/guides/`} component={PageGuides} />
+            <Route path={`/${admin}/teams/`} component={PageTeams} />
             <Route path={`/create/`} component={PageCreate} />
             <Route path={`/create/2/`} component={PageCreate} />
             <Route path={`/${admin}/`} exact component={PageSites} />

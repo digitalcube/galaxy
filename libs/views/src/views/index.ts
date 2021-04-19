@@ -9,3 +9,4 @@ export * from './OptionsMenu';
 export * from './PricingPlans';
 export * from './PricingTable';
 export * from './Checkout';
+export * from './ThankYou';

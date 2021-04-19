@@ -1,6 +1,12 @@
 import React, { FC } from 'react';
 import { Overlay, Heading, Section, Input, Button, Link } from '@galaxy/core';
-import { Header, PricingPlans, PricingTable, Checkout } from '@galaxy/views';
+import {
+  Header,
+  PricingPlans,
+  PricingTable,
+  Checkout,
+  ThankYou,
+} from '@galaxy/views';
 import { Team } from '@galaxy/shifter-dashboard';
 import { Form, Formik, FormikProps } from 'formik';
 import { XIcon } from '@heroicons/react/solid';
@@ -105,7 +111,11 @@ export const Step_02: FC<CreateSite> = () => {
       </Section>
       <Section className="space-y-16">
         <PricingPlans />
-        <Button label="Compare plans" variant="ghost" className="flex mx-auto" />
+        <Button
+          label="Compare plans"
+          variant="ghost"
+          className="flex mx-auto"
+        />
         <PricingTable />
       </Section>
     </>
@@ -136,7 +146,16 @@ export const Step_03: FC<CreateSite> = () => {
   );
 };
 
+export const Step_04: FC<CreateSite> = () => {
+  return (
+    <Section>
+      <ThankYou />
+    </Section>
+  );
+};
+
 export const Steps: FC<CreateSite> = () => {
+  if (window.location.pathname === `/create/4/`) return <Step_04 />;
   if (window.location.pathname === `/create/3/`) return <Step_03 />;
   if (window.location.pathname === `/create/2/`) return <Step_02 />;
   return <Step_01 />;
