@@ -10,3 +10,4 @@ export * from './WebhooksPage';
 export * from './SettingsPage';
 export * from './TeamsPage';
 export * from './GuidesPage';
+export * from './CreateSitePage';

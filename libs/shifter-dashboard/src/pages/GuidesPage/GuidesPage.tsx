@@ -4,9 +4,7 @@ import { Guides } from '../../views';
 
 export const GuidesPage: FC<GuidesPage> = ({ guides, header }) => {
   return (
-  <Dashboard header={header}>
-    <Guides guides={guides} />
-  </Dashboard>
+  <Dashboard header={header} main={<Guides guides={guides} />} />
   );
 };
 
