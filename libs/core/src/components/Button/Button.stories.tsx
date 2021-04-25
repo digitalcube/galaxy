@@ -9,6 +9,18 @@ export default {
   title: `Galaxy/Components/Button`,
 };
 
-export const Example = () => {
+export const Default = () => {
   return <Button />;
 };
+
+export const Hover = () => {
+  return <Button />;
+};
+
+Hover.parameters = { pseudo: { hover: true } };
+
+export const Focus = () => {
+  return <Button />;
+};
+
+Focus.parameters = { pseudo: { focus: true } };

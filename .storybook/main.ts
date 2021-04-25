@@ -7,6 +7,7 @@ module.exports = {
     '@storybook/addon-links',
     '@storybook/addon-viewport/register',
     '@storybook/addon-contexts/register',
+    "storybook-addon-pseudo-states",
   ],
   babel: async (options) => {
     options.plugins.push(['@babel/plugin-transform-react-jsx']);
