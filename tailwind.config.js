@@ -7,6 +7,11 @@ const borderWidth = require('./libs/core/src/config/BorderWidth/tailwind.config.
 const ringWidth = require('./libs/core/src/config/RingWidth/tailwind.config.js');
 
 module.exports = {
+  mode: 'jit',
+  purge: [
+    './libs/core/**/*.{js,jsx,ts,tsx}',
+    './libs/views/**/*.{js,jsx,ts,tsx}',
+  ],
   theme: {
     ...colors,
     ...fontSize,
@@ -16,14 +21,14 @@ module.exports = {
     ...borderRadius,
     ...ringWidth,
   },
-  variants: {
-    extend: {
-      display: ['group-hover'],
-      borderWidth: ['hover', 'focus'],
-      borderColor: ['active'],
-      backgroundColor: ['active'],
-    },
-  },
+  // variants: {
+  //   extend: {
+  //     display: ['group-hover'],
+  //     borderWidth: ['hover', 'focus'],
+  //     borderColor: ['active'],
+  //     backgroundColor: ['active'],
+  //   },
+  // },
   plugins: [
     require('@tailwindcss/typography'),
     require('@tailwindcss/aspect-ratio'),

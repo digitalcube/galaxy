@@ -1,8 +1,9 @@
 import React from 'react';
-import { Post } from '@galaxy/shifter-dashboard';
+import { Post } from '@galaxy/core';
 import { fakerPost } from '@galaxy/faker';
 
-import { defaultStorybookConfig } from '../../../.storybook/docs';
+import { defaultStorybookConfig } from '../../.storybook/docs';
+
 export default {
   ...defaultStorybookConfig,
   component: Post,

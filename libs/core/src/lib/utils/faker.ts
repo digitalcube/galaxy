@@ -122,14 +122,15 @@ export const fakerTeams = fakerGenerator({
 export const fakerTeam = fakerGenerator({ schema: teamSchema })[0];
 
 export const postSchema = {
-  img: '{{image.image}}',
+  img: '{{image.image}}', // deprecated
+  image: '{{image.image}}',
   title: '{{company.companyName}}',
   description: '{{company.companyName}}',
   url: '{{internet.url}}',
   date: '{{date.recent}}',
 };
 
-export const fakerPosts = fakerGenerator({
+export const fakerPostList = fakerGenerator({
   schema: postSchema,
   min: 0,
   max: 10,
