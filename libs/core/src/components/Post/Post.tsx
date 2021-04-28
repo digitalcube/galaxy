@@ -18,7 +18,6 @@ export const Post: FC<PostProps> = ({
   variants,
   schema,
   image,
-  //url,
 }) => {
   const postCss = css({
     variant: `${variant}`,
@@ -28,11 +27,11 @@ export const Post: FC<PostProps> = ({
   if (schema === 'IndividualProduct') {
     return (
       <Section key={title} className="relative">
-        <div className="group block w-full aspect-w-3 aspect-h-4 bg-gray-100 focus-within:ring-2 focus-within:ring-offset-2 focus-within:ring-offset-gray-100 focus-within:ring-indigo-500 overflow-hidden">
+        <div className="block w-full aspect-w-3 aspect-h-4 overflow-hidden">
           <img
             src={image}
             alt=""
-            className="object-cover pointer-events-none group-hover:opacity-75"
+            className="object-cover pointer-events-none"
           />
         </div>
         <Heading fontSize={4} fontWeight="strong" text={title} className="mt-3" />
@@ -62,7 +61,6 @@ export type PostProps = {
   variants?: typeof post;
   image?: string;
   schema?: string;
-  //url?: string;
 };
 
 Post.defaultProps = {
