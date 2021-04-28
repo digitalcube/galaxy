@@ -1,26 +1,37 @@
 import React, { FC, ReactNode } from 'react';
 import {
   Section,
-  Image,
   MenuItem,
   AvatarProps,
-  Link,
+Post,
 } from '@galaxy/core';
+import { Brand } from 'schema-dts';
 
-export const Header: FC<Header> = ({ main, aside }) => {
-  
+export type Header = {
+  items?: MenuItem[];
+  avatar?: AvatarProps;
+  main?: ReactNode;
+  aside?: ReactNode;
+  mainClassName?: string;
+  className?: string;
+  brandClassName?: string;
+} & Brand;
+
+export const Header: FC<Header> = ({
+  main,
+  aside,
+  logo,
+  mainClassName,
+  className,
+  brandClassName,
+}) => {
   return (
     <Section
       as="header"
-      className="py-6 flex flex-row items-center space-x-6 px-8 relative z-10"
+      className={`flex flex-row items-center space-x-6 relative z-10 ${className}`}
     >
-      <Link className="align-center" href="/">
-        <Image
-          className="h-8 w-auto"
-          img="https://cdn.getshifter.co/caa65008efb706a8bfc6f7e4045d6a018420c3df/uploads/2020/11/shifter-logomark-e1606786281592.png"
-        />
-      </Link>
-      <div className="flex-grow">{main}</div>
+      <Post schema="Brand" image={`${logo}`} className={`${brandClassName}`} />
+      <div className={`flex flex-grow ${mainClassName}`}>{main}</div>
       <div className="hidden md:flex flex-row items-center space-x-6">
         {aside}
       </div>
@@ -28,9 +39,8 @@ export const Header: FC<Header> = ({ main, aside }) => {
   );
 };
 
-export type Header = {
-  items?: MenuItem[];
-  avatar?: AvatarProps;
-  main?: ReactNode;
-  aside?: ReactNode;
+Header.defaultProps = {
+  logo: '/dc-logomark.svg',
+  mainClassName: '',
+  className: '',
 };

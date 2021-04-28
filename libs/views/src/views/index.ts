@@ -12,3 +12,4 @@ export * from './Checkout';
 export * from './ThankYou';
 export * from './Success';
 export * from './Banner';
+export * from './Footer';

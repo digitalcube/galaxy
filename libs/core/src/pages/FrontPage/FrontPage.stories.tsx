@@ -9,6 +9,5 @@ export default {
 };
 
 export const Default = () => {
-  console.log(fakerProductCollection);
   return <FrontPage schema="ProductCollection" posts={fakerProductCollection} />;
 };

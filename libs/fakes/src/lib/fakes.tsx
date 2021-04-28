@@ -15,10 +15,7 @@ const preview = [
   'https://s0.wp.com/mshots/v1/https://stripe.com?w=160',
 ];
 
-const products = [
-  './product-wceu-2019-shirt.png',
-  './product-galaxy-mug.png',
-];
+const products = ['./product-wceu-2019-shirt.png', './product-galaxy-mug.png'];
 
 const domainState = ['pending', 'verified', 'failed', 'attached'];
 const siteState = [
@@ -307,6 +304,25 @@ const dashboardHeaderMenuItems = {
   ],
 };
 
+const swagStoreHeaderMenuItems = {
+  items: [
+    { title: 'Shop all', href: 'shop-all', variant: 'link' },
+    { title: 'Shop by brand', href: 'shop-brand', variant: 'link' },
+    { title: 'Categories', href: 'categories', variant: 'link' },
+    { title: 'About', href: 'about', variant: 'link' },
+  ],
+};
+
+export const swagStoreCategories = {
+  items: [
+    { title: 'All Products', href: 'sites', variant: 'link' },
+    { title: 'Apparel', href: 'apparel', variant: 'link' },
+    { title: 'Objects', href: 'objects', variant: 'link' },
+    { title: 'Stickers', href: 'stickers', variant: 'link' },
+    { title: 'Prints', href: 'prints', variant: 'link' },
+  ],
+};
+
 const avatar = {
   avatar: {
     size: 9,
@@ -319,6 +335,11 @@ const avatar = {
 
 export const fakerHeader = {
   ...dashboardHeaderMenuItems,
+  ...avatar,
+};
+
+export const fakerSwagStoreHeader = {
+  ...swagStoreHeaderMenuItems,
   ...avatar,
 };
 

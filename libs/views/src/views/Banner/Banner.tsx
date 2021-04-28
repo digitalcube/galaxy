@@ -1,16 +1,20 @@
 import React from 'react';
 import { Section } from '@galaxy/core';
 
-export type Banner = {};
+export type BannerProps = { image: string };
 
-export const Banner = () => {
+export const Banner = ({ image }: BannerProps) => {
   return (
-    <Section className="flex items-center h-[210px] overflow-hidden">
+    <Section className="flex items-center h-[175px] overflow-hidden">
       <img
-        src="//placehold.it/1224x210"
+        src={image}
         alt=""
-        className="object-cover pointer-events-none"
+        className="object-cover pointer-events-none w-full"
       />
     </Section>
   );
+};
+
+Banner.defaultProps = {
+  image: './banner.png',
 };

@@ -272,6 +272,14 @@ const dashboardHeaderMenuItems = {
   ],
 };
 
+const swagStoreHeaderMenuItems = {
+  items: [
+    { title: 'Sites', href: 'sites', variant: 'link' },
+    { title: 'Teams', href: 'teams', variant: 'link' },
+    { title: 'Guides', href: 'guides', variant: 'link' },
+  ],
+};
+
 const avatar = {
   avatar: {
     size: 9,
@@ -284,6 +292,11 @@ const avatar = {
 
 export const fakerHeader = {
   ...dashboardHeaderMenuItems,
+  ...avatar,
+};
+
+export const fakerSwagStoreHeader = {
+  ...swagStoreHeaderMenuItems,
   ...avatar,
 };
 

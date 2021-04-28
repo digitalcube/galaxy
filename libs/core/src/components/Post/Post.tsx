@@ -1,5 +1,5 @@
 import React, { ReactNode, FC } from 'react';
-import { Section, Heading, css } from '@galaxy/core';
+import { Section, Heading, Link, Image, css } from '@galaxy/core';
 import { PostHeader } from './PostHeader';
 import { PostFooter } from './PostFooter';
 import { PostMain } from './PostMain';
@@ -36,9 +36,23 @@ export const Post: FC<PostProps> = ({
             className="object-cover pointer-events-none"
           />
         </div>
-        <Heading fontSize={4} fontWeight="strong" text={name} className="mt-3" />
+        <Heading
+          fontSize={4}
+          fontWeight="strong"
+          text={name}
+          className="mt-3"
+        />
         <Heading fontSize={4} text={price} className="mt-1" />
       </Section>
+    );
+  }
+
+  if (schema === 'Brand') {
+    return (
+      <Link className={`flex flex-row items-center space-x-4 select-none ${className}`} href="/">
+        <Image className="h-8 w-auto" img={`${image}`} />
+        <Heading fontSize={7} text="Swag Store" />
+      </Link>
     );
   }
 

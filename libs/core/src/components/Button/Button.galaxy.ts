@@ -1,6 +1,6 @@
 export const buttonTheme = {
   button: {
-    DEFAULT: 'inline-block font-strong focus:ring-shifter-magenta-primary rounded',
+    DEFAULT: 'inline-block focus:ring-shifter-magenta-primary rounded',
     primary: [
       'bg-shifter-purple-primary',
       'disabled:bg-shifter-gray-200',
@@ -13,6 +13,7 @@ export const buttonTheme = {
       'text-white',
       'flex',
       'items-center',
+      'font-strong',
     ],
     danger: [
       'py-2',
@@ -20,6 +21,7 @@ export const buttonTheme = {
       'bg-status-danger-default',
       'text-white',
       'hover:bg-status-danger-dark',
+      'font-strong',
     ],
     white: [
       'py-2',
@@ -28,6 +30,7 @@ export const buttonTheme = {
       'text-shifter-purple-primary',
       'hover:bg-shifter-gray-100',
       'hover:text-shifter-purple-700',
+      'font-strong',
     ],
     ghost: [
       'py-2',
@@ -36,6 +39,7 @@ export const buttonTheme = {
       'text-shifter-purple-primary',
       'hover:bg-shifter-purple-200',
       'focus:bg-transparent',
+      'font-strong',
     ],
     success: [
       'py-2',
@@ -43,6 +47,7 @@ export const buttonTheme = {
       'bg-status-success-default',
       'text-white',
       'hover:bg-status-success-dark',
+      'font-strong',
     ],
     link: ['p-0'],
     outlinePrimary: [
@@ -58,6 +63,7 @@ export const buttonTheme = {
       'text-shifter-purple-primary',
       'disabled:bg-shifter-gray-200',
       'disabled:text-shifter-gray-300',
+      'font-strong',
     ],
   },
 };

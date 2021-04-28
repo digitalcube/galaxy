@@ -11,7 +11,7 @@ module.exports = {
         lineHeight: '150%',
       },
     ],
-    'size-7': '1.88rem',
+    'size-7': '1.875rem',
     'size-8': '2.38rem',
     'size-9': '3.12rem',
   },

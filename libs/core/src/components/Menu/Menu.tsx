@@ -5,30 +5,43 @@ export type MenuItem = {
   title: string;
   href?: string;
   items?: MenuItems;
+  variant?: string;
 };
-export type MenuItems = MenuItem[]
+
+export type MenuItems = MenuItem[];
+
 export type MenuProps = {
   items?: MenuItems;
   alignment?: 'vertical' | 'horizontal';
   level?: number;
+  className?: string;
 };
-export type MenuItemsProp = MenuProps
 
-export const Items: FC<MenuItemsProp> = ({ items,alignment, level = 0 }) => {
+export type MenuItemsProp = MenuProps;
+
+export const Items: FC<MenuItemsProp> = ({ items, alignment, level = 0 }) => {
   if (!items) return null;
   return (
     <>
       {items.map((item, i) => {
-        const { title, href, items } = item;
+        const { title, href, items, variant } = item;
         if (items) {
           return (
             <Fragment key={i}>
-              <Button key={i} variant="ghost" label={title} href={href} />
+              <Button key={i} variant={variant} label={title} href={href} />
               <Menu items={items} alignment={alignment} level={level + 3} />
             </Fragment>
-          )
+          );
         }
-        return <Button key={i} variant="ghost" href={href} label={title} className={`ml-${level}`}/>;
+        return (
+          <Button
+            key={i}
+            variant={variant}
+            href={href}
+            label={title}
+            className={`ml-${level}`}
+          />
+        );
       })}
     </>
   );
@@ -41,7 +54,7 @@ export const Menu: FC<MenuProps> = (props) => {
         props.alignment === 'vertical'
           ? 'flex-col items-start'
           : 'flex-row items-center'
-      }`}
+      } ${props.className}`}
     >
       <Items {...props} />
     </nav>

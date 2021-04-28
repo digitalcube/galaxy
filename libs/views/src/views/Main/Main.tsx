@@ -1,11 +1,17 @@
 import React, { FC, ReactNode } from 'react';
 import { Section, Panel } from '@galaxy/core';
 
-export const Main: FC<Main> = ({ title, actions, children, schema }) => {
+export const Main: FC<Main> = ({
+  title,
+  actions,
+  children,
+  schema,
+  className,
+}) => {
   if (schema === 'dashboard') {
     return (
       <Panel
-        className="flex-1 md:border-l mb-6 border-shifter-gray-200"
+        className={`flex-1 md:border-l mb-6 border-shifter-gray-200 ${className}`}
         title={`${title}`}
         actions={actions}
       >
@@ -14,7 +20,11 @@ export const Main: FC<Main> = ({ title, actions, children, schema }) => {
     );
   }
 
-  return <Section as="main">{children}</Section>;
+  return (
+    <Section as="main" className={`${className}`}>
+      {children}
+    </Section>
+  );
 };
 
 export type Main = {
@@ -22,4 +32,5 @@ export type Main = {
   schema?: string;
   actions?: ReactNode;
   children: ReactNode;
+  className?: string;
 };
