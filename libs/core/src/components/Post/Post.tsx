@@ -18,6 +18,8 @@ export const Post: FC<PostProps> = ({
   variants,
   schema,
   image,
+  price,
+  name,
 }) => {
   const postCss = css({
     variant: `${variant}`,
@@ -26,7 +28,7 @@ export const Post: FC<PostProps> = ({
 
   if (schema === 'IndividualProduct') {
     return (
-      <Section key={title} className="relative">
+      <Section key={name} className="relative">
         <div className="block w-full aspect-w-3 aspect-h-4 overflow-hidden">
           <img
             src={image}
@@ -34,7 +36,8 @@ export const Post: FC<PostProps> = ({
             className="object-cover pointer-events-none"
           />
         </div>
-        <Heading fontSize={4} fontWeight="strong" text={title} className="mt-3" />
+        <Heading fontSize={4} fontWeight="strong" text={name} className="mt-3" />
+        <Heading fontSize={4} text={price} className="mt-1" />
       </Section>
     );
   }
@@ -56,10 +59,12 @@ export type PostProps = {
   main?: ReactNode;
   mainClassName?: string;
   title?: string;
+  name?: string;
   description?: string;
   variant?: string;
   variants?: typeof post;
   image?: string;
+  price?: string;
   schema?: string;
 };
 

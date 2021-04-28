@@ -1,6 +1,6 @@
 import React from 'react';
 import { TeamsPage } from './TeamsPage';
-import { fakerHeader, fakerTeams } from '@galaxy/faker';
+import { fakerTeams, fakerHeader } from '@galaxy/faker';
 import { defaultStorybookConfig } from '../../../.storybook/docs';
 export default {
   ...defaultStorybookConfig,

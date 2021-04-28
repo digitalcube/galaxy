@@ -1,5 +1,5 @@
 import React from 'react';
-import { fakerPostList } from '@galaxy/faker';
+import { fakerProductCollection } from '@galaxy/faker';
 import { FrontPage } from './FrontPage';
 import { defaultStorybookConfig } from '../../.storybook/docs';
 export default {
@@ -9,5 +9,6 @@ export default {
 };
 
 export const Default = () => {
-  return <FrontPage schema="ProductCollection" posts={fakerPostList} />;
+  console.log(fakerProductCollection);
+  return <FrontPage schema="ProductCollection" posts={fakerProductCollection} />;
 };

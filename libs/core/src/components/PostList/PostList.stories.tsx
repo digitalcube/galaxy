@@ -9,5 +9,5 @@ export default {
 };
 
 export const Default = () => {
-  return <PostList schema="ProductCollection" posts={fakerPostList} />;
+  return <PostList posts={fakerPostList} />;
 };

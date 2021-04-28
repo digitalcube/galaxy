@@ -1,5 +1,6 @@
 import React, { FC, ReactNode } from 'react';
-import { Section, Panel, fakerHeader, Card } from '@galaxy/core';
+import { Section, Panel, Card } from '@galaxy/core';
+import { fakerHeader } from '@galaxy/faker';
 import { Aside, Dashboard, Main } from '@galaxy/views';
 import { AddDomain, Site, Domains, Domain } from '@galaxy/shifter-dashboard';
 

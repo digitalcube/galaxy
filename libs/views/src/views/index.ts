@@ -11,5 +11,4 @@ export * from './PricingTable';
 export * from './Checkout';
 export * from './ThankYou';
 export * from './Success';
-export * from './PostList';
 export * from './Banner';

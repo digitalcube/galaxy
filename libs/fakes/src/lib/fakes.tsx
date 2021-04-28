@@ -1,5 +1,6 @@
 /* eslint-disable @typescript-eslint/ban-ts-comment */
 import faker from 'faker';
+import { IndividualProduct } from 'schema-dts';
 // resolve circular depencency between view and core
 // import { AddDomain } from '@galaxy/views';
 
@@ -12,6 +13,11 @@ const preview = [
   'https://s0.wp.com/mshots/v1/https://www.amimoto-ami.com?w=160',
   'https://s0.wp.com/mshots/v1/https://www.algolia.com?w=160',
   'https://s0.wp.com/mshots/v1/https://stripe.com?w=160',
+];
+
+const products = [
+  './product-wceu-2019-shirt.png',
+  './product-galaxy-mug.png',
 ];
 
 const domainState = ['pending', 'verified', 'failed', 'attached'];
@@ -50,6 +56,12 @@ export const fakerGenerator = ({ schema, min = 1, max }: FakerGenerator) => {
       if (key === 'img') {
         // @ts-expect-error
         entity[key] = fakerArray(preview);
+        return entity;
+      }
+
+      if (key === 'image') {
+        // @ts-expect-error
+        entity[key] = fakerArray(products);
         return entity;
       }
 
@@ -137,6 +149,29 @@ export const fakerPostList = fakerGenerator({
 });
 
 export const fakerPost = fakerGenerator({ schema: postSchema })[0];
+
+export const individualProductSchema: IndividualProduct = {
+  '@type': 'IndividualProduct',
+  image: '{{image.image}}',
+  name: '{{company.companyName}}',
+  description: '{{company.companyName}}',
+  url: '{{internet.url}}',
+  price: '{{commerce.price}}',
+  // offers: {
+  //   '@type': 'Offer',
+  //   price: '9.99',
+  // }
+};
+
+export const fakerProductCollection = fakerGenerator({
+  schema: individualProductSchema,
+  min: 0,
+  max: 20,
+});
+
+export const fakerIndividualProduct = fakerGenerator({
+  schema: individualProductSchema,
+})[0];
 
 export const guideSchema = {
   img: '{{image.image}}',

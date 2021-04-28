@@ -1,12 +1,6 @@
 import React, { FC } from 'react';
-import {
-  Section,
-  Button,
-  Heading,
-  Menu,
-  Panel,
-  fakerHeader,
-} from '@galaxy/core';
+import { Section, Button, Heading, Menu, Panel } from '@galaxy/core';
+import { fakerHeader } from '@galaxy/faker';
 import { Dashboard, Main } from '@galaxy/views';
 import { SiteState, SubDirectory, Site } from '@galaxy/shifter-dashboard';
 

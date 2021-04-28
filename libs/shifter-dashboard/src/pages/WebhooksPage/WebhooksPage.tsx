@@ -1,11 +1,10 @@
 import React, { FC } from 'react';
-import { Section, fakerHeader, fakerSiteWebhooks, MenuItems } from '@galaxy/core';
+import { Section, MenuItems } from '@galaxy/core';
+import { fakerSiteWebhooks, fakerHeader } from '@galaxy/faker';
 
-import { Dashboard,  Aside, Main } from '@galaxy/views';
+import { Dashboard, Aside, Main } from '@galaxy/views';
 
-import {
-  Webhooks,
-} from '../../views';
+import { Webhooks } from '../../views';
 
 /**
  * @deprecated

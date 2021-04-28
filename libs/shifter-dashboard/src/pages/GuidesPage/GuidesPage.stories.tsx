@@ -1,5 +1,6 @@
 import React from 'react';
-import { fakerGuides, fakerHeader, fakerTeams } from '@galaxy/faker';
+import { fakerGuides, fakerTeams } from '@galaxy/faker';
+import { fakerHeader } from '@galaxy/faker';
 import { GuidesPage } from './GuidesPage';
 import { defaultStorybookConfig } from '../../../.storybook/docs';
 export default {

@@ -1,5 +1,6 @@
 import React, { FC } from 'react';
-import { Section, fakerHeader, MenuItems } from '@galaxy/core';
+import { Section, MenuItems } from '@galaxy/core';
+import { fakerHeader } from '@galaxy/faker';
 import { Dashboard, Aside, Main } from '@galaxy/views';
 import { SiteOverview, Site } from '@galaxy/shifter-dashboard';
 import { ProgressValue } from '../../views';

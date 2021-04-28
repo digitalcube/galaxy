@@ -1,5 +1,6 @@
 import React, { FC } from 'react';
-import { Avatar, fakerSiteTeamMembers, Section, css, AvatarProps } from '@galaxy/core';
+import { Avatar, Section, css, AvatarProps } from '@galaxy/core';
+import { fakerSiteTeamMembers } from '@galaxy/faker';
 import { siteTeamMembersTheme } from './SiteTeamMembers.galaxy';
 const { siteTeamMembers } = siteTeamMembersTheme;
 
