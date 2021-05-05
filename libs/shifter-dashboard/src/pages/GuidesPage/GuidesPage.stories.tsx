@@ -6,10 +6,10 @@ import { defaultStorybookConfig } from '../../../.storybook/docs';
 export default {
   ...defaultStorybookConfig,
   component: GuidesPage,
-  title: `Shifter/Dashboard/Pages`,
+  title: `Shifter/Dashboard/Pages/Guides`,
 };
 
-export const Guides = () => {
+export const Example = () => {
   return <GuidesPage {...{
     header: fakerHeader,
     guides: fakerGuides,

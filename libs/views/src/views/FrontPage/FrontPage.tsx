@@ -1,6 +1,6 @@
 import React, { FC } from 'react';
 import { Header, Main, Banner, Footer } from '@galaxy/views';
-import { PostList, Menu, Post } from '@galaxy/core';
+import { PostList, Menu } from '@galaxy/core';
 import { fakerSwagStoreHeader, swagStoreCategories } from '@galaxy/faker';
 
 export const FrontPage: FC<FrontPage> = ({ posts }) => {

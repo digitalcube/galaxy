@@ -6,9 +6,9 @@ import { defaultStorybookConfig } from '../../../.storybook/docs';
 export default {
   ...defaultStorybookConfig,
   component: DeploySettingsPage,
-  title: `Shifter/Dashboard/Pages/Sites/Site/Live`,
+  title: `Shifter/Dashboard/Pages/Sites/Site/Live/Subdirectory`,
 };
 
-export const Subdirectory = () => {
+export const Example = () => {
   return <DeploySettingsPage {...fakerDeploySettings} />;
 };

@@ -1,19 +1,16 @@
 import React, { FC } from 'react';
-import { Section } from '@galaxy/core';
-import { Post, PostProps } from '@galaxy/core';
+import { Section, PostProps, PostList } from '@galaxy/core';
 
 export const Guides: FC<Guides> = ({ guides }) => {
   if (!guides) return null;
+  console.log(guides);
   return (
-    <Section className="space-y-10">
-      <Section className="space-y-4">{guides.map((guide, i) => {
-    return (
-      <Post
-        key={i}
-        {...guide}
+    <Section className="space-y-8">
+      <PostList className="grid grid-cols-1" posts={[guides[0]]} />
+      <PostList
+        className="grid grid-cols-1 gap-x-4 gap-y-8 sm:grid-cols-3 sm:gap-x-6 lg:grid-cols-3 xl:gap-x-8"
+        posts={guides.splice(0, 1)}
       />
-    );
-  })}</Section>
     </Section>
   );
 };

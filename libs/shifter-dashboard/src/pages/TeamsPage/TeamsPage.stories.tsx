@@ -5,10 +5,10 @@ import { defaultStorybookConfig } from '../../../.storybook/docs';
 export default {
   ...defaultStorybookConfig,
   component: TeamsPage,
-  title: `Shifter/Dashboard/Pages`,
+  title: `Shifter/Dashboard/Pages/Teams`,
 };
 
-export const Teams = () => {
+export const Example = () => {
   return <TeamsPage {...{
     header: fakerHeader,
     teams: fakerTeams,

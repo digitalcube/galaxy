@@ -36,5 +36,5 @@ export type DomainsPage = {
 };
 
 DomainsPage.defaultProps = {
-  actions: <AddDomain />,
+  actions: AddDomain,
 };

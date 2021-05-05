@@ -5,9 +5,9 @@ import { defaultStorybookConfig } from '../../../.storybook/docs';
 export default {
   ...defaultStorybookConfig,
   component: Live,
-  title: `Shifter/Dashboard/Pages/Sites/Site/Live`,
+  title: `Shifter/Dashboard/Pages/Sites/Site/Live/Overview`,
 };
 
-export const Overview = () => {
+export const Example = () => {
   return <Live {...fakerOverview} />;
 };

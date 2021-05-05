@@ -5,9 +5,9 @@ import { defaultStorybookConfig } from '../../../.storybook/docs';
 export default {
   ...defaultStorybookConfig,
   component: WebhooksPage,
-  title: `Shifter/Dashboard/Pages/Sites/Site/Dev`,
+  title: `Shifter/Dashboard/Pages/Sites/Site/Dev/Webhooks`,
 };
 
-export const Webhooks = () => {
+export const Example = () => {
   return <WebhooksPage {...fakerSiteWebhooks as any} />;
 };

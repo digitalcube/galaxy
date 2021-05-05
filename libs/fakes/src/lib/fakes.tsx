@@ -15,7 +15,15 @@ const preview = [
   'https://s0.wp.com/mshots/v1/https://stripe.com?w=160',
 ];
 
-const products = ['./product-wceu-2019-shirt.png', './product-galaxy-mug.png'];
+const products = [
+  './product-wceu-2019-shirt.png',
+  './product-galaxy-mug.png',
+  './product-amimoto-bauhaus-koozie.png',
+  './product-shifter-pin-pack.png',
+  './product-amimoto-waves-shirt.png',
+  './product-shifter-sticker-pack.png',
+  './product-amimoto-throw.png',
+];
 
 const domainState = ['pending', 'verified', 'failed', 'attached'];
 const siteState = [
@@ -171,18 +179,31 @@ export const fakerIndividualProduct = fakerGenerator({
 })[0];
 
 export const guideSchema = {
-  img: '{{image.image}}',
+  image: '{{image.image}}',
   title: '{{company.catchPhrase}}',
   description: 'This article a step-by-step guide for {{lorem.words}}',
   url: '{{internet.url}}',
   date: '{{date.recent}}',
+  schema: 'Guide',
 };
 
-export const fakerGuides = fakerGenerator({
-  schema: guideSchema,
-  min: 1,
-  max: 10,
-});
+// export const fakerGuides = fakerGenerator({
+//   schema: guideSchema,
+//   min: 1,
+//   max: 10,
+// });
+
+export const fakerGuides = [
+  {
+    date: 'Wed Apr 28 2021 00:50:15 GMT-0400 (EDT)',
+    description:
+      'This article a step-by-step guide for debitis commodi aliquam',
+    image: './latest-banner.png',
+    schema: 'Guide',
+    title: 'Reverse-engineered optimizing access',
+    url: 'https://terry.name',
+  },
+];
 
 export const fakerGuide = fakerGenerator({ schema: guideSchema })[0];
 

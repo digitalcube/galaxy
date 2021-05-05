@@ -5,9 +5,9 @@ import { defaultStorybookConfig } from '../../../.storybook/docs';
 export default {
   ...defaultStorybookConfig,
   component: DevPage,
-  title: `Shifter/Dashboard/Pages/Sites/Site`,
+  title: `Shifter/Dashboard/Pages/Sites/Site/Dev`,
 };
 
-export const Dev = () => {
+export const Example = () => {
   return <DevPage {...fakerDev} />;
 };

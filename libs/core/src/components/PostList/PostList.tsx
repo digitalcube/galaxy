@@ -27,8 +27,10 @@ export const PostList: FC<PostList> = ({ posts, schema, className }) => {
   }
 
   return (
-    <Section className="space-y-10 px-8">
-      <Section className="space-y-4">{allPostList}</Section>
+    <Section
+      className={`${className}`}
+    >
+      {allPostList}
     </Section>
   );
 };

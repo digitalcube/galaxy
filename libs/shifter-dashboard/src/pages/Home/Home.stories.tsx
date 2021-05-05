@@ -5,9 +5,9 @@ import { defaultStorybookConfig } from '../../../.storybook/docs';
 export default {
   ...defaultStorybookConfig,
   component: HomePage,
-  title: `Shifter/Dashboard/Pages/Sites/Site`,
+  title: `Shifter/Dashboard/Pages/Sites/Site/Home`,
 };
 
-export const Home = () => {
+export const Example = () => {
   return <HomePage {...fakerHome} />;
 };
