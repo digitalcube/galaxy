@@ -2,6 +2,15 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+### [0.0.13](https://github.com/digitalcube/galaxy/compare/@galaxy/core@v0.0.12...@galaxy/core@v0.0.13) (2021-05-06)
+
+
+### Bug Fixes
+
+* handle nullable parameter ([fde3086](https://github.com/digitalcube/galaxy/commit/fde3086df17075e759b4d33f5c0cef0466b8a52e))
+* resolve a circular dependencies between view and core ([c714746](https://github.com/digitalcube/galaxy/commit/c714746f5813215bb6856e36c1c22030ff3afe03))
+* typescript error (Pick the required parameter from type) ([21dffb2](https://github.com/digitalcube/galaxy/commit/21dffb21bab7142d72d7799b0310b02dfa3ea82b))
+
 ### [0.0.12](https://github.com/digitalcube/galaxy/compare/@galaxy/core@v0.0.11...@galaxy/core@v0.0.12) (2021-01-29)
 
 ### [0.0.11](https://github.com/digitalcube/galaxy/compare/@galaxy/core@v0.0.2...@galaxy/core@v0.0.11) (2021-01-29)
