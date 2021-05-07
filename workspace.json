@@ -586,6 +586,14 @@
             "jestConfig": "libs/shifter-dashboard/jest.config.js",
             "passWithNoTests": true
           }
+        },
+        "release": {
+          "executor": "@nrwl/workspace:run-commands",
+          "options": {
+            "command": "npx standard-version",
+            "cwd": "libs/shifter-dashboard",
+            "parallels": false
+          }
         }
       }
     },
@@ -635,6 +643,14 @@
           "options": {
             "jestConfig": "libs/fakes/jest.config.js",
             "passWithNoTests": true
+          }
+        },
+        "release": {
+          "executor": "@nrwl/workspace:run-commands",
+          "options": {
+            "command": "npx standard-version",
+            "cwd": "libs/shifter-dashboard",
+            "parallels": false
           }
         }
       }

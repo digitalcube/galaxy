@@ -41,8 +41,8 @@ export const SiteState: FC<SiteState> = ({
 
 export type SiteState = {
   state?: string;
+  variants?: any;
   variant?: string;
-  variants?: typeof siteState;
   className?: string;
 };
 

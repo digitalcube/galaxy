@@ -12,5 +12,6 @@ export const CardMain: FC<Card> = ({ main, className, variants = cardMain }) => 
 export type CardMain = {
   main?: ReactNode;
   className?: string;
-  variants?: typeof cardMain;
+  variants?: any;
+  variant?: string;
 };

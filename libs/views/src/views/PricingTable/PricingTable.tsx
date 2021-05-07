@@ -1,12 +1,5 @@
 import React, { FC, Fragment } from 'react';
-import {
-  css,
-  Card,
-  Heading,
-  Button,
-  FreeTierIcon,
-  Section,
-} from '@galaxy/core';
+import { css, Card, Heading, Button } from '@galaxy/core';
 import { pricingTableTheme } from './PricingTable.galaxy';
 import { CheckIcon, MinusIcon } from '@heroicons/react/solid';
 const { pricingTable } = pricingTableTheme;
@@ -132,10 +125,6 @@ export const PricingTable: FC<PricingTableProps> = ({
     },
   ];
 
-  function classNames(...classes) {
-    return classes.filter(Boolean).join(' ');
-  }
-
   return (
     <Card>
       <table className="w-full h-px table-fixed">
@@ -179,7 +168,7 @@ export const PricingTable: FC<PricingTableProps> = ({
                   {section.name}
                 </th>
               </tr>
-              {section.features.map((feature) => (
+              {/* {section.features.map((feature) => (
                 <tr key={feature.name}>
                   <th
                     className="py-5 px-6 text-shifter-purple-primary text-left"
@@ -218,7 +207,7 @@ export const PricingTable: FC<PricingTableProps> = ({
                     </td>
                   ))}
                 </tr>
-              ))}
+              ))} */}
             </Fragment>
           ))}
         </tbody>
@@ -228,7 +217,8 @@ export const PricingTable: FC<PricingTableProps> = ({
 };
 
 export type PricingTableProps = {
-  variants?: typeof pricingTable;
+  variants?: any;
+  variant?: string;
 };
 
 PricingTable.defaultProps = {

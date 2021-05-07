@@ -67,7 +67,7 @@ export type ButtonMenu = {
   children?: ReactNode;
   items?: any; // TODO: Update type to use @galaxy/core Menu[]
   className?: string;
-  variants?: typeof buttonMenu;
+  variants?: any;
   variant?: string;
   active?: boolean;
 };

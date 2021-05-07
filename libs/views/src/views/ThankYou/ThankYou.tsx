@@ -134,7 +134,8 @@ export const ThankYou: FC<ThankYouProps> = ({ variants, siteId }: ThankYouProps)
 };
 
 export type ThankYouProps = {
-  variants?: typeof thankYou;
+  variants?: any;
+  variant?: string;
   siteId?: string;
 };
 

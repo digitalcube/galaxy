@@ -1,10 +1,8 @@
 /* This example requires Tailwind CSS v2.0+ */
 import React, { FC, useState, Fragment, ReactNode } from 'react';
 import { Transition } from '@headlessui/react';
-import { Helmet } from 'react-helmet';
 
 export const Overlay: FC<Overlay> = ({
-  title,
   children,
   className,
   img,

@@ -34,8 +34,8 @@ export type FormProps = {
   children?: ReactNode;
   className?: string;
   main?: ReactNode;
+  variants?: any;
   variant?: string;
-  variants?: typeof form;
 };
 
 Form.defaultProps = {

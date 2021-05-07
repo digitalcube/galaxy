@@ -13,7 +13,8 @@ export const PostMain: FC<PostProps> = ({ main, className, variants }) => {
 export type PostMain = {
   main?: ReactNode;
   className?: string;
-  variants?: typeof postMain;
+  variants?: any;
+  variant?: string;
 };
 
 PostMain.defaultProps = {

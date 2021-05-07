@@ -17,6 +17,7 @@ export const Live: FC<Live> = ({
   team,
   items,
   progress,
+  siteId,
 }) => {
   return (
     <Dashboard header={fakerHeader}>
@@ -24,6 +25,7 @@ export const Live: FC<Live> = ({
         <Aside items={items} name={`${name}`} />
         <Main>
           <SiteOverview
+          siteId={siteId}
             name={name}
             artifact={artifact}
             publishedSiteURL={publishedSiteURL}
@@ -39,6 +41,7 @@ export const Live: FC<Live> = ({
 };
 
 export type Live = {
+  siteId: string;
   name: string;
   img?: string;
   team?: string;

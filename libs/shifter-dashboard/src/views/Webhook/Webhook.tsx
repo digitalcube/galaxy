@@ -37,7 +37,8 @@ export type Webhook = {
   title?: string;
   url?: string;
   event?: string;
-  variants?: typeof webhook;
+  variants?: any;
+  variant?: string;
   state?: 'running' | 'stopped' | 'failed' | string;
 };
 

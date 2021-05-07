@@ -36,9 +36,8 @@ export const Search: FC<SearchProps> = ({
 };
 
 export type SearchProps = {
-  variants?: typeof input;
-  //as?: 'input';
-  variant?: 'primary' | 'danger' | 'white' | 'success' | 'ghost';
+  variants?: any;
+  variant?: string;
 };
 
 Search.defaultProps = {

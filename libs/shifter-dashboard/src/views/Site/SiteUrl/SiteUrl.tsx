@@ -16,8 +16,8 @@ export const SiteUrl: FC<SiteUrl> = ({ url, variant, variants }: SiteUrl) => {
 
 export type SiteUrl = {
   url: string;
+  variants?: any;
   variant?: string;
-  variants?: typeof siteUrl;
 };
 
 SiteUrl.defaultProps = {

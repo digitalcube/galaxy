@@ -114,7 +114,8 @@ export const Success: FC<SuccessProps> = ({
 };
 
 export type SuccessProps = {
-  variants?: typeof thankYou;
+  variants?: any;
+  variant?: string;
   siteId?: string;
 };
 

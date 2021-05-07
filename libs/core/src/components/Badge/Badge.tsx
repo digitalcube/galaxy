@@ -25,8 +25,8 @@ export const Badge: FC<Badge> = ({ label, className, variant }: Badge) => {
 export type Badge = {
   className?: string;
   label?: string;
+  variants?: any;
   variant?: string;
-  variants?: typeof badge;
 };
 
 Badge.defaultProps = {

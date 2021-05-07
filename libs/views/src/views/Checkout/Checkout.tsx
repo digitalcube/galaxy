@@ -83,7 +83,8 @@ export const Checkout: FC<CheckoutProps> = ({ variants }: CheckoutProps) => {
 };
 
 export type CheckoutProps = {
-  variants?: typeof checkout;
+  variants?: any;
+  variant?: string;
 };
 
 Checkout.defaultProps = {

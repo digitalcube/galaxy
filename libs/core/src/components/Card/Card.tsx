@@ -37,8 +37,8 @@ export type Card = {
   mainClassName?: string;
   title?: string;
   description?: string;
+  variants?: any;
   variant?: string;
-  variants?: typeof card;
 };
 
 Card.defaultProps = {

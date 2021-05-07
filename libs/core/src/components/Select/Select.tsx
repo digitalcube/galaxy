@@ -116,8 +116,8 @@ export const Select: FC<Select> = ({
 };
 
 export type Select = {
+  variants?: any;
   variant?: string;
-  variants?: typeof select;
   label?: string;
   options?: string[];
   handleSelect: (option: string) => void;

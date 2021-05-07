@@ -57,8 +57,8 @@ export type HeadingProps = PropsWithChildren<{
   fontSize?: 0 | 1 | 2 | 3 | 4 | 5 | 6 | 7 | 8 | 9;
   fontWeight?: 'regular' | 'strong';
   className?: string;
+  variants?: any;
   variant?: string;
-  variants?: typeof heading;
   htmlFor?: string;
 }>;
 

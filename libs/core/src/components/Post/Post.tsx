@@ -106,8 +106,8 @@ export type PostProps = {
   title?: string;
   name?: string;
   description?: string;
+  variants?: any;
   variant?: string;
-  variants?: typeof post;
   image?: string;
   price?: string;
   schema?: string;

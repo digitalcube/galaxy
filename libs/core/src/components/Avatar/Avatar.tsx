@@ -46,8 +46,8 @@ export type AvatarProps = {
   img?: string;
   imgDefault?: string;
   name?: string;
-  variant?: typeof avatar;
-  variants?: typeof avatar;
+  variants?: any;
+  variant?: string;
   size?: number;
   menu?: boolean | ButtonMenu;
 };

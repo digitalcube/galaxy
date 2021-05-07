@@ -27,7 +27,8 @@ export const Deploys: FC<Deploys> = ({ variants, state, title, artifacts, siteId
 };
 
 export type Deploys = {
-  variants?: typeof deploys;
+  variants?: any;
+  variant?: string;
   state: string;
   title?: string;
   artifacts?: ArtifactProps[];

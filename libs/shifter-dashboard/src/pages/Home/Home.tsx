@@ -23,6 +23,7 @@ export const Home: FC<Home> = ({
   artifact,
   date,
   team,
+  siteId,
 }) => {
   return (
     <Dashboard header={fakerHeader}>
@@ -30,6 +31,7 @@ export const Home: FC<Home> = ({
         <Aside items={items} name={`${name}`} />
         <Main>
           <SiteOverview
+            siteId={siteId}
             publishedSiteURL={cloudfront}
             img={img}
             artifact={artifact}
@@ -46,6 +48,7 @@ export const Home: FC<Home> = ({
 };
 
 export type Home = {
+  siteId: string;
   artifact: string;
   cloudfront: string;
   date: string;

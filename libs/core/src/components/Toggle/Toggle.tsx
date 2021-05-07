@@ -41,8 +41,8 @@ export const Toggle: FC<Toggle> = ({ state, variants }: Toggle) => {
 
 export type Toggle = {
   state?: boolean;
-  variant?: typeof toggle;
-  variants?: typeof toggle;
+  variants?: any;
+  variant?: string;
 };
 
 Toggle.defaultProps = {

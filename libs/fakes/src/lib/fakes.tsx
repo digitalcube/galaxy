@@ -161,11 +161,10 @@ export const individualProductSchema: IndividualProduct = {
   name: '{{company.companyName}}',
   description: '{{company.companyName}}',
   url: '{{internet.url}}',
-  price: '{{commerce.price}}',
-  // offers: {
-  //   '@type': 'Offer',
-  //   price: '9.99',
-  // }
+  offers: {
+    '@type': 'Offer',
+    price: '{{commerce.price}}',
+  }
 };
 
 export const fakerProductCollection = fakerGenerator({

@@ -135,9 +135,9 @@ And you need to update the `package.json` file like this.
 $ ./scripts/publish-libraries.sh
 ```
 
-#### Publish to GitHub package registory
+#### Publish to GitHub package registry
 
-If you want to publish it to GitHub package registory, you should add a `.npmrc`
+If you want to publish it to GitHub package registry, you should add a `.npmrc`
 
 ```
 //npm.pkg.github.com/:_authToken=GITHUB_ACCESS_TOKEN
@@ -181,7 +181,7 @@ Below are our core plugins:
 
 - [React](https://reactjs.org)
   - `npm install --save-dev @nrwl/react`
-- Web (no framework frontends)
+- Web (no framework frontend)
   - `npm install --save-dev @nrwl/web`
 - [Angular](https://angular.io)
   - `npm install --save-dev @nrwl/angular`
@@ -208,7 +208,7 @@ Run `nx g @nrwl/react:lib my-lib` to generate a library.
 
 > You can also use any of the plugins above to generate libraries as well.
 
-Libraries are sharable across libraries and applications. They can be imported from `@galaxy/mylib`.
+Libraries are sharable across libraries and applications. They can be imported from `@galaxy/my-lib`.
 
 ## Development server
 

@@ -54,11 +54,11 @@ export const Artifact: FC<ArtifactProps> = ({
 export type ArtifactProps = {
   img?: string;
   name?: string;
-  variant?: string;
   state?: 'running' | 'stopped' | string;
   progress?: 0 | 1 | 2 | 3 | 4 | 5 | null;
   date?: string;
-  variants?: typeof artifact;
+  variants?: any;
+  variant?: string;
 };
 
 Artifact.defaultProps = {

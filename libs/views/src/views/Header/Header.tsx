@@ -5,9 +5,9 @@ import {
   AvatarProps,
 Post,
 } from '@galaxy/core';
-import { Brand } from 'schema-dts';
 
 export type Header = {
+  // "@type": 'Brand'
   items?: MenuItem[];
   avatar?: AvatarProps;
   main?: ReactNode;
@@ -15,7 +15,8 @@ export type Header = {
   mainClassName?: string;
   className?: string;
   brandClassName?: string;
-} & Brand;
+  logo?: string;
+};
 
 export const Header: FC<Header> = ({
   main,

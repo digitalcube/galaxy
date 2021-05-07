@@ -146,7 +146,8 @@ export const PricingPlans: FC<PricingPlansProps> = ({ variants }: PricingPlansPr
 };
 
 export type PricingPlansProps = {
-  variants?: typeof pricingPlans;
+  variants?: any;
+  variant?: string;
 };
 
 PricingPlans.defaultProps = {

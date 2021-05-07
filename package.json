@@ -3,7 +3,7 @@
   "version": "0.0.1",
   "license": "MIT",
   "scripts": {
-    "postinstall": "husky install",
+    "_postinstall": "husky install",
     "prepublishOnly": "pinst --disable",
     "postpublish": "pinst --enable",
     "nx": "nx",
@@ -41,7 +41,7 @@
     "app:test": "yarn app --target test",
     "tailwind:build": "postcss ./libs/core/src/styles/tailwind.css -o ./libs/core/src/styles/style.css"
   },
-  "private": true,
+  "private": false,
   "dependencies": {
     "@babel/core": "^7.12.3",
     "@headlessui/react": "^1.0.0",

@@ -20,8 +20,8 @@ export const Field: FC<FieldProps> = ({
 export type FieldProps = {
   className?: string;
   main?: ReactNode;
+  variants?: any;
   variant?: string;
-  variants?: typeof field;
 };
 
 Field.defaultProps = {
