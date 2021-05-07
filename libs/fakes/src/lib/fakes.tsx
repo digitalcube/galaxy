@@ -71,7 +71,7 @@ export const fakerGenerator = ({ schema, min = 1, max }: FakerGenerator) => {
       }
 
       // @ts-expect-error
-      entity[key] = faker.fake(schema[key]);
+      // entity[key] = faker.fake(schema[key]);
       return entity;
     }, {})
   );
@@ -343,7 +343,7 @@ export const swagStoreCategories = {
   ],
 };
 
-const avatar = {
+export const fakerAvatar = {
   avatar: {
     size: 9,
     name: faker.name.findName(),
@@ -355,12 +355,12 @@ const avatar = {
 
 export const fakerHeader = {
   ...dashboardHeaderMenuItems,
-  ...avatar,
+  ...fakerAvatar,
 };
 
 export const fakerSwagStoreHeader = {
   ...swagStoreHeaderMenuItems,
-  ...avatar,
+  ...fakerAvatar,
 };
 
 const dashboardSiteMenuItems = {

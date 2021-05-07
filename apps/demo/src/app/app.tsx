@@ -17,30 +17,40 @@ import { PageGuides } from './pages/Guides';
 import { PageCreateSite } from './pages/CreateSite';
 import { PageCreateTeam } from './pages/CreateTeam';
 import { PageTeams } from './pages/Teams';
+import { fakerAvatar } from '@galaxy/faker';
 
 export function App() {
   const { sites, admin, teams } = useInternalLinkBase();
+
+  const { avatar } = fakerAvatar;
+
   return (
     <ShifterDashboardThemeProvider internalLinkTag={ReactRouterLink}>
       <BrowserRouter>
         <Dashboard
           header={{
+            avatar,
+            logo: './assets/shifter-logomark.svg',
             items: [
               {
                 title: 'Home',
                 href: `/${admin}`,
+                variant: 'ghost',
               },
               {
                 title: 'Sites',
                 href: `/${admin}/${sites}`,
+                variant: 'ghost',
               },
               {
                 title: 'Teams',
                 href: `/${admin}/${teams}`,
+                variant: 'ghost',
               },
               {
                 title: 'Guides',
                 href: `/${admin}/guides`,
+                variant: 'ghost',
               },
             ],
           }}
