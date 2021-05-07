@@ -5,7 +5,7 @@ import { defaultStorybookConfig } from '../../.storybook/docs';
 export default {
   ...defaultStorybookConfig,
   component: Header,
-  title: `Shifter/Dashboard/Patterns/Dashboard/Header`,
+  title: `Galaxy/Components/Header`,
 };
 
 export const Default = () => {

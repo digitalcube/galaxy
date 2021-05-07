@@ -11,7 +11,8 @@ export const Dashboard: FC<Dashboard> = ({
     <Section className="bg-white min-h-screen">
       <Header
         {...header}
-        mainClassName="px-8 py-6"
+        className="px-8 py-6"
+        mainClassName="px-8"
         main={<Search variant="ghost" />}
         aside={
           <>

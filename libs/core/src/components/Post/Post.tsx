@@ -56,7 +56,7 @@ export const Post: FC<PostProps> = ({
         href="/"
       >
         <Image className="h-8 w-auto" img={`${image}`} />
-        <Heading fontSize={7} text="Swag Store" />
+        <Heading fontSize={7} text={`${name}`} />
       </Link>
     );
   }
