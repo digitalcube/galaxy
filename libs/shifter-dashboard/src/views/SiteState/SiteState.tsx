@@ -29,12 +29,18 @@ export const SiteState: FC<SiteState> = ({
   }
 
   const siteStateCss = css({ variant: variant, variants: siteState });
+  const siteStateLabel = ({ state }: SiteState) => {
+    if (state === 'running') return 'WordPress Running';
+    if (state === 'starting') return 'WordPress Starting...';
+    if (state === 'stopped') return 'WordPress Stopped';
+    return state;
+  };
 
   return (
     <Badge
       className={`${siteStateCss} ${className}`}
       variant={`${variant}`}
-      label={`${state}`}
+      label={`${siteStateLabel({ state: state })}`}
     />
   );
 };

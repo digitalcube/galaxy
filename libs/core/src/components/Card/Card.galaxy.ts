@@ -1,14 +1,14 @@
 export const cardTheme = {
   card: {
-    DEFAULT: ['ring', 'rounded', 'ring-shifter-gray-200'],
+    DEFAULT: ['border', 'rounded', 'border-shifter-gray-200'],
     primary: [
-      'ring',
+      'border',
       'rounded',
-      'ring-shifter-gray-200',
+      'border-shifter-gray-200',
       'flex',
-      // 'overflow-hidden',
       'shadow',
       'hover:shadow-lg',
+      'hover:border-0',
       'transition-shadow',
       'bg-white',
     ],

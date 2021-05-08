@@ -39,7 +39,6 @@ export const ButtonMenuItems: FC<ButtonMenuItems> = ({
   className,
   open,
 }) => {
-  console.log(items);
   if (!items) return null;
   const allButtonMenuItems = items.map((item, i) => {
     return <ButtonMenuItem key={i} {...item} />;

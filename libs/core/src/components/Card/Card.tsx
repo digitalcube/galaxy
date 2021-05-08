@@ -15,7 +15,7 @@ export const Card: FC<Card> = ({
   variants,
 }: Card) => {
   const cardCss = css({
-    variant: `${variant}`,
+    variant: variant,
     variants: variants,
   });
 

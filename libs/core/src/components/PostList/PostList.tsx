@@ -8,8 +8,6 @@ export type PostList = {
 };
 
 export const PostList: FC<PostList> = ({ posts, schema, className }) => {
-
-  console.log(posts);
   
   if (!posts) return null;
   if (schema === 'ProductCollection') schema = 'IndividualProduct';

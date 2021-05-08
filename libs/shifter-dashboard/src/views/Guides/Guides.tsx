@@ -3,7 +3,6 @@ import { Section, PostProps, PostList } from '@galaxy/core';
 
 export const Guides: FC<Guides> = ({ guides }) => {
   if (!guides) return null;
-  console.log(guides);
   return (
     <Section className="space-y-8">
       <PostList className="grid grid-cols-1" posts={[guides[0]]} />

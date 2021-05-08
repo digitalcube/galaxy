@@ -9,8 +9,10 @@ export const SiteUrl: FC<SiteUrl> = ({ url, variant, variants }: SiteUrl) => {
     variants: variants,
   });
 
+  const siteUrl = new URL(url).hostname;
+
   return (
-    <Heading className={`${siteUrlCss}`} text={url} variant={`${variant}`} />
+    <Heading className={`${siteUrlCss}`} text={siteUrl} variant={`${variant}`} />
   );
 };
 

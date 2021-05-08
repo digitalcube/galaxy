@@ -9,6 +9,5 @@ export default {
 };
 
 export const Default = () => {
-  console.log(fakerPostList)
   return <PostList posts={fakerPostList} />;
 };

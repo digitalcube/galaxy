@@ -1,5 +1,5 @@
 import React from 'react';
-import { fakerHeader, fakerSites } from '@galaxy/faker';
+import { fakerDashboardHeader, fakerSites } from '@galaxy/faker';
 import { SitesPage } from './SitesPage';
 import { defaultStorybookConfig } from '../../../.storybook/docs';
 export default {
@@ -9,8 +9,12 @@ export default {
 };
 
 export const Example = () => {
-  return <SitesPage {...{
-    header: fakerHeader,
-    sites: fakerSites,
-  }}/>;
+  return (
+    <SitesPage
+      {...{
+        header: fakerDashboardHeader,
+        sites: fakerSites,
+      }}
+    />
+  );
 };

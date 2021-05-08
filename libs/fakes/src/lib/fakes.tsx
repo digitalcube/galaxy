@@ -24,13 +24,7 @@ const products = [
 ];
 
 const domainState = ['pending', 'verified', 'failed', 'attached'];
-const siteState = [
-  'running',
-  'stopped',
-  'generating',
-  'starting',
-  ...domainState,
-];
+const siteState = ['running', 'stopped', 'starting'];
 // const artifactState = ['published', 'scheduled', 'ready'];
 // const subDirectoryState = [true, false];
 
@@ -315,6 +309,7 @@ export const fakerSiteWebhook = fakerGenerator({
 })[0];
 
 const dashboardHeaderMenuItems = {
+  logo: './shifter-logomark.svg',
   items: [
     { title: 'Sites', href: 'sites', variant: 'ghost' },
     { title: 'Teams', href: 'teams', variant: 'ghost' },
@@ -355,6 +350,11 @@ export const fakerAvatar = {
 };
 
 export const fakerHeader = {
+  ...dashboardHeaderMenuItems,
+  ...fakerAvatar,
+};
+
+export const fakerDashboardHeader = {
   ...dashboardHeaderMenuItems,
   ...fakerAvatar,
 };

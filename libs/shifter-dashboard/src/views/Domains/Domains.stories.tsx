@@ -9,6 +9,5 @@ export default {
 };
 
 export const Default = () => {
-  console.log(fakerSiteDomains)
   return <Domains domains={fakerSiteDomains as any} />;
 };
