@@ -19,7 +19,7 @@ export const Avatar: FC<AvatarProps> = ({
 
   img = !img ? `https://ui-avatars.com/api/?name=${name}` : img;
 
-  if (menu !== undefined) {
+  if (menu) {
     return (
       <ButtonMenu menu={menu} {...menu}>
         <Image
@@ -49,5 +49,5 @@ export type AvatarProps = {
   variants?: any;
   variant?: string;
   size?: number;
-  menu?: ButtonMenu[];
+  menu?: ButtonMenu[] | boolean;
 };

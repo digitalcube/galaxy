@@ -30,6 +30,7 @@ export type ButtonMenuItems = {
   items?: ButtonMenuItem[];
   schema?: string;
   className?: string;
+  open: boolean;
 };
 
 export const ButtonMenuItems: FC<ButtonMenuItems> = ({
@@ -41,7 +42,7 @@ export const ButtonMenuItems: FC<ButtonMenuItems> = ({
   console.log(items);
   if (!items) return null;
   const allButtonMenuItems = items.map((item, i) => {
-    return <ButtonMenuItem label="foo" key={i} {...item} />;
+    return <ButtonMenuItem key={i} {...item} />;
   });
 
   return (
