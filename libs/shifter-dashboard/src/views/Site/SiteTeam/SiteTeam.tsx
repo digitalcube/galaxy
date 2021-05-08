@@ -6,7 +6,6 @@ const { siteTeam } = siteTeamTheme;
 export const SiteTeam: FC<SiteTeam> = ({ team, className }: SiteTeam) => {
   if (!team) return null;
   const siteTeamCss = css({ variants: siteTeam });
-  console.log(siteTeamCss);
   return <Heading fontWeight="regular" fontSize={3} className={`${siteTeamCss} ${className}`} text={team} />;
 };
 

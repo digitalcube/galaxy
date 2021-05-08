@@ -29,7 +29,9 @@ export function App() {
       <BrowserRouter>
         <Dashboard
           header={{
-            avatar,
+            avatar: {
+              menu: avatar.menu
+            },
             logo: './assets/shifter-logomark.svg',
             items: [
               {

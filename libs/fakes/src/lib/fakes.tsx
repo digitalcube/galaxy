@@ -70,8 +70,6 @@ export const fakerGenerator = ({ schema, min = 1, max }: FakerGenerator) => {
         return entity;
       }
 
-      // @ts-expect-error
-      // entity[key] = faker.fake(schema[key]);
       return entity;
     }, {})
   );
@@ -164,7 +162,7 @@ export const individualProductSchema: IndividualProduct = {
   offers: {
     '@type': 'Offer',
     price: '{{commerce.price}}',
-  }
+  },
 };
 
 export const fakerProductCollection = fakerGenerator({
@@ -347,7 +345,10 @@ export const fakerAvatar = {
   avatar: {
     size: 9,
     name: faker.name.findName(),
-    menu: true,
+    menu: [
+      { label: 'Account', href: '/admin/account' },
+      { label: 'Log out', href: '/log-out' },
+    ],
     img:
       'https://images.unsplash.com/photo-1472099645785-5658abf4ff4e?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=facearea&facepad=2&w=256&h=256&q=80',
   },

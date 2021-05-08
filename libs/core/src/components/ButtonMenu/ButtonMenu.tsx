@@ -2,6 +2,7 @@ import React, { ReactNode, FC } from 'react';
 import { Menu, Transition } from '@headlessui/react';
 import Link from '../../lib/link/link';
 import { buttonMenuTheme } from './ButtonMenu.galaxy';
+import { fakerAvatar } from '@galaxy/faker';
 const { buttonMenu } = buttonMenuTheme;
 
 export type ButtonMenuItem = {
@@ -9,6 +10,7 @@ export type ButtonMenuItem = {
   active?: boolean;
   to?: string;
 };
+
 export const ButtonMenuItem: FC<ButtonMenuItem> = ({ label, active }) => {
   return (
     <Menu.Item>
@@ -24,12 +26,49 @@ export const ButtonMenuItem: FC<ButtonMenuItem> = ({ label, active }) => {
   );
 };
 
+export type ButtonMenuItems = {
+  items?: ButtonMenuItem[];
+  schema?: string;
+  className?: string;
+};
+
+export const ButtonMenuItems: FC<ButtonMenuItems> = ({
+  items,
+  schema,
+  className,
+  open,
+}) => {
+  console.log(items);
+  if (!items) return null;
+  const allButtonMenuItems = items.map((item, i) => {
+    return <ButtonMenuItem label="foo" key={i} {...item} />;
+  });
+
+  return (
+    <Transition
+      show={open}
+      className="absolute right-0 z-10"
+      enter="transition ease-out duration-100"
+      enterFrom="transform opacity-0 scale-95"
+      enterTo="transform opacity-100 scale-100"
+      leave="transition ease-in duration-75"
+      leaveFrom="transform opacity-100 scale-100"
+      leaveTo="transform opacity-0 scale-95"
+    >
+      <Menu.Items className="rounded w-56 mt-2 origin-top-right bg-white rounded-md shadow-lg outline-none overflow-hidden border-2 border-shifter-gray-300">
+        {allButtonMenuItems}
+      </Menu.Items>
+    </Transition>
+  );
+};
+
 export const ButtonMenu: FC<ButtonMenu> = ({
   variant,
   children,
   className,
   items,
   variants,
+  menu,
 }: ButtonMenu) => {
   return (
     <div className="relative text-left">
@@ -37,24 +76,7 @@ export const ButtonMenu: FC<ButtonMenu> = ({
         {({ open }) => (
           <>
             <Menu.Button className={`${className}`}>{children}</Menu.Button>
-            <Transition
-              show={open}
-              className="absolute right-0 z-10"
-              enter="transition ease-out duration-100"
-              enterFrom="transform opacity-0 scale-95"
-              enterTo="transform opacity-100 scale-100"
-              leave="transition ease-in duration-75"
-              leaveFrom="transform opacity-100 scale-100"
-              leaveTo="transform opacity-0 scale-95"
-            >
-              <Menu.Items className="rounded w-56 mt-2 origin-top-right bg-white rounded-md shadow-lg outline-none overflow-hidden border-2 border-shifter-gray-300">
-                <ButtonMenuItem label={`Account settings`} active={true} />
-                <ButtonMenuItem label={`New feature (soon)`} active={false} />
-                <ButtonMenuItem label={`Support`} active={true} />
-                <ButtonMenuItem label={`Feedback`} active={true} />
-                <ButtonMenuItem label={`Sign Out`} active={true} />
-              </Menu.Items>
-            </Transition>
+            <ButtonMenuItems items={menu} open={open} />
           </>
         )}
       </Menu>
@@ -66,6 +88,7 @@ export type ButtonMenu = {
   label?: string;
   children?: ReactNode;
   items?: any; // TODO: Update type to use @galaxy/core Menu[]
+  menu?: any; // TODO: Update type to use @galaxy/core Menu[]
   className?: string;
   variants?: any;
   variant?: string;
@@ -74,20 +97,6 @@ export type ButtonMenu = {
 
 ButtonMenu.defaultProps = {
   variants: buttonMenu,
-  children: (
-    <>
-      <span>Options</span>
-      <svg
-        className="w-5 h-5 ml-2 -mr-1"
-        viewBox="0 0 20 20"
-        fill="currentColor"
-      >
-        <path
-          fillRule="evenodd"
-          d="M5.293 7.293a1 1 0 011.414 0L10 10.586l3.293-3.293a1 1 0 111.414 1.414l-4 4a1 1 0 01-1.414 0l-4-4a1 1 0 010-1.414z"
-          clipRule="evenodd"
-        />
-      </svg>
-    </>
-  ),
+  children: 'Options',
+  menu: fakerAvatar.avatar.menu,
 };

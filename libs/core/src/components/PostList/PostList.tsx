@@ -1,6 +1,5 @@
 import React, { FC } from 'react';
-import { Section } from '@galaxy/core';
-import { Post, PostProps } from '@galaxy/core';
+import { Section, Post, PostProps } from '@galaxy/core';
 
 export type PostList = {
   posts?: PostProps[];
@@ -9,6 +8,9 @@ export type PostList = {
 };
 
 export const PostList: FC<PostList> = ({ posts, schema, className }) => {
+
+  console.log(posts);
+  
   if (!posts) return null;
   if (schema === 'ProductCollection') schema = 'IndividualProduct';
 
@@ -26,11 +28,5 @@ export const PostList: FC<PostList> = ({ posts, schema, className }) => {
     );
   }
 
-  return (
-    <Section
-      className={`${className}`}
-    >
-      {allPostList}
-    </Section>
-  );
+  return <Section className={`${className}`}>{allPostList}</Section>;
 };

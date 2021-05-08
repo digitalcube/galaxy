@@ -4,7 +4,6 @@ import { siteProgressTheme } from './SiteProgress.galaxy';
 const { siteProgress } = siteProgressTheme;
 
 export const SiteProgress: FC<SiteProgress> = ({ progress }: SiteProgress) => {
-  console.log(progress);
   if (!progress) return null;
   const siteProgressCss = css({ variants: siteProgress });
   return (
