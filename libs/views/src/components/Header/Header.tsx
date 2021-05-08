@@ -28,7 +28,12 @@ export const Header: FC<Header> = ({
       as="header"
       className={`flex flex-row items-center space-x-6 relative z-10 ${className}`}
     >
-      <Post schema="Brand" name={`${name}`} image={`${logo}`} className={`${brandClassName}`} />
+      <Post
+        schema="Brand"
+        name={`${name}`}
+        image={`${logo}`}
+        className={`${brandClassName}`}
+      />
       <div className={`flex flex-grow ${mainClassName}`}>{main}</div>
       <div className="hidden md:flex flex-row items-center space-x-6">
         {aside}
