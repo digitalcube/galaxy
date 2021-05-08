@@ -1,8 +1,6 @@
 /* eslint-disable @typescript-eslint/ban-ts-comment */
 import faker from 'faker';
 import { IndividualProduct } from 'schema-dts';
-// resolve circular depencency between view and core
-// import { AddDomain } from '@galaxy/views';
 
 const preview = [
   'https://s0.wp.com/mshots/v1/https://tailwindcss.com?w=160',
@@ -70,6 +68,8 @@ export const fakerGenerator = ({ schema, min = 1, max }: FakerGenerator) => {
         return entity;
       }
 
+      // @ts-expect-error
+      entity[key] = faker.fake(`${schema[key]}`);
       return entity;
     }, {})
   );
