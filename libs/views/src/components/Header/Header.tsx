@@ -1,5 +1,6 @@
 import React, { FC, ReactNode } from 'react';
 import { Section, MenuItem, AvatarProps, Post } from '@galaxy/core';
+import { Search } from '@galaxy/views';
 
 export type Header = {
   // "@type": 'Brand'
@@ -12,6 +13,7 @@ export type Header = {
   brandClassName?: string;
   logo?: string;
   name?: string;
+  schema?: string;
 };
 
 export const Header: FC<Header> = ({
@@ -22,7 +24,9 @@ export const Header: FC<Header> = ({
   className,
   brandClassName,
   name,
+  schema,
 }) => {
+  if (schema === 'Shifter/Dashboard') main = <Search variant="ghost" />;
   return (
     <Section
       as="header"

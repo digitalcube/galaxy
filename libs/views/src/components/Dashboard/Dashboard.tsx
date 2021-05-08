@@ -13,7 +13,8 @@ export const Dashboard: FC<Dashboard> = ({
         {...header}
         className="px-8 py-6"
         mainClassName="px-8"
-        main={<Search variant="ghost" />}
+        schema="Shifter/Dashboard"
+        // main={<Search variant="ghost" />}
         aside={
           <>
             <Menu items={header?.items} />
