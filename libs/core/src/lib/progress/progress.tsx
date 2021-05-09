@@ -14,7 +14,7 @@ export function Progress(props: ProgressProps) {
       <div className="overflow-hidden h-1 flex rounded-r">
         <div
           style={{ width: `${progress * 10}%` }}
-          className="rounded bg-gradient-to-r from-shifter-purple-primary to-shifter-magenta-primary"
+          className="rounded-r bg-gradient-to-r from-shifter-purple-primary to-shifter-magenta-primary"
         ></div>
       </div>
     </div>
