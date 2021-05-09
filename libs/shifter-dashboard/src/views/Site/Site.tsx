@@ -23,21 +23,27 @@ export const Site: FC<Site> = ({
   progress,
   teamMembers,
   siteId,
+  siteOptions,
 }: Site) => {
   const siteCss = css({ variants: site });
   return (
     <Card variant="primary" className={`${siteCss}`}>
       <SitePreview img={img} siteId={siteId} />
       <Section className="flex flex-grow flex-col">
-        <Progress progress={progress}  />
+        <Progress progress={progress} />
         <Section className="flex p-4 space-y-4 relative flex-col flex-grow">
           <Section className="flex justify-between">
             <SiteName name={name} siteId={siteId} />
             <Section className="flex items-center space-x-4">
-              <FaWordpress className="text-shifter-purple-primary" />
+              <FaWordpress className="text-shifter-purple-primary h-7 w-7" />
               <SiteState state={state} />
               <SiteManage siteId={siteId} />
-              <SiteOptions />
+              <SiteOptions
+                menu={[
+                  { label: 'Start WordPress', href: '#' },
+                  { label: 'Restart WordPress', href: '#' },
+                ]}
+              />
             </Section>
           </Section>
           <Section className="flex space-x-4 items-center" as="div">
@@ -60,4 +66,5 @@ export type Site = {
   progress: 0 | 1 | 2 | 3 | 4 | 5 | null;
   teamMembers?: SiteTeamMembers;
   siteId: string;
+  siteOptions: any;
 };

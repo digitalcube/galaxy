@@ -43,7 +43,7 @@ export const Sites: FC<Sites> = ({ sites }) => {
   }, [sites, orderCondition]);
   return (
     <Section className="space-y-10">
-      <Section className="flex flex-grow items-center space-x-10">
+      <Section className="flex flex-grow items-center space-x-6">
         <Heading text="Sites" fontSize={7} fontWeight="strong" />
         <SitesControls handleSelect={handleChangeOrder} />
       </Section>
