@@ -1,7 +1,13 @@
 export const buttonTheme = {
   button: {
-    DEFAULT: 'inline-block focus:ring-shifter-magenta-primary rounded',
+    DEFAULT: [
+      'whitespace-nowrap',
+      'inline-block',
+      'focus:ring-shifter-magenta-primary',
+      'rounded',
+    ],
     primary: [
+      'whitespace-nowrap',
       'bg-shifter-purple-primary',
       'disabled:bg-shifter-gray-200',
       'disabled:text-shifter-gray-300',
