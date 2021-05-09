@@ -13,6 +13,12 @@ const preview = [
   'https://s0.wp.com/mshots/v1/https://stripe.com?w=160',
 ];
 
+const userAvatar = [
+  'https://images.unsplash.com/photo-1472099645785-5658abf4ff4e',
+  'https://images.unsplash.com/photo-1604336732494-d8386c7029e3',
+  'https://images.unsplash.com/photo-1507331789086-893e9003c0e2',
+];
+
 const products = [
   './product-wceu-2019-shirt.png',
   './product-galaxy-mug.png',
@@ -53,7 +59,8 @@ export const fakerGenerator = ({ schema, min = 1, max }: FakerGenerator) => {
       if (key === 'avatar') {
         // @ts-expect-error
         entity['img'] =
-          'https://images.unsplash.com/photo-1472099645785-5658abf4ff4e?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=facearea&facepad=2&w=256&h=256&q=80';
+          fakerArray(userAvatar) +
+          '?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=facearea&facepad=2&w=256&h=256&q=80';
         return entity;
       }
 
@@ -155,7 +162,6 @@ export const siteSchema = {
   url: '{{internet.url}}',
   date: '{{date.recent}}',
   siteId: '{{random.uuid}}',
-  teamMembers: fakerTeamMembers,
 };
 
 export const fakerSites = fakerGenerator({

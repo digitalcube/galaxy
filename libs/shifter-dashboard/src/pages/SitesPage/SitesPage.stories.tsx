@@ -1,5 +1,9 @@
 import React from 'react';
-import { fakerDashboardHeader, fakerSites } from '@galaxy/faker';
+import {
+  fakerDashboardHeader,
+  fakerSites,
+  fakerTeamMembers,
+} from '@galaxy/faker';
 import { SitesPage } from './SitesPage';
 import { defaultStorybookConfig } from '../../../.storybook/docs';
 export default {
@@ -9,6 +13,8 @@ export default {
 };
 
 export const Example = () => {
+  // console.log(fakerTeamMembers);
+  console.log(fakerSites);
   return (
     <SitesPage
       {...{

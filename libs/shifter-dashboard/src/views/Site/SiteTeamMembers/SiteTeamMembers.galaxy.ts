@@ -1,5 +1,5 @@
 export const siteTeamMembersTheme = {
   siteTeamMembers: {
-    DEFAULT: ['-space-x-2', 'flex-initial', 'flex', 'flex-row'],
+    DEFAULT: ['-space-x-4', 'relative', 'flex', 'z-0', 'overview-hidden'],
   },
 };
