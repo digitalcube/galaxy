@@ -13,8 +13,6 @@ export default {
 };
 
 export const Example = () => {
-  // console.log(fakerTeamMembers);
-  console.log(fakerSites);
   return (
     <SitesPage
       {...{
