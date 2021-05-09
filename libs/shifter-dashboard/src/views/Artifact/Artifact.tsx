@@ -4,10 +4,9 @@ import {
   ArtifactCreationDate,
   ArtifactName,
   ArtifactPreview,
-  ArtifactProgress,
   ArtifactOptions,
 } from '@galaxy/shifter-dashboard';
-import { Section, Card, css } from '@galaxy/core';
+import { Section, Card, Progress, css } from '@galaxy/core';
 import { artifactTheme } from './Artifact.galaxy';
 const { artifact } = artifactTheme;
 
@@ -29,7 +28,7 @@ export const Artifact: FC<ArtifactProps> = ({
         <>
           <ArtifactPreview img={img} />
           <Section as="div" className="flex-grow">
-            <ArtifactProgress progress={progress} variant={variant} />
+            <Progress progress={progress} />
             <Section className="p-4 space-y-4">
               <Section className="flex" as="div">
                 <Section className="flex-auto">
