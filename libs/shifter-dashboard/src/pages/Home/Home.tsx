@@ -1,6 +1,6 @@
 import React, { FC } from 'react';
 import { Section, MenuItems } from '@galaxy/core';
-import { fakerHeader } from '@galaxy/faker';
+import { fakerHeader, fakerArtifacts } from '@galaxy/faker';
 
 import { Dashboard, Main } from '@galaxy/views';
 import {
@@ -40,7 +40,7 @@ export const Home: FC<Home> = ({
             progress={progress}
             team={team}
           />
-          <Deploys state={`${state}`} />
+          <Deploys artifacts={fakerArtifacts} state={`${state}`} />
         </Main>
       </Section>
     </Dashboard>
