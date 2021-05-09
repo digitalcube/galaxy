@@ -55,7 +55,7 @@ export const ButtonMenuItems: FC<ButtonMenuItems> = ({
       leaveFrom="transform opacity-100 scale-100"
       leaveTo="transform opacity-0 scale-95"
     >
-      <Menu.Items className="rounded w-56 mt-2 origin-top-right bg-white rounded-md shadow-lg outline-none overflow-hidden border-2 border-shifter-gray-300">
+      <Menu.Items className="rounded w-56 mt-2 origin-top-right bg-white rounded-md shadow-lg outline-none overflow-hidden border-2 border-shifter-gray-200">
         {allButtonMenuItems}
       </Menu.Items>
     </Transition>
