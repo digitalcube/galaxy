@@ -50,6 +50,13 @@ export const fakerGenerator = ({ schema, min = 1, max }: FakerGenerator) => {
         return entity;
       }
 
+      if (key === 'avatar') {
+        // @ts-expect-error
+        entity['img'] =
+          'https://images.unsplash.com/photo-1472099645785-5658abf4ff4e?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=facearea&facepad=2&w=256&h=256&q=80';
+        return entity;
+      }
+
       if (key === 'img') {
         // @ts-expect-error
         entity[key] = fakerArray(preview);
@@ -89,27 +96,6 @@ const dashboardSiteControlSubDirectory = {
   },
 };
 
-export const siteSchema = {
-  artifact: '{{random.uuid}}',
-  cloudfront: '{{internet.url}}',
-  img: '{{image.image}}',
-  name: '{{company.companyName}}',
-  progress: 'progress',
-  state: 'state',
-  team: '{{company.companyName}}',
-  url: '{{internet.url}}',
-  date: '{{date.recent}}',
-  siteId: '{{random.uuid}}',
-};
-
-export const fakerSites = fakerGenerator({
-  schema: siteSchema,
-  min: 1,
-  max: 10,
-});
-
-export const fakerSite = fakerGenerator({ schema: siteSchema })[0];
-
 export const teamSchema = {
   artifact: '{{random.uuid}}',
   cloudfront: '{{internet.url}}',
@@ -129,6 +115,56 @@ export const fakerTeams = fakerGenerator({
 });
 
 export const fakerTeam = fakerGenerator({ schema: teamSchema })[0];
+
+export const siteTeamMemberSchema = {
+  avatar:
+    'https://images.unsplash.com/photo-1472099645785-5658abf4ff4e?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=facearea&facepad=2&w=256&h=256&q=80',
+  name: '{{name.findName}}',
+};
+
+export const fakerSiteTeamMembers = fakerGenerator({
+  schema: siteTeamMemberSchema,
+  min: 1,
+  max: 5,
+});
+
+export const teamMemberSchema = {
+  img:
+    'https://images.unsplash.com/photo-1472099645785-5658abf4ff4e?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=facearea&facepad=2&w=256&h=256&q=80',
+  name: '{{name.findName}}',
+};
+
+export const fakerTeamMembers = fakerGenerator({
+  schema: teamMemberSchema,
+  min: 1,
+  max: 5,
+});
+
+export const fakerSiteMember = fakerGenerator({
+  schema: teamMemberSchema,
+})[0];
+
+export const siteSchema = {
+  artifact: '{{random.uuid}}',
+  cloudfront: '{{internet.url}}',
+  img: '{{image.image}}',
+  name: '{{company.companyName}}',
+  progress: 'progress',
+  state: 'state',
+  team: '{{company.companyName}}',
+  url: '{{internet.url}}',
+  date: '{{date.recent}}',
+  siteId: '{{random.uuid}}',
+  teamMembers: fakerTeamMembers,
+};
+
+export const fakerSites = fakerGenerator({
+  schema: siteSchema,
+  min: 1,
+  max: 10,
+});
+
+export const fakerSite = fakerGenerator({ schema: siteSchema })[0];
 
 export const postSchema = {
   img: '{{image.image}}', // deprecated
@@ -197,34 +233,6 @@ export const fakerGuides = [
 ];
 
 export const fakerGuide = fakerGenerator({ schema: guideSchema })[0];
-
-export const siteTeamMemberSchema = {
-  img:
-    'https://images.unsplash.com/photo-1472099645785-5658abf4ff4e?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=facearea&facepad=2&w=256&h=256&q=80',
-  name: '{{name.findName}}',
-};
-
-export const fakerSiteTeamMembers = fakerGenerator({
-  schema: siteTeamMemberSchema,
-  min: 1,
-  max: 5,
-});
-
-export const teamMemberSchema = {
-  img:
-    'https://images.unsplash.com/photo-1472099645785-5658abf4ff4e?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=facearea&facepad=2&w=256&h=256&q=80',
-  name: '{{name.findName}}',
-};
-
-export const fakerTeamMembers = fakerGenerator({
-  schema: teamMemberSchema,
-  min: 1,
-  max: 5,
-});
-
-export const fakerSiteMember = fakerGenerator({
-  schema: teamMemberSchema,
-})[0];
 
 export const artifactSchema = {
   artifact: '{{random.uuid}}',

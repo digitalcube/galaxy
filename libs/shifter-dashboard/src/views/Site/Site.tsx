@@ -9,6 +9,7 @@ import {
   SiteOptions,
   SiteManage,
 } from '@galaxy/shifter-dashboard';
+import { FaWordpress } from 'react-icons/fa';
 import { SiteState } from '@galaxy/shifter-dashboard';
 import { Section, Card, css } from '@galaxy/core';
 import { siteTheme } from './Site.galaxy';
@@ -33,7 +34,8 @@ export const Site: FC<Site> = ({
         <Section className="flex p-4 space-y-4 relative flex-col flex-grow">
           <Section className="flex justify-between">
             <SiteName name={name} siteId={siteId} />
-            <Section className="flex items-center space-x-2">
+            <Section className="flex items-center space-x-4">
+              <FaWordpress className="text-shifter-purple-primary" />
               <SiteState state={state} />
               <SiteManage siteId={siteId} />
               <SiteOptions />
@@ -41,7 +43,7 @@ export const Site: FC<Site> = ({
           </Section>
           <Section className="flex space-x-4 items-center" as="div">
             <SiteUrl url={`${url}`} />
-            {teamMembers ? <SiteTeamMembers {...teamMembers} />: null}
+            {teamMembers ? <SiteTeamMembers {...teamMembers} /> : null}
             <SiteTeam team={`${team}`} />
           </Section>
         </Section>

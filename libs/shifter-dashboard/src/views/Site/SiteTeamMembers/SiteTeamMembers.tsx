@@ -1,29 +1,20 @@
-import React, { FC } from 'react';
-import { Avatar, Section, css, AvatarProps } from '@galaxy/core';
-import { fakerSiteTeamMembers } from '@galaxy/faker';
-import { siteTeamMembersTheme } from './SiteTeamMembers.galaxy';
-const { siteTeamMembers } = siteTeamMembersTheme;
+import React, { FC } from "react";
+import { Section, Avatar, AvatarProps } from "@galaxy/core";
+
+export type SiteTeamMembers = {
+  members?: AvatarProps[];
+  className?: string;
+};
 
 export const SiteTeamMembers: FC<SiteTeamMembers> = ({
   members,
-  classNames,
-}: SiteTeamMembers) => {
-  const siteTeamMembersCss = css({ variants: siteTeamMembers });
+  className,
+}) => {
+  if (!members) return null;
 
-  return (
-    <Section className={`${siteTeamMembersCss} ${classNames}`}>
-      {members.map((member, i) => {
-        return <Avatar key={i} {...member} />;
-      })}
-    </Section>
-  );
-};
+  const allSiteTeamMembers = members.map((member, i) => {
+    return <Avatar key={i} {...member} />;
+  }); 
 
-export type SiteTeamMembers = {
-  members: AvatarProps[];
-  classNames?: string;
-};
-
-SiteTeamMembers.defaultProps = {
-  members: fakerSiteTeamMembers,
+  return <Section className={`${className}`}>{allSiteTeamMembers}</Section>;
 };
