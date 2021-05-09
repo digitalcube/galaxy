@@ -28,7 +28,9 @@ export const Aside: FC<AsideProps> = ({ items, name, subHeading }) => {
         </Section>
         <Section className="space-y-4">
           <Heading fontSize={6} text={name} fontWeight="strong" />
-          <Section>{subHeading}</Section>
+          <Section>
+            {subHeading}
+          </Section>
         </Section>
       </Panel>
       <Panel>
@@ -41,5 +43,5 @@ export const Aside: FC<AsideProps> = ({ items, name, subHeading }) => {
 export type AsideProps = {
   name: string;
   items: MenuItems;
-  subHeading?: ReactNode;
+  subHeading?: ReactNode
 };

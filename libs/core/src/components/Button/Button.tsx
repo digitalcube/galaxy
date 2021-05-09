@@ -13,7 +13,7 @@ export const Button: FC<Button> = ({
   variants,
   href,
 }: Button) => {
-  if (!label) return null;
+  if (!label && !children) return null;
 
   const classNames = css({
     variant: variant,
@@ -56,6 +56,5 @@ Button.defaultProps = {
   variants: button,
   variant: 'primary',
   as: 'button',
-  label: 'Button',
   className: '',
 };
