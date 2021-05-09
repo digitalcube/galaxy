@@ -380,12 +380,12 @@ export const fakerSwagStoreHeader = {
 
 const dashboardSiteMenuItems = {
   items: [
-    { title: 'Home', href: 'home' },
-    { title: 'Live', href: 'live' },
-    { title: 'Staging', href: 'staging' },
-    { title: 'Dev', href: 'dev' },
-    { title: 'Team', href: 'team' },
-    { title: 'Settings', href: 'settings' },
+    { title: 'Home', href: 'home', variant: 'ghost' },
+    { title: 'Live', href: 'live', variant: 'ghost' },
+    { title: 'Staging', href: 'staging', variant: 'ghost' },
+    { title: 'Dev', href: 'dev', variant: 'ghost' },
+    { title: 'Team', href: 'team', variant: 'ghost' },
+    { title: 'Settings', href: 'settings', variant: 'ghost' },
   ],
 };
 
