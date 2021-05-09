@@ -8,7 +8,7 @@ export const cardTheme = {
       'flex',
       'shadow',
       'hover:shadow-lg',
-      'hover:border-0',
+      'hover:border-transparent',
       'transition-shadow',
       'bg-white',
     ],
