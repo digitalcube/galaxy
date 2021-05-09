@@ -6,7 +6,7 @@ import { ArtifactProps } from '../Artifact/Artifact';
 export const Artifacts: FC<Artifacts> = ({ artifacts, title, description }) => {
   return (
     <Section className="space-y-10">
-      {artifacts ? (
+      {artifacts.length > 0 ? (
         <Section className="space-y-4">
           {artifacts.map((artifact, i) => {
             return <Artifact key={i} {...artifact} />;
