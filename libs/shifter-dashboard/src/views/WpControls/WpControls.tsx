@@ -5,7 +5,7 @@ import { Play, Refresh } from 'heroicons-react';
 
 export const WpControls: FC<WpControls> = ({ state, siteId }: WpControls) => {
   return (
-    <Section className="flex flex-row items-center justify-between border-b pb-6 border-shifter-gray-200">
+    <Section className="flex flex-row items-center justify-between border-b pb-4 border-shifter-gray-200">
       <Section className="flex flex-row items-center space-x-4 divide-x">
         <SiteState state={`${state}`} />
         <div className="flex flex-row items-center space-x-4 pl-4">

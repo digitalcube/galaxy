@@ -7,22 +7,26 @@ import { AutoPublish } from '../AutoPublish';
 import { ArtifactProps } from '../Artifact';
 const { deploys } = deploysTheme;
 
-export const Deploys: FC<Deploys> = ({ variants, state, title, artifacts, siteId }) => {
+export const Deploys: FC<Deploys> = ({
+  variants,
+  state,
+  title,
+  artifacts,
+  siteId,
+}) => {
   const deploysCss = css({ variants: variants });
 
   return (
-    <Card
-      main={
-        <Section className={`${deploysCss}`}>
-          <WpControls state={`${state}`} siteId={`${siteId}`} />
-          <Section className="flex flex-row space-x-6 justify-between">
-            <Heading fontSize={5} fontWeight="strong" text={title} />
-            <AutoPublish />
-          </Section>
-          <Artifacts artifacts={artifacts} />
+    <Card className="p-4">
+      <Section className={`${deploysCss}`}>
+        <WpControls state={`${state}`} siteId={`${siteId}`} />
+        <Section className="flex flex-row space-x-6 justify-between">
+          <Heading fontSize={5} fontWeight="strong" text={title} />
+          <AutoPublish />
         </Section>
-      }
-    ></Card>
+        <Artifacts artifacts={artifacts} />
+      </Section>
+    </Card>
   );
 };
 
