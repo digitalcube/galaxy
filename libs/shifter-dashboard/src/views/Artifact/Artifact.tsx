@@ -23,9 +23,9 @@ export const Artifact: FC<ArtifactProps> = ({
   const artifactCss = css({ variants: variants });
   return (
     <Card variant="primary" className={`${artifactCss}`}>
+      <Progress className="absolute w-full top-0 right-0" progress={progress} />
       <ArtifactPreview img={img} />
       <Section as="div" className="flex-grow justify-between flex flex-col">
-        <Progress progress={progress} />
         <Section className="px-4">
           <Section className="flex items-center" as="div">
             <Section className="flex-auto">

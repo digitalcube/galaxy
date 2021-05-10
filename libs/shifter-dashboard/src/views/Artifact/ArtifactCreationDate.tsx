@@ -9,7 +9,7 @@ export const ArtifactCreationDate: FC<ArtifactCreationDate> = ({
   return (
     <>
       {label ? <Heading className="sr-only" text={label} /> : null}
-      <Heading text={publishedDate({ date })} />
+      <Heading fontSize={2} text={publishedDate({ date })} />
     </>
   );
 };
