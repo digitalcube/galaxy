@@ -3,11 +3,7 @@ import { MenuItems } from '@galaxy/core';
 import { fakerArtifacts, fakerHome } from '@galaxy/faker';
 import { Main } from '@galaxy/views';
 
-import {
-  Deploys,
-  SiteOverview,
-  ProgressValue,
-} from '@galaxy/shifter-dashboard';
+import { Deploys, SiteOverview } from '@galaxy/shifter-dashboard';
 
 const usePageOverview = () => {
   return (fakerHome as any) as PageOverviewProps;
@@ -49,7 +45,7 @@ export type PageOverviewProps = {
   img: string;
   items: MenuItems;
   name: string;
-  progress: ProgressValue;
+  progress: SiteOverview;
   state: string;
   team?: string;
   siteId?: string;

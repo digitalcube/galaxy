@@ -4,8 +4,8 @@ import {
   ArtifactCreationDate,
   ArtifactName,
   ArtifactPreview,
-  ArtifactOptions,
 } from '@galaxy/shifter-dashboard';
+import { OptionsMenu } from '@galaxy/views';
 import { Section, Card, Progress, css } from '@galaxy/core';
 import { artifactTheme } from './Artifact.galaxy';
 const { artifact } = artifactTheme;
@@ -18,35 +18,28 @@ export const Artifact: FC<ArtifactProps> = ({
   progress,
   date,
   variants,
+  options,
 }) => {
   const artifactCss = css({ variants: variants });
   return (
-    <Card
-      variant="primary"
-      mainClassName={`${artifactCss}`}
-      main={
-        <>
-          <ArtifactPreview img={img} />
-          <Section as="div" className="flex-grow">
-            <Progress progress={progress} />
-            <Section className="p-4 space-y-4">
-              <Section className="flex" as="div">
-                <Section className="flex-auto">
-                  <ArtifactName variant={variant} name={name} />
-                </Section>
-                <Section as="span" className="space-x-2 flex items-center">
-                  <ArtifactState state={state} />
-                  <ArtifactOptions />
-                </Section>
-              </Section>
-              <Section as="div">
-                <ArtifactCreationDate date={date} />
-              </Section>
+    <Card variant="primary" className={`${artifactCss}`}>
+      <ArtifactPreview img={img} />
+      <Section as="div" className="flex-grow justify-between flex flex-col">
+        <Progress progress={progress} />
+        <Section className="px-4">
+          <Section className="flex items-center" as="div">
+            <Section className="flex-auto">
+              <ArtifactName variant={variant} name={name} />
+              <ArtifactCreationDate date={date} />
+            </Section>
+            <Section as="span" className="flex items-center space-x-4">
+              <ArtifactState state={state} />
+              <OptionsMenu menu={options} />
             </Section>
           </Section>
-        </>
-      }
-    />
+        </Section>
+      </Section>
+    </Card>
   );
 };
 
@@ -58,8 +51,14 @@ export type ArtifactProps = {
   date?: string;
   variants?: any;
   variant?: string;
+  options?: any;
 };
 
 Artifact.defaultProps = {
   variants: artifact,
+  options: [
+    { label: 'Publish', href: '#' },
+    { label: 'Delete', href: '#' },
+    { label: 'More Details', href: '#' },
+  ],
 };

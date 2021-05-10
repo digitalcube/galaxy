@@ -31,7 +31,14 @@ const products = [
 
 const domainState = ['pending', 'verified', 'failed', 'attached'];
 const siteState = ['running', 'stopped', 'starting'];
-const artifactState = ['published', 'scheduled', 'ready'];
+const artifactState = [
+  'published',
+  'building',
+  'deploying',
+  'scheduled',
+  'ready',
+  'faked',
+];
 // const subDirectoryState = [true, false];
 
 export type FakerGenerator = {
@@ -44,18 +51,15 @@ export const fakerGenerator = ({ schema, min = 1, max }: FakerGenerator) => {
   max = max || min;
   return Array.from({ length: faker.random.number({ min, max }) }).map(() =>
     Object.keys(schema).reduce((entity, key) => {
-
-      if (key === 'artifactState') {
-        
+      if (key === 'state') {
         // @ts-expect-error
-        entity[key] = fakerArray(artifactState);
+        entity[key] = fakerArray(siteState);
         return entity;
       }
 
-      if (key === 'state') {
-        
+      if (key === 'artifactState') {
         // @ts-expect-error
-        entity[key] = fakerArray(siteState);
+        entity['state'] = fakerArray(artifactState);
         return entity;
       }
 

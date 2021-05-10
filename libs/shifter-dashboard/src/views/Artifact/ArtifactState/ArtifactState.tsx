@@ -10,24 +10,29 @@ export const ArtifactState: FC<ArtifactState> = ({
   variants,
   variant,
 }: ArtifactState) => {
-  if (state === 'running') {
+  if (state === 'scheduled') {
     variant = 'success';
+    title = 'Scheduled';
   }
 
-  if (state === 'generating') {
+  if (state === 'published') {
     variant = 'active';
+    title = 'Published';
   }
 
-  if (state === 'pending') {
+  if (state === 'deploying') {
     variant = 'warning';
+    title = 'Deploying';
   }
 
-  if (state === 'verified') {
-    variant = 'verified';
+  if (state === 'ready') {
+    variant = 'success';
+    title = 'Ready';
   }
 
   if (state === 'failed') {
     variant = 'danger';
+    title = 'Failed';
   }
 
   title = title ? title : state;

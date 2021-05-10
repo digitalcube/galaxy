@@ -1,5 +1,5 @@
 import React, { FC } from 'react';
-import { Heading, publishedDate, Section } from '@galaxy/core';
+import { Heading, publishedDate } from '@galaxy/core';
 
 export const ArtifactCreationDate: FC<ArtifactCreationDate> = ({
   date,
@@ -7,10 +7,10 @@ export const ArtifactCreationDate: FC<ArtifactCreationDate> = ({
 }: ArtifactCreationDate) => {
   if (!date) return null;
   return (
-    <Section className="space-y-2">
+    <>
       {label ? <Heading className="sr-only" text={label} /> : null}
       <Heading text={publishedDate({ date })} />
-    </Section>
+    </>
   );
 };
 
