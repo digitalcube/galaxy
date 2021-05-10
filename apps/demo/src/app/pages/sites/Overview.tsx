@@ -1,5 +1,5 @@
 import React, { FC } from 'react';
-import { MenuItems } from '@galaxy/core';
+import { MenuItems, ProgressProps } from '@galaxy/core';
 import { fakerArtifacts, fakerHome } from '@galaxy/faker';
 import { Main } from '@galaxy/views';
 
@@ -45,7 +45,7 @@ export type PageOverviewProps = {
   img: string;
   items: MenuItems;
   name: string;
-  progress: SiteOverview;
+  progress: ProgressProps;
   state: string;
   team?: string;
   siteId?: string;

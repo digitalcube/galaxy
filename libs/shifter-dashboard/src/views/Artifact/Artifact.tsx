@@ -34,7 +34,13 @@ export const Artifact: FC<ArtifactProps> = ({
             </Section>
             <Section as="span" className="flex items-center space-x-4">
               <ArtifactState state={state} />
-              <OptionsMenu menu={options} />
+              <OptionsMenu
+                menu={[
+                  { label: 'Publish', href: '#' },
+                  { label: 'Delete', href: '#' },
+                  { label: 'More Details', href: '#' },
+                ]}
+              />
             </Section>
           </Section>
         </Section>
@@ -56,9 +62,4 @@ export type ArtifactProps = {
 
 Artifact.defaultProps = {
   variants: artifact,
-  options: [
-    { label: 'Publish', href: '#' },
-    { label: 'Delete', href: '#' },
-    { label: 'More Details', href: '#' },
-  ],
 };

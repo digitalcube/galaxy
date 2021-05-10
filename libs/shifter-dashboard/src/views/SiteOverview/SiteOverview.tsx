@@ -30,10 +30,8 @@ export const SiteOverview: FC<SiteOverview> = ({
       <Section className="flex pb-4 px-4">
         <SitePreview img={img} siteId={siteId} />
         <Section as="div" className="px-8 space-y-4">
+          <Heading fontSize={5} fontWeight="strong" text="Site Name" />
           <Section>
-            <Heading fontSize={5} fontWeight="strong" text="Site Name" />
-          </Section>
-          <Section className="space-y-1">
             <CdnUrl url={`${publishedSiteURL}`} />
             <Section className="flex space-x-4" as="div">
               <PublishDate date={date} />
