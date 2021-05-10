@@ -4,7 +4,7 @@ import { FaCopy } from 'react-icons/fa';
 
 export const ArtifactId: FC<ArtifactId> = ({ artifact }: ArtifactId) => {
   return (
-    <Section className="space-x-2">
+    <Section className="space-x-2 flex items-center">
       <Heading className="inline" fontSize={2} fontWeight="strong" text="ID:" />
       <Link href={artifact}>
         <Heading
@@ -13,7 +13,7 @@ export const ArtifactId: FC<ArtifactId> = ({ artifact }: ArtifactId) => {
           fontSize={2}
           text={artifact}
         />
-        <FaCopy className="text-shifter-purple-primary h-7 w-7" />
+        <FaCopy className="inline text-shifter-purple-primary text-size-2" />
       </Link>
     </Section>
   );
