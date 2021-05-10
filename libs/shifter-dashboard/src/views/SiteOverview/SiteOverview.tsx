@@ -1,32 +1,42 @@
 import React, { FC } from 'react';
-import { Section, Card } from '@galaxy/core';
+import { Section, Card, ProgressProps, Heading } from '@galaxy/core';
 import {
-  ArtifactId,
   CdnUrl,
   PublishDate,
   SiteOverviewTeam,
-  SitePreview,ProgressValue,
+  SitePreview,
+  ArtifactId,
 } from '@galaxy/shifter-dashboard';
 
 export const SiteOverview: FC<SiteOverview> = ({
-  artifact,
   publishedSiteURL,
   img,
   date,
   team,
   siteId,
+  artifact,
 }: SiteOverview) => {
   return (
-    // TODO: Update this to the new Card format
-    <Card footer={<SiteOverviewTeam team={`${team}`} />}>
-      <Section className="flex">
+    <Card
+      title="Live Site"
+      footerClassName="flex justify-between"
+      footer={
+        <>
+          <SiteOverviewTeam team={`${team}`} />{' '}
+          <ArtifactId artifact={`${artifact}`} />{' '}
+        </>
+      }
+    >
+      <Section className="flex pb-4 px-4">
         <SitePreview img={img} siteId={siteId} />
-        <Section as="div" className="px-8">
-          <Section className="space-y-4">
+        <Section as="div" className="px-8 space-y-4">
+          <Section>
+            <Heading fontSize={5} fontWeight="strong" text="Site Name" />
+          </Section>
+          <Section className="space-y-1">
             <CdnUrl url={`${publishedSiteURL}`} />
             <Section className="flex space-x-4" as="div">
               <PublishDate date={date} />
-              <ArtifactId artifact={`${artifact}`} />
             </Section>
           </Section>
         </Section>
@@ -41,7 +51,7 @@ export type SiteOverview = {
   team?: string;
   artifact: string;
   publishedSiteURL: string;
-  progress: ProgressValue;
+  progress: ProgressProps;
   date: string;
   siteId: string;
 };

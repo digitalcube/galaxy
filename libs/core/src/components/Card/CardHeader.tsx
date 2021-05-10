@@ -18,5 +18,5 @@ export const CardDescription: FC<Card> = ({ description }: Card) => {
 
 export const CardTitle: FC<Card> = ({ title }: Card) => {
   if (!title) return null;
-  return <Heading fontSize={6} fontWeight="strong" text={title} />;
+  return <Heading fontSize={5} fontWeight="strong" text={title} />;
 };

@@ -1,12 +1,16 @@
 import React, { FC } from 'react';
-import { Heading, Section } from '@galaxy/core';
+import { Heading, Link } from '@galaxy/core';
 
 export const CdnUrl: FC<CdnUrl> = ({ url, name }: CdnUrl) => {
+  const cdnURL = new URL(`${url}`).hostname;
+
   return (
-    <Section className="space-y-2">
+    <>
       <Heading className="sr-only" text={name} />
-      <Heading text={url} />
-    </Section>
+      <Link href={url}>
+        <Heading variant="link" fontWeight="strong" text={cdnURL} />
+      </Link>
+    </>
   );
 };
 

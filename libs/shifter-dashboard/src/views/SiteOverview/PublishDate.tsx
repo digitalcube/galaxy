@@ -3,9 +3,11 @@ import { Heading, publishedDate, Section } from '@galaxy/core';
 
 export const PublishDate: FC<PublishDate> = ({ date, label }: PublishDate) => {
   return (
-    <Section className="space-y-2">
-      {label ? <Heading className="font-strong" text={label} /> : null}
-      <Heading text={publishedDate({ date })} />
+    <Section>
+      <Heading
+        fontSize={3}
+        text={label + ' ' + publishedDate({ date })}
+      />
     </Section>
   );
 };

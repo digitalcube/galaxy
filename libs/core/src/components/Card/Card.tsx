@@ -13,6 +13,7 @@ export const Card: FC<Card> = ({
   title,
   variant,
   variants,
+  footerClassName
 }: Card) => {
   const cardCss = css({
     variant: variant,
@@ -24,7 +25,7 @@ export const Card: FC<Card> = ({
       {title ? <CardHeader title={title} description={description} /> : null}
       {main ? <CardMain className={`${mainClassName}`} main={main} /> : null}
       {children}
-      <CardFooter footer={footer} />
+      <CardFooter className={footerClassName} footer={footer} />
     </Section>
   );
 };
@@ -35,6 +36,7 @@ export type Card = {
   footer?: ReactNode;
   main?: ReactNode;
   mainClassName?: string;
+  footerClassName?: string;
   title?: string;
   description?: string;
   variants?: any;
