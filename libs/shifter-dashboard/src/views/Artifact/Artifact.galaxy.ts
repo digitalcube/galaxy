@@ -1,5 +1,5 @@
 export const artifactTheme = {
   artifact: {
-    DEFAULT: ['flex', 'flex-grow', 'px-4', 'py-2', 'relative' ],
+    DEFAULT: ['flex', 'flex-grow', 'relative' ],
   },
 };

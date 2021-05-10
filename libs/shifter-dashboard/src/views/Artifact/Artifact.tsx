@@ -26,7 +26,7 @@ export const Artifact: FC<ArtifactProps> = ({
       <Progress className="absolute w-full top-0 right-0" progress={progress} />
       <ArtifactPreview img={img} />
       <Section as="div" className="flex-grow justify-between flex flex-col">
-        <Section className="px-4">
+        <Section className="px-4 py-2">
           <Section className="flex items-center" as="div">
             <Section className="flex-auto">
               <ArtifactName variant={variant} name={name} />
