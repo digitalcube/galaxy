@@ -1,8 +1,8 @@
 import React, { FC } from 'react';
-import { MenuItems } from '@galaxy/core';
+import { MenuItems, ProgressProps } from '@galaxy/core';
 import { fakerHome } from '@galaxy/faker';
 import { Main } from '@galaxy/views';
-import { SiteOverview, ProgressValue } from '@galaxy/shifter-dashboard';
+import { SiteOverview } from '@galaxy/shifter-dashboard';
 
 const usePageOverview = () => {
   return (fakerHome as any) as PageLiveOverviewProps;
@@ -42,7 +42,7 @@ export type PageLiveOverviewProps = {
   img: string;
   items: MenuItems;
   name: string;
-  progress: ProgressValue;
+  progress: ProgressProps;
   state: string;
   team?: string;
   siteId: string;
