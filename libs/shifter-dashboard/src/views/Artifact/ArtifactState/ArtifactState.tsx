@@ -26,8 +26,13 @@ export const ArtifactState: FC<ArtifactState> = ({
   }
 
   if (state === 'ready') {
-    variant = 'success';
+    variant = 'active';
     title = 'Ready';
+  }
+
+  if (state === 'building') {
+    variant = 'success';
+    title = 'Building';
   }
 
   if (state === 'failed') {

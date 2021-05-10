@@ -37,7 +37,7 @@ const artifactState = [
   'deploying',
   'scheduled',
   'ready',
-  'faked',
+  'failed',
 ];
 // const subDirectoryState = [true, false];
 
