@@ -10,7 +10,6 @@ export const inputTheme = {
       'hover:bg-shifter-purple-600',
       'px-4',
       'py-2',
-      'text-white',
       'flex',
       'items-center',
     ],
