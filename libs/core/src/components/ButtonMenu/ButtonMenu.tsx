@@ -7,13 +7,15 @@ export type ButtonMenuItem = {
   label?: string;
   active?: boolean;
   href?: string;
+  onClick?: React.MouseEventHandler<HTMLSpanElement>;
 };
 
-export const ButtonMenuItem: FC<ButtonMenuItem> = ({ label, active, href }) => {
+export const ButtonMenuItem: FC<ButtonMenuItem> = ({ label, active, href, onClick }) => {
   if (!href) {
     return (
       <Menu.Item>
         <span
+          onClick={onClick}
           className={`${
             active ? 'bg-white text-shifter-purple-700' : 'text-shifter-gray-700'
           } flex justify-between w-full px-4 py-2 text-sm leading-5 text-left cursor-pointer`}

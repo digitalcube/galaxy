@@ -1,4 +1,4 @@
-import React, { FC } from 'react';
+import React, { FC, useCallback, useState } from 'react';
 import {
   SiteTeamMembers,
   SiteTeam,
@@ -14,6 +14,18 @@ import { Section, Card, Progress, css } from '@galaxy/core';
 import { siteTheme } from './Site.galaxy';
 const { site } = siteTheme;
 
+/**
+ * Provide a several features to run the application for mock.
+ * If you want to use it for prod, should replace to redux.
+ */
+const useMockFeatures = ({state}: Pick<Site, 'state'>) => {
+  const [siteState, setSiteState] = useState(state);
+  return {
+    siteState, setSiteState
+  }
+
+}
+
 export const Site: FC<Site> = ({
   name,
   url,
@@ -26,6 +38,8 @@ export const Site: FC<Site> = ({
   siteOptions,
 }: Site) => {
   const siteCss = css({ variants: site });
+  const {siteState, setSiteState} = useMockFeatures({state})
+
   return (
     <Card variant="primary" className={`${siteCss}`}>
       <SitePreview img={img} siteId={siteId} />
@@ -36,13 +50,11 @@ export const Site: FC<Site> = ({
             <SiteName name={name} siteId={siteId} />
             <Section className="flex items-center space-x-4">
               <FaWordpress className="text-shifter-purple-primary h-7 w-7" />
-              <SiteState state={state} />
+              <SiteState state={siteState} />
               <SiteManage siteId={siteId} />
               <SiteOptions
-                menu={[
-                  { label: 'Start WordPress', href: '#' },
-                  { label: 'Restart WordPress', href: '#' },
-                ]}
+                state={siteState}
+                handleChangeSiteState={setSiteState}
               />
             </Section>
           </Section>

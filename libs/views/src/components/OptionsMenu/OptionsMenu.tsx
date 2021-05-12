@@ -1,5 +1,5 @@
 import React, { FC } from 'react';
-import { ButtonMenu, css, buttonTheme } from '@galaxy/core';
+import { ButtonMenu, css, buttonTheme, ButtonMenuItem } from '@galaxy/core';
 import { DotsHorizontal } from 'heroicons-react';
 
 export const OptionsMenu: FC<OptionsMenu> = ({
@@ -20,5 +20,5 @@ export const OptionsMenu: FC<OptionsMenu> = ({
 
 export type OptionsMenu = {
   className?: string;
-  menu?: any;
+  menu?: ButtonMenuItem[];
 };
