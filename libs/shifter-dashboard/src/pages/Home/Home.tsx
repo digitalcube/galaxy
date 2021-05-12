@@ -7,7 +7,6 @@ import {
   Aside,
   Deploys,
   SiteOverview,
-  ProgressValue,
 } from '@galaxy/shifter-dashboard';
 
 /**
@@ -55,7 +54,7 @@ export type Home = {
   img: string;
   items: MenuItems;
   name: string;
-  progress: ProgressValue;
+  progress: any;
   state: string;
   team?: string;
 };

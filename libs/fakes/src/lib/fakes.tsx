@@ -96,7 +96,7 @@ export const fakerGenerator = ({ schema, min = 1, max }: FakerGenerator) => {
   );
 };
 
-export const fakerArray = (array = []) => {
+export const fakerArray = (array:any[] = []) => {
   const random = Math.floor(Math.random() * array.length);
   return array[random];
 };
@@ -106,7 +106,6 @@ export const fakerProgress = (min = 0, max = 5) => {
   return faker.random.number({ min, max });
 };
 
-// @ts-expect-error
 export const fakerDomainState = fakerArray(domainState);
 
 const dashboardSiteControlSubDirectory = {
