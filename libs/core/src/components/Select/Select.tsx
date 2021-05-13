@@ -13,7 +13,7 @@ export const Select: FC<Select> = ({
   const handleChange = useCallback((option) => {
     setOption(option);
     handleSelect(option);
-  }, []);
+  }, [setOption, handleSelect]);
   if (!options) return null;
   return (
     <div className="flex items-center justify-center">
