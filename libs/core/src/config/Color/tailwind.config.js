@@ -63,8 +63,9 @@ module.exports = {
     'status-warning-dark': '#BE6B09',
     'status-warning-default': '#FFA600',
     'status-warning-light': '#FEF4D9',
-    black: 'rgba(0, 0, 0, 1)',
+    black: '#0C0C0D',
     transparent: 'rgba(255, 255, 255, 0)',
-    white: 'rgba(255, 255, 255, 1)',
+    white: '#ffffff',
+    focus: '#2EB4FF'
   },
 };

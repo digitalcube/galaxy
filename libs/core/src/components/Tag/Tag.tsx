@@ -1,10 +1,11 @@
 import { createElement, FC, ReactNode } from 'react';
 import { LinkTagType } from '../../lib/link-tag-provider/link-tag-provider';
 
-export const Tag: FC<Tag> = ({ as, children, className }: Tag) => {
+export const Tag: FC<Tag> = ({ as, children, className, disabled }: Tag) => {
   return createElement(as as any, {
     className,
-    children
+    children,
+    disabled,
   })
 };
 
@@ -13,6 +14,7 @@ export type Tag = {
   as?: string | LinkTagType;
   className?: string;
   htmlFor?: string;
+  disabled?: boolean;
 };
 
 Tag.defaultProps = {

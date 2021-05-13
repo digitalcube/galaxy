@@ -10,11 +10,11 @@ export default {
 };
 
 export const Example = () => {
-  return <Button label="Example" />;
+  return <Button />;
 };
 
 export const Hover = () => {
-  return <Button label="Hover" />;
+  return <Button />;
 };
 
 Hover.parameters = { pseudo: { hover: true } };
@@ -24,3 +24,15 @@ export const Focus = () => {
 };
 
 Focus.parameters = { pseudo: { focus: true } };
+
+export const Disabled = () => {
+  return <Button />;
+};
+
+Disabled.parameters = { disabled: true };
+
+export const Active = () => {
+  return <Button />;
+};
+
+Active.parameters = { pseudo: { disabled: true } };
