@@ -34,7 +34,7 @@
     "libs:format": "yarn libs --target format",
     "libs:build": "yarn libs --target build",
     "libs:test": "yarn libs --target test",
-    "app": "nx run-many --projects \"demo,gatsby\"",
+    "app": "nx run-many --projects \"demo\"",
     "app:lint": "yarn app --target lint",
     "app:format": "yarn app --target format",
     "app:build": "yarn app --target build",

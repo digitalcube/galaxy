@@ -11,7 +11,7 @@ export default {
 
 // Todo: Move to utils or find similar package
 const itemCounter = (array, item) =>
-  array.flat(Infinity).filter((currentItem) => currentItem == item).length;
+  array.flat(Infinity).filter((currentItem) => currentItem === item).length;
 
 // Look for `-` in color tokens to find schemas
 const colorTokens = Object.keys(colors).map((color) => {

@@ -101,7 +101,7 @@ export const RouteSite: FC = () => {
         href: `/${[admin, sites, siteId, m.href].join('/')}`
       })): undefined
     }))
-  }, [siteId, siteMenus, sites])
+  }, [siteId, siteMenus, sites, admin])
     return (
         <Section className="md:flex min-h-screen border-t border-shifter-gray-200">
           <Aside items={menus} name="Site Name" />
