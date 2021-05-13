@@ -29,17 +29,18 @@
     "help": "nx help",
     "storybook": "start-storybook -s ./.storybook/public",
     "storybook:build": "build-storybook --static-dir ./.storybook/public",
-    "libs": "nx run-many --projects \"core,views,shifter-web,shifter,shifter-dashboard,amimoto,amimoto-web\"",
+    "libs": "nx run-many --projects \"core,views,shifter-web,shifter,shifter-dashboard,amimoto,amimoto-web,fakes\"",
     "libs:lint": "yarn libs --target lint",
     "libs:format": "yarn libs --target format",
     "libs:build": "yarn libs --target build",
     "libs:test": "yarn libs --target test",
-    "app": "nx run-many --projects \"demo,gatsby\"",
+    "app": "nx run-many --projects \"demo\"",
     "app:lint": "yarn app --target lint",
     "app:format": "yarn app --target format",
     "app:build": "yarn app --target build",
     "app:test": "yarn app --target test",
-    "tailwind:build": "postcss ./libs/core/src/styles/tailwind.css -o ./libs/core/src/styles/style.css"
+    "tailwind:build": "postcss ./libs/core/src/styles/tailwind.css -o ./libs/core/src/styles/style.css",
+    "tailwind:build:watch": "TAILWIND_MODE=watch postcss ./libs/core/src/styles/tailwind.css -o ./libs/core/src/styles/style.css"
   },
   "private": false,
   "dependencies": {

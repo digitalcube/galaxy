@@ -22,12 +22,12 @@ export const Animation: React.FC<Animation> = ({ animation }: Animation) => {
       container: element.current as HTMLDivElement,
       loop: false,
       autoplay: true,
-      animationData: animationData({ animation: animation }),
+      animationData: animationData({ animation }),
       rendererSettings: {
         preserveAspectRatio: `xMidYMid slice`,
       },
     });
-  }, []);
+  }, [animation]);
 
   return <div ref={element}></div>;
 };

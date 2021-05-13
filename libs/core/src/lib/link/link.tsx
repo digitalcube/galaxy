@@ -17,7 +17,9 @@ export const Link: FC<LinkProps> = (props) => {
    */
   if (!!props.href && /^http/.test(props.href)) {
     return (
-      <a target="_blank" rel="noopener noreferrer" {...props} />
+      <a target="_blank" rel="noopener noreferrer" {...props}>
+        {props.children}
+      </a>
     )
   }
   return createElement(as as any, {

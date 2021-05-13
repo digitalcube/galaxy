@@ -7,7 +7,7 @@ const borderWidth = require('./libs/core/src/config/BorderWidth/tailwind.config.
 const ringWidth = require('./libs/core/src/config/RingWidth/tailwind.config.js');
 
 module.exports = {
-  mode: 'jit',
+  mode: process.env.TAILWIND_MODE === 'watch' ? 'jit' : undefined,
   purge: [
     './libs/**/*.{js,jsx,ts,tsx}',
   ],
