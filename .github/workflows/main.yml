@@ -41,8 +41,6 @@ jobs:
       #- name: Test
       #  run: yarn test --ci --coverage --maxWorkers=2
 
-      - name: Build CSS
-        run: yarn tailwind:build
 
       - name: Build libs
         run: yarn libs:build
