@@ -8,7 +8,7 @@ export const buttonTheme = {
     ],
     primary: [
       'whitespace-nowrap',
-      'bg-shifter-purple-primary',
+      'bg-shifter-purple-500',
       'disabled:bg-shifter-gray-200',
       'disabled:text-shifter-gray-300',
       'focus:bg-shifter-purple-500',

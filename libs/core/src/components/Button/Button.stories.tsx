@@ -9,12 +9,12 @@ export default {
   title: `Galaxy/Components/Button`,
 };
 
-export const Default = () => {
-  return <Button />;
+export const Example = () => {
+  return <Button label="Example" />;
 };
 
 export const Hover = () => {
-  return <Button />;
+  return <Button label="Hover" />;
 };
 
 Hover.parameters = { pseudo: { hover: true } };
