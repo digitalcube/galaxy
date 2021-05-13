@@ -39,7 +39,8 @@
     "app:format": "yarn app --target format",
     "app:build": "yarn app --target build",
     "app:test": "yarn app --target test",
-    "tailwind:build": "postcss ./libs/core/src/styles/tailwind.css -o ./libs/core/src/styles/style.css"
+    "tailwind:build": "postcss ./libs/core/src/styles/tailwind.css -o ./libs/core/src/styles/style.css",
+    "tailwind:build:watch": "TAILWIND_MODE=watch postcss ./libs/core/src/styles/tailwind.css -o ./libs/core/src/styles/style.css"
   },
   "private": false,
   "dependencies": {
