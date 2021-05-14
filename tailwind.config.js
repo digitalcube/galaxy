@@ -8,9 +8,7 @@ const ringWidth = require('./libs/core/src/config/RingWidth/tailwind.config.js')
 
 module.exports = {
   mode: process.env.TAILWIND_MODE === 'watch' ? 'jit' : undefined,
-  purge: [
-    './libs/**/*.{js,jsx,ts,tsx}',
-  ],
+  purge: ['./libs/**/*.{js,jsx,ts,tsx}'],
   theme: {
     ...colors,
     ...fontSize,
@@ -31,5 +29,6 @@ module.exports = {
   plugins: [
     require('@tailwindcss/typography'),
     require('@tailwindcss/aspect-ratio'),
+    require('@tailwindcss/forms'),
   ],
 };

@@ -10,8 +10,9 @@ export const buttonTheme = {
     ],
     primary: [
       'bg-shifter-purple-500',
-      'disabled:bg-shifter-gray-50',
+      'disabled:bg-shifter-purple-50',
       'disabled:text-shifter-gray-300',
+      'disabled:cursor-default',
       'focus:bg-shifter-purple-500',
       'focus:ring',
       'focus:ring-focus',

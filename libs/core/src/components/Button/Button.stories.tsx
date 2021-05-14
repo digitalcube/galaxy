@@ -26,13 +26,5 @@ export const Focus = () => {
 Focus.parameters = { pseudo: { focus: true } };
 
 export const Disabled = () => {
-  return <Button />;
+  return <Button disabled />;
 };
-
-Disabled.parameters = { disabled: true };
-
-export const Active = () => {
-  return <Button />;
-};
-
-Active.parameters = { pseudo: { disabled: true } };
