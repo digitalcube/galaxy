@@ -18,13 +18,13 @@ const { site } = siteTheme;
  * Provide a several features to run the application for mock.
  * If you want to use it for prod, should replace to redux.
  */
-const useMockFeatures = ({state}: Pick<Site, 'state'>) => {
+const useMockFeatures = ({ state }: Pick<Site, 'state'>) => {
   const [siteState, setSiteState] = useState(state);
   return {
-    siteState, setSiteState
-  }
-
-}
+    siteState,
+    setSiteState,
+  };
+};
 
 export const Site: FC<Site> = ({
   name,
@@ -38,14 +38,14 @@ export const Site: FC<Site> = ({
   siteOptions,
 }: Site) => {
   const siteCss = css({ variants: site });
-  const {siteState, setSiteState} = useMockFeatures({state})
+  const { siteState, setSiteState } = useMockFeatures({ state });
 
   return (
     <Card variant="primary" className={`${siteCss}`}>
       <SitePreview img={img} siteId={siteId} />
       <Section className="flex flex-grow flex-col">
         <Progress progress={progress} />
-        <Section className="flex p-4 space-y-4 relative flex-col flex-grow">
+        <Section className="flex p-4 space-y-2 relative flex-col flex-grow">
           <Section className="flex justify-between">
             <SiteName name={name} siteId={siteId} />
             <Section className="flex items-center space-x-4">

@@ -79,7 +79,7 @@ export const ButtonMenu: FC<ButtonMenu> = ({
   menu,
 }: ButtonMenu) => {
   return (
-    <div className="relative text-left">
+    <div className="relative inline-block">
       <Menu>
         {({ open }) => (
           <>
