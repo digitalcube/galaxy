@@ -7,7 +7,7 @@ export const cardTheme = {
       'border-shifter-gray-200',
       'flex',
       'shadow',
-      'hover:shadow-lg',
+      'hover:shadow-3',
       'hover:border-transparent',
       'transition-shadow',
       'bg-white',
