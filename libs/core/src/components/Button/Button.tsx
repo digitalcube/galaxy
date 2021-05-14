@@ -15,7 +15,7 @@ export const Button: FC<Button> = ({
   disabled,
 }: Button) => {
 
-  if (!label) {
+  if (!label && !children) {
     label = variant;
   }
 

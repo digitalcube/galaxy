@@ -7,6 +7,7 @@ import {
   SiteUrl,
   SiteOptions,
   SiteManage,
+  WpAdmin,
 } from '@galaxy/shifter-dashboard';
 import { FaWordpress } from 'react-icons/fa';
 import { SiteState } from '@galaxy/shifter-dashboard';
@@ -49,7 +50,9 @@ export const Site: FC<Site> = ({
           <Section className="flex justify-between">
             <SiteName name={name} siteId={siteId} />
             <Section className="flex items-center space-x-4">
-              <FaWordpress className="text-shifter-purple-primary h-7 w-7" />
+              <WpAdmin variant="link">
+                <FaWordpress className="text-shifter-purple-primary h-7 w-7" />
+              </WpAdmin>
               <SiteState state={siteState} />
               <SiteManage siteId={siteId} />
               <SiteOptions
