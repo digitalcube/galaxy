@@ -51,7 +51,7 @@ export const Site: FC<Site> = ({
             <SiteName name={name} siteId={siteId} />
             <Section className="flex items-center space-x-4">
               <WpAdmin variant="link">
-                <FaWordpress className="text-shifter-purple-primary h-7 w-7" />
+                <FaWordpress className="text-shifter-purple-primary h-6 w-6" />
               </WpAdmin>
               <SiteState state={siteState} />
               <SiteManage siteId={siteId} />
