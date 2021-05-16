@@ -11,7 +11,7 @@ import {
 } from '@galaxy/shifter-dashboard';
 import { FaWordpress } from 'react-icons/fa';
 import { SiteState } from '@galaxy/shifter-dashboard';
-import { Section, Card, Progress, css } from '@galaxy/core';
+import { Section, Card, Progress, Tooltip, css } from '@galaxy/core';
 import { siteTheme } from './Site.galaxy';
 const { site } = siteTheme;
 
@@ -50,9 +50,11 @@ export const Site: FC<Site> = ({
           <Section className="flex justify-between">
             <SiteName name={name} siteId={siteId} />
             <Section className="flex items-center space-x-4">
-              <WpAdmin variant="link">
-                <FaWordpress className="text-shifter-purple-primary h-6 w-6" />
-              </WpAdmin>
+              <Tooltip main="WordPress Admin">
+                <WpAdmin variant="link">
+                  <FaWordpress className="text-shifter-purple-primary h-6 w-6" />
+                </WpAdmin>
+              </Tooltip>
               <SiteState state={siteState} />
               <SiteManage siteId={siteId} />
               <SiteOptions
