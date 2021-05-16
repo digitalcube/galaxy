@@ -1,4 +1,4 @@
-import React, { FC, useCallback, useState } from 'react';
+import React, { FC, useState } from 'react';
 import {
   SiteTeamMembers,
   SiteTeam,
@@ -9,7 +9,6 @@ import {
   SiteManage,
   WpAdmin,
 } from '@galaxy/shifter-dashboard';
-import { FaWordpress } from 'react-icons/fa';
 import { SiteState } from '@galaxy/shifter-dashboard';
 import { Section, Card, Progress, Tooltip, css } from '@galaxy/core';
 import { siteTheme } from './Site.galaxy';

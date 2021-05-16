@@ -54,7 +54,7 @@ type WpAdmin = {
   siteId?: string;
   variant?: string;
   children?: ReactNode;
-  label?: Button;
+  label?: Button['label'] | Button['children'];
 };
 
 WpAdmin.defaultProps = {

@@ -1,5 +1,5 @@
 import React, { FC } from 'react';
-import { Heading, Section, WordPress } from '@galaxy/core';
+import { Heading, Section } from '@galaxy/core';
 import { FaWordpress } from 'react-icons/fa';
 
 export const WpVersion: FC<WpVersion> = ({ title = 'WordPress version', version }) => {

@@ -6,7 +6,7 @@ import './tooltip.css';
 /* eslint-disable-next-line */
 export interface TooltipProps {
   children?: ReactNode;
-  label?: Button;
+  label?: Button['label'] | Button['children'];
 }
 
 export function Tooltip(props: TooltipProps) {

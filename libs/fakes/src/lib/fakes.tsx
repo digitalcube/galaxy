@@ -17,6 +17,9 @@ const userAvatar = [
   'https://images.unsplash.com/photo-1472099645785-5658abf4ff4e',
   'https://images.unsplash.com/photo-1604336732494-d8386c7029e3',
   'https://images.unsplash.com/photo-1507331789086-893e9003c0e2',
+  'https://images.unsplash.com/photo-1546215364-12f3fff5d578',
+  'https://images.unsplash.com/photo-1584088743546-db0289ee9b07',
+  'https://images.unsplash.com/photo-1607095932579-7b78c3bef128',
 ];
 
 const products = [
@@ -96,7 +99,7 @@ export const fakerGenerator = ({ schema, min = 1, max }: FakerGenerator) => {
   );
 };
 
-export const fakerArray = (array:any[] = []) => {
+export const fakerArray = (array: any[] = []) => {
   const random = Math.floor(Math.random() * array.length);
   return array[random];
 };
