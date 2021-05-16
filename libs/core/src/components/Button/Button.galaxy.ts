@@ -55,11 +55,12 @@ export const buttonTheme = {
       'hover:bg-status-success-dark',
       'font-strong',
     ],
-    link: ['p-0'],
+    link: ['text-shifter-purple-primary'],
     outlinePrimary: [
       'py-2',
       'px-4',
       'bg-transparent',
+      'ring-inset',
       'ring-2',
       'ring-shifter-purple-primary',
       'hover:bg-shifter-purple-600',

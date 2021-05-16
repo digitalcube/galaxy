@@ -49,7 +49,7 @@ export const Site: FC<Site> = ({
           <Section className="flex justify-between">
             <SiteName name={name} siteId={siteId} />
             <Section className="flex items-center space-x-4">
-              <WpAdmin variant="icon" label="WordPress Admin" />
+              <WpAdmin variant="icon" />
               <SiteState state={siteState} />
               <SiteManage siteId={siteId} />
               <SiteOptions

@@ -15,7 +15,7 @@ export const Example = () => {
 
 export const Icon = () => {
   return (
-    <WpAdmin variant="link">
+    <WpAdmin variant="icon">
       <FaWordpress className="text-shifter-purple-primary h-7 w-7" />
     </WpAdmin>
   );

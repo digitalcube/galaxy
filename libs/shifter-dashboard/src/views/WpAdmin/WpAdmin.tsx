@@ -15,7 +15,7 @@ export const WpAdmin: FC<WpAdmin> = ({
     return (
       <Tooltip label={label}>
         <Button
-          variant={variant}
+          variant="link"
           className="inline-flex flex-row space-x-2 items-center"
           href={`/${admin}/${sites}/${siteId}/wp-admin`}
         >
@@ -58,10 +58,5 @@ type WpAdmin = {
 };
 
 WpAdmin.defaultProps = {
-  children: (
-    <>
-      <FaWordpress className="h-4 w-4" />
-      <span>WordPress Admin</span>
-    </>
-  ),
+  label: 'WordPress Admin'
 };

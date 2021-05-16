@@ -14,7 +14,7 @@ export const WpControls: FC<WpControls> = ({ state, siteId }: WpControls) => {
         </div>
       </Section>
       <Section className="flex items-center space-x-6">
-        <WpAdmin siteId={`${siteId}`}/>
+        <WpAdmin siteId={`${siteId}`} />
         <BuildDeploy />
       </Section>
     </Section>
