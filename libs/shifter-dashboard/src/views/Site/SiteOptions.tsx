@@ -1,55 +1,81 @@
 import React, { FC, useCallback, useMemo } from 'react';
 import { OptionsMenu } from '@galaxy/views';
 import { ButtonMenuItem } from '@galaxy/core';
+import { FaPlay, FaStop } from 'react-icons/fa';
+import { HiOutlineRefresh } from 'react-icons/hi';
 
 export const SiteOptions: FC<SiteOptions> = ({
   className,
   state,
+  variant,
   handleChangeSiteState,
 }: SiteOptions) => {
   const handleStartWordPress = useCallback(() => {
-    handleChangeSiteState('starting')
+    handleChangeSiteState('starting');
     setTimeout(() => {
-      handleChangeSiteState('running')
-    }, 2500)
-  }, [handleChangeSiteState])
+      handleChangeSiteState('running');
+    }, 2500);
+  }, [handleChangeSiteState]);
   const handleStopWordPress = useCallback(() => {
-    handleChangeSiteState('stopped')
-  }, [handleChangeSiteState])
+    handleChangeSiteState('stopped');
+  }, [handleChangeSiteState]);
   const handleReStartWordPress = useCallback(() => {
-    handleChangeSiteState('starting')
+    handleChangeSiteState('starting');
     setTimeout(() => {
-      handleChangeSiteState('running')
-    }, 2500)
-  }, [handleChangeSiteState])
+      handleChangeSiteState('running');
+    }, 2500);
+  }, [handleChangeSiteState]);
   const menu = useMemo(() => {
     if (state === 'stopped') {
       return [
-        { label: 'Start WordPress', onClick: handleStartWordPress}
-      ]
+        {
+          label: <FaPlay />,
+          variant: 'link',
+          onClick: handleStartWordPress,
+        },
+      ];
     }
     if (state === 'running') {
-      return [{
-        label: 'Restart WordPress', onClick: handleReStartWordPress
-      }, {
-        label: 'Stop WordPress', onClick: handleStopWordPress,
-      }]
+      return [
+        {
+          label: <HiOutlineRefresh />,
+          variant: 'link',
+          onClick: handleReStartWordPress,
+        },
+        {
+          label: <FaStop />,
+          variant: 'link',
+          onClick: handleStopWordPress,
+        },
+      ];
     }
-    return [{
-      label: 'Restart WordPress', onClick: handleReStartWordPress
-    }, {
-      label: 'Stop WordPress', onClick: handleStopWordPress,
-    }]
-    
-  }, [state, handleStopWordPress, handleStartWordPress, handleReStartWordPress])
+    return [
+      {
+        label: <HiOutlineRefresh />,
+        variant: 'link',
+        onClick: handleReStartWordPress,
+      },
+      {
+        label: <FaStop />,
+        variant: 'link',
+        onClick: handleStopWordPress,
+      },
+    ];
+  }, [
+    state,
+    handleStopWordPress,
+    handleStartWordPress,
+    handleReStartWordPress,
+  ]);
 
-  return <OptionsMenu className={className} menu={menu} />;
+  return <OptionsMenu variant={variant} className={className} menu={menu} />;
 };
 
 export type SiteOptions = {
   state?: string;
   className?: string;
   menu?: ButtonMenuItem[];
+  variant?: OptionsMenu['variant'];
   /**
    * For Mock features
    */

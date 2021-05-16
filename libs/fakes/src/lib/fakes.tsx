@@ -341,28 +341,28 @@ export const fakerSiteWebhook = fakerGenerator({
 const dashboardHeaderMenuItems = {
   logo: './shifter-logomark.svg',
   items: [
-    { title: 'Sites', href: 'sites', variant: 'ghost' },
-    { title: 'Teams', href: 'teams', variant: 'ghost' },
-    { title: 'Guides', href: 'guides', variant: 'ghost' },
+    { label: 'Sites', href: 'sites', variant: 'ghost' },
+    { label: 'Teams', href: 'teams', variant: 'ghost' },
+    { label: 'Guides', href: 'guides', variant: 'ghost' },
   ],
 };
 
 const swagStoreHeaderMenuItems = {
   items: [
-    { title: 'Shop all', href: 'shop-all', variant: 'link' },
-    { title: 'Shop by brand', href: 'shop-brand', variant: 'link' },
-    { title: 'Categories', href: 'categories', variant: 'link' },
-    { title: 'About', href: 'about', variant: 'link' },
+    { label: 'Shop all', href: 'shop-all', variant: 'link' },
+    { label: 'Shop by brand', href: 'shop-brand', variant: 'link' },
+    { label: 'Categories', href: 'categories', variant: 'link' },
+    { label: 'About', href: 'about', variant: 'link' },
   ],
 };
 
 export const swagStoreCategories = {
   items: [
-    { title: 'All Products', href: 'sites', variant: 'link' },
-    { title: 'Apparel', href: 'apparel', variant: 'link' },
-    { title: 'Objects', href: 'objects', variant: 'link' },
-    { title: 'Stickers', href: 'stickers', variant: 'link' },
-    { title: 'Prints', href: 'prints', variant: 'link' },
+    { label: 'All Products', href: 'sites', variant: 'link' },
+    { label: 'Apparel', href: 'apparel', variant: 'link' },
+    { label: 'Objects', href: 'objects', variant: 'link' },
+    { label: 'Stickers', href: 'stickers', variant: 'link' },
+    { label: 'Prints', href: 'prints', variant: 'link' },
   ],
 };
 
@@ -396,12 +396,12 @@ export const fakerSwagStoreHeader = {
 
 const dashboardSiteMenuItems = {
   items: [
-    { title: 'Home', href: 'home', variant: 'ghost' },
-    { title: 'Live', href: 'live', variant: 'ghost' },
-    { title: 'Staging', href: 'staging', variant: 'ghost' },
-    { title: 'Dev', href: 'dev', variant: 'ghost' },
-    { title: 'Team', href: 'team', variant: 'ghost' },
-    { title: 'Settings', href: 'settings', variant: 'ghost' },
+    { label: 'Home', href: 'home', variant: 'ghost' },
+    { label: 'Live', href: 'live', variant: 'ghost' },
+    { label: 'Staging', href: 'staging', variant: 'ghost' },
+    { label: 'Dev', href: 'dev', variant: 'ghost' },
+    { label: 'Team', href: 'team', variant: 'ghost' },
+    { label: 'Settings', href: 'settings', variant: 'ghost' },
   ],
 };
 

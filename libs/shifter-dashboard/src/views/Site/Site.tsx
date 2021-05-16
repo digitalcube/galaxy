@@ -10,7 +10,7 @@ import {
   WpAdmin,
 } from '@galaxy/shifter-dashboard';
 import { SiteState } from '@galaxy/shifter-dashboard';
-import { Section, Card, Progress, Tooltip, css } from '@galaxy/core';
+import { Section, Card, Progress, css } from '@galaxy/core';
 import { siteTheme } from './Site.galaxy';
 const { site } = siteTheme;
 
