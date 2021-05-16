@@ -10,8 +10,12 @@ export const Example = () => {
   /* eslint-disable-next-line */
   const props: TooltipProps = {
     children: 'Hover',
-    main: 'Tooltip',
+    label: 'Tooltip',
   };
 
-  return <Tooltip {...props} />;
+  return (
+    <div className="flex items-center">
+      <Tooltip {...props} />
+    </div>
+  );
 };

@@ -1,11 +1,12 @@
 import React, { ReactNode } from 'react';
 import { usePopperTooltip } from 'react-popper-tooltip';
+import { Button } from '@galaxy/core';
 import './tooltip.css';
 
 /* eslint-disable-next-line */
 export interface TooltipProps {
   children?: ReactNode;
-  main?: ReactNode;
+  label?: Button;
 }
 
 export function Tooltip(props: TooltipProps) {
@@ -17,7 +18,7 @@ export function Tooltip(props: TooltipProps) {
     visible,
   } = usePopperTooltip();
 
-  const { children, main } = props;
+  const { children, label } = props;
 
   return (
     <>
@@ -30,7 +31,7 @@ export function Tooltip(props: TooltipProps) {
               'tooltip-container rounded z-10 bg-shifter-gray-900 px-4 py-2 text-white flex-col flex',
           })}
         >
-          {main}
+          {label}
           <div
             {...getArrowProps({ className: 'tooltip-arrow absolute h-4 w-4' })}
           />
