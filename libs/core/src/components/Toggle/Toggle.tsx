@@ -9,8 +9,6 @@ export const Toggle: FC<Toggle> = ({ state, variants }: Toggle) => {
   const [enabled, setEnabled] = useState(state || false);
   const size = 12;
 
-  console.log(enabled);
-
   const toggleSwitchScale = `${
     enabled ? `translate-x-${size - 2}` : 'translate-x-1'
   } w-${size / 2 - 2} h-${size / 2 - 2}`;
