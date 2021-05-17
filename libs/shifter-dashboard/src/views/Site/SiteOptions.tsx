@@ -1,6 +1,6 @@
 import React, { FC, useCallback, useMemo } from 'react';
 import { OptionsMenu } from '@galaxy/views';
-import { ButtonMenuItem } from '@galaxy/core';
+import { ButtonMenu } from '@galaxy/core';
 import { FaPlay, FaStop } from 'react-icons/fa';
 import { HiOutlineRefresh } from 'react-icons/hi';
 
@@ -74,7 +74,7 @@ export const SiteOptions: FC<SiteOptions> = ({
 export type SiteOptions = {
   state?: string;
   className?: string;
-  menu?: ButtonMenuItem[];
+  menu?: ButtonMenu['menu'];
   variant?: OptionsMenu['variant'];
   /**
    * For Mock features

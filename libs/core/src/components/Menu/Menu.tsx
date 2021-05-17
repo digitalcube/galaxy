@@ -2,7 +2,7 @@ import React, { FC, Fragment } from 'react';
 import { Button } from '@galaxy/core';
 
 export type MenuItem = {
-  label: string;
+  label?: any;
   href?: string;
   items?: MenuItems;
   variant?: string;

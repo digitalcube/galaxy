@@ -1,7 +1,6 @@
 import React, { FC } from 'react';
 import { Image, css, ButtonMenu } from '@galaxy/core';
 import { avatarTheme } from './Avatar.galaxy';
-import { ButtonMenuItem } from '../ButtonMenu';
 const { avatar } = avatarTheme;
 
 export const Avatar: FC<AvatarProps> = ({
@@ -10,7 +9,6 @@ export const Avatar: FC<AvatarProps> = ({
   name,
   imgDefault,
   variant,
-  variants,
   menu,
   className,
 }) => {
@@ -53,6 +51,6 @@ export type AvatarProps = {
   variants?: any;
   variant?: string;
   size?: number;
-  menu?: ButtonMenuItem[];
+  menu?: ButtonMenu['menu'];
   className?: string;
 };
