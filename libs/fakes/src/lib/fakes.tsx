@@ -113,8 +113,20 @@ export const fakerDomainState = fakerArray(domainState);
 
 const dashboardSiteControlSubDirectory = {
   subDirectory: {
-    title: 'Subdirectory',
-    state: true,
+    title: 'Publish deploys to a subdirectory',
+    description:
+      'You can publish Shifter artifacts to a subdirectory of a site you already own (for example, yoursite.com/blog)',
+    options: [
+      {
+        label: 'Subdirectory deploy is',
+        state: true,
+        options: {
+          label: 'Subdirectory',
+          type: 'input',
+          value: '/subdirectory',
+        },
+      },
+    ],
   },
 };
 

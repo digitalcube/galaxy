@@ -2,7 +2,7 @@ import React, { FC } from 'react';
 import { Control } from '@galaxy/views';
 
 export const MediaCdn: FC<MediaCdn> = ({ title, state }: MediaCdn) => {
-  return <Control title={title} state={state} />;
+  return <Control label={title} state={state} />;
 };
 
 export type MediaCdn = {

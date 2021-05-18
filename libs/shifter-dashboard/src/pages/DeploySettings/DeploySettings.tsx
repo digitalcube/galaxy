@@ -29,8 +29,8 @@ export const DeploySettings: FC<DeploySettings> = ({
 
 export type DeploySettings = {
   items?: any;
-  title?: Panel;
-  actions?: Panel;
-  name: Site;
+  title?: Panel['title'];
+  actions?: Panel['actions'];
+  name?: Site['name'];
   subDirectory?: SubDirectory;
 };
