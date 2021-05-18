@@ -118,7 +118,7 @@ const dashboardSiteControlSubDirectory = {
       'You can publish Shifter artifacts to a subdirectory of a site you already own (for example, yoursite.com/blog)',
     options: [
       {
-        label: 'Subdirectory deploy is',
+        label: 'Subdirectory deploy',
         state: true,
         options: {
           label: 'Subdirectory',

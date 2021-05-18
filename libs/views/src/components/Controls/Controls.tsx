@@ -1,4 +1,4 @@
-import React, { FC, ReactNode } from 'react';
+import React, { FC } from 'react';
 import { Card } from '@galaxy/core';
 import { Control } from '@galaxy/views';
 
@@ -6,13 +6,15 @@ export const Controls: FC<Controls> = ({ label, options }) => {
   if (!options) return null;
 
   const allControls = options.map((control, i) => {
-    return <Control key={i} {...control} />;
+    const { options, label, state } = control;
+    return <Control key={i} label={label} state={state} options={options} />;
   });
 
   return <Card className="space-y-8" title={label} children={allControls} />;
 };
 
 export type Controls = {
+  field?: any;
   label?: string;
   options?: Control[];
 };

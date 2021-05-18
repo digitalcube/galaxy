@@ -1,6 +1,6 @@
 import React, { FC } from 'react';
 import { Card } from '@galaxy/core';
-import { Controls, Control } from '@galaxy/views';
+import { Controls } from '@galaxy/views';
 
 export const SubDirectory: FC<SubDirectory> = ({
   title,
@@ -21,5 +21,5 @@ export type SubDirectory = {
   title?: string;
   description?: string;
   label?: string;
-  options?: Control[];
+  options?: Controls['options'];
 };

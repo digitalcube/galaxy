@@ -1,12 +1,14 @@
 import React, { FC } from 'react';
-import { Section, Heading, Toggle, Card, Field } from '@galaxy/core';
+import { Section, Heading, Toggle } from '@galaxy/core';
 import { Controls } from '@galaxy/views';
 
 export const ControlOptions: FC<Control> = ({ options }: Control) => {
+  console.log(options);
   if (!options) return null;
+  const { label, field } = options;
   return (
     <Section className="border-t border-shifter-gray-200">
-      <Control options={options} />
+      <Control label={label} field={field} />
     </Section>
   );
 };
@@ -24,15 +26,11 @@ export const Control: FC<Control> = ({
           variant="primary"
           fontWeight={options ? 'strong' : 'regular'}
           fontSize={4}
-          text={
-            <>
-              {label} <span>{state ? 'on' : 'off'}</span>
-            </>
-          }
+          text={label}
         />
         {state ? <Toggle state={state} /> : null}
       </Section>
-      {options ? <ControlOptions options={options} /> : null}
+      {options !== undefined ? <ControlOptions options={options} /> : null}
     </Section>
   );
 };
@@ -43,4 +41,5 @@ export type Control = {
   state?: boolean;
   className?: string;
   options?: Controls;
+  field?: any;
 };
