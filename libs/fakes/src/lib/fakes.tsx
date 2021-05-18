@@ -121,9 +121,9 @@ const dashboardSiteControlSubDirectory = {
         label: 'Subdirectory deploy',
         state: true,
         options: {
+          placeholder: '/subdirectory',
           label: 'Subdirectory',
           type: 'input',
-          value: '/subdirectory',
         },
       },
     ],

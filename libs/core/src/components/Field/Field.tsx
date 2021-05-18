@@ -1,23 +1,19 @@
 import React, { ReactNode, FC } from 'react';
-import { Field as FormikField } from 'formik';
-import { css } from '@galaxy/core';
+import { css, Input } from '@galaxy/core';
 import { fieldTheme } from './Field.galaxy';
 const { field } = fieldTheme;
 
-export const Field: FC<FieldProps> = ({
-  className,
-  variant,
-  variants,
-}: FieldProps) => {
+export const Field: FC<FieldProps> = (props: FieldProps) => {
   const fieldCss = css({
-    variants: variants,
-    variant: variant,
+    variants: props.variants,
+    variant: props.variant,
   });
 
-  return <FormikField className={`${fieldCss} ${className}`} />;
+  return <Input {...props} />;
 };
 
 export type FieldProps = {
+  placeholder?: string;
   className?: string;
   main?: ReactNode;
   variants?: any;

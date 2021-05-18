@@ -1,14 +1,14 @@
 import React, { FC } from 'react';
-import { Section, Heading, Toggle } from '@galaxy/core';
+import { Section, Heading, Toggle, Field } from '@galaxy/core';
 import { Controls } from '@galaxy/views';
 
 export const ControlOptions: FC<Control> = ({ options }: Control) => {
   console.log(options);
   if (!options) return null;
-  const { label, field } = options;
+  const { label, type, placeholder } = options;
   return (
     <Section className="border-t border-shifter-gray-200">
-      <Control label={label} field={field} />
+      <Control label={label} type={type} placeholder={placeholder} />
     </Section>
   );
 };
@@ -18,6 +18,8 @@ export const Control: FC<Control> = ({
   state,
   className,
   options,
+  type,
+  placeholder,
 }: Control) => {
   return (
     <Section className={`${className} flex flex-col`}>
@@ -31,6 +33,12 @@ export const Control: FC<Control> = ({
         {state ? <Toggle state={state} /> : null}
       </Section>
       {options !== undefined ? <ControlOptions options={options} /> : null}
+
+      {type !== undefined ? (
+        <Section className="px-4 pb-6">
+          <Field placeholder={placeholder} />
+        </Section>
+      ) : null}
     </Section>
   );
 };
@@ -41,5 +49,6 @@ export type Control = {
   state?: boolean;
   className?: string;
   options?: Controls;
-  field?: any;
+  type?: any;
+  placeholder?: string;
 };

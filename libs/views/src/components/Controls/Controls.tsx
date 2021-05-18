@@ -14,7 +14,8 @@ export const Controls: FC<Controls> = ({ label, options }) => {
 };
 
 export type Controls = {
-  field?: any;
+  type?: any;
   label?: string;
   options?: Control[];
+  placeholder?: string;
 };
