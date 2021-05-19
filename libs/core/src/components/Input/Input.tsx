@@ -17,7 +17,7 @@ export const Input: FC<Input> = ({
   });
 
   return (
-    <input type="text" className={`foo ${classNames}`} placeholder={placeholder} />
+    <input type="text" className={`${classNames}`} placeholder={placeholder} />
   );
 };
 

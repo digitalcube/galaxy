@@ -1,8 +1,14 @@
 export const inputTheme = {
   input: {
-    DEFAULT: [''],
+    DEFAULT: [
+      'p-3',
+      'border-shifter-purple-primary',
+      'focus:border-shifter-purple-primary',
+      'rounded',
+      'border-2',
+    ],
     primary: [
-      'focus:ring-shifter-purple-primary'
+      'focus:border-shifter-purple-primary',
       // 'bg-shifter-purple-primary',
       // 'disabled:bg-shifter-gray-200',
       // 'disabled:text-shifter-gray-300',

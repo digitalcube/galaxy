@@ -45,7 +45,7 @@ const Step_01: FC<CreateSite> = () => {
           {(props: FormikProps<any>) => (
             <Form>
               <div className="space-y-8">
-                <div className="flex">
+                <div className="flex items-end">
                   <div className="space-y-3 w-1/3">
                     <Heading
                       as="label"
@@ -55,7 +55,7 @@ const Step_01: FC<CreateSite> = () => {
                       variant="primary"
                       fontWeight="strong"
                     />
-                    <div className="ring-2 ring-shifter-purple-primary focus:outline-none focus:border-shifter-purple-primary rounded-l p-3 w-full">
+                    <div className="border-2 border-shifter-purple-primary focus:outline-none focus:border-shifter-purple-primary rounded p-3 w-full">
                       <select
                         id="siteTeam"
                         name="siteTeam"
@@ -66,7 +66,7 @@ const Step_01: FC<CreateSite> = () => {
                       </select>
                     </div>
                   </div>
-                  <div className="space-y-3 flex-grow">
+                  <div className="space-y-3 flex-grow flex flex-col">
                     <Heading
                       as="label"
                       htmlFor="siteName"
@@ -75,7 +75,7 @@ const Step_01: FC<CreateSite> = () => {
                       variant="primary"
                       fontWeight="strong"
                     />
-                    <Input placeholder="Site Name" />
+                    <Input placeholder="Site Name" variant="primary" />
                   </div>
                 </div>
                 <Button
