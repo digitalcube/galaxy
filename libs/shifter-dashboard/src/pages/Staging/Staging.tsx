@@ -1,9 +1,7 @@
 import React, { FC } from 'react';
-import { Section, MenuItems } from '@galaxy/core';
 import { fakerHeader } from '@galaxy/faker';
-
+import { Section, MenuItems } from '@galaxy/core';
 import { Dashboard, Aside, Main } from '@galaxy/views';
-
 import { Deploys } from '../../views/Deploys/Deploys';
 
 export const Staging: FC<Staging> = ({ items, name, state }) => {
