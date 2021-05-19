@@ -6,7 +6,7 @@ export default {
   title: 'Galaxy/Components/Modal',
 };
 
-export const primary = () => {
+export const Example = () => {
   /* eslint-disable-next-line */
   const props: ModalProps = {};
 
