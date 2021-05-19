@@ -3,7 +3,7 @@ import { Dialog, DialogProps } from './dialog';
 
 export default {
   component: Dialog,
-  title: 'Dialog',
+  title: 'Galaxy/Components/Dialog',
 };
 
 export const primary = () => {

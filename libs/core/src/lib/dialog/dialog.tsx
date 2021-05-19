@@ -3,7 +3,7 @@ import { Dialog as HeadlessUiDialog, Transition } from '@headlessui/react';
 
 /* eslint-disable-next-line */
 export interface DialogProps {
-  children: ReactNode;
+  children?: ReactNode;
 }
 
 export function Dialog(props: DialogProps) {
