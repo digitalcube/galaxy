@@ -10,7 +10,6 @@ export const Input: FC<Input> = ({
   label,
   placeholder,
   variants,
-  href,
 }: Input) => {
   const classNames = css({
     variant: variant,
@@ -18,11 +17,7 @@ export const Input: FC<Input> = ({
   });
 
   return (
-    <input
-      type="text"
-      className={`${classNames}`}
-      placeholder={placeholder}
-    />
+    <input type="text" className={`foo ${classNames}`} placeholder={placeholder} />
   );
 };
 
@@ -39,7 +34,7 @@ export type Input = {
 
 Input.defaultProps = {
   variants: input,
-  variant: 'primary',
-  label: '',
-  placeholder: '',
+  label: 'Label',
+  className: '',
+  placeholder: 'Placeholder',
 };

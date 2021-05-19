@@ -1,5 +1,5 @@
 import React, { FC } from 'react';
-import { Card } from '@galaxy/core';
+import { Card, Section, Button } from '@galaxy/core';
 import { Control } from '@galaxy/views';
 
 export const Controls: FC<Controls> = ({ label, options }) => {
@@ -10,7 +10,20 @@ export const Controls: FC<Controls> = ({ label, options }) => {
     return <Control key={i} label={label} state={state} options={options} />;
   });
 
-  return <Card className="space-y-8" title={label} children={allControls} />;
+  return (
+    <Card
+      // className="space-y-8"
+      title={label}
+      children={
+        <>
+          {allControls}
+          <Section className="px-4 pb-4">
+            <Button label="submit" />
+          </Section>
+        </>
+      }
+    />
+  );
 };
 
 export type Controls = {

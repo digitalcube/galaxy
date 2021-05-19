@@ -12,3 +12,7 @@ export default {
 export const Example = () => {
   return <Input />;
 };
+
+export const Primary = () => {
+  return <Input variant="primary" />;
+};
