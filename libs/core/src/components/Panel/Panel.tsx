@@ -8,12 +8,11 @@ const PanelActions: FC<Panel> = ({ actions }) => {
 
 const PanelTitle: FC<Panel> = ({ title }) => {
   if (!title) return null;
-  return (
-    <Heading fontWeight="strong" fontSize={7} text={title} />
-  );
+  return <Heading fontWeight="strong" fontSize={7} text={title} />;
 };
 
 const PanelHeader: FC<Panel> = ({ title, actions }) => {
+  if (!title && !actions) return null;
   return (
     <Section className="mb-6 flex justify-between">
       <PanelTitle title={title} />
@@ -26,7 +25,7 @@ export const Panel: FC<Panel> = ({ children, className, title, actions }) => {
   return (
     <Section className={`py-6 px-8 flex flex-grow flex-col ${className}`}>
       <PanelHeader title={title} actions={actions} />
-      <Section className="space-y-10">{children ? children : null}</Section>
+      <Section className="space-y-6">{children ? children : null}</Section>
     </Section>
   );
 };

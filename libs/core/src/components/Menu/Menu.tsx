@@ -2,7 +2,7 @@ import React, { FC, Fragment } from 'react';
 import { Button } from '@galaxy/core';
 
 export type MenuItem = {
-  title: string;
+  label?: any;
   href?: string;
   items?: MenuItems;
   variant?: string;
@@ -24,11 +24,11 @@ export const Items: FC<MenuItemsProp> = ({ items, alignment, level = 0 }) => {
   return (
     <>
       {items.map((item, i) => {
-        const { title, href, items, variant } = item;
+        const { label, href, items, variant } = item;
         if (items) {
           return (
             <Fragment key={i}>
-              <Button key={i} variant={variant} label={title} href={href} />
+              <Button key={i} variant={variant} label={label} href={href} />
               <Menu items={items} alignment={alignment} level={level + 3} />
             </Fragment>
           );
@@ -38,7 +38,7 @@ export const Items: FC<MenuItemsProp> = ({ items, alignment, level = 0 }) => {
             key={i}
             variant={variant}
             href={href}
-            label={title}
+            label={label}
             className={`ml-${level}`}
           />
         );

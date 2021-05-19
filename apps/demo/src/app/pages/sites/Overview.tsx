@@ -22,7 +22,10 @@ export const PageOverview: FC = () => {
     siteId,
   } = usePageOverview();
   return (
-    <Main title="Overview">
+    <Main
+      title="Overview"
+      className="p-8 w-full border-l border-shifter-gray-200 space-y-8"
+    >
       <SiteOverview
         publishedSiteURL={publishedSiteURL}
         img={img}

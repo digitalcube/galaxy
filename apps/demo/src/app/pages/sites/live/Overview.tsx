@@ -20,7 +20,10 @@ export const PageLiveOverview: FC = () => {
     siteId,
   } = usePageOverview();
   return (
-    <Main title="Live">
+    <Main
+      className="p-8 w-full border-l border-shifter-gray-200 space-y-8"
+      title="Live"
+    >
       <SiteOverview
         siteId={siteId}
         publishedSiteURL={publishedSiteURL}

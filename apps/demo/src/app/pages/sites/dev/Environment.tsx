@@ -20,7 +20,10 @@ export const PageDevEnvironment: FC = () => {
   const { siteId } = usePageEnvironment();
 
   return (
-    <Main title="Environment Informations">
+    <Main
+      title="Environment Information"
+      className="p-8 w-full border-l border-shifter-gray-200 space-y-8"
+    >
       <Section>
         <WpControls siteId={siteId} state={state} />
       </Section>

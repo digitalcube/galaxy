@@ -6,12 +6,7 @@ export const toggleTheme = {
         'inline-flex',
         'items-center',
         'rounded-full',
-        'bg-shifter-gray-300',
-        'border',
-        'border-shifter-gray-400',
         'transition',
-        'active:bg-status-success-default',
-        'active:border-status-success-default',
       ],
     },
     switch: {

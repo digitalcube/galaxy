@@ -1,16 +1,34 @@
-import React, { FC, ReactNode } from 'react';
-import { Section } from '@galaxy/core';
+import React, { FC } from 'react';
+import { Card, Section, Button } from '@galaxy/core';
+import { Control } from '@galaxy/views';
 
-export const Controls: FC<Controls> = ({ children }) => {
-  if (!children) return null;
+export const Controls: FC<Controls> = ({ label, options }) => {
+  if (!options) return null;
+
+  const allControls = options.map((control, i) => {
+    const { options, label, state } = control;
+    return <Control key={i} label={label} state={state} options={options} />;
+  });
 
   return (
-    <Section className="space-y-10">
-      <Section className="space-y-4">{children}</Section>
-    </Section>
+    <Card
+      // className="space-y-8"
+      title={label}
+      children={
+        <>
+          {allControls}
+          <Section className="px-4 pb-4">
+            <Button label="submit" />
+          </Section>
+        </>
+      }
+    />
   );
 };
 
 export type Controls = {
-  children?: ReactNode;
+  type?: any;
+  label?: string;
+  options?: Control[];
+  placeholder?: string;
 };

@@ -1,25 +1,25 @@
-import React, { FC, ReactChild } from 'react';
+import React, { FC } from 'react';
 import { Controls, Control } from '@galaxy/views';
 import { Card, Button } from '@galaxy/core';
 
-export const SiteSettings: FC<SiteSettingsProps> = ({
-  children,
-}: SiteSettingsProps) => {
+export type SiteSettingsProps = {};
+
+export const SiteSettings: FC<SiteSettingsProps> = () => {
   return (
     <>
       <Controls>
         <Control
-          title="Automatically publish new deploys"
+          label="Automatically publish new deploys"
           description="When a new deploy is generated, it will be automatically published as the live site."
           state={true}
         />
         <Control
-          title="Create a WordPress backup when a new deploy is built"
+          label="Create a WordPress backup when a new deploy is built"
           description="When a new deploy is generated, a downloadable WordPress backup will also be created."
           state={true}
         />
         <Control
-          title="Prevent this site from being deleted"
+          label="Prevent this site from being deleted"
           description="When a new deploy is generated, a downloadable WordPress backup will also be created."
           state={true}
         />
@@ -49,8 +49,4 @@ export const SiteSettings: FC<SiteSettingsProps> = ({
       />
     </>
   );
-};
-
-export type SiteSettingsProps = {
-  children?: ReactChild;
 };

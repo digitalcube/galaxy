@@ -12,8 +12,12 @@ export const Button: FC<Button> = ({
   as,
   variants,
   href,
+  disabled,
 }: Button) => {
-  if (!label && !children) return null;
+
+  if (!label && !children) {
+    label = variant;
+  }
 
   const classNames = css({
     variant: variant,
@@ -34,7 +38,7 @@ export const Button: FC<Button> = ({
   }
 
   return (
-    <Tag as={as} className={`${className} ${classNames}`}>
+    <Tag disabled={disabled} as={as} className={`${className} ${classNames}`}>
       {label}
       {children}
     </Tag>
@@ -50,6 +54,7 @@ export type Button = {
   variant?: any;
   href?: string;
   type?: string;
+  disabled?: boolean | undefined;
 };
 
 Button.defaultProps = {

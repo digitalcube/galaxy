@@ -9,7 +9,7 @@ export default {
   title: `Galaxy/Components/Button`,
 };
 
-export const Default = () => {
+export const Example = () => {
   return <Button />;
 };
 
@@ -24,3 +24,7 @@ export const Focus = () => {
 };
 
 Focus.parameters = { pseudo: { focus: true } };
+
+export const Disabled = () => {
+  return <Button disabled />;
+};

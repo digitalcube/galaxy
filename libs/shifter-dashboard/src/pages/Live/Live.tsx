@@ -22,9 +22,9 @@ export const Live: FC<Live> = ({
     <Dashboard header={fakerHeader}>
       <Section className="md:flex min-h-screen border-t border-shifter-gray-200">
         <Aside items={items} name={`${name}`} />
-        <Main>
+        <Main className="p-8 w-full border-l border-shifter-gray-200 space-y-8">
           <SiteOverview
-          siteId={siteId}
+            siteId={siteId}
             name={name}
             artifact={artifact}
             publishedSiteURL={publishedSiteURL}

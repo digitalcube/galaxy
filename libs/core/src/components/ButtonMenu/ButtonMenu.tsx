@@ -1,32 +1,40 @@
 import React, { ReactNode, FC } from 'react';
-import { Menu, Transition } from '@headlessui/react';
+import { Menu as HeadlessUiMenu, Transition } from '@headlessui/react';
+import { Menu, MenuProps } from '@galaxy/core';
 import Link from '../../lib/link/link';
 import { fakerAvatar } from '@galaxy/faker';
 
 export type ButtonMenuItem = {
-  label?: string;
+  label?: string | ReactNode;
   active?: boolean;
   href?: string;
   onClick?: React.MouseEventHandler<HTMLSpanElement>;
 };
 
-export const ButtonMenuItem: FC<ButtonMenuItem> = ({ label, active, href, onClick }) => {
+export const ButtonMenuItem: FC<ButtonMenuItem> = ({
+  label,
+  active,
+  href,
+  onClick,
+}) => {
   if (!href) {
     return (
-      <Menu.Item>
+      <HeadlessUiMenu.Item>
         <span
           onClick={onClick}
           className={`${
-            active ? 'bg-white text-shifter-purple-700' : 'text-shifter-gray-700'
+            active
+              ? 'bg-white text-shifter-purple-700'
+              : 'text-shifter-gray-700'
           } flex justify-between w-full px-4 py-2 text-sm leading-5 text-left cursor-pointer`}
         >
           {label}
         </span>
-      </Menu.Item>
+      </HeadlessUiMenu.Item>
     );
   }
   return (
-    <Menu.Item>
+    <HeadlessUiMenu.Item>
       <Link
         href={href}
         className={`${
@@ -35,7 +43,7 @@ export const ButtonMenuItem: FC<ButtonMenuItem> = ({ label, active, href, onClic
       >
         {label}
       </Link>
-    </Menu.Item>
+    </HeadlessUiMenu.Item>
   );
 };
 
@@ -66,9 +74,11 @@ export const ButtonMenuItems: FC<ButtonMenuItems> = ({
       leaveFrom="transform opacity-100 scale-100"
       leaveTo="transform opacity-0 scale-95"
     >
-      <Menu.Items className={`rounded w-56 mt-2 origin-top-right bg-white rounded-md shadow-lg outline-none overflow-hidden border-2 border-shifter-gray-200 ${className}`}>
+      <HeadlessUiMenu.Items
+        className={`rounded w-56 mt-2 origin-top-right bg-white rounded-md shadow-lg outline-none overflow-hidden border-2 border-shifter-gray-200 ${className}`}
+      >
         {allButtonMenuItems}
-      </Menu.Items>
+      </HeadlessUiMenu.Items>
     </Transition>
   );
 };
@@ -77,25 +87,33 @@ export const ButtonMenu: FC<ButtonMenu> = ({
   children,
   className,
   menu,
+  variant,
 }: ButtonMenu) => {
+  if (variant === 'list') {
+    return <Menu className="space-x-6" items={menu} />;
+  }
+
   return (
-    <div className="relative text-left">
-      <Menu>
+    <div className="relative inline-block">
+      <HeadlessUiMenu>
         {({ open }) => (
           <>
-            <Menu.Button className={`${className}`}>{children}</Menu.Button>
+            <HeadlessUiMenu.Button className={`${className}`}>
+              {children}
+            </HeadlessUiMenu.Button>
             <ButtonMenuItems items={menu} open={open} />
           </>
         )}
-      </Menu>
+      </HeadlessUiMenu>
     </div>
   );
 };
 
 export type ButtonMenu = {
   children?: ReactNode;
-  menu?: ButtonMenuItem[];
+  menu?: MenuProps['items'];
   className?: string;
+  variant?: string;
 };
 
 ButtonMenu.defaultProps = {

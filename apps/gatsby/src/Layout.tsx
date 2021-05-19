@@ -11,13 +11,13 @@ export const Layout: FC = ({ children }) => {
     <GalaxyThemeProvider internalLinkTag={GatsbyLink}>
       <Dashboard header={{
         items: [{
-          title: 'Home',
+          label: 'Home',
           href: '/'
         }, {
-          title: 'Page1',
+          label: 'Page1',
           href: '/page1'
         }, {
-          title: 'Page2',
+          label: 'Page2',
           href: '/page2'
         }]
       }}>

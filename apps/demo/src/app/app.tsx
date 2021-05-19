@@ -36,22 +36,22 @@ export function App() {
             logo: './assets/shifter-logomark.svg',
             items: [
               {
-                title: 'Home',
+                label: 'Home',
                 href: `/${admin}`,
                 variant: 'ghost',
               },
               {
-                title: 'Sites',
+                label: 'Sites',
                 href: `/${admin}/${sites}`,
                 variant: 'ghost',
               },
               {
-                title: 'Teams',
+                label: 'Teams',
                 href: `/${admin}/${teams}`,
                 variant: 'ghost',
               },
               {
-                title: 'Guides',
+                label: 'Guides',
                 href: `/${admin}/guides`,
                 variant: 'ghost',
               },

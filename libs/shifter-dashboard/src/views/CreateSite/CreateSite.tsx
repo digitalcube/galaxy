@@ -166,6 +166,8 @@ export const CreateSite: FC<CreateSite> = ({ teams }) => {
   return (
     <Overlay className="flex justify-start bg-white">
       <Header
+        className="px-8 py-6"
+        mainClassName="px-8"
         aside={
           <Link href={`/${admin}/`}>
             <XIcon className="h-6 w-6 text-shifter-purple-primary" />

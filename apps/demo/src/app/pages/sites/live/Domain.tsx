@@ -6,16 +6,20 @@ import { fakerSiteDomains } from '@galaxy/faker';
 
 const useDummyProps = (): PageDomainProps => {
   return {
-    domains: fakerSiteDomains
-  }
-}
+    domains: fakerSiteDomains,
+  };
+};
 export const PageDomain: FC = () => {
-  const {domains} = useDummyProps()
+  const { domains } = useDummyProps();
   return (
-    <Main actions={<AddDomain />} title="Domain">
-        <Card>Steps to connect your domain</Card>
-        <Domains domains={domains} />
-      </Main>
+    <Main
+      actions={<AddDomain />}
+      title="Domain"
+      className="p-8 w-full border-l border-shifter-gray-200 space-y-8"
+    >
+      <Card>Steps to connect your domain</Card>
+      <Domains domains={domains} />
+    </Main>
   );
 };
 
