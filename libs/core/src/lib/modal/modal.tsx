@@ -2,11 +2,11 @@ import React, { Fragment, useState, ReactNode } from 'react';
 import { Dialog as HeadlessUiDialog, Transition } from '@headlessui/react';
 
 /* eslint-disable-next-line */
-export interface DialogProps {
+export interface ModalProps {
   children?: ReactNode;
 }
 
-export function Dialog(props: DialogProps) {
+export function Modal(props: ModalProps) {
   const [isOpen, setIsOpen] = useState(true);
 
   function closeModal() {
@@ -25,7 +25,7 @@ export function Dialog(props: DialogProps) {
           onClick={openModal}
           className="px-4 py-2 text-sm font-medium text-white bg-black rounded-md bg-opacity-20 hover:bg-opacity-30 focus:outline-none focus-visible:ring-2 focus-visible:ring-white focus-visible:ring-opacity-75"
         >
-          Open dialog
+          Open modal
         </button>
       </div>
 
@@ -91,4 +91,4 @@ export function Dialog(props: DialogProps) {
   );
 }
 
-export default Dialog;
+export default Modal;

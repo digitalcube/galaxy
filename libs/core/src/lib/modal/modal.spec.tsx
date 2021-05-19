@@ -1,11 +1,11 @@
 import React from 'react';
 import { render } from '@testing-library/react';
 
-import Dialog from './dialog';
+import Modal from './modal';
 
-describe('Dialog', () => {
+describe('Modal', () => {
   it('should render successfully', () => {
-    const { baseElement } = render(<Dialog />);
+    const { baseElement } = render(<Modal />);
     expect(baseElement).toBeTruthy();
   });
 });
