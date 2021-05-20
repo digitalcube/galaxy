@@ -1,34 +1,17 @@
 version: 1
-applications:
-  - appRoot:
-    frontend:
-      phases:
-        preBuild:
-          commands:
-            - yarn install
-        build:
-          commands:
-            - yarn run storybook:build
-      artifacts:
-        baseDirectory: /storybook-static
-        files:
-          - '**/*'
-      cache:
-        paths:
-          - node_modules/**/*
-  - appRoot:
-    frontend:
-      phases:
-        preBuild:
-          commands:
-            - yarn install
-        build:
-          commands:
-            - yarn run build
-      artifacts:
-        baseDirectory: /dist/apps/demo
-        files:
-          - '**/*'
-      cache:
-        paths:
-          - node_modules/**/*
+frontend:
+  phases:
+    preBuild:
+      commands:
+        - yarn install
+    build:
+      commands:
+        - yarn run storybook:build
+  artifacts:
+    # IMPORTANT - Please verify your build output directory
+    baseDirectory: /storybook-static
+    files:
+      - '**/*'
+  cache:
+    paths:
+      - node_modules/**/*
