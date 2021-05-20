@@ -19,15 +19,7 @@ export function Modal(props: ModalProps) {
 
   return (
     <>
-      <div className="fixed inset-0 flex items-center justify-center">
-        <button
-          type="button"
-          onClick={openModal}
-          className="px-4 py-2 text-sm font-medium text-white bg-black rounded-md bg-opacity-20 hover:bg-opacity-30 focus:outline-none focus-visible:ring-2 focus-visible:ring-white focus-visible:ring-opacity-75"
-        >
-          Open modal
-        </button>
-      </div>
+      <span onClick={openModal}>Open modal</span>
 
       <Transition appear show={isOpen} as={Fragment}>
         <HeadlessUiDialog
@@ -36,7 +28,7 @@ export function Modal(props: ModalProps) {
           onClose={closeModal}
           open={isOpen}
         >
-          <div className="min-h-screen px-4 text-center">
+          <div className="min-h-screen">
             <Transition.Child
               as={Fragment}
               enter="ease-out duration-300"
@@ -49,13 +41,6 @@ export function Modal(props: ModalProps) {
               <HeadlessUiDialog.Overlay className="fixed inset-0" />
             </Transition.Child>
 
-            {/* This element is to trick the browser into centering the modal contents. */}
-            <span
-              className="inline-block h-screen align-middle"
-              aria-hidden="true"
-            >
-              &#8203;
-            </span>
             <Transition.Child
               as={Fragment}
               enter="ease-out duration-300"
@@ -65,7 +50,7 @@ export function Modal(props: ModalProps) {
               leaveFrom="opacity-100 scale-100"
               leaveTo="opacity-0 scale-95"
             >
-              <div className="inline-block w-full h-screen p-6 my-8 overflow-hidden text-left align-middle transition-all transform bg-white shadow-xl rounded-2xl">
+              <div className="inline-block w-full h-screen overflow-hidden transition-all transform bg-shifter-purple-primary">
                 <HeadlessUiDialog.Title
                   as="h3"
                   className="text-lg font-medium leading-6 text-gray-900"
