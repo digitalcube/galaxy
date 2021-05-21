@@ -186,7 +186,7 @@ const ZeroTeams = () => {
 const TeamsList = ({ teams }: Teams) => {
   if (!teams) return null;
   return (
-    <Section className="space-y-10">
+    <Section className="px-8 space-y-10">
       <TeamsControls />
       <Section className="space-y-4">
         {teams.map((team, i) => (

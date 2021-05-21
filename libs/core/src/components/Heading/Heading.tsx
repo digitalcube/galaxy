@@ -2,7 +2,6 @@ import React, { FC, PropsWithChildren, ReactNode } from 'react';
 import { css } from '@galaxy/core';
 import { Tag } from '@galaxy/core';
 import { headingTheme } from './Heading.galaxy';
-import './Heading.css';
 
 const { heading } = headingTheme;
 
@@ -32,8 +31,8 @@ export const Heading: FC<HeadingProps> = ({
       htmlFor={htmlFor}
       className={`${size} ${weight} ${classNames} ${className}`}
     >
-      {text}
-      {children}
+      {text && children ? <span>{text}</span> : text}
+      {text && children ? <span>{children}</span> : children}
     </Tag>
   );
 };

@@ -13,11 +13,13 @@ export const Default = () => {
 };
 
 export const WithText = () => {
-  return <Heading text="Hello world" />;
+  return <Heading variant="primary" fontWeight="strong" text="Hello world" />;
 };
+
 export const WithChildren = () => {
   return <Heading>Hello world</Heading>;
 };
+
 export const WithTextAndChildren = () => {
-  return <Heading text="Hello world" >Goodbye</Heading>;
+  return <Heading text="Hello world">Goodbye</Heading>;
 };

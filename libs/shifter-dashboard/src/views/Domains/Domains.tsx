@@ -3,7 +3,7 @@ import { Section, Card } from '@galaxy/core';
 import { Domain } from '@galaxy/shifter-dashboard';
 
 export const Domains: FC<DomainsProps> = ({ domains }) => (
-  <Section className="space-y-10">
+  <Section className="px-8 space-y-10">
     <Section className="space-y-4">
       {domains ? (
         domains.map((domain, i) => <Domain key={i} {...domain} />)

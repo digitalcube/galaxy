@@ -25,13 +25,12 @@ export function App() {
   const { avatar } = fakerAvatar;
 
   return (
-    <div style={{padding: '1rem'}}>
     <ShifterDashboardThemeProvider internalLinkTag={ReactRouterLink}>
       <BrowserRouter>
         <Dashboard
           header={{
             avatar: {
-              menu: avatar.menu
+              menu: avatar.menu,
             },
             logo: './assets/shifter-logomark.svg',
             items: [
@@ -72,7 +71,6 @@ export function App() {
         </Dashboard>
       </BrowserRouter>
     </ShifterDashboardThemeProvider>
-    </div>
   );
 }
 
