@@ -39,17 +39,17 @@ export const RouteSite: FC = () => {
           {
             label: 'Overview',
             href: 'live',
-            variant: 'ghost',
+            variant: 'link',
           },
           {
             label: 'Domain',
             href: 'live/domains',
-            variant: 'ghost',
+            variant: 'link',
           },
           {
             label: 'Analytics',
             href: 'live/analytics',
-            variant: 'ghost',
+            variant: 'link',
           },
         ],
       },
@@ -66,37 +66,37 @@ export const RouteSite: FC = () => {
           {
             label: 'Environment',
             href: 'dev',
-            variant: 'ghost',
+            variant: 'link',
           },
           {
             label: 'Media CDN',
             href: 'dev/cdn',
-            variant: 'ghost',
+            variant: 'link',
           },
           {
             label: 'Webhooks',
             href: 'dev/webhooks',
-            variant: 'ghost',
+            variant: 'link',
           },
           {
             label: 'Access Logs',
             href: 'dev/access-logs',
-            variant: 'ghost',
+            variant: 'link',
           },
           {
             label: 'Basic Auth',
             href: 'dev/basic-auth',
-            variant: 'ghost',
+            variant: 'link',
           },
           {
             label: 'Emergency Actions',
             href: 'dev/emergency-actions',
-            variant: 'ghost',
+            variant: 'link',
           },
           {
             label: 'Errors',
             href: 'dev/errors',
-            variant: 'ghost',
+            variant: 'link',
           },
         ],
       },
@@ -119,7 +119,6 @@ export const RouteSite: FC = () => {
         ? menu.items.map((m) => ({
             ...m,
             href: `/${[admin, sites, siteId, m.href].join('/')}`,
-            variant: 'ghost',
           }))
         : undefined,
     }));

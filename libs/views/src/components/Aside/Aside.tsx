@@ -18,7 +18,7 @@ export const Aside: FC<AsideProps> = ({ items, name, subHeading }) => {
         </Section>
         <Section className="space-y-4">
           <Heading fontSize={6} text={name} fontWeight="strong" />
-          <Section>{subHeading}</Section>
+          <Section children={subHeading} />
         </Section>
       </Panel>
       <Panel>

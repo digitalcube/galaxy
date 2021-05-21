@@ -901,6 +901,9 @@ select {
 .mb-4 {
 	margin-bottom: 1rem;
 }
+.ml-10 {
+	margin-left: 2.5rem;
+}
 .block {
 	display: block;
 }
