@@ -7,13 +7,12 @@ const { toggle } = toggleTheme;
 
 export const Toggle: FC<Toggle> = ({ state, variants }: Toggle) => {
   const [enabled, setEnabled] = useState(state || false);
-  const size = 12;
 
   const toggleSwitchScale = `${
-    enabled ? `translate-x-${size - 2}` : 'translate-x-1'
-  } w-${size / 2 - 2} h-${size / 2 - 2}`;
+    enabled ? `translate-x-8` : 'translate-x-1'
+  } w-3 h-3`;
 
-  const toggleBezelCssScale = `h-${size / 2} w-${size}`;
+  const toggleBezelCssScale = `h-6 w-12`;
 
   const toggleBezelCssBackground = enabled
     ? 'bg-status-success-default'
