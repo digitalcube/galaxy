@@ -9,7 +9,13 @@ const ringWidth = require('./libs/core/src/config/RingWidth/tailwind.config.js')
 
 module.exports = {
   mode: 'jit',
-  purge: ['./libs/**/*.{js,jsx,ts,tsx}'],
+  purge: [
+    './libs/core/src/lib/**/*.{js,jsx/,ts,tsx}',
+    './apps/demo/**/*.{js,jsx,ts,tsx}',
+    'libs/shifter-dashboard/**/*.{js,jsx,ts,tsx}',
+    'libs/shifter/**/*.{js,jsx,ts,tsx}',
+    'libs/views/**/*.{js,jsx,ts,tsx}',
+  ],
   theme: {
     ...colors,
     ...fontSize,
