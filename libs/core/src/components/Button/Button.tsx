@@ -14,7 +14,6 @@ export const Button: FC<Button> = ({
   href,
   disabled,
 }: Button) => {
-
   if (!label && !children) {
     label = variant;
   }
@@ -36,7 +35,6 @@ export const Button: FC<Button> = ({
       </Link>
     );
   }
-
   return (
     <Tag disabled={disabled} as={as} className={`${className} ${classNames}`}>
       {label}

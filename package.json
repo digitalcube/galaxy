@@ -36,7 +36,7 @@
     "start": "nx serve",
     "storybook:build": "build-storybook --static-dir ./.storybook/public",
     "storybook": "start-storybook -s ./.storybook/public",
-    "tailwind:build:watch": "TAILWIND_MODE=watch postcss ./libs/core/src/styles/tailwind.css -o ./libs/core/src/styles/style.css",
+    "tailwind:build:watch": "TAILWIND_MODE=watch postcss -w --verbose ./libs/core/src/styles/tailwind.css -o ./libs/core/src/styles/style.css",
     "tailwind:build": "postcss ./libs/core/src/styles/tailwind.css -o ./libs/core/src/styles/style.css",
     "test": "nx test",
     "update": "nx migrate latest",
