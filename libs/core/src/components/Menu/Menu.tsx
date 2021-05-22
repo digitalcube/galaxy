@@ -31,11 +31,17 @@ export const Items: FC<MenuItemsProp> = ({ items, alignment, level = 0 }) => {
             <Fragment key={i}>
               <Disclosure>
                 <Disclosure.Button>
-                  <Button key={i} variant={variant} label={label} href={href} />
+                  <Button
+                    active
+                    key={i}
+                    variant={variant}
+                    label={label}
+                    href={href}
+                  />
                 </Disclosure.Button>
                 <Disclosure.Panel>
                   <Menu
-                    className="ml-10"
+                    className="ml-10 space-y-3 py-3 font-strong"
                     items={items}
                     alignment={alignment}
                     level={level + 3}

@@ -3,9 +3,17 @@ import { Switch } from '@headlessui/react';
 import { css } from '@galaxy/core';
 import { toggleTheme } from './Toggle.galaxy';
 
+/* eslint-disable-next-line */
+export interface ToggleProps {
+  state?: boolean;
+  variants?: any;
+  variant?: string;
+}
+
 const { toggle } = toggleTheme;
 
-export const Toggle: FC<Toggle> = ({ state, variants }: Toggle) => {
+export function Toggle(props: ToggleProps) {
+  const { state, variants } = props;
   const [enabled, setEnabled] = useState(state || false);
 
   const toggleSwitchScale = `${
@@ -36,13 +44,9 @@ export const Toggle: FC<Toggle> = ({ state, variants }: Toggle) => {
       <span className={`${toggleSwitchCss} ${toggleSwitchScale}`} />
     </Switch>
   );
-};
+}
 
-export type Toggle = {
-  state?: boolean;
-  variants?: any;
-  variant?: string;
-};
+export default Toggle;
 
 Toggle.defaultProps = {
   state: true,

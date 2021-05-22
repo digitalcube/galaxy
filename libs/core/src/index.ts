@@ -1,3 +1,6 @@
+export * from './lib/avatar/avatar';
+export * from './lib/badge/badge';
+export * from './lib/toggle/toggle';
 export * from './lib/modal/modal';
 export * from './lib/tooltip/tooltip';
 export * from './lib/progress/progress';
