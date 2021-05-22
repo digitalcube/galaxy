@@ -44,6 +44,7 @@ module.exports = {
     'shifter-accent': '#F80A5B',
     'shifter-magenta-light': 'rgba(254, 238, 244, 1)',
     'shifter-magenta-primary': 'rgba(248, 10, 91, 1)',
+    'shifter-purple-50': '#F9F4F9',
     'shifter-purple-100': '#F3EAF3',
     'shifter-purple-200': '#E2C9E1',
     'shifter-purple-300': '#D0A9CE',
@@ -66,6 +67,6 @@ module.exports = {
     black: '#0C0C0D',
     transparent: 'rgba(255, 255, 255, 0)',
     white: '#ffffff',
-    focus: '#2EB4FF'
+    focus: '#2EB4FF',
   },
 };
