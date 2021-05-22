@@ -80,6 +80,9 @@ $ yarn nx g @nrwl/react:component Tooltip --project=core --export
 
 # Eg.) New view component for shifter-web named Footer
 $ yarn nx g @nrwl/react:component Footer --project=shifter-web --export
+
+# Eg.) New component for shifter-dashboard named DomainWizard with a storybook.
+$ yarn nx g @nrwl/react:component DomainWizard --project=shifter-dashboard --export && yarn nx g component-story --project=shifter-dashboard --componentPath=lib/domain-wizard/domain-wizard.tsx
 ```
 
 And we can add a story file for the Storybook by the command.
