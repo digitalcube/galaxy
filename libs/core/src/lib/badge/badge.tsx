@@ -1,6 +1,6 @@
 import React from 'react';
 import { Heading, css } from '@galaxy/core';
-import { badgeTheme } from './Badge.galaxy';
+import { badgeTheme } from './badge.galaxy';
 const { badge } = badgeTheme;
 
 /* eslint-disable-next-line */
