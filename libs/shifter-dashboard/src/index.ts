@@ -1,3 +1,4 @@
+export * from './lib/site-options/site-options';
 export * from './lib/domain-options/domain-options';
 export * from './lib/domain-wizard/domain-wizard';
 export * from './lib/aside/aside';

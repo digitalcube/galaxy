@@ -38,12 +38,26 @@ function RestartLabel(props: SiteOptionsLabelProps) {
   );
 }
 
-export const SiteOptions: FC<SiteOptions> = ({
-  className,
-  state,
-  variant,
-  handleChangeSiteState,
-}: SiteOptions) => {
+export interface SiteOptionsLabelProps {
+  label?: HeadingProps['text'];
+  variant?: HeadingProps['variant'];
+}
+
+/* eslint-disable-next-line */
+export interface SiteOptionsProps {
+  state?: string;
+  className?: string;
+  menu?: ButtonMenu['menu'];
+  variant?: OptionsMenu['variant'];
+  /**
+   * For Mock features
+   */
+  handleChangeSiteState: (state: string) => void;
+}
+
+export function SiteOptions(props: SiteOptionsProps) {
+  const { className, state, variant, handleChangeSiteState } = props;
+
   const handleStartWordPress = useCallback(() => {
     handleChangeSiteState('starting');
     setTimeout(() => {
@@ -105,20 +119,6 @@ export const SiteOptions: FC<SiteOptions> = ({
   ]);
 
   return <OptionsMenu variant={variant} className={className} menu={menu} />;
-};
+}
 
-export type SiteOptionsLabelProps = {
-  label?: HeadingProps['text'];
-  variant?: HeadingProps['variant'];
-};
-
-export type SiteOptions = {
-  state?: string;
-  className?: string;
-  menu?: ButtonMenu['menu'];
-  variant?: OptionsMenu['variant'];
-  /**
-   * For Mock features
-   */
-  handleChangeSiteState: (state: string) => void;
-};
+export default SiteOptions;
