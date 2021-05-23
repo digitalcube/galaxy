@@ -35,30 +35,39 @@ export function Artifact(props: ArtifactProps) {
   } = props;
   const artifactCss = css({ variants: variants });
   return (
-    <Card variant="primary" className={`${artifactCss}`}>
-      <Progress className="absolute w-full top-0 right-0" progress={progress} />
-      <ArtifactPreview img={img} />
-      <Section as="div" className="flex-grow justify-between flex flex-col">
-        <Section className="px-4 py-2">
-          <Section className="flex items-center" as="div">
-            <Section className="flex-auto">
-              <ArtifactName variant={variant} name={name} />
-              <ArtifactCreationDate date={date} />
-            </Section>
-            <Section as="span" className="flex items-center space-x-4">
-              <ArtifactState state={state} />
-              <OptionsMenu
-                menu={[
-                  { label: 'Publish', href: '#' },
-                  { label: 'Delete', href: '#' },
-                  { label: 'More Details', href: '#' },
-                ]}
-              />
+    <Card
+      variant="primary"
+      mainClassName={`${artifactCss}`}
+      main={
+        <>
+          <Progress
+            className="absolute w-full top-0 right-0"
+            progress={progress}
+          />
+          <ArtifactPreview img={img} />
+          <Section as="div" className="flex-grow justify-between flex flex-col">
+            <Section className="px-4 py-2">
+              <Section className="flex items-center" as="div">
+                <Section className="flex-auto">
+                  <ArtifactName variant={variant} name={name} />
+                  <ArtifactCreationDate date={date} />
+                </Section>
+                <Section as="span" className="flex items-center space-x-4">
+                  <ArtifactState state={state} />
+                  <OptionsMenu
+                    menu={[
+                      { label: 'Publish', href: '#' },
+                      { label: 'Delete', href: '#' },
+                      { label: 'More Details', href: '#' },
+                    ]}
+                  />
+                </Section>
+              </Section>
             </Section>
           </Section>
-        </Section>
-      </Section>
-    </Card>
+        </>
+      }
+    />
   );
 }
 

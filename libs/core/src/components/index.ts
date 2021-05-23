@@ -24,7 +24,7 @@ export * from './Integration';
 export * from './Menu';
 export * from './Overlay';
 export * from './Panel';
-export * from './Screenshot';
+// export * from './Screenshot';
 export * from './Section';
 export * from './SecurityBuiltIn';
 export * from './Select';

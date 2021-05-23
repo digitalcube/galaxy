@@ -1,10 +1,9 @@
 import React, { FC } from 'react';
 import { Heading, Section, Card, css } from '@galaxy/core';
-import { Artifacts } from '@galaxy/shifter-dashboard';
+import { Artifacts, ArtifactProps } from '@galaxy/shifter-dashboard';
 import { deploysTheme } from './Deploys.galaxy';
 import { WpControls } from '../WpControls';
 import { AutoPublish } from '../AutoPublish';
-import { ArtifactProps } from '../Artifact';
 const { deploys } = deploysTheme;
 
 export const Deploys: FC<Deploys> = ({
