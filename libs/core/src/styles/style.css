@@ -1239,6 +1239,9 @@ select {
 .overflow-auto {
 	overflow: auto;
 }
+.overflow-x-hidden {
+	overflow-x: hidden;
+}
 .truncate {
 	overflow: hidden;
 	text-overflow: ellipsis;
@@ -1259,6 +1262,10 @@ select {
 .rounded-r {
 	border-top-right-radius: 0.25rem;
 	border-bottom-right-radius: 0.25rem;
+}
+.rounded-l {
+	border-top-left-radius: 0.25rem;
+	border-bottom-left-radius: 0.25rem;
 }
 .border {
 	border-width: 1px;

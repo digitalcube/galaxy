@@ -13,5 +13,5 @@ export const createScreenshotURL = (url: string, size = 300): string => {
 
 export const Screenshot = memo(({ alt, url }: Screenshot) => {
   const src = useMemo(() => createScreenshotURL(url), [url]);
-  return <img className="w-100" alt={alt} src={src} />;
+  return <img className="w-100 rounded-l" alt={alt} src={src} />;
 });
