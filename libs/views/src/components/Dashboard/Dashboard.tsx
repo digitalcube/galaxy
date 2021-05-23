@@ -1,5 +1,5 @@
 import React, { FC, ReactNode } from 'react';
-import { Header, Search } from '@galaxy/views';
+import { Header, HeaderProps } from '@galaxy/views';
 import { Section, Menu, Avatar } from '@galaxy/core';
 
 export const Dashboard: FC<Dashboard> = ({
@@ -28,7 +28,7 @@ export const Dashboard: FC<Dashboard> = ({
 };
 
 export type Dashboard = {
-  header?: Header;
+  header?: HeaderProps;
   children?: ReactNode;
   main?: ReactNode;
 };

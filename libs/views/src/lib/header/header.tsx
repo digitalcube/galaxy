@@ -1,9 +1,9 @@
-import React, { FC, ReactNode } from 'react';
+import React, { ReactNode } from 'react';
 import { Section, MenuItem, AvatarProps, Post } from '@galaxy/core';
 import { Search } from '@galaxy/views';
 
-export type Header = {
-  // "@type": 'Brand'
+/* eslint-disable-next-line */
+export interface HeaderProps {
   items?: MenuItem[];
   avatar?: AvatarProps;
   main?: ReactNode;
@@ -14,18 +14,19 @@ export type Header = {
   logo?: string;
   name?: string;
   schema?: string;
-};
+}
 
-export const Header: FC<Header> = ({
-  main,
-  aside,
-  logo,
-  mainClassName,
-  className,
-  brandClassName,
-  name,
-  schema,
-}) => {
+export function Header(props: HeaderProps) {
+  const {
+    aside,
+    logo,
+    mainClassName,
+    className,
+    brandClassName,
+    name,
+    schema,
+  } = props;
+  let { main } = props;
   if (schema === 'Shifter/Dashboard') main = <Search variant="ghost" />;
   return (
     <Section
@@ -44,7 +45,9 @@ export const Header: FC<Header> = ({
       </div>
     </Section>
   );
-};
+}
+
+export default Header;
 
 Header.defaultProps = {
   logo: '/dc-logomark.svg',
