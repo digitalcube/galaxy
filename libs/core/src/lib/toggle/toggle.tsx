@@ -1,7 +1,7 @@
 import React, { FC, useState } from 'react';
 import { Switch } from '@headlessui/react';
 import { css } from '@galaxy/core';
-import { toggleTheme } from './Toggle.galaxy';
+import { toggleTheme } from './toggle.galaxy';
 
 /* eslint-disable-next-line */
 export interface ToggleProps {
