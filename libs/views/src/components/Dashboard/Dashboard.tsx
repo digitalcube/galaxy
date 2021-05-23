@@ -1,5 +1,5 @@
 import React, { FC, ReactNode } from 'react';
-import { Header, HeaderProps } from '@galaxy/views';
+import { Header, HeaderProps, Footer } from '@galaxy/views';
 import { Section, Menu, Avatar } from '@galaxy/core';
 
 export const Dashboard: FC<Dashboard> = ({
@@ -23,6 +23,7 @@ export const Dashboard: FC<Dashboard> = ({
       />
       {children ? children : null}
       {main ? main : null}
+      <Footer className="flex justify-center pt-20 pb-10" />
     </Section>
   );
 };
