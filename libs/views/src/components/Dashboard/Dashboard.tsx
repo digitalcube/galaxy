@@ -17,7 +17,7 @@ export const Dashboard: FC<Dashboard> = ({
         aside={
           <>
             <Menu items={header?.items} />
-            <Avatar {...header?.avatar} />
+            <Avatar size={8} {...header?.avatar} />
           </>
         }
       />

@@ -1,12 +1,10 @@
 // TODO: move & refactor this
 import { buttonTheme } from './Button/Button.galaxy';
 import { headingTheme } from './Heading/Heading.galaxy';
-import { avatarTheme } from './Avatar/Avatar.galaxy';
 
 export const theme = {
   ...buttonTheme,
   ...headingTheme,
-  ...avatarTheme,
 };
 
 export * from './Animation';

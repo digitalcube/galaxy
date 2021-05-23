@@ -1,5 +1,7 @@
 import React from 'react';
 import { Image, css, ButtonMenu } from '@galaxy/core';
+import { avatarTheme } from './avatar.galaxy';
+const { avatar } = avatarTheme;
 
 /* eslint-disable-next-line */
 export interface AvatarProps {
@@ -15,8 +17,9 @@ export interface AvatarProps {
 }
 
 export function Avatar(props: AvatarProps) {
-  const { variant, avatar, menu, name, imgDefault, size, className } = props;
+  const { variant, menu, name, imgDefault, size, className } = props;
   let { img } = props;
+
   const avatarCss = css({
     variant: variant,
     variants: avatar,
@@ -50,3 +53,8 @@ export function Avatar(props: AvatarProps) {
 }
 
 export default Avatar;
+
+Avatar.defaultProps = {
+  variants: avatar,
+  size: 6,
+};
