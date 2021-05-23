@@ -1,6 +1,6 @@
 import React, { FC } from 'react';
 import { Heading, Section, Card, css } from '@galaxy/core';
-import { Artifacts } from '../../views/Artifacts/Artifacts';
+import { Artifacts } from '@galaxy/shifter-dashboard';
 import { deploysTheme } from './Deploys.galaxy';
 import { WpControls } from '../WpControls';
 import { AutoPublish } from '../AutoPublish';

@@ -1,22 +1,18 @@
-import React, { FC } from 'react';
+import React from 'react';
 import { Section, SecurityBuiltIn, Heading } from '@galaxy/core';
 import { Artifact, ArtifactProps } from '@galaxy/shifter-dashboard';
 
-export type Artifacts = {
+/* eslint-disable-next-line */
+export interface ArtifactsProps {
   artifacts?: ArtifactProps[];
   className?: string;
   title?: string;
   description?: string;
   options?: any;
-};
+}
 
-export const Artifacts: FC<Artifacts> = ({
-  artifacts,
-  className,
-  title,
-  description,
-  options,
-}) => {
+export function Artifacts(props: ArtifactsProps) {
+  const { artifacts, className, title, description, options } = props;
   if (!artifacts) return null;
   const allArtifacts = artifacts.map((artifact, i) => {
     return <Artifact key={i} {...artifact} options={options} />;
@@ -42,7 +38,9 @@ export const Artifacts: FC<Artifacts> = ({
       </Section>
     </Section>
   );
-};
+}
+
+export default Artifacts;
 
 Artifacts.defaultProps = {
   title: "You haven't created any artifacts for this site yet.",

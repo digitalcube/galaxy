@@ -1,3 +1,5 @@
+export * from './lib/artifact/artifact';
+export * from './lib/artifacts/artifacts';
 export * from './lib/site-options/site-options';
 export * from './lib/domain-options/domain-options';
 export * from './lib/domain-wizard/domain-wizard';

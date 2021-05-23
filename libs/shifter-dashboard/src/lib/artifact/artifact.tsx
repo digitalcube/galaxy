@@ -1,4 +1,4 @@
-import React, { FC } from 'react';
+import React from 'react';
 import {
   ArtifactState,
   ArtifactCreationDate,
@@ -7,19 +7,32 @@ import {
 } from '@galaxy/shifter-dashboard';
 import { OptionsMenu } from '@galaxy/views';
 import { Section, Card, Progress, css } from '@galaxy/core';
-import { artifactTheme } from './Artifact.galaxy';
+import { artifactTheme } from './artifact.galaxy';
 const { artifact } = artifactTheme;
 
-export const Artifact: FC<ArtifactProps> = ({
-  name,
-  variant,
-  img,
-  state,
-  progress,
-  date,
-  variants,
-  options,
-}) => {
+/* eslint-disable-next-line */
+export interface ArtifactProps {
+  img?: string;
+  name?: string;
+  state?: 'running' | 'stopped' | string;
+  progress?: 0 | 1 | 2 | 3 | 4 | 5 | null;
+  date?: string;
+  variants?: any;
+  variant?: string;
+  options?: any;
+}
+
+export function Artifact(props: ArtifactProps) {
+  const {
+    name,
+    variant,
+    img,
+    state,
+    progress,
+    date,
+    variants,
+    options,
+  } = props;
   const artifactCss = css({ variants: variants });
   return (
     <Card variant="primary" className={`${artifactCss}`}>
@@ -47,18 +60,9 @@ export const Artifact: FC<ArtifactProps> = ({
       </Section>
     </Card>
   );
-};
+}
 
-export type ArtifactProps = {
-  img?: string;
-  name?: string;
-  state?: 'running' | 'stopped' | string;
-  progress?: 0 | 1 | 2 | 3 | 4 | 5 | null;
-  date?: string;
-  variants?: any;
-  variant?: string;
-  options?: any;
-};
+export default Artifact;
 
 Artifact.defaultProps = {
   variants: artifact,
