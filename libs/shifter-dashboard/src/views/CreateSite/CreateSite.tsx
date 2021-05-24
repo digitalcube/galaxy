@@ -1,5 +1,5 @@
 import React, { FC } from 'react';
-import { Overlay, Heading, Section, Input, Button, Link } from '@galaxy/core';
+import { Modal, Heading, Section, Input, Button, Link } from '@galaxy/core';
 import {
   Header,
   PricingPlans,
@@ -155,17 +155,18 @@ const Step_04: FC<CreateSite> = () => {
 };
 
 const Steps: FC<CreateSite> = () => {
-  if (window.location.pathname === `/create/site/4/`) return <Step_04 />;
-  if (window.location.pathname === `/create/site/3/`) return <Step_03 />;
-  if (window.location.pathname === `/create/site/2/`) return <Step_02 />;
+  if (window.location.pathname === `/site/create/4/`) return <Step_04 />;
+  if (window.location.pathname === `/site/create/3/`) return <Step_03 />;
+  if (window.location.pathname === `/site/create/2/`) return <Step_02 />;
   return <Step_01 />;
 };
 
 export const CreateSite: FC<CreateSite> = ({ teams }) => {
   const { admin } = useInternalLinkBase();
   return (
-    <Overlay className="flex justify-start bg-white">
+    <Modal>
       <Header
+        logo="/assets/shifter-logomark.svg"
         className="px-8 py-6"
         mainClassName="px-8"
         aside={
@@ -177,7 +178,7 @@ export const CreateSite: FC<CreateSite> = ({ teams }) => {
       <Section className="w-full max-w-screen-lg mx-auto py-20">
         <Steps />
       </Section>
-    </Overlay>
+    </Modal>
   );
 };
 
