@@ -95,6 +95,10 @@ export const PricingTable: FC<PricingTableProps> = ({
           name: 'Elementum ut dapibus mi feugiat cras nisl.',
           tiers: { 'Tier 2': true, 'Tier 3': true },
         },
+        {
+          name: 'Veniam dolor ad cillum ipsum elit.',
+          tiers: { 'Tier 2': true, 'Tier 3': true },
+        },
       ],
     },
     {
@@ -162,13 +166,13 @@ export const PricingTable: FC<PricingTableProps> = ({
               <tr>
                 <th
                   className="py-3 pl-6 text-gray-900 text-left"
-                  colSpan={4}
+                  colSpan={5}
                   scope="colgroup"
                 >
                   {section.name}
                 </th>
               </tr>
-              {/* {section.features.map((feature) => (
+              {section.features.map((feature) => (
                 <tr key={feature.name}>
                   <th
                     className="py-5 px-6 text-shifter-purple-primary text-left"
@@ -207,7 +211,7 @@ export const PricingTable: FC<PricingTableProps> = ({
                     </td>
                   ))}
                 </tr>
-              ))} */}
+              ))}
             </Fragment>
           ))}
         </tbody>

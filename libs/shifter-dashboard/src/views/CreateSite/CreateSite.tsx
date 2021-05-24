@@ -55,11 +55,11 @@ const Step_01: FC<CreateSite> = () => {
                       variant="primary"
                       fontWeight="strong"
                     />
-                    <div className="border-2 border-shifter-purple-primary focus:outline-none focus:border-shifter-purple-primary rounded p-3 w-full">
+                    <div className="border-2 border-inset border-shifter-purple-primary focus:outline-none focus:border-shifter-purple-primary rounded w-full">
                       <select
                         id="siteTeam"
                         name="siteTeam"
-                        className="border-transparent bg-transparent text-shifter-purple-700 rounded w-full"
+                        className="border-transparent bg-transparent text-shifter-purple-700 p-3 rounded w-full"
                       >
                         <option>Default Team</option>
                         <option>Another Team</option>
