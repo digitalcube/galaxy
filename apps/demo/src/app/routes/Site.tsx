@@ -6,6 +6,7 @@ import { Aside, useInternalLinkBase } from '@galaxy/shifter-dashboard';
 import { PageOverview } from '../pages/sites/Overview';
 import { PageLiveOverview } from '../pages/sites/live/Overview';
 import { PageDomain } from '../pages/sites/live/Domain';
+import { PageCreateDomain } from '../pages/CreateDomain';
 import { PageStaging } from '../pages/sites/Staging';
 import { PageDevEnvironment } from '../pages/sites/dev/Environment';
 import { PageCDN } from '../pages/sites/dev/CDN';
@@ -135,6 +136,10 @@ export const RouteSite: FC = () => {
         <Route
           path={`/${admin}/${sites}/:siteId/live/domains`}
           component={PageDomain}
+        />
+        <Route
+          path={`/${admin}/${sites}/:siteId/live/domains/create`}
+          component={PageCreateDomain}
         />
         <Route
           path={`/${admin}/${sites}/:siteId/live/analytics`}

@@ -18,7 +18,6 @@ const userAvatar = [
   'https://images.unsplash.com/photo-1507331789086-893e9003c0e2',
   'https://images.unsplash.com/photo-1546215364-12f3fff5d578',
   'https://images.unsplash.com/photo-1584088743546-db0289ee9b07',
-  'https://images.unsplash.com/photo-1507095932579-7b78c3bef128',
 ];
 
 const products = [

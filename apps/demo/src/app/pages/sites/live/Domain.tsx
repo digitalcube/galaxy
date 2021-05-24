@@ -1,7 +1,7 @@
 import React, { FC } from 'react';
 import { Main } from '@galaxy/views';
 import {
-  AddDomain,
+  CreateDomain,
   Domain,
   Domains,
   DomainWizard,
@@ -20,7 +20,7 @@ export const PageDomain: FC = () => {
   const { domains, domainWizard } = useDummyProps();
   return (
     <Main
-      actions={<AddDomain />}
+      actions={<CreateDomain />}
       title="Domain"
       schema="dashboard"
     >

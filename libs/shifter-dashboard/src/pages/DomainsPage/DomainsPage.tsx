@@ -1,8 +1,8 @@
 import React, { FC, ReactNode } from 'react';
-import { Section, Panel, Card } from '@galaxy/core';
+import { Section, Panel } from '@galaxy/core';
 import { fakerHeader } from '@galaxy/faker';
 import { Aside, Dashboard, Main } from '@galaxy/views';
-import { AddDomain, Site, Domains, Domain } from '@galaxy/shifter-dashboard';
+import { CreateDomain, Site, Domains, Domain } from '@galaxy/shifter-dashboard';
 
 /**
  * @deprecated
@@ -35,5 +35,5 @@ export type DomainsPage = {
 };
 
 DomainsPage.defaultProps = {
-  actions: AddDomain,
+  actions: CreateDomain,
 };
