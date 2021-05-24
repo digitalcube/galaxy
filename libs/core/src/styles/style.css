@@ -1516,6 +1516,9 @@ select {
 	font-size: 1.38rem;
 	line-height: 150%;
 }
+.text-size-7 {
+	font-size: 1.875rem;
+}
 .font-strong {
 	font-weight: 700;
 }

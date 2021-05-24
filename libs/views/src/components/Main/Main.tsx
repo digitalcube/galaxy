@@ -21,7 +21,10 @@ export const Main: FC<Main> = ({
   }
 
   return (
-    <Section as="main" className={`${className}`}>
+    <Section
+      as="main"
+      className={`${className} p-8 w-full border-l border-shifter-gray-200 space-y-8`}
+    >
       {children}
     </Section>
   );

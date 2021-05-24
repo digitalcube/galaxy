@@ -22,7 +22,7 @@ export const PageDomain: FC = () => {
     <Main
       actions={<AddDomain />}
       title="Domain"
-      className="p-8 w-full border-l border-shifter-gray-200 space-y-8"
+      schema="dashboard"
     >
       <DomainWizard items={domainWizard} />
       <Domains domains={domains} />

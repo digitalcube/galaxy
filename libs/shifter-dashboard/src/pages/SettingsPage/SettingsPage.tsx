@@ -11,7 +11,7 @@ export const SettingsPage: FC<SettingsPage> = ({ items, name }) => {
         <Aside items={items} name={name} />
         <Main
           title="Site Settings"
-          className="p-8 w-full border-l border-shifter-gray-200 space-y-8"
+          schema="dashboard"
         >
           <SiteSettings />
         </Main>

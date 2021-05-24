@@ -18,11 +18,7 @@ export const DomainsPage: FC<DomainsPage> = ({
     <Dashboard header={fakerHeader}>
       <Section className="md:flex min-h-screen border-t border-shifter-gray-200">
         <Aside items={items} name={`${name}`} />
-        <Main
-          className="p-8 w-full border-l border-shifter-gray-200 space-y-8"
-          actions={actions}
-          title={`${title}`}
-        >
+        <Main schema="dashboard" actions={actions} title={`${title}`}>
           <Domains domains={domains} />
         </Main>
       </Section>

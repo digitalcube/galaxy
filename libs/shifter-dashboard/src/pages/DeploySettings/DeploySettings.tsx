@@ -16,7 +16,7 @@ export const DeploySettings: FC<DeploySettings> = ({
       <Section className="md:flex min-h-screen border-t border-shifter-gray-200">
         <Aside items={items} name={`${name}`} />
         <Main
-          className="p-8 w-full border-l border-shifter-gray-200 space-y-8"
+          schema="dashboard"
           actions={actions}
           title={`${title}`}
         >
