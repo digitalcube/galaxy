@@ -1,6 +1,6 @@
 import React, { FC, ReactNode } from 'react';
 import { Heading, css } from '@galaxy/core';
-import { badgeTheme } from './Badge.galaxy';
+import { badgeTheme } from './badge.galaxy';
 const { badge } = badgeTheme;
 
 export const Badge: FC<Badge> = ({ label, className, variant }: Badge) => {

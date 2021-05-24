@@ -1,5 +1,5 @@
 import React, { FC, ReactNode } from 'react';
-import { Header, Search } from '@galaxy/views';
+import { Header, HeaderProps, Footer } from '@galaxy/views';
 import { Section, Menu, Avatar } from '@galaxy/core';
 
 export const Dashboard: FC<Dashboard> = ({
@@ -17,18 +17,19 @@ export const Dashboard: FC<Dashboard> = ({
         aside={
           <>
             <Menu items={header?.items} />
-            <Avatar {...header?.avatar} />
+            <Avatar size={8} {...header?.avatar} />
           </>
         }
       />
       {children ? children : null}
       {main ? main : null}
+      <Footer className="flex justify-center pt-20 pb-10" />
     </Section>
   );
 };
 
 export type Dashboard = {
-  header?: Header;
+  header?: HeaderProps;
   children?: ReactNode;
   main?: ReactNode;
 };

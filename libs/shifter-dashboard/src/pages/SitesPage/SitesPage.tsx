@@ -1,5 +1,5 @@
 import React, { FC } from 'react';
-import { Header, Dashboard } from '@galaxy/views';
+import { HeaderProps, Dashboard } from '@galaxy/views';
 import { Sites, Site } from '@galaxy/shifter-dashboard';
 
 export const SitesPage: FC<SitesPage> = ({ sites, header }) => {
@@ -8,5 +8,5 @@ export const SitesPage: FC<SitesPage> = ({ sites, header }) => {
 
 export type SitesPage = {
   sites: Site[];
-  header?: Header;
+  header?: HeaderProps;
 };

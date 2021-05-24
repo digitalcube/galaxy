@@ -9,7 +9,7 @@ export const OptionsMenu: FC<OptionsMenu> = ({
 }: OptionsMenu) => {
   const buttonMenuVariants = css({
     variants: buttonTheme.button,
-    variant: 'ghost',
+    variant: 'link',
   });
 
   return (

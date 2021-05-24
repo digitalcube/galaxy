@@ -12,28 +12,28 @@ export const PricingTable: FC<PricingTableProps> = ({
   const tiers = [
     {
       name: 'Free Tier',
-      href: '/create/site/3/',
+      href: '/site/create/3/',
       priceMonthly: 'Free',
       description:
         'Our free tier for testing before upgrading and assigning a custom domain.',
     },
     {
       name: 'Tier 1',
-      href: '/create/site/3/',
+      href: '/site/create/3/',
       priceMonthly: 16,
       description:
         'Go live with a custom domain, automated backups, collaboration tools, and more.',
     },
     {
       name: 'Tier 2',
-      href: '/create/site/3/',
+      href: '/site/create/3/',
       priceMonthly: 24,
       description:
         'Go further with features like Shifter Webhooks, more storage and bandwidth.',
     },
     {
       name: 'Tier 3',
-      href: '/create/site/3/',
+      href: '/site/create/3/',
       priceMonthly: 144,
       description:
         'Access to all features, expert support, more bandwidth and unlimited storage.',
@@ -93,6 +93,10 @@ export const PricingTable: FC<PricingTableProps> = ({
         },
         {
           name: 'Elementum ut dapibus mi feugiat cras nisl.',
+          tiers: { 'Tier 2': true, 'Tier 3': true },
+        },
+        {
+          name: 'Veniam dolor ad cillum ipsum elit.',
           tiers: { 'Tier 2': true, 'Tier 3': true },
         },
       ],
@@ -162,13 +166,13 @@ export const PricingTable: FC<PricingTableProps> = ({
               <tr>
                 <th
                   className="py-3 pl-6 text-gray-900 text-left"
-                  colSpan={4}
+                  colSpan={5}
                   scope="colgroup"
                 >
                   {section.name}
                 </th>
               </tr>
-              {/* {section.features.map((feature) => (
+              {section.features.map((feature) => (
                 <tr key={feature.name}>
                   <th
                     className="py-5 px-6 text-shifter-purple-primary text-left"
@@ -207,7 +211,7 @@ export const PricingTable: FC<PricingTableProps> = ({
                     </td>
                   ))}
                 </tr>
-              ))} */}
+              ))}
             </Fragment>
           ))}
         </tbody>

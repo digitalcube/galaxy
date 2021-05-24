@@ -1,5 +1,5 @@
 import React, { FC } from 'react';
-import { Header, Dashboard } from '@galaxy/views';
+import { HeaderProps, Dashboard } from '@galaxy/views';
 import { Team, Teams } from '@galaxy/shifter-dashboard';
 
 export const TeamsPage: FC<TeamsPage> = ({ teams, header }) => {
@@ -8,5 +8,5 @@ export const TeamsPage: FC<TeamsPage> = ({ teams, header }) => {
 
 export type TeamsPage = {
   teams?: Team[];
-  header?: Header;
+  header?: HeaderProps;
 };

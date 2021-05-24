@@ -16,7 +16,7 @@ export const PageStaging: FC = () => {
   return (
     <Main
       title="Staging"
-      className="p-8 w-full border-l border-shifter-gray-200 space-y-8"
+      schema="dashboard"
     >
       <Deploys artifacts={artifacts} state={state} />
     </Main>

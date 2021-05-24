@@ -2,7 +2,7 @@ import React, { FC } from 'react';
 import { Section, MenuItems } from '@galaxy/core';
 import { fakerHeader } from '@galaxy/faker';
 import { Aside, Dashboard, Main } from '@galaxy/views';
-import { Site, Container } from '@galaxy/shifter-dashboard';
+import { Container } from '@galaxy/shifter-dashboard';
 
 export const Dev: FC<Dev> = ({ items, name, container }) => {
   return (
@@ -11,7 +11,7 @@ export const Dev: FC<Dev> = ({ items, name, container }) => {
       main={
         <Section className="md:flex min-h-screen border-t border-shifter-gray-200">
           <Aside items={items} name={name} />
-          <Main>
+          <Main schema="dashboard">
             <Container {...container} />
           </Main>
         </Section>

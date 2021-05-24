@@ -1,15 +1,13 @@
 import React, { FC } from 'react';
-import { Section, Card } from '@galaxy/core';
+import { Section } from '@galaxy/core';
 import { Domain } from '@galaxy/shifter-dashboard';
 
 export const Domains: FC<DomainsProps> = ({ domains }) => (
   <Section className="space-y-10">
     <Section className="space-y-4">
-      {domains ? (
-        domains.map((domain, i) => <Domain key={i} {...domain} />)
-      ) : (
-        <Card main="Steps to connect your domain" />
-      )}
+      {domains
+        ? domains.map((domain, i) => <Domain key={i} {...domain} />)
+        : null}
     </Section>
   </Section>
 );

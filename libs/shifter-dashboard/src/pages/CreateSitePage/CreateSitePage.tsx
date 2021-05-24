@@ -1,5 +1,5 @@
 import React, { FC } from 'react';
-import { Header, Dashboard } from '@galaxy/views';
+import { HeaderProps, Dashboard } from '@galaxy/views';
 import { CreateSite } from '../../views';
 
 export const CreateSitePage: FC<CreateSitePage> = ({ header }) => {
@@ -11,5 +11,5 @@ export const CreateSitePage: FC<CreateSitePage> = ({ header }) => {
 };
 
 export type CreateSitePage = CreateSite & {
-  header?: Header;
+  header?: HeaderProps;
 };

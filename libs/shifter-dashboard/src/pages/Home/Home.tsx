@@ -3,11 +3,7 @@ import { Section, MenuItems } from '@galaxy/core';
 import { fakerHeader, fakerArtifacts } from '@galaxy/faker';
 
 import { Dashboard, Main } from '@galaxy/views';
-import {
-  Aside,
-  Deploys,
-  SiteOverview,
-} from '@galaxy/shifter-dashboard';
+import { Aside, Deploys, SiteOverview } from '@galaxy/shifter-dashboard';
 
 /**
  * @deprecated
@@ -28,7 +24,7 @@ export const Home: FC<Home> = ({
     <Dashboard header={fakerHeader}>
       <Section className="md:flex min-h-screen border-t border-shifter-gray-200">
         <Aside items={items} name={`${name}`} />
-        <Main className="p-8 w-full border-l border-shifter-gray-200 space-y-8">
+        <Main schema="dashboard">
           <SiteOverview
             siteId={siteId}
             publishedSiteURL={cloudfront}

@@ -1,9 +1,10 @@
 import React, { FC, ReactNode } from 'react';
-import { Overlay, Spinner, Heading, Section } from '@galaxy/core';
+import { Modal, Spinner, Heading, Section } from '@galaxy/core';
 
-export const WpDashboard: FC<WpDashboard> = ({ title, img }: WpDashboard) => {
+export const WpDashboard: FC<WpDashboard> = (props: WpDashboard) => {
+  const { title, img } = props;
   return (
-    <Overlay img={img}>
+    <Modal>
       <Section
         as="div"
         className="space-y-4 flex flex-col h-screen items-center justify-center"
@@ -16,7 +17,7 @@ export const WpDashboard: FC<WpDashboard> = ({ title, img }: WpDashboard) => {
           variant="primary"
         />
       </Section>
-    </Overlay>
+    </Modal>
   );
 };
 

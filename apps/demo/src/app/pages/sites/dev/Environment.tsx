@@ -1,9 +1,7 @@
 import React, { FC } from 'react';
-import { Section } from '@galaxy/core';
 import { fakerHome } from '@galaxy/faker';
 import { Main } from '@galaxy/views';
-
-import { WpControls, Container } from '@galaxy/shifter-dashboard';
+import { Container } from '@galaxy/shifter-dashboard';
 
 const useDummyProps = () => {
   return {
@@ -20,13 +18,7 @@ export const PageDevEnvironment: FC = () => {
   const { siteId } = usePageEnvironment();
 
   return (
-    <Main
-      title="Environment Information"
-      className="p-8 w-full border-l border-shifter-gray-200 space-y-8"
-    >
-      <Section>
-        <WpControls siteId={siteId} state={state} />
-      </Section>
+    <Main title="Environment Information" schema="dashboard">
       <Container
         {...{
           wpVersion: {

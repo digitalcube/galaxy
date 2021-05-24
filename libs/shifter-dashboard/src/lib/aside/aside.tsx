@@ -8,7 +8,7 @@ export function Aside(props: AsideProps) {
   return (
     <GalaxyAside
       {...props}
-      subHeading={<SiteState state="starting" />}
+      subHeading={<SiteState />}
     />
   );
 }

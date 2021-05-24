@@ -1,5 +1,5 @@
 import React, { FC } from 'react';
-import { Overlay, Heading, Section, Input, Button, Link } from '@galaxy/core';
+import { Modal, Heading, Section, Input, Button, Link } from '@galaxy/core';
 import {
   Header,
   PricingPlans,
@@ -9,7 +9,7 @@ import {
 } from '@galaxy/views';
 import { Team } from '@galaxy/shifter-dashboard';
 import { Form, Formik, FormikProps } from 'formik';
-import { XIcon } from '@heroicons/react/solid';
+import { IoCloseOutline } from 'react-icons/io5';
 import { useInternalLinkBase } from '../../lib/internal-path-provider/internal-path-provider';
 
 const Step_01: FC<CreateSite> = () => {
@@ -45,7 +45,7 @@ const Step_01: FC<CreateSite> = () => {
           {(props: FormikProps<any>) => (
             <Form>
               <div className="space-y-8">
-                <div className="flex">
+                <div className="flex items-end">
                   <div className="space-y-3 w-1/3">
                     <Heading
                       as="label"
@@ -55,18 +55,18 @@ const Step_01: FC<CreateSite> = () => {
                       variant="primary"
                       fontWeight="strong"
                     />
-                    <div className="ring-2 ring-shifter-purple-primary focus:outline-none focus:border-shifter-purple-primary rounded-l p-3 w-full">
+                    <div className="border-2 border-inset border-shifter-purple-primary focus:outline-none focus:border-shifter-purple-primary rounded w-full">
                       <select
                         id="siteTeam"
                         name="siteTeam"
-                        className="border-transparent bg-transparent text-shifter-purple-700 rounded w-full"
+                        className="border-transparent bg-transparent text-shifter-purple-700 p-3 rounded w-full"
                       >
                         <option>Default Team</option>
                         <option>Another Team</option>
                       </select>
                     </div>
                   </div>
-                  <div className="space-y-3 flex-grow">
+                  <div className="space-y-3 flex-grow flex flex-col">
                     <Heading
                       as="label"
                       htmlFor="siteName"
@@ -75,12 +75,12 @@ const Step_01: FC<CreateSite> = () => {
                       variant="primary"
                       fontWeight="strong"
                     />
-                    <Input placeholder="Site Name" />
+                    <Input placeholder="Site Name" variant="primary" />
                   </div>
                 </div>
                 <Button
                   className="inline-flex"
-                  href="/create/site/2/"
+                  href="/site/create/2/"
                   label="Confirm"
                 />
               </div>
@@ -155,29 +155,30 @@ const Step_04: FC<CreateSite> = () => {
 };
 
 const Steps: FC<CreateSite> = () => {
-  if (window.location.pathname === `/create/site/4/`) return <Step_04 />;
-  if (window.location.pathname === `/create/site/3/`) return <Step_03 />;
-  if (window.location.pathname === `/create/site/2/`) return <Step_02 />;
+  if (window.location.pathname === `/site/create/4/`) return <Step_04 />;
+  if (window.location.pathname === `/site/create/3/`) return <Step_03 />;
+  if (window.location.pathname === `/site/create/2/`) return <Step_02 />;
   return <Step_01 />;
 };
 
 export const CreateSite: FC<CreateSite> = ({ teams }) => {
   const { admin } = useInternalLinkBase();
   return (
-    <Overlay className="flex justify-start bg-white">
+    <Modal>
       <Header
+        logo="/assets/shifter-logomark.svg"
         className="px-8 py-6"
         mainClassName="px-8"
         aside={
           <Link href={`/${admin}/`}>
-            <XIcon className="h-6 w-6 text-shifter-purple-primary" />
+            <IoCloseOutline className="h-6 w-6 text-shifter-purple-primary" />
           </Link>
         }
       />
       <Section className="w-full max-w-screen-lg mx-auto py-20">
         <Steps />
       </Section>
-    </Overlay>
+    </Modal>
   );
 };
 

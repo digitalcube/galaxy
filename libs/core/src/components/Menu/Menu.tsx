@@ -1,5 +1,6 @@
 import React, { FC, Fragment } from 'react';
 import { Button } from '@galaxy/core';
+import { Disclosure } from '@headlessui/react';
 
 export type MenuItem = {
   label?: any;
@@ -28,8 +29,25 @@ export const Items: FC<MenuItemsProp> = ({ items, alignment, level = 0 }) => {
         if (items) {
           return (
             <Fragment key={i}>
-              <Button key={i} variant={variant} label={label} href={href} />
-              <Menu items={items} alignment={alignment} level={level + 3} />
+              <Disclosure>
+                <Disclosure.Button>
+                  <Button
+                    active
+                    key={i}
+                    variant={variant}
+                    label={label}
+                    href={href}
+                  />
+                </Disclosure.Button>
+                <Disclosure.Panel>
+                  <Menu
+                    className="ml-10 space-y-3 py-3 font-strong"
+                    items={items}
+                    alignment={alignment}
+                    level={level + 3}
+                  />
+                </Disclosure.Panel>
+              </Disclosure>
             </Fragment>
           );
         }

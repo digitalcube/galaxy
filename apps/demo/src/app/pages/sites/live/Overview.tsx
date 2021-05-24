@@ -21,8 +21,8 @@ export const PageLiveOverview: FC = () => {
   } = usePageOverview();
   return (
     <Main
-      className="p-8 w-full border-l border-shifter-gray-200 space-y-8"
-      title="Live"
+      schema="dashboard"
+      title="Overview"
     >
       <SiteOverview
         siteId={siteId}

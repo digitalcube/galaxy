@@ -1,8 +1,9 @@
 export * from './Domain';
-export * from './DomainOptions';
 export * from './DomainState';
-export * from './Artifact';
-export * from './Artifacts';
+export * from './Artifact/ArtifactCreationDate';
+export * from './Artifact/ArtifactName';
+// export * from './Artifact/ArtifactPreview';
+export * from './Artifact/ArtifactState';
 export * from './Deploys';
 export * from './WpControls';
 export * from './SiteState';

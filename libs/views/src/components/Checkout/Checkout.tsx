@@ -74,7 +74,7 @@ export const Checkout: FC<CheckoutProps> = ({ variants }: CheckoutProps) => {
             />
           </Section>
           <Section className="flex justify-end p-4">
-            <Button label="Complete Order" href="/create/site/4/" />
+            <Button label="Complete Order" href="/site/create/4/" />
           </Section>
         </>
       </Card>

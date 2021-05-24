@@ -3,11 +3,11 @@ import { Button } from '@galaxy/core';
 import { useInternalLinkBase } from '../../lib/internal-path-provider/internal-path-provider';
 
 export const SitesCreate: FC<SitesCreateProps> = ({ title, href }) => {
-  const { sites } = useInternalLinkBase();
+  const { site } = useInternalLinkBase();
   const target = useMemo(() => {
     if (href) return href;
-    return `${sites}/create`;
-  }, [href, sites]);
+    return `/${site}/create`;
+  }, [href, site]);
   return (
     <Button
       variant="primary"

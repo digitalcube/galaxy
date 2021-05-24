@@ -25,13 +25,12 @@ export function App() {
   const { avatar } = fakerAvatar;
 
   return (
-    <div style={{padding: '1rem'}}>
     <ShifterDashboardThemeProvider internalLinkTag={ReactRouterLink}>
       <BrowserRouter>
         <Dashboard
           header={{
             avatar: {
-              menu: avatar.menu
+              menu: avatar.menu,
             },
             logo: './assets/shifter-logomark.svg',
             items: [
@@ -60,19 +59,18 @@ export function App() {
         >
           <Switch>
             <Redirect from={`/`} exact to={`/${admin}/`} />
-            <Redirect from={`/create/`} exact to={`/create/site/`} />
+            <Redirect from={`/create/`} exact to={`/site/create/`} />
             <Redirect from={`/${admin}/${sites}/`} exact to={`/${admin}/`} />
             <Route path={`/${admin}/${sites}/:siteId/`} component={RouteSite} />
             <Route path={`/${admin}/guides/`} component={PageGuides} />
             <Route path={`/${admin}/teams/`} component={PageTeams} />
-            <Route path={`/create/site/`} component={PageCreateSite} />
+            <Route path={`/site/create/`} component={PageCreateSite} />
             <Route path={`/create/team/`} component={PageCreateTeam} />
             <Route path={`/${admin}/`} exact component={PageSites} />
           </Switch>
         </Dashboard>
       </BrowserRouter>
     </ShifterDashboardThemeProvider>
-    </div>
   );
 }
 

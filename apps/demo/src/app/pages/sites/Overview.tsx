@@ -23,8 +23,8 @@ export const PageOverview: FC = () => {
   } = usePageOverview();
   return (
     <Main
+      schema="dashboard"
       title="Overview"
-      className="p-8 w-full border-l border-shifter-gray-200 space-y-8"
     >
       <SiteOverview
         publishedSiteURL={publishedSiteURL}

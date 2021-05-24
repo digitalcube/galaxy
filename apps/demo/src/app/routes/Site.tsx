@@ -24,80 +24,97 @@ export const RouteSite: FC = () => {
   const { siteId } = useParams<{
     siteId?: string;
   }>();
-  const siteMenus: MenuItems = [
-    {
-      label: 'Home',
-      href: '',
-    },
-    {
-      label: 'Live',
-      href: 'live',
-      items: [
-        {
-          label: 'Overview',
-          href: 'live',
-        },
-        {
-          label: 'Domain',
-          href: 'live/domains',
-        },
-        {
-          label: 'Analytics',
-          href: 'live/analytics',
-        },
-      ],
-    },
-    {
-      label: 'Staging',
-      href: 'staging',
-    },
-    {
-      label: 'Dev',
-      href: 'dev',
-      items: [
-        {
-          label: 'Environment',
-          href: 'dev',
-        },
-        {
-          label: 'Media CDN',
-          href: 'dev/cdn',
-        },
-        {
-          label: 'Webhooks',
-          href: 'dev/webhooks',
-        },
-        {
-          label: 'Access Logs',
-          href: 'dev/access-logs',
-        },
-        {
-          label: 'Basic Auth',
-          href: 'dev/basic-auth',
-        },
-        {
-          label: 'Emergency Actions',
-          href: 'dev/emergency-actions',
-        },
-        {
-          label: 'Errors',
-          href: 'dev/errors',
-        },
-      ],
-    },
-    {
-      label: 'Team',
-      href: 'team',
-    },
-    {
-      label: 'Settings',
-      href: 'settings',
-    },
-  ];
   const menus = useMemo(() => {
+    const siteMenus: MenuItems = [
+      {
+        label: 'Home',
+        href: '',
+        variant: 'ghost',
+      },
+      {
+        label: 'Live',
+        href: 'live',
+        variant: 'ghost',
+        items: [
+          {
+            label: 'Overview',
+            href: 'live',
+            variant: 'link',
+          },
+          {
+            label: 'Domain',
+            href: 'live/domains',
+            variant: 'link',
+          },
+          {
+            label: 'Analytics',
+            href: 'live/analytics',
+            variant: 'link',
+          },
+        ],
+      },
+      {
+        label: 'Staging',
+        href: 'staging',
+        variant: 'ghost',
+      },
+      {
+        label: 'Dev',
+        href: 'dev',
+        variant: 'ghost',
+        items: [
+          {
+            label: 'Environment',
+            href: 'dev',
+            variant: 'link',
+          },
+          {
+            label: 'Media CDN',
+            href: 'dev/cdn',
+            variant: 'link',
+          },
+          {
+            label: 'Webhooks',
+            href: 'dev/webhooks',
+            variant: 'link',
+          },
+          {
+            label: 'Access Logs',
+            href: 'dev/access-logs',
+            variant: 'link',
+          },
+          {
+            label: 'Basic Auth',
+            href: 'dev/basic-auth',
+            variant: 'link',
+          },
+          {
+            label: 'Emergency Actions',
+            href: 'dev/emergency-actions',
+            variant: 'link',
+          },
+          {
+            label: 'Errors',
+            href: 'dev/errors',
+            variant: 'link',
+          },
+        ],
+      },
+      {
+        label: 'Team',
+        href: 'team',
+        variant: 'ghost',
+      },
+      {
+        label: 'Settings',
+        href: 'settings',
+        variant: 'ghost',
+      },
+    ];
     return siteMenus.map((menu) => ({
       ...menu,
       href: `/${[admin, sites, siteId, menu.href].join('/')}`,
+      variant: 'ghost',
       items: menu.items
         ? menu.items.map((m) => ({
             ...m,
@@ -105,7 +122,8 @@ export const RouteSite: FC = () => {
           }))
         : undefined,
     }));
-  }, [siteId, siteMenus, sites, admin]);
+  }, [siteId, sites, admin]);
+
   return (
     <Section className="md:flex min-h-screen border-t border-shifter-gray-200">
       <Aside items={menus} name="Site Name" />

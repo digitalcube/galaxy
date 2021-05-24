@@ -6,6 +6,7 @@ export type LinkProps = PropsWithChildren<{
   style?: CSSProperties;
   className?: string;
   tagOverwrite?: string;
+  disabled?: boolean;
 }>
 
 export const Link: FC<LinkProps> = (props) => {

@@ -4,11 +4,19 @@ const fontFamily = require('./libs/core/src/config/FontFamily/tailwind.config.js
 const fontWeight = require('./libs/core/src/config/FontWeight/tailwind.config.js');
 const borderRadius = require('./libs/core/src/config/BorderRadius/tailwind.config.js');
 const borderWidth = require('./libs/core/src/config/BorderWidth/tailwind.config.js');
+const boxShadow = require('./libs/core/src/config/BoxShadow/tailwind.config.js');
 const ringWidth = require('./libs/core/src/config/RingWidth/tailwind.config.js');
 
 module.exports = {
-  mode: process.env.TAILWIND_MODE === 'watch' ? 'jit' : undefined,
-  purge: ['./libs/**/*.{js,jsx,ts,tsx}'],
+  mode: 'jit',
+  purge: [
+    './apps/demo/**/*.{js,jsx,ts,tsx}',
+    './libs/core/src/lib/**/*.{js,jsx,ts,tsx}',
+    './libs/core/src/components/**/*.{js,jsx,ts,tsx}',
+    './libs/shifter-dashboard/**/*.{js,jsx,ts,tsx}',
+    './libs/shifter/**/*.{js,jsx,ts,tsx}',
+    './libs/views/**/*.{js,jsx,ts,tsx}',
+  ],
   theme: {
     ...colors,
     ...fontSize,
@@ -17,13 +25,7 @@ module.exports = {
     ...borderRadius,
     ...borderRadius,
     ...ringWidth,
-    boxShadow: {
-      1: '0px 1px 8px rgba(69, 29, 57, 0.1)',
-      DEFAULT: '0px 0px 10px rgba(69, 29, 57, 0.2)',
-      3: '0px 8px 15px rgba(69, 29, 57, 0.2), 0px 8px 20px 4px rgba(69, 29, 57, 0.15)',
-      4: ' 0px 6px 18px rgba(69, 29, 57, 0.29), 0px 19px 29px rgba(69, 29, 57, 0.35)',
-      none: 'none',
-    },
+    ...boxShadow,
   },
   plugins: [
     require('@tailwindcss/typography'),

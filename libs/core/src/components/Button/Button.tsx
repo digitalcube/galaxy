@@ -13,8 +13,8 @@ export const Button: FC<Button> = ({
   variants,
   href,
   disabled,
+  active
 }: Button) => {
-
   if (!label && !children) {
     label = variant;
   }
@@ -30,15 +30,14 @@ export const Button: FC<Button> = ({
    */
   if (href || as === 'a') {
     return (
-      <Link className={`${className} ${classNames}`} href={href}>
+      <Link disabled={disabled} className={`${className} ${classNames}`} href={href}>
         {label}
         {children}
       </Link>
     );
   }
-
   return (
-    <Tag disabled={disabled} as={as} className={`${className} ${classNames}`}>
+    <Tag active={active} disabled={disabled} as={as} className={`${className} ${classNames}`}>
       {label}
       {children}
     </Tag>
@@ -55,6 +54,7 @@ export type Button = {
   href?: string;
   type?: string;
   disabled?: boolean | undefined;
+  active?: boolean | undefined;
 };
 
 Button.defaultProps = {

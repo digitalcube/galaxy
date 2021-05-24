@@ -1,20 +1,14 @@
 import React, { FC } from 'react';
 import {
-  Overlay,
   Heading,
   Section,
   Input,
   Button,
   Link,
   Card,
+  Modal,
 } from '@galaxy/core';
-import {
-  Header,
-  PricingPlans,
-  PricingTable,
-  Checkout,
-  Success,
-} from '@galaxy/views';
+import { Header, Success } from '@galaxy/views';
 import { Team } from '@galaxy/shifter-dashboard';
 import { Form, Formik, FormikProps } from 'formik';
 import { XIcon } from '@heroicons/react/solid';
@@ -155,9 +149,24 @@ export const Step_02: FC<CreateTeam> = () => {
           }
         ></Card>
         <Section className="flex space-x-4">
-          <Button href="/create/team/" label="Back" variant="ghost" className="inline-flex" />
-          <Button href="/create/team/3/" variant="primary" label="Next" className="inline-flex" />
-          <Button href="/create/team/3/" label="Skip this step" variant="ghost" className="ml-auto inline-flex" />
+          <Button
+            href="/create/team/"
+            label="Back"
+            variant="ghost"
+            className="inline-flex"
+          />
+          <Button
+            href="/create/team/3/"
+            variant="primary"
+            label="Next"
+            className="inline-flex"
+          />
+          <Button
+            href="/create/team/3/"
+            label="Skip this step"
+            variant="ghost"
+            className="ml-auto inline-flex"
+          />
         </Section>
       </Section>
     </>
@@ -181,7 +190,7 @@ export const Steps: FC<CreateTeam> = () => {
 export const CreateTeam: FC<CreateTeam> = ({ teams }) => {
   const { admin } = useInternalLinkBase();
   return (
-    <Overlay className="flex justify-start bg-white">
+    <Modal>
       <Header
         aside={
           <Link href={`/${admin}/`}>
@@ -192,7 +201,7 @@ export const CreateTeam: FC<CreateTeam> = ({ teams }) => {
       <Section className="w-full max-w-screen-lg mx-auto py-20">
         <Steps />
       </Section>
-    </Overlay>
+    </Modal>
   );
 };
 

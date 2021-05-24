@@ -1,5 +1,5 @@
 import React, { FC } from 'react';
-import { Header, Dashboard } from '@galaxy/views';
+import { HeaderProps, Dashboard } from '@galaxy/views';
 import { Guides } from '../../views';
 
 export const GuidesPage: FC<GuidesPage> = ({ guides, header }) => {
@@ -9,5 +9,5 @@ export const GuidesPage: FC<GuidesPage> = ({ guides, header }) => {
 };
 
 export type GuidesPage = Guides & {
-  header?: Header;
+  header?: HeaderProps;
 };
