@@ -31,7 +31,7 @@ export function Modal(props: ModalProps) {
       >
         <div className="min-h-screen">
           <HeadlessUiDialog.Overlay className="fixed inset-0" />
-          <div className="inline-block w-full h-screen overflow-hidden transition-all transform bg-white">
+          <div className="inline-block w-full h-screen transition-all transform bg-white">
             <div onClick={closeModal}>{close}</div>
             {children}
           </div>

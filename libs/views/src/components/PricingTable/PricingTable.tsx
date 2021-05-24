@@ -12,28 +12,28 @@ export const PricingTable: FC<PricingTableProps> = ({
   const tiers = [
     {
       name: 'Free Tier',
-      href: '/create/site/3/',
+      href: '/site/create/3/',
       priceMonthly: 'Free',
       description:
         'Our free tier for testing before upgrading and assigning a custom domain.',
     },
     {
       name: 'Tier 1',
-      href: '/create/site/3/',
+      href: '/site/create/3/',
       priceMonthly: 16,
       description:
         'Go live with a custom domain, automated backups, collaboration tools, and more.',
     },
     {
       name: 'Tier 2',
-      href: '/create/site/3/',
+      href: '/site/create/3/',
       priceMonthly: 24,
       description:
         'Go further with features like Shifter Webhooks, more storage and bandwidth.',
     },
     {
       name: 'Tier 3',
-      href: '/create/site/3/',
+      href: '/site/create/3/',
       priceMonthly: 144,
       description:
         'Access to all features, expert support, more bandwidth and unlimited storage.',
