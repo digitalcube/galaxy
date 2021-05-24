@@ -1,4 +1,5 @@
 export * from './lib/form/form';
+export * from './lib/image/image';
 export * from './lib/select/select';
 export * from './lib/avatar/avatar';
 export * from './lib/badge/badge';
