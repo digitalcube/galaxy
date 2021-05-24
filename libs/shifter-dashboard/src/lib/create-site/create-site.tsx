@@ -1,5 +1,13 @@
 import React, { FC } from 'react';
-import { Modal, Heading, Section, Input, Button, Link } from '@galaxy/core';
+import {
+  Modal,
+  Heading,
+  Section,
+  Input,
+  Button,
+  Link,
+  Form,
+} from '@galaxy/core';
 import {
   Header,
   PricingPlans,
@@ -8,11 +16,15 @@ import {
   ThankYou,
 } from '@galaxy/views';
 import { Team } from '@galaxy/shifter-dashboard';
-import { Form, Formik, FormikProps } from 'formik';
 import { IoCloseOutline } from 'react-icons/io5';
 import { useInternalLinkBase } from '../../lib/internal-path-provider/internal-path-provider';
 
-const Step_01: FC<CreateSite> = () => {
+/* eslint-disable-next-line */
+export interface CreateSiteProps {
+  teams?: Team[];
+}
+
+const Step_01: FC<CreateSiteProps> = () => {
   return (
     <>
       <Section className="space-y-6 mb-16 w-full">
@@ -30,69 +42,54 @@ const Step_01: FC<CreateSite> = () => {
         />
       </Section>
       <Section>
-        <Formik
-          initialValues={{
-            siteName: '',
-            teamName: '',
-          }}
-          onSubmit={(values, actions) => {
-            setTimeout(() => {
-              alert(JSON.stringify(values, null, 2));
-              actions.setSubmitting(false);
-            }, 1000);
-          }}
-        >
-          {(props: FormikProps<any>) => (
-            <Form>
-              <div className="space-y-8">
-                <div className="flex items-end">
-                  <div className="space-y-3 w-1/3">
-                    <Heading
-                      as="label"
-                      htmlFor="siteName"
-                      text="Team"
-                      fontSize={4}
-                      variant="primary"
-                      fontWeight="strong"
-                    />
-                    <div className="border-2 border-inset border-shifter-purple-primary focus:outline-none focus:border-shifter-purple-primary rounded w-full">
-                      <select
-                        id="siteTeam"
-                        name="siteTeam"
-                        className="border-transparent bg-transparent text-shifter-purple-700 p-3 rounded w-full"
-                      >
-                        <option>Default Team</option>
-                        <option>Another Team</option>
-                      </select>
-                    </div>
-                  </div>
-                  <div className="space-y-3 flex-grow flex flex-col">
-                    <Heading
-                      as="label"
-                      htmlFor="siteName"
-                      text="Site Name"
-                      fontSize={4}
-                      variant="primary"
-                      fontWeight="strong"
-                    />
-                    <Input placeholder="Site Name" variant="primary" />
-                  </div>
-                </div>
-                <Button
-                  className="inline-flex"
-                  href="/site/create/2/"
-                  label="Confirm"
+        <Form>
+          <div className="space-y-8 flex-grow">
+            <div className="flex items-end">
+              <div className="space-y-3 w-1/3">
+                <Heading
+                  as="label"
+                  htmlFor="siteName"
+                  text="Team"
+                  fontSize={4}
+                  variant="primary"
+                  fontWeight="strong"
                 />
+                <div className="border-2 border-inset border-shifter-purple-primary focus:outline-none focus:border-shifter-purple-primary rounded w-full">
+                  <select
+                    id="siteTeam"
+                    name="siteTeam"
+                    className="border-transparent bg-transparent text-shifter-purple-700 p-3 rounded w-full"
+                  >
+                    <option>Default Team</option>
+                    <option>Another Team</option>
+                  </select>
+                </div>
               </div>
-            </Form>
-          )}
-        </Formik>
+              <div className="space-y-3 flex-grow flex flex-col">
+                <Heading
+                  as="label"
+                  htmlFor="siteName"
+                  text="Site Name"
+                  fontSize={4}
+                  variant="primary"
+                  fontWeight="strong"
+                />
+                <Input placeholder="Site Name" variant="primary" />
+              </div>
+            </div>
+            <Button
+              className="inline-flex"
+              href="/site/create/2/"
+              label="Confirm"
+            />
+          </div>
+        </Form>
       </Section>
     </>
   );
 };
 
-const Step_02: FC<CreateSite> = () => {
+const Step_02: FC<CreateSiteProps> = () => {
   return (
     <>
       <Section className="space-y-6 mb-16 w-full">
@@ -122,7 +119,7 @@ const Step_02: FC<CreateSite> = () => {
   );
 };
 
-const Step_03: FC<CreateSite> = () => {
+const Step_03: FC<CreateSiteProps> = () => {
   return (
     <>
       <Section className="space-y-6 mb-16 w-full">
@@ -146,7 +143,7 @@ const Step_03: FC<CreateSite> = () => {
   );
 };
 
-const Step_04: FC<CreateSite> = () => {
+const Step_04: FC<CreateSiteProps> = () => {
   return (
     <Section>
       <ThankYou />
@@ -154,14 +151,14 @@ const Step_04: FC<CreateSite> = () => {
   );
 };
 
-const Steps: FC<CreateSite> = () => {
+const Steps: FC<CreateSiteProps> = () => {
   if (window.location.pathname === `/site/create/4/`) return <Step_04 />;
   if (window.location.pathname === `/site/create/3/`) return <Step_03 />;
   if (window.location.pathname === `/site/create/2/`) return <Step_02 />;
   return <Step_01 />;
 };
 
-export const CreateSite: FC<CreateSite> = ({ teams }) => {
+export function CreateSite(props: CreateSiteProps) {
   const { admin } = useInternalLinkBase();
   return (
     <Modal>
@@ -180,8 +177,6 @@ export const CreateSite: FC<CreateSite> = ({ teams }) => {
       </Section>
     </Modal>
   );
-};
+}
 
-export type CreateSite = {
-  teams?: Team[];
-};
+export default CreateSite;
