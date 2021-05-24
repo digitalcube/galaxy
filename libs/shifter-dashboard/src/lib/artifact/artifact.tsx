@@ -44,7 +44,7 @@ export function Artifact(props: ArtifactProps) {
             className="absolute w-full top-0 right-0"
             progress={progress}
           />
-          <ArtifactPreview img={img} />
+          <ArtifactPreview src={img} />
           <Section as="div" className="flex-grow justify-between flex flex-col">
             <Section className="px-4 py-2">
               <Section className="flex items-center" as="div">

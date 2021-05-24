@@ -1,3 +1,4 @@
+export * from './lib/artifact-preview/artifact-preview';
 export * from './lib/artifact/artifact';
 export * from './lib/artifacts/artifacts';
 export * from './lib/site-options/site-options';

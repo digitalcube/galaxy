@@ -3,23 +3,23 @@ import faker from 'faker';
 import { IndividualProduct } from 'schema-dts';
 
 const preview = [
-  'https://s0.wp.com/mshots/v1/https://tailwindcss.com?w=160',
-  'https://s0.wp.com/mshots/v1/https://jamstack.org?w=160',
-  'https://s0.wp.com/mshots/v1/https://www.serverless.com?w=160',
-  'https://s0.wp.com/mshots/v1/https://wordpress.org?w=160',
-  'https://s0.wp.com/mshots/v1/https://www.getshifter.io?w=160',
-  'https://s0.wp.com/mshots/v1/https://www.amimoto-ami.com?w=160',
-  'https://s0.wp.com/mshots/v1/https://www.algolia.com?w=160',
-  'https://s0.wp.com/mshots/v1/https://stripe.com?w=160',
+  'https://s0.wp.com/mshots/v1/https://tailwindcss.com?w=150',
+  'https://s0.wp.com/mshots/v1/https://jamstack.org?w=150',
+  'https://s0.wp.com/mshots/v1/https://www.serverless.com?w=150',
+  'https://s0.wp.com/mshots/v1/https://wordpress.org?w=150',
+  'https://s0.wp.com/mshots/v1/https://www.getshifter.io?w=150',
+  'https://s0.wp.com/mshots/v1/https://www.amimoto-ami.com?w=150',
+  'https://s0.wp.com/mshots/v1/https://www.algolia.com?w=150',
+  'https://s0.wp.com/mshots/v1/https://stripe.com?w=150',
 ];
 
 const userAvatar = [
   'https://images.unsplash.com/photo-1472099645785-5658abf4ff4e',
-  'https://images.unsplash.com/photo-1604336732494-d8386c7029e3',
+  'https://images.unsplash.com/photo-1504336732494-d8386c7029e3',
   'https://images.unsplash.com/photo-1507331789086-893e9003c0e2',
   'https://images.unsplash.com/photo-1546215364-12f3fff5d578',
   'https://images.unsplash.com/photo-1584088743546-db0289ee9b07',
-  'https://images.unsplash.com/photo-1607095932579-7b78c3bef128',
+  'https://images.unsplash.com/photo-1507095932579-7b78c3bef128',
 ];
 
 const products = [
