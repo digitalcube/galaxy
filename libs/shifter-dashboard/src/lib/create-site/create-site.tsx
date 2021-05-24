@@ -7,6 +7,7 @@ import {
   Button,
   Link,
   Form,
+  Select,
 } from '@galaxy/core';
 import {
   Header,
@@ -54,16 +55,11 @@ const Step_01: FC<CreateSiteProps> = () => {
                   variant="primary"
                   fontWeight="strong"
                 />
-                <div className="border-2 border-inset border-shifter-purple-primary focus:outline-none focus:border-shifter-purple-primary rounded w-full">
-                  <select
-                    id="siteTeam"
-                    name="siteTeam"
-                    className="border-transparent bg-transparent text-shifter-purple-700 p-3 rounded w-full"
-                  >
-                    <option>Default Team</option>
-                    <option>Another Team</option>
-                  </select>
-                </div>
+                <Select
+                  className="w-full"
+                  options={['Default Team', 'Another Team']}
+                  handleSelect={() => undefined}
+                />
               </div>
               <div className="space-y-3 flex-grow flex flex-col">
                 <Heading

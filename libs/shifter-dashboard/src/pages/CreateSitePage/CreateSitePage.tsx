@@ -1,6 +1,6 @@
 import React, { FC } from 'react';
 import { HeaderProps, Dashboard } from '@galaxy/views';
-import { CreateSite } from '../../views';
+import { CreateSite, CreateSiteProps } from '@galaxy/shifter-dashboard';
 
 export const CreateSitePage: FC<CreateSitePage> = ({ header }) => {
   return (
@@ -10,6 +10,6 @@ export const CreateSitePage: FC<CreateSitePage> = ({ header }) => {
   );
 };
 
-export type CreateSitePage = CreateSite & {
+export type CreateSitePage = CreateSiteProps & {
   header?: HeaderProps;
 };
