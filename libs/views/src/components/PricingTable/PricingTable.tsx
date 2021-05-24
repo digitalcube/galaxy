@@ -1,4 +1,4 @@
-import React, { FC, Fragment } from 'react';
+import React, { FC, Fragment, ReactNode } from 'react';
 import { css, Card, Heading, Button } from '@galaxy/core';
 import { pricingTableTheme } from './PricingTable.galaxy';
 import { CheckIcon, MinusIcon } from '@heroicons/react/solid';
@@ -172,46 +172,48 @@ export const PricingTable: FC<PricingTableProps> = ({
                   {section.name}
                 </th>
               </tr>
-              {section.features.map((feature) => (
-                <tr key={feature.name}>
-                  <th
-                    className="py-5 px-6 text-shifter-purple-primary text-left"
-                    scope="row"
-                  >
-                    {feature.name}
-                  </th>
-                  {tiers.map((tier) => (
-                    <td key={tier.name} className="py-5 px-6">
-                      {typeof feature.tiers[tier.name] === 'string' ? (
-                        <span className="block text-gray-700">
-                          {feature.tiers[tier.name]}
-                        </span>
-                      ) : (
-                        <>
-                          {feature.tiers[tier.name] === true ? (
-                            <CheckIcon
-                              className="h-5 w-5 text-green-500"
-                              aria-hidden="true"
-                            />
-                          ) : (
-                            <MinusIcon
-                              className="h-5 w-5 text-gray-400"
-                              aria-hidden="true"
-                            />
-                          )}
-
-                          <span className="sr-only">
-                            {feature.tiers[tier.name] === true
-                              ? 'Included'
-                              : 'Not included'}{' '}
-                            in {tier.name}
+              {/* {section.features.map((feature: any) => {
+                return (
+                  <tr key={feature.name}>
+                    <th
+                      className="py-5 px-6 text-shifter-purple-primary text-left"
+                      scope="row"
+                    >
+                      {feature.name}
+                    </th>
+                    {tiers.map((tier) => (
+                      <td key={tier.name} className="py-5 px-6">
+                        {typeof feature.tiers[tier.name] === 'string' ? (
+                          <span className="block text-gray-700">
+                            {feature.tiers[tier.name]}
                           </span>
-                        </>
-                      )}
-                    </td>
-                  ))}
-                </tr>
-              ))}
+                        ) : (
+                          <>
+                            {feature.tiers[tier.name] === true ? (
+                              <CheckIcon
+                                className="h-5 w-5 text-green-500"
+                                aria-hidden="true"
+                              />
+                            ) : (
+                              <MinusIcon
+                                className="h-5 w-5 text-gray-400"
+                                aria-hidden="true"
+                              />
+                            )}
+
+                            <span className="sr-only">
+                              {feature.tiers[tier.name] === true
+                                ? 'Included'
+                                : 'Not included'}{' '}
+                              in {tier.name}
+                            </span>
+                          </>
+                        )}
+                      </td>
+                    ))}
+                  </tr>
+                );
+              })} */}
             </Fragment>
           ))}
         </tbody>
@@ -221,6 +223,7 @@ export const PricingTable: FC<PricingTableProps> = ({
 };
 
 export type PricingTableProps = {
+  features?: ReactNode;
   variants?: any;
   variant?: string;
 };
