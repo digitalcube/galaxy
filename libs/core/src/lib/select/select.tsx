@@ -1,7 +1,7 @@
 import React, { useCallback, useState } from 'react';
 import { Listbox, Transition } from '@headlessui/react';
 import { stripHtml } from 'string-strip-html';
-import { selectTheme } from './Select.galaxy';
+import { selectTheme } from './select.galaxy';
 const { select } = selectTheme;
 
 /* eslint-disable-next-line */
