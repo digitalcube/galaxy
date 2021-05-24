@@ -9,7 +9,7 @@ import {
 } from '@galaxy/views';
 import { Team } from '@galaxy/shifter-dashboard';
 import { Form, Formik, FormikProps } from 'formik';
-import { XIcon } from '@heroicons/react/solid';
+import { IoCloseOutline } from 'react-icons/io5';
 import { useInternalLinkBase } from '../../lib/internal-path-provider/internal-path-provider';
 
 const Step_01: FC<CreateSite> = () => {
@@ -80,7 +80,7 @@ const Step_01: FC<CreateSite> = () => {
                 </div>
                 <Button
                   className="inline-flex"
-                  href="/create/site/2/"
+                  href="/site/create/2/"
                   label="Confirm"
                 />
               </div>
@@ -171,7 +171,7 @@ export const CreateSite: FC<CreateSite> = ({ teams }) => {
         mainClassName="px-8"
         aside={
           <Link href={`/${admin}/`}>
-            <XIcon className="h-6 w-6 text-shifter-purple-primary" />
+            <IoCloseOutline className="h-6 w-6 text-shifter-purple-primary" />
           </Link>
         }
       />

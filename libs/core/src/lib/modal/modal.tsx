@@ -42,3 +42,7 @@ export function Modal(props: ModalProps) {
 }
 
 export default Modal;
+
+Modal.defaultProps = {
+  // close: <IoCloseOutline size="32" />,
+};
