@@ -1,19 +1,28 @@
-import React, { FC, useCallback, useState } from 'react';
+import React, { useCallback, useState } from 'react';
 import { Listbox, Transition } from '@headlessui/react';
 import { stripHtml } from 'string-strip-html';
 import { selectTheme } from './Select.galaxy';
 const { select } = selectTheme;
 
-export const Select: FC<Select> = ({
-  label,
-  options,
-  handleSelect,
-}: Select) => {
+/* eslint-disable-next-line */
+export interface SelectProps {
+  variants?: any;
+  variant?: string;
+  label?: string;
+  options?: string[];
+  handleSelect: (option: string) => void;
+}
+
+export function Select(props: SelectProps) {
+  const { label, options, handleSelect } = props;
   const [selectedOption, setOption] = useState(options ? options[0] : '');
-  const handleChange = useCallback((option) => {
-    setOption(option);
-    handleSelect(option);
-  }, [setOption, handleSelect]);
+  const handleChange = useCallback(
+    (option) => {
+      setOption(option);
+      handleSelect(option);
+    },
+    [setOption, handleSelect]
+  );
   if (!options) return null;
   return (
     <div className="flex items-center justify-center">
@@ -113,15 +122,9 @@ export const Select: FC<Select> = ({
       </div>
     </div>
   );
-};
+}
 
-export type Select = {
-  variants?: any;
-  variant?: string;
-  label?: string;
-  options?: string[];
-  handleSelect: (option: string) => void;
-};
+export default Select;
 
 Select.defaultProps = {
   label: 'Sort by',

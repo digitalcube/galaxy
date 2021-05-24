@@ -25,7 +25,7 @@ export * from './Menu';
 export * from './Panel';
 export * from './Section';
 export * from './SecurityBuiltIn';
-export * from './Select';
+// export * from './Select';
 export * from './Slider';
 export * from './Spinner';
 export * from './Swatch';
