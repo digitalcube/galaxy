@@ -15,7 +15,6 @@ export * from './ButtonMenu';
 export * from './Card';
 export * from './Date';
 export * from './Field';
-export * from './Form';
 export * from './FreeTierIcon';
 export * from './Heading';
 export * from './Input';
