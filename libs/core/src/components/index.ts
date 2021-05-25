@@ -21,6 +21,5 @@ export * from './Slider';
 export * from './Spinner';
 export * from './Swatch';
 export * from './Table';
-export * from './Tag';
 export * from './Post';
 export * from './PostList';

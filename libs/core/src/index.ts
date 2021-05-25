@@ -1,3 +1,4 @@
+export * from './lib/tag/tag';
 export * from './lib/panel/panel';
 export * from './lib/field/field';
 export * from './lib/heading/heading';

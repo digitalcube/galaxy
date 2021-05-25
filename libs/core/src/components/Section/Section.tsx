@@ -1,5 +1,5 @@
 import React, { FC, ReactNode } from 'react';
-import { Tag } from '../Tag';
+import { Tag } from '@galaxy/core';
 
 export type Section = {
   children?: ReactNode;
