@@ -1,5 +1,5 @@
 import React, { FC, ReactNode } from 'react';
-import { Section, Panel } from '@galaxy/core';
+import { Section, PanelProps } from '@galaxy/core';
 import { fakerHeader } from '@galaxy/faker';
 import { Aside, Dashboard, Main } from '@galaxy/views';
 import { CreateDomain, Site, Domains, Domain } from '@galaxy/shifter-dashboard';
@@ -28,7 +28,7 @@ export const DomainsPage: FC<DomainsPage> = ({
 
 export type DomainsPage = {
   items?: any;
-  title?: Panel;
+  title?: PanelProps;
   actions?: ReactNode;
   name: Site;
   domains: Domain[];

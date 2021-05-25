@@ -1,12 +1,22 @@
-import React, { FC, ReactNode } from 'react';
-import { Section, Heading, Button } from '@galaxy/core';
+import React, { ReactNode } from 'react';
+import { Section, Heading } from '@galaxy/core';
 
-const PanelActions: FC<Panel> = ({ actions }) => {
+/* eslint-disable-next-line */
+export interface PanelProps {
+  children?: ReactNode;
+  className?: string;
+  title?: string;
+  actions?: ReactNode;
+}
+
+export function PanelActions(props: PanelProps) {
+  const { actions } = props;
   if (!actions) return null;
   return <Section>{actions}</Section>;
-};
+}
 
-const PanelTitle: FC<Panel> = ({ title }) => {
+export function PanelTitle(props: PanelProps) {
+  const { title } = props;
   if (!title) return null;
   return (
     <Heading
@@ -17,9 +27,10 @@ const PanelTitle: FC<Panel> = ({ title }) => {
       text={title}
     />
   );
-};
+}
 
-const PanelHeader: FC<Panel> = ({ title, actions }) => {
+export function PanelHeader(props: PanelProps) {
+  const { title, actions } = props;
   if (!title && !actions) return null;
   return (
     <Section className="mb-6 flex justify-between">
@@ -27,20 +38,16 @@ const PanelHeader: FC<Panel> = ({ title, actions }) => {
       <PanelActions actions={actions} />
     </Section>
   );
-};
+}
 
-export const Panel: FC<Panel> = ({ children, className, title, actions }) => {
+export function Panel(props: PanelProps) {
+  const { title, actions, children, className } = props;
   return (
     <Section className={`py-6 px-8 flex flex-grow flex-col ${className}`}>
       <PanelHeader title={title} actions={actions} />
       <Section className="space-y-6">{children ? children : null}</Section>
     </Section>
   );
-};
+}
 
-export type Panel = {
-  children?: ReactNode;
-  className?: string;
-  title?: string;
-  actions?: ReactNode;
-};
+export default Panel;

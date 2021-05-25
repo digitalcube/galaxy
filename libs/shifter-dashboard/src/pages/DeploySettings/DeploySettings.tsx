@@ -1,8 +1,8 @@
 import React, { FC } from 'react';
-import { Section, Panel } from '@galaxy/core';
+import { Section, PanelProps } from '@galaxy/core';
 import { fakerHeader } from '@galaxy/faker';
 import { Dashboard, Main, Aside } from '@galaxy/views';
-import { Subdirectory, SubdirectoryProps, Site } from '@galaxy/shifter-dashboard';
+import { SubdirectoryProps, Subdirectory, Site } from '@galaxy/shifter-dashboard';
 
 export const DeploySettings: FC<DeploySettings> = ({
   name,
@@ -29,8 +29,8 @@ export const DeploySettings: FC<DeploySettings> = ({
 
 export type DeploySettings = {
   items?: any;
-  title?: Panel['title'];
-  actions?: Panel['actions'];
+  title?: PanelProps['title'];
+  actions?: PanelProps['actions'];
   name?: Site['name'];
   subDirectory?: SubdirectoryProps;
 };
