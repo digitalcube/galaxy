@@ -1,12 +1,12 @@
 import React, { ReactNode } from 'react';
 import { usePopperTooltip } from 'react-popper-tooltip';
-import { Button } from '@galaxy/core';
+import { ButtonProps } from '@galaxy/core';
 import './tooltip.css';
 
 /* eslint-disable-next-line */
 export interface TooltipProps {
   children?: ReactNode;
-  label?: Button['label'] | Button['children'];
+  label?: ButtonProps['label'] | ButtonProps['children'];
 }
 
 export function Tooltip(props: TooltipProps) {

@@ -1,6 +1,6 @@
 import React, { FC, useCallback, useMemo } from 'react';
 import { OptionsMenu } from '@galaxy/views';
-import { ButtonMenu, Heading, HeadingProps } from '@galaxy/core';
+import { ButtonMenuProps, Heading, HeadingProps } from '@galaxy/core';
 import { FaPlay, FaStop } from 'react-icons/fa';
 import { HiOutlineRefresh } from 'react-icons/hi';
 
@@ -47,7 +47,7 @@ export interface SiteOptionsLabelProps {
 export interface SiteOptionsProps {
   state?: string;
   className?: string;
-  menu?: ButtonMenu['menu'];
+  menu?: ButtonMenuProps['menu'];
   variant?: OptionsMenu['variant'];
   /**
    * For Mock features

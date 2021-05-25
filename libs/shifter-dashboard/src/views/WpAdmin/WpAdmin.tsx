@@ -1,5 +1,5 @@
 import React, { FC, ReactNode } from 'react';
-import { Button, Tooltip } from '@galaxy/core';
+import { Button, ButtonProps, Tooltip } from '@galaxy/core';
 import { FaWordpress } from 'react-icons/fa';
 import { useInternalLinkBase } from '../../lib/internal-path-provider/internal-path-provider';
 
@@ -54,7 +54,7 @@ type WpAdmin = {
   siteId?: string;
   variant?: string;
   children?: ReactNode;
-  label?: Button['label'] | Button['children'];
+  label?: ButtonProps['label'] | ButtonProps['children'];
 };
 
 WpAdmin.defaultProps = {

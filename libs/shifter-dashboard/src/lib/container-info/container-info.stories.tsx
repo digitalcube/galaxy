@@ -3,10 +3,10 @@ import { ContainerInfo, ContainerInfoProps } from './container-info';
 
 export default {
   component: ContainerInfo,
-  title: 'ContainerInfo',
+  title: 'Shifter/Dashboard/ContainerInfo',
 };
 
-export const primary = () => {
+export const Example = () => {
   /* eslint-disable-next-line */
   const props: ContainerInfoProps = {};
 

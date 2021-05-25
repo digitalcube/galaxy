@@ -3,10 +3,10 @@ import { DomainWizard, DomainWizardProps } from './domain-wizard';
 
 export default {
   component: DomainWizard,
-  title: 'DomainWizard',
+  title: 'Shifter/Dashboard/DomainWizard',
 };
 
-export const primary = () => {
+export const Example = () => {
   /* eslint-disable-next-line */
   const props: DomainWizardProps = {};
 

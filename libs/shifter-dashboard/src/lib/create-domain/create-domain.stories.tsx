@@ -3,10 +3,10 @@ import { CreateDomain, CreateDomainProps } from './create-domain';
 
 export default {
   component: CreateDomain,
-  title: 'CreateDomain',
+  title: 'Shifter/Domain/CreateDomain',
 };
 
-export const primary = () => {
+export const Example = () => {
   /* eslint-disable-next-line */
   const props: CreateDomainProps = {};
 

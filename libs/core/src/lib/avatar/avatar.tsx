@@ -1,5 +1,5 @@
 import React from 'react';
-import { Image, css, ButtonMenu } from '@galaxy/core';
+import { Image, css, ButtonMenuProps, ButtonMenu } from '@galaxy/core';
 import { avatarTheme } from './avatar.galaxy';
 const { avatar } = avatarTheme;
 
@@ -11,7 +11,7 @@ export interface AvatarProps {
   variants?: any;
   variant?: string;
   size?: number;
-  menu?: ButtonMenu['menu'];
+  menu?: ButtonMenuProps['menu'];
   className?: string;
   avatar?: any;
 }

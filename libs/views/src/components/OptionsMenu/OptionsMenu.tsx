@@ -1,5 +1,5 @@
 import React, { FC } from 'react';
-import { ButtonMenu, css, buttonTheme } from '@galaxy/core';
+import { ButtonMenu, ButtonMenuProps } from '@galaxy/core';
 import { DotsHorizontal } from 'heroicons-react';
 
 export const OptionsMenu: FC<OptionsMenu> = ({
@@ -7,16 +7,11 @@ export const OptionsMenu: FC<OptionsMenu> = ({
   className,
   variant,
 }: OptionsMenu) => {
-  const buttonMenuVariants = css({
-    variants: buttonTheme.button,
-    variant: 'link',
-  });
-
   return (
     <ButtonMenu
       variant={variant}
       menu={menu}
-      className={`${buttonMenuVariants} ${className}`}
+      className={`${className}`}
     >
       <DotsHorizontal />
     </ButtonMenu>
@@ -26,5 +21,5 @@ export const OptionsMenu: FC<OptionsMenu> = ({
 export type OptionsMenu = {
   variant?: string;
   className?: string;
-  menu?: ButtonMenu['menu'];
+  menu?: ButtonMenuProps['menu'];
 };
