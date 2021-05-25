@@ -2,7 +2,7 @@ import React, { FC } from 'react';
 import { Section, Panel } from '@galaxy/core';
 import { fakerHeader } from '@galaxy/faker';
 import { Dashboard, Main, Aside } from '@galaxy/views';
-import { SubDirectory, Site } from '@galaxy/shifter-dashboard';
+import { Subdirectory, SubdirectoryProps, Site } from '@galaxy/shifter-dashboard';
 
 export const DeploySettings: FC<DeploySettings> = ({
   name,
@@ -20,7 +20,7 @@ export const DeploySettings: FC<DeploySettings> = ({
           actions={actions}
           title={`${title}`}
         >
-          <SubDirectory {...subDirectory} />
+          <Subdirectory {...subDirectory} />
         </Main>
       </Section>
     </Dashboard>
@@ -32,5 +32,5 @@ export type DeploySettings = {
   title?: Panel['title'];
   actions?: Panel['actions'];
   name?: Site['name'];
-  subDirectory?: SubDirectory;
+  subDirectory?: SubdirectoryProps;
 };

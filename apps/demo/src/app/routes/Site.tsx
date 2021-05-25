@@ -13,6 +13,7 @@ import { PageCDN } from '../pages/sites/dev/CDN';
 import { PageWebhooks } from '../pages/sites/dev/Webhooks';
 import { PageSiteSetting } from '../pages/sites/Settings';
 import { PageSiteAnalytics } from '../pages/sites/live/Analytics';
+import { PageLiveSubdirectory } from '../pages/sites/live/Subdirectory';
 import { PageSiteAccessLogs } from '../pages/sites/dev/AccessLogs';
 import { PageSiteBasicAuth } from '../pages/sites/dev/BasicAuth';
 import { PageSiteEmergencyAction } from '../pages/sites/dev/EmergencyAction';
@@ -50,6 +51,11 @@ export const RouteSite: FC = () => {
           {
             label: 'Analytics',
             href: 'live/analytics',
+            variant: 'link',
+          },
+          {
+            label: 'Subdirectory',
+            href: 'live/subdirectory',
             variant: 'link',
           },
         ],
@@ -144,6 +150,10 @@ export const RouteSite: FC = () => {
         <Route
           path={`/${admin}/${sites}/:siteId/live/analytics`}
           component={PageSiteAnalytics}
+        />
+        <Route
+          path={`/${admin}/${sites}/:siteId/live/subdirectory`}
+          component={PageLiveSubdirectory}
         />
         <Route
           path={`/${admin}/${sites}/:siteId/live`}

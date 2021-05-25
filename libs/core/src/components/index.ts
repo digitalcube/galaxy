@@ -12,7 +12,6 @@ export * from './Brand';
 export * from './Browser';
 export * from './Card';
 export * from './Date';
-export * from './Field';
 export * from './FreeTierIcon';
 export * from './Input';
 export * from './Integration';
