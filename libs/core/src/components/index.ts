@@ -15,7 +15,6 @@ export * from './Date';
 export * from './FreeTierIcon';
 export * from './Integration';
 export * from './Menu';
-export * from './Section';
 export * from './SecurityBuiltIn';
 export * from './Slider';
 export * from './Spinner';

@@ -1,13 +1,15 @@
-import React, { FC, ReactNode } from 'react';
+import React, { ReactNode } from 'react';
 import { Tag } from '@galaxy/core';
 
-export type Section = {
+/* eslint-disable-next-line */
+export interface SectionProps {
   children?: ReactNode;
   as?: string;
   className?: string;
-};
+}
 
-export const Section: FC<Section> = ({ children, as, className }: Section) => {
+export function Section(props: SectionProps) {
+  const { children, as, className } = props;
   if (!children) return null;
   const classes = className ?? undefined;
   return (
@@ -15,4 +17,6 @@ export const Section: FC<Section> = ({ children, as, className }: Section) => {
       {children}
     </Tag>
   );
-};
+}
+
+export default Section;
