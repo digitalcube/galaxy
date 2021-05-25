@@ -1,9 +1,20 @@
-import React, { FC } from 'react';
+import React, { FC, useMemo } from 'react';
 import { Button } from '@galaxy/core';
+import { useInternalLinkBase } from '../../lib/internal-path-provider/internal-path-provider';
 
-export const TeamsCreate: FC<TeamsCreate> = ({ title }: TeamsCreate) => {
+export const TeamsCreate: FC<TeamsCreate> = ({ title, href }: TeamsCreate) => {
+  const { site } = useInternalLinkBase();
+  const target = useMemo(() => {
+    if (href) return href;
+    return `/${site}/create`;
+  }, [href, site]);
   return (
-    <Button variant="primary" className="relative text-left" label={title} href="/create/team/">
+    <Button
+      variant="primary"
+      className="relative text-left flex"
+      label={title}
+      href={target}
+    >
       <span className="pl-4 pointer-events-none">
         <svg
           className="h-4 w-4 text-white"
@@ -27,6 +38,7 @@ export const TeamsCreate: FC<TeamsCreate> = ({ title }: TeamsCreate) => {
 
 type TeamsCreate = {
   title?: string;
+  href?: string;
 };
 
 TeamsCreate.defaultProps = {
