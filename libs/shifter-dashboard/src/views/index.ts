@@ -10,7 +10,6 @@ export * from './Webhook';
 export * from './Webhooks';
 export * from './Site';
 export * from './AutoPublish';
-export * from './Container';
 export * from './Domains';
 export * from './MediaCdn';
 export * from './SiteOverview';

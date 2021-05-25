@@ -1,16 +1,7 @@
 import React, { FC } from 'react';
-import {
-  Heading,
-  Section,
-  Input,
-  Button,
-  Link,
-  Card,
-  Modal,
-} from '@galaxy/core';
+import { Heading, Section, Button, Link, Card, Modal } from '@galaxy/core';
 import { Header, Success } from '@galaxy/views';
 import { Team } from '@galaxy/shifter-dashboard';
-import { Form, Formik, FormikProps } from 'formik';
 import { XIcon } from '@heroicons/react/solid';
 import { useInternalLinkBase } from '../../lib/internal-path-provider/internal-path-provider';
 
@@ -32,80 +23,6 @@ export const Step_01: FC<CreateTeam> = () => {
         />
       </Section>
       <Section className="max-w-lg mx-auto space-y-6">
-        <Card
-          main={
-            <Formik
-              initialValues={{
-                teamName: '',
-              }}
-              onSubmit={(values, actions) => {
-                setTimeout(() => {
-                  alert(JSON.stringify(values, null, 2));
-                  actions.setSubmitting(false);
-                }, 1000);
-              }}
-            >
-              {(props: FormikProps<any>) => (
-                <Form>
-                  <div className="space-y-8">
-                    <div className="space-y-3">
-                      <Heading
-                        as="label"
-                        htmlFor="siteName"
-                        text="Team Name (required)"
-                        fontSize={4}
-                        variant="primary"
-                        fontWeight="strong"
-                      />
-                      <Input placeholder="Team name" />
-                    </div>
-                    <div className="space-y-3">
-                      <Heading
-                        as="label"
-                        htmlFor="siteName"
-                        text="Contact Info"
-                        fontSize={4}
-                        variant="primary"
-                        fontWeight="strong"
-                      />
-                      <Input placeholder="Phone number" />
-                    </div>
-                    <div className="space-y-3">
-                      <Heading
-                        as="label"
-                        htmlFor="siteName"
-                        text="Location Info"
-                        fontSize={4}
-                        variant="primary"
-                        fontWeight="strong"
-                      />
-                      <div className="ring-2 ring-shifter-purple-primary focus:outline-none focus:border-shifter-purple-primary rounded p-3 w-full">
-                        <select
-                          id="country"
-                          name="country"
-                          className="border-transparent bg-transparent text-shifter-purple-700 rounded w-full"
-                        >
-                          <option>Country</option>
-                          <option>Another Country</option>
-                        </select>
-                      </div>
-                      <div className="ring-2 ring-shifter-purple-primary focus:outline-none focus:border-shifter-purple-primary rounded p-3 w-full">
-                        <select
-                          id="state"
-                          name="state"
-                          className="border-transparent bg-transparent text-shifter-purple-700 rounded w-full"
-                        >
-                          <option>State/Province</option>
-                          <option>Another State/Province</option>
-                        </select>
-                      </div>
-                    </div>
-                  </div>
-                </Form>
-              )}
-            </Formik>
-          }
-        ></Card>
         <Button className="inline-flex" href="/create/team/2/" label="Next" />
       </Section>
     </>

@@ -30,7 +30,7 @@ export function Select(props: SelectProps) {
       className={`${className} border-2 border-inset border-shifter-purple-primary focus:outline-none focus:border-shifter-purple-primary rounded`}
     >
       <div className="flex justify-center">
-        <div className="flex-grow text-shifter-purple-700 p-3">
+        <div className="flex-grow text-shifter-purple-700 p-2">
           <Listbox as="div" value={selectedOption} onChange={handleChange}>
             {({ open }) => (
               <>
