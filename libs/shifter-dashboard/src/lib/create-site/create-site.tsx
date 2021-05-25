@@ -3,7 +3,7 @@ import {
   Modal,
   Heading,
   Section,
-  Input,
+  Field,
   Button,
   Link,
   Form,
@@ -70,7 +70,7 @@ const Step_01: FC<CreateSiteProps> = () => {
                   variant="primary"
                   fontWeight="strong"
                 />
-                <Input placeholder="Site Name" variant="primary" />
+                <Field placeholder="Site Name" variant="primary" />
               </div>
             </div>
             <Button

@@ -1,5 +1,5 @@
 import React, { ReactNode } from 'react';
-import { css, Input } from '@galaxy/core';
+import { css} from '@galaxy/core';
 import { fieldTheme } from './field.galaxy';
 const { field } = fieldTheme;
 
@@ -18,7 +18,7 @@ export function Field(props: FieldProps) {
     variant: props.variant,
   });
 
-  return <Input className={`${fieldCss}`} {...props} />;
+  return <input type="text" className={`${fieldCss}`} {...props} />;
 }
 
 export default Field;

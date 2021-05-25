@@ -8,7 +8,7 @@ export default {
   title: `Galaxy/Components/Field`,
 };
 
-export const primary = () => {
+export const Example = () => {
   /* eslint-disable-next-line */
   const props: FieldProps = {};
 

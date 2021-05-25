@@ -1,3 +1,4 @@
+export * from './lib/subdirectory-path/subdirectory-path';
 export * from './lib/subdirectory/subdirectory';
 export * from './lib/container-info/container-info';
 export * from './lib/create-domain/create-domain';

@@ -13,7 +13,6 @@ export * from './Browser';
 export * from './Card';
 export * from './Date';
 export * from './FreeTierIcon';
-export * from './Input';
 export * from './Integration';
 export * from './Menu';
 export * from './Panel';
