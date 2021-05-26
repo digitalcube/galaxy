@@ -1,6 +1,6 @@
 import React, { ReactNode } from 'react';
 import { Section, MenuItem, AvatarProps, Post } from '@galaxy/core';
-import { Search } from '@galaxy/views';
+import { SearchBox } from '@galaxy/core';
 
 /* eslint-disable-next-line */
 export interface HeaderProps {
@@ -27,7 +27,7 @@ export function Header(props: HeaderProps) {
     schema,
   } = props;
   let { main } = props;
-  if (schema === 'Shifter/Dashboard') main = <Search variant="ghost" />;
+  if (schema === 'Shifter/Dashboard') main = <SearchBox variant="ghost" />;
   return (
     <Section
       as="header"

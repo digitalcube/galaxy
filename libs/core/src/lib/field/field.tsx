@@ -14,6 +14,7 @@ export interface FieldProps {
   type?: string;
   options?: SelectProps['options'];
   handleSelect?: SelectProps['handleSelect'];
+  autoComplete?: string;
 }
 
 export function Field(props: FieldProps) {

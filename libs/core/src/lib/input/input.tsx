@@ -11,6 +11,9 @@ export interface InputProps {
   variant?: string;
   name?: string;
   type?: string;
+  list?: string;
+  datalist?: any;
+  autocomplete?: string;
 }
 
 export function Input(props: InputProps) {

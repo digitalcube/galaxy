@@ -1,6 +1,6 @@
 import React from 'react';
-import { Header, Search } from '@galaxy/views';
-import { Menu, Avatar } from '@galaxy/core';
+import { Header } from '@galaxy/views';
+import { Menu, Avatar, SearchBox } from '@galaxy/core';
 import { fakerHeader, fakerAvatar } from '@galaxy/faker';
 import { defaultStorybookConfig } from '../../.storybook/docs';
 export default {
@@ -20,7 +20,7 @@ export const Dashboard = () => {
     <Header
       className="px-8 py-6"
       mainClassName="px-8"
-      main={<Search variant="ghost" />}
+      main={<SearchBox variant="ghost" />}
       aside={
         <>
           <Menu />
