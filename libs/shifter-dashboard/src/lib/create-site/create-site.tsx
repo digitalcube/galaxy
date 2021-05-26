@@ -55,7 +55,8 @@ const Step_01: FC<CreateSiteProps> = () => {
                   variant="primary"
                   fontWeight="strong"
                 />
-                <Select
+                <Field
+                  type="select"
                   className="w-full"
                   options={['Default Team', 'Another Team']}
                   handleSelect={() => undefined}

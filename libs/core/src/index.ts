@@ -1,3 +1,4 @@
+export * from './lib/input/input';
 export * from './lib/section/section';
 export * from './lib/tag/tag';
 export * from './lib/panel/panel';

@@ -1,5 +1,5 @@
 import React, { ReactNode } from 'react';
-import { css} from '@galaxy/core';
+import { css, Select, SelectProps, Input } from '@galaxy/core';
 import { fieldTheme } from './field.galaxy';
 const { field } = fieldTheme;
 
@@ -10,15 +10,25 @@ export interface FieldProps {
   main?: ReactNode;
   variants?: any;
   variant?: string;
+  name?: string;
+  type?: string;
+  options?: SelectProps['options'];
+  handleSelect?: SelectProps['handleSelect'];
 }
 
 export function Field(props: FieldProps) {
+  const { type } = props;
+
   const fieldCss = css({
     variants: props.variants,
     variant: props.variant,
   });
 
-  return <input type="text" className={`${fieldCss}`} {...props} />;
+  if (type === 'select') {
+    return <Select handleSelect={() => undefined} {...props} />;
+  }
+
+  return <Input {...props} />;
 }
 
 export default Field;
@@ -26,4 +36,5 @@ export default Field;
 Field.defaultProps = {
   variants: field,
   variant: 'primary',
+  placeholder: '',
 };

@@ -1,5 +1,5 @@
 import React from 'react';
-import { Select } from '@galaxy/core';
+import { Select, Field } from '@galaxy/core';
 
 /* eslint-disable-next-line */
 export interface SitesSortProps {
@@ -7,7 +7,7 @@ export interface SitesSortProps {
 }
 
 export function SitesSort(props: SitesSortProps) {
-  return <Select className="md:w-1/4 sm:w-1/2 w-full" {...props} />;
+  return <Field className="md:w-1/4 sm:w-1/2 w-full" type="select" {...props} />;
 }
 
 export default SitesSort;

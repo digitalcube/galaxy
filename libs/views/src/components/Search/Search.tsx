@@ -1,5 +1,5 @@
 import React, { FC } from 'react';
-import { css } from '@galaxy/core';
+import { css, Field } from '@galaxy/core';
 import { inputTheme } from './Search.galaxy';
 const { input } = inputTheme;
 
@@ -24,12 +24,12 @@ export const Search: FC<SearchProps> = ({
           />
         </svg>
       </span>
-      <input
-        type="search"
-        name="q"
-        className={`${inputCss}`}
-        placeholder="Search..."
-        autoComplete="off"
+      <Field
+      type="search"
+      name="q"
+      className={`${inputCss}`}
+      placeholder="Search..."
+      autoComplete="off"
       />
     </div>
   );

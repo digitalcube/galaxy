@@ -1,6 +1,6 @@
-import React, { FC } from 'react';
-import { Select } from '@galaxy/core';
+import React from 'react';
+import { Field } from '@galaxy/core';
 
 export const TeamsSort = () => {
-  return <Select handleSelect={() => undefined} />;
+  return <Field type="select" />;
 };
