@@ -1,6 +1,13 @@
 import React, { ReactNode } from 'react';
 import { Section, MenuItem, AvatarProps, Post } from '@galaxy/core';
-import { SearchBox } from '@galaxy/core';
+import {
+  Autocomplete,
+  SearchClient,
+  AutocompleteItem,
+  AutocompleteItemProps,
+} from '@galaxy/core';
+import algoliasearch from 'algoliasearch';
+import { getAlgoliaResults } from '@algolia/autocomplete-js';
 
 /* eslint-disable-next-line */
 export interface HeaderProps {
@@ -27,7 +34,39 @@ export function Header(props: HeaderProps) {
     schema,
   } = props;
   let { main } = props;
-  if (schema === 'Shifter/Dashboard') main = <SearchBox variant="ghost" />;
+
+  const appId = SearchClient.defaultProps.appId;
+  const apiKey = SearchClient.defaultProps.apiKey;
+  const searchClient = algoliasearch(appId, apiKey);
+
+  if (schema === 'Shifter/Dashboard')
+    main = (
+      <Autocomplete
+        openOnFocus={true}
+        getSources={({ query }) => [
+          {
+            sourceId: 'search',
+            getItems() {
+              return getAlgoliaResults({
+                searchClient,
+                queries: [
+                  {
+                    indexName: 'wp_searchable_posts',
+                    query,
+                  },
+                ],
+              });
+            },
+            templates: {
+              item(props: AutocompleteItemProps) {
+                const { item, components }: any = props;
+                return <AutocompleteItem hit={item} components={components} />;
+              },
+            },
+          },
+        ]}
+      />
+    );
   return (
     <Section
       as="header"

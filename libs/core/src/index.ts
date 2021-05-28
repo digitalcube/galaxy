@@ -1,3 +1,6 @@
+export * from './lib/autocomplete-item/autocomplete-item';
+export * from './lib/search-client/search-client';
+export * from './lib/autocomplete/autocomplete';
 export * from './lib/search-box/search-box';
 export * from './lib/input/input';
 export * from './lib/section/section';
