@@ -1,9 +1,16 @@
 import React, { createElement, Fragment, useEffect, useRef } from 'react';
-import { render } from 'react-dom';
 import { autocomplete } from '@algolia/autocomplete-js';
+import { render } from 'react-dom';
 
 /* eslint-disable-next-line */
-export interface AutocompleteProps {}
+export interface AutocompleteProps {
+  // This is demo code from Algolia.
+  // TODO: Replace any.
+  container?: any;
+  children?: any;
+  openOnFocus?: any;
+  getSources?: any;
+}
 
 export function Autocomplete(props: AutocompleteProps) {
   const containerRef = useRef(null);
@@ -16,7 +23,6 @@ export function Autocomplete(props: AutocompleteProps) {
     const search = autocomplete({
       container: containerRef.current,
       detachedMediaQuery: 'none',
-      placeholder: 'Search the Shifter dashboard',
       classNames: {
         inputWrapper: 'relative flex w-full',
         inputWrapperSuffix: 'flex items-center flex-shrink-0',
@@ -29,6 +35,7 @@ export function Autocomplete(props: AutocompleteProps) {
       },
       renderer: { createElement, Fragment },
       render({ children }, root) {
+        // @ts-expect-error: This is demo code from Algolia.
         render(children, root);
       },
       ...props,
