@@ -43,7 +43,7 @@ export function Header(props: HeaderProps) {
     main = (
       <Autocomplete
         openOnFocus={true}
-        getSources={({ query }) => [
+        getSources={({ query }: any) => [
           {
             sourceId: 'search',
             getItems() {
