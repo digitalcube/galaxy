@@ -16,6 +16,7 @@ export function Autocomplete(props: AutocompleteProps) {
     const search = autocomplete({
       container: containerRef.current,
       detachedMediaQuery: 'none',
+      placeholder: 'Search the Shifter dashboard',
       classNames: {
         inputWrapper: 'relative flex w-full',
         inputWrapperSuffix: 'flex items-center flex-shrink-0',
