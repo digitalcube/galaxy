@@ -1,7 +1,7 @@
 import React from 'react';
 import { ColorPalette, ColorPaletteProps } from './color-palette';
 import { defaultStorybookConfig } from '../../.storybook/docs';
-import { fakerColorPalette } from '@galaxy/faker';
+import { colorPaletteGenerator } from '@galaxy/core';
 
 export default {
   ...defaultStorybookConfig,
@@ -11,7 +11,10 @@ export default {
 
 export const Primary = () => {
   /* eslint-disable-next-line */
-  const props: ColorPaletteProps = fakerColorPalette;
+  const props: ColorPaletteProps = {
+    token: 'primary',
+    namespace: 'shifter',
+  };
 
   return <ColorPalette {...props} />;
 };

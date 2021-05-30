@@ -1,24 +1,6 @@
-const chroma = require('chroma-js');
-
-const darkColorScale = [...Array(5)].map((_, i) =>
-  chroma('#892885')
-    .darken(i * 0.3125)
-    .hex()
-);
-
-const lightColorScale = [...Array(5)].map((_, i) =>
-  chroma('#892885')
-    .brighten(i / 0.8)
-    .hex()
-);
-
-const shifter = {
-  primary: [...darkColorScale, ...lightColorScale],
-};
-
 module.exports = {
   colors: {
-    ...shifter,
+    // ...colors,
     // 'amimoto-black': 'rgba(2, 13, 32, 1)',
     // 'amimoto-blue-100': 'rgba(224, 240, 253, 1)',
     // 'amimoto-blue-200': 'rgba(192, 217, 248, 1)',

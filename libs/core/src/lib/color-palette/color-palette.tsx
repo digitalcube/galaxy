@@ -1,22 +1,52 @@
 import React from 'react';
-import { Section, Heading, PostList, ColorSwatchProps } from '@galaxy/core';
-import { colorPalette } from './color-palette.galaxy';
+import {
+  Section,
+  Heading,
+  PostList,
+  ColorSwatchProps,
+  colorPaletteGenerator,
+} from '@galaxy/core';
 
 /* eslint-disable-next-line */
 export interface ColorPaletteProps {
   title?: string;
-  colors: any | ColorSwatchProps[];
-  token: string;
-  namespace: string;
+  colors?: any | ColorSwatchProps[];
+  color?: string;
+  token?: string;
+  namespace?: string;
 }
 
-export function ColorPalette(props: ColorPaletteProps) {
-  const { colors } = props;
+const color = '#892885';
 
-  const posts = colors.map((color: ColorSwatchProps, i: number) => {
-    const scale = i < 1 ? i : 1 + i;
+const darkColors = colorPaletteGenerator({
+  colorsAmount: 4,
+  saturation: 100,
+  rotate: -13,
+  colorsShiftAmount: 70,
+  givenColor: color,
+  mixColor: 'black',
+})
+  .reverse()
+  .map((color: string) => color);
+
+const lightColors = colorPaletteGenerator({
+  colorsAmount: 4,
+  saturation: 46,
+  rotate: 13,
+  colorsShiftAmount: 94,
+  givenColor: color,
+  mixColor: 'white',
+}).map((color) => color);
+
+const colorsList = [...darkColors, color, ...lightColors];
+
+export function ColorPalette(props: ColorPaletteProps) {
+  const { colors, token } = props;
+
+  const posts = colors.map((color: any, i: number) => {
+    const scale = i === 0 ? 50 : 100 * i; // 50, 100, 200, 300, etc.
     return {
-      title: `primary-${scale}`,
+      title: `${token}-${scale}`,
       hex: color,
     };
   });
@@ -43,3 +73,7 @@ export function ColorPalette(props: ColorPaletteProps) {
 }
 
 export default ColorPalette;
+
+ColorPalette.defaultProps = {
+  colors: colorsList,
+};

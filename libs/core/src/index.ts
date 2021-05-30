@@ -1,3 +1,4 @@
+export * from './lib/color-palette-generator/color-palette-generator';
 export * from './lib/post-list/post-list';
 export * from './lib/post/post';
 export * from './lib/color-swatch/color-swatch';
