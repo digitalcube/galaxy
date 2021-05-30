@@ -8,7 +8,7 @@ const boxShadow = require('./libs/core/src/config/BoxShadow/tailwind.config.js')
 const ringWidth = require('./libs/core/src/config/RingWidth/tailwind.config.js');
 
 module.exports = {
-  mode: 'jit',
+  // mode: 'jit',
   purge: [
     './apps/demo/**/*.{js,jsx,ts,tsx}',
     './libs/core/src/lib/**/*.{js,jsx,ts,tsx}',

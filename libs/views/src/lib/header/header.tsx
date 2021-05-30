@@ -74,7 +74,7 @@ export function Header(props: HeaderProps) {
     >
       <Post
         schema="Brand"
-        name={`${name}`}
+        title={`${name}`}
         image={`${logo}`}
         className={`${brandClassName}`}
       />

@@ -48,7 +48,7 @@ export type FakerGenerator = {
   max?: number;
 };
 
-export const fakerGenerator = ({ schema, min = 1, max }: FakerGenerator) => {
+const fakerGenerator = ({ schema, min = 1, max }: FakerGenerator) => {
   max = max || min;
   return Array.from({ length: faker.random.number({ min, max }) }).map(() =>
     Object.keys(schema).reduce((entity, key) => {
@@ -197,7 +197,7 @@ export const fakerSites = fakerGenerator({
 
 export const fakerSite = fakerGenerator({ schema: siteSchema })[0];
 
-export const postSchema = {
+const postSchema = {
   img: '{{image.image}}', // deprecated
   image: '{{image.image}}',
   title: '{{company.companyName}}',
@@ -206,7 +206,7 @@ export const postSchema = {
   date: '{{date.recent}}',
 };
 
-export const fakerPostList = fakerGenerator({
+const fakerPostList = fakerGenerator({
   schema: postSchema,
   min: 0,
   max: 10,

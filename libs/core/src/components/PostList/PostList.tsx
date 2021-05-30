@@ -8,9 +8,9 @@ export type PostList = {
 };
 
 export const PostList: FC<PostList> = ({ posts, schema, className }) => {
-  
   if (!posts) return null;
   if (schema === 'ProductCollection') schema = 'IndividualProduct';
+  if (schema === 'ColorPalette') schema = 'ColorSwatch';
 
   const allPostList = posts.map((post, i) => {
     return <Post schema={schema} key={i} {...post} />;
@@ -27,4 +27,8 @@ export const PostList: FC<PostList> = ({ posts, schema, className }) => {
   }
 
   return <Section className={`${className}`}>{allPostList}</Section>;
+};
+
+PostList.defaultProps = {
+  posts: [],
 };

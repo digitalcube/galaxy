@@ -8,6 +8,6 @@ export default {
   title: `Galaxy/Components/Post List`,
 };
 
-export const Default = () => {
+export const Example = () => {
   return <PostList posts={fakerPostList} />;
 };

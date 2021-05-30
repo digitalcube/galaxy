@@ -3,7 +3,6 @@ import { Section, Heading, Toggle, Field } from '@galaxy/core';
 import { Controls } from '@galaxy/views';
 
 export const ControlOptions: FC<Control> = ({ options }: Control) => {
-  console.log(options);
   if (!options) return null;
   const { label, type, placeholder } = options;
   return (

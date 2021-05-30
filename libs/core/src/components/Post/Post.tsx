@@ -1,5 +1,5 @@
 import React, { ReactNode, FC } from 'react';
-import { Section, Heading, Link, Image, Button, css } from '@galaxy/core';
+import { Section, Heading, Link, Image, Button, ColorSwatch, css } from '@galaxy/core';
 import { PostHeader } from './PostHeader';
 import { PostFooter } from './PostFooter';
 import { PostMain } from './PostMain';
@@ -26,6 +26,10 @@ export const Post: FC<PostProps> = ({
     variant: `${variant}`,
     variants: variants,
   });
+
+  if (schema === 'ColorSwatch') {
+    return <ColorSwatch />;
+  }
 
   if (schema === 'IndividualProduct') {
     return (

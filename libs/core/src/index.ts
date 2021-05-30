@@ -1,3 +1,5 @@
+export * from './lib/post/post';
+export * from './lib/color-swatch/color-swatch';
 export * from './lib/autocomplete-item/autocomplete-item';
 export * from './lib/search-client/search-client';
 export * from './lib/autocomplete/autocomplete';

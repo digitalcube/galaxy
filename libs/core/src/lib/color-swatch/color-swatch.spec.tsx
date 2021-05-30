@@ -1,11 +1,11 @@
 import React from 'react';
 import { render } from '@testing-library/react';
 
-import Fakes from './fakes';
+import ColorSwatch from './color-swatch';
 
-describe('Fakes', () => {
+describe('ColorSwatch', () => {
   it('should render successfully', () => {
-    const { baseElement } = render(<Fakes />);
+    const { baseElement } = render(<ColorSwatch />);
     expect(baseElement).toBeTruthy();
   });
 });
