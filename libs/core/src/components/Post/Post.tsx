@@ -1,7 +1,6 @@
 import React, { ReactNode, FC } from 'react';
 import { Section, Heading, Link, Image, Button, ColorSwatch, css } from '@galaxy/core';
 import { PostHeader } from './PostHeader';
-import { PostFooter } from './PostFooter';
 import { PostMain } from './PostMain';
 import { postTheme } from './Post.galaxy';
 const { post } = postTheme;
@@ -10,7 +9,6 @@ export const Post: FC<PostProps> = ({
   children,
   className,
   description,
-  footer,
   main,
   mainClassName,
   title,
@@ -104,7 +102,6 @@ export const Post: FC<PostProps> = ({
 export type PostProps = {
   children?: ReactNode;
   className?: string;
-  footer?: ReactNode;
   main?: ReactNode;
   mainClassName?: string;
   title?: string;

@@ -21,4 +21,4 @@ export * from './Spinner';
 export * from './Swatch';
 export * from './Table';
 // export * from './Post';
-export * from './PostList';
+// export * from './PostList';

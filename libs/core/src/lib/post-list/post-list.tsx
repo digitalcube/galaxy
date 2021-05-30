@@ -1,13 +1,17 @@
-import React, { FC } from 'react';
+import React from 'react';
 import { Section, Post, PostProps } from '@galaxy/core';
 
-export type PostList = {
+/* eslint-disable-next-line */
+export interface PostListProps {
   posts?: PostProps[];
   schema?: string;
   className?: string;
-};
+}
 
-export const PostList: FC<PostList> = ({ posts, schema, className }) => {
+export function PostList(props: PostListProps) {
+  const { posts, className } = props;
+  let { schema } = props;
+
   if (!posts) return null;
   if (schema === 'ProductCollection') schema = 'IndividualProduct';
   if (schema === 'ColorPalette') schema = 'ColorSwatch';
@@ -27,7 +31,9 @@ export const PostList: FC<PostList> = ({ posts, schema, className }) => {
   }
 
   return <Section className={`${className}`}>{allPostList}</Section>;
-};
+}
+
+export default PostList;
 
 PostList.defaultProps = {
   posts: [],

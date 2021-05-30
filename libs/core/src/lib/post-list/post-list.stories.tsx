@@ -1,7 +1,8 @@
 import React from 'react';
-import { PostList } from '@galaxy/core';
+import { PostList, PostListProps } from '@galaxy/core';
 import { fakerPostList } from '@galaxy/faker';
 import { defaultStorybookConfig } from '../../.storybook/docs';
+
 export default {
   ...defaultStorybookConfig,
   component: PostList,
@@ -9,5 +10,8 @@ export default {
 };
 
 export const Example = () => {
+  /* eslint-disable-next-line */
+  const props: PostListProps = {};
+
   return <PostList posts={fakerPostList} />;
 };
