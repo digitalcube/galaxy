@@ -4,67 +4,37 @@
     "defaultBase": "master"
   },
   "implicitDependencies": {
-    "workspace.json": "*",
     "package.json": {
       "dependencies": "*",
       "devDependencies": "*"
     },
-    "tsconfig.base.json": "*",
-    "tslint.json": "*",
-    ".eslintrc.json": "*",
-    "nx.json": "*"
+    ".eslintrc.json": "*"
   },
   "tasksRunnerOptions": {
     "default": {
       "runner": "@nrwl/workspace/tasks-runners/default",
       "options": {
-        "cacheableOperations": [
-          "build",
-          "lint",
-          "test",
-          "e2e",
-          "build-storybook"
-        ]
+        "cacheableOperations": ["build", "lint", "test", "e2e"]
       }
     }
   },
+  "targetDependencies": {
+    "build": [
+      {
+        "target": "build",
+        "projects": "dependencies"
+      }
+    ]
+  },
   "projects": {
-    "demo": {
+    "galaxy-wp-theme": {
       "tags": []
     },
-    "demo-e2e": {
+    "galaxy-wp-theme-e2e": {
       "tags": [],
-      "implicitDependencies": ["demo"]
+      "implicitDependencies": ["galaxy-wp-theme"]
     },
-    "shifter-web": {
-      "tags": []
-    },
-    "core": {
-      "tags": []
-    },
-    "shifter": {
-      "tags": []
-    },
-    "amimoto": {
-      "tags": []
-    },
-    "views": {
-      "tags": []
-    },
-    "amimoto-web": {
-      "tags": []
-    },
-    "gatsby": {
-      "tags": []
-    },
-    "gatsby-e2e": {
-      "tags": [],
-      "implicitDependencies": ["gatsby"]
-    },
-    "shifter-dashboard": {
-      "tags": []
-    },
-    "fakes": {
+    "ui": {
       "tags": []
     }
   }

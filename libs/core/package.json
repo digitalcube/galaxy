@@ -1,7 +1,0 @@
-{
-  "name": "@galaxy/core",
-  "version": "0.0.12",
-  "publishConfig": {
-    "access": "public"
-  }
-}

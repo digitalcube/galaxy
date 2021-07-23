@@ -1,5 +1,0 @@
-{
-  "path": ".",
-  "tag-prefix": "@galaxy/amimoto-web@v",
-  "releaseCommitMessageFormat": "chore(release): @galaxy/amimoto-web@{{currentTag}}"
-}
