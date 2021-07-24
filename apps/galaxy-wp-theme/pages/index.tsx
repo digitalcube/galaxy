@@ -12,7 +12,7 @@ export function Index() {
        <Button />
       <h2>Resources &amp; Tools</h2>
       <p>Thank you for using and showing some ♥ for Nx.</p>
-      <div className="flex github-star-container">
+      <div className="flex github-star-container bg-purple-primary">
         <a
           href="https://github.com/nrwl/nx"
           target="_blank"
