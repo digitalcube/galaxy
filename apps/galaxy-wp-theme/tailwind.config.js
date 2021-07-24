@@ -6,6 +6,7 @@ module.exports = {
   presets: [require(`${appRootPath}/tailwind-workspace-preset.js`)],
   purge: [
     join(__dirname, 'pages/**/*.{js,ts,jsx,tsx}'),
+    `${appRootPath}/libs/**/*.{js,ts,jsx,tsx}`,
     ...createGlobPatternsForDependencies(__dirname),
   ],
 };

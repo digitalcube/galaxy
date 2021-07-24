@@ -1,19 +1,17 @@
 import { AppProps } from 'next/app';
 import Head from 'next/head';
-import { ReactComponent as NxLogo } from '../public/nx-logo-white.svg';
+import { HeaderSimple } from '@galaxy/ui-marketing';
 import 'tailwindcss/tailwind.css';
 
-function CustomApp({ Component, pageProps }: AppProps) {
+function App({ Component, pageProps }: AppProps) {
   return (
     <>
       <Head>
-        <title>Welcome to galaxy-wp-theme!</title>
+        <title>Shifter</title>
+        <link rel="stylesheet" href="https://use.typekit.net/rrt0shs.css" />
       </Head>
-      <div className="app">
-        <header className="flex">
-          <NxLogo width="75" height="50" />
-          <h1>Welcome to galaxy-wp-theme!</h1>
-        </header>
+      <div>
+        <HeaderSimple />
         <main>
           <Component {...pageProps} />
         </main>
@@ -22,4 +20,4 @@ function CustomApp({ Component, pageProps }: AppProps) {
   );
 }
 
-export default CustomApp;
+export default App;

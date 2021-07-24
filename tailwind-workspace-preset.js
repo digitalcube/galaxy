@@ -2,6 +2,32 @@ module.exports = {
   mode: 'jit',
   darkMode: false, // or 'media' or 'class'
   theme: {
+    boxShadow: {
+      DEFAULT: '0px 1px 8px rgba(69, 29, 57, 0.1)',
+      2: '0px 0px 10px rgba(69, 29, 57, 0.2)',
+      3: '0px 8px 15px rgba(69, 29, 57, 0.2), 0px 8px 20px 4px rgba(69, 29, 57, 0.15)',
+      4: '0px 6px 18px rgba(69, 29, 57, 0.29), 0px 19px 29px rgba(69, 29, 57, 0.35)',
+      none: 'none',
+    },
+    fontSize: {
+      'size-1': '0.625rem', // 10px
+      'size-2': '0.75rem', // 12px
+      'size-3': '0.875rem', // 14px
+      'size-4': '1rem', // 16px
+      'size-5': '1.125rem', // 18px
+      'size-6': [
+        '1.375rem', // 22px
+        {
+          lineHeight: '150%',
+        },
+      ],
+      'size-7': '1.875rem', // 30px
+      'size-8': '2.375rem', // 38px
+      'size-9': '3.125rem', // 50px
+    },
+    fontFamily: {
+      sans: ['sofia-pro', 'sans-serif'],
+    },
     colors: {
       black: `#25021B`,
       white: `#FFFFFF`,

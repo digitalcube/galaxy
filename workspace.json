@@ -117,6 +117,27 @@
           }
         }
       }
+    },
+    "ui-marketing": {
+      "root": "libs/ui-marketing",
+      "sourceRoot": "libs/ui-marketing/src",
+      "projectType": "library",
+      "targets": {
+        "lint": {
+          "executor": "@nrwl/linter:eslint",
+          "options": {
+            "lintFilePatterns": ["libs/ui-marketing/**/*.{ts,tsx,js,jsx}"]
+          }
+        },
+        "test": {
+          "executor": "@nrwl/jest:jest",
+          "outputs": ["coverage/libs/ui-marketing"],
+          "options": {
+            "jestConfig": "libs/ui-marketing/jest.config.js",
+            "passWithNoTests": true
+          }
+        }
+      }
     }
   },
   "cli": {
