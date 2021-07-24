@@ -1,7 +1,9 @@
+import { HeroSimpleCentered } from '@galaxy/ui-marketing';
+
 export function Index() {
   return (
     <div>
-      Main
+      <HeroSimpleCentered />
     </div>
   );
 }
