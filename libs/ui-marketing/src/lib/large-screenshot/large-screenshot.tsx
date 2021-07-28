@@ -20,6 +20,7 @@ export const LargeScreenshot = (props: LargeScreenshotProps) => {
 };
 
 LargeScreenshot.defaultProps = {
+  '@type': 'SoftwareApplication',
   screenshot:
     'https://player.vimeo.com/video/365886635?title=0&byline=0&portrait=0&muted=1&autoplay=1&autopause=0&controls=0&loop=1&app_id=122963',
 };
