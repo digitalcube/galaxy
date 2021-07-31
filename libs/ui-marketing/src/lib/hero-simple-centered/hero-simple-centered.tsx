@@ -1,4 +1,4 @@
-import { Button } from '@galaxy/ui';
+import { Button, Input } from '@galaxy/ui';
 
 /* eslint-disable-next-line */
 export interface HeroSimpleCenteredProps {}
@@ -26,7 +26,7 @@ export function HeroSimpleCentered(props: HeroSimpleCenteredProps) {
         </p>
         <div className="mt-8 sm:max-w-lg sm:mx-auto">
           <form action="#" method="POST" className="flex">
-            {/* <Input placeholder='Enter your email' variant='primary' className="rounded-none" /> */}
+            <Input placeholder='Enter your email' variant='primary' className="rounded-none" />
             <Button label="Get Started" className="rounded-l-none" />
           </form>
           <p className="mt-4 text-sm text-gray-400">
