@@ -1,6 +1,13 @@
 import classNames from 'classnames';
 
-export const css = ({ variant, variants }: Css) => {
+/* eslint-disable-next-line */
+export interface CSSProps {
+  variant?: string | boolean;
+  variants: any;
+}
+
+export function CSS(props: CSSProps) {
+  let { variant, variants } = props;
   if (!variants) return null;
 
   // console.log(variants);
@@ -14,15 +21,7 @@ export const css = ({ variant, variants }: Css) => {
     [Array.isArray(variants) ? variants.join(' ') : variants]: variants,
   };
 
-  // console.log(`variants: ` + variants);
-  // console.log(`variant: ` + variant);
-  // console.log(`DEFAULT: ` + DEFAULT);
-  // console.log(`classNames: ` + classNames(classes));
-
   return classNames(classes);
-};
+}
 
-type Css = {
-  variant?: string | boolean;
-  variants: any;
-};
+export default CSS;

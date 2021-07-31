@@ -39,6 +39,9 @@
     },
     "ui-marketing": {
       "tags": []
+    },
+    "ui-utils": {
+      "tags": []
     }
   }
 }

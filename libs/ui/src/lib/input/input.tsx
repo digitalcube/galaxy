@@ -1,5 +1,5 @@
 import { ReactNode, FC } from 'react';
-// import { css, Tag } from '@galaxy/ui';
+import { CSS } from '@galaxy/ui-utils';
 import { inputTheme } from './Input.galaxy';
 const { input } = inputTheme;
 
@@ -28,10 +28,10 @@ export function Input(props: InputProps) {
     href,
   } = props;
 
-  // const classNames = css({
-  //   variant: variant,
-  //   variants: variants,
-  // });
+  const classNames = CSS({
+    variant: variant,
+    variants: variants,
+  });
 
   return (
     <input
@@ -43,7 +43,7 @@ export function Input(props: InputProps) {
       autoComplete="off"
     />
   );
-}
+};
 
 export default Input;
 
