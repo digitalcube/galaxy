@@ -1,5 +1,5 @@
 import { ReactNode } from 'react';
-import { CSS } from '@galaxy/ui-utils';
+import { Css } from '../../utils/css/css';
 import { buttonTheme } from './button.galaxy';
 const { button } = buttonTheme;
 
@@ -20,7 +20,7 @@ export function Button(props: ButtonProps) {
 
   if (!label) return null;
 
-  const classNames = CSS({
+  const classNames = Css({
     variant: variant,
     variants: variants,
   });

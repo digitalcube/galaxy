@@ -1,5 +1,5 @@
-import { ReactNode, FC } from 'react';
-import { CSS } from '@galaxy/ui-utils';
+import { ReactNode } from 'react';
+import { Css } from '../../utils/css/css';
 import { inputTheme } from './Input.galaxy';
 const { input } = inputTheme;
 
@@ -28,7 +28,7 @@ export function Input(props: InputProps) {
     href,
   } = props;
 
-  const classNames = CSS({
+  const classNames = Css({
     variant: variant,
     variants: variants,
   });
