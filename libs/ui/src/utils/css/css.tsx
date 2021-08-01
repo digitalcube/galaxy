@@ -10,8 +10,6 @@ export function Css(props: CssProps) {
   let { variant, variants } = props;
   if (!variants) return null;
 
-  // console.log(variants);
-
   const DEFAULT = variants?.DEFAULT ? variants.DEFAULT : false;
   variants = variant ? variants[`${variant}`] : false;
   variant = variant ? variant : false;
