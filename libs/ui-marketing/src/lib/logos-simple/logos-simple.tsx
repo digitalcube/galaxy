@@ -45,7 +45,7 @@ export function LogosSimple(props: LogosSimpleProps) {
             </div>
           </div>
         </div>
-        <Button label="View the showcase" variant="outlinePrimary" />
+        <Button children="View the showcase" variant="primary" />
       </div>
     </div>
   );
