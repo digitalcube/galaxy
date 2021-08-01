@@ -16,8 +16,7 @@
     "baseUrl": ".",
     "paths": {
       "@galaxy/ui": ["libs/ui/src/index.ts"],
-      "@galaxy/ui-marketing": ["libs/ui-marketing/src/index.ts"],
-      "@galaxy/ui-utils": ["libs/ui-utils/src/index.ts"]
+      "@galaxy/ui-marketing": ["libs/ui-marketing/src/index.ts"]
     }
   },
   "exclude": ["node_modules", "tmp"]
