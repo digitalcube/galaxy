@@ -1,5 +1,5 @@
 import { createElement, ReactNode } from 'react';
-import { LinkTagProps } from '@galaxy/ui';
+import { LinkTagProps } from '../link-tag-provider/link-tag-provider';
 
 /* eslint-disable-next-line */
 export interface TagProps {
