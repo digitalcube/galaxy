@@ -1,10 +1,10 @@
 import { Button } from '@galaxy/ui';
 
 const navigation = [
-  { name: 'Solutions', href: '#' },
-  { name: 'Pricing', href: '/pricing/' },
-  { name: 'Docs', href: '#' },
-  { name: 'Company', href: '#' },
+  { children: 'Solutions', href: '#' },
+  { children: 'Pricing', href: '/pricing/' },
+  { children: 'Docs', href: '#' },
+  { children: 'Company', href: '#' },
 ];
 
 /* eslint-disable-next-line */
@@ -25,29 +25,19 @@ export function HeaderSimple(props: HeaderSimpleProps) {
               />
             </a>
             <div className="hidden ml-10 space-x-8 lg:block flex ml-auto">
-              {navigation.map((link) => (
-                <Button
-                  key={link.name}
-                  variant="link"
-                  href={link.href}
-                  label={link.name}
-                />
+              {navigation.map((props) => (
+                <Button {...props} variant="link" />
               ))}
             </div>
           </div>
           <div className="ml-10 space-x-4 flex">
-            <Button variant="white" href="#" label="Log In" />
-            <Button variant="primary" href="#" label="Sign Up" />
+            <Button variant="white" href="#" children="Log In" />
+            <Button variant="primary" href="#" children="Sign Up" />
           </div>
         </div>
         <div className="py-4 flex flex-wrap justify-center space-x-6 lg:hidden">
           {navigation.map((link) => (
-            <Button
-              key={link.name}
-              variant="link"
-              href={link.href}
-              label={link.name}
-            />
+            <Button {...link} />
           ))}
         </div>
       </nav>

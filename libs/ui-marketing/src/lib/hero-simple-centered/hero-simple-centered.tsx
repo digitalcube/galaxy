@@ -27,7 +27,7 @@ export function HeroSimpleCentered(props: HeroSimpleCenteredProps) {
         <div className="mt-8 sm:max-w-lg sm:mx-auto">
           <form action="#" method="POST" className="flex">
             <Input placeholder='Enter your email' variant='primary' className="rounded-none" />
-            <Button label="Get Started" className="rounded-l-none" />
+            <Button children="Get Started" className="rounded-l-none" />
           </form>
           <p className="mt-4 text-sm text-gray-400">
             Start your free 7-day trial, no credit card necessary.
