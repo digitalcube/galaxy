@@ -1,3 +1,6 @@
+export * from './utils/deep-merge/deep-merge';
+export * from './utils/use-dark-mode/use-dark-mode';
+export * from './lib/galaxy/galaxy';
 export * from './lib/theme-context/theme-context';
 export * from './lib/theme-provider/theme-provider';
 export * from './utils/css/css';

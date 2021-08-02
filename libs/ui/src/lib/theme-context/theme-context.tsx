@@ -1,7 +1,7 @@
 import { createContext } from 'react';
 import { buttonTheme } from '../button/button.galaxy';
 
-const defaultTheme = {
+export const defaultTheme = {
   // Button
   ...buttonTheme,
 };
@@ -9,7 +9,7 @@ const defaultTheme = {
 /* eslint-disable-next-line */
 export interface ThemeContextProps {
   theme: any;
-  mode?: string | null;
+  mode?: Mode;
   toggleMode?: any;
 }
 
