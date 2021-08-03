@@ -25,10 +25,12 @@ export function HeroSimpleCentered(props: HeroSimpleCenteredProps) {
           See what the hype is all about
         </p>
         <div className="mt-8 sm:max-w-lg sm:mx-auto">
-          <form action="#" method="POST" className="flex">
-            <Input placeholder='Enter your email' variant='primary' className="rounded-none" />
-            <Button children="Get Started" className="rounded-l-none" />
-          </form>
+          <div className="relative focus-within:text-purple-800">
+            <Input placeholder="Enter your email" />
+            <Button className="absolute inset-y-0 right-0 rounded-l-none">
+              Get Started
+            </Button>
+          </div>
           <p className="mt-4 text-sm text-gray-400">
             Start your free 7-day trial, no credit card necessary.
           </p>

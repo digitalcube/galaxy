@@ -1,5 +1,5 @@
-import { ReactNode, useLayoutEffect, useMemo } from 'react';
-import { ThemeContext, defaultTheme } from '@galaxy/ui';
+import { ReactNode, useEffect, useMemo } from 'react';
+import { ThemeContext, defaultTheme } from '../theme-context/theme-context';
 import { DeepMerge } from '../../utils/deep-merge/deep-merge';
 import UseDarkMode from '../../utils/use-dark-mode/use-dark-mode';
 
@@ -17,7 +17,7 @@ export function Galaxy(props: GalaxyProps) {
   const mergedTheme = DeepMerge(defaultTheme, customTheme);
   const [mode, setMode, toggleMode] = UseDarkMode(usePreferences);
 
-  useLayoutEffect(() => {
+  useEffect(() => {
     if (dark) {
       if (setMode != null) {
         setMode('dark');
