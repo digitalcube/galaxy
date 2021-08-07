@@ -17,7 +17,7 @@ export interface Props {
   icon?: IconType;
   iconLeft?: IconType;
   iconRight?: IconType;
-  variant?: 'white' | 'outline' | 'link' | 'primary' | '__dropdownItem';
+  variant?: 'white' | 'outline' | 'link' | 'primary' | '__dropdownItem' | string | null;
   block?: boolean;
 }
 

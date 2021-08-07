@@ -1,16 +1,28 @@
 import { Button } from '@galaxy/ui';
+import { Brand } from 'schema-dts';
 
-const navigation = [
+const brand = { logo: '/shifter-mark-primary.svg', name: 'Shifter' };
+
+const primary = [
   { children: 'Solutions', href: '#' },
   { children: 'Pricing', href: '/pricing/' },
   { children: 'Docs', href: '#' },
   { children: 'Company', href: '#' },
 ];
 
+const secondary = [
+  { children: 'Log In', href: '#', variant: 'white' },
+  { children: 'Sign Up', href: '#', variant: 'primary' },
+];
+
 /* eslint-disable-next-line */
-export interface HeaderSimpleProps {}
+export interface HeaderSimpleProps {
+  brand: Brand;
+}
 
 export function HeaderSimple(props: HeaderSimpleProps) {
+  const { brand } = props;
+
   return (
     <header className="bg-white">
       <nav className="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8" aria-label="Top">
@@ -20,24 +32,25 @@ export function HeaderSimple(props: HeaderSimpleProps) {
               <span className="sr-only">Shifter</span>
               <img
                 className="h-10 w-auto"
-                src="/shifter-mark-primary.svg"
-                alt=""
+                src={`${brand.logo}`}
+                alt={`${brand.name}`}
               />
             </a>
             <div className="hidden ml-10 space-x-8 lg:block flex ml-auto">
-              {navigation.map((props) => (
-                <Button {...props} variant="link" />
+              {primary.map((props, i) => (
+                <Button {...props} key={i} variant="link" />
               ))}
             </div>
           </div>
           <div className="ml-10 space-x-4 flex">
-            <Button variant="white" href="#" children="Log In" />
-            <Button variant="primary" href="#" children="Sign Up" />
+            {secondary.map((link, i) => (
+              <Button {...link} key={i} />
+            ))}
           </div>
         </div>
         <div className="py-4 flex flex-wrap justify-center space-x-6 lg:hidden">
-          {navigation.map((link) => (
-            <Button {...link} />
+          {primary.map((link, i) => (
+            <Button {...link} key={i} />
           ))}
         </div>
       </nav>
@@ -46,3 +59,7 @@ export function HeaderSimple(props: HeaderSimpleProps) {
 }
 
 export default HeaderSimple;
+
+HeaderSimple.defaultProps = {
+  brand: brand,
+};
