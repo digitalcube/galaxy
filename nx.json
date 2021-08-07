@@ -27,12 +27,12 @@
     ]
   },
   "projects": {
-    "galaxy-wp-theme": {
+    "frontend": {
       "tags": []
     },
-    "galaxy-wp-theme-e2e": {
+    "frontend-e2e": {
       "tags": [],
-      "implicitDependencies": ["galaxy-wp-theme"]
+      "implicitDependencies": ["frontend"]
     },
     "ui": {
       "tags": []

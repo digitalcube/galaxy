@@ -5,7 +5,6 @@ import { HeaderSimple } from '@galaxy/ui-marketing';
 import 'tailwindcss/tailwind.css';
 
 function App({ Component, pageProps }: AppProps) {
-
   return (
     <Galaxy>
       <Head>

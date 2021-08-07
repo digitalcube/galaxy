@@ -1,17 +1,17 @@
 {
   "version": 2,
   "projects": {
-    "galaxy-wp-theme": {
-      "root": "apps/galaxy-wp-theme",
-      "sourceRoot": "apps/galaxy-wp-theme",
+    "frontend": {
+      "root": "apps/frontend",
+      "sourceRoot": "apps/frontend",
       "projectType": "application",
       "targets": {
         "build": {
           "executor": "@nrwl/next:build",
           "outputs": ["{options.outputPath}"],
           "options": {
-            "root": "apps/galaxy-wp-theme",
-            "outputPath": "dist/apps/galaxy-wp-theme"
+            "root": "apps/frontend",
+            "outputPath": "dist/apps/frontend"
           },
           "configurations": {
             "production": {}
@@ -20,12 +20,12 @@
         "serve": {
           "executor": "@nrwl/next:server",
           "options": {
-            "buildTarget": "galaxy-wp-theme:build",
+            "buildTarget": "frontend:build",
             "dev": true
           },
           "configurations": {
             "production": {
-              "buildTarget": "galaxy-wp-theme:build:production",
+              "buildTarget": "frontend:build:production",
               "dev": false
             }
           }
@@ -33,47 +33,47 @@
         "export": {
           "executor": "@nrwl/next:export",
           "options": {
-            "buildTarget": "galaxy-wp-theme:build:production"
+            "buildTarget": "frontend:build:production"
           }
         },
         "test": {
           "executor": "@nrwl/jest:jest",
-          "outputs": ["coverage/apps/galaxy-wp-theme"],
+          "outputs": ["coverage/apps/frontend"],
           "options": {
-            "jestConfig": "apps/galaxy-wp-theme/jest.config.js",
+            "jestConfig": "apps/frontend/jest.config.js",
             "passWithNoTests": true
           }
         },
         "lint": {
           "executor": "@nrwl/linter:eslint",
           "options": {
-            "lintFilePatterns": ["apps/galaxy-wp-theme/**/*.{ts,tsx,js,jsx}"]
+            "lintFilePatterns": ["apps/frontend/**/*.{ts,tsx,js,jsx}"]
           }
         }
       }
     },
-    "galaxy-wp-theme-e2e": {
-      "root": "apps/galaxy-wp-theme-e2e",
-      "sourceRoot": "apps/galaxy-wp-theme-e2e/src",
+    "frontend-e2e": {
+      "root": "apps/frontend-e2e",
+      "sourceRoot": "apps/frontend-e2e/src",
       "projectType": "application",
       "targets": {
         "e2e": {
           "executor": "@nrwl/cypress:cypress",
           "options": {
-            "cypressConfig": "apps/galaxy-wp-theme-e2e/cypress.json",
-            "tsConfig": "apps/galaxy-wp-theme-e2e/tsconfig.e2e.json",
-            "devServerTarget": "galaxy-wp-theme:serve"
+            "cypressConfig": "apps/frontend-e2e/cypress.json",
+            "tsConfig": "apps/frontend-e2e/tsconfig.e2e.json",
+            "devServerTarget": "frontend:serve"
           },
           "configurations": {
             "production": {
-              "devServerTarget": "galaxy-wp-theme:serve:production"
+              "devServerTarget": "frontend:serve:production"
             }
           }
         },
         "lint": {
           "executor": "@nrwl/linter:eslint",
           "options": {
-            "lintFilePatterns": ["apps/galaxy-wp-theme-e2e/**/*.{js,ts}"]
+            "lintFilePatterns": ["apps/frontend-e2e/**/*.{js,ts}"]
           }
         }
       }
@@ -156,5 +156,5 @@
       }
     }
   },
-  "defaultProject": "galaxy-wp-theme"
+  "defaultProject": "frontend"
 }

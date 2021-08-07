@@ -1,6 +1,6 @@
 import { getGreeting } from '../support/app.po';
 
-describe('galaxy-wp-theme', () => {
+describe('frontend', () => {
   beforeEach(() => cy.visit('/'));
 
   it('should display welcome message', () => {
@@ -8,6 +8,6 @@ describe('galaxy-wp-theme', () => {
     cy.login('my-email@something.com', 'myPassword');
 
     // Function helper example, see `../support/app.po.ts` file
-    getGreeting().contains('Welcome to galaxy-wp-theme!');
+    getGreeting().contains('Welcome to frontend!');
   });
 });

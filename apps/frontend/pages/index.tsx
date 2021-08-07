@@ -1,4 +1,9 @@
-import { HeroSimpleCentered, LogosSimple, LargeScreenshot, CTASimpleCentered } from '@galaxy/ui-marketing';
+import {
+  HeroSimpleCentered,
+  LogosSimple,
+  LargeScreenshot,
+  CTASimpleCentered,
+} from '@galaxy/ui-marketing';
 
 export function Index() {
   return (
