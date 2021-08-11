@@ -63,8 +63,8 @@ export function BenefitsWithIllustration(props: BenefitsWithIllustrationProps) {
               </div>
               <div className="pt-6">
                 <Button
-                  variant="outlinePrimary"
-                  label="Start your free trial"
+                  variant="primary"
+                  children="Start your free trial"
                 />
               </div>
             </div>
