@@ -1,7 +1,7 @@
-import { SoftwareApplication } from 'schema-dts';
+import { WebApplication } from 'schema-dts';
 
 /* eslint-disable-next-line */
-export type LargeScreenshotProps = SoftwareApplication;
+export type LargeScreenshotProps = WebApplication;
 
 export const LargeScreenshot = (props: LargeScreenshotProps) => {
   const { screenshot } = props;
@@ -21,7 +21,7 @@ export const LargeScreenshot = (props: LargeScreenshotProps) => {
 };
 
 LargeScreenshot.defaultProps = {
-  '@type': 'SoftwareApplication',
+  '@type': 'WebApplication',
   screenshot:
     'https://player.vimeo.com/video/365886635?title=0&byline=0&portrait=0&muted=1&autoplay=1&autopause=0&controls=0&loop=1&app_id=122963',
 };

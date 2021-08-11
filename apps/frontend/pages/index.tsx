@@ -4,6 +4,7 @@ import {
   LogosSimple,
   LargeScreenshot,
   CTASimpleLeft,
+  BenefitsWithIllustration,
 } from '@galaxy/ui-marketing';
 
 const list = [
@@ -11,6 +12,7 @@ const list = [
   { id: 2, type: 'Logos' },
   { id: 3, type: 'Screenshot' },
   { id: 4, type: 'CTA' },
+  { id: 5, type: 'Benefits' },
 ];
 
 export function Index() {
@@ -25,6 +27,7 @@ export function Index() {
           Logos: LogosSimple,
           Screenshot: LargeScreenshot,
           CTA: CTASimpleLeft,
+          Benefits: BenefitsWithIllustration,
         }}
       />
     </div>
