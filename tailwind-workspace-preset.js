@@ -29,7 +29,7 @@ module.exports = {
       sans: ['sofia-pro', 'sans-serif'],
     },
     colors: {
-      transparent:'transparent',
+      transparent: 'transparent',
       black: `#25021B`,
       white: `#FFFFFF`,
       background: {

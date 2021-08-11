@@ -24,8 +24,8 @@ export function HeaderSimple(props: HeaderSimpleProps) {
   const { brand } = props;
 
   return (
-    <header className="bg-white relative z-10">
-      <nav className="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8" aria-label="Top">
+    <header className="relative">
+      <nav className="container mx-auto px-4 sm:px-6 lg:px-8" aria-label="Top">
         <div className="w-full py-6 flex items-center">
           <div className="flex items-center flex-grow">
             <a href="/">

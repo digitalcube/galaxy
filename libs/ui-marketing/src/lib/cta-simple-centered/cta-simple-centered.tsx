@@ -5,7 +5,7 @@ export interface CTASimpleCenteredProps {}
 
 export function CTASimpleCentered(props: CTASimpleCenteredProps) {
   return (
-    <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 bg-gray-50 overflow-hidden relative bg-purple-800">
+    <div className="container mx-auto px-4 sm:px-6 lg:px-8 bg-gray-50 overflow-hidden relative bg-purple-800">
       <img
         src="/geo-background.svg"
         alt=""
@@ -21,7 +21,7 @@ export function CTASimpleCentered(props: CTASimpleCenteredProps) {
         <p className="mt-2 mb-6 text-size-5 text-purple-50">
           Shifter is the solution for fast, maintenance-free WordPress websites.
         </p>
-        <Button label="Sign up for free" />
+        <Button children="Sign up for free" />
       </div>
     </div>
   );

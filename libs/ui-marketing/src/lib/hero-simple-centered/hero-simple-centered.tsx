@@ -5,13 +5,13 @@ export interface HeroSimpleCenteredProps {}
 
 export function HeroSimpleCentered(props: HeroSimpleCenteredProps) {
   return (
-    <div className="relative">
+    <div className="relative container mx-auto">
       <img
         src="/hero-background.svg"
         alt=""
-        className="object-cover w-full absolute -top-1/2"
+        className="w-full absolute -top-1/2 z-[-10]"
       />
-      <section className="mt-16 mx-auto max-w-5xl px-4 sm:mt-24 relative z-10">
+      <section className="mt-16 mx-auto max-w-5xl px-4 sm:mt-24 relative">
         <div className="text-center relative">
           <h1 className="text-size-9 font-bold text-gray-800">
             <span className="block xl:inline">WordPress at the speed</span>{' '}
