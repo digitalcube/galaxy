@@ -2,7 +2,7 @@ import {
   HeroSimpleCentered,
   LogosSimple,
   LargeScreenshot,
-  CTASimpleCentered,
+  CTASimpleLeft,
 } from '@galaxy/ui-marketing';
 
 export function Index() {
@@ -11,7 +11,7 @@ export function Index() {
       <HeroSimpleCentered />
       <LogosSimple />
       <LargeScreenshot />
-      <CTASimpleCentered />
+      <CTASimpleLeft />
     </div>
   );
 }
