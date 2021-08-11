@@ -10211,6 +10211,11 @@ react-is@^16.8.1:
   resolved "https://registry.yarnpkg.com/react-is/-/react-is-16.13.1.tgz#789729a4dc36de2999dc156dd6c1d9c18cea56a4"
   integrity sha512-24e6ynE2H+OKt4kqsOvNd8kBpV65zoxbA4BVsEOB3ARVWQki/DHzaUoC5KuON/BiccDaCCTZBuOcfZs70kR8bQ==
 
+react-map-to-components@^1.2.1:
+  version "1.2.1"
+  resolved "https://registry.yarnpkg.com/react-map-to-components/-/react-map-to-components-1.2.1.tgz#36847a6fe6728abd05cb915bcaac03dfa434c9b5"
+  integrity sha512-GQbrnbnORRGrUgwhkER6Zc3xjK289JC6IGsPN6BhjXqqltdWCzuZFJh8+0ZKswU/03/qOihPFp6fmPvyUAu06g==
+
 react-refresh@0.8.3:
   version "0.8.3"
   resolved "https://registry.yarnpkg.com/react-refresh/-/react-refresh-0.8.3.tgz#721d4657672d400c5e3c75d063c4a85fb2d5d68f"
