@@ -40,7 +40,7 @@ export function LogosSimple(propcontainers: LogosSimpleProps) {
           </div>
         </div>
       </div>
-      <Button children="View the showcase" variant="outline-primary" />
+      <Button children="View the showcase" variant="outlinePrimary" />
     </div>
   );
 }

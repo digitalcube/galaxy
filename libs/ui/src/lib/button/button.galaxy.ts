@@ -54,11 +54,11 @@ export const buttonTheme = {
       ],
       disabled: ['opacity-50', 'cursor-not-allowed'],
     },
-    'outline-primary': {
+    outlinePrimary: {
       base: [
         'text-purple-500',
-        'border-gray-300',
-        'border',
+        'border-purple-500',
+        'border-2',
         'dark:text-gray-400',
         'focus:outline-none',
       ],

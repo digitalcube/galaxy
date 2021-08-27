@@ -17,7 +17,14 @@ export interface Props {
   icon?: IconType;
   iconLeft?: IconType;
   iconRight?: IconType;
-  variant?: 'white' | 'outline' | 'link' | 'primary' | '__dropdownItem' | string | null;
+  variant?:
+    | 'white'
+    | 'outline'
+    | 'link'
+    | 'primary'
+    | '__dropdownItem'
+    | string
+    | null;
   block?: boolean;
 }
 
@@ -60,7 +67,7 @@ export const Button = forwardRef<Ref, ButtonProps>(function Button(props, ref) {
     children,
     ...other
   } = props;
-  
+
   const {
     theme: { button },
   } = useContext(ThemeContext);
@@ -86,12 +93,14 @@ export const Button = forwardRef<Ref, ButtonProps>(function Button(props, ref) {
   const variantStyles = {
     primary: button.primary.base,
     outline: button.outline.base,
+    outlinePrimary: button.outlinePrimary.base,
     link: button.link.base,
     white: button.white.base,
   };
   const activeStyles = {
     primary: button.primary.active,
     outline: button.outline.active,
+    outlinePrimary: button.outlinePrimary.base,
     link: button.link.active,
     white: button.white.active,
   };
@@ -99,6 +108,7 @@ export const Button = forwardRef<Ref, ButtonProps>(function Button(props, ref) {
   const disabledStyles = {
     primary: button.primary.disabled,
     outline: button.outline.disabled,
+    outlinePrimary: button.outlinePrimary.base,
     link: button.link.disabled,
     white: button.white.disabled,
   };
