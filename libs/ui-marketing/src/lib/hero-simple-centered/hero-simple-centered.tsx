@@ -13,9 +13,9 @@ export function HeroSimpleCentered(props: HeroSimpleCenteredProps) {
       />
       <section className="mt-16 mx-auto max-w-5xl px-4 sm:mt-24 relative">
         <div className="text-center relative">
-          <h1 className="text-size-9 font-bold text-gray-800">
-            <span className="block xl:inline">WordPress at the speed</span>{' '}
-            <span className="block text-gray-800 xl:inline">of static</span>
+          <h1 className="text-[4.5rem] font-bold text-purple-800 leading-tight">
+            <span className="inline lg:block">Static WordPress in</span>{' '}
+            <span>a single click</span>
           </h1>
           <p className="mt-3 max-w-md mx-auto text-size-6 text-gray-800 md:mt-5 md:text-xl md:max-w-4xl">
             Using Shifter, create or migrate WordPress sites in minutes that are{' '}
