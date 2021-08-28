@@ -1,5 +1,5 @@
+export * from './lib/cta-simple-left/cta-simple-left';
 export * from './lib/benefits-with-illustration/benefits-with-illustration';
-export * from './cta-simple-left/cta-simple-left/cta-simple-left';
 export * from './lib/cta-simple-centered/cta-simple-centered';
 export * from './lib/large-screenshot/large-screenshot';
 export * from './lib/logos-simple/logos-simple';

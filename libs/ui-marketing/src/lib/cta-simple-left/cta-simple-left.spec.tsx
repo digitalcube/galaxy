@@ -1,10 +1,10 @@
 import { render } from '@testing-library/react';
 
-import CTASimpleLeft from './cta-simple-left';
+import CtaSimpleLeft from './cta-simple-left';
 
-describe('CTASimpleLeft', () => {
+describe('CtaSimpleLeft', () => {
   it('should render successfully', () => {
-    const { baseElement } = render(<CTASimpleLeft />);
+    const { baseElement } = render(<CtaSimpleLeft />);
     expect(baseElement).toBeTruthy();
   });
 });
