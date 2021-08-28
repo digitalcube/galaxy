@@ -1,3 +1,4 @@
+export * from './lib/testimonial/testimonial';
 export * from './lib/cta-simple-left/cta-simple-left';
 export * from './lib/benefits-with-illustration/benefits-with-illustration';
 export * from './lib/cta-simple-centered/cta-simple-centered';

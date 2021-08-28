@@ -83,6 +83,9 @@ BenefitsWithIllustration.defaultProps = {
   image: {
     url: '/maintenance-free-dashboard.png',
   },
+  action: {
+    title: 'Start your free trial',
+  },
   description:
     'Shifter automatically handles your WordPress install and creates scalable sites with no downtime.',
   benefits: [
