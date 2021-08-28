@@ -3,10 +3,8 @@ import {
   HeroSimpleCentered,
   LogosSimple,
   LargeScreenshot,
-  CTASimpleLeft,
   BenefitsWithIllustration,
   Testimonial,
-  CtaGetStarted,
   Cta,
 } from '@galaxy/ui-marketing';
 
@@ -14,7 +12,7 @@ const list = [
   { id: 1, type: 'Hero' },
   { id: 2, type: 'Logos' },
   { id: 3, type: 'Screenshot', screenshot: '/shifter-dashboard.png' },
-  { id: 4, type: 'CTA', pattern: 'CtaGetStarted' },
+  { id: 4, type: 'CTA', pattern: 'CTASimpleLeft' },
   {
     id: 5,
     type: 'Benefits',
@@ -121,7 +119,7 @@ const list = [
     reviewBody:
       '“I’ve been using this stack for 6 months now. Initially there was a little learning curve with the setup but now I’m flying on the command line and my website are fast! Yes you pay for software, but it’s worth it and you can get more performance out of a lower spec.”',
   },
-  { id: 4, type: 'CTA', pattern: 'CTASimpleCentered' },
+  { id: 4, type: 'CTA', pattern: 'CtaGetStarted' },
 ];
 
 export function Index() {
