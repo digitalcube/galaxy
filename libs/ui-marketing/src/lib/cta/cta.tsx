@@ -26,9 +26,9 @@ export function Cta(props: CtaProps) {
         getType={(x) => x.type}
         list={patternId}
         map={{
-          CtaGetStarted: CtaGetStarted,
-          CTASimpleCentered: CTASimpleCentered,
-          CTASimpleLeft: CTASimpleLeft,
+          CtaGetStarted,
+          CTASimpleCentered,
+          CTASimpleLeft,
         }}
         mapDataToProps={{
           CtaGetStarted: ({ data }) => ({ ...data }),
