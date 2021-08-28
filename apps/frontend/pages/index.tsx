@@ -6,6 +6,7 @@ import {
   BenefitsWithIllustration,
   Testimonial,
   Cta,
+  Blog,
 } from '@galaxy/ui-marketing';
 
 const list = [
@@ -119,7 +120,8 @@ const list = [
     reviewBody:
       '“I’ve been using this stack for 6 months now. Initially there was a little learning curve with the setup but now I’m flying on the command line and my website are fast! Yes you pay for software, but it’s worth it and you can get more performance out of a lower spec.”',
   },
-  { id: 4, type: 'Cta', pattern: 'CtaGetStarted' },
+  { id: 11, type: 'Cta', pattern: 'CtaGetStarted' },
+  { id: 12, type: 'Blog', pattern: 'BlogRecentPosts' },
 ];
 
 export function Index() {
@@ -136,12 +138,14 @@ export function Index() {
           Benefits: BenefitsWithIllustration,
           Testimonial,
           Cta,
+          Blog,
         }}
         mapDataToProps={{
           Benefits: ({ data }) => ({ ...data }),
           Screenshot: ({ data }) => ({ ...data }),
           Testimonial: ({ data }) => ({ ...data }),
           Cta: ({ data }) => ({ ...data }),
+          Blog: ({ data }) => ({ ...data }),
         }}
       />
     </div>

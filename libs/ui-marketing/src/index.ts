@@ -1,3 +1,5 @@
+export * from './lib/blog/blog';
+export * from './lib/blog-recent-posts/blog-recent-posts';
 export * from './lib/cta/cta';
 export * from './lib/cta-get-started/cta-get-started';
 export * from './lib/testimonial/testimonial';
