@@ -1,3 +1,3 @@
 type Mode = string | null
 
-type Align = 'left' | 'right' | 'center' | null
+export type AlignProps = 'left' | 'right' | 'center' | null
