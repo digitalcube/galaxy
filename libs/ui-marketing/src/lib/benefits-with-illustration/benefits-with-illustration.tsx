@@ -3,7 +3,8 @@ import classnames from 'classnames';
 import { Button } from '@galaxy/ui';
 
 /* eslint-disable-next-line */
-export type BenefitsWithIllustrationProps = SoftwareApplication & Align;
+export type BenefitsWithIllustrationProps = SoftwareApplication &
+  AlignProps & { benefits: any };
 
 export function BenefitsWithIllustration(props: BenefitsWithIllustrationProps) {
   const {
@@ -12,7 +13,19 @@ export function BenefitsWithIllustration(props: BenefitsWithIllustrationProps) {
     image,
     alternativeHeadline,
     description,
+    benefits,
+    action,
   } = props;
+  const benefitsList = benefits.map((props, i) => {
+    const { title, description } = props;
+    return (
+      <div key={i}>
+        <h2 className="text-size-5 font-bold text-black">{title}</h2>
+        <p className="mt-4 text-size-4 text-black">{description}</p>
+      </div>
+    );
+  });
+
   return (
     <div className="bg-gray-10">
       <div className="max-w-7xl mx-auto pt-16 px-4 sm:pt-24 sm:px-6 lg:px-8">
@@ -33,39 +46,9 @@ export function BenefitsWithIllustration(props: BenefitsWithIllustrationProps) {
                 'px-4 max-w-xl mx-auto sm:px-6 lg:pb-32 lg:max-w-none lg:mx-0 lg:px-0 space-y-6'
               )}
             >
-              <div>
-                <h2 className="text-size-5 font-bold text-black">
-                  For Businesses
-                </h2>
-                <p className="mt-4 text-size-4 text-black">
-                  Save on maintenance costs while ensuring that your site is
-                  always there when your customers need access.
-                </p>
-              </div>
-              <div>
-                <h2 className="text-size-5 font-bold text-black">
-                  For Designers
-                </h2>
-                <p className="mt-4 text-size-4 text-black">
-                  Focus on design without worrying about the back end. Shifter
-                  gives you the freedom to focus on your design whils
-                </p>
-              </div>
-              <div>
-                <h2 className="text-size-5 font-bold text-black">
-                  For Developers
-                </h2>
-                <p className="mt-4 text-size-4 text-black">
-                  Never worry about wasting time mantaining a WordPress install.
-                  Shifter’s containerized environemnet ensures near unimlited
-                  scalability with no down time.
-                </p>
-              </div>
+              {benefitsList}
               <div className="pt-6">
-                <Button
-                  variant="primary"
-                  children="Start your free trial"
-                />
+                <Button variant="primary" children={`${action.title}`} />
               </div>
             </div>
             <div
@@ -80,8 +63,8 @@ export function BenefitsWithIllustration(props: BenefitsWithIllustrationProps) {
                     align === 'right' ? 'left-0' : 'right-0',
                     'w-full ring-black ring-opacity-5 lg:absolute lg:h-full lg:w-auto lg:max-w-none'
                   )}
-                  src={`${image}`}
-                  alt="Shifter user interface"
+                  src={`${image.url}`}
+                  alt=""
                 />
               </div>
             </div>
@@ -97,7 +80,26 @@ export default BenefitsWithIllustration;
 BenefitsWithIllustration.defaultProps = {
   headline: 'Security Built In',
   alternativeHeadline: 'Virtually unhackable WordPress sites',
-  image: '/maintenance-free-dashboard.png',
+  image: {
+    url: '/maintenance-free-dashboard.png',
+  },
   description:
     'Shifter automatically handles your WordPress install and creates scalable sites with no downtime.',
+  benefits: [
+    {
+      title: 'For Businesses',
+      description:
+        'Save on maintenance costs while ensuring that your site is always there when your customers need access.',
+    },
+    {
+      title: 'For Designers',
+      description:
+        'Focus on design without worrying about the back end. Shiftergives you the freedom to focus on your design while our system takes care of the rest.',
+    },
+    {
+      title: 'For Developers',
+      description:
+        'Never worry about wasting time mantaining a WordPress install. Shifter’s containerized environemnet ensures near unimlited scalability with no down time.',
+    },
+  ],
 };
