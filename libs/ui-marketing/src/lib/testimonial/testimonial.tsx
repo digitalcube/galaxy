@@ -7,9 +7,9 @@ export type TestimonialProps = CriticReview & Person & { '@type': null };
 export function Testimonial(props: TestimonialProps) {
   const { author, reviewBody, jobTitle, image } = props;
   return (
-    <div className="bg-gradient-to-b from-purple-100 justify-center bg-geo-gradient relateive">
+    <div className="bg-gradient-to-b from-purple-100 justify-center bg-geo-gradient relative">
       <img className="w-full absolute" src="/bg-geo-gradient.svg" alt="" />
-      <div className="max-w-4xl mx-auto py-36 px-4 sm:pt-24 sm:px-6 lg:px-8 flex space-x-8 relative">
+      <div className="max-w-4xl mx-auto px-4 sm:pt-24 sm:px-6 lg:px-8 flex space-x-8 relative z-10 py-36">
         <img
           className="inline-block h-36 w-36 rounded-full"
           src={`${image}`}

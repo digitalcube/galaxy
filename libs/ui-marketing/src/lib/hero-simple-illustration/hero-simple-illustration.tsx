@@ -39,7 +39,7 @@ export function HeroSimpleIllustration(props: HeroSimpleIllustrationProps) {
                       </button>
                     </div>
                   </div>
-                  <p className="mt-3 text-sm text-white sm:mt-4">
+                  <p className="mt-3 font-size-3 text-white sm:mt-4">
                     Start your free 7-day trial, no credit card necessary. By
                     providing your email, you agree to our{' '}
                     <a href="#" className="font-bold text-white underline">
