@@ -40,6 +40,10 @@
       "tags": [],
       "implicitDependencies": ["frontend"]
     },
+    "storybook-e2e-ui-marketing-e2e": {
+      "tags": [],
+      "implicitDependencies": ["ui-marketing"]
+    },
     "ui": {
       "tags": []
     },
