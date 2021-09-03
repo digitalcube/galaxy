@@ -32,7 +32,7 @@ export function HeroSimpleCentered(props: HeroSimpleCenteredProps) {
                 Get Started
               </Button>
             </div>
-            <p className="mt-4 text-sm text-gray-400">
+            <p className="mt-4 text-size-5 text-gray-400">
               Start your free 7-day trial, no credit card necessary.
             </p>
           </div>

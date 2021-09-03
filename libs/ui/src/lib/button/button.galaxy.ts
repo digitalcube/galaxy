@@ -15,6 +15,7 @@ export const buttonTheme = {
       'transition-colors',
       'duration-150',
       'focus:outline-none',
+      'text-size-3',
     ],
     block: 'w-full',
     size: {
