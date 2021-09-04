@@ -10,5 +10,6 @@ module.exports = {
     '<rootDir>/apps/gatsby',
     '<rootDir>/libs/shifter-dashboard',
     '<rootDir>/libs/fakes',
+    '<rootDir>/libs/ui',
   ],
 };
