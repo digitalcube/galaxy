@@ -1,10 +1,10 @@
 import { render } from '@testing-library/react';
 
-import Ui from './ui';
+import Galaxy from './galaxy';
 
-describe('Ui', () => {
+describe('Galaxy', () => {
   it('should render successfully', () => {
-    const { baseElement } = render(<Ui />);
+    const { baseElement } = render(<Galaxy />);
     expect(baseElement).toBeTruthy();
   });
 });

@@ -47,7 +47,7 @@ module.exports = {
     'shifter-purple-300': 'rgba(178, 140, 180, 1)',
     'shifter-purple-400': 'rgba(146, 86, 148, 1)',
     'shifter-purple-500': 'rgba(104, 41, 106, 1)',
-    'shifter-purple-600': 'rgba(87, 27, 82, 1)',
+    'shifter-purple-600': 'rgba(104, 41, 106, 1)',
     'shifter-purple-700': 'rgba(60, 21, 51, 1)',
     'shifter-purple-800': 'rgba(51, 23, 41, 1)',
     'shifter-purple-900': 'rgba(12, 2, 8, 1)',

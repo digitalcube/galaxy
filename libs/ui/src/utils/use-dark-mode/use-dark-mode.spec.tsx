@@ -1,10 +1,10 @@
 import { render } from '@testing-library/react';
 
-import Ui from './ui';
+import UseDarkMode from './use-dark-mode';
 
-describe('Ui', () => {
+describe('UseDarkMode', () => {
   it('should render successfully', () => {
-    const { baseElement } = render(<Ui />);
+    const { baseElement } = render(<UseDarkMode />);
     expect(baseElement).toBeTruthy();
   });
 });

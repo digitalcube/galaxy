@@ -1,10 +1,10 @@
 import { render } from '@testing-library/react';
 
-import Ui from './ui';
+import DeepMerge from './deep-merge';
 
-describe('Ui', () => {
+describe('DeepMerge', () => {
   it('should render successfully', () => {
-    const { baseElement } = render(<Ui />);
+    const { baseElement } = render(<DeepMerge />);
     expect(baseElement).toBeTruthy();
   });
 });

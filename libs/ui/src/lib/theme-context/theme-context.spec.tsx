@@ -1,10 +1,10 @@
 import { render } from '@testing-library/react';
 
-import Ui from './ui';
+import ThemeContext from './theme-context';
 
-describe('Ui', () => {
+describe('ThemeContext', () => {
   it('should render successfully', () => {
-    const { baseElement } = render(<Ui />);
+    const { baseElement } = render(<ThemeContext />);
     expect(baseElement).toBeTruthy();
   });
 });
