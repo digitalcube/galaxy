@@ -12,16 +12,16 @@ export function BlogRecentPosts(props: BlogRecentPostsProps) {
     <div className="container mx-auto pb-48">
       <div className="max-w-7xl mx-auto pt-16 px-4 sm:pt-24 sm:px-6 lg:px-8 pb-20">
         <div className="text-center space-y-2">
-          <h2 className="text-purple-700 text-size-5">{description}</h2>
-          <p className="max-w-2xl text-size-8 text-gray-800 font-bold lg:mx-auto">
+          <h2 className="max-w-2xl text-size-8 text-gray-800 font-bold lg:mx-auto">
             {headline}
-          </p>
-          <p className="text-gray-600 text-size-5">{description}</p>
+          </h2>
+          <p className="text-gray-600 text-size-6">{description}</p>
         </div>
       </div>
       <div className="grid grid-rows-3 grid-cols-3 grid-flow-col gap-8">
         {posts.map((post, i) => (
           <div
+            key={i}
             className={`${
               post === everyNth(posts, 4)[0]
                 ? `row-span-3 col-span-1`
