@@ -7,6 +7,7 @@ import {
   Testimonial,
   Cta,
   Blog,
+  Footer
 } from '@galaxy/ui-marketing';
 
 const list = [
@@ -122,6 +123,7 @@ const list = [
   },
   { id: 11, type: 'Cta', pattern: 'CtaGetStarted' },
   { id: 12, type: 'Blog', pattern: 'BlogRecentPosts' },
+  { id: 13, type: 'Footer', pattern: 'FooterColNewsletter' },
 ];
 
 export function Index() {
@@ -139,6 +141,7 @@ export function Index() {
           Testimonial,
           Cta,
           Blog,
+          Footer
         }}
         mapDataToProps={{
           Benefits: ({ data }) => ({ ...data }),
@@ -146,6 +149,7 @@ export function Index() {
           Testimonial: ({ data }) => ({ ...data }),
           Cta: ({ data }) => ({ ...data }),
           Blog: ({ data }) => ({ ...data }),
+          Footer: ({ data }) => ({ ...data }),
         }}
       />
     </div>
