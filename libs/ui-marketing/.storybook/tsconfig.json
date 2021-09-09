@@ -16,5 +16,9 @@
     "../**/*.spec.tsx",
     "../**/*.spec.jsx"
   ],
+<<<<<<< HEAD
   "include": ["../src/**/*", "*.js"]
+=======
+  "include": ["../src/**/*", "*.js", "preview.ts"]
+>>>>>>> feature/footer
 }

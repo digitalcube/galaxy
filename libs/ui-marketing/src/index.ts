@@ -1,3 +1,5 @@
+export * from './lib/footer-col-newsletter/footer-col-newsletter';
+export * from './lib/footer/footer';
 export * from './lib/blog/blog';
 export * from './lib/blog-recent-posts/blog-recent-posts';
 export * from './lib/cta/cta';

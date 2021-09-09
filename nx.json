@@ -49,6 +49,10 @@
     },
     "ui-marketing": {
       "tags": []
+    },
+    "ui-marketing-e2e": {
+      "tags": [],
+      "implicitDependencies": ["ui-marketing"]
     }
   }
 }

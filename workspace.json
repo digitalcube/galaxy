@@ -228,6 +228,32 @@
           }
         }
       }
+    },
+    "ui-marketing-e2e": {
+      "root": "apps/ui-marketing-e2e",
+      "sourceRoot": "apps/ui-marketing-e2e/src",
+      "projectType": "application",
+      "targets": {
+        "e2e": {
+          "executor": "@nrwl/cypress:cypress",
+          "options": {
+            "cypressConfig": "apps/ui-marketing-e2e/cypress.json",
+            "tsConfig": "apps/ui-marketing-e2e/tsconfig.e2e.json",
+            "devServerTarget": "ui-marketing:storybook"
+          },
+          "configurations": {
+            "ci": {
+              "devServerTarget": "ui-marketing:storybook:ci"
+            }
+          }
+        },
+        "lint": {
+          "executor": "@nrwl/linter:eslint",
+          "options": {
+            "lintFilePatterns": ["apps/ui-marketing-e2e/**/*.{js,ts}"]
+          }
+        }
+      }
     }
   },
   "cli": {

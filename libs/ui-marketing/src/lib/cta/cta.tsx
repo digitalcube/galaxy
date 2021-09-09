@@ -3,7 +3,7 @@ import {
   CtaGetStarted,
   CTASimpleCentered,
   CTASimpleLeft,
-} from '@galaxy/ui-marketing';
+} from '../../index';
 
 /* eslint-disable-next-line */
 export interface CtaProps {
