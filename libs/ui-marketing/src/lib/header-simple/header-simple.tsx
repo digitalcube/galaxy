@@ -1,35 +1,24 @@
 import { Button } from '@galaxy/ui';
 import { Brand } from 'schema-dts';
 
-const brand = { logo: '/shifter-mark-primary.svg', name: 'Shifter' };
-
-const primary = [
-  { children: 'Solutions', href: '#' },
-  { children: 'Pricing', href: '/pricing/' },
-  { children: 'Docs', href: '#' },
-  { children: 'Company', href: '#' },
-];
-
-const secondary = [
-  { children: 'Log In', href: '#', variant: 'white' },
-  { children: 'Sign Up', href: '#', variant: 'primary' },
-];
-
 /* eslint-disable-next-line */
 export interface HeaderSimpleProps {
   brand: Brand;
+  primary: any;
+  secondary: any;
 }
 
 export function HeaderSimple(props: HeaderSimpleProps) {
-  const { brand } = props;
+  const { brand, primary, secondary } = props;
+  console.log(props);
 
   return (
-    <header className="relative">
+    <header className="relative bg-background-light">
       <nav className="container mx-auto px-4 sm:px-6 lg:px-8" aria-label="Top">
         <div className="w-full py-6 flex items-center">
           <div className="flex items-center flex-grow">
             <a href="/">
-              <span className="sr-only">Shifter</span>
+              <span className="sr-only">{brand.name}</span>
               <img
                 className="h-10 w-auto"
                 src={`${brand.logo}`}
@@ -60,6 +49,25 @@ export function HeaderSimple(props: HeaderSimpleProps) {
 
 export default HeaderSimple;
 
+const brand = {
+  brand: { logo: '/shifter-mark-primary.svg', name: 'Shifter' },
+};
+const primary = {
+  primary: [
+    { children: 'Solutions', href: '#' },
+    { children: 'Pricing', href: '/pricing/' },
+    { children: 'Docs', href: '#' },
+    { children: 'Company', href: '#' },
+  ],
+};
+const secondary = {
+  secondary: [
+    { children: 'Log In', href: '#', variant: 'white' },
+    { children: 'Sign Up', href: '#', variant: 'primary' },
+  ],
+};
 HeaderSimple.defaultProps = {
-  brand: brand,
+  ...secondary,
+  ...primary,
+  ...brand,
 };

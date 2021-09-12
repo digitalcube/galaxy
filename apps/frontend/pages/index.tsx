@@ -1,5 +1,6 @@
 import { MapToComponents } from 'react-map-to-components';
 import {
+  Hero,
   HeroSimpleCentered,
   LogosSimple,
   LargeScreenshot,
@@ -11,7 +12,7 @@ import {
 } from '@galaxy/ui-marketing';
 
 const list = [
-  { id: 1, type: 'Hero' },
+  { id: 1, type: 'Hero', pattern: 'HeroSimpleIllustration' },
   { id: 2, type: 'Logos' },
   { id: 3, type: 'Screenshot', screenshot: '/shifter-dashboard.png' },
   { id: 4, type: 'Cta', pattern: 'CTASimpleLeft' },
@@ -134,7 +135,7 @@ export function Index() {
         getType={(x) => x.type}
         list={list}
         map={{
-          Hero: HeroSimpleCentered,
+          Hero,
           Logos: LogosSimple,
           Screenshot: LargeScreenshot,
           Benefits: BenefitsWithIllustration,
@@ -144,6 +145,7 @@ export function Index() {
           Footer
         }}
         mapDataToProps={{
+          Hero: ({ data }) => ({ ...data }),
           Benefits: ({ data }) => ({ ...data }),
           Screenshot: ({ data }) => ({ ...data }),
           Testimonial: ({ data }) => ({ ...data }),
