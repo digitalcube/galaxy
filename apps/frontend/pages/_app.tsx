@@ -8,9 +8,11 @@ function App({ Component, pageProps }: AppProps) {
     <Galaxy>
       <Head />
       <HeaderSimple />
-      <main>
-        <Component {...pageProps} />
-      </main>
+      <body>
+        <main>
+          <Component {...pageProps} />
+        </main>
+      </body>
     </Galaxy>
   );
 }
