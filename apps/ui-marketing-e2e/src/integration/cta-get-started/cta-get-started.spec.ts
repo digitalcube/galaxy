@@ -1,4 +1,4 @@
-describe('ui-marketing: CtaGetStarted component', () => {
+describe('ui-marketing: CTAGetStarted component', () => {
   beforeEach(() => cy.visit('/iframe.html?id=ctagetstarted--primary'));
     
     it('should render the component', () => {

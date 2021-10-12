@@ -1,9 +1,9 @@
 import { Button, Input } from '@galaxy/ui';
 
 /* eslint-disable-next-line */
-export interface CtaGetStartedProps {}
+export interface CTAGetStartedProps {}
 
-export function CtaGetStarted(props: CtaGetStartedProps) {
+export function CTAGetStarted(props: CTAGetStartedProps) {
   return (
     <div className="py-8">
       <div className="container mx-auto px-4 sm:px-6 lg:px-8 bg-gray-50 overflow-hidden relative bg-purple-800">
@@ -33,4 +33,4 @@ export function CtaGetStarted(props: CtaGetStartedProps) {
   );
 }
 
-export default CtaGetStarted;
+export default CTAGetStarted;

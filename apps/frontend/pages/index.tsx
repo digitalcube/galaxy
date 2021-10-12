@@ -1,21 +1,20 @@
 import { MapToComponents } from 'react-map-to-components';
 import {
   Hero,
-  HeroSimpleCentered,
   LogosSimple,
   LargeScreenshot,
   BenefitsWithIllustration,
   Testimonial,
-  Cta,
+  CTA,
   Blog,
   Footer
 } from '@galaxy/ui-marketing';
 
 const list = [
   { id: 1, type: 'Hero', pattern: 'HeroSimpleIllustration' },
-  { id: 2, type: 'Logos' },
+  { id: 2, type: 'CTA', pattern: 'CTAAboutUs' },
   { id: 3, type: 'Screenshot', screenshot: '/shifter-dashboard.png' },
-  { id: 4, type: 'Cta', pattern: 'CTASimpleLeft' },
+  { id: 4, type: 'CTA', pattern: 'CTASimpleLeft' },
   {
     id: 5,
     type: 'Benefits',
@@ -122,7 +121,7 @@ const list = [
     reviewBody:
       '“I’ve been using this stack for 6 months now. Initially there was a little learning curve with the setup but now I’m flying on the command line and my website are fast! Yes you pay for software, but it’s worth it and you can get more performance out of a lower spec.”',
   },
-  { id: 11, type: 'Cta', pattern: 'CtaGetStarted' },
+  { id: 11, type: 'CTA', pattern: 'CTAGetStarted' },
   { id: 12, type: 'Blog', pattern: 'BlogRecentPosts' },
   { id: 13, type: 'Footer', pattern: 'FooterColNewsletter' },
 ];
@@ -140,7 +139,7 @@ export function Index() {
           Screenshot: LargeScreenshot,
           Benefits: BenefitsWithIllustration,
           Testimonial,
-          Cta,
+          CTA,
           Blog,
           Footer
         }}
@@ -149,7 +148,7 @@ export function Index() {
           Benefits: ({ data }) => ({ ...data }),
           Screenshot: ({ data }) => ({ ...data }),
           Testimonial: ({ data }) => ({ ...data }),
-          Cta: ({ data }) => ({ ...data }),
+          CTA: ({ data }) => ({ ...data }),
           Blog: ({ data }) => ({ ...data }),
           Footer: ({ data }) => ({ ...data }),
         }}

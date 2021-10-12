@@ -1,10 +1,10 @@
 import { render } from '@testing-library/react';
 
-import CtaGetStarted from './cta-get-started';
+import CTAGetStarted from './cta-get-started';
 
-describe('CtaGetStarted', () => {
+describe('CTAGetStarted', () => {
   it('should render successfully', () => {
-    const { baseElement } = render(<CtaGetStarted />);
+    const { baseElement } = render(<CTAGetStarted />);
     expect(baseElement).toBeTruthy();
   });
 });

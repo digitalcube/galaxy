@@ -1,12 +1,12 @@
 import { Story, Meta } from '@storybook/react';
-import { Cta, CtaProps } from './cta';
+import { CTA, CTAProps } from './cta';
 
 export default {
-  component: Cta,
-  title: 'Cta',
+  component: CTA,
+  title: 'CTA',
 } as Meta;
 
-const Template: Story<CtaProps> = (args) => <Cta {...args} />;
+const Template: Story<CTAProps> = (args) => <CTA {...args} />;
 
 export const Primary = Template.bind({});
 Primary.args = {

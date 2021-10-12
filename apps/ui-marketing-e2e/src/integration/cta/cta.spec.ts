@@ -1,4 +1,4 @@
-describe('ui-marketing: Cta component', () => {
+describe('ui-marketing: CTA component', () => {
   beforeEach(() => cy.visit('/iframe.html?id=cta--primary&args=pattern;'));
     
     it('should render the component', () => {

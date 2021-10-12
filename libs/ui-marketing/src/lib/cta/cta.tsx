@@ -1,22 +1,19 @@
 import { MapToComponents } from 'react-map-to-components';
-import {
-  CtaGetStarted,
-  CTASimpleCentered,
-  CTASimpleLeft,
-} from '../../index';
+import { CTAGetStarted, CTASimpleCentered, CTASimpleLeft, CTAAboutUs } from '../../index';
 
 /* eslint-disable-next-line */
-export interface CtaProps {
+export interface CTAProps {
   pattern?: string;
 }
 
 const list = [
-  { id: 1, type: 'CtaGetStarted' },
+  { id: 1, type: 'CTAGetStarted' },
   { id: 2, type: 'CTASimpleCentered' },
   { id: 3, type: 'CTASimpleLeft' },
+  { id: 3, type: 'CTAAboutUs' },
 ];
 
-export function Cta(props: CtaProps) {
+export function CTA(props: CTAProps) {
   const { pattern } = props;
   const patternId = [list.find((i) => i.type === pattern)];
   return (
@@ -26,18 +23,20 @@ export function Cta(props: CtaProps) {
         getType={(x) => x.type}
         list={patternId}
         map={{
-          CtaGetStarted,
+          CTAGetStarted,
           CTASimpleCentered,
           CTASimpleLeft,
+          CTAAboutUs,
         }}
         mapDataToProps={{
-          CtaGetStarted: ({ data }) => ({ ...data }),
+          CTAGetStarted: ({ data }) => ({ ...data }),
           CTASimpleCentered: ({ data }) => ({ ...data }),
           CTASimpleLeft: ({ data }) => ({ ...data }),
+          CTAAboutUs: ({ data }) => ({ ...data }),
         }}
       />
     </div>
   );
 }
 
-export default Cta;
+export default CTA;

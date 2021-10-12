@@ -1,10 +1,10 @@
 import { render } from '@testing-library/react';
 
-import CTA from './cta';
+import CTAAboutUs from './cta-about-us';
 
-describe('CTA', () => {
+describe('CTAAboutUs', () => {
   it('should render successfully', () => {
-    const { baseElement } = render(<CTA />);
+    const { baseElement } = render(<CTAAboutUs />);
     expect(baseElement).toBeTruthy();
   });
 });
