@@ -30,11 +30,11 @@ module.exports = {
     },
     colors: {
       transparent: 'transparent',
-      black: `#25021B`,
+      black: `#202020`,
       white: `#FFFFFF`,
       background: {
         light: `#FAFAFA`,
-        dark: `#1A0112`,
+        dark: `#202020`,
       },
       gray: {
         800: `#2B2628`,
