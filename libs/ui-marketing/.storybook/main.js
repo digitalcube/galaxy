@@ -8,6 +8,4 @@ rootMain.stories.push(
 
 rootMain.addons.push(...[rootMain.addons, '@nrwl/react/plugins/storybook']);
 
-console.log(rootMain);
-
 module.exports = rootMain;

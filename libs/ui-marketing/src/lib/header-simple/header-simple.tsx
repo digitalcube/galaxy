@@ -10,7 +10,6 @@ export interface HeaderSimpleProps {
 
 export function HeaderSimple(props: HeaderSimpleProps) {
   const { brand, primary, secondary } = props;
-  console.log(props);
 
   return (
     <header className="relative bg-background-light">
