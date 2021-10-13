@@ -1,55 +1,41 @@
+import { BsCircle, BsCircleFill, BsEye } from 'react-icons/bs';
+
 /* eslint-disable-next-line */
 export interface CTAAboutUsProps {}
 
 const features = [
   {
-    name: 'Competitive exchange rates',
+    name: 'What we do',
     description:
-      'Lorem ipsum, dolor sit amet consectetur adipisicing elit. Maiores impedit perferendis suscipit eaque, iste dolor cupiditate blanditiis ratione.',
+      'We work with both existing DigitalCube customers and clients looking to improve their online presence.',
   },
 ];
 
 export function CTAAboutUs(props: CTAAboutUsProps) {
   return (
-    <section className="grid grid-cols-12 h-screen bg-black">
-      <div className="col-start-2 col-span-5">
+    <section className="grid grid-cols-12 h-screen bg-black place-content-center text-white py-40">
+      <div className="col-start-2 col-span-5 mt-10">
         <p className="text-size-5">How we work</p>
         <h2 className="text-size-8 font-bold">The LabWorks Process</h2>
       </div>
       <div className="col-span-5">
-        <dl className="space-y-10 lg:space-y-0 lg:gap-8">
+        <div className="flex space-x-2">
+          <BsCircleFill size="12" />
+          <BsCircle size="12" />
+          <BsCircle size="12" />
+        </div>
+        <dl className="mt-6 lg:gap-8">
           {features.map((feature) => (
             <div key={feature.name}>
+              <BsEye size="80" />
               <dt>
-                <div className="flex items-center justify-center h-12 w-12 rounded-md bg-indigo-500 text-white"></div>
-                <p className="mt-5 text-lg leading-6 font-medium text-gray-900">
-                  {feature.name}
-                </p>
+                <p className="mt-4 text-size-7 font-bold">{feature.name}</p>
               </dt>
-              <dd className="mt-2 text-base text-gray-500">
-                {feature.description}
-              </dd>
+              <dd className="mt-6 text-size-7">{feature.description}</dd>
             </div>
           ))}
         </dl>
       </div>
-      {/* <div className="max-w-xl mx-auto px-4 sm:px-6 lg:max-w-7xl lg:px-8">
-        <dl className="space-y-10 lg:space-y-0 lg:gap-8">
-          {features.map((feature) => (
-            <div key={feature.name}>
-              <dt>
-                <div className="flex items-center justify-center h-12 w-12 rounded-md bg-indigo-500 text-white"></div>
-                <p className="mt-5 text-lg leading-6 font-medium text-gray-900">
-                  {feature.name}
-                </p>
-              </dt>
-              <dd className="mt-2 text-base text-gray-500">
-                {feature.description}
-              </dd>
-            </div>
-          ))}
-        </dl>
-      </div> */}
     </section>
   );
 }
