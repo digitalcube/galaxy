@@ -8,6 +8,12 @@ This project was generated using [Nx](https://nx.dev).
 
 🔎 **Smart, Extensible Build Framework**
 
+## Getting Started
+
+1. `yarn`
+2. `yarn nx run frontend:serve`
+3. `nx g @nrwl/next:component namespaceComponentModifier --project=ui-marketing --style=none --dry-run`
+
 ## Adding capabilities to your workspace
 
 Nx supports many plugins which add capabilities for developing different types of applications and different tools.
