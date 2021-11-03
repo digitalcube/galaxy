@@ -4,11 +4,11 @@ export interface TestComponentProps {}
 export function TestComponent(props: TestComponentProps) {
   return (
     <div className="grid grid-cols-12 h-screen bg-black place-content-center text-white py-40">
-      <div className="col-start-3 col-span-6 mb-8">
+      <div className="col-start-3 col-span-8 mb-8">
         <p className="text-5xl">Open Soure</p>
         <p className="text-[2.125rem] font-bold">What we're working on</p>
       </div>
-      <div className="col-span-4 col-start-3">
+      <div className="md col-span-8 lg:col-span-4 col-start-3">
         <div className="mb-8">
           <p className="text-[1.125rem] font-bold">Amimoto AMI</p>
           <p>
@@ -17,7 +17,7 @@ export function TestComponent(props: TestComponentProps) {
           </p>
         </div>
       </div>
-      <div className="col-span-4 col-start-8">
+      <div className="md col-span-8 lg:col-span-4 md:col-start-3 lg:col-start-8">
         <div className="mb-8">
           <p className="text-[1.125rem] font-bold">Shifter Local</p>
           <p>
@@ -26,7 +26,7 @@ export function TestComponent(props: TestComponentProps) {
           </p>
         </div>
       </div>
-      <div className="col-span-4 col-start-3">
+      <div className="md col-span-8 lg:col-span-4 col-start-3">
         <div className="mb-8">
           <p className="text-[1.125rem] font-bold">WP Serverless Forms</p>
           <p>
@@ -35,7 +35,7 @@ export function TestComponent(props: TestComponentProps) {
           </p>
         </div>
       </div>
-      <div className="col-span-4 col-start-8">
+      <div className="md col-span-8 lg:col-span-4 md:col-start-3 lg:col-start-8">
         <div className="mb-8">
           <p className="text-[1.125rem] font-bold">WP Serverless Search</p>
           <p>
@@ -44,7 +44,7 @@ export function TestComponent(props: TestComponentProps) {
           </p>
         </div>
       </div>
-      <div className="col-span-4 col-start-3">
+      <div className="md col-span-8 lg:col-span-4 col-start-3">
         <div className="mb-8">
           <p className="text-[1.125rem] font-bold">Jinkei</p>
           <p>
@@ -53,7 +53,7 @@ export function TestComponent(props: TestComponentProps) {
           </p>
         </div>
       </div>
-      <div className="col-span-4 col-start-8">
+      <div className="md col-span-8 lg:col-span-4 md:col-start-3 lg:col-start-8">
         <div className="mb-8">
           <p className="text-[1.125rem] font-bold">Galaxy Design Components</p>
           <p>
@@ -62,7 +62,7 @@ export function TestComponent(props: TestComponentProps) {
           </p>
         </div>
       </div>
-      <div className="col-span-4 col-start-3">
+      <div className="md col-span-8 lg:col-span-4 col-start-3">
         <div className="mb-8">
           <p className="text-[1.125rem] font-bold">Shifter CLI</p>
           <p>Use WordPress as a headless CMS</p>
