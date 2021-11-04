@@ -8,7 +8,7 @@ export function TestComponent(props: TestComponentProps) {
           <p className="text-5xl">Open Soure</p>
           <p className="text-[2.125rem] font-bold">What we're working on</p>
       </div>
-      <div className="lg:col-span-4 sm:col-span-8 lg:col-start-3 sm:col-start-3 hover:underline mb-8">
+      <div className="lg:col-span-4 md:col-span-8 lg:col-start-3 md:col-start-3 hover:underline mb-8">
         <a href="https://amimoto-ami.com/">
           <p className="text-[1.125rem] font-bold">Amimoto AMI</p>
           <p>
@@ -17,7 +17,7 @@ export function TestComponent(props: TestComponentProps) {
           </p>
         </a>
       </div>
-      <div className="lg:col-span-4 sm:col-span-8 lg:col-start-8 sm:col-start-3 mb-8 hover:underline">
+      <div className="lg:col-span-4 md:col-span-8 lg:col-start-8 md:col-start-3 mb-8 hover:underline">
         <a href="https://github.com/digitalcube/shifter-static-local">
           <p className="text-[1.125rem] font-bold">Shifter Local</p>
           <p>
@@ -26,7 +26,7 @@ export function TestComponent(props: TestComponentProps) {
           </p>
         </a>
       </div>
-      <div className="lg:col-span-4 sm:col-span-8 lg:col-start-3 sm:col-start-3 mb-8 hover:underline">
+      <div className="lg:col-span-4 md:col-span-8 lg:col-start-3 md:col-start-3 mb-8 hover:underline">
         <a href="https://github.com/getshifter/wp-serverless-forms">
           <p className="text-[1.125rem] font-bold">WP Serverless Forms</p>
           <p>
@@ -35,7 +35,7 @@ export function TestComponent(props: TestComponentProps) {
           </p>
         </a>
       </div>
-      <div className="lg:col-span-4 sm:col-span-8 lg:col-start-8 sm:col-start-3 hover:underline mb-8">
+      <div className="lg:col-span-4 md:col-span-8 lg:col-start-8 md:col-start-3 hover:underline mb-8">
         <a href="https://github.com/getshifter/wp-serverless-search">
           <p className="text-[1.125rem] font-bold">WP Serverless Search</p>
           <p>
@@ -44,7 +44,7 @@ export function TestComponent(props: TestComponentProps) {
           </p>
         </a>
       </div>
-      <div className="lg:col-span-4 sm:col-span-8 lg:col-start-3 sm:col-start-3 mb-8 hover:underline">
+      <div className="lg:col-span-4 md:col-span-8 lg:col-start-3 md:col-start-3 mb-8 hover:underline">
         <a href="https://amimoto-ami.com/products/aws-cloudformation-wordpress/">
           <p className="text-[1.125rem] font-bold">Jinkei</p>
           <p>
@@ -53,7 +53,7 @@ export function TestComponent(props: TestComponentProps) {
           </p>
         </a>
       </div>
-      <div className="lg:col-span-4 sm:col-span-8 lg:col-start-8 sm:col-start-3 hover:underline mb-8">
+      <div className="lg:col-span-4 md:col-span-8 lg:col-start-8 md:col-start-3 hover:underline mb-8">
         <a href="https://www.figma.com/community/file/956241516043940295/Shifter-Components-for-Galaxy">
           <p className="text-[1.125rem] font-bold">Galaxy Design Components</p>
           <p>
@@ -62,7 +62,7 @@ export function TestComponent(props: TestComponentProps) {
           </p>
         </a>
       </div>
-      <div className="lg:col-span-4 sm:col-span-8 lg:col-start-3 sm:col-start-3 mb-8 hover:underline">
+      <div className="lg:col-span-4 md:col-span-8 lg:col-start-3 md:col-start-3 mb-8 hover:underline">
         <a href="https://www.npmjs.com/package/@shifter/cli">
           <p className="text-[1.125rem] font-bold">Shifter CLI</p>
           <p>Use WordPress as a headless CMS</p>
