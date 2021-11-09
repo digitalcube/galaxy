@@ -1,6 +1,13 @@
 import { homePage } from './content';
 import { MapComponents } from '@galaxy/ui';
-import { ListGrid, HeroSimpleIllustration } from '@galaxy/ui-marketing';
+import {
+  ListGrid,
+  HeroSimpleIllustration,
+  CTAAboutUs,
+  LogosSimple,
+  FooterColNewsletter,
+  HeaderSimple
+} from '@galaxy/ui-marketing';
 
 export function Index() {
   return (
@@ -9,8 +16,12 @@ export function Index() {
       getKey={(x) => x.id}
       list={homePage}
       map={{
+        Header: HeaderSimple,
         List: ListGrid,
         Hero: HeroSimpleIllustration,
+        CTA: CTAAboutUs,
+        Logos: LogosSimple,
+        Footer: FooterColNewsletter,
       }}
     />
   );
