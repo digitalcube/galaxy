@@ -1,4 +1,4 @@
-import { MapToComponents } from 'react-map-to-components';
+import { MapComponents } from '@galaxy/ui';
 import { BlogRecentPosts } from '@galaxy/ui-marketing';
 
 /* eslint-disable-next-line */

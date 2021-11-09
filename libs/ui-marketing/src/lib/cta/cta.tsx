@@ -1,4 +1,4 @@
-import { MapToComponents } from 'react-map-to-components';
+import { MapComponents } from '@galaxy/ui';
 import { CTAGetStarted, CTASimpleCentered, CTASimpleLeft, CTAAboutUs } from '../../index';
 
 /* eslint-disable-next-line */

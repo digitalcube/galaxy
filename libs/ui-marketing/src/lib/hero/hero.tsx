@@ -1,4 +1,4 @@
-import { MapToComponents } from 'react-map-to-components';
+import { MapComponents } from '@galaxy/ui';
 import {
   HeroSimpleCentered,
   HeroSimpleIllustration,

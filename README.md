@@ -10,8 +10,8 @@ This project was generated using [Nx](https://nx.dev).
 
 ## Getting Started
 
-1. `yarn`
-2. `yarn nx run frontend:serve`
+1. `npm i`
+2. `nx run frontend:serve`
 3. `nx g @nrwl/next:component namespaceComponentModifier --project=ui-marketing --style=none --dry-run`
 
 ## Adding capabilities to your workspace

@@ -1,4 +1,5 @@
 export * from './utils/deep-merge/deep-merge';
+export * from './lib/map-components/map-components';
 export * from './utils/use-dark-mode/use-dark-mode';
 export * from './lib/galaxy/galaxy';
 export * from './lib/theme-context/theme-context';
