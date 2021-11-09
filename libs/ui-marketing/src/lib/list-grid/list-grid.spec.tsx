@@ -1,10 +1,10 @@
 import { render } from '@testing-library/react';
 
-import TestComponent from './test-component';
+import ListGrid from './list-grid';
 
-describe('TestComponent', () => {
+describe('ListGrid', () => {
   it('should render successfully', () => {
-    const { baseElement } = render(<TestComponent />);
+    const { baseElement } = render(<ListGrid />);
     expect(baseElement).toBeTruthy();
   });
 });

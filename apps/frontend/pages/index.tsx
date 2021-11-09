@@ -8,7 +8,7 @@ import {
   CTA,
   Blog,
   Footer,
-  TestComponent
+  ListGrid
 } from '@galaxy/ui-marketing';
 
 const list = [
@@ -125,7 +125,7 @@ const list = [
   { id: 11, type: 'CTA', pattern: 'CTAGetStarted' },
   { id: 12, type: 'Blog', pattern: 'BlogRecentPosts' },
   { id: 13, type: 'Footer', pattern: 'FooterColNewsletter' },
-  { id: 14, type: 'Test', pattern: 'TestComponent'},
+  { id: 14, type: 'List', pattern: 'ListGrid'},
 ];
 
 export function Index() {
@@ -144,7 +144,7 @@ export function Index() {
           CTA,
           Blog,
           Footer,
-          Test:TestComponent
+          List: ListGrid
         }}
         mapDataToProps={{
           Hero: ({ data }) => ({ ...data }),
@@ -154,7 +154,7 @@ export function Index() {
           CTA: ({ data }) => ({ ...data }),
           Blog: ({ data }) => ({ ...data }),
           Footer: ({ data }) => ({ ...data }),
-          Test: ({ data }) => ({ ...data }),
+          List: ({ data }) => ({ ...data }),
         }}
       />
     </div>
