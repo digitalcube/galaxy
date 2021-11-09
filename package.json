@@ -48,7 +48,7 @@
   "devDependencies": {
     "@babel/core": "7.12.13",
     "@babel/preset-env": "7.12.13",
-    "@babel/preset-react": "7.12.13",
+    "@babel/preset-react": "7.16.0",
     "@babel/preset-typescript": "7.12.13",
     "@nrwl/cli": "12.6.2",
     "@nrwl/cypress": "12.6.2",
