@@ -5,7 +5,10 @@ type DefaultCompProps = {
 };
 
 const DefaultComp = ({ type }: DefaultCompProps) => {
-  throw new Error(`Could not find a component mapping for type "${type}"`);
+  // throw new Error(`Could not find a component mapping for type "${type}"`);
+  const msg = `No component for type: ${type}`;
+  console.log(msg);
+  return msg;
 };
 
 /**

@@ -1,3 +1,4 @@
+import { ReactNode } from 'react';
 import Link from 'next/link';
 import { Button } from '@galaxy/ui';
 
@@ -6,6 +7,7 @@ export interface HeroSimpleIllustrationProps {
   title: string;
   description: string;
   action: any;
+  children: ReactNode;
 }
 
 export function HeroSimpleIllustration(props: HeroSimpleIllustrationProps) {

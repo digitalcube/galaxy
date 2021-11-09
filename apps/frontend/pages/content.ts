@@ -3,7 +3,7 @@ export const header = [{ id: 14, type: 'Header', pattern: 'HeaderSimple' }];
 export const main = [
   { type: 'Hero', pattern: 'HeroSimpleCentered' },
   { type: 'List', pattern: 'ListGrid' },
-  { type: 'List', pattern: 'ListGrid' },
+  { type: 'CTA', pattern: 'CTAAboutUs' },
 ];
 
 export const footer = [{ type: 'Footer', pattern: 'FooterSimple' }];
