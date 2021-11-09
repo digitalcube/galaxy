@@ -1,8 +1,12 @@
 export const header = [{ id: 14, type: 'Header', pattern: 'HeaderSimple' }];
 
-export const main = [{ id: 14, type: 'List', pattern: 'ListGrid' }];
+export const main = [
+  { type: 'Hero', pattern: 'HeroSimpleCentered' },
+  { type: 'List', pattern: 'ListGrid' },
+  { type: 'List', pattern: 'ListGrid' },
+];
 
-export const footer = [{ id: 14, type: 'Footer', pattern: 'FooterSimple' }];
+export const footer = [{ type: 'Footer', pattern: 'FooterSimple' }];
 
 export const homePage = [...main];
 

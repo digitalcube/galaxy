@@ -19,7 +19,7 @@ export function Hero(props: HeroProps) {
   const patternId = [list.find((i) => i.type === pattern)];
   return (
     <div>
-      <MapToComponents
+      <MapComponents
         getKey={(x) => x.id}
         getType={(x) => x.type}
         list={patternId}
