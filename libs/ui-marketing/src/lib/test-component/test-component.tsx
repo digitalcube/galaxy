@@ -7,7 +7,7 @@ export function TestComponent(props: TestComponentProps) {
   return (
     <div className="grid grid-cols-12 h-screen bg-black place-content-center text-white py-40">
       <div className="col-start-3 col-span-8 mb-8">
-        <p className="text-5xl">Open Soure</p>
+        <p className="text-5xl">Open Source</p>
         <p className="text-[2.125rem] font-bold">What we're working on</p>
       </div>
       <div className="lg:col-span-4 md:col-span-8 lg:col-start-3 md:col-start-3 hover:underline mb-8">
@@ -25,7 +25,7 @@ export function TestComponent(props: TestComponentProps) {
       <div className="lg:col-span-4 md:col-span-8 lg:col-start-8 md:col-start-3 mb-8 hover:underline">
         <a href="https://github.com/digitalcube/shifter-static-local">
           <div className="text-[1.125rem] font-bold flex">
-            <div className-="flex-initial">
+            <div className="flex-initial">
             Shifter Local 
           </div>
           <FaExternalLinkAlt className="ml-2 pt-1.5 flex-initial"/>
