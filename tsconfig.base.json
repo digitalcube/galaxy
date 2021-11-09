@@ -1,11 +1,6 @@
 {
   "compileOnSave": false,
   "compilerOptions": {
-    "strict": true,
-    "noUnusedLocals": false,
-    "noUnusedParameters": false,
-    "noImplicitReturns": true,
-    "noFallthroughCasesInSwitch": true,
     "rootDir": ".",
     "sourceMap": true,
     "declaration": false,
@@ -20,15 +15,8 @@
     "skipDefaultLibCheck": true,
     "baseUrl": ".",
     "paths": {
-      "@galaxy/shifter-web": ["libs/shifter-web/src/index.ts"],
-      "@galaxy/core": ["libs/core/src/index.ts"],
-      "@galaxy/shifter": ["libs/shifter/src/index.ts"],
-      "@galaxy/amimoto": ["libs/amimoto/src/index.ts"],
-      "@galaxy/views": ["libs/views/src/index.ts"],
-      "@galaxy/amimoto-web": ["libs/amimoto-web/src/index.ts"],
-      "@galaxy/shifter-dashboard": ["libs/shifter-dashboard/src/index.ts"],
-      "@galaxy/faker": ["libs/fakes/src/index.ts"],
-      "@galaxy/ui": ["libs/ui/src/index.ts"]
+      "@galaxy/ui": ["libs/ui/src/index.ts"],
+      "@galaxy/ui-marketing": ["libs/ui-marketing/src/index.ts"]
     }
   },
   "exclude": ["node_modules", "tmp"]

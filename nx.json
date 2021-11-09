@@ -4,15 +4,11 @@
     "defaultBase": "master"
   },
   "implicitDependencies": {
-    "workspace.json": "*",
     "package.json": {
       "dependencies": "*",
       "devDependencies": "*"
     },
-    "tsconfig.base.json": "*",
-    "tslint.json": "*",
-    ".eslintrc.json": "*",
-    "nx.json": "*"
+    ".eslintrc.json": "*"
   },
   "tasksRunnerOptions": {
     "default": {
@@ -28,47 +24,35 @@
       }
     }
   },
+  "targetDependencies": {
+    "build": [
+      {
+        "target": "build",
+        "projects": "dependencies"
+      }
+    ]
+  },
   "projects": {
-    "demo": {
+    "frontend": {
       "tags": []
     },
-    "demo-e2e": {
+    "frontend-e2e": {
       "tags": [],
-      "implicitDependencies": ["demo"]
+      "implicitDependencies": ["frontend"]
     },
-    "shifter-web": {
-      "tags": []
-    },
-    "core": {
-      "tags": []
-    },
-    "shifter": {
-      "tags": []
-    },
-    "amimoto": {
-      "tags": []
-    },
-    "views": {
-      "tags": []
-    },
-    "amimoto-web": {
-      "tags": []
-    },
-    "gatsby": {
-      "tags": []
-    },
-    "gatsby-e2e": {
+    "storybook-e2e-ui-marketing-e2e": {
       "tags": [],
-      "implicitDependencies": ["gatsby"]
-    },
-    "shifter-dashboard": {
-      "tags": []
-    },
-    "fakes": {
-      "tags": []
+      "implicitDependencies": ["ui-marketing"]
     },
     "ui": {
-      "tags": ["ui"]
+      "tags": []
+    },
+    "ui-marketing": {
+      "tags": []
+    },
+    "ui-marketing-e2e": {
+      "tags": [],
+      "implicitDependencies": ["ui-marketing"]
     }
   }
 }

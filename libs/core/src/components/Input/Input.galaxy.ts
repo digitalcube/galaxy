@@ -1,6 +1,6 @@
 export const inputTheme = {
   input: {
-    DEFAULT: 'font-strong focus:ring-shifter-magenta-primary rounded',
+    DEFAULT: 'font-bold focus:ring-shifter-magenta-primary rounded',
     primary: [
       'bg-shifter-purple-primary',
       'disabled:bg-shifter-gray-200',
