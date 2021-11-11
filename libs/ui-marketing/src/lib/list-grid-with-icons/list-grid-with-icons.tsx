@@ -1,5 +1,4 @@
 import { FaExternalLinkAlt } from 'react-icons/fa';
-
 /* eslint-disable-next-line */
 export interface ListGridWithIconsProps {}
 
@@ -12,8 +11,9 @@ export function ListGridWithIcons(props: ListGridWithIconsProps) {
       </div>
       <div className="lg:col-span-4 md:col-span-8 lg:col-start-3 md:col-start-3 lg:mr-3">
         <div className="border-2 border-black text-center p-5">
-          <div className="text-[1.125rem] font-bold flex-col h-12">
-            <div className="flex-initial">Performance</div>
+          <div className="text-[1.125rem] font-bold h-12">
+                      <img src="apps/frontend/public/icon-design.png" className="inline-block mr-2" />
+            <div className="inline-block">Performance</div>
           </div>
           <p>
             Using best practices with industry-standard testing tools for SEO,
@@ -24,8 +24,9 @@ export function ListGridWithIcons(props: ListGridWithIconsProps) {
       </div>
       <div className="lg:col-span-4 md:col-span-8 lg:col-start-7 md:col-start-3">
         <div className="border-2 border-black text-center p-5">
-          <div className="text-[1.125rem] font-bold flex-col">
-            <div className="flex-initial">Design</div>
+          <div className="text-[1.125rem] font-bold">
+          <img src="apps/frontend/public/icon-design.png" className="inline-block mr-2" />
+            <div className="inline-block">Design</div>
           </div>
           <p>
             In collaboration with our team, rethink how your business does
@@ -37,8 +38,9 @@ export function ListGridWithIcons(props: ListGridWithIconsProps) {
       </div>
       <div className="lg:col-span-4 md:col-span-8 lg:col-start-3 md:col-start-3 lg:mr-3">
         <div className="border-2 border-black text-center p-5">
-          <div className="text-[1.125rem] font-bold flex-col">
-            <div className="flex-initial">Development</div>
+          <div className="text-[1.125rem] font-bold">
+                      <img src="apps/frontend/public/icon-design.png" className="inline-block mr-2" />
+            <div className="inline-block">Development</div>
           </div>
           <p>
             Let our team of award-winning developers and engineers build your
@@ -49,8 +51,9 @@ export function ListGridWithIcons(props: ListGridWithIconsProps) {
       </div>
       <div className="lg:col-span-4 md:col-span-8 lg:col-start-7 md:col-start-3">
         <div className="border-2 border-black text-center p-5">
-          <div className="text-[1.125rem] font-bold flex-col">
-            <div className="flex-initial">Operations</div>
+          <div className="text-[1.125rem] font-bold">
+                      <img src="apps/frontend/public/icon-design.png" className="inline-block mr-2" />
+            <div className="inline-block">Operations</div>
           </div>
           <p>
             Reduce complexity and update the workflow of your current website
@@ -61,8 +64,9 @@ export function ListGridWithIcons(props: ListGridWithIconsProps) {
       </div>
       <div className="lg:col-span-4 md:col-span-8 lg:col-start-3 md:col-start-3 lg:mr-3">
         <div className="border-2 border-black text-center p-5">
-          <div className="text-[1.125rem] font-bold flex-col">
-            <div className="flex-initial">Security</div>
+          <div className="text-[1.125rem] font-bold">
+                      <img src="apps/frontend/public/icon-design.png" className="inline-block mr-2" />
+            <div className="inline-block">Security</div>
           </div>
           <p>
             Get into compliance by securing data and establishing access and
