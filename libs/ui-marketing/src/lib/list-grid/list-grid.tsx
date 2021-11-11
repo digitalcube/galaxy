@@ -5,7 +5,8 @@ export interface ListGridProps {}
 
 export function ListGrid(props: ListGridProps) {
   return (
-    <div className="mx-auto grid grid-cols-12 h-screen bg-black place-content-center text-white py-40">
+    <div className="h-screen bg-black">
+    <div className="container mx-auto grid grid-cols-12 place-content-center text-white py-40">
       <div className="col-start-3 col-span-8 mb-8">
         <p className="text-5xl">Open Source</p>
         <p className="text-[2.125rem] font-bold">What we're working on</p>
@@ -91,6 +92,7 @@ export function ListGrid(props: ListGridProps) {
           <p>Use WordPress as a headless CMS</p>
         </a>
       </div>
+    </div>
     </div>
   );
 }
