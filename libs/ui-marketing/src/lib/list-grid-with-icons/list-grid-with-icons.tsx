@@ -5,12 +5,12 @@ export interface ListGridWithIconsProps {}
 
 export function ListGridWithIcons(props: ListGridWithIconsProps) {
   return (
-    <div className="grid grid-cols-12 h-screen bg-white place-content-center text-black py-40">
-      <div className="col-start-3 col-span-8 mb-8">
+    <div className="grid grid-cols-12 gap-0 h-screen bg-white place-content-center text-black py-40">
+      <div className="col-start-3 col-span-10 mb-8">
         <p className="text-5xl">Services</p>
         <p className="text-[2.125rem] font-bold">What we can do for you</p>
       </div>
-      <div className="lg:col-span-5 md:col-span-8 lg:col-start-8 md:col-start-3 border-2 border-black text-center mb-8 p-4">
+      <div className="lg:col-span-4 md:col-span-8 lg:col-start-7 md:col-start-3 border-2 border-black text-center p-5">
         <div className="text-[1.125rem] font-bold flex-col">
           <div className="flex-initial">Performance</div>
         </div>
@@ -19,7 +19,7 @@ export function ListGridWithIcons(props: ListGridWithIconsProps) {
           page speed, and accessibility.
         </p>
       </div>
-      <div className="lg:col-span-5 md:col-span-8 lg:col-start-3 md:col-start-3 border-2 border-black text-center mb-8 p-4">
+      <div className="lg:col-span-4 md:col-span-8 lg:col-start-3 md:col-start-3 border-2 border-black text-center lg:mr-4 p-5">
         <div className="text-[1.125rem] font-bold flex-col">
           <div className="flex-initial">Design</div>
         </div>
@@ -29,7 +29,7 @@ export function ListGridWithIcons(props: ListGridWithIconsProps) {
           We make systems that work.
         </p>
       </div>
-      <div className="lg:col-span-5 md:col-span-8 lg:col-start-8 md:col-start-3 border-2 border-black text-center mb-8 p-4">
+      <div className="lg:col-span-4 md:col-span-8 lg:col-start-7 md:col-start-3 border-2 border-black text-center p-5">
         <div className="text-[1.125rem] font-bold flex-col">
           <div className="flex-initial">Development</div>
         </div>
@@ -38,7 +38,7 @@ export function ListGridWithIcons(props: ListGridWithIconsProps) {
           project.
         </p>
       </div>
-      <div className="lg:col-span-5 md:col-span-8 lg:col-start-3 md:col-start-3 border-2 border-black text-center mb-8 p-4">
+      <div className="lg:col-span-4 md:col-span-8 lg:col-start-3 md:col-start-3 border-2 border-black text-center lg:mr-4 p-5">
         <div className="text-[1.125rem] font-bold flex-col">
           <div className="flex-initial">Operations</div>
         </div>
@@ -47,7 +47,7 @@ export function ListGridWithIcons(props: ListGridWithIconsProps) {
           our team as advisors.
         </p>
       </div>
-      <div className="lg:col-span-5 md:col-span-8 lg:col-start-8 md:col-start-3 border-2 border-black text-center mb-8 p-4">
+      <div className="lg:col-span-4 md:col-span-8 lg:col-start-7 md:col-start-3 border-2 border-black text-center p-5">
         <div className="text-[1.125rem] font-bold flex-col">
           <div className="flex-initial">Security</div>
         </div>
