@@ -6,9 +6,9 @@ const withNx = require('@nrwl/next/plugins/with-nx');
  **/
 const nextConfig = {
   nx: {
-    // Set this to false if you do not want to use SVGR
+    // Set this to true if you would like to to use SVGR
     // See: https://github.com/gregberge/svgr
-    svgr: true,
+    svgr: false,
   },
 };
 

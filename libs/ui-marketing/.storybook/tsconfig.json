@@ -4,21 +4,16 @@
     "emitDecoratorMetadata": true,
     "outDir": ""
   },
-
   "files": [
-    "../../node_modules/@nrwl/react/typings/cssmodule.d.ts",
-    "../../node_modules/@nrwl/react/typings/image.d.ts"
+    "../../../node_modules/@nrwl/react/typings/styled-jsx.d.ts",
+    "../../../node_modules/@nrwl/react/typings/cssmodule.d.ts",
+    "../../../node_modules/@nrwl/react/typings/image.d.ts"
   ],
-
   "exclude": [
     "../**/*.spec.ts",
     "../**/*.spec.js",
     "../**/*.spec.tsx",
     "../**/*.spec.jsx"
   ],
-<<<<<<< HEAD
   "include": ["../src/**/*", "*.js"]
-=======
-  "include": ["../src/**/*", "*.js", "preview.ts"]
->>>>>>> feature/footer
 }

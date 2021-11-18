@@ -1,0 +1,28 @@
+{
+  "root": "apps/ui-marketing-e2e",
+  "sourceRoot": "apps/ui-marketing-e2e/src",
+  "projectType": "application",
+  "targets": {
+    "e2e": {
+      "executor": "@nrwl/cypress:cypress",
+      "options": {
+        "cypressConfig": "apps/ui-marketing-e2e/cypress.json",
+        "devServerTarget": "ui-marketing:storybook"
+      },
+      "configurations": {
+        "ci": {
+          "devServerTarget": "ui-marketing:storybook:ci"
+        }
+      }
+    },
+    "lint": {
+      "executor": "@nrwl/linter:eslint",
+      "outputs": ["{options.outputFile}"],
+      "options": {
+        "lintFilePatterns": ["apps/ui-marketing-e2e/**/*.{js,ts}"]
+      }
+    }
+  },
+  "tags": [],
+  "implicitDependencies": ["ui-marketing"]
+}

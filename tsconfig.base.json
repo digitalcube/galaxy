@@ -15,7 +15,6 @@
     "skipDefaultLibCheck": true,
     "baseUrl": ".",
     "paths": {
-      "@galaxy/ui": ["libs/ui/src/index.ts"],
       "@galaxy/ui-marketing": ["libs/ui-marketing/src/index.ts"]
     }
   },

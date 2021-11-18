@@ -1,20 +1,25 @@
 import { AppProps } from 'next/app';
-import { Galaxy, Head } from '@galaxy/ui';
-import { Header } from '@galaxy/ui-marketing';
-import 'tailwindcss/tailwind.css';
+import Head from 'next/head';
+import './styles.css';
 
-function App({ Component, pageProps }: AppProps) {
+function CustomApp({ Component, pageProps }: AppProps) {
   return (
-    <Galaxy>
-      <Head />
-      <Header />
-      <body>
+    <>
+      <Head>
+        <title>Welcome to frontend!</title>
+      </Head>
+      <div className="app">
+        <header className="flex">
+          {/* eslint-disable-next-line @next/next/no-img-element */}
+          <img src="/nx-logo-white.svg" alt="Nx logo" width="75" height="50" />
+          <h1>Welcome to frontend!</h1>
+        </header>
         <main>
           <Component {...pageProps} />
         </main>
-      </body>
-    </Galaxy>
+      </div>
+    </>
   );
 }
 
-export default App;
+export default CustomApp;

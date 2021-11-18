@@ -1,7 +1,10 @@
 {
   "npmScope": "galaxy",
   "affected": {
-    "defaultBase": "master"
+    "defaultBase": "main"
+  },
+  "cli": {
+    "defaultCollection": "@nrwl/next"
   },
   "implicitDependencies": {
     "package.json": {
@@ -31,9 +34,6 @@
         "projects": "dependencies"
       }
     ]
-  },
-  "cli": {
-    "defaultCollection": "@nrwl/next"
   },
   "generators": {
     "@nrwl/react": {
