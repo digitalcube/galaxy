@@ -6,7 +6,7 @@ export default {
   title: 'Testimonial',
 } as Meta;
 
-const Template: Story<> = (args) => <Testimonial {...args} />;
+const Template: Story = (args) => <Testimonial {...args} />;
 
 export const Primary = Template.bind({});
 Primary.args = {};

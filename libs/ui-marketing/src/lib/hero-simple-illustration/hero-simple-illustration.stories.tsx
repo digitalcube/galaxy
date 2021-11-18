@@ -14,4 +14,7 @@ const Template: Story<HeroSimpleIllustrationProps> = (args) => (
 );
 
 export const Primary = Template.bind({});
-Primary.args = {};
+Primary.args = {
+  title: '',
+  description: '',
+};
