@@ -1,6 +1,6 @@
 import { homePage } from './content';
 import { MapComponents } from '@galaxy/ui';
-import { ListGrid, HeroSimpleIllustration } from '@galaxy/ui-marketing';
+import { ListGrid, HeroSimpleIllustration, ListGridWithIcons } from '@galaxy/ui-marketing';
 
 export function Index() {
   return (
@@ -11,6 +11,7 @@ export function Index() {
       map={{
         List: ListGrid,
         Hero: HeroSimpleIllustration,
+        ListGridWithIcons: ListGridWithIcons,
       }}
     />
   );

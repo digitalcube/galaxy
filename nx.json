@@ -32,27 +32,21 @@
       }
     ]
   },
-  "projects": {
-    "frontend": {
-      "tags": []
+  "cli": {
+    "defaultCollection": "@nrwl/next"
+  },
+  "generators": {
+    "@nrwl/react": {
+      "application": {
+        "babel": true
+      }
     },
-    "frontend-e2e": {
-      "tags": [],
-      "implicitDependencies": ["frontend"]
-    },
-    "storybook-e2e-ui-marketing-e2e": {
-      "tags": [],
-      "implicitDependencies": ["ui-marketing"]
-    },
-    "ui": {
-      "tags": []
-    },
-    "ui-marketing": {
-      "tags": []
-    },
-    "ui-marketing-e2e": {
-      "tags": [],
-      "implicitDependencies": ["ui-marketing"]
+    "@nrwl/next": {
+      "application": {
+        "style": "css",
+        "linter": "eslint"
+      }
     }
-  }
+  },
+  "defaultProject": "frontend"
 }

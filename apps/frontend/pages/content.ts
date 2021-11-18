@@ -4,6 +4,7 @@ export const main = [
   { type: 'Hero', pattern: 'HeroSimpleCentered' },
   { type: 'List', pattern: 'ListGrid' },
   { type: 'CTA', pattern: 'CTAAboutUs' },
+  { type: 'ListGridWithIcons', pattern: 'ListGridWithIcons' },
 ];
 
 export const footer = [{ type: 'Footer', pattern: 'FooterSimple' }];

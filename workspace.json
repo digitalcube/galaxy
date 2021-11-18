@@ -48,7 +48,8 @@
           "executor": "@nrwl/linter:eslint",
           "options": {
             "lintFilePatterns": ["apps/frontend/**/*.{ts,tsx,js,jsx}"]
-          }
+          },
+          "outputs": ["{options.outputFile}"]
         },
         "storybook": {
           "executor": "@nrwl/storybook:storybook",
@@ -81,7 +82,8 @@
             }
           }
         }
-      }
+      },
+      "tags": []
     },
     "frontend-e2e": {
       "root": "apps/frontend-e2e",
@@ -105,9 +107,12 @@
           "executor": "@nrwl/linter:eslint",
           "options": {
             "lintFilePatterns": ["apps/frontend-e2e/**/*.{js,ts}"]
-          }
+          },
+          "outputs": ["{options.outputFile}"]
         }
-      }
+      },
+      "tags": [],
+      "implicitDependencies": ["frontend"]
     },
     "storybook-e2e-ui-marketing-e2e": {
       "root": "apps/storybook-e2e/ui-marketing-e2e",
@@ -133,15 +138,25 @@
             "lintFilePatterns": [
               "apps/storybook-e2e/ui-marketing-e2e/**/*.{js,ts}"
             ]
-          }
+          },
+          "outputs": ["{options.outputFile}"]
         }
-      }
+      },
+      "tags": [],
+      "implicitDependencies": ["ui-marketing"]
     },
     "ui": {
       "root": "libs/ui",
       "sourceRoot": "libs/ui/src",
       "projectType": "library",
       "targets": {
+        "lint": {
+          "executor": "@nrwl/linter:eslint",
+          "options": {
+            "lintFilePatterns": ["libs/ui/**/*.{ts,tsx,js,jsx}"]
+          },
+          "outputs": ["{options.outputFile}"]
+        },
         "build": {
           "executor": "@nrwl/web:package",
           "outputs": ["{options.outputPath}"],
@@ -150,21 +165,16 @@
             "tsConfig": "libs/ui/tsconfig.lib.json",
             "project": "libs/ui/package.json",
             "entryFile": "libs/ui/src/index.ts",
-            "external": ["react/jsx-runtime"],
+            "external": ["react", "react-dom"],
+            "babelConfig": "@nrwl/react/plugins/bundle-babel",
             "rollupConfig": "@nrwl/react/plugins/bundle-rollup",
             "assets": [
               {
-                "glob": "libs/ui/README.md",
+                "glob": "README.md",
                 "input": ".",
                 "output": "."
               }
             ]
-          }
-        },
-        "lint": {
-          "executor": "@nrwl/linter:eslint",
-          "options": {
-            "lintFilePatterns": ["libs/ui/**/*.{ts,tsx,js,jsx}"]
           }
         },
         "test": {
@@ -175,7 +185,8 @@
             "passWithNoTests": true
           }
         }
-      }
+      },
+      "tags": []
     },
     "ui-marketing": {
       "root": "libs/ui-marketing",
@@ -186,7 +197,8 @@
           "executor": "@nrwl/linter:eslint",
           "options": {
             "lintFilePatterns": ["libs/ui-marketing/**/*.{ts,tsx,js,jsx}"]
-          }
+          },
+          "outputs": ["{options.outputFile}"]
         },
         "test": {
           "executor": "@nrwl/jest:jest",
@@ -227,7 +239,8 @@
             }
           }
         }
-      }
+      },
+      "tags": []
     },
     "ui-marketing-e2e": {
       "root": "apps/ui-marketing-e2e",
@@ -251,76 +264,12 @@
           "executor": "@nrwl/linter:eslint",
           "options": {
             "lintFilePatterns": ["apps/ui-marketing-e2e/**/*.{js,ts}"]
-          }
+          },
+          "outputs": ["{options.outputFile}"]
         }
-      }
-    },
-    "ui": {
-      "root": "libs/ui",
-      "sourceRoot": "libs/ui/src",
-      "projectType": "library",
-      "targets": {
-        "lint": {
-          "executor": "@nrwl/linter:eslint",
-          "options": {
-            "lintFilePatterns": [
-              "libs/ui/**/*.{ts,tsx,js,jsx}"
-            ]
-          }
-        },
-        "build": {
-          "executor": "@nrwl/web:package",
-          "outputs": [
-            "{options.outputPath}"
-          ],
-          "options": {
-            "outputPath": "dist/libs/ui",
-            "tsConfig": "libs/ui/tsconfig.lib.json",
-            "project": "libs/ui/package.json",
-            "entryFile": "libs/ui/src/index.ts",
-            "external": [
-              "react",
-              "react-dom"
-            ],
-            "babelConfig": "@nrwl/react/plugins/bundle-babel",
-            "rollupConfig": "@nrwl/react/plugins/bundle-rollup",
-            "assets": [
-              {
-                "glob": "README.md",
-                "input": ".",
-                "output": "."
-              }
-            ]
-          }
-        },
-        "test": {
-          "executor": "@nrwl/jest:jest",
-          "outputs": [
-            "coverage/libs/ui"
-          ],
-          "options": {
-            "jestConfig": "libs/ui/jest.config.js",
-            "passWithNoTests": true
-          }
-        }
-      }
+      },
+      "tags": [],
+      "implicitDependencies": ["ui-marketing"]
     }
-  },
-  "cli": {
-    "defaultCollection": "@nrwl/next"
-  },
-  "generators": {
-    "@nrwl/react": {
-      "application": {
-        "babel": true
-      }
-    },
-    "@nrwl/next": {
-      "application": {
-        "style": "css",
-        "linter": "eslint"
-      }
-    }
-  },
-  "defaultProject": "frontend"
+  }
 }
