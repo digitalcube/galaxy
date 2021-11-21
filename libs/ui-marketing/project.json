@@ -32,6 +32,15 @@
         "cwd": "libs/ui-marketing"
       }
     },
+    "watch": {
+      "executor": "./tools/executors/nx-watch:run",
+      "options": {
+        "sources": ["libs/ui-marketing"],
+        "commands": [
+          "echo cha cha cha changes"
+        ]
+      }
+    },
     "storybook": {
       "executor": "@nrwl/storybook:storybook",
       "options": {
