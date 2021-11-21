@@ -32,12 +32,13 @@
         "cwd": "libs/ui-marketing"
       }
     },
-    "watch-tailwind": {
+    "watch-storybook": {
       "executor": "@nrwl/workspace:run-commands",
       "options": {
-        "cwd": "libs/ui-marketing",
+        "parallel": false,
         "commands": [
-          "watch 'nx run ui-marketing:build-tailwind' src"
+          "nx run ui-marketing:storybook",
+          "watch 'nx run ui-marketing:build-tailwind' libs/ui-marketing/src"
         ]
       }
     },

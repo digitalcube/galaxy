@@ -102,3 +102,8 @@ Build Tailwind CSS for UI Marketing Library Storybook
 ```
 nx run ui-marketing:build-tailwind
 ```
+
+Start Storybook and watch for Tailwind
+```
+
+```
