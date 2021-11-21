@@ -28,16 +28,16 @@
     "build-tailwind": {
       "executor": "@nrwl/workspace:run-commands",
       "options": {
-        "command": "postcss tailwind.css -o src/tailwind.css",
+        "command": "postcss tailwind.css -o public/tailwind.css",
         "cwd": "libs/ui-marketing"
       }
     },
-    "watch": {
-      "executor": "./tools/executors/nx-watch:run",
+    "watch-tailwind": {
+      "executor": "@nrwl/workspace:run-commands",
       "options": {
-        "sources": ["libs/ui-marketing"],
+        "cwd": "libs/ui-marketing",
         "commands": [
-          "echo cha cha cha changes"
+          "watch 'nx run ui-marketing:build-tailwind' src"
         ]
       }
     },
