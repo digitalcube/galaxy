@@ -3,7 +3,10 @@
   "projects": {
     "frontend": "apps/frontend",
     "frontend-e2e": "apps/frontend-e2e",
+    "interfaces": "libs/interfaces",
+    "ui": "libs/ui",
     "ui-marketing": "libs/ui-marketing",
-    "ui-marketing-e2e": "apps/ui-marketing-e2e"
+    "ui-marketing-e2e": "apps/ui-marketing-e2e",
+    "utils": "libs/utils"
   }
 }
