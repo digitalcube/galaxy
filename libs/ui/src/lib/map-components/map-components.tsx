@@ -110,7 +110,7 @@ export type TMapDataToPropsFn<
 
 export interface MapComponentsProps<
   TMap extends Record<string, React.ComponentType> = Record<
-    string,
+    any,
     React.ComponentType
   >,
   TData = any,

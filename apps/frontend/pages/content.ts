@@ -1,10 +1,10 @@
 export const header = [{ id: 14, type: 'Header', pattern: 'HeaderSimple' }];
 
 export const main = [
-  { type: 'Hero', pattern: 'HeroSimpleCentered' },
-  { type: 'List', pattern: 'ListGrid' },
-  { type: 'CTA', pattern: 'CTAAboutUs' },
-  { type: 'ListGridWithIcons', pattern: 'ListGridWithIcons' },
+  { id: 1, type: 'Hero', pattern: 'HeroSimpleCentered' },
+  { id: 2, type: 'List', pattern: 'ListGrid' },
+  { id: 3, type: 'CTA', pattern: 'CTAAboutUs' },
+  { id: 4, type: 'ListGridWithIcons', pattern: 'ListGridWithIcons' },
 ];
 
 export const footer = [{ type: 'Footer', pattern: 'FooterSimple' }];
