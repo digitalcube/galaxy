@@ -7,14 +7,14 @@
     "jsx": "react"
   },
   "include": [
-    "**/*.test.ts",
     "**/*.spec.ts",
-    "**/*.test.tsx",
+    "**/*.test.ts",
     "**/*.spec.tsx",
-    "**/*.test.js",
+    "**/*.test.tsx",
     "**/*.spec.js",
-    "**/*.test.jsx",
+    "**/*.test.js",
     "**/*.spec.jsx",
+    "**/*.test.jsx",
     "**/*.d.ts"
   ]
 }
