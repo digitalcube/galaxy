@@ -1,4 +1,4 @@
-import { MapComponents } from '@galaxy/ui';
+import { MapComponents } from '@galaxy/utils';
 import { HeroSimpleCentered, HeroSimpleIllustration } from '../../index';
 
 /* eslint-disable-next-line */

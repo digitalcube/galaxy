@@ -1,5 +1,5 @@
 import { homePage } from './content';
-import { MapComponents } from '@galaxy/ui';
+import { MapComponents } from '@galaxy/utils';
 import { ListGrid, HeroSimpleIllustration, ListGridWithIcons } from '@galaxy/ui-marketing';
 
 export function Index() {
