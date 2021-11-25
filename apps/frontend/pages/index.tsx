@@ -1,20 +1,8 @@
-import { homePage } from './content';
+import { data } from './content';
 import { MapComponents } from '@galaxy/utils';
-import { ListGrid, HeroSimpleIllustration, ListGridWithIcons } from '@galaxy/ui-marketing';
 
 export function Index() {
-  return (
-    <MapComponents
-      getType={(x) => x.type}
-      getKey={(x) => x.id}
-      list={homePage}
-      map={{
-        List: ListGrid,
-        Hero: HeroSimpleIllustration,
-        ListGridWithIcons: ListGridWithIcons,
-      }}
-    />
-  );
+  return <div>{data.map((block) => MapComponents(block))}</div>;
 }
 
 export default Index;

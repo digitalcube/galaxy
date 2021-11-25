@@ -1,15 +1,15 @@
-export const header = [{ id: 14, type: 'Header', pattern: 'HeaderSimple' }];
-
-export const main = [
-  { id: 1, type: 'Hero', pattern: 'HeroSimpleCentered' },
-  { id: 2, type: 'List', pattern: 'ListGrid' },
-  { id: 3, type: 'CTA', pattern: 'CTAAboutUs' },
-  { id: 4, type: 'ListGridWithIcons', pattern: 'ListGridWithIcons' },
+export const data = [
+  {
+    _uid: 'BUY6Drn9e1',
+    component: 'HeroSimpleIllustration',
+    headline: 'Foo',
+  },
+  {
+    _uid: 'gJZoSLkfZV',
+    component: 'CTAAboutUs',
+    headline: 'Foo',
+  },
 ];
-
-export const footer = [{ type: 'Footer', pattern: 'FooterSimple' }];
-
-export const homePage = [...main];
 
 // export const homePageContent = [
 //   { id: 1, type: 'Hero', pattern: 'HeroSimpleIllustration' },
@@ -73,12 +73,12 @@ export const homePage = [...main];
 //       {
 //         title: 'For Designers',
 //         description:
-//           'Focus on design without worrying about the back end. Shiftergives you the freedom to focus on your design while our system takes care of the rest.',
+//           'Focus on design without worrying about the back end. Shifter gives you the freedom to focus on your design while our system takes care of the rest.',
 //       },
 //       {
 //         title: 'For Developers',
 //         description:
-//           'Never worry about wasting time mantaining a WordPress install. Shifter’s containerized environemnet ensures near unimlited scalability with no down time.',
+//           'Never worry about wasting time maintaining a WordPress install. Shifter’s containerized environment ensures near unlimited scalability with no down time.',
 //       },
 //     ],
 //   },
