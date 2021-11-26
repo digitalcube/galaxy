@@ -16,4 +16,5 @@ export * from './lib/hero-simple-centered/hero-simple-centered';
 export * from './lib/header-simple/header-simple';
 export * from './lib/list-grid/list-grid';
 export * from './lib/list-grid-with-icons/list-grid-with-icons';
+export * from './lib/contact-form-simple/contact-form-simple';
 export * from './lib/list/list';

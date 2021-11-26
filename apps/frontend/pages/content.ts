@@ -23,4 +23,8 @@ export const data = [
     _uid: 'bee2af9a8',
     component: 'ListGrid',
   },
+  {
+    _uid: 'nhe8638zfr',
+    component: 'ContactFormSimple',
+  },
 ];
