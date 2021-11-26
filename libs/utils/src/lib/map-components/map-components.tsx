@@ -10,6 +10,7 @@ export interface MapComponentsProps {
 export function MapComponents(props: MapComponentsProps) {
   if (typeof Components[props.component] !== 'undefined') {
     return React.createElement(Components[props.component], {
+      key: props._uid,
       ...props,
     });
   }

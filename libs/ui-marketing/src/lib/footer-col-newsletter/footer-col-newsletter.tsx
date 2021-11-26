@@ -2,7 +2,7 @@ import { Button } from '@galaxy/ui';
 
 /* eslint-disable-next-line */
 export interface FooterColNewsletterProps {
-  navigation: any;
+  navigation: Record<string, null>;
 }
 
 export function FooterColNewsletter(props: FooterColNewsletterProps) {

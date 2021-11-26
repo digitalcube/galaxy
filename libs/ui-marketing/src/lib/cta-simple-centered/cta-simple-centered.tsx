@@ -5,7 +5,7 @@ export interface CTASimpleCenteredProps {}
 
 export function CTASimpleCentered(props: CTASimpleCenteredProps) {
   return (
-    <div className="container mx-auto px-4 sm:px-6 lg:px-8 bg-gray-50 overflow-hidden relative bg-purple-800">
+    <div className="container mx-auto px-4 sm:px-6 lg:px-8 overflow-hidden relative bg-purple-800">
       <img
         src="/geo-background.svg"
         alt=""

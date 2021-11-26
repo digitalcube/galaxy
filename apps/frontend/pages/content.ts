@@ -2,12 +2,22 @@ export const data = [
   {
     _uid: 'BUY6Drn9e1',
     component: 'HeroSimpleIllustration',
-    headline: 'Foo',
   },
   {
     _uid: 'gJZoSLkfZV',
     component: 'CTAAboutUs',
-    headline: 'Foo',
+  },
+  {
+    _uid: '3e02ade8',
+    component: 'LargeScreenshot',
+  },
+  {
+    _uid: 'eb010551',
+    component: 'CTASimpleCentered',
+  },
+  {
+    _uid: 'b5515d01',
+    component: 'BenefitsWithIllustration',
   },
 ];
 
