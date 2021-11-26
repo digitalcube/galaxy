@@ -1,5 +1,9 @@
 export const data = [
   {
+    _uid: 'H8367kAk',
+    component: 'HeaderSimple',
+  },
+  {
     _uid: 'BUY6Drn9e1',
     component: 'HeroSimpleIllustration',
   },
