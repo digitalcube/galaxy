@@ -98,12 +98,16 @@ nx run ui-marketing:storybook
 ```
 
 Build Tailwind CSS for UI Marketing Library Storybook
-
 ```
 nx run ui-marketing:build-tailwind
 ```
 
-Start Storybook and watch for Tailwind
+Start Storybook and watch for changes
+```
+nx run ui-marketing:watch-storybook
 ```
 
+Create a new branch for developing a new component or feature (e.g. feature/foo could be feature/contact-form)
+```
+git checkout -b feature/foo origin/development
 ```
