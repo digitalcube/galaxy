@@ -1,7 +1,7 @@
 import React from 'react';
 import * as UiMarketing from '@galaxy/ui-marketing';
 
-const Components: { [key: string]: any } = UiMarketing;
+const Components: { [key: string]: unknown } = UiMarketing;
 export interface MapComponentsProps {
   _uid: string;
   component: string;
@@ -10,11 +10,10 @@ export interface MapComponentsProps {
 export function MapComponents(props: MapComponentsProps) {
   if (typeof Components[props.component] !== 'undefined') {
     return React.createElement(Components[props.component], {
-      key: props._uid,
       ...props,
     });
   }
-  return React.createElement(() => <div>{JSON.stringify(props)}</div>, {
+  return React.createElement(() => <>{JSON.stringify(props)}</>, {
     key: props._uid,
   });
 }

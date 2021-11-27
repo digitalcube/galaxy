@@ -8,5 +8,5 @@ export function Index(props) {
 export default Index;
 
 Index.defaultProps = {
-  content: content,
+  content: content.data,
 };

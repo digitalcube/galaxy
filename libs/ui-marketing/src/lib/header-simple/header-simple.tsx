@@ -4,8 +4,8 @@ import { Brand } from 'schema-dts';
 /* eslint-disable-next-line */
 export interface HeaderSimpleProps {
   brand: Brand;
-  primary: any;
-  secondary: any;
+  primary: Record<string, unknown>;
+  secondary: Record<string, unknown>;
 }
 
 export function HeaderSimple(props: HeaderSimpleProps) {
@@ -18,7 +18,7 @@ export function HeaderSimple(props: HeaderSimpleProps) {
             <a href="/">
               <span className="sr-only">{brand.name}</span>
               <img
-                className="h-10 w-autoa"
+                className="h-7 w-auto"
                 src={`${brand.logo}`}
                 alt={`${brand.name}`}
               />
