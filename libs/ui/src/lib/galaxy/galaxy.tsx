@@ -1,5 +1,6 @@
 import { ReactNode, useEffect, useMemo } from 'react';
 import { ThemeContext, defaultTheme } from '../theme-context/theme-context';
+// eslint-disable-next-line @nrwl/nx/enforce-module-boundaries
 import { UseDarkMode, DeepMerge } from '@galaxy/utils';
 
 /* eslint-disable-next-line */

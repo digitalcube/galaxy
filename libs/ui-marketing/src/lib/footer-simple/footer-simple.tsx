@@ -16,7 +16,7 @@ export function FooterSimple(props: FooterSimpleProps) {
         <a href="/">
           <span className="sr-only">{brand.name}</span>
           <img
-            className="h-10 w-autoa"
+            className="h-7 w-auto"
             src={`${brand.logo}`}
             alt={`${brand.name}`}
           />
@@ -26,15 +26,15 @@ export function FooterSimple(props: FooterSimpleProps) {
             <div key={item.name} className="px-5 py-2">
               <a
                 href={item.href}
-                className="text-base text-gray-500 hover:text-gray-900"
+                className="text-base text-black hover:text-gray-800"
               >
                 {item.name}
               </a>
             </div>
           ))}
         </nav>
-        <p className="flex items-center text-center text-base text-gray-400">
-          &copy; 2021 DigitalCube, Inc.
+        <p className="flex items-center text-center font-size-4 text-gray-500">
+          &copy; {new Date().getFullYear()} DigitalCube, Inc.
         </p>
       </div>
     </footer>
