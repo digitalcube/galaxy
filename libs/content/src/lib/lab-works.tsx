@@ -7,10 +7,19 @@ export const LabWorks = [
   {
     _uid: 'H8367kAk',
     component: 'HeaderSimple',
+    primary: false,
+    secondary: [{ children: 'Work with us', href: '#' }],
   },
   {
     _uid: 'BUY6Drn9e1',
     component: 'HeroSimpleIllustration',
+    title: 'Research Experiment Innovate',
+    description:
+      'Labworks is a full service agency from DigitalCube focusing on cutting edge WordPress solutions.',
+    action: {
+      title: 'Learn more',
+      href: '#',
+    },
   },
   {
     _uid: 'gJZoSLkfZV',

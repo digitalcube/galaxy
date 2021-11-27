@@ -10,7 +10,6 @@ export interface HeaderSimpleProps {
 
 export function HeaderSimple(props: HeaderSimpleProps) {
   const { brand, primary, secondary } = props;
-
   return (
     <header className="relative bg-background-light">
       <nav className="container mx-auto px-4 sm:px-6 lg:px-8" aria-label="Top">
@@ -19,27 +18,29 @@ export function HeaderSimple(props: HeaderSimpleProps) {
             <a href="/">
               <span className="sr-only">{brand.name}</span>
               <img
-                className="h-10 w-auto"
+                className="h-10 w-autoa"
                 src={`${brand.logo}`}
                 alt={`${brand.name}`}
               />
             </a>
             <div className="hidden ml-10 space-x-8 lg:block flex ml-auto">
-              {primary.map((props, i) => (
-                <Button {...props} key={i} variant="link" />
-              ))}
+              {primary
+                ? primary.map((props, i) => (
+                    <Button {...props} key={i} variant="link" />
+                  ))
+                : null}
             </div>
           </div>
           <div className="ml-10 space-x-4 flex">
-            {secondary.map((link, i) => (
-              <Button {...link} key={i} />
-            ))}
+            {secondary
+              ? secondary.map((link, i) => <Button {...link} key={i} />)
+              : null}
           </div>
         </div>
         <div className="py-4 flex flex-wrap justify-center space-x-6 lg:hidden">
-          {primary.map((link, i) => (
-            <Button {...link} key={i} />
-          ))}
+          {primary
+            ? primary.map((link, i) => <Button {...link} key={i} />)
+            : null}
         </div>
       </nav>
     </header>
@@ -51,6 +52,7 @@ export default HeaderSimple;
 const brand = {
   brand: { logo: '/shifter-mark-primary.svg', name: 'Shifter' },
 };
+
 const primary = {
   primary: [
     { children: 'Solutions', href: '#' },

@@ -6,7 +6,9 @@ import { Button } from '@galaxy/ui';
 export interface HeroSimpleIllustrationProps {
   title: string;
   description: string;
-  action: any;
+  action: Record<string, unknown>;
+  image: string | Record<string, unknown>;
+  href: string;
   children: ReactNode;
 }
 
@@ -24,7 +26,7 @@ export function HeroSimpleIllustration(props: HeroSimpleIllustrationProps) {
               <p className="pt-10 text-size-6 text-gray-800 sm:mt-5">
                 {description}
               </p>
-              <Link href="/">
+              <Link href={`${action.href}`}>
                 <Button variant="link" className="px-0 py-0 mt-10 text-size-7">
                   {action.title}
                 </Button>
