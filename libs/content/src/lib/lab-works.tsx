@@ -9,6 +9,7 @@ export const LabWorks = [
     component: 'HeaderSimple',
     primary: false,
     secondary: [{ children: 'Work with us', href: '#' }],
+    brand: { logo: 'labworks-logo-primary.svg' },
   },
   {
     _uid: 'BUY6Drn9e1',
@@ -49,6 +50,5 @@ export const LabWorks = [
     _uid: '984jka308',
     component: 'FooterSimple',
     brand: { logo: 'labworks-logo-primary.svg' },
-    
   },
 ];
