@@ -3,7 +3,7 @@ export interface ListGridWithIconsProps {}
 
 export function ListGridWithIcons(props: ListGridWithIconsProps) {
   return (
-    <div className="mx-auto container lg:px-8">
+    <div className="mx-auto container lg:px-8 min-h-screen py-24">
       <div className="grid grid-cols-12 gap-0 h-screen place-content-center text-black py-40">
         <div className="col-start-3 col-span-10 mb-12">
           <p className="text-5xl">Services</p>
@@ -12,7 +12,7 @@ export function ListGridWithIcons(props: ListGridWithIconsProps) {
         <div className="lg:col-span-5 md:col-span-8 lg:col-start-3 md:col-start-3 lg:mr-3">
           <div className="border-2 border-black text-center p-5">
             <div className="text-[1.125rem] font-bold h-12">
-              <img alt="" src="icon-design.png" className="inline-block mr-2" />
+              <img alt="" src="performance-logo.svg" className="inline-block mr-2" />
               <div className="inline-block">Performance</div>
             </div>
             <p>

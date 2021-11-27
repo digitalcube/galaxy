@@ -33,7 +33,7 @@ export const LabWorks: LabWorksProps = {
     },
     {
       _uid: 'te32af9a8',
-      component: 'CTAAboutUs',
+      component: 'OurServices',
     },
     {
       _uid: 'y83678sj',
