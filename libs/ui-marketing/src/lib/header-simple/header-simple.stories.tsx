@@ -9,4 +9,8 @@ export default {
 const Template: Story<HeaderSimpleProps> = (args) => <HeaderSimple {...args} />;
 
 export const Primary = Template.bind({});
-Primary.args = {};
+Primary.args = {
+  primary: false,
+  secondary: [{ children: 'Work with us', href: '#' }],
+  brand: { logo: 'labworks-logo-primary.svg', '@type': 'Brand' },
+};

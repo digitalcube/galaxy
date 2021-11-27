@@ -4,7 +4,7 @@ import { Testimonial } from './testimonial';
 export default {
   component: Testimonial,
   title: 'Testimonial',
-} as Meta;
+} as Meta | unknown;
 
 const Template: Story = (args) => <Testimonial {...args} />;
 

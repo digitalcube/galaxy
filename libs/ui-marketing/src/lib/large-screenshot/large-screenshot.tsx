@@ -3,7 +3,7 @@ import { WebApplication } from 'schema-dts';
 /* eslint-disable-next-line */
 export type LargeScreenshotProps = WebApplication & { '@type': null };
 
-function validURL(str) {
+function validURL(str: string) {
   const pattern = new RegExp(
     '^(https?:\\/\\/)?' + // protocol
       '((([a-z\\d]([a-z\\d-]*[a-z\\d])*)\\.)+[a-z]{2,}|' + // domain name

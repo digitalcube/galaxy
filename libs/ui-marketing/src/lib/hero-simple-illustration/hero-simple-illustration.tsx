@@ -6,8 +6,8 @@ import { Button } from '@galaxy/ui';
 export interface HeroSimpleIllustrationProps {
   title: string;
   description: string;
-  action: Record<string, unknown>;
-  image: string | Record<string, unknown>;
+  action: Record<string, string>;
+  image: string | Record<string, string>;
   href: string;
   children: ReactNode;
 }

@@ -1,5 +1,3 @@
-import { Button } from '@galaxy/ui';
-
 /* eslint-disable-next-line */
 export interface LogosSimpleProps {}
 
@@ -40,7 +38,6 @@ export function LogosSimple(propcontainers: LogosSimpleProps) {
           </div>
         </div>
       </div>
-      <Button children="View the showcase" variant="outlinePrimary" />
     </div>
   );
 }

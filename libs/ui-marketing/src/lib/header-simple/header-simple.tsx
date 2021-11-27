@@ -1,17 +1,18 @@
+// eslint-disable-next-line @nrwl/nx/enforce-module-boundaries
 import { Button } from '@galaxy/ui';
 import { Brand } from 'schema-dts';
 
 /* eslint-disable-next-line */
 export interface HeaderSimpleProps {
   brand: Brand;
-  primary: Record<string, unknown>;
-  secondary: Record<string, unknown>;
+  primary: Record<string, unknown> | boolean;
+  secondary: Record<string, string>[] | boolean;
 }
 
 export function HeaderSimple(props: HeaderSimpleProps) {
   const { brand, primary, secondary } = props;
   return (
-    <header className="relative bg-background-light">
+    <header className="relative">
       <nav className="container mx-auto px-4 sm:px-6 lg:px-8" aria-label="Top">
         <div className="w-full py-6 flex items-center">
           <div className="flex items-center flex-grow">

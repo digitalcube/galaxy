@@ -2,7 +2,12 @@ import { url } from 'node:inspector';
 import { CriticReview, Person } from 'schema-dts';
 
 /* eslint-disable-next-line */
-export type TestimonialProps = CriticReview & Person & { '@type': null };
+export type TestimonialProps = {
+  image: string | Record<string, unknown>;
+  jobTitle: string;
+  reviewBody: string;
+  author: string | Record<string, unknown>;
+};
 
 export function Testimonial(props: TestimonialProps) {
   const { author, reviewBody, jobTitle, image } = props;
