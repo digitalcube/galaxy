@@ -45,4 +45,10 @@ export const LabWorks = [
     _uid: 'nhe8638zfr',
     component: 'ContactFormSimple',
   },
+  {
+    _uid: '984jka308',
+    component: 'FooterSimple',
+    brand: { logo: 'labworks-logo-primary.svg' },
+    
+  },
 ];

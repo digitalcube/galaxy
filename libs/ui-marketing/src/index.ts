@@ -1,5 +1,6 @@
 export * from './lib/footer-col-newsletter/footer-col-newsletter';
 export * from './lib/blog/blog';
+export * from './lib/footer-simple/footer-simple';
 export * from './lib/blog-recent-posts/blog-recent-posts';
 export * from './lib/cta/cta';
 export * from './lib/cta-get-started/cta-get-started';
