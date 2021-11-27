@@ -8,10 +8,10 @@ export function LogosSimple(props: LogosSimpleProps) {
     <div className="bg-white text-center py-24">
       <h1 className="text-size-5 pb-16">Our technology partners</h1>
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-        <div className="grid grid-cols-2 gap-8 lg:grid-cols-6">
+        <div className="grid grid-cols-2 gap-8 lg:grid-cols-5">
           {props.logos.map((logo) => (
             <div className="col-span-1 flex justify-center md:col-span-2 lg:col-span-1">
-              <img className="h-8" src={logo.image} alt={logo.title} />
+              <img className="w-24" src={logo.image} alt={logo.title} />
             </div>
           ))}
         </div>

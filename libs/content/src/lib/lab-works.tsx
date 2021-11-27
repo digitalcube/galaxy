@@ -38,6 +38,13 @@ export const LabWorks: LabWorksProps = {
     {
       _uid: 'y83678sj',
       component: 'LogosSimple',
+      logos: [
+        { title: 'Algolia', image: 'algolia-logo.svg' },
+        { title: 'AWS', image: 'aws-logo.svg' },
+        { title: 'Stripe', image: 'stripe-logo.svg' },
+        { title: 'Snow Monkey', image: 'snow-monkey-logo.svg' },
+        { title: 'Wovn', image: 'wovn-logo.svg' },
+      ],
     },
     {
       _uid: 'bee2af9a8',
