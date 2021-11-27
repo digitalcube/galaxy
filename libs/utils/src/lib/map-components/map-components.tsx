@@ -1,7 +1,8 @@
 import React from 'react';
+// eslint-disable-next-line @nrwl/nx/enforce-module-boundaries
 import * as UiMarketing from '@galaxy/ui-marketing';
 
-const Components: { [key: string]: unknown } = UiMarketing;
+const Components: { [key: string]: any } = UiMarketing;
 export interface MapComponentsProps {
   _uid: string;
   component: string;
