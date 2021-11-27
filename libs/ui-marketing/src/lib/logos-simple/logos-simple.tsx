@@ -1,41 +1,19 @@
 /* eslint-disable-next-line */
-export interface LogosSimpleProps {}
+export interface LogosSimpleProps {
+  logos: Record<string, unknown>;
+}
 
-export function LogosSimple(propcontainers: LogosSimpleProps) {
+export function LogosSimple(props: LogosSimpleProps) {
   return (
-    <div className="container mx-auto py-16 px-4 sm:pt-40 sm:pb-20 sm:px-6 lg:px-8 text-center">
-      <div className="flow-root mb-8 lg:mb-16">
-        <div className="-mt-6 -ml-8 flex flex-wrap justify-between lg:-ml-4">
-          <div className="mt-6 ml-8 flex flex-grow flex-shrink-0 lg:flex-grow-0 lg:ml-4 items-center">
-            <img className="h-6" src="/lixil-logo-gray-300.svg" alt="Lixil" />
-          </div>
-          <div className="mt-6 ml-8 flex flex-grow flex-shrink-0 lg:flex-grow-0 lg:ml-4 items-center">
-            <img className="h-6" src="/mhi-logo-gray-300.svg" alt="MHI" />
-          </div>
-          <div className="mt-6 ml-8 flex flex-grow flex-shrink-0 lg:flex-grow-0 lg:ml-4 items-center">
-            <img
-              className="h-6"
-              src="/soracom-logo-gray-300.svg"
-              alt="Soracom"
-            />
-          </div>
-          <div className="mt-6 ml-8 flex flex-grow flex-shrink-0 lg:flex-grow-0 lg:ml-4 items-center">
-            <img
-              className="h-6"
-              src="/infobahn-logo-gray-300.svg"
-              alt="Infobahn"
-            />
-          </div>
-          <div className="mt-6 ml-8 flex flex-grow flex-shrink-0 lg:flex-grow-0 lg:ml-4 items-center">
-            <img className="h-6" src="/docomo-logo-gray-300.svg" alt="Docomo" />
-          </div>
-          <div className="mt-6 ml-8 flex flex-grow flex-shrink-0 lg:flex-grow-0 lg:ml-4 items-center">
-            <img
-              className="h-6"
-              src="/mikihouse-logo-gray-300.svg"
-              alt="Mikihouse"
-            />
-          </div>
+    <div className="bg-white text-center py-24">
+      <h1 className="text-size-5 pb-16">Our technology partners</h1>
+      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+        <div className="grid grid-cols-2 gap-8 lg:grid-cols-6">
+          {props.logos.map((logo) => (
+            <div className="col-span-1 flex justify-center md:col-span-2 lg:col-span-1">
+              <img className="h-8" src={logo.image} alt={logo.title} />
+            </div>
+          ))}
         </div>
       </div>
     </div>
@@ -43,3 +21,14 @@ export function LogosSimple(propcontainers: LogosSimpleProps) {
 }
 
 export default LogosSimple;
+
+LogosSimple.defaultProps = {
+  logos: [
+    { title: 'Soracom', image: 'soracom-logo-gray-300.svg' },
+    { title: 'Infobahn', image: 'infobahn-logo-gray-300.svg' },
+    { title: 'Mikihouse', image: 'mikihouse-logo-gray-300.svg' },
+    { title: 'Docomo', image: 'docomo-logo-gray-300.svg' },
+    { title: 'MHI', image: 'mhi-logo-gray-300.svg' },
+    { title: 'Lixil', image: 'lixil-logo-gray-300.svg' },
+  ],
+};
