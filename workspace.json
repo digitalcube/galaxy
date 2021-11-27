@@ -1,6 +1,7 @@
 {
   "version": 2,
   "projects": {
+    "content": "libs/content",
     "frontend": "apps/frontend",
     "frontend-e2e": "apps/frontend-e2e",
     "interfaces": "libs/interfaces",
