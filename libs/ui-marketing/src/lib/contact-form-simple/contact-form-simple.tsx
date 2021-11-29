@@ -32,7 +32,7 @@ export function ContactFormSimple(props: ContactFormSimpleProps) {
   const [selected, setSelected] = useState(people[3]);
   const { title, description } = props;
   return (
-    <div className="bg-white py-16 px-4 overflow-hidden sm:px-6 lg:px-8 lg:py-24">
+    <div className="bg-white py-16 px-4 sm:px-6 lg:px-8 lg:py-24">
       <div className="relative max-w-xl mx-auto">
         <div className="text-center">
           <h2 className="font-size-5">{title}</h2>
@@ -106,7 +106,7 @@ export function ContactFormSimple(props: ContactFormSimpleProps) {
                     leaveFrom="opacity-100"
                     leaveTo="opacity-0"
                   >
-                    <Listbox.Options className="absolute z-10 mt-1 w-full bg-white shadow-lg max-h-60 rounded-md py-1 text-base ring-1 ring-black ring-opacity-5 overflow-auto focus:ring-gray-500 sm:text-sm">
+                    <Listbox.Options className="absolute z-10 mt-1 w-full bg-white shadow-lg max-h-60 rounded-md py-1 text-base ring-1 ring-black ring-opacity-5 overflow-auto focus:ring-gray-500 focus:ring-2 sm:text-sm">
                       {people.map((person) => (
                         <Listbox.Option
                           key={person.id}

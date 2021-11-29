@@ -27,7 +27,7 @@ export function HeroSimpleIllustration(props: HeroSimpleIllustrationProps) {
                 {description}
               </p>
               <Link href={`${action.href}`}>
-                <Button variant="link" className="px-0 py-0 mt-10 text-size-7">
+                <Button variant="link" className="px-0 py-0 mt-10 font-size-7">
                   {action.title}
                 </Button>
               </Link>
