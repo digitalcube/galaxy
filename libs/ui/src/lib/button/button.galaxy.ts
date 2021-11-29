@@ -98,7 +98,7 @@ export const buttonTheme = {
     },
     link: {
       base: ['p-0', 'text-gray-800'],
-      active: ['focus:outline-none', 'hover:text-purple-800'],
+      active: ['focus:outline-none', 'hover:text-gray-700'],
       disabled: ['opacity-50', 'cursor-not-allowed'],
     },
     // this is the button that lives inside the DropdownItem

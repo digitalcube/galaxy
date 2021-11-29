@@ -6,7 +6,7 @@ function App({ Component, pageProps }: AppProps) {
   return (
     <Galaxy>
       <Head />
-      <main>
+      <main className="bg-background-light">
         <Component {...pageProps} />
       </main>
     </Galaxy>

@@ -25,7 +25,7 @@ export function ListGridWithIcons(props: ListGridWithIconsProps) {
         <div className="lg:col-span-5 md:col-span-8 lg:col-start-8 md:col-start-3 lg:ml-3">
           <div className="border-2 border-black text-center p-5">
             <div className="text-[1.125rem] font-bold">
-              <img alt="" src="icon-design.png" className="inline-block mr-2" />
+              <img alt="" src="design-logo.svg" className="inline-block mr-2" />
               <div className="inline-block">Design</div>
             </div>
             <p>
@@ -39,7 +39,7 @@ export function ListGridWithIcons(props: ListGridWithIconsProps) {
         <div className="lg:col-span-5 md:col-span-8 lg:col-start-3 md:col-start-3 lg:mr-3">
           <div className="border-2 border-black text-center p-5">
             <div className="text-[1.125rem] font-bold">
-              <img alt="" src="icon-design.png" className="inline-block mr-2" />
+              <img alt="" src="development-logo.svg" className="inline-block mr-2" />
               <div className="inline-block">Development</div>
             </div>
             <p>
@@ -52,7 +52,7 @@ export function ListGridWithIcons(props: ListGridWithIconsProps) {
         <div className="lg:col-span-5 md:col-span-8 lg:col-start-8 md:col-start-3 lg:ml-3">
           <div className="border-2 border-black text-center p-5">
             <div className="text-[1.125rem] font-bold">
-              <img alt="" src="icon-design.png" className="inline-block mr-2" />
+              <img alt="" src="operations-logo.svg" className="inline-block mr-2" />
               <div className="inline-block">Operations</div>
             </div>
             <p>
@@ -65,7 +65,7 @@ export function ListGridWithIcons(props: ListGridWithIconsProps) {
         <div className="lg:col-span-5 md:col-span-8 lg:col-start-3 md:col-start-3 lg:mr-3">
           <div className="border-2 border-black text-center p-5">
             <div className="text-[1.125rem] font-bold">
-              <img alt="" src="icon-design.png" className="inline-block mr-2" />
+              <img alt="" src="security-logo.svg" className="inline-block mr-2" />
               <div className="inline-block">Security</div>
             </div>
             <p>
