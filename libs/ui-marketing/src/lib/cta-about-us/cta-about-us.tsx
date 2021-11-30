@@ -13,8 +13,9 @@ const features = [
 
 export function CTAAboutUs(props: CTAAboutUsProps) {
   return (
-    <section className="grid grid-cols-12 h-screen bg-black place-content-center text-white py-40">
-      <div className="col-start-2 col-span-5 mt-10">
+    <section className="lg:px-8 min-h-screen bg-black text-white pt-24">
+    <div className="container mx-auto grid grid-cols-12 place-content-center">
+    <div className="md:col-start-3 lg:col-start-3 lg:col-span-5 md:col-span-8 mt-10">
         <p className="text-size-5">How we work</p>
         <h2 className="text-size-8 font-bold">The LabWorks Process</h2>
       </div>
@@ -35,6 +36,7 @@ export function CTAAboutUs(props: CTAAboutUsProps) {
             </div>
           ))}
         </dl>
+      </div>
       </div>
     </section>
   );
