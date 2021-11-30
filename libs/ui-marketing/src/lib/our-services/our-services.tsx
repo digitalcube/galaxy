@@ -11,12 +11,13 @@ export interface OurServicesProps {
 export function OurServices(props: OurServicesProps) {
   const { title, description, services } = props;
   return (
-    <section className="grid grid-cols-12 h-screen bg-black place-content-center text-white py-40">
-      <div className="col-start-2 col-span-5 mt-10">
+    <section className="lg:px-8 min-h-screen bg-black text-white pt-24">
+      <div className="container mx-auto grid grid-cols-12 place-content-center">
+      <div className="md:col-start-3 lg:col-start-3 lg:col-span-5 md:col-span-8 mt-10">
         <p className="text-size-5">{description}</p>
         <h2 className="text-size-8 font-bold">{title}</h2>
       </div>
-      <div className="col-span-5">
+      <div className="lg:col-start-8 lg:col-span-4 md:col-start-3 md:col-span-8 md:pt-6">
         <div className="flex space-x-2">
           <BsCircleFill size="12" />
           <BsCircle size="12" />
@@ -33,6 +34,7 @@ export function OurServices(props: OurServicesProps) {
             </div>
           ))}
         </dl>
+        </div>
       </div>
     </section>
   );
