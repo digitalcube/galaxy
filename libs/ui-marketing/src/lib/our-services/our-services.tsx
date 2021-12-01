@@ -5,7 +5,7 @@ import './our-services.module.css';
 export interface OurServicesProps {
   title: string;
   description: string;
-  services: Record<string, string>;
+  services: any;
 }
 
 export function OurServices(props: OurServicesProps) {

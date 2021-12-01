@@ -1,5 +1,6 @@
 import { AppProps } from 'next/app';
-import { Galaxy, Head } from '@galaxy/ui';
+import { Head } from '@galaxy/utils';
+import { Galaxy } from '@galaxy/ui';
 import 'tailwindcss/tailwind.css';
 
 function App({ Component, pageProps }: AppProps) {

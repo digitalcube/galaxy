@@ -1,22 +1,22 @@
-import { SoftwareApplication } from 'schema-dts';
 import classnames from 'classnames';
-import { Button } from '@galaxy/ui';
+import { AlignProps } from '@galaxy/interfaces';
+// import { Button } from '@galaxy/ui';
 
 /* eslint-disable-next-line */
-export type BenefitsWithIllustrationProps = SoftwareApplication &
-  AlignProps & { benefits: any };
+export type BenefitsWithIllustrationProps = {
+  benefits: Record<string, string>;
+  align: AlignProps;
+  action: Record<string, unknown>;
+  title: string;
+  image: Record<string, string>;
+  description: string;
+  alternativeHeadline: string;
+  headline: string;
+};
 
-export function BenefitsWithIllustration(props: BenefitsWithIllustrationProps) {
-  const {
-    align,
-    headline,
-    image,
-    alternativeHeadline,
-    description,
-    benefits,
-    action,
-  } = props;
-  const benefitsList = benefits.map((props, i) => {
+export function BenefitsList(props: any, i: number) {
+  const { benefits } = props;
+  return benefits.map((props: BenefitsWithIllustrationProps, i: number) => {
     const { title, description } = props;
     return (
       <div key={i}>
@@ -25,6 +25,18 @@ export function BenefitsWithIllustration(props: BenefitsWithIllustrationProps) {
       </div>
     );
   });
+}
+export function BenefitsWithIllustration(props: BenefitsWithIllustrationProps) {
+  const {
+    align,
+    headline,
+    title,
+    image,
+    alternativeHeadline,
+    description,
+    benefits,
+    action,
+  } = props;
 
   return (
     <div className="bg-gray-10">
@@ -46,9 +58,9 @@ export function BenefitsWithIllustration(props: BenefitsWithIllustrationProps) {
                 'px-4 max-w-xl mx-auto sm:px-6 lg:pb-32 lg:max-w-none lg:mx-0 lg:px-0 space-y-6'
               )}
             >
-              {benefitsList}
+              {BenefitsList}
               <div className="pt-6">
-                <Button variant="primary" children={`${action.title}`} />
+                {/* <Button variant="primary" children={`${action.title}`} /> */}
               </div>
             </div>
             <div
@@ -79,7 +91,7 @@ export default BenefitsWithIllustration;
 
 BenefitsWithIllustration.defaultProps = {
   headline: 'Security Built In',
-  alternativeHeadline: 'Virtually unhackable WordPress sites',
+  alternativeHeadline: 'Virtually un-hackable WordPress sites',
   image: {
     url: '/maintenance-free-dashboard.png',
   },
@@ -97,12 +109,12 @@ BenefitsWithIllustration.defaultProps = {
     {
       title: 'For Designers',
       description:
-        'Focus on design without worrying about the back end. Shiftergives you the freedom to focus on your design while our system takes care of the rest.',
+        'Focus on design without worrying about the back end. Shifter gives you the freedom to focus on your design while our system takes care of the rest.',
     },
     {
       title: 'For Developers',
       description:
-        'Never worry about wasting time mantaining a WordPress install. Shifter’s containerized environemnet ensures near unimlited scalability with no down time.',
+        'Never worry about wasting time maintaining a WordPress install. Shifter’s containerized environment ensures near unlimited scalability with no down time.',
     },
   ],
 };

@@ -3,7 +3,7 @@ import { Brand } from 'schema-dts';
 /* eslint-disable-next-line */
 export interface FooterSimpleProps {
   brand: Brand;
-  navigation: Record<string, unknown>;
+  navigation: any;
 }
 
 export function FooterSimple(props: FooterSimpleProps) {

@@ -5,8 +5,8 @@ import { Brand } from 'schema-dts';
 /* eslint-disable-next-line */
 export interface HeaderSimpleProps {
   brand: Brand;
-  primary: Record<string, unknown> | boolean;
-  secondary: Record<string, string>[] | boolean;
+  primary: any;
+  secondary: any;
 }
 
 export function HeaderSimple(props: HeaderSimpleProps) {

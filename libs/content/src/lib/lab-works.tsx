@@ -1,9 +1,13 @@
 /* eslint-disable-next-line */
 export interface LabWorksProps {
-  data: Record<string, unknown>[];
+  data: any;
 }
 
-export const LabWorks: LabWorksProps = {
+export function LabWorks(props: LabWorksProps) {
+  return props.data;
+}
+
+LabWorks.defaultProps = {
   data: [
     {
       _uid: 'H8367kAk',

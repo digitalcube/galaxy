@@ -1,6 +1,6 @@
 /* eslint-disable-next-line */
 export interface LogosSimpleProps {
-  logos: Record<string, unknown>;
+  logos: Record<string, unknown> | any;
 }
 
 export function LogosSimple(props: LogosSimpleProps) {

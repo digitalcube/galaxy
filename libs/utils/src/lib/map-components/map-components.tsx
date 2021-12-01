@@ -5,7 +5,7 @@ import * as UiMarketing from '@galaxy/ui-marketing';
 const Components: { [key: string]: any } = UiMarketing;
 export interface MapComponentsProps {
   _uid: string;
-  component: string;
+  component: any;
 }
 
 export function MapComponents(props: MapComponentsProps) {
