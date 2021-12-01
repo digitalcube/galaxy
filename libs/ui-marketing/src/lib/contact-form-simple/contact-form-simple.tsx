@@ -23,8 +23,6 @@ const people = [
   { id: 6, name: 'Hellen Schmidt' },
   { id: 7, name: 'Caroline Schultz' },
   { id: 8, name: 'Mason Heaney' },
-  { id: 9, name: 'Claudie Smitham' },
-  { id: 10, name: 'Emil Schaefer' },
 ];
 
 export function ContactFormSimple(props: ContactFormSimpleProps) {
