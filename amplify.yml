@@ -1,0 +1,18 @@
+version: 1
+applications:
+  - frontend:
+      phases:
+        preBuild:
+          commands:
+            - npm i
+        build:
+          commands:
+            - npx nx run frontend:export
+      artifacts:
+        baseDirectory: dist/apps/frontend/exported
+        files:
+          - '**/*'
+      cache:
+        paths:
+          - node_modules/**/*
+    appRoot: apps/frontend
