@@ -9,7 +9,7 @@
       "defaultConfiguration": "production",
       "options": {
         "root": "apps/frontend",
-        "outputPath": "dist/apps/frontend"
+        "outputPath": "dist/apps/frontend/.next"
       },
       "configurations": {
         "production": {}
