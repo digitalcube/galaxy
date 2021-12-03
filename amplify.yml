@@ -6,9 +6,9 @@ frontend:
         - npm ci
     build:
       commands:
-        - npx nx run frontend:export
+        - npx nx run frontend:build
   artifacts:
-    baseDirectory: dist/apps/frontend/exported
+    baseDirectory: dist/apps/frontend/.next
     files:
       - '**/*'
   cache:
