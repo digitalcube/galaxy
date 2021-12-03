@@ -29,7 +29,7 @@
       }
     },
     "export": {
-      "executor": "@nrwl/next:export",
+      "executor": "@nrwl/next:build",
       "options": {
         "buildTarget": "frontend:build:production"
       }
