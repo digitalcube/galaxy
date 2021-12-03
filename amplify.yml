@@ -6,7 +6,7 @@ frontend:
         - npm ci
     build:
       commands:
-        - npx nx run frontend:build
+        - npx nx run frontend:export
   artifacts:
     baseDirectory: dist/apps/frontend/exported
     files:
