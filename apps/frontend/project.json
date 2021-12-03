@@ -9,7 +9,7 @@
       "defaultConfiguration": "production",
       "options": {
         "root": "apps/frontend",
-        "outputPath": "dist/apps/frontend/.next"
+        "outputPath": "dist/apps/frontend"
       },
       "configurations": {
         "production": {}
@@ -29,7 +29,7 @@
       }
     },
     "export": {
-      "executor": "@nrwl/next:build",
+      "executor": "@nrwl/next:export",
       "options": {
         "buildTarget": "frontend:build:production"
       }

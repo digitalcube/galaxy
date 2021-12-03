@@ -8,7 +8,7 @@ frontend:
       commands:
         - npx nx run frontend:build
   artifacts:
-    baseDirectory: dist/apps/frontend/.next
+    baseDirectory: dist/apps/frontend/exported
     files:
       - '**/*'
   cache:
