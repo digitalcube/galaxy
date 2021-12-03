@@ -18,7 +18,7 @@ export function OurServices(props: OurServicesProps) {
         <h2 className="text-size-8 font-bold">{title}</h2>
       </div>
       <div className="lg:col-start-8 lg:col-span-4 md:col-start-3 md:col-span-8 md:pt-6">
-        <div className="flex space-x-2">
+        <div className="flex space-x-3">
           <BsCircleFill size="12" />
           <BsCircle size="12" />
           <BsCircle size="12" />
