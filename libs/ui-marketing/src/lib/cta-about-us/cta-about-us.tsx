@@ -13,7 +13,7 @@ const features = [
 
 export function CTAAboutUs(props: CTAAboutUsProps) {
   return (
-    <section className="lg:px-8 min-h-screen bg-black text-white pt-24">
+    <section className="lg:px-8 min-h-screen  bg-black bg-shapes-1 bg-cover text-white pt-24">
       <div className="container mx-auto grid grid-cols-12 place-content-center">
       <div className="md:col-start-3 lg:col-start-3 lg:col-span-5 md:col-span-8 mt-10">
         <p className="text-size-5">How We Work</p>

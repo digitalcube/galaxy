@@ -9,4 +9,11 @@ module.exports = {
     `${appRootPath}/libs/**/*.{js,ts,jsx,tsx}`,
     ...createGlobPatternsForDependencies(__dirname),
   ],
+  theme: {
+    extend: {
+      backgroundImage: {
+      'shapes-1': join(__dirname, '.../public/hero-shapes.png'),
+      }
+    }
+  }
 };
