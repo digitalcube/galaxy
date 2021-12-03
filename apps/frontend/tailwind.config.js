@@ -12,7 +12,7 @@ module.exports = {
   theme: {
     extend: {
       backgroundImage: {
-      'shapes-1': join(__dirname, '.../public/hero-shapes.png'),
+      'shapes-1': 'url(/heroshapes-1.png)'
       }
     }
   }
