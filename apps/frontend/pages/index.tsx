@@ -37,11 +37,11 @@ export function Index(props) {
       _uid: 'y83678sj',
       component: 'LogosSimple',
       logos: [
-        { title: 'Algolia', image: 'algolia-logo.svg' },
-        { title: 'AWS', image: 'aws-logo.svg' },
-        { title: 'Stripe', image: 'stripe-logo.svg' },
-        { title: 'Snow Monkey', image: 'snow-monkey-logo.svg' },
-        { title: 'Wovn', image: 'wovn-logo.svg' },
+        { title: 'Algolia', image: '/algolia-logo.svg' },
+        { title: 'AWS', image: '/aws-logo.svg' },
+        { title: 'Stripe', image: '/stripe-logo.svg' },
+        { title: 'Snow Monkey', image: '/snow-monkey-logo.svg' },
+        { title: 'Wovn', image: '/wovn-logo.svg' },
       ],
     },
     {
