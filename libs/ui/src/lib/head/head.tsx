@@ -11,6 +11,7 @@ export function Head(props: HeadProps) {
     <NextHead key={title}>
       <title>{title}</title>
       <link rel="stylesheet" href="https://use.typekit.net/rrt0shs.css" />
+      <link rel="icon" href="favicon-192x192.png" sizes="192x192"/>
       <meta charSet="utf-8" />
       <meta name="viewport" content="initial-scale=1.0, width=device-width" />
     </NextHead>
