@@ -84,7 +84,7 @@ export function ContactFormSimple(props: ContactFormSimpleProps) {
                 />
               </div>
             </div>
-            <Listbox value={selected} onChange={setSelected}>
+            {/* <Listbox value={selected} onChange={setSelected}>
               {({ open }) => (
                 <div className="mt-1 relative">
                   <Listbox.Button className="bg-white relative w-full border border-gray-300 rounded-md shadow-sm pl-3 pr-10 py-3 text-left cursor-default focus:outline-none focus:ring-1 focus:ring-gray-500 focus:border-gray-500 sm:text-sm">
@@ -148,8 +148,8 @@ export function ContactFormSimple(props: ContactFormSimpleProps) {
                   </Transition>
                 </div>
               )}
-            </Listbox>
-            <div className="sm:col-span-2">
+            </Listbox> */}
+            {/* <div className="sm:col-span-2">
               <div className="flex items-start">
                 <div className="flex-shrink-0">
                   <Switch
@@ -184,7 +184,7 @@ export function ContactFormSimple(props: ContactFormSimpleProps) {
                   </p>
                 </div>
               </div>
-            </div>
+            </div> */}
             <div className="sm:col-span-2">
               <Button>Submit</Button>
             </div>

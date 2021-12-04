@@ -4,19 +4,19 @@ import { ScrollTrigger } from 'gsap/dist/ScrollTrigger';
 gsap.registerPlugin(ScrollTrigger);
 
 export interface LogosSimpleProps {
-  logos: Record<string, unknown>;
-  el: any;
+  logos: any;
 }
 
 export function LogosSimple(props: LogosSimpleProps) {
-  const el = useRef();
+  const el = useRef<HTMLDivElement>(null);
 
   // wait until DOM has been rendered
   useEffect(() => {
     const duration = 0.7;
-    const animations = [];
+    const animations: any = [];
+    const children = el.current ? el.current.children : [];
 
-    gsap.utils.toArray(el.current.children).forEach((element) => {
+    gsap.utils.toArray(children).forEach((element: any) => {
       const animation = gsap.to(element, {
         opacity: 1,
         ease: 'none',
@@ -26,7 +26,7 @@ export function LogosSimple(props: LogosSimpleProps) {
           end: 'center 30%',
           onEnter: () => {
             gsap.to(element, {
-              y: -50,
+              y: 0,
               duration,
               opacity: 1,
             });
@@ -40,14 +40,14 @@ export function LogosSimple(props: LogosSimpleProps) {
           },
           onEnterBack: () => {
             gsap.to(element, {
-              y: -50,
+              y: -0,
               duration,
               opacity: 1,
             });
           },
           onLeaveBack: () => {
             gsap.to(element, {
-              y: 0,
+              y: 100,
               duration,
               opacity: 0,
             });
@@ -59,7 +59,7 @@ export function LogosSimple(props: LogosSimpleProps) {
     });
 
     return () => {
-      animations.forEach((animation) => animation.scrollTrigger.kill());
+      animations.forEach((animation: any) => animation.scrollTrigger.kill());
     };
   }, []);
 
@@ -68,7 +68,7 @@ export function LogosSimple(props: LogosSimpleProps) {
       <h1 className="text-size-5 pb-16">Our technology partners</h1>
       <div className="max-w-screen-lg mx-auto px-4 sm:px-6 lg:px-8">
         <div className="grid grid-cols-2 gap-8 lg:grid-cols-5">
-          {props.logos.map((logo, i) => (
+          {props.logos.map((logo: any, i) => (
             <div
               key={i}
               className="col-span-1 flex justify-center md:col-span-2 lg:col-span-1"

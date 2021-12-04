@@ -33,7 +33,7 @@ export function FooterSimple(props: FooterSimpleProps) {
             </div>
           ))}
         </nav>
-        <p className="flex items-center text-center font-size-4 text-gray-500">
+        <p className="flex items-center text-center font-size-4 text-gray-800">
           &copy; {new Date().getFullYear()} DigitalCube, Inc.
         </p>
       </div>

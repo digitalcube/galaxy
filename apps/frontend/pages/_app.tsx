@@ -6,7 +6,10 @@ import 'tailwindcss/tailwind.css';
 function App({ Component, pageProps }: AppProps) {
   return (
     <Galaxy>
-      <Head />
+      <Head
+        title={`LabWorks`}
+        icon={{ href: 'favicon-192x192.png', sizes: '192x192' }}
+      />
       <main className="bg-background-light">
         <Component {...pageProps} />
       </main>
