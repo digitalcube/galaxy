@@ -5,7 +5,7 @@ export interface ListGridProps {}
 
 export function ListGrid(props: ListGridProps) {
   return (
-    <div className="min-h-screen bg-black py-40">
+    <div className="min-h-screen bg-black py-40 bg-shapes-1">
       <div className="container mx-auto grid grid-cols-12 place-content-center text-white">
         <div className="col-start-3 col-span-8 mb-8">
           <p className="text-5xl">Open Source</p>
