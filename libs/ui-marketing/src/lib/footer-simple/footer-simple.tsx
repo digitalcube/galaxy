@@ -12,7 +12,7 @@ export function FooterSimple(props: FooterSimpleProps) {
 
   return (
     <footer className="bg-white">
-      <div className="flex justify-between max-w-7xl mx-auto py-12 px-4 overflow-hidden sm:px-6 lg:px-8">
+      <div className="flex justify-between container mx-auto py-12 px-4 overflow-hidden sm:px-6 lg:px-8">
         <a href="/">
           <span className="sr-only">{brand.name}</span>
           <img
