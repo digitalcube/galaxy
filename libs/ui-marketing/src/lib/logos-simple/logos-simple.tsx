@@ -1,8 +1,6 @@
 import { useEffect, useRef } from 'react';
-import Image from 'next/image';
 import gsap from 'gsap';
 import { ScrollTrigger } from 'gsap/dist/ScrollTrigger';
-import classNames from 'classnames';
 gsap.registerPlugin(ScrollTrigger);
 
 export interface LogosSimpleProps {
@@ -19,7 +17,6 @@ export function LogosSimple(props: LogosSimpleProps) {
     const children = el.current ? el.current.children : [];
 
     gsap.utils.toArray(children).forEach((element: any) => {
-      
       const animation = gsap.to(element, {
         opacity: 1,
         ease: 'none',
@@ -68,7 +65,9 @@ export function LogosSimple(props: LogosSimpleProps) {
 
   return (
     <div className="bg-white text-center py-24" ref={el}>
-      <h1 className="text-size-5 pb-16 transform translate-y-[100px] opacity-0">Our technology partners</h1>
+      <h1 className="text-size-5 pb-16 transform translate-y-[100px] opacity-0">
+        Our technology partners
+      </h1>
       <div className="max-w-screen-lg mx-auto px-4 sm:px-6 lg:px-8 translate-y-[100px] opacity-0">
         <div className="grid grid-cols-2 gap-8 lg:grid-cols-5">
           {props.logos.map((logo: any, i: number) => (
@@ -76,7 +75,7 @@ export function LogosSimple(props: LogosSimpleProps) {
               key={i}
               className="col-span-1 flex justify-center md:col-span-2 lg:col-span-1"
             >
-              <Image
+              <img
                 src={logo.image}
                 alt=""
                 className="w-24"
