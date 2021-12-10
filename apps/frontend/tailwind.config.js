@@ -12,7 +12,8 @@ module.exports = {
   theme: {
     extend: {
       backgroundImage: {
-      'shapes-1': 'url(/heroshapes-1.png)'
+      'shapes-1': 'url(/heroshapes-1.png)',
+      'shapes-2': 'url(/heroshapes-2.png)'
       }
     }
   }

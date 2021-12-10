@@ -10,7 +10,7 @@ export interface OurServicesProps {
 export function OurServices(props: OurServicesProps) {
   const { title, description, services } = props;
   return (
-    <section className="bg- lg:px-8 bg-shapes-1 min-h-screen bg-black text-white pt-24">
+    <section className="bg- lg:px-8 bg-shapes-2 bg-cover min-h-screen bg-black text-white pt-24">
       <div className="container mx-auto grid grid-cols-12 place-content-center">
         <div className="md:col-start-3 lg:col-start-3 lg:col-span-5 md:col-span-8 mt-10">
           <p className="text-size-5">{description}</p>
