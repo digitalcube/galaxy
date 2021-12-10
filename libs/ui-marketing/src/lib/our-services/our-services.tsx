@@ -20,12 +20,16 @@ export function OurServices(props: OurServicesProps) {
           <div className="flex space-x-3">
             <BsCircleFill size="12" />
             <BsCircle size="12" />
-            <BsCircle size="12" />
           </div>
           <dl className="mt-6 lg:gap-8">
             {services.map((service: OurServicesProps) => (
               <div key={service.title}>
-                <BsEye size="80" />
+               <img
+                  alt=""
+                  src="logo-mhi.svg"
+                  width="294"
+                  height="54"
+                />
                 <dt>
                   <p className="mt-4 text-size-7 font-bold">{service.title}</p>
                 </dt>
@@ -48,7 +52,7 @@ OurServices.defaultProps = {
     {
       title: 'What we do',
       description:
-        'We work with both existing DigitalCube customers and clients looking to improve their online presence.',
+        'MHI’s WordPress and server management setup  was too complex and created operational problems.',
     },
   ],
 };
