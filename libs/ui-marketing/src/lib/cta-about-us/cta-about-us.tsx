@@ -9,7 +9,7 @@ import { Swiper, SwiperSlide } from 'swiper/react';
 // import Swiper core and required modules
 import SwiperCore, { EffectFade } from 'swiper';
 
-SwiperCore.use([EffectFade ]);
+SwiperCore.use([EffectFade]);
 
 gsap.registerPlugin(ScrollTrigger);
 
@@ -121,18 +121,27 @@ export function CTAAboutUs(props: CTAAboutUsProps) {
           </div>
           <Swiper
             tag="dl"
-            className="mt-6 lg:gap-8"
+            className={`mt-6 lg:gap-8 `}
             slidesPerView={1}
             effect="fade"
             onSlideChange={() => console.log('slide change')}
             onSwiper={(swiper) => console.log(swiper)}
           >
             {features.map((feature) => (
-              <SwiperSlide key={feature.name}>
-                <dt>
-                  <p className="mt-4 text-size-7 font-bold">{feature.name}</p>
-                </dt>
-                <dd className="mt-6 text-size-7">{feature.description}</dd>
+              <SwiperSlide>
+                {({ isActive }) => (
+                  <div
+                    key={feature.name}
+                    className={isActive ? 'visible' : 'invisible'}
+                  >
+                    <dt>
+                      <p className="mt-4 text-size-7 font-bold">
+                        {feature.name}
+                      </p>
+                    </dt>
+                    <dd className="mt-6 text-size-7">{feature.description}</dd>
+                  </div>
+                )}
               </SwiperSlide>
             ))}
           </Swiper>
