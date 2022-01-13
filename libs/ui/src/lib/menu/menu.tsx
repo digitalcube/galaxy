@@ -1,5 +1,5 @@
 import { useState, useLayoutEffect } from 'react';
-import { Scrollspy } from '@galaxy/ui';
+import { Scrollspy } from '../scrollspy/scrollspy';
 
 // Abstracted from Scrollspy to allow for easier customizations
 const onScrollUpdate = (entry, isInVewPort) => {
@@ -7,10 +7,10 @@ const onScrollUpdate = (entry, isInVewPort) => {
   const menuItem = document.querySelector(`[data-scrollspy-id="${target.id}"]`);
   if (!menuItem) return;
   if (boundingClientRect.y <= 0 && isInVewPort) {
-    menuItem.classList.add('font-bold');
+    menuItem.classList.add('font-bold', 'underline');
   } else {
     if (menuItem.classList.contains('font-bold')) {
-      menuItem.classList.remove('font-bold');
+      menuItem.classList.remove('font-bold', 'underline');
     }
   }
 };
@@ -30,8 +30,8 @@ const Menu = ({ options }) => {
   };
 
   return (
-    <nav className="sticky">
-      <ul>
+    <nav>
+      <ul className="space-y-6">
         {options.map((option) => (
           <li key={option.hash}>
             <a
@@ -49,13 +49,17 @@ const Menu = ({ options }) => {
 };
 
 export const WithMenu = ({ children, selector }) => {
+  children.map((item) => {
+    console.log(item.props['data-scrollspy']);
+  });
   const [options, setOptions] = useState([]);
   useLayoutEffect(() => {
-    const menuSections = document.querySelectorAll(selector);
-    const optionsFromSections = Array.from(menuSections).map((section) => {
+    // const menuSections = document.querySelectorAll(selector);
+    const optionsFromSections = Array.from(children).map((section) => {
+      if (!section.props['data-scrollspy']) return {};
       return {
-        hash: section.id,
-        title: section.dataset.navTitle,
+        hash: section.props.id,
+        title: section.props['data-title'],
       };
     });
     setOptions(optionsFromSections);
@@ -64,7 +68,7 @@ export const WithMenu = ({ children, selector }) => {
   return (
     <div>
       <Scrollspy handleScroll={onScrollUpdate} />
-      <div className="fixed">
+      <div className="fixed p-8">
         <Menu options={options} />
       </div>
       {children}

@@ -25,14 +25,20 @@ export function Index(props) {
     {
       _uid: 'gJZoSLkfZV',
       component: 'CTAAboutUs',
+      title: 'Our Process',
+      scrollspy: true,
     },
     {
       _uid: '3e02ade8',
       component: 'ListGridWithIcons',
+      title: 'Services',
+      scrollspy: true,
     },
     {
       _uid: 'te32af9a8',
       component: 'OurServices',
+      title: 'Case Studies',
+      scrollspy: true,
     },
     {
       _uid: 'y83678sj',
@@ -48,6 +54,8 @@ export function Index(props) {
     {
       _uid: 'bee2af9a8',
       component: 'ListGrid',
+      title: 'Open Source',
+      scrollspy: true,
     },
     {
       _uid: 'nhe8638zfr',
@@ -66,8 +74,8 @@ export function Index(props) {
         <section
           key={i}
           id={`section${i}`}
-          data-nav-title={`Section ${i}`}
-          data-scrollspy
+          data-title={`${block.title}`}
+          data-scrollspy={block.scrollspy ?? false}
         >
           {MapComponents(block)}
         </section>
