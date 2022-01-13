@@ -127,8 +127,8 @@ export function CTAAboutUs(props: CTAAboutUsProps) {
             onSlideChange={() => console.log('slide change')}
             onSwiper={(swiper) => console.log(swiper)}
           >
-            {features.map((feature) => (
-              <SwiperSlide>
+            {features.map((feature, i) => (
+              <SwiperSlide key={i}>
                 {({ isActive }) => (
                   <div
                     key={feature.name}

@@ -1,4 +1,4 @@
-import { useState, useLayoutEffect } from 'react';
+import { useState, useEffect } from 'react';
 import { Scrollspy } from '../scrollspy/scrollspy';
 
 // Abstracted from Scrollspy to allow for easier customizations
@@ -6,11 +6,12 @@ const onScrollUpdate = (entry, isInVewPort) => {
   const { target, boundingClientRect } = entry;
   const menuItem = document.querySelector(`[data-scrollspy-id="${target.id}"]`);
   if (!menuItem) return;
+const activeClassNames = ['font-bold', 'underline'];
   if (boundingClientRect.y <= 0 && isInVewPort) {
-    menuItem.classList.add('font-bold', 'underline');
+    menuItem.classList.add(...activeClassNames);
   } else {
-    if (menuItem.classList.contains('font-bold')) {
-      menuItem.classList.remove('font-bold', 'underline');
+    if (menuItem.classList.contains(activeClassNames[0])) {
+      menuItem.classList.remove(...activeClassNames);
     }
   }
 };
@@ -49,11 +50,8 @@ const Menu = ({ options }) => {
 };
 
 export const WithMenu = ({ children, selector }) => {
-  children.map((item) => {
-    console.log(item.props['data-scrollspy']);
-  });
   const [options, setOptions] = useState([]);
-  useLayoutEffect(() => {
+  useEffect(() => {
     // const menuSections = document.querySelectorAll(selector);
     const optionsFromSections = Array.from(children).map((section) => {
       if (!section.props['data-scrollspy']) return {};
