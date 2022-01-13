@@ -1,4 +1,5 @@
 import { LabWorks } from '@galaxy/content';
+import { WithMenu } from '@galaxy/ui';
 import { MapComponents } from '@galaxy/utils';
 
 export function Index(props) {
@@ -59,7 +60,20 @@ export function Index(props) {
     },
   ];
 
-  return data.map((block) => MapComponents(block));
+  return (
+    <WithMenu selector="section">
+      {data.map((block, i) => (
+        <section
+          key={i}
+          id={`section${i}`}
+          data-nav-title={`Section ${i}`}
+          data-scrollspy
+        >
+          {MapComponents(block)}
+        </section>
+      ))}
+    </WithMenu>
+  );
 }
 
 export default Index;
