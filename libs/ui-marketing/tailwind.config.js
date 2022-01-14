@@ -4,7 +4,7 @@ const { join } = require('path');
 module.exports = {
   mode: 'jit',
   presets: [require('../../tailwind-workspace-preset')],
-  purge: [
+  content: [
     join(__dirname, 'src/**/*.{js,ts,jsx,tsx}'),
     ...createGlobPatternsForDependencies(__dirname),
   ],
