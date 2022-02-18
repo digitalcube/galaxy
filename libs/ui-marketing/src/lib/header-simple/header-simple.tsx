@@ -1,3 +1,4 @@
+// eslint-disable-next-line @nrwl/nx/enforce-module-boundaries
 import { Button } from '@galaxy/ui';
 import { Brand } from 'schema-dts';
 
@@ -10,36 +11,37 @@ export interface HeaderSimpleProps {
 
 export function HeaderSimple(props: HeaderSimpleProps) {
   const { brand, primary, secondary } = props;
-
   return (
-    <header className="relative bg-background-light">
+    <header className="relative">
       <nav className="container mx-auto px-4 sm:px-6 lg:px-8" aria-label="Top">
         <div className="w-full py-6 flex items-center">
           <div className="flex items-center flex-grow">
             <a href="/">
               <span className="sr-only">{brand.name}</span>
               <img
-                className="h-10 w-auto"
+                className="h-7 w-auto"
                 src={`${brand.logo}`}
                 alt={`${brand.name}`}
               />
             </a>
             <div className="hidden ml-10 space-x-8 lg:block flex ml-auto">
-              {primary.map((props, i) => (
-                <Button {...props} key={i} variant="link" />
-              ))}
+              {primary
+                ? primary.map((props, i) => (
+                    <Button {...props} key={i} variant="link" />
+                  ))
+                : null}
             </div>
           </div>
           <div className="ml-10 space-x-4 flex">
-            {secondary.map((link, i) => (
-              <Button {...link} key={i} />
-            ))}
+            {secondary
+              ? secondary.map((link, i) => <Button {...link} key={i} />)
+              : null}
           </div>
         </div>
         <div className="py-4 flex flex-wrap justify-center space-x-6 lg:hidden">
-          {primary.map((link, i) => (
-            <Button {...link} key={i} />
-          ))}
+          {primary
+            ? primary.map((link, i) => <Button {...link} key={i} />)
+            : null}
         </div>
       </nav>
     </header>

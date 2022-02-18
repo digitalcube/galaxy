@@ -17,7 +17,7 @@ export function FooterColNewsletter(props: FooterColNewsletterProps) {
           <div className="space-y-8 lg:col-span-1 mb-8">
             <p className="text-size-6 font-bold text-gray-800">Say Hello</p>
             <div className="flex space-x-6">
-              {navigation.social.map((item) => (
+              {navigation.social.map((item: any) => (
                 <a
                   key={item.name}
                   href={item.href}

@@ -1,10 +1,10 @@
 import { render } from '@testing-library/react';
 
-import UiMarketing from './ui-marketing';
+import OurServices from './our-services';
 
-describe('UiMarketing', () => {
+describe('OurServices', () => {
   it('should render successfully', () => {
-    const { baseElement } = render(<UiMarketing />);
+    const { baseElement } = render(<OurServices />);
     expect(baseElement).toBeTruthy();
   });
 });

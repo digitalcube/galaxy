@@ -22,9 +22,7 @@ export interface Props {
     | 'outline'
     | 'link'
     | 'primary'
-    | '__dropdownItem'
-    | string
-    | null;
+    | '__dropdownItem';
   block?: boolean;
 }
 

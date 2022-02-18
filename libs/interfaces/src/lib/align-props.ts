@@ -1,0 +1,1 @@
+export type AlignProps = 'left' | 'right' | 'center' | null

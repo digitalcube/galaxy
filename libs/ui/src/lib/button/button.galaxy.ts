@@ -7,7 +7,7 @@ export const buttonTheme = {
       'align-bottom',
       'py-3',
       'px-4',
-      'font-bold',
+      'font-size-6',
       'inline-flex',
       'items-center',
       'justify-center',
@@ -15,17 +15,16 @@ export const buttonTheme = {
       'transition-colors',
       'duration-150',
       'focus:outline-none',
-      'text-size-3',
     ],
     block: 'w-full',
     size: {
-      large: 'px-5 py-3 rounded-lg',
-      small: 'px-3 py-1 rounded-md text-sm',
+      large: 'px-5 py-3',
+      small: 'px-3 py-1 text-sm',
       icon: {
-        large: 'p-3 rounded-lg',
-        small: 'p-2 rounded-md',
+        large: 'p-3',
+        small: 'p-2',
       },
-      pagination: 'px-3 py-1 rounded-md text-xs',
+      pagination: 'px-3 py-1 text-xs',
     },
     // styles applied to the SVG icon
     icon: {
@@ -36,12 +35,18 @@ export const buttonTheme = {
       right: 'ml-2 -mr-1',
     },
     primary: {
-      base: ['text-white', 'bg-purple-600', 'border', 'border-transparent'],
+      base: [
+        'text-white',
+        'bg-black',
+        'border',
+        'border-transparent',
+        'rounded',
+      ],
       active: [
-        'active:bg-purple-600',
-        'hover:bg-purple-700',
+        'active:bg-gray-600',
+        'hover:bg-gray-700',
         'focus:ring',
-        'focus:ring-purple-300',
+        'focus:ring-gray-300',
       ],
       disabled: ['opacity-50', 'cursor-not-allowed'],
     },
@@ -93,10 +98,7 @@ export const buttonTheme = {
     },
     link: {
       base: ['p-0', 'text-gray-800'],
-      active: [
-        'focus:outline-none',
-        'hover:text-purple-800',
-      ],
+      active: ['focus:outline-none', 'hover:text-gray-700'],
       disabled: ['opacity-50', 'cursor-not-allowed'],
     },
     // this is the button that lives inside the DropdownItem

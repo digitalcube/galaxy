@@ -1,5 +1,3 @@
-
-
 # Galaxy
 
 This project was generated using [Nx](https://nx.dev).
@@ -85,8 +83,6 @@ Run `nx dep-graph` to see a diagram of the dependencies of your projects.
 
 Visit the [Nx Documentation](https://nx.dev) to learn more.
 
-
-
 ## ☁ Nx Cloud
 
 ### Distributed Computation Caching & Distributed Task Execution
@@ -98,3 +94,26 @@ Nx Cloud pairs with Nx in order to enable you to build and test code more rapidl
 Teams using Nx gain the advantage of building full-stack applications with their preferred framework alongside Nx’s advanced code generation and project dependency graph, plus a unified experience for both frontend and backend developers.
 
 Visit [Nx Cloud](https://nx.app/) to learn more.
+
+# Common Commands
+
+Start UI Marketing Library Storybook
+
+```
+nx run ui-marketing:storybook
+```
+
+Build Tailwind CSS for UI Marketing Library Storybook
+```
+nx run ui-marketing:build-tailwind
+```
+
+Start Storybook and watch for changes
+```
+nx run ui-marketing:watch-storybook
+```
+
+Create a new branch for developing a new component or feature (e.g. feature/foo could be feature/contact-form)
+```
+git checkout -b feature/foo origin/development
+```

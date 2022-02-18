@@ -1,5 +1,5 @@
 import { ReactNode } from 'react';
-import { Css } from '../../utils/css/css';
+import { Css } from '@galaxy/utils';
 import { inputTheme } from './Input.galaxy';
 const { input } = inputTheme;
 

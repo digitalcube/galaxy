@@ -15,8 +15,11 @@
     "skipDefaultLibCheck": true,
     "baseUrl": ".",
     "paths": {
+      "@galaxy/content": ["libs/content/src/index.ts"],
+      "@galaxy/interfaces": ["libs/interfaces/src/index.ts"],
       "@galaxy/ui": ["libs/ui/src/index.ts"],
-      "@galaxy/ui-marketing": ["libs/ui-marketing/src/index.ts"]
+      "@galaxy/ui-marketing": ["libs/ui-marketing/src/index.ts"],
+      "@galaxy/utils": ["libs/utils/src/index.ts"]
     }
   },
   "exclude": ["node_modules", "tmp"]

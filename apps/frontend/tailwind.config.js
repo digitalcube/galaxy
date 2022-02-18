@@ -4,9 +4,17 @@ const { createGlobPatternsForDependencies } = require('@nrwl/next/tailwind');
 
 module.exports = {
   presets: [require(`${appRootPath}/tailwind-workspace-preset.js`)],
-  purge: [
+  content: [
     join(__dirname, 'pages/**/*.{js,ts,jsx,tsx}'),
     `${appRootPath}/libs/**/*.{js,ts,jsx,tsx}`,
     ...createGlobPatternsForDependencies(__dirname),
   ],
+  theme: {
+    extend: {
+      backgroundImage: {
+      'shapes-1': 'url(/heroshapes-1.png)',
+      'shapes-2': 'url(/heroshapes-2.png)'
+      }
+    }
+  }
 };

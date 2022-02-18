@@ -1,11 +1,11 @@
 import { ReactNode, useEffect, useMemo } from 'react';
 import { ThemeContext, defaultTheme } from '../theme-context/theme-context';
-import { DeepMerge } from '../../utils/deep-merge/deep-merge';
-import UseDarkMode from '../../utils/use-dark-mode/use-dark-mode';
+// eslint-disable-next-line @nrwl/nx/enforce-module-boundaries
+import { UseDarkMode, DeepMerge } from '@galaxy/utils';
 
 /* eslint-disable-next-line */
 export interface GalaxyProps {
-  children: ReactNode;
+  children?: ReactNode;
   theme?: Record<string, unknown>;
   dark?: boolean;
   usePreferences?: boolean;
@@ -13,7 +13,6 @@ export interface GalaxyProps {
 
 export function Galaxy(props: GalaxyProps) {
   const { children, theme: customTheme, dark, usePreferences = false } = props;
-
   const mergedTheme = DeepMerge(defaultTheme, customTheme);
   const [mode, setMode, toggleMode] = UseDarkMode(usePreferences);
 
@@ -32,11 +31,13 @@ export function Galaxy(props: GalaxyProps) {
       mode,
       toggleMode,
     }),
-    [mode]
+    [mode, mergedTheme, toggleMode]
   );
 
   return (
-    <ThemeContext.Provider value={value}>{children}</ThemeContext.Provider>
+    <ThemeContext.Provider value={value}>
+      {children ? children : ''}
+    </ThemeContext.Provider>
   );
 }
 

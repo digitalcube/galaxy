@@ -9,7 +9,9 @@ export const defaultTheme = {
 /* eslint-disable-next-line */
 export interface ThemeContextProps {
   theme: any;
-  mode?: Mode;
+  // TODO: Updated Mode types/imports
+  // mode?: Mode;
+  mode?: any;
   toggleMode?: any;
 }
 

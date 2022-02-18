@@ -6,17 +6,40 @@
   "targets": {
     "lint": {
       "executor": "@nrwl/linter:eslint",
-      "outputs": ["{options.outputFile}"],
+      "outputs": [
+        "{options.outputFile}"
+      ],
       "options": {
-        "lintFilePatterns": ["libs/ui-marketing/**/*.{ts,tsx,js,jsx}"]
+        "lintFilePatterns": [
+          "libs/ui-marketing/**/*.{ts,tsx,js,jsx}"
+        ]
       }
     },
     "test": {
       "executor": "@nrwl/jest:jest",
-      "outputs": ["coverage/libs/ui-marketing"],
+      "outputs": [
+        "coverage/libs/ui-marketing"
+      ],
       "options": {
         "jestConfig": "libs/ui-marketing/jest.config.js",
         "passWithNoTests": true
+      }
+    },
+    "build-tailwind": {
+      "executor": "@nrwl/workspace:run-commands",
+      "options": {
+        "command": "postcss tailwind.css -o public/tailwind.css",
+        "cwd": "libs/ui-marketing"
+      }
+    },
+    "watch-storybook": {
+      "executor": "@nrwl/workspace:run-commands",
+      "options": {
+        "parallel": false,
+        "commands": [
+          "nx run ui-marketing:storybook",
+          "watch 'nx run ui-marketing:build-tailwind' libs/ui-marketing/src"
+        ]
       }
     },
     "storybook": {
@@ -36,7 +59,9 @@
     },
     "build-storybook": {
       "executor": "@nrwl/storybook:build",
-      "outputs": ["{options.outputPath}"],
+      "outputs": [
+        "{options.outputPath}"
+      ],
       "options": {
         "uiFramework": "@storybook/react",
         "outputPath": "dist/storybook/ui-marketing",

@@ -1,13 +1,71 @@
-import { Blog, BlogPosting } from 'schema-dts';
-
 /* eslint-disable-next-line */
-export type BlogRecentPostsProps = Blog & {
-  posts: BlogPosting[];
+export type BlogRecentPostsProps = {
+  posts: Record<string, string>;
+  post: any;
+  category: Record<string, string>;
+  headline: string;
+  description: string;
 };
 
+const everyNth = (arr: any, nth: number) =>
+  arr.filter((e: any, i: number) => i % nth === nth - 1);
+
+function Posts(props: any) {
+  const { posts } = props;
+  return posts.map((post: any, i: number) => (
+    <div
+      key={i}
+      className={`${
+        post === everyNth(posts, 4)[0]
+          ? `row-span-3 col-span-1`
+          : `row-span-1 col-span-2`
+      }`}
+    >
+      <div
+        key={`${post.name}`}
+        className={`overflow-hidden ${
+          post === everyNth(posts, 4)[0] ? `flex flex-col` : `grid grid-cols-3`
+        }`}
+      >
+        <div className="col-span-1">
+          <img
+            className="h-full w-full object-cover"
+            src={`${post.image}`}
+            alt=""
+          />
+        </div>
+        <div
+          className={`col-span-2 bg-white ${
+            post === everyNth(posts, 4)[0] ? `py-6` : `px-6 mb-4`
+          }`}
+        >
+          <p className="text-size-4 text-gray-600">
+            <a href={post.category.href} className="hover:underline">
+              {post.category.name}
+            </a>
+          </p>
+          <a href={post.href} className="block mt-2">
+            <p className="text-size-6 text-gray-800 font-bold">{post.name}</p>
+          </a>
+          <div className="mt-6 flex items-center">
+            <p className="text-size-4 text-gray-700">
+              <a href={post.author.href} className="hover:underline">
+                {post.author.name}
+              </a>
+            </p>
+            <div className="flex space-x-1 text-size-4 text-gray-600">
+              <span className="px-1">|</span>
+              <time dateTime={post.datetime}>{post.date}</time>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  ));
+}
+
 export function BlogRecentPosts(props: BlogRecentPostsProps) {
-  const everyNth = (arr, nth) => arr.filter((e, i) => i % nth === nth - 1);
-  const { posts, headline, description } = props;
+  const { headline, description } = props;
   return (
     <div className="container mx-auto pb-48">
       <div className="max-w-7xl mx-auto pt-16 px-4 sm:pt-24 sm:px-6 lg:px-8 pb-20">
@@ -19,60 +77,7 @@ export function BlogRecentPosts(props: BlogRecentPostsProps) {
         </div>
       </div>
       <div className="grid grid-rows-3 grid-cols-3 grid-flow-col gap-8">
-        {posts.map((post, i) => (
-          <div
-            key={i}
-            className={`${
-              post === everyNth(posts, 4)[0]
-                ? `row-span-3 col-span-1`
-                : `row-span-1 col-span-2`
-            }`}
-          >
-            <div
-              key={`${post.name}`}
-              className={`overflow-hidden ${
-                post === everyNth(posts, 4)[0]
-                  ? `flex flex-col`
-                  : `grid grid-cols-3`
-              }`}
-            >
-              <div className="col-span-1">
-                <img
-                  className="h-full w-full object-cover"
-                  src={`${post.image}`}
-                  alt=""
-                />
-              </div>
-              <div
-                className={`col-span-2 bg-white ${
-                  post === everyNth(posts, 4)[0] ? `py-6` : `px-6 mb-4`
-                }`}
-              >
-                <p className="text-size-4 text-gray-600">
-                  <a href={post.category.href} className="hover:underline">
-                    {post.category.name}
-                  </a>
-                </p>
-                <a href={post.href} className="block mt-2">
-                  <p className="text-size-6 text-gray-800 font-bold">
-                    {post.name}
-                  </p>
-                </a>
-                <div className="mt-6 flex items-center">
-                  <p className="text-size-4 text-gray-700">
-                    <a href={post.author.href} className="hover:underline">
-                      {post.author.name}
-                    </a>
-                  </p>
-                  <div className="flex space-x-1 text-size-4 text-gray-600">
-                    <span className="px-1">|</span>
-                    <time dateTime={post.datetime}>{post.date}</time>
-                  </div>
-                </div>
-              </div>
-            </div>
-          </div>
-        ))}
+        {Posts}
       </div>
     </div>
   );

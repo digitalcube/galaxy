@@ -20,22 +20,7 @@ module.exports = async ({ config, mode }) => {
 module.exports = {
   stories: [],
   addons: ['@storybook/addon-essentials'],
-  webpackFinal: async (config) => {
-    config.module.rules.push({
-      test: /\.css$/,
-      use: [
-        {
-          loader: 'postcss-loader',
-          options: {
-            ident: 'postcss',
-            postcssOptions: {
-              plugins: [require('tailwindcss'), require('autoprefixer')],
-            },
-          },
-        },
-      ],
-      include: path.resolve(__dirname, '../'),
-    });
+  webpackFinal: async (config, { configType }) => {
     return config;
   },
 };
