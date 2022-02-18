@@ -6,7 +6,7 @@ export interface LogoAnimationProps {}
 
 export function LogoAnimation(props: LogoAnimationProps) {
   return (
-    <Lottie animationData={LabworksAnimation} loop="false"/>
+    <Lottie animationData={LabworksAnimation} loop={false}/>
   );
 }
 

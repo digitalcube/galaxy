@@ -1,7 +1,7 @@
 import { ReactNode } from 'react';
 import Link from 'next/link';
 import { Button } from '@galaxy/ui';
-import LogoAnimation from '../logo-animation/logo-animation'
+import LogoAnimation from '../logo-animation/logo-animation';
 
 /* eslint-disable-next-line */
 export interface HeroSimpleIllustrationProps {
@@ -37,8 +37,8 @@ export function HeroSimpleIllustration(props: HeroSimpleIllustrationProps) {
           <div className="mt-12 -mb-16 sm:-mb-48 lg:m-0 lg:relative">
             <div className="mx-auto max-w-md px-4 sm:max-w-2xl sm:px-6">
               <img className="w-full" src="/labworks-browser.svg" alt="" />
-             <div className="w-50 absolute top-1/4 right-0">
-              <LogoAnimation/>
+              <div className="w-50 absolute top-1/4 right-0">
+                <LogoAnimation />
               </div>
             </div>
           </div>
