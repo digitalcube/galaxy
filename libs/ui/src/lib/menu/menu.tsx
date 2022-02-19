@@ -6,7 +6,7 @@ const onScrollUpdate = (entry, isInVewPort) => {
   const { target, boundingClientRect } = entry;
   const menuItem = document.querySelector(`[data-scrollspy-id="${target.id}"]`);
   if (!menuItem) return;
-const activeClassNames = ['font-bold', 'underline'];
+  const activeClassNames = ['font-bold', 'underline'];
   if (boundingClientRect.y <= 0 && isInVewPort) {
     menuItem.classList.add(...activeClassNames);
   } else {
@@ -25,9 +25,11 @@ const Menu = ({ options }) => {
 
     // Scroll to the section + 1 to account for weird bug.
     // remove the `+1` and click on Section 2 link to see the bug.
-    const targetSection = document.querySelector(`${e.target.hash}`);
+    const targetSection = document.querySelector<HTMLElement>(
+      `${e.target.hash}`
+    ).offsetTop;
     if (!targetSection) return;
-    window.scrollTo(0, targetSection.offsetTop + 1);
+    window.scrollTo(0, targetSection + 1);
   };
 
   return (
@@ -53,7 +55,7 @@ export const WithMenu = ({ children, selector }) => {
   const [options, setOptions] = useState([]);
   useEffect(() => {
     // const menuSections = document.querySelectorAll(selector);
-    const optionsFromSections = Array.from(children).map((section) => {
+    const optionsFromSections = Array.from(children).map((section: any) => {
       if (!section.props['data-scrollspy']) return {};
       return {
         hash: section.props.id,
